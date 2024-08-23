@@ -220,6 +220,9 @@ enum class TraceNoHitResult_t : std::uint32_t
 	MOVE_TO_END = 0x3,
 };
 
+struct ChangeAccessorFieldPathIndex_t;
+struct CEntityIdentity;
+struct CScriptComponent;
 struct CSmartPropAttributeCoordinateSpace;
 struct CSmartPropAttributeTraceNoHit;
 struct CSmartPropAttributeRadiusPlacementMode;
@@ -233,12 +236,112 @@ struct CSmartPropAttributeScaleMode;
 struct CSmartPropAttributePickMode;
 struct CSmartPropAttributePathPositions;
 
-// Registered binary: assetpreview.dll (project 'smartprops')
+// Registered binary: assetpreview.dll (project 'entity2')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x8
 // Has VTable
 // Is Abstract
 // Has Trivial Destructor
+class CEntityComponent
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: assetpreview.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x38
+// Has VTable
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+class CScriptComponent : public CEntityComponent
+{
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x28]; // 0x8
+public:
+	CUtlSymbolLarge m_scriptClassName; // 0x30	
+	
+	// Static fields:
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("assetpreview.dll")->FindDeclaredClass("CScriptComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("assetpreview.dll")->FindDeclaredClass("CScriptComponent")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: assetpreview.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x78
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "int32 m_nameStringableIndex"
+class CEntityIdentity
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x14]; // 0x0
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "entityIdentityNameChanged"
+	int32_t m_nameStringableIndex; // 0x14	
+	CUtlSymbolLarge m_name; // 0x18	
+	CUtlSymbolLarge m_designerName; // 0x20	
+private:
+	[[maybe_unused]] uint8_t __pad0028[0x8]; // 0x28
+public:
+	uint32_t m_flags; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0034[0x4]; // 0x34
+public:
+	// MNetworkDisable
+	WorldGroupId_t m_worldGroupId; // 0x38	
+	uint32_t m_fDataObjectTypes; // 0x3c	
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x40	
+private:
+	[[maybe_unused]] uint8_t __pad0044[0x14]; // 0x44
+public:
+	CEntityIdentity* m_pPrev; // 0x58	
+	CEntityIdentity* m_pNext; // 0x60	
+	CEntityIdentity* m_pPrevByClass; // 0x68	
+	CEntityIdentity* m_pNextByClass; // 0x70	
+	
+	// Datamap fields:
+	// void m_pAttributes; // 0x48
+};
+
+// Registered binary: assetpreview.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x38
+// Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// 
+// MNetworkVarNames "CEntityIdentity * m_pEntity"
+// MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"
+class CEntityInstance
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkDisable
+	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8	
+	// MNetworkEnable
+	// MNetworkPriority "56"
+	CEntityIdentity* m_pEntity; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0018[0x10]; // 0x18
+public:
+	// MNetworkEnable
+	// MNetworkDisable
+	CScriptComponent* m_CScriptComponent; // 0x28	
+	bool m_bVisibleinPVS; // 0x30	
+};
+
+// Registered binary: assetpreview.dll (project 'smartprops')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// Is Abstract
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
@@ -251,15 +354,14 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MVDataEnableKey
-	// MPropertySuppressField
-	bool m_bEnabled; // 0x8	
+	CSmartPropAttributeBool m_bEnabled; // 0x8	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x8
+// Size: 0x48
 // Has VTable
-// Has Trivial Destructor
+// Is Abstract
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
@@ -271,14 +373,15 @@ class CSmartPropSelectionCriteria
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
+	// MVDataEnableKey
+	CSmartPropAttributeBool m_bEnabled; // 0x8	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x50
 // Has VTable
 // Is Abstract
-// Has Trivial Destructor
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
@@ -289,7 +392,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x18
+// Size: 0x58
 // Has VTable
 // Construct allowed
 // 
@@ -301,7 +404,7 @@ class CSmartPropOperation_SaveScale : public CSmartPropOperation
 {
 public:
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_VariableName; // 0x10	
+	CUtlString m_VariableName; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -332,10 +435,9 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x50
 // Has VTable
 // Is Abstract
-// Has Trivial Destructor
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
@@ -444,7 +546,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x70
 // Has VTable
 // Construct allowed
 // 
@@ -456,17 +558,17 @@ class CSmartPropOperation_RandomColorTintColor : public CSmartPropOperation
 {
 public:
 	// MPropertyDescription "Specifies how the selected color should be applied."
-	ApplyColorMode_t m_Mode; // 0x10	
+	ApplyColorMode_t m_Mode; // 0x50	
 private:
-	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
+	[[maybe_unused]] uint8_t __pad0054[0x4]; // 0x54
 public:
 	// MPropertyDescription "Defines a color gradient from which a random color will be piked."
-	CColorGradient m_Gradient; // 0x18	
+	CColorGradient m_Gradient; // 0x58	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x90
+// Size: 0xd0
 // Has VTable
 // Construct allowed
 // 
@@ -478,14 +580,14 @@ class CSmartPropOperation_RandomRotation : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Minimum rotation range"
-	CSmartPropAttributeAngles m_vRandomRotationMin; // 0x10	
+	CSmartPropAttributeAngles m_vRandomRotationMin; // 0x50	
 	// MPropertyDescription "Maximum rotation range"
-	CSmartPropAttributeAngles m_vRandomRotationMax; // 0x50	
+	CSmartPropAttributeAngles m_vRandomRotationMax; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x50
 // Has VTable
 // Construct allowed
 // 
@@ -499,12 +601,12 @@ public:
 	// MPropertyFriendlyName "Valid When"
 	// MPropertyDescription "Expression to evaluate to determine if this choice is currently valid."
 	// MPropertyAttributeEditor "SmartPropAttributeEditor(expression)"
-	CUtlString m_Expression; // 0x8	
+	CUtlString m_Expression; // 0x48	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x90
+// Size: 0xd0
 // Has VTable
 // Construct allowed
 // 
@@ -518,9 +620,9 @@ class CSmartPropOperation_RestoreState : public CSmartPropOperation
 public:
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( SavedState )"
 	// MPropertyDescription "Name of the previously saved state to restore"
-	CSmartPropAttributeStateName m_StateName; // 0x10	
+	CSmartPropAttributeStateName m_StateName; // 0x50	
 	// MPropertyDescription "If true, the parent element will be discarded there is no state with the specified name. If false, and there is no state with the specified name then no changes are made."
-	CSmartPropAttributeBool m_bDiscardIfUknown; // 0x50	
+	CSmartPropAttributeBool m_bDiscardIfUknown; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -554,7 +656,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x40
+// Size: 0x80
 // Has VTable
 // Construct allowed
 // 
@@ -571,24 +673,24 @@ public:
 	// MPropertySuppressField
 	// MVDataUniqueMonotonicInt "_editor/next_element_id"
 	int32_t m_nElementID; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
 	// MVDataEnableKey
 	// MPropertyDescription "Is this element enabled? If not enabled, this element will not be evaluted and will have no effect on the result."
 	// MPropertySortPriority "10"
-	bool m_bEnabled; // 0xc	
-private:
-	[[maybe_unused]] uint8_t __pad000d[0x3]; // 0xd
-public:
+	CSmartPropAttributeBool m_bEnabled; // 0x10	
 	// MPropertyFriendlyName "Selection Criteria"
 	// MVDataPromoteField
-	CUtlVector< CSmartPropSelectionCriteria* > m_SelectionCriteria; // 0x10	
+	CUtlVector< CSmartPropSelectionCriteria* > m_SelectionCriteria; // 0x50	
 	// MPropertyFriendlyName "Modifiers"
 	// MVDataPromoteField
-	CUtlVector< CSmartPropModifier* > m_Modifiers; // 0x28	
+	CUtlVector< CSmartPropModifier* > m_Modifiers; // 0x68	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x1d0
+// Size: 0x210
 // Has VTable
 // Construct allowed
 // 
@@ -601,22 +703,22 @@ class CSmartPropOperation_RotateTowards : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Position of origin point."
-	CSmartPropAttributeVector m_vOriginPos; // 0x10	
+	CSmartPropAttributeVector m_vOriginPos; // 0x50	
 	// MPropertyDescription "position of target point."
-	CSmartPropAttributeVector m_vTargetPos; // 0x50	
+	CSmartPropAttributeVector m_vTargetPos; // 0x90	
 	// MPropertyDescription "position of up point."
-	CSmartPropAttributeVector m_vUpPos; // 0x90	
+	CSmartPropAttributeVector m_vUpPos; // 0xd0	
 	// MPropertyDescription "Coefficient to modulate the rotation"
-	CSmartPropAttributeFloat m_flWeight; // 0xd0	
+	CSmartPropAttributeFloat m_flWeight; // 0x110	
 	// MPropertyGroupName "Input Coordinate Space"
 	// MPropertyDescription "Space in which the origin position is defined."
-	CSmartPropAttributeCoordinateSpace m_OriginSpace; // 0x110	
+	CSmartPropAttributeCoordinateSpace m_OriginSpace; // 0x150	
 	// MPropertyGroupName "Input Coordinate Space"
 	// MPropertyDescription "Space in which the target position is defined."
-	CSmartPropAttributeCoordinateSpace m_TargetSpace; // 0x150	
+	CSmartPropAttributeCoordinateSpace m_TargetSpace; // 0x190	
 	// MPropertyGroupName "Input Coordinate Space"
 	// MPropertyDescription "Space in which the up target is defined."
-	CSmartPropAttributeCoordinateSpace m_UpSpace; // 0x190	
+	CSmartPropAttributeCoordinateSpace m_UpSpace; // 0x1d0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -655,7 +757,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x58
+// Size: 0x98
 // Has VTable
 // Construct allowed
 // 
@@ -667,9 +769,9 @@ class CSmartPropOperation_SaveSurfaceNormal : public CSmartPropOperation
 {
 public:
 	// MPropertyDescription "Specifies the coordinate space of the saved position value."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x10	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x50	
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
-	CUtlString m_VariableName; // 0x50	
+	CUtlString m_VariableName; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -688,7 +790,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x90
 // Has VTable
 // Construct allowed
 // 
@@ -700,7 +802,7 @@ class CSmartPropOperation_ResetScale : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "If enabled, the object level scale will be ignored, meaning any scale applied in Hammer will have no effect on the element or its children."
-	CSmartPropAttributeBool m_bIgnoreObjectScale; // 0x10	
+	CSmartPropAttributeBool m_bIgnoreObjectScale; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -718,7 +820,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x60
+// Size: 0xa0
 // Has VTable
 // Construct allowed
 // 
@@ -732,15 +834,15 @@ public:
 	// MPropertyFriendlyName "Children"
 	// MPropertyDescription "List of child elements which will appear if this element appears"
 	// MVDataPromoteField
-	CUtlVector< CSmartPropElement* > m_Children; // 0x40	
+	CUtlVector< CSmartPropElement* > m_Children; // 0x80	
 	// MPropertyFriendlyName "Label"
 	// MPropertyDescription "Optional text that will appear in the outliner to help organize Smart Prop elements and communicate their purpose to other users."
-	CUtlString m_sLabel; // 0x58	
+	CUtlString m_sLabel; // 0x98	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x90
 // Has VTable
 // Construct allowed
 // 
@@ -752,7 +854,7 @@ public:
 class CSmartPropOperation_SetVariable : public CSmartPropOperation
 {
 public:
-	CSmartPropAttributeVariableValue m_VariableValue; // 0x10	
+	CSmartPropAttributeVariableValue m_VariableValue; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -773,7 +875,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x90
 // Has VTable
 // Construct allowed
 // 
@@ -785,7 +887,7 @@ class CSmartPropOperation_Scale : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Scale to apply to the current transform"
-	CSmartPropAttributeFloat m_flScale; // 0x10	
+	CSmartPropAttributeFloat m_flScale; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -819,10 +921,9 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x50
 // Has VTable
 // Is Abstract
-// Has Trivial Destructor
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
@@ -834,7 +935,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x68
+// Size: 0xa8
 // Has VTable
 // Construct allowed
 // 
@@ -846,9 +947,9 @@ class CSmartPropOperation_SetTintColor : public CSmartPropOperation
 {
 public:
 	// MPropertyDescription "Specifies how the selected color should be applied."
-	CSmartPropAttributeApplyColorMode m_Mode; // 0x10	
+	CSmartPropAttributeApplyColorMode m_Mode; // 0x50	
 	// MPropertyDescription "List of possible colors which may be selected"
-	CUtlVector< ColorChoice_t > m_ColorChoices; // 0x50	
+	CUtlVector< ColorChoice_t > m_ColorChoices; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -882,7 +983,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x100
+// Size: 0x140
 // Has VTable
 // Construct allowed
 // 
@@ -895,13 +996,13 @@ class CSmartPropElement_Model : public CSmartPropElement
 public:
 	// MPropertyDescription "Name of the model resource (.vmdl) to place."
 	// MPropertyAutoRebuildOnChange
-	CSmartPropAttributeModelName m_sModelName; // 0x40	
+	CSmartPropAttributeModelName m_sModelName; // 0x80	
 	// MPropertyAttributeEditor "SmartPropAttributeEditor( MaterialGroup:m_sModelName )"
 	// MPropertyFriendlyName "Material Group"
 	// MPropertyDescription "Specifies the name of the material group (skin) to use when displaying the specified model."
-	CSmartPropAttributeMaterialGroup m_MaterialGroupName; // 0x80	
+	CSmartPropAttributeMaterialGroup m_MaterialGroupName; // 0xc0	
 	// MPropertyDescription "Scale factor (may be non-uniform) to be applied directly to the model (in the model's local space)."
-	CSmartPropAttributeVector m_vModelScale; // 0xc0	
+	CSmartPropAttributeVector m_vModelScale; // 0x100	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -948,7 +1049,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x88
+// Size: 0xc8
 // Has VTable
 // Construct allowed
 // 
@@ -960,14 +1061,14 @@ class CSmartPropSelectionCriteria_EndCap : public CSmartPropSelectionCriteria
 {
 public:
 	// MPropertyDescription "Is this an element which should be placed at the start of the line."
-	CSmartPropAttributeBool m_bStart; // 0x8	
+	CSmartPropAttributeBool m_bStart; // 0x48	
 	// MPropertyDescription "Is this an element which should be placed at the end of the line."
-	CSmartPropAttributeBool m_bEnd; // 0x48	
+	CSmartPropAttributeBool m_bEnd; // 0x88	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x198
+// Size: 0x1d8
 // Has VTable
 // Construct allowed
 // 
@@ -980,24 +1081,24 @@ class CSmartPropOperation_ComputeProjectVector3D : public CSmartPropOperation
 public:
 	// MPropertyFriendlyName "Output Variable"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
-	CUtlString m_OutputVariableName; // 0x10	
+	CUtlString m_OutputVariableName; // 0x50	
 	// MPropertyDescription "Specifies the coordinate space that vector should be returned in."
-	CSmartPropAttributeCoordinateSpace m_OutputCoordinateSpace; // 0x18	
+	CSmartPropAttributeCoordinateSpace m_OutputCoordinateSpace; // 0x58	
 	// MPropertyGroupName "+Vector A"
 	// MPropertyFriendlyName "Vector A"
-	CSmartPropAttributeVector m_InputVectorA; // 0x58	
+	CSmartPropAttributeVector m_InputVectorA; // 0x98	
 	// MPropertyGroupName "+Vector A"
 	// MPropertyDescription "Specifies the coordinate space of vector A."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceA; // 0x98	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceA; // 0xd8	
 	// MPropertyGroupName "+Vector B"
 	// MPropertyFriendlyName "Vector B"
-	CSmartPropAttributeVector m_InputVectorB; // 0xd8	
+	CSmartPropAttributeVector m_InputVectorB; // 0x118	
 	// MPropertyGroupName "+Vector B"
 	// MPropertyDescription "Specifies the coordinate space of posivectortion B."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceB; // 0x118	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceB; // 0x158	
 	// MPropertyFriendlyName "Projection to plane"
 	// MPropertyDescription "Interpret Vector B as plane normal."
-	CSmartPropAttributeBool m_bPlane; // 0x158	
+	CSmartPropAttributeBool m_bPlane; // 0x198	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1015,7 +1116,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x18
+// Size: 0x58
 // Has VTable
 // Construct allowed
 // 
@@ -1027,12 +1128,12 @@ class CSmartPropFilter_Expression : public CSmartPropFilter
 {
 public:
 	// MPropertyAttributeEditor "SmartPropAttributeEditor(expression)"
-	CUtlString m_Expression; // 0x10	
+	CUtlString m_Expression; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x98
+// Size: 0xd8
 // Has VTable
 // Construct allowed
 // 
@@ -1045,11 +1146,11 @@ class CSmartPropOperation_ComputeDotProduct3D : public CSmartPropOperation
 public:
 	// MPropertyFriendlyName "Output Variable"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableName; // 0x10	
+	CUtlString m_OutputVariableName; // 0x50	
 	// MPropertyFriendlyName "Vector A"
-	CSmartPropAttributeVector m_InputVectorA; // 0x18	
+	CSmartPropAttributeVector m_InputVectorA; // 0x58	
 	// MPropertyFriendlyName "Vector B"
-	CSmartPropAttributeVector m_InputVectorB; // 0x58	
+	CSmartPropAttributeVector m_InputVectorB; // 0x98	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1082,7 +1183,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x360
+// Size: 0x3a0
 // Has VTable
 // Construct allowed
 // 
@@ -1094,48 +1195,48 @@ class CSmartPropElement_Layout2DGrid : public CSmartPropElement_Group
 public:
 	// MPropertyDescription "Overall grid dimension along X axis."
 	// MPropertyAttributeRange "biased 0 4096"
-	CSmartPropAttributeFloat m_flWidth; // 0x60	
+	CSmartPropAttributeFloat m_flWidth; // 0xa0	
 	// MPropertyDescription "Overall grid dimension along Y axis."
 	// MPropertyAttributeRange "biased 0 4096"
-	CSmartPropAttributeFloat m_flLength; // 0xa0	
+	CSmartPropAttributeFloat m_flLength; // 0xe0	
 	// MPropertyDescription "Layout length vertically (Along Z axis instead of Y)."
-	CSmartPropAttributeBool m_bVerticalLength; // 0xe0	
+	CSmartPropAttributeBool m_bVerticalLength; // 0x120	
 	// MPropertyDescription "ARRAY: Grid is a specific number of grid divisions. FILL: The boundary is filled with as many as will fit at the specified cell spacing."
-	CSmartPropAttributeGridPlacementMode m_GridArrangement; // 0x120	
+	CSmartPropAttributeGridPlacementMode m_GridArrangement; // 0x160	
 	// MPropertyDescription "Specifies the overall grid origin location. Corner origin grids default to quadrant I, but may be expressed in others using negative values for Width and/or Length."
-	CSmartPropAttributeGridOriginMode m_GridOriginMode; // 0x160	
+	CSmartPropAttributeGridOriginMode m_GridOriginMode; // 0x1a0	
 	// MPropertyDescription "Grid segments along width axis."
 	// MPropertyAttributeRange "1 64"
 	// MPropertySuppressExpr "m_GridArrangement == FILL"
-	CSmartPropAttributeInt m_nCountW; // 0x1a0	
+	CSmartPropAttributeInt m_nCountW; // 0x1e0	
 	// MPropertyDescription "Grid segments along Length axis."
 	// MPropertyAttributeRange "1 64"
 	// MPropertySuppressExpr "m_GridArrangement == FILL"
-	CSmartPropAttributeInt m_nCountL; // 0x1e0	
+	CSmartPropAttributeInt m_nCountL; // 0x220	
 	// MPropertyDescription "Minimum Width of filled grid cells."
 	// MPropertyAttributeRange "biased 0 1024"
 	// MPropertySuppressExpr "m_GridArrangement == SEGMENT"
-	CSmartPropAttributeFloat m_flSpacingWidth; // 0x220	
+	CSmartPropAttributeFloat m_flSpacingWidth; // 0x260	
 	// MPropertyDescription "Minimum Length of filled grid cells."
 	// MPropertyAttributeRange "biased 0 1024"
 	// MPropertySuppressExpr "m_GridArrangement == SEGMENT"
-	CSmartPropAttributeFloat m_flSpacingLength; // 0x260	
+	CSmartPropAttributeFloat m_flSpacingLength; // 0x2a0	
 	// MPropertyDescription "Shifts every other cell row and/or column."
 	// MPropertySuppressExpr "m_GridArrangement == FILL"
-	CSmartPropAttributeBool m_bAlternateShift; // 0x2a0	
+	CSmartPropAttributeBool m_bAlternateShift; // 0x2e0	
 	// MPropertyDescription "Vary cell shift in X."
 	// MPropertyAttributeRange "biased 0 1024"
 	// MPropertySuppressExpr "m_GridArrangement == FILL || m_bAlternateShift == false"
-	CSmartPropAttributeFloat m_flAlternateShiftWidth; // 0x2e0	
+	CSmartPropAttributeFloat m_flAlternateShiftWidth; // 0x320	
 	// MPropertyDescription "Vary cell shift in Y."
 	// MPropertyAttributeRange "biased 0 1024"
 	// MPropertySuppressExpr "m_GridArrangement == FILL || m_bAlternateShift == false"
-	CSmartPropAttributeFloat m_flAlternateShiftLength; // 0x320	
+	CSmartPropAttributeFloat m_flAlternateShiftLength; // 0x360	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x128
+// Size: 0x168
 // Has VTable
 // Construct allowed
 // 
@@ -1147,9 +1248,9 @@ class CSmartPropElement_SmartProp : public CSmartPropElement
 {
 public:
 	// MPropertyDescription "Name of the target smart prop resource (.vsmart) to evaluate."
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCSmartProp > > m_sSmartProp; // 0x40	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCSmartProp > > m_sSmartProp; // 0x80	
 	// MPropertyDescription "If enabled, any changes made to the evaluation state by the target smart prop (as well as modifiers) will only apply locally and will not affect the evaluation state of the parent. Disabling this will allow modifications to the evaluation state by the referenced smart prop to apply the current state of the of the parent. For example if the referenced smart prop applies a transform and you want the transform to affect the elements in the parent after this element, then you should disable local evaluation state."
-	bool m_bLocalEvaluationState; // 0x120	
+	bool m_bLocalEvaluationState; // 0x160	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1168,7 +1269,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x90
 // Has VTable
 // Construct allowed
 // 
@@ -1180,7 +1281,7 @@ class CSmartPropFilter_Probability : public CSmartPropFilter
 {
 public:
 	// MPropertyDescription "0.0 to 1.0 value indicating the probability of this element being evaluated. Where a value of 0 means the element will never be evaluated and 1.0 means it will always be evaluated"
-	CSmartPropAttributeFloat m_flProbability; // 0x10	
+	CSmartPropAttributeFloat m_flProbability; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1232,7 +1333,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x98
+// Size: 0xd8
 // Has VTable
 // Construct allowed
 // 
@@ -1244,11 +1345,11 @@ class CSmartPropOperation_SaveDirection : public CSmartPropOperation
 {
 public:
 	// MPropertyDescription "Specifies which direction vector to save."
-	CSmartPropAttributeDirection m_DirectionVector; // 0x10	
+	CSmartPropAttributeDirection m_DirectionVector; // 0x50	
 	// MPropertyDescription "Specifies the coordinate space of the saved position value."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x50	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x90	
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
-	CUtlString m_VariableName; // 0x90	
+	CUtlString m_VariableName; // 0xd0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1274,7 +1375,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x90
+// Size: 0xd0
 // Has VTable
 // Construct allowed
 // 
@@ -1286,14 +1387,14 @@ class CSmartPropOperation_Translate : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Local space position translation to apply to the current transform"
-	CSmartPropAttributeVector m_vPosition; // 0x10	
+	CSmartPropAttributeVector m_vPosition; // 0x50	
 	// MPropertyDescription "Specifies the coordinate space of the specified position value."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x50	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x108
+// Size: 0x148
 // Has VTable
 // Construct allowed
 // 
@@ -1305,22 +1406,22 @@ class CSmartPropSelectionCriteria_LinearLength : public CSmartPropSelectionCrite
 {
 public:
 	// MPropertyDescription "Specifies the length of the line that will be taken up if this element is selected."
-	CSmartPropAttributeFloat m_flLength; // 0x8	
+	CSmartPropAttributeFloat m_flLength; // 0x48	
 	// MPropertyDescription "Can this object be scaled. If enabled the minimum and maximum lengths must be set to specify the size range of allowable scale."
-	CSmartPropAttributeBool m_bAllowScale; // 0x48	
+	CSmartPropAttributeBool m_bAllowScale; // 0x88	
 	// MPropertyFriendlyName "Minimum length"
 	// MPropertySuppressExpr "m_bAllowScale == false"
 	// MPropertyDescription "Minimum allowable length for the object. Must be <= length. If length is 100 and minimum length is 20, then the object may be assigned a scale in the rage [ 0.2, 1.0 ]."
-	CSmartPropAttributeFloat m_flMinLength; // 0x88	
+	CSmartPropAttributeFloat m_flMinLength; // 0xc8	
 	// MPropertyFriendlyName "Maximum length"
 	// MPropertySuppressExpr "m_bAllowScale == false"
 	// MPropertyDescription "Maximum allowable length for the object. Must be >= length. If length is 100 and maximum length is 160, then the object may be assigned a scale in the rage [ 1.0, 1.6 ]."
-	CSmartPropAttributeFloat m_flMaxLength; // 0xc8	
+	CSmartPropAttributeFloat m_flMaxLength; // 0x108	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x158
+// Size: 0x198
 // Has VTable
 // Construct allowed
 // 
@@ -1333,26 +1434,26 @@ class CSmartPropOperation_ComputeDistance3D : public CSmartPropOperation
 public:
 	// MPropertyFriendlyName "Output Variable"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableName; // 0x10	
+	CUtlString m_OutputVariableName; // 0x50	
 	// MPropertyDescription "Specifies the coordinate space the distance should be computed in. The scale of the coordinate space may affect the distance value."
-	CSmartPropAttributeCoordinateSpace m_OutputCoordinateSpace; // 0x18	
+	CSmartPropAttributeCoordinateSpace m_OutputCoordinateSpace; // 0x58	
 	// MPropertyGroupName "+Position A"
 	// MPropertyFriendlyName "Position A"
-	CSmartPropAttributeVector m_InputPositionA; // 0x58	
+	CSmartPropAttributeVector m_InputPositionA; // 0x98	
 	// MPropertyGroupName "+Position A"
 	// MPropertyDescription "Specifies the coordinate space of position A."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceA; // 0x98	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceA; // 0xd8	
 	// MPropertyGroupName "+Position B"
 	// MPropertyFriendlyName "Position B"
-	CSmartPropAttributeVector m_InputPositionB; // 0xd8	
+	CSmartPropAttributeVector m_InputPositionB; // 0x118	
 	// MPropertyGroupName "+Position B"
 	// MPropertyDescription "Specifies the coordinate space of position B."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceB; // 0x118	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceB; // 0x158	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x2d0
+// Size: 0x310
 // Has VTable
 // Is Abstract
 // Construct allowed
@@ -1363,43 +1464,43 @@ class CSmartPropOperation_Trace : public CSmartPropTransformOperation
 public:
 	// MPropertyStartGroup "+Origin"
 	// MPropertyDescription "Specifies the origin point for the start of the trace. To trace from the current position, set to < 0, 0, 0 > and set the coordinate space to Element Space"
-	CSmartPropAttributeVector m_Origin; // 0x10	
+	CSmartPropAttributeVector m_Origin; // 0x50	
 	// MPropertyDescription "Coordinate space the origin is specified in. Using Element space allows specifying a value relative to the current position. However, world space should generally be used when for variable values."
-	CSmartPropAttributeCoordinateSpace m_OriginSpace; // 0x50	
+	CSmartPropAttributeCoordinateSpace m_OriginSpace; // 0x90	
 	// MPropertyDescription "Offset to apply to the specified origin along the trace direction to compute the starting point of the trace."
-	CSmartPropAttributeFloat m_flOriginOffset; // 0x90	
+	CSmartPropAttributeFloat m_flOriginOffset; // 0xd0	
 	// MPropertyStartGroup "+Result"
 	// MPropertySortPriority "-1"
 	// MPropertyDescription "How much should the surface normal up direction influence the final orientation. [ 0, 1 ] where 0 = don't modify the orientation, 1 = completely re-orient to match the surface."
-	CSmartPropAttributeFloat m_flSurfaceUpInfluence; // 0xd0	
+	CSmartPropAttributeFloat m_flSurfaceUpInfluence; // 0x110	
 	// MPropertySortPriority "-1"
 	// MPropertyFriendlyName "If No Surface Hit"
 	// MPropertyDescription "Specifies the behavior when the trace does not hit a surface."
-	CSmartPropAttributeTraceNoHit m_nNoHitResult; // 0x110	
+	CSmartPropAttributeTraceNoHit m_nNoHitResult; // 0x150	
 	// MPropertyStartGroup "Trace filtering"
 	// MPropertySortPriority "-2"
 	// MPropertyDescription "Do not trace against tool materials (attribute 'tools.toolsmaterial')."
-	CSmartPropAttributeBool m_bIgnoreToolMaterials; // 0x150	
+	CSmartPropAttributeBool m_bIgnoreToolMaterials; // 0x190	
 	// MPropertySortPriority "-2"
 	// MPropertyDescription "Do not trace against sky materials (attribute 'mapbuilder.sky')."
-	CSmartPropAttributeBool m_bIgnoreSky; // 0x190	
+	CSmartPropAttributeBool m_bIgnoreSky; // 0x1d0	
 	// MPropertySortPriority "-2"
 	// MPropertyDescription "Do not trace against no draw materials (material attribute 'mapbuilder.nodraw')."
-	CSmartPropAttributeBool m_bIgnoreNoDraw; // 0x1d0	
+	CSmartPropAttributeBool m_bIgnoreNoDraw; // 0x210	
 	// MPropertySortPriority "-2"
 	// MPropertyDescription "Do not trace against translucent materials (materials with 'alphatest' or 'translucent' attributes)."
-	CSmartPropAttributeBool m_bIgnoreTranslucent; // 0x210	
+	CSmartPropAttributeBool m_bIgnoreTranslucent; // 0x250	
 	// MPropertySortPriority "-2"
 	// MPropertyDescription "Do not trace against any models (only hit world geometry)."
-	CSmartPropAttributeBool m_bIgnoreModels; // 0x250	
+	CSmartPropAttributeBool m_bIgnoreModels; // 0x290	
 	// MPropertySortPriority "-2"
 	// MPropertyDescription "Do not trace against dynamic entities which may move in game."
-	CSmartPropAttributeBool m_bIgnoreEntities; // 0x290	
+	CSmartPropAttributeBool m_bIgnoreEntities; // 0x2d0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0xa8
+// Size: 0xe8
 // Has VTable
 // Construct allowed
 // 
@@ -1410,16 +1511,16 @@ class CSmartPropElement_PlaceMultiple : public CSmartPropElement_Group
 {
 public:
 	// MPropertyDescription "Number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCount; // 0x60	
+	CSmartPropAttributeInt m_nCount; // 0xa0	
 	// MPropertyFriendlyName "Stop When"
 	// MPropertyDescription "Stop placing copies of the children when this expression evaluates to true."
 	// MPropertyAttributeEditor "SmartPropAttributeEditor(expression)"
-	CUtlString m_Expression; // 0xa0	
+	CUtlString m_Expression; // 0xe0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x48
+// Size: 0x88
 // Has VTable
 // Construct allowed
 // 
@@ -1433,12 +1534,12 @@ class CSmartPropElement_ModifyState : public CSmartPropElement
 public:
 	// MPropertyFriendlyName "Label"
 	// MPropertyDescription "Optional text that will appear in the outliner to help organize Smart Prop elements and communicate their purpose to other users."
-	CUtlString m_sLabel; // 0x40	
+	CUtlString m_sLabel; // 0x80	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x388
+// Size: 0x3c8
 // Has VTable
 // Construct allowed
 // 
@@ -1451,57 +1552,57 @@ class CSmartPropOperation_CreateSizer : public CSmartPropTransformOperation
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertyDescription "Name used to identify the sizer. Must be unique within the paraent element."
-	CUtlString m_Name; // 0x10	
+	CUtlString m_Name; // 0x50	
 	// MPropertyFriendlyName "Display Model"
 	// MPropertyDescription "If enabled a model will be displayed at the position of the sizer that can be used to select the sizer in Hammer."
-	CSmartPropAttributeBool m_bDisplayModel; // 0x18	
+	CSmartPropAttributeBool m_bDisplayModel; // 0x58	
 	// MPropertyGroupName "X-Axis Size"
-	CSmartPropAttributeFloat m_flInitialMinX; // 0x58	
+	CSmartPropAttributeFloat m_flInitialMinX; // 0x98	
 	// MPropertyGroupName "X-Axis Size"
-	CSmartPropAttributeFloat m_flInitialMaxX; // 0x98	
+	CSmartPropAttributeFloat m_flInitialMaxX; // 0xd8	
 	// MPropertyGroupName "X-Axis Size"
-	CSmartPropAttributeFloat m_flConstraintMinX; // 0xd8	
+	CSmartPropAttributeFloat m_flConstraintMinX; // 0x118	
 	// MPropertyGroupName "X-Axis Size"
-	CSmartPropAttributeFloat m_flConstraintMaxX; // 0x118	
-	// MPropertyGroupName "X-Axis Size"
-	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableMinX; // 0x158	
+	CSmartPropAttributeFloat m_flConstraintMaxX; // 0x158	
 	// MPropertyGroupName "X-Axis Size"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableMaxX; // 0x160	
+	CUtlString m_OutputVariableMinX; // 0x198	
+	// MPropertyGroupName "X-Axis Size"
+	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
+	CUtlString m_OutputVariableMaxX; // 0x1a0	
 	// MPropertyGroupName "Y-Axis Size"
-	CSmartPropAttributeFloat m_flInitialMinY; // 0x168	
+	CSmartPropAttributeFloat m_flInitialMinY; // 0x1a8	
 	// MPropertyGroupName "Y-Axis Size"
-	CSmartPropAttributeFloat m_flInitialMaxY; // 0x1a8	
+	CSmartPropAttributeFloat m_flInitialMaxY; // 0x1e8	
 	// MPropertyGroupName "Y-Axis Size"
-	CSmartPropAttributeFloat m_flConstraintMinY; // 0x1e8	
+	CSmartPropAttributeFloat m_flConstraintMinY; // 0x228	
 	// MPropertyGroupName "Y-Axis Size"
-	CSmartPropAttributeFloat m_flConstraintMaxY; // 0x228	
+	CSmartPropAttributeFloat m_flConstraintMaxY; // 0x268	
 	// MPropertyGroupName "Y-Axis Size"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableMinY; // 0x268	
+	CUtlString m_OutputVariableMinY; // 0x2a8	
 	// MPropertyGroupName "Y-Axis Size"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableMaxY; // 0x270	
+	CUtlString m_OutputVariableMaxY; // 0x2b0	
 	// MPropertyGroupName "Z-Axis Size"
-	CSmartPropAttributeFloat m_flInitialMinZ; // 0x278	
+	CSmartPropAttributeFloat m_flInitialMinZ; // 0x2b8	
 	// MPropertyGroupName "Z-Axis Size"
-	CSmartPropAttributeFloat m_flInitialMaxZ; // 0x2b8	
+	CSmartPropAttributeFloat m_flInitialMaxZ; // 0x2f8	
 	// MPropertyGroupName "Z-Axis Size"
-	CSmartPropAttributeFloat m_flConstraintMinZ; // 0x2f8	
+	CSmartPropAttributeFloat m_flConstraintMinZ; // 0x338	
 	// MPropertyGroupName "Z-Axis Size"
-	CSmartPropAttributeFloat m_flConstraintMaxZ; // 0x338	
-	// MPropertyGroupName "Z-Axis Size"
-	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableMinZ; // 0x378	
+	CSmartPropAttributeFloat m_flConstraintMaxZ; // 0x378	
 	// MPropertyGroupName "Z-Axis Size"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
-	CUtlString m_OutputVariableMaxZ; // 0x380	
+	CUtlString m_OutputVariableMinZ; // 0x3b8	
+	// MPropertyGroupName "Z-Axis Size"
+	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
+	CUtlString m_OutputVariableMaxZ; // 0x3c0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x98
+// Size: 0xd8
 // Has VTable
 // Construct allowed
 // 
@@ -1514,16 +1615,16 @@ class CSmartPropOperation_ComputeCrossProduct3D : public CSmartPropOperation
 public:
 	// MPropertyFriendlyName "Output Variable"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
-	CUtlString m_OutputVariableName; // 0x10	
+	CUtlString m_OutputVariableName; // 0x50	
 	// MPropertyFriendlyName "Vector A"
-	CSmartPropAttributeVector m_InputVectorA; // 0x18	
+	CSmartPropAttributeVector m_InputVectorA; // 0x58	
 	// MPropertyFriendlyName "Vector B"
-	CSmartPropAttributeVector m_InputVectorB; // 0x58	
+	CSmartPropAttributeVector m_InputVectorB; // 0x98	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x150
+// Size: 0x190
 // Has VTable
 // Construct allowed
 // 
@@ -1535,17 +1636,17 @@ class CSmartPropOperation_SetOrientation : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyGroupName "+Forward"
-	CSmartPropAttributeVector m_vForwardVector; // 0x10	
+	CSmartPropAttributeVector m_vForwardVector; // 0x50	
 	// MPropertyGroupName "+Forward"
 	// MPropertyDescription "Specifies the coordinate space the forward direction is being specified in"
-	CSmartPropAttributeCoordinateSpace m_ForwardDirectionSpace; // 0x50	
+	CSmartPropAttributeCoordinateSpace m_ForwardDirectionSpace; // 0x90	
 	// MPropertyGroupName "+Up"
-	CSmartPropAttributeVector m_vUpVector; // 0x90	
+	CSmartPropAttributeVector m_vUpVector; // 0xd0	
 	// MPropertyGroupName "+Up"
 	// MPropertyDescription "Specifies the coordinate space the up direction is being specified in"
-	CSmartPropAttributeCoordinateSpace m_UpDirectionSpace; // 0xd0	
+	CSmartPropAttributeCoordinateSpace m_UpDirectionSpace; // 0x110	
 	// MPropertyDescription "If the specified vectors are not orthogonal, normally the up vector will be adjusted to make it orthogonal to the forward vector. If prioritize up is true, then the forward vector will be adjusted to be orthogonal to the specified up vector instead."
-	CSmartPropAttributeBool m_bPrioritizeUp; // 0x110	
+	CSmartPropAttributeBool m_bPrioritizeUp; // 0x150	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1566,7 +1667,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x1a8
+// Size: 0x1e8
 // Has VTable
 // Construct allowed
 // 
@@ -1577,30 +1678,30 @@ class CSmartPropElement_PickOne : public CSmartPropElement_Group
 {
 public:
 	// MPropertyDescription "Specifies how the initial selection of a choice should be handled."
-	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0x60	
+	CSmartPropAttributeChoiceSelectionMode m_SelectionMode; // 0xa0	
 	// MPropertyDescription "Should a control to select the specific choice be shown when this prop is placed in Hammer."
-	CSmartPropAttributeBool m_bConfigurable; // 0xa0	
+	CSmartPropAttributeBool m_bConfigurable; // 0xe0	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Specifies an offset in the local space of the element to apply to the configuration handle."
-	CSmartPropAttributeVector m_vHandleOffset; // 0xe0	
+	CSmartPropAttributeVector m_vHandleOffset; // 0x120	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Color to use to display the configuration handle."
-	CSmartPropAttributeColor m_HandleColor; // 0x120	
+	CSmartPropAttributeColor m_HandleColor; // 0x160	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Size of the configuration handle."
-	CSmartPropAttributeInt m_HandleSize; // 0x160	
+	CSmartPropAttributeInt m_HandleSize; // 0x1a0	
 	// MPropertyGroupName "Handle Settings"
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Shape of the configuration handle to display."
-	ConfigurationHandleShape_t m_HandleShape; // 0x1a0	
+	ConfigurationHandleShape_t m_HandleShape; // 0x1e0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x198
+// Size: 0x1d8
 // Has VTable
 // Construct allowed
 // 
@@ -1614,28 +1715,28 @@ public:
 	// MPropertyFriendlyName "Name"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Locator )"
 	// MPropertyDescription "Name of the locator. This can be used to reference the locator in this element or its children. If the locator is configurable, the locator will be identified by this name in Hammer."
-	CUtlString m_LocatorName; // 0x10	
+	CUtlString m_LocatorName; // 0x50	
 	// MPropertyDescription "Offset of the locator relative to the current transform. This allows the locator to be created at an offset location without applying that offset to the current transform."
-	CSmartPropAttributeVector m_vOffset; // 0x18	
+	CSmartPropAttributeVector m_vOffset; // 0x58	
 	// MPropertyDescription "Scale to apply only to the locator model"
-	CSmartPropAttributeFloat m_flDisplayScale; // 0x58	
+	CSmartPropAttributeFloat m_flDisplayScale; // 0x98	
 	// MPropertyDescription "Controls whether or not the locator can be edited in a smart prop configuration. If enabled an editable locator will appear when the smart prop is placed in Hammer. Any changes to that locator will modify the current transform."
-	CSmartPropAttributeBool m_bConfigurable; // 0x98	
+	CSmartPropAttributeBool m_bConfigurable; // 0xd8	
 	// MPropertyReadonlyExpr
 	// MPropertyGroupName "Configuration"
-	CSmartPropAttributeBool m_bAllowTranslation; // 0xd8	
+	CSmartPropAttributeBool m_bAllowTranslation; // 0x118	
 	// MPropertyReadonlyExpr
 	// MPropertyGroupName "Configuration"
-	CSmartPropAttributeBool m_bAllowRotation; // 0x118	
+	CSmartPropAttributeBool m_bAllowRotation; // 0x158	
 	// MPropertyReadonlyExpr
 	// MPropertyGroupName "Configuration"
 	// MPropertyDescription "Controls whether or not the configuration of the locator can include scale. If enabled scale can be applied to the editable locator in Hammer. If disabled the scale will not be editable and the current scale will be used."
-	CSmartPropAttributeBool m_bAllowScale; // 0x158	
+	CSmartPropAttributeBool m_bAllowScale; // 0x198	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x220
+// Size: 0x260
 // Has VTable
 // Construct allowed
 // 
@@ -1648,31 +1749,31 @@ class CSmartPropOperation_CreateRotator : public CSmartPropTransformOperation
 public:
 	// MPropertyFriendlyName "Name"
 	// MPropertyDescription "Name used to identify the rotator. Must be unique within the parent element."
-	CUtlString m_Name; // 0x10	
+	CUtlString m_Name; // 0x50	
 	// MPropertyDescription "Axis around which the rotation will occur"
-	CSmartPropAttributeVector m_vRotationAxis; // 0x18	
+	CSmartPropAttributeVector m_vRotationAxis; // 0x58	
 	// MPropertyDescription "Coordinate space the axis of rotation is specified in."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x58	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x98	
 	// MPropertyDescription "Radius at which the rotator handle should be displayed."
-	CSmartPropAttributeFloat m_flDisplayRadius; // 0x98	
+	CSmartPropAttributeFloat m_flDisplayRadius; // 0xd8	
 	// MPropertyDescription "Should the rotation be applied to the current transform."
-	CSmartPropAttributeBool m_bApplyToCurrentTrasnform; // 0xd8	
+	CSmartPropAttributeBool m_bApplyToCurrentTrasnform; // 0x118	
 	// MPropertyDescription "Specifies the number of degrees the rotation should snap to. If set to 0, then the rotation snapping will be controlled by the rotation snapping in Hammer."
-	CSmartPropAttributeFloat m_flSnappingIncrement; // 0x118	
+	CSmartPropAttributeFloat m_flSnappingIncrement; // 0x158	
 	// MPropertyFriendlyName "Enforce Limits"
 	// MPropertyDescription "If enabled, the minimum and maximum rotation angles will be used to limit the range of the rotation."
-	CSmartPropAttributeBool m_bEnforceLimits; // 0x158	
+	CSmartPropAttributeBool m_bEnforceLimits; // 0x198	
 	// MPropertyReadonlyExpr
 	// MPropertyFriendlyName "Minimum Angle"
 	// MPropertyDescription "Specifies the minimum angle limit in degrees"
-	CSmartPropAttributeFloat m_flMinAngle; // 0x198	
+	CSmartPropAttributeFloat m_flMinAngle; // 0x1d8	
 	// MPropertyReadonlyExpr
 	// MPropertyFriendlyName "Minimum Angle"
 	// MPropertyDescription "Specifies the minimum angle limit in degrees"
-	CSmartPropAttributeFloat m_flMaxAngle; // 0x1d8	
+	CSmartPropAttributeFloat m_flMaxAngle; // 0x218	
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Float )"
 	// MPropertyDescription "Specifies a float variable to which the rotation value should be output. The variable only receives the rotation around the axis, the axis of rotation does not affect this output."
-	CUtlString m_OutputVariable; // 0x218	
+	CUtlString m_OutputVariable; // 0x258	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1704,7 +1805,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x198
+// Size: 0x1d8
 // Has VTable
 // Construct allowed
 // 
@@ -1717,29 +1818,29 @@ class CSmartPropOperation_ComputeVectorBetweenPoints3D : public CSmartPropOperat
 public:
 	// MPropertyFriendlyName "Output Variable"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
-	CUtlString m_OutputVariableName; // 0x10	
+	CUtlString m_OutputVariableName; // 0x50	
 	// MPropertyDescription "Specifies the coordinate space that vector should be returned in."
-	CSmartPropAttributeCoordinateSpace m_OutputCoordinateSpace; // 0x18	
+	CSmartPropAttributeCoordinateSpace m_OutputCoordinateSpace; // 0x58	
 	// MPropertyFriendlyName "Normalized (Direction Vector)"
 	// MPropertyDescription "Should the return value be normalized to unit length (direction vector)."
-	CSmartPropAttributeBool m_bNormalized; // 0x58	
+	CSmartPropAttributeBool m_bNormalized; // 0x98	
 	// MPropertyGroupName "+Position A"
 	// MPropertyFriendlyName "Position A"
-	CSmartPropAttributeVector m_InputPositionA; // 0x98	
+	CSmartPropAttributeVector m_InputPositionA; // 0xd8	
 	// MPropertyGroupName "+Position A"
 	// MPropertyDescription "Specifies the coordinate space of position A."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceA; // 0xd8	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceA; // 0x118	
 	// MPropertyGroupName "+Position B"
 	// MPropertyFriendlyName "Position B"
-	CSmartPropAttributeVector m_InputPositionB; // 0x118	
+	CSmartPropAttributeVector m_InputPositionB; // 0x158	
 	// MPropertyGroupName "+Position B"
 	// MPropertyDescription "Specifies the coordinate space of position B."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceB; // 0x158	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpaceB; // 0x198	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x58
+// Size: 0x98
 // Has VTable
 // Construct allowed
 // 
@@ -1751,14 +1852,14 @@ class CSmartPropOperation_SavePosition : public CSmartPropOperation
 {
 public:
 	// MPropertyDescription "Specifies the coordinate space of the saved position value."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x10	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x50	
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
-	CUtlString m_VariableName; // 0x50	
+	CUtlString m_VariableName; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x90
+// Size: 0xd0
 // Has VTable
 // Construct allowed
 // 
@@ -1770,9 +1871,9 @@ class CSmartPropOperation_SetPosition : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Local space position translation to apply to the current transform"
-	CSmartPropAttributeVector m_vPosition; // 0x10	
+	CSmartPropAttributeVector m_vPosition; // 0x50	
 	// MPropertyDescription "Specifies the coordinate space of the specified position value."
-	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x50	
+	CSmartPropAttributeCoordinateSpace m_CoordinateSpace; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1797,7 +1898,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x90
+// Size: 0xd0
 // Has VTable
 // Construct allowed
 // 
@@ -1809,9 +1910,9 @@ class CSmartPropOperation_RandomScale : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Minimum scale range"
-	CSmartPropAttributeFloat m_flRandomScaleMin; // 0x10	
+	CSmartPropAttributeFloat m_flRandomScaleMin; // 0x50	
 	// MPropertyDescription "Maximum scale range"
-	CSmartPropAttributeFloat m_flRandomScaleMax; // 0x50	
+	CSmartPropAttributeFloat m_flRandomScaleMax; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1836,7 +1937,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x150
 // Has VTable
 // Construct allowed
 // 
@@ -1848,12 +1949,18 @@ class CSmartPropOperation_ResetRotation : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "If enabled, the rotation will be reset to a world space instead of object space, meaning any rotation applied to the object in Hammer will be ignored."
-	CSmartPropAttributeBool m_bIgnoreObjectRotation; // 0x10	
+	CSmartPropAttributeBool m_bIgnoreObjectRotation; // 0x50	
+	// MPropertyDescription "Should the pitch (rotation around left vector) value be reset."
+	CSmartPropAttributeBool m_bResetPitch; // 0x90	
+	// MPropertyDescription "Should the yaw (roation around the up vector) value be reset."
+	CSmartPropAttributeBool m_bResetYaw; // 0xd0	
+	// MPropertyDescription "Should the roll (rotation around forward vector) value be reset."
+	CSmartPropAttributeBool m_bResetRoll; // 0x110	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x90
+// Size: 0xd0
 // Has VTable
 // Construct allowed
 // 
@@ -1865,14 +1972,14 @@ class CSmartPropFilter_SurfaceAngle : public CSmartPropFilter
 {
 public:
 	// MPropertyDescription "Minimum slope on which the target will be placed. Slope is a [ 0, 180 ] value of the surface normal rotation from up such that 0 is a horizontal surface (floor), 90 is a vertical surface (wall), 180 is horizontal upside down surface (ceiling)."
-	CSmartPropAttributeFloat m_flSurfaceSlopeMin; // 0x10	
+	CSmartPropAttributeFloat m_flSurfaceSlopeMin; // 0x50	
 	// MPropertyDescription "Maximum slope on which the target will be placed."
-	CSmartPropAttributeFloat m_flSurfaceSlopeMax; // 0x50	
+	CSmartPropAttributeFloat m_flSurfaceSlopeMax; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x48
+// Size: 0x88
 // Has VTable
 // Construct allowed
 // 
@@ -1884,12 +1991,12 @@ class CSmartPropSelectionCriteria_ChoiceWeight : public CSmartPropSelectionCrite
 {
 public:
 	// MPropertyDescription "Relative weight of this choice, higher weighted choices are more likely to be selected."
-	CSmartPropAttributeFloat m_flWeight; // 0x8	
+	CSmartPropAttributeFloat m_flWeight; // 0x48	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x450
+// Size: 0x490
 // Has VTable
 // Construct allowed
 // 
@@ -1903,21 +2010,21 @@ class CSmartPropOperation_TraceToLine : public CSmartPropOperation_Trace
 public:
 	// MPropertyStartGroup "+Line End Point A"
 	// MPropertyDescription "End point of the line to trace to."
-	CSmartPropAttributeVector m_EndPointA; // 0x2d0	
+	CSmartPropAttributeVector m_EndPointA; // 0x310	
 	// MPropertyDescription "Coordinate space the end point is specified in."
-	CSmartPropAttributeCoordinateSpace m_EndPointSpaceA; // 0x310	
+	CSmartPropAttributeCoordinateSpace m_EndPointSpaceA; // 0x350	
 	// MPropertyStartGroup "+Line End Point B"
 	// MPropertyDescription "End point of the line to trace to."
-	CSmartPropAttributeVector m_EndPointB; // 0x350	
+	CSmartPropAttributeVector m_EndPointB; // 0x390	
 	// MPropertyDescription "Coordinate space the end point is specified in."
-	CSmartPropAttributeCoordinateSpace m_EndPointSpaceB; // 0x390	
+	CSmartPropAttributeCoordinateSpace m_EndPointSpaceB; // 0x3d0	
 	// MPropertyStartGroup "+Trace Away"
 	// MPropertyFriendlyName "Trace away from line"
 	// MPropertyDescription "If enabled, instead of tracing from the origin to the line, trace away from the line for the specified distance starting at the origin."
-	CSmartPropAttributeBool m_bTraceAway; // 0x3d0	
+	CSmartPropAttributeBool m_bTraceAway; // 0x410	
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Maximum length of the trace. Surfaces beyond this distance will not be hit."
-	CSmartPropAttributeFloat m_flTraceLength; // 0x410	
+	CSmartPropAttributeFloat m_flTraceLength; // 0x450	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1931,6 +2038,7 @@ public:
 // MVDataSingleton
 // MVDataFileExtension
 // MVDataPreviewWidget
+// MVDataGroupNodeClass
 // MVDataUsesComponentEditor
 // MPropertyFriendlyName "Smart Prop"
 // MPropertyDescription "Root of a smart prop, contains a list of elements to evaluate."
@@ -1954,7 +2062,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x90
 // Has VTable
 // Construct allowed
 // 
@@ -1966,7 +2074,7 @@ class CSmartPropOperation_Rotate : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Local space rotation (in degrees) to apply to the current transform"
-	CSmartPropAttributeAngles m_vRotation; // 0x10	
+	CSmartPropAttributeAngles m_vRotation; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -1985,7 +2093,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x58
+// Size: 0x98
 // Has VTable
 // Construct allowed
 // 
@@ -1998,8 +2106,8 @@ class CSmartPropOperation_ComputeNormalizedVector3D : public CSmartPropOperation
 public:
 	// MPropertyFriendlyName "Output Variable"
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( Variable:Vector3 )"
-	CUtlString m_OutputVariableName; // 0x10	
-	CSmartPropAttributeVector m_InputVector; // 0x18	
+	CUtlString m_OutputVariableName; // 0x50	
+	CSmartPropAttributeVector m_InputVector; // 0x58	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -2049,7 +2157,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x3d0
+// Size: 0x410
 // Has VTable
 // Construct allowed
 // 
@@ -2063,21 +2171,21 @@ class CSmartPropOperation_TraceToPoint : public CSmartPropOperation_Trace
 public:
 	// MPropertyStartGroup "+Target Point"
 	// MPropertyDescription "The target point to trace to from the origin."
-	CSmartPropAttributeVector m_TargetPoint; // 0x2d0	
+	CSmartPropAttributeVector m_TargetPoint; // 0x310	
 	// MPropertyDescription "Specifies the coordinate space the target point is specified in."
-	CSmartPropAttributeCoordinateSpace m_TargetPointSpace; // 0x310	
+	CSmartPropAttributeCoordinateSpace m_TargetPointSpace; // 0x350	
 	// MPropertyStartGroup "+Trace Away"
 	// MPropertyFriendlyName "Trace away from point"
 	// MPropertyDescription "If enabled, instead of tracing from the origin to the target point, trace away from the target point for the specified distance starting at the origin."
-	CSmartPropAttributeBool m_bTraceAway; // 0x350	
+	CSmartPropAttributeBool m_bTraceAway; // 0x390	
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Maximum length of the trace. Surfaces beyond this distance will not be hit."
-	CSmartPropAttributeFloat m_flTraceLength; // 0x390	
+	CSmartPropAttributeFloat m_flTraceLength; // 0x3d0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x18
+// Size: 0x58
 // Has VTable
 // Construct allowed
 // 
@@ -2091,12 +2199,12 @@ class CSmartPropOperation_SaveState : public CSmartPropOperation
 public:
 	// MPropertyAttributeEditor "SmartPropItemNameEditor( SavedState )"
 	// MPropertyDescription "Name to assign to the saved state, the save state can be restored later using this name."
-	CUtlString m_StateName; // 0x10	
+	CUtlString m_StateName; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x2e0
+// Size: 0x320
 // Has VTable
 // Construct allowed
 // 
@@ -2107,33 +2215,33 @@ class CSmartPropElement_PlaceInSphere : public CSmartPropElement_Group
 {
 public:
 	// MPropertyDescription "Specifies how the positions are computed based on the radius."
-	CSmartPropAttributeRadiusPlacementMode m_PlacementMode; // 0x60	
+	CSmartPropAttributeRadiusPlacementMode m_PlacementMode; // 0xa0	
 	// MPropertyDescription "Specifies the method to be used to distribute."
-	CSmartPropAttributeDistributionMode m_DistributionMode; // 0xa0	
+	CSmartPropAttributeDistributionMode m_DistributionMode; // 0xe0	
 	// MPropertySuppressExpr "m_DistributionMode == RANDOM"
 	// MPropertyDescription "0 to 1 value indicating the amout of random offset that should be applied to the reguluarly spaced positions"
-	CSmartPropAttributeFloat m_flRandomness; // 0xe0	
+	CSmartPropAttributeFloat m_flRandomness; // 0x120	
 	// MPropertySuppressExpr "m_PlacementMode == SPHERE"
 	// MPropertyDescription "Vector up direction of the plane of the circle. This in the local space of the current element."
-	CSmartPropAttributeVector m_vPlaneUpDirection; // 0x120	
+	CSmartPropAttributeVector m_vPlaneUpDirection; // 0x160	
 	// MPropertyDescription "Minimum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMin; // 0x160	
+	CSmartPropAttributeInt m_nCountMin; // 0x1a0	
 	// MPropertyDescription "Maximum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMax; // 0x1a0	
+	CSmartPropAttributeInt m_nCountMax; // 0x1e0	
 	// MPropertyDescription "Inner radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusInner; // 0x1e0	
+	CSmartPropAttributeFloat m_flPositionRadiusInner; // 0x220	
 	// MPropertyDescription "Outer radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusOuter; // 0x220	
+	CSmartPropAttributeFloat m_flPositionRadiusOuter; // 0x260	
 	// MPropertyDescription "Align the initial orientation of each placed object based on it position on the sphere or circle."
-	CSmartPropAttributeBool m_bAlignOrientation; // 0x260	
+	CSmartPropAttributeBool m_bAlignOrientation; // 0x2a0	
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Vector in the local space of the child element to be aligned with sphere or circle"
-	CSmartPropAttributeVector m_vAlignDirection; // 0x2a0	
+	CSmartPropAttributeVector m_vAlignDirection; // 0x2e0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x2a0
+// Size: 0x2e0
 // Has VTable
 // Construct allowed
 // 
@@ -2145,28 +2253,28 @@ class CSmartPropElement_FitOnLine : public CSmartPropElement_Group
 public:
 	// MPropertyStartGroup "+End Points"
 	// MPropertyDescription "Specifies the start point of the line in the specified coordinate space."
-	CSmartPropAttributeVector m_vStart; // 0x60	
+	CSmartPropAttributeVector m_vStart; // 0xa0	
 	// MPropertyDescription "Specifies the end point of the line in the specified coordinate space."
-	CSmartPropAttributeVector m_vEnd; // 0xa0	
+	CSmartPropAttributeVector m_vEnd; // 0xe0	
 	// MPropertyFriendlyName "End point space"
 	// MPropertyDescription "Specifies the coordinate space in which the end point values are specified."
-	CSmartPropAttributeCoordinateSpace m_PointSpace; // 0xe0	
+	CSmartPropAttributeCoordinateSpace m_PointSpace; // 0x120	
 	// MPropertyStartGroup "+Orientation"
 	// MPropertyDescription "Should the child elements be oriented based on the line. If enabled the child elements placed on the line will be oriented such that their +x axis points along the line towards the end point."
-	CSmartPropAttributeBool m_bOrientAlongLine; // 0x120	
+	CSmartPropAttributeBool m_bOrientAlongLine; // 0x160	
 	// MPropertyDescription "Up vector which is used to determine the rotation of each element around the line."
-	CSmartPropAttributeVector m_vUpDirection; // 0x160	
+	CSmartPropAttributeVector m_vUpDirection; // 0x1a0	
 	// MPropertyDescription "Space in which the up direction is defined."
-	CSmartPropAttributeCoordinateSpace m_UpDirectionSpace; // 0x1a0	
+	CSmartPropAttributeCoordinateSpace m_UpDirectionSpace; // 0x1e0	
 	// MPropertyDescription "When the up direction is not orthogonal to the line direction normally the up vector will be adjusted to make it orthogonal to the line direction. If prioritize up is true, then the up direction will be maintained and the forward direction will be adjusted."
-	CSmartPropAttributeBool m_bPrioritizeUp; // 0x1e0	
+	CSmartPropAttributeBool m_bPrioritizeUp; // 0x220	
 	// MPropertyStartGroup
 	// MPropertyFriendlyName "Scale Mode"
 	// MPropertyDescription "Specifies how scale is applied to each of the selected element in order to fit them to the line."
-	CSmartPropAttributeScaleMode m_nScaleMode; // 0x220	
+	CSmartPropAttributeScaleMode m_nScaleMode; // 0x260	
 	// MPropertyFriendlyName "Child Selection Mode"
 	// MPropertyDescription "Specifies how scale is applied to each of the selected element in order to fit them to the line."
-	CSmartPropAttributePickMode m_nPickMode; // 0x260	
+	CSmartPropAttributePickMode m_nPickMode; // 0x2a0	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -2187,7 +2295,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x70
 // Has VTable
 // Construct allowed
 // 
@@ -2198,7 +2306,7 @@ public:
 class CSmartPropFilter_VariableValue : public CSmartPropFilter
 {
 public:
-	CSmartPropVariableComparison m_VariableComparison; // 0x10	
+	CSmartPropVariableComparison m_VariableComparison; // 0x50	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
@@ -2219,7 +2327,7 @@ public:
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x280
+// Size: 0x2c0
 // Has VTable
 // Construct allowed
 // 
@@ -2230,32 +2338,32 @@ class CSmartPropElement_PlaceOnPath : public CSmartPropElement_Group
 {
 public:
 	// MPropertyDescription "Name of the path to use. This path name will show up in the property editor when selecting a placement of this smart prop in Hammer, allowing selection of a path object in the map to use."
-	CUtlString m_PathName; // 0x60	
+	CUtlString m_PathName; // 0xa0	
 	// MPropertyDescription "Spacing between points on the path"
-	CSmartPropAttributeFloat m_flSpacing; // 0x68	
+	CSmartPropAttributeFloat m_flSpacing; // 0xa8	
 	// MPropertyDescription "Offset from the start of the path to place the first point."
-	CSmartPropAttributeFloat m_flOffsetAlongPath; // 0xa8	
+	CSmartPropAttributeFloat m_flOffsetAlongPath; // 0xe8	
 	// MPropertyFriendlyName "Offset from path"
 	// MPropertyDescription "Offset to apply to the path, specifies a horizontal and vertical offset to apply relative to the up direction."
-	CSmartPropAttributeVector2D m_vPathOffset; // 0xe8	
+	CSmartPropAttributeVector2D m_vPathOffset; // 0x128	
 	// MPropertyFriendlyName "Path Evaluation Space"
 	// MPropertyDescription "Specifies the space in which the provided input path is to be evalauted.<br><br><b>World Space</b>: The input path will be evaluated in world space, such that child elements will be placed directly on the target path regardless of the transform of the smart prop object. <br><b>Object Space</b>: The world space transform of the input path will be ignored and instead the path will be evaluated relative to the transform of the smart prop object. <br><b>Element Space</b>: The world space transform of the input path will be ignored and instead the path will be evaluated relative to the transform of the current element within the smart prop. "
-	CSmartPropAttributeCoordinateSpace m_PathSpace; // 0x128	
+	CSmartPropAttributeCoordinateSpace m_PathSpace; // 0x168	
 	// MPropertyDescription "If true, treat the specified up direction as fixed up direction to apply to all elements placed on the path. If false the up direction is just an initial direction."
-	CSmartPropAttributeBool m_bUseFixedUpDirection; // 0x168	
+	CSmartPropAttributeBool m_bUseFixedUpDirection; // 0x1a8	
 	// MPropertyDescription "Compute the spacing distance in the 2d plane defined by the up direction. Most useful when using a fixed up direction, if maintaining a distance in the 2d plane is more important than maintaing distance along the path."
-	CSmartPropAttributeBool m_bUseProjectedDistance; // 0x1a8	
+	CSmartPropAttributeBool m_bUseProjectedDistance; // 0x1e8	
 	// MPropertyDescription "If not using a fixed up direction, provides an initial up direction which will be used to determine the orientation of first element on the path, after that the elements will incrementally update to follow the path and may not match this direction. If Use Fixed Up direction is specified, then all elements will use this direction to deterime their up direction."
-	CSmartPropAttributeVector m_vUpDirection; // 0x1e8	
+	CSmartPropAttributeVector m_vUpDirection; // 0x228	
 	// MPropertyDescription "Space in which the up direction is defined."
-	CSmartPropAttributeCoordinateSpace m_UpDirectionSpace; // 0x228	
+	CSmartPropAttributeCoordinateSpace m_UpDirectionSpace; // 0x268	
 	// MPropertyDescription "A set of points defining a path to use when an external path isn't specified. This will be used in the preview and thumbnail for the smart prop. It will also be used when the smart prop is placed in Hammer before a path is selected."
-	CUtlVector< Vector > m_DefaultPath; // 0x268	
+	CUtlVector< Vector > m_DefaultPath; // 0x2a8	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x148
+// Size: 0x188
 // Has VTable
 // Construct allowed
 // 
@@ -2267,22 +2375,22 @@ class CSmartPropSelectionCriteria_PathPosition : public CSmartPropSelectionCrite
 {
 public:
 	// MPropertyDescription "Specifies the method to use to determine which positions this element should be placed at along the path."
-	CSmartPropAttributePathPositions m_PlaceAtPositions; // 0x8	
+	CSmartPropAttributePathPositions m_PlaceAtPositions; // 0x48	
 	// MPropertySuppressExpr "( m_PlaceAtPositions == ALL ) || ( m_PlaceAtPositions == START_AND_END ) || ( m_PlaceAtPositions == CONTROL_POINTS )"
 	// MPropertyDescription "Specifies the spacing between positions. For example, a value of 1 will place the element at very position, 2 every other position, 3 every third position"
-	CSmartPropAttributeInt m_nPlaceEveryNthPosition; // 0x48	
+	CSmartPropAttributeInt m_nPlaceEveryNthPosition; // 0x88	
 	// MPropertySuppressExpr "( m_PlaceAtPositions == ALL ) || ( m_PlaceAtPositions == START_AND_END ) || ( m_PlaceAtPositions == CONTROL_POINTS )"
 	// MPropertyDescription "Specifies an offset to use when determining the Nth position to place an element at. For example if placing at every third position with an offset of 0, an element will appear at positions 1, 4, 7, and so on. But if an offset of 2 is set instead of 0, then an element will appear at positions 3, 6, and 9 and so on."
-	CSmartPropAttributeInt m_nNthPositionIndexOffset; // 0x88	
+	CSmartPropAttributeInt m_nNthPositionIndexOffset; // 0xc8	
 	// MPropertyDescription "Should this element be placed at the first positions on the path"
-	CSmartPropAttributeBool m_bAllowAtStart; // 0xc8	
+	CSmartPropAttributeBool m_bAllowAtStart; // 0x108	
 	// MPropertyDescription "Should this element be placed at the last positions on the path"
-	CSmartPropAttributeBool m_bAllowAtEnd; // 0x108	
+	CSmartPropAttributeBool m_bAllowAtEnd; // 0x148	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x390
+// Size: 0x3d0
 // Has VTable
 // Construct allowed
 // 
@@ -2294,16 +2402,16 @@ class CSmartPropOperation_TraceInDirection : public CSmartPropOperation_Trace
 {
 public:
 	// MPropertyStartGroup "+Trace Direction"
-	CSmartPropAttributeVector m_vTraceDirection; // 0x2d0	
+	CSmartPropAttributeVector m_vTraceDirection; // 0x310	
 	// MPropertyDescription "Specifies the coordinate space the trace direction vector is specified in."
-	CSmartPropAttributeCoordinateSpace m_DirectionSpace; // 0x310	
+	CSmartPropAttributeCoordinateSpace m_DirectionSpace; // 0x350	
 	// MPropertyDescription "Maximum length of the trace. Surfaces beyond this distance will not be hit."
-	CSmartPropAttributeFloat m_flTraceLength; // 0x350	
+	CSmartPropAttributeFloat m_flTraceLength; // 0x390	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x40
+// Size: 0x80
 // Has VTable
 // Construct allowed
 // 
@@ -2315,14 +2423,14 @@ class CSmartPropFilter_SurfaceProperties : public CSmartPropFilter
 {
 public:
 	// MPropertyDescription "List of surface properties on which this element is valid. If empty element is not restricted to any specific surfaces."
-	CUtlVector< CUtlString > m_AllowedSurfaceProperties; // 0x10	
+	CUtlVector< CUtlString > m_AllowedSurfaceProperties; // 0x50	
 	// MPropertyDescription "List of surface properties on which this element is not valid. If empty element is not restricted to any specific surfaces."
-	CUtlVector< CUtlString > m_DisallowedSurfaceProperties; // 0x28	
+	CUtlVector< CUtlString > m_DisallowedSurfaceProperties; // 0x68	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x90
+// Size: 0xd0
 // Has VTable
 // Construct allowed
 // 
@@ -2334,14 +2442,14 @@ class CSmartPropOperation_RandomOffset : public CSmartPropTransformOperation
 {
 public:
 	// MPropertyDescription "Minimum random position offset"
-	CSmartPropAttributeVector m_vRandomPositionMin; // 0x10	
+	CSmartPropAttributeVector m_vRandomPositionMin; // 0x50	
 	// MPropertyDescription "Maximum random position offset"
-	CSmartPropAttributeVector m_vRandomPositionMax; // 0x50	
+	CSmartPropAttributeVector m_vRandomPositionMax; // 0x90	
 };
 
 // Registered binary: assetpreview.dll (project 'smartprops')
 // Alignment: 8
-// Size: 0x460
+// Size: 0x4a0
 // Has VTable
 // Construct allowed
 // 
@@ -2353,44 +2461,44 @@ class CSmartPropElement_Layout2DCircle_experimental : public CSmartPropElement_G
 {
 public:
 	// MPropertyDescription "Specifies how the positions are computed based on the radius."
-	CSmartPropAttributeRadiusPlacementMode m_PlacementMode; // 0x60	
+	CSmartPropAttributeRadiusPlacementMode m_PlacementMode; // 0xa0	
 	// MPropertyDescription "Specifies the method to be used to distribute."
-	CSmartPropAttributeDistributionMode m_DistributionMode; // 0xa0	
+	CSmartPropAttributeDistributionMode m_DistributionMode; // 0xe0	
 	// MPropertySuppressExpr "m_DistributionMode == RANDOM"
 	// MPropertyDescription "0 to 1 value indicating the amout of random offset that should be applied to the reguluarly spaced positions"
-	CSmartPropAttributeFloat m_flRandomness; // 0xe0	
+	CSmartPropAttributeFloat m_flRandomness; // 0x120	
 	// MPropertySuppressExpr "m_PlacementMode == SPHERE"
 	// MPropertyDescription "Vector up direction of the plane of the circle. This in the local space of the current element."
-	CSmartPropAttributeVector m_vPlaneUpDirection; // 0x120	
+	CSmartPropAttributeVector m_vPlaneUpDirection; // 0x160	
 	// MPropertyDescription "Minimum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMin; // 0x160	
+	CSmartPropAttributeInt m_nCountMin; // 0x1a0	
 	// MPropertyDescription "Maximum number of instances of this object and its children to be placed."
-	CSmartPropAttributeInt m_nCountMax; // 0x1a0	
+	CSmartPropAttributeInt m_nCountMax; // 0x1e0	
 	// MPropertyDescription "Inner radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusInner; // 0x1e0	
+	CSmartPropAttributeFloat m_flPositionRadiusInner; // 0x220	
 	// MPropertyDescription "Outer radius from the placement position where the model can appear."
-	CSmartPropAttributeFloat m_flPositionRadiusOuter; // 0x220	
+	CSmartPropAttributeFloat m_flPositionRadiusOuter; // 0x260	
 	// MPropertyDescription "Align the initial orientation of each placed object based on it position on the sphere or circle."
-	CSmartPropAttributeBool m_bAlignOrientation; // 0x260	
+	CSmartPropAttributeBool m_bAlignOrientation; // 0x2a0	
 	// MPropertyReadonlyExpr
 	// MPropertyDescription "Vector in the local space of the child element to be aligned with sphere or circle"
-	CSmartPropAttributeVector m_vAlignDirection; // 0x2a0	
+	CSmartPropAttributeVector m_vAlignDirection; // 0x2e0	
 	// MPropertyDescription "Trace outwards from center to prevent children from penetrating solid scene geometry."
-	CSmartPropAttributeBool m_bTraceEnabled; // 0x2e0	
+	CSmartPropAttributeBool m_bTraceEnabled; // 0x320	
 	// MPropertySuppressExpr "m_bTraceEnabled == false && m_PlacementMode == SPHERE"
 	// MPropertyDescription "Distance along the PlaneUpDirection to offset the trace. (YM: Eliminate in favor of requiring xform on Node? Or keep it and make it a range? )"
-	CSmartPropAttributeFloat m_flTraceHeightBias; // 0x320	
+	CSmartPropAttributeFloat m_flTraceHeightBias; // 0x360	
 	// MPropertySuppressExpr "m_bTraceEnabled == false && m_PlacementMode == SPHERE"
 	// MPropertyDescription "Jitter Spread the trace origin to make it look more natural."
-	CSmartPropAttributeFloat m_flTraceOriginRadius; // 0x360	
+	CSmartPropAttributeFloat m_flTraceOriginRadius; // 0x3a0	
 	// MPropertySuppressExpr "m_bTraceEnabled == false"
 	// MPropertyDescription "Apply a retro bias to accumulated, so that they fall away."
-	CSmartPropAttributeBool m_bTraceAccumRetroFalloff; // 0x3a0	
+	CSmartPropAttributeBool m_bTraceAccumRetroFalloff; // 0x3e0	
 	// MPropertySuppressExpr "m_bTraceAllowAccumulate == false && m_PlacementMode == SPHERE"
 	// MPropertyDescription "Back off accumulated hits by at least this distance."
-	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMin; // 0x3e0	
+	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMin; // 0x420	
 	// MPropertySuppressExpr "m_bTraceAllowAccumulate == false && m_PlacementMode == SPHERE"
 	// MPropertyDescription "Back off accumulated hits by at most this distance."
-	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMax; // 0x420	
+	CSmartPropAttributeFloat m_flTraceAccumulateRetroBiasMax; // 0x460	
 };
 

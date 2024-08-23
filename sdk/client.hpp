@@ -4,8 +4,8 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: client.dll
-// Classes count: 414 (Allocated) | 443 (Unallocated)
-// Enums count: 1 (Allocated) | 8 (Unallocated)
+// Classes count: 415 (Allocated) | 678 (Unallocated)
+// Enums count: 1 (Allocated) | 120 (Unallocated)
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
@@ -13,7 +13,7 @@
 // Enumerator count: 5
 // Alignment: 4
 // Size: 0x4
-enum class C_BaseCombatCharacter__WaterWakeMode_t : uint32_t
+enum class C_BaseCombatCharacter__WaterWakeMode_t : std::uint32_t
 {
 	WATER_WAKE_NONE = 0x0,
 	WATER_WAKE_IDLE = 0x1,
@@ -23,10 +23,136 @@ enum class C_BaseCombatCharacter__WaterWakeMode_t : uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class TimelineCompression_t : std::uint32_t
+{
+	TIMELINE_COMPRESSION_SUM = 0x0,
+	TIMELINE_COMPRESSION_COUNT_PER_INTERVAL = 0x1,
+	TIMELINE_COMPRESSION_AVERAGE = 0x2,
+	TIMELINE_COMPRESSION_AVERAGE_BLEND = 0x3,
+	TIMELINE_COMPRESSION_TOTAL = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class SubclassVDataChangeType_t : std::uint32_t
+{
+	SUBCLASS_VDATA_CREATED = 0x0,
+	SUBCLASS_VDATA_SUBCLASS_CHANGED = 0x1,
+	SUBCLASS_VDATA_RELOADED = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class C4LightEffect_t : std::uint32_t
+{
+	eLightEffectNone = 0x0,
+	eLightEffectDropped = 0x1,
+	eLightEffectThirdPersonHeld = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class StanceType_t : std::uint32_t
+{
+	// MPropertySuppressEnumerator
+	STANCE_CURRENT = 0xffffffff,
+	// MPropertyFriendlyName "Default"
+	STANCE_DEFAULT = 0x0,
+	// MPropertyFriendlyName "Crouching"
+	STANCE_CROUCHING = 0x1,
+	// MPropertyFriendlyName "Prone"
+	STANCE_PRONE = 0x2,
+	// MPropertySuppressEnumerator
+	NUM_STANCES = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 10
+// Alignment: 4
+// Size: 0x4
+enum class PreviewCharacterMode : std::uint32_t
+{
+	DIORAMA = 0x0,
+	MAIN_MENU = 0x1,
+	BUY_MENU = 0x2,
+	TEAM_SELECT = 0x3,
+	END_OF_MATCH = 0x4,
+	INVENTORY_INSPECT = 0x5,
+	WALKING = 0x6,
+	TEAM_INTRO = 0x7,
+	WINGMAN_INTRO = 0x8,
+	BANNER = 0x9,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class ObserverInterpState_t : std::uint32_t
+{
+	OBSERVER_INTERP_NONE = 0x0,
+	OBSERVER_INTERP_TRAVELING = 0x1,
+	OBSERVER_INTERP_SETTLING = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class WorldTextPanelOrientation_t : std::uint32_t
+{
+	WORLDTEXT_ORIENTATION_DEFAULT = 0x0,
+	WORLDTEXT_ORIENTATION_FACEUSER = 0x1,
+	WORLDTEXT_ORIENTATION_FACEUSER_UPRIGHT = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class WorldTextPanelHorizontalAlign_t : std::uint32_t
+{
+	WORLDTEXT_HORIZONTAL_ALIGN_LEFT = 0x0,
+	WORLDTEXT_HORIZONTAL_ALIGN_CENTER = 0x1,
+	WORLDTEXT_HORIZONTAL_ALIGN_RIGHT = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 1
+// Size: 0x1
+enum class SequenceFinishNotifyState_t : std::uint8_t
+{
+	eDoNotNotify = 0,
+	eNotifyWhenFinished = 1,
+	eNotifyTriggered = 2,
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class EntityDormancyType_t : std::uint32_t
+{
+	ENTITY_NOT_DORMANT = 0x0,
+	ENTITY_DORMANT = 0x1,
+	ENTITY_SUSPENDED = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
 // Enumerator count: 15
 // Alignment: 4
 // Size: 0x4
-enum class CompositeMaterialInputLooseVariableType_t : uint32_t
+enum class CompositeMaterialInputLooseVariableType_t : std::uint32_t
 {
 	// MPropertyFriendlyName "Boolean"
 	LOOSE_VARIABLE_TYPE_BOOLEAN = 0x0,
@@ -64,7 +190,123 @@ enum class CompositeMaterialInputLooseVariableType_t : uint32_t
 // Enumerator count: 7
 // Alignment: 4
 // Size: 0x4
-enum class CompositeMaterialInputTextureType_t : uint32_t
+enum class CSWeaponCategory : std::uint32_t
+{
+	WEAPONCATEGORY_OTHER = 0x0,
+	WEAPONCATEGORY_MELEE = 0x1,
+	WEAPONCATEGORY_SECONDARY = 0x2,
+	WEAPONCATEGORY_SMG = 0x3,
+	WEAPONCATEGORY_RIFLE = 0x4,
+	WEAPONCATEGORY_HEAVY = 0x5,
+	WEAPONCATEGORY_COUNT = 0x6,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 1
+// Size: 0x1
+enum class BeginDeathLifeStateTransition_t : std::uint8_t
+{
+	NO_CHANGE_IN_LIFESTATE = 0,
+	TRANSITION_TO_LIFESTATE_DYING = 1,
+	TRANSITION_TO_LIFESTATE_DEAD = 2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 24
+// Alignment: 4
+// Size: 0x4
+enum class PlayerAnimEvent_t : std::uint32_t
+{
+	PLAYERANIMEVENT_FIRE_GUN_PRIMARY = 0x0,
+	PLAYERANIMEVENT_FIRE_GUN_SECONDARY = 0x1,
+	PLAYERANIMEVENT_GRENADE_PULL_PIN = 0x2,
+	PLAYERANIMEVENT_THROW_GRENADE = 0x3,
+	PLAYERANIMEVENT_JUMP = 0x4,
+	PLAYERANIMEVENT_RELOAD = 0x5,
+	PLAYERANIMEVENT_CLEAR_FIRING = 0x6,
+	PLAYERANIMEVENT_DEPLOY = 0x7,
+	PLAYERANIMEVENT_SILENCER_STATE = 0x8,
+	PLAYERANIMEVENT_SILENCER_TOGGLE = 0x9,
+	PLAYERANIMEVENT_THROW_GRENADE_UNDERHAND = 0xa,
+	PLAYERANIMEVENT_CATCH_WEAPON = 0xb,
+	PLAYERANIMEVENT_LOOKATWEAPON_REQUEST = 0xc,
+	PLAYERANIMEVENT_RELOAD_CANCEL_LOOKATWEAPON = 0xd,
+	PLAYERANIMEVENT_HAULBACK = 0xe,
+	PLAYERANIMEVENT_IDLE = 0xf,
+	PLAYERANIMEVENT_STRIKE_HIT = 0x10,
+	PLAYERANIMEVENT_STRIKE_MISS = 0x11,
+	PLAYERANIMEVENT_BACKSTAB = 0x12,
+	PLAYERANIMEVENT_DRYFIRE = 0x13,
+	PLAYERANIMEVENT_FIDGET = 0x14,
+	PLAYERANIMEVENT_RELEASE = 0x15,
+	PLAYERANIMEVENT_TAUNT = 0x16,
+	PLAYERANIMEVENT_COUNT = 0x17,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 9
+// Alignment: 1
+// Size: 0x1
+enum class ItemFlagTypes_t : std::uint8_t
+{
+	ITEM_FLAG_NONE = 0,
+	ITEM_FLAG_CAN_SELECT_WITHOUT_AMMO = 1,
+	ITEM_FLAG_NOAUTORELOAD = 2,
+	ITEM_FLAG_NOAUTOSWITCHEMPTY = 4,
+	ITEM_FLAG_LIMITINWORLD = 8,
+	ITEM_FLAG_EXHAUSTIBLE = 16,
+	ITEM_FLAG_DOHITLOCATIONDMG = 32,
+	ITEM_FLAG_NOAMMOPICKUPS = 64,
+	ITEM_FLAG_NOITEMPICKUP = 128,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 1
+// Size: 0x1
+enum class ShatterPanelMode : std::uint8_t
+{
+	SHATTER_GLASS = 0,
+	SHATTER_DRYWALL = 1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 10
+// Alignment: 1
+// Size: 0x1
+enum class SurroundingBoundsType_t : std::uint8_t
+{
+	USE_OBB_COLLISION_BOUNDS = 0,
+	USE_BEST_COLLISION_BOUNDS = 1,
+	USE_HITBOXES = 2,
+	USE_SPECIFIED_BOUNDS = 3,
+	USE_GAME_CODE = 4,
+	USE_ROTATION_EXPANDED_BOUNDS = 5,
+	USE_ROTATION_EXPANDED_ORIENTED_BOUNDS = 6,
+	USE_COLLISION_BOUNDS_NEVER_VPHYSICS = 7,
+	USE_ROTATION_EXPANDED_SEQUENCE_BOUNDS = 8,
+	SURROUNDING_TYPE_BIT_COUNT = 3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class LifeState_t : std::uint32_t
+{
+	LIFE_ALIVE = 0x0,
+	LIFE_DYING = 0x1,
+	LIFE_DEAD = 0x2,
+	LIFE_RESPAWNABLE = 0x3,
+	LIFE_RESPAWNING = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 7
+// Alignment: 4
+// Size: 0x4
+enum class CompositeMaterialInputTextureType_t : std::uint32_t
 {
 	// MPropertyFriendlyName "Default"
 	INPUT_TEXTURE_TYPE_DEFAULT = 0x0,
@@ -83,10 +325,816 @@ enum class CompositeMaterialInputTextureType_t : uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class CSWeaponMode : std::uint32_t
+{
+	Primary_Mode = 0x0,
+	Secondary_Mode = 0x1,
+	WeaponMode_MAX = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 1
+// Size: 0x1
+enum class OnFrame : std::uint8_t
+{
+	ONFRAME_UNKNOWN = 0,
+	ONFRAME_TRUE = 1,
+	ONFRAME_FALSE = 2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 9
+// Alignment: 4
+// Size: 0x4
+enum class BloodType : std::uint32_t
+{
+	None = 0xffffffff,
+	ColorRed = 0x0,
+	ColorYellow = 0x1,
+	ColorGreen = 0x2,
+	ColorRedLVL2 = 0x3,
+	ColorRedLVL3 = 0x4,
+	ColorRedLVL4 = 0x5,
+	ColorRedLVL5 = 0x6,
+	ColorRedLVL6 = 0x7,
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class EntityIOTargetType_t : std::uint32_t
+{
+	ENTITY_IO_TARGET_INVALID = 0xffffffff,
+	ENTITY_IO_TARGET_ENTITYNAME = 0x2,
+	ENTITY_IO_TARGET_EHANDLE = 0x6,
+	ENTITY_IO_TARGET_ENTITYNAME_OR_CLASSNAME = 0x7,
+};
+
+// Registered binary: client.dll (project 'client')
 // Enumerator count: 6
 // Alignment: 4
 // Size: 0x4
-enum class CompositeMaterialInputContainerSourceType_t : uint32_t
+enum class ScriptedMoveTo_t : std::uint32_t
+{
+	eWait = 0x0,
+	eMoveWithGait = 0x3,
+	eTeleport = 0x4,
+	eWaitFacing = 0x5,
+	// MPropertySuppressEnumerator
+	eObsoleteBackCompat1 = 0x1,
+	// MPropertySuppressEnumerator
+	eObsoleteBackCompat2 = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class AnimLoopMode_t : std::uint32_t
+{
+	// MPropertySuppressEnumerator
+	ANIM_LOOP_MODE_INVALID = 0xffffffff,
+	ANIM_LOOP_MODE_NOT_LOOPING = 0x0,
+	ANIM_LOOP_MODE_LOOPING = 0x1,
+	ANIM_LOOP_MODE_USE_SEQUENCE_SETTINGS = 0x2,
+	// MPropertySuppressEnumerator
+	ANIM_LOOP_MODE_COUNT = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 10
+// Alignment: 4
+// Size: 0x4
+enum class Class_T : std::uint32_t
+{
+	CLASS_NONE = 0x0,
+	CLASS_PLAYER = 0x1,
+	CLASS_PLAYER_ALLY = 0x2,
+	CLASS_BOMB = 0x3,
+	CLASS_FOOT_CONTACT_SHADOW = 0x4,
+	CLASS_WEAPON = 0x5,
+	CLASS_WATER_SPLASHER = 0x6,
+	CLASS_WEAPON_VIEWMODEL = 0x7,
+	CLASS_DOOR = 0x8,
+	NUM_CLASSIFY_CLASSES = 0x9,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class CSWeaponSilencerType : std::uint32_t
+{
+	WEAPONSILENCER_NONE = 0x0,
+	WEAPONSILENCER_DETACHABLE = 0x1,
+	WEAPONSILENCER_INTEGRATED = 0x2,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 6
+// Alignment: 4
+// Size: 0x4
+enum class EPulseGraphExecutionHistoryFlag : std::uint32_t
+{
+	// MPropertySuppressEnumerator
+	// MEnumeratorIsNotAFlag
+	NO_FLAGS = 0x0,
+	CURSOR_ADD_TAG = 0x1,
+	CURSOR_REMOVE_TAG = 0x2,
+	CURSOR_RETIRED = 0x4,
+	REQUIREMENT_PASS = 0x8,
+	REQUIREMENT_FAIL = 0x10,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 17
+// Alignment: 4
+// Size: 0x4
+enum class BaseExplosionTypes_t : std::uint32_t
+{
+	// MPropertyFriendlyName "Default"
+	EXPLOSION_TYPE_DEFAULT = 0x0,
+	// MPropertyFriendlyName "Grenade"
+	EXPLOSION_TYPE_GRENADE = 0x1,
+	// MPropertyFriendlyName "Molotov"
+	EXPLOSION_TYPE_MOLOTOV = 0x2,
+	// MPropertyFriendlyName "Fireworks"
+	EXPLOSION_TYPE_FIREWORKS = 0x3,
+	// MPropertyFriendlyName "Gascan"
+	EXPLOSION_TYPE_GASCAN = 0x4,
+	// MPropertyFriendlyName "Gas Cylinder"
+	EXPLOSION_TYPE_GASCYLINDER = 0x5,
+	// MPropertyFriendlyName "Explosive Barrel"
+	EXPLOSION_TYPE_EXPLOSIVEBARREL = 0x6,
+	// MPropertyFriendlyName "Electrical"
+	EXPLOSION_TYPE_ELECTRICAL = 0x7,
+	// MPropertyFriendlyName "EMP"
+	EXPLOSION_TYPE_EMP = 0x8,
+	// MPropertyFriendlyName "Shrapnel"
+	EXPLOSION_TYPE_SHRAPNEL = 0x9,
+	// MPropertyFriendlyName "Smoke Grenade"
+	EXPLOSION_TYPE_SMOKEGRENADE = 0xa,
+	// MPropertyFriendlyName "Flashbang"
+	EXPLOSION_TYPE_FLASHBANG = 0xb,
+	// MPropertyFriendlyName "Tripmine"
+	EXPLOSION_TYPE_TRIPMINE = 0xc,
+	// MPropertyFriendlyName "Ice"
+	EXPLOSION_TYPE_ICE = 0xd,
+	// MPropertyFriendlyName "None"
+	EXPLOSION_TYPE_NONE = 0xe,
+	// MPropertyFriendlyName "Custom"
+	EXPLOSION_TYPE_CUSTOM = 0xf,
+	// MPropertySuppressEnumerator
+	EXPLOSION_TYPE_COUNT = 0x10,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 44
+// Alignment: 4
+// Size: 0x4
+enum class GameAnimEventIndex_t : std::uint32_t
+{
+	AE_EMPTY = 0x0,
+	AE_CL_PLAYSOUND = 0x1,
+	AE_CL_PLAYSOUND_ATTACHMENT = 0x2,
+	AE_CL_PLAYSOUND_POSITION = 0x3,
+	AE_SV_PLAYSOUND = 0x4,
+	AE_CL_STOPSOUND = 0x5,
+	AE_CL_PLAYSOUND_LOOPING = 0x6,
+	AE_CL_CREATE_PARTICLE_EFFECT = 0x7,
+	AE_CL_STOP_PARTICLE_EFFECT = 0x8,
+	AE_CL_CREATE_PARTICLE_EFFECT_CFG = 0x9,
+	AE_SV_CREATE_PARTICLE_EFFECT_CFG = 0xa,
+	AE_SV_STOP_PARTICLE_EFFECT = 0xb,
+	AE_FOOTSTEP = 0xc,
+	AE_RAGDOLL = 0xd,
+	AE_CL_STOP_RAGDOLL_CONTROL = 0xe,
+	AE_CL_ENABLE_BODYGROUP = 0xf,
+	AE_CL_DISABLE_BODYGROUP = 0x10,
+	AE_BODYGROUP_SET_VALUE = 0x11,
+	AE_CL_BODYGROUP_SET_VALUE_CMODEL_WPN = 0x12,
+	AE_WEAPON_PERFORM_ATTACK = 0x13,
+	AE_FIRE_INPUT = 0x14,
+	AE_CL_CLOTH_ATTR = 0x15,
+	AE_CL_CLOTH_GROUND_OFFSET = 0x16,
+	AE_CL_CLOTH_STIFFEN = 0x17,
+	AE_CL_CLOTH_EFFECT = 0x18,
+	AE_CL_CREATE_ANIM_SCOPE_PROP = 0x19,
+	AE_SV_IKLOCK = 0x1a,
+	AE_PULSE_GRAPH = 0x1b,
+	AE_PULSE_GRAPH_LOOKAT = 0x1c,
+	AE_PULSE_GRAPH_AIMAT = 0x1d,
+	AE_PULSE_GRAPH_IKLOCKLEFTARM = 0x1e,
+	AE_PULSE_GRAPH_IKLOCKRIGHTARM = 0x1f,
+	AE_CL_WEAPON_TRANSITION_INTO_HAND = 0x20,
+	AE_CL_BODYGROUP_SET_TO_CLIP = 0x21,
+	AE_CL_BODYGROUP_SET_TO_NEXTCLIP = 0x22,
+	AE_SV_SHOW_SILENCER = 0x23,
+	AE_SV_ATTACH_SILENCER_COMPLETE = 0x24,
+	AE_SV_HIDE_SILENCER = 0x25,
+	AE_SV_DETACH_SILENCER_COMPLETE = 0x26,
+	AE_CL_EJECT_MAG = 0x27,
+	AE_WPN_COMPLETE_RELOAD = 0x28,
+	AE_WPN_HEALTHSHOT_INJECT = 0x29,
+	AE_CL_C4_SCREEN_TEXT = 0x2a,
+	AE_GRENADE_THROW_COMPLETE = 0x2b,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 1
+// Size: 0x1
+enum class FixAngleSet_t : std::uint8_t
+{
+	None = 0,
+	Absolute = 1,
+	Relative = 2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class IChoreoServices__ScriptState_t : std::uint32_t
+{
+	SCRIPT_PLAYING = 0x0,
+	SCRIPT_WAIT = 0x1,
+	SCRIPT_POST_IDLE = 0x2,
+	SCRIPT_CLEANUP = 0x3,
+	SCRIPT_MOVE_TO_MARK = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class CommandEntitySpecType_t : std::uint32_t
+{
+	SPEC_SEARCH = 0x0,
+	SPEC_TYPES_COUNT = 0x1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 20
+// Alignment: 4
+// Size: 0x4
+enum class CSWeaponType : std::uint32_t
+{
+	WEAPONTYPE_KNIFE = 0x0,
+	WEAPONTYPE_PISTOL = 0x1,
+	WEAPONTYPE_SUBMACHINEGUN = 0x2,
+	WEAPONTYPE_RIFLE = 0x3,
+	WEAPONTYPE_SHOTGUN = 0x4,
+	WEAPONTYPE_SNIPER_RIFLE = 0x5,
+	WEAPONTYPE_MACHINEGUN = 0x6,
+	WEAPONTYPE_C4 = 0x7,
+	WEAPONTYPE_TASER = 0x8,
+	WEAPONTYPE_GRENADE = 0x9,
+	WEAPONTYPE_EQUIPMENT = 0xa,
+	WEAPONTYPE_STACKABLEITEM = 0xb,
+	WEAPONTYPE_FISTS = 0xc,
+	WEAPONTYPE_BREACHCHARGE = 0xd,
+	WEAPONTYPE_BUMPMINE = 0xe,
+	WEAPONTYPE_TABLET = 0xf,
+	WEAPONTYPE_MELEE = 0x10,
+	WEAPONTYPE_SHIELD = 0x11,
+	WEAPONTYPE_ZONE_REPULSOR = 0x12,
+	WEAPONTYPE_UNKNOWN = 0x13,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 1
+// Size: 0x1
+enum class ShardSolid_t : std::uint8_t
+{
+	SHARD_SOLID = 0,
+	SHARD_DEBRIS = 1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 13
+// Alignment: 1
+// Size: 0x1
+enum class RenderMode_t : std::uint8_t
+{
+	kRenderNormal = 0,
+	kRenderTransColor = 1,
+	kRenderTransTexture = 2,
+	kRenderGlow = 3,
+	kRenderTransAlpha = 4,
+	kRenderTransAdd = 5,
+	kRenderEnvironmental = 6,
+	kRenderTransAddFrameBlend = 7,
+	kRenderTransAlphaAdd = 8,
+	kRenderWorldGlow = 9,
+	kRenderNone = 10,
+	kRenderDevVisualizer = 11,
+	kRenderModeCount = 12,
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Enumerator count: 81
+// Alignment: 1
+// Size: 0x1
+enum class fieldtype_t : std::uint8_t
+{
+	FIELD_VOID = 0,
+	FIELD_FLOAT32 = 1,
+	FIELD_STRING = 2,
+	FIELD_VECTOR = 3,
+	FIELD_QUATERNION = 4,
+	FIELD_INT32 = 5,
+	FIELD_BOOLEAN = 6,
+	FIELD_INT16 = 7,
+	FIELD_CHARACTER = 8,
+	FIELD_COLOR32 = 9,
+	FIELD_EMBEDDED = 10,
+	FIELD_CUSTOM = 11,
+	FIELD_CLASSPTR = 12,
+	FIELD_EHANDLE = 13,
+	FIELD_POSITION_VECTOR = 14,
+	FIELD_TIME = 15,
+	FIELD_TICK = 16,
+	FIELD_SOUNDNAME = 17,
+	FIELD_INPUT = 18,
+	FIELD_FUNCTION = 19,
+	FIELD_VMATRIX = 20,
+	FIELD_VMATRIX_WORLDSPACE = 21,
+	FIELD_MATRIX3X4_WORLDSPACE = 22,
+	FIELD_INTERVAL = 23,
+	FIELD_UNUSED = 24,
+	FIELD_VECTOR2D = 25,
+	FIELD_INT64 = 26,
+	FIELD_VECTOR4D = 27,
+	FIELD_RESOURCE = 28,
+	FIELD_TYPEUNKNOWN = 29,
+	FIELD_CSTRING = 30,
+	FIELD_HSCRIPT = 31,
+	FIELD_VARIANT = 32,
+	FIELD_UINT64 = 33,
+	FIELD_FLOAT64 = 34,
+	FIELD_POSITIVEINTEGER_OR_NULL = 35,
+	FIELD_HSCRIPT_NEW_INSTANCE = 36,
+	FIELD_UINT32 = 37,
+	FIELD_UTLSTRINGTOKEN = 38,
+	FIELD_QANGLE = 39,
+	FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_VECTOR = 40,
+	FIELD_HMATERIAL = 41,
+	FIELD_HMODEL = 42,
+	FIELD_NETWORK_QUANTIZED_VECTOR = 43,
+	FIELD_NETWORK_QUANTIZED_FLOAT = 44,
+	FIELD_DIRECTION_VECTOR_WORLDSPACE = 45,
+	FIELD_QANGLE_WORLDSPACE = 46,
+	FIELD_QUATERNION_WORLDSPACE = 47,
+	FIELD_HSCRIPT_LIGHTBINDING = 48,
+	FIELD_V8_VALUE = 49,
+	FIELD_V8_OBJECT = 50,
+	FIELD_V8_ARRAY = 51,
+	FIELD_V8_CALLBACK_INFO = 52,
+	FIELD_UTLSTRING = 53,
+	FIELD_NETWORK_ORIGIN_CELL_QUANTIZED_POSITION_VECTOR = 54,
+	FIELD_HRENDERTEXTURE = 55,
+	FIELD_HPARTICLESYSTEMDEFINITION = 56,
+	FIELD_UINT8 = 57,
+	FIELD_UINT16 = 58,
+	FIELD_CTRANSFORM = 59,
+	FIELD_CTRANSFORM_WORLDSPACE = 60,
+	FIELD_HPOSTPROCESSING = 61,
+	FIELD_MATRIX3X4 = 62,
+	FIELD_SHIM = 63,
+	FIELD_CMOTIONTRANSFORM = 64,
+	FIELD_CMOTIONTRANSFORM_WORLDSPACE = 65,
+	FIELD_ATTACHMENT_HANDLE = 66,
+	FIELD_AMMO_INDEX = 67,
+	FIELD_CONDITION_ID = 68,
+	FIELD_AI_SCHEDULE_BITS = 69,
+	FIELD_MODIFIER_HANDLE = 70,
+	FIELD_ROTATION_VECTOR = 71,
+	FIELD_ROTATION_VECTOR_WORLDSPACE = 72,
+	FIELD_HVDATA = 73,
+	FIELD_SCALE32 = 74,
+	FIELD_STRING_AND_TOKEN = 75,
+	FIELD_ENGINE_TIME = 76,
+	FIELD_ENGINE_TICK = 77,
+	FIELD_WORLD_GROUP_ID = 78,
+	FIELD_GLOBALSYMBOL = 79,
+	FIELD_TYPECOUNT = 80,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class PulseTestEnumShape_t : std::uint32_t
+{
+	// MPropertyFriendlyName "Circle"
+	CIRCLE = 0x64,
+	// MPropertyFriendlyName "Square"
+	SQUARE = 0xc8,
+	// MPropertyFriendlyName "Triangle"
+	TRIANGLE = 0x12c,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class PerformanceMode_t : std::uint32_t
+{
+	PM_NORMAL = 0x0,
+	PM_NO_GIBS = 0x1,
+	PM_FULL_GIBS = 0x2,
+	PM_REDUCED_GIBS = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 74
+// Alignment: 4
+// Size: 0x4
+enum class loadout_slot_t : std::uint32_t
+{
+	LOADOUT_SLOT_PROMOTED = 0xfffffffe,
+	LOADOUT_SLOT_INVALID = 0xffffffff,
+	LOADOUT_SLOT_MELEE = 0x0,
+	LOADOUT_SLOT_C4 = 0x1,
+	LOADOUT_SLOT_FIRST_AUTO_BUY_WEAPON = 0x0,
+	LOADOUT_SLOT_LAST_AUTO_BUY_WEAPON = 0x1,
+	LOADOUT_SLOT_SECONDARY0 = 0x2,
+	LOADOUT_SLOT_SECONDARY1 = 0x3,
+	LOADOUT_SLOT_SECONDARY2 = 0x4,
+	LOADOUT_SLOT_SECONDARY3 = 0x5,
+	LOADOUT_SLOT_SECONDARY4 = 0x6,
+	LOADOUT_SLOT_SECONDARY5 = 0x7,
+	LOADOUT_SLOT_SMG0 = 0x8,
+	LOADOUT_SLOT_SMG1 = 0x9,
+	LOADOUT_SLOT_SMG2 = 0xa,
+	LOADOUT_SLOT_SMG3 = 0xb,
+	LOADOUT_SLOT_SMG4 = 0xc,
+	LOADOUT_SLOT_SMG5 = 0xd,
+	LOADOUT_SLOT_RIFLE0 = 0xe,
+	LOADOUT_SLOT_RIFLE1 = 0xf,
+	LOADOUT_SLOT_RIFLE2 = 0x10,
+	LOADOUT_SLOT_RIFLE3 = 0x11,
+	LOADOUT_SLOT_RIFLE4 = 0x12,
+	LOADOUT_SLOT_RIFLE5 = 0x13,
+	LOADOUT_SLOT_HEAVY0 = 0x14,
+	LOADOUT_SLOT_HEAVY1 = 0x15,
+	LOADOUT_SLOT_HEAVY2 = 0x16,
+	LOADOUT_SLOT_HEAVY3 = 0x17,
+	LOADOUT_SLOT_HEAVY4 = 0x18,
+	LOADOUT_SLOT_HEAVY5 = 0x19,
+	LOADOUT_SLOT_FIRST_WHEEL_WEAPON = 0x2,
+	LOADOUT_SLOT_LAST_WHEEL_WEAPON = 0x19,
+	LOADOUT_SLOT_FIRST_PRIMARY_WEAPON = 0x8,
+	LOADOUT_SLOT_LAST_PRIMARY_WEAPON = 0x19,
+	LOADOUT_SLOT_FIRST_WHEEL_GRENADE = 0x1a,
+	LOADOUT_SLOT_GRENADE0 = 0x1a,
+	LOADOUT_SLOT_GRENADE1 = 0x1b,
+	LOADOUT_SLOT_GRENADE2 = 0x1c,
+	LOADOUT_SLOT_GRENADE3 = 0x1d,
+	LOADOUT_SLOT_GRENADE4 = 0x1e,
+	LOADOUT_SLOT_GRENADE5 = 0x1f,
+	LOADOUT_SLOT_LAST_WHEEL_GRENADE = 0x1f,
+	LOADOUT_SLOT_EQUIPMENT0 = 0x20,
+	LOADOUT_SLOT_EQUIPMENT1 = 0x21,
+	LOADOUT_SLOT_EQUIPMENT2 = 0x22,
+	LOADOUT_SLOT_EQUIPMENT3 = 0x23,
+	LOADOUT_SLOT_EQUIPMENT4 = 0x24,
+	LOADOUT_SLOT_EQUIPMENT5 = 0x25,
+	LOADOUT_SLOT_FIRST_WHEEL_EQUIPMENT = 0x20,
+	LOADOUT_SLOT_LAST_WHEEL_EQUIPMENT = 0x25,
+	LOADOUT_SLOT_CLOTHING_CUSTOMPLAYER = 0x26,
+	LOADOUT_SLOT_CLOTHING_CUSTOMHEAD = 0x27,
+	LOADOUT_SLOT_CLOTHING_FACEMASK = 0x28,
+	LOADOUT_SLOT_CLOTHING_HANDS = 0x29,
+	LOADOUT_SLOT_FIRST_COSMETIC = 0x29,
+	LOADOUT_SLOT_LAST_COSMETIC = 0x29,
+	LOADOUT_SLOT_CLOTHING_EYEWEAR = 0x2a,
+	LOADOUT_SLOT_CLOTHING_HAT = 0x2b,
+	LOADOUT_SLOT_CLOTHING_LOWERBODY = 0x2c,
+	LOADOUT_SLOT_CLOTHING_TORSO = 0x2d,
+	LOADOUT_SLOT_CLOTHING_APPEARANCE = 0x2e,
+	LOADOUT_SLOT_MISC0 = 0x2f,
+	LOADOUT_SLOT_MISC1 = 0x30,
+	LOADOUT_SLOT_MISC2 = 0x31,
+	LOADOUT_SLOT_MISC3 = 0x32,
+	LOADOUT_SLOT_MISC4 = 0x33,
+	LOADOUT_SLOT_MISC5 = 0x34,
+	LOADOUT_SLOT_MISC6 = 0x35,
+	LOADOUT_SLOT_MUSICKIT = 0x36,
+	LOADOUT_SLOT_FLAIR0 = 0x37,
+	LOADOUT_SLOT_SPRAY0 = 0x38,
+	LOADOUT_SLOT_FIRST_ALL_CHARACTER = 0x36,
+	LOADOUT_SLOT_LAST_ALL_CHARACTER = 0x38,
+	LOADOUT_SLOT_COUNT = 0x39,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class ValueRemapperMomentumType_t : std::uint32_t
+{
+	MomentumType_None = 0x0,
+	MomentumType_Friction = 0x1,
+	MomentumType_SpringTowardSnapValue = 0x2,
+	MomentumType_SpringAwayFromSnapValue = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 6
+// Alignment: 4
+// Size: 0x4
+enum class PreviewWeaponState : std::uint32_t
+{
+	DROPPED = 0x0,
+	HOLSTERED = 0x1,
+	DEPLOYED = 0x2,
+	PLANTED = 0x3,
+	INSPECT = 0x4,
+	ICON = 0x5,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 9
+// Alignment: 4
+// Size: 0x4
+enum class EInButtonState : std::uint32_t
+{
+	IN_BUTTON_UP = 0x0,
+	IN_BUTTON_DOWN = 0x1,
+	IN_BUTTON_DOWN_UP = 0x2,
+	IN_BUTTON_UP_DOWN = 0x3,
+	IN_BUTTON_UP_DOWN_UP = 0x4,
+	IN_BUTTON_DOWN_UP_DOWN = 0x5,
+	IN_BUTTON_DOWN_UP_DOWN_UP = 0x6,
+	IN_BUTTON_UP_DOWN_UP_DOWN = 0x7,
+	IN_BUTTON_STATE_COUNT = 0x8,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class BeamClipStyle_t : std::uint32_t
+{
+	kNOCLIP = 0x0,
+	kGEOCLIP = 0x1,
+	kMODELCLIP = 0x2,
+	kBEAMCLIPSTYLE_NUMBITS = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class WeaponAttackType_t : std::uint32_t
+{
+	eInvalid = 0xffffffff,
+	ePrimary = 0x0,
+	eSecondary = 0x1,
+	eCount = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 18
+// Alignment: 4
+// Size: 0x4
+enum class CSPlayerBlockingUseAction_t : std::uint32_t
+{
+	k_CSPlayerBlockingUseAction_None = 0x0,
+	k_CSPlayerBlockingUseAction_DefusingDefault = 0x1,
+	k_CSPlayerBlockingUseAction_DefusingWithKit = 0x2,
+	k_CSPlayerBlockingUseAction_HostageGrabbing = 0x3,
+	k_CSPlayerBlockingUseAction_HostageDropping = 0x4,
+	k_CSPlayerBlockingUseAction_OpeningSafe = 0x5,
+	k_CSPlayerBlockingUseAction_EquippingParachute = 0x6,
+	k_CSPlayerBlockingUseAction_EquippingHeavyArmor = 0x7,
+	k_CSPlayerBlockingUseAction_EquippingContract = 0x8,
+	k_CSPlayerBlockingUseAction_EquippingTabletUpgrade = 0x9,
+	k_CSPlayerBlockingUseAction_TakingOffHeavyArmor = 0xa,
+	k_CSPlayerBlockingUseAction_PayingToOpenDoor = 0xb,
+	k_CSPlayerBlockingUseAction_CancelingSpawnRappelling = 0xc,
+	k_CSPlayerBlockingUseAction_EquippingExoJump = 0xd,
+	k_CSPlayerBlockingUseAction_PickingUpBumpMine = 0xe,
+	k_CSPlayerBlockingUseAction_MapLongUseEntity_Pickup = 0xf,
+	k_CSPlayerBlockingUseAction_MapLongUseEntity_Place = 0x10,
+	k_CSPlayerBlockingUseAction_MaxCount = 0x11,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class CSWeaponState_t : std::uint32_t
+{
+	WEAPON_NOT_CARRIED = 0x0,
+	WEAPON_IS_CARRIED_BY_PLAYER = 0x1,
+	WEAPON_IS_ACTIVE = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class CommandExecMode_t : std::uint32_t
+{
+	EXEC_MANUAL = 0x0,
+	EXEC_LEVELSTART = 0x1,
+	EXEC_PERIODIC = 0x2,
+	EXEC_MODES_COUNT = 0x3,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class PulseMethodCallMode_t : std::uint32_t
+{
+	// MPropertyFriendlyName "Wait For Completion"
+	// MPropertyDescription "Synchronous - wait for the method to fully complete before returning"
+	SYNC_WAIT_FOR_COMPLETION = 0x0,
+	// MPropertyFriendlyName "Fire And Forget"
+	// MPropertyDescription "Asynchronous - returns and continues despite the called method yielding"
+	ASYNC_FIRE_AND_FORGET = 0x1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 1
+// Size: 0x1
+enum class ShatterDamageCause : std::uint8_t
+{
+	SHATTERDAMAGE_BULLET = 0,
+	SHATTERDAMAGE_MELEE = 1,
+	SHATTERDAMAGE_THROWN = 2,
+	SHATTERDAMAGE_SCRIPT = 3,
+	SHATTERDAMAGE_EXPLOSIVE = 4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class ScriptedOnDeath_t : std::uint32_t
+{
+	SS_ONDEATH_NOT_APPLICABLE = 0xffffffff,
+	SS_ONDEATH_UNDEFINED = 0x0,
+	SS_ONDEATH_RAGDOLL = 0x1,
+	SS_ONDEATH_ANIMATED_DEATH = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class ChoreoLookAtSpeed_t : std::uint32_t
+{
+	// MPropertySuppressEnumerator
+	eInvalid = 0xffffffff,
+	// MPropertyFriendlyName "Slow"
+	eSlow = 0x0,
+	// MPropertyFriendlyName "Medium"
+	eMedium = 0x1,
+	// MPropertyFriendlyName "Fast"
+	eFast = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 17
+// Alignment: 4
+// Size: 0x4
+enum class gear_slot_t : std::uint32_t
+{
+	GEAR_SLOT_INVALID = 0xffffffff,
+	GEAR_SLOT_RIFLE = 0x0,
+	GEAR_SLOT_PISTOL = 0x1,
+	GEAR_SLOT_KNIFE = 0x2,
+	GEAR_SLOT_GRENADES = 0x3,
+	GEAR_SLOT_C4 = 0x4,
+	GEAR_SLOT_RESERVED_SLOT6 = 0x5,
+	GEAR_SLOT_RESERVED_SLOT7 = 0x6,
+	GEAR_SLOT_RESERVED_SLOT8 = 0x7,
+	GEAR_SLOT_RESERVED_SLOT9 = 0x8,
+	GEAR_SLOT_RESERVED_SLOT10 = 0x9,
+	GEAR_SLOT_RESERVED_SLOT11 = 0xa,
+	GEAR_SLOT_BOOSTS = 0xb,
+	GEAR_SLOT_UTILITY = 0xc,
+	GEAR_SLOT_COUNT = 0xd,
+	GEAR_SLOT_FIRST = 0x0,
+	GEAR_SLOT_LAST = 0xc,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 10
+// Alignment: 4
+// Size: 0x4
+enum class CSPlayerState : std::uint32_t
+{
+	STATE_ACTIVE = 0x0,
+	STATE_WELCOME = 0x1,
+	STATE_PICKINGTEAM = 0x2,
+	STATE_PICKINGCLASS = 0x3,
+	STATE_DEATH_ANIM = 0x4,
+	STATE_DEATH_WAIT_FOR_KEY = 0x5,
+	STATE_OBSERVER_MODE = 0x6,
+	STATE_GUNGAME_RESPAWN = 0x7,
+	STATE_DORMANT = 0x8,
+	NUM_PLAYER_STATES = 0x9,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 7
+// Alignment: 1
+// Size: 0x1
+enum class WaterLevel_t : std::uint8_t
+{
+	WL_NotInWater = 0,
+	WL_Feet = 1,
+	WL_Knees = 2,
+	WL_Waist = 3,
+	WL_Chest = 4,
+	WL_FullyUnderwater = 5,
+	WL_Count = 6,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class WorldTextPanelVerticalAlign_t : std::uint32_t
+{
+	WORLDTEXT_VERTICAL_ALIGN_TOP = 0x0,
+	WORLDTEXT_VERTICAL_ALIGN_CENTER = 0x1,
+	WORLDTEXT_VERTICAL_ALIGN_BOTTOM = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class AmmoPosition_t : std::uint32_t
+{
+	AMMO_POSITION_INVALID = 0xffffffff,
+	AMMO_POSITION_PRIMARY = 0x0,
+	AMMO_POSITION_SECONDARY = 0x1,
+	AMMO_POSITION_COUNT = 0x2,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class PulseCursorExecResult_t : std::uint32_t
+{
+	Succeeded = 0x0,
+	Canceled = 0x1,
+	Failed = 0x2,
+	OngoingNotify = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 23
+// Alignment: 4
+// Size: 0x4
+enum class PreviewEOMCelebration : std::uint32_t
+{
+	WALKUP = 0x0,
+	PUNCHING = 0x1,
+	SWAGGER = 0x2,
+	DROPDOWN = 0x3,
+	STRETCH = 0x4,
+	SWAT_FEMALE = 0x5,
+	MASK_F = 0x6,
+	GUERILLA = 0x7,
+	GUERILLA02 = 0x8,
+	GENDARMERIE = 0x9,
+	SCUBA_FEMALE = 0xa,
+	SCUBA_MALE = 0xb,
+	AVA_DEFEAT = 0xc,
+	GENDARMERIE_DEFEAT = 0xd,
+	MAE_DEFEAT = 0xe,
+	RICKSAW_DEFEAT = 0xf,
+	SCUBA_FEMALE_DEFEAT = 0x10,
+	SCUBA_MALE_DEFEAT = 0x11,
+	CRASSWATER_DEFEAT = 0x12,
+	DARRYL_DEFEAT = 0x13,
+	DOCTOR_DEFEAT = 0x14,
+	MUHLIK_DEFEAT = 0x15,
+	VYPA_DEFEAT = 0x16,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 6
+// Alignment: 4
+// Size: 0x4
+enum class CompositeMaterialInputContainerSourceType_t : std::uint32_t
 {
 	// MPropertyFriendlyName "Target Material"
 	CONTAINER_SOURCE_TYPE_TARGET_MATERIAL = 0x0,
@@ -103,10 +1151,104 @@ enum class CompositeMaterialInputContainerSourceType_t : uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class EntityDisolveType_t : std::uint32_t
+{
+	ENTITY_DISSOLVE_INVALID = 0xffffffff,
+	ENTITY_DISSOLVE_NORMAL = 0x0,
+	ENTITY_DISSOLVE_ELECTRICAL = 0x1,
+	ENTITY_DISSOLVE_ELECTRICAL_LIGHT = 0x2,
+	ENTITY_DISSOLVE_CORE = 0x3,
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Enumerator count: 9
+// Alignment: 1
+// Size: 0x1
+enum class FuseVariableType_t : std::uint8_t
+{
+	INVALID = 0,
+	BOOL = 1,
+	INT8 = 2,
+	INT16 = 3,
+	INT32 = 4,
+	UINT8 = 5,
+	UINT16 = 6,
+	UINT32 = 7,
+	FLOAT32 = 8,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 21
+// Alignment: 8
+// Size: 0x8
+enum class InputBitMask_t : std::uint64_t
+{
+	// MEnumeratorIsNotAFlag
+	IN_NONE = 0x0,
+	// MEnumeratorIsNotAFlag
+	IN_ALL = 0xffffffffffffffff,
+	IN_ATTACK = 0x1,
+	IN_JUMP = 0x2,
+	IN_DUCK = 0x4,
+	IN_FORWARD = 0x8,
+	IN_BACK = 0x10,
+	IN_USE = 0x20,
+	IN_TURNLEFT = 0x80,
+	IN_TURNRIGHT = 0x100,
+	IN_MOVELEFT = 0x200,
+	IN_MOVERIGHT = 0x400,
+	IN_ATTACK2 = 0x800,
+	IN_RELOAD = 0x2000,
+	IN_SPEED = 0x10000,
+	IN_JOYAUTOSPRINT = 0x20000,
+	// MEnumeratorIsNotAFlag
+	IN_FIRST_MOD_SPECIFIC_BIT = 0x100000000,
+	IN_USEORRELOAD = 0x100000000,
+	IN_SCORE = 0x200000000,
+	IN_ZOOM = 0x400000000,
+	IN_LOOK_AT_WEAPON = 0x800000000,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 14
+// Alignment: 4
+// Size: 0x4
+enum class HitGroup_t : std::uint32_t
+{
+	HITGROUP_INVALID = 0xffffffff,
+	HITGROUP_GENERIC = 0x0,
+	HITGROUP_HEAD = 0x1,
+	HITGROUP_CHEST = 0x2,
+	HITGROUP_STOMACH = 0x3,
+	HITGROUP_LEFTARM = 0x4,
+	HITGROUP_RIGHTARM = 0x5,
+	HITGROUP_LEFTLEG = 0x6,
+	HITGROUP_RIGHTLEG = 0x7,
+	HITGROUP_NECK = 0x8,
+	HITGROUP_UNUSED = 0x9,
+	HITGROUP_GEAR = 0xa,
+	HITGROUP_SPECIAL = 0xb,
+	HITGROUP_COUNT = 0xc,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class PointWorldTextReorientMode_t : std::uint32_t
+{
+	POINT_WORLD_TEXT_REORIENT_NONE = 0x0,
+	POINT_WORLD_TEXT_REORIENT_AROUND_UP = 0x1,
+};
+
+// Registered binary: client.dll (project 'client')
 // Enumerator count: 10
 // Alignment: 4
 // Size: 0x4
-enum class CompMatPropertyMutatorType_t : uint32_t
+enum class CompMatPropertyMutatorType_t : std::uint32_t
 {
 	// MPropertyFriendlyName "Init With"
 	COMP_MAT_PROPERTY_MUTATOR_INIT = 0x0,
@@ -131,10 +1273,204 @@ enum class CompMatPropertyMutatorType_t : uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
+// Enumerator count: 40
+// Alignment: 8
+// Size: 0x8
+enum class DebugOverlayBits_t : std::uint64_t
+{
+	// MPropertyFriendlyName "Ent Text"
+	// MPropertyDescription "show text debug overlay for this entity"
+	OVERLAY_TEXT_BIT = 0x1,
+	// MPropertyFriendlyName "Name"
+	// MPropertyDescription "show name debug overlay for this entity"
+	OVERLAY_NAME_BIT = 0x2,
+	// MPropertyFriendlyName "Bounding Box"
+	// MPropertyDescription "show bounding box overlay for this entity"
+	OVERLAY_BBOX_BIT = 0x4,
+	// MPropertyFriendlyName "Pivot"
+	// MPropertyDescription "show pivot for this entity"
+	OVERLAY_PIVOT_BIT = 0x8,
+	// MPropertyFriendlyName "Message"
+	// MPropertyDescription "TODO show messages for this entity"
+	OVERLAY_MESSAGE_BIT = 0x10,
+	// MPropertyFriendlyName "ABS BBox"
+	// MPropertyDescription "show abs bounding box overlay"
+	OVERLAY_ABSBOX_BIT = 0x20,
+	// MPropertyFriendlyName "RBox"
+	// MPropertyDescription "show the rbox overlay"
+	OVERLAY_RBOX_BIT = 0x40,
+	// MPropertyFriendlyName "Entities That Block LOS"
+	// MPropertyDescription "TODO show entities that block NPC LOS"
+	OVERLAY_SHOW_BLOCKSLOS = 0x80,
+	// MPropertyFriendlyName "Attachment Points"
+	// MPropertyDescription "show attachment points"
+	OVERLAY_ATTACHMENTS_BIT = 0x100,
+	// MPropertyFriendlyName "Interpolated Attachment Points"
+	// MPropertyDescription "show interpolated attachment points"
+	OVERLAY_INTERPOLATED_ATTACHMENTS_BIT = 0x200,
+	// MPropertyFriendlyName "Interpolated Pivot"
+	// MPropertyDescription "show interpolated pivot for this entity"
+	OVERLAY_INTERPOLATED_PIVOT_BIT = 0x400,
+	// MPropertyFriendlyName "Skeleton"
+	// MPropertyDescription "show skeleton for this entity"
+	OVERLAY_SKELETON_BIT = 0x800,
+	// MPropertyFriendlyName "Interpolated Skeleton"
+	// MPropertyDescription "show interpolated skeleton"
+	OVERLAY_INTERPOLATED_SKELETON_BIT = 0x1000,
+	// MPropertyFriendlyName "Trigger Bounds"
+	// MPropertyDescription "show trigger bounds"
+	OVERLAY_TRIGGER_BOUNDS_BIT = 0x2000,
+	// MPropertyFriendlyName "Hitboxes"
+	// MPropertyDescription "show hitboxes for this entity"
+	OVERLAY_HITBOX_BIT = 0x4000,
+	// MPropertyFriendlyName "Interpolated Hitboxes"
+	// MPropertyDescription "show interpolated hitboxes"
+	OVERLAY_INTERPOLATED_HITBOX_BIT = 0x8000,
+	// MPropertyFriendlyName "Autoaim Radius"
+	// MPropertyDescription "TODO Display autoaim radius"
+	OVERLAY_AUTOAIM_BIT = 0x10000,
+	// MPropertyFriendlyName "NPC Selected"
+	// MPropertyDescription "TODO the npc is current selected SOURCE2_UNSUPPORTED?"
+	OVERLAY_NPC_SELECTED_BIT = 0x20000,
+	// MPropertyFriendlyName "Joint Info"
+	// MPropertyDescription "hows joint info for this entity"
+	OVERLAY_JOINT_INFO_BIT = 0x40000,
+	// MPropertyFriendlyName "NPC Route"
+	// MPropertyDescription "draw the route for this npc"
+	OVERLAY_NPC_ROUTE_BIT = 0x80000,
+	OVERLAY_VISIBILITY_TRACES_BIT = 0x100000,
+	// MPropertyFriendlyName "NPC Enemies"
+	// MPropertyDescription "show npc's enemies"
+	OVERLAY_NPC_ENEMIES_BIT = 0x400000,
+	// MPropertyFriendlyName "NPC Conditions"
+	// MPropertyDescription "show NPC's current conditions"
+	OVERLAY_NPC_CONDITIONS_BIT = 0x800000,
+	// MPropertyFriendlyName "NPC Combat"
+	// MPropertyDescription "show npc combat related information (squads/slots/etc)"
+	OVERLAY_NPC_COMBAT_BIT = 0x1000000,
+	// MPropertyFriendlyName "NPC Schedule Tasks"
+	// MPropertyDescription "show npc schedule task details"
+	OVERLAY_NPC_TASK_BIT = 0x2000000,
+	// MPropertyFriendlyName "NPC Body Locations"
+	// MPropertyDescription "show npc body locations"
+	OVERLAY_NPC_BODYLOCATIONS = 0x4000000,
+	// MPropertyFriendlyName "NPC View Conde"
+	// MPropertyDescription "show npc's viewcone"
+	OVERLAY_NPC_VIEWCONE_BIT = 0x8000000,
+	// MPropertyFriendlyName "NPC Kill"
+	// MPropertyDescription "kill the NPC, running all appropriate AI."
+	OVERLAY_NPC_KILL_BIT = 0x10000000,
+	// MPropertyFriendlyName "OVERLAY_WC_CHANGE_ENTITY"
+	// MPropertyDescription "object changed during WC edit (probably unused)"
+	OVERLAY_WC_CHANGE_ENTITY = 0x20000000,
+	// MPropertyFriendlyName "Buddha Mode"
+	// MPropertyDescription "TODO take damage but don't die"
+	OVERLAY_BUDDHA_MODE = 0x40000000,
+	// MPropertyFriendlyName "NPC Steering"
+	// MPropertyDescription "Show the steering regulations associated with the NPC"
+	OVERLAY_NPC_STEERING_REGULATIONS = 0x80000000,
+	// MPropertyFriendlyName "NPC Task Console Text"
+	// MPropertyDescription "show task and schedule names when they start"
+	OVERLAY_NPC_TASK_TEXT_BIT = 0x100000000,
+	// MPropertyFriendlyName "Prop Debug"
+	// MPropertyDescription "Show prop health and bounds"
+	OVERLAY_PROP_DEBUG = 0x200000000,
+	// MPropertyFriendlyName "NPC Relationships"
+	// MPropertyDescription "show relationships between target and all children"
+	OVERLAY_NPC_RELATION_BIT = 0x400000000,
+	// MPropertyFriendlyName "View Offset"
+	// MPropertyDescription "TODO show view offset"
+	OVERLAY_VIEWOFFSET = 0x800000000,
+	// MPropertyFriendlyName "Collision Wireframe"
+	// MPropertyDescription "show collision wireframe"
+	OVERLAY_VCOLLIDE_WIREFRAME_BIT = 0x1000000000,
+	// MPropertyFriendlyName "NPC Scripted Commands"
+	// MPropertyDescription "show the state of scripted commands"
+	OVERLAY_NPC_SCRIPTED_COMMANDS_BIT = 0x2000000000,
+	// MPropertyFriendlyName "Actor Name"
+	// MPropertyDescription "show fancy actor name over head of actors (entities which return ShouldDisplayInActorNames() == true)"
+	OVERLAY_ACTORNAME_BIT = 0x4000000000,
+	// MPropertyFriendlyName "NPC Gather Conditions"
+	// MPropertyDescription "show condition gathering text info"
+	OVERLAY_NPC_CONDITIONS_TEXT_BIT = 0x8000000000,
+	// MPropertyFriendlyName "NPC Ability Ranges"
+	// MPropertyDescription "draw range indicators for all abilities on the NPC"
+	OVERLAY_NPC_ABILITY_RANGE_DEBUG_BIT = 0x10000000000,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class AmmoFlags_t : std::uint32_t
+{
+	AMMO_FORCE_DROP_IF_CARRIED = 0x1,
+	AMMO_RESERVE_STAYS_WITH_WEAPON = 0x2,
+	// MPropertySuppressEnumerator
+	// MEnumeratorIsNotAFlag
+	AMMO_FLAG_MAX = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 6
+// Alignment: 4
+// Size: 0x4
+enum class HierarchyType_t : std::uint32_t
+{
+	HIERARCHY_NONE = 0x0,
+	HIERARCHY_BONE_MERGE = 0x1,
+	HIERARCHY_ATTACHMENT = 0x2,
+	HIERARCHY_ABSORIGIN = 0x3,
+	HIERARCHY_BONE = 0x4,
+	HIERARCHY_TYPE_COUNT = 0x5,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 7
+// Alignment: 4
+// Size: 0x4
+enum class BeamType_t : std::uint32_t
+{
+	BEAM_INVALID = 0x0,
+	BEAM_POINTS = 0x1,
+	BEAM_ENTPOINT = 0x2,
+	BEAM_ENTS = 0x3,
+	BEAM_HOSE = 0x4,
+	BEAM_SPLINE = 0x5,
+	BEAM_LASER = 0x6,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class EntitySubclassScope_t : std::uint32_t
+{
+	SUBCLASS_SCOPE_NONE = 0xffffffff,
+	// MPropertyFriendlyName "Precipitation"
+	// MEntitySubclassScopeFile
+	SUBCLASS_SCOPE_PRECIPITATION = 0x0,
+	// MPropertyFriendlyName "PlayerWeapon"
+	// MEntitySubclassScopeFile
+	SUBCLASS_SCOPE_PLAYER_WEAPONS = 0x1,
+	SUBCLASS_SCOPE_COUNT = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
 // Enumerator count: 2
 // Alignment: 4
 // Size: 0x4
-enum class CompositeMaterialVarSystemVar_t : uint32_t
+enum class PointTemplateClientOnlyEntityBehavior_t : std::uint32_t
+{
+	CREATE_FOR_CURRENTLY_CONNECTED_CLIENTS_ONLY = 0x0,
+	CREATE_FOR_CLIENTS_WHO_CONNECT_LATER = 0x1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class CompositeMaterialVarSystemVar_t : std::uint32_t
 {
 	// MPropertyFriendlyName "Composite Generation Time"
 	COMPMATSYSVAR_COMPOSITETIME = 0x0,
@@ -143,10 +1479,790 @@ enum class CompositeMaterialVarSystemVar_t : uint32_t
 };
 
 // Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 1
+// Size: 0x1
+enum class ShatterGlassStressType : std::uint8_t
+{
+	SHATTERGLASS_BLUNT = 0,
+	SHATTERGLASS_BALLISTIC = 1,
+	SHATTERGLASS_PULSE = 2,
+	SHATTERDRYWALL_CHUNKS = 3,
+	SHATTERGLASS_EXPLOSIVE = 4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class WeaponSwitchReason_t : std::uint32_t
+{
+	eDrawn = 0x0,
+	eEquipped = 0x1,
+	eUserInitiatedSwitchToLast = 0x2,
+	eUserInitiatedSwitchHands = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class ValueRemapperRatchetType_t : std::uint32_t
+{
+	RatchetType_Absolute = 0x0,
+	RatchetType_EachEngage = 0x1,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 20
+// Alignment: 4
+// Size: 0x4
+enum class PulseValueType_t : std::uint32_t
+{
+	// MPropertyFriendlyName "Void"
+	PVAL_INVALID = 0xffffffff,
+	// MPropertyFriendlyName "Boolean"
+	PVAL_BOOL = 0x0,
+	// MPropertyFriendlyName "Integer"
+	PVAL_INT = 0x1,
+	// MPropertyFriendlyName "Float"
+	PVAL_FLOAT = 0x2,
+	// MPropertyFriendlyName "String"
+	PVAL_STRING = 0x3,
+	// MPropertyFriendlyName "Vector3"
+	PVAL_VEC3 = 0x4,
+	// MPropertyFriendlyName "Transform"
+	PVAL_TRANSFORM = 0x5,
+	// MPropertyFriendlyName "Color"
+	PVAL_COLOR_RGB = 0x6,
+	// MPropertyFriendlyName "Entity Handle"
+	PVAL_EHANDLE = 0x7,
+	// MPropertyFriendlyName "Resource"
+	PVAL_RESOURCE = 0x8,
+	// MPropertyFriendlyName "SoundEvent Handle"
+	PVAL_SNDEVT_GUID = 0x9,
+	// MPropertyFriendlyName "Entity Name"
+	PVAL_ENTITY_NAME = 0xa,
+	// MPropertyFriendlyName "Opaque Handle"
+	PVAL_OPAQUE_HANDLE = 0xb,
+	// MPropertyFriendlyName "Typesafe Int"
+	PVAL_TYPESAFE_INT = 0xc,
+	// MPropertySuppressEnumerator
+	PVAL_CURSOR_FLOW = 0xd,
+	// MPropertyFriendlyName "Any"
+	PVAL_ANY = 0xe,
+	// MPropertyFriendlyName "Schema Enum"
+	PVAL_SCHEMA_ENUM = 0xf,
+	// MPropertyFriendlyName "Panorama Panel Handle"
+	PVAL_PANORAMA_PANEL_HANDLE = 0x10,
+	// MPropertyFriendlyName "Test Handle"
+	PVAL_TEST_HANDLE = 0x11,
+	// MPropertySuppressEnumerator
+	PVAL_COUNT = 0x12,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class CRR_Response__ResponseEnum_t : std::uint32_t
+{
+	MAX_RESPONSE_NAME = 0xc0,
+	MAX_RULE_NAME = 0x80,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class MoveMountingAmount_t : std::uint32_t
+{
+	MOVE_MOUNT_NONE = 0x0,
+	MOVE_MOUNT_LOW = 0x1,
+	MOVE_MOUNT_HIGH = 0x2,
+	MOVE_MOUNT_MAXCOUNT = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 20
+// Alignment: 1
+// Size: 0x1
+enum class RenderFx_t : std::uint8_t
+{
+	kRenderFxNone = 0,
+	kRenderFxPulseSlow = 1,
+	kRenderFxPulseFast = 2,
+	kRenderFxPulseSlowWide = 3,
+	kRenderFxPulseFastWide = 4,
+	kRenderFxFadeSlow = 5,
+	kRenderFxFadeFast = 6,
+	kRenderFxSolidSlow = 7,
+	kRenderFxSolidFast = 8,
+	kRenderFxStrobeSlow = 9,
+	kRenderFxStrobeFast = 10,
+	kRenderFxStrobeFaster = 11,
+	kRenderFxFlickerSlow = 12,
+	kRenderFxFlickerFast = 13,
+	kRenderFxNoDissipation = 14,
+	kRenderFxFadeOut = 15,
+	kRenderFxFadeIn = 16,
+	kRenderFxPulseFastWider = 17,
+	kRenderFxGlowShell = 18,
+	kRenderFxMax = 19,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 35
+// Alignment: 4
+// Size: 0x4
+enum class vote_create_failed_t : std::uint32_t
+{
+	VOTE_FAILED_GENERIC = 0x0,
+	VOTE_FAILED_TRANSITIONING_PLAYERS = 0x1,
+	VOTE_FAILED_RATE_EXCEEDED = 0x2,
+	VOTE_FAILED_YES_MUST_EXCEED_NO = 0x3,
+	VOTE_FAILED_QUORUM_FAILURE = 0x4,
+	VOTE_FAILED_ISSUE_DISABLED = 0x5,
+	VOTE_FAILED_MAP_NOT_FOUND = 0x6,
+	VOTE_FAILED_MAP_NAME_REQUIRED = 0x7,
+	VOTE_FAILED_FAILED_RECENTLY = 0x8,
+	VOTE_FAILED_TEAM_CANT_CALL = 0x9,
+	VOTE_FAILED_WAITINGFORPLAYERS = 0xa,
+	VOTE_FAILED_PLAYERNOTFOUND = 0xb,
+	VOTE_FAILED_CANNOT_KICK_ADMIN = 0xc,
+	VOTE_FAILED_SCRAMBLE_IN_PROGRESS = 0xd,
+	VOTE_FAILED_SPECTATOR = 0xe,
+	VOTE_FAILED_FAILED_RECENT_KICK = 0xf,
+	VOTE_FAILED_FAILED_RECENT_CHANGEMAP = 0x10,
+	VOTE_FAILED_FAILED_RECENT_SWAPTEAMS = 0x11,
+	VOTE_FAILED_FAILED_RECENT_SCRAMBLETEAMS = 0x12,
+	VOTE_FAILED_FAILED_RECENT_RESTART = 0x13,
+	VOTE_FAILED_SWAP_IN_PROGRESS = 0x14,
+	VOTE_FAILED_DISABLED = 0x15,
+	VOTE_FAILED_NEXTLEVEL_SET = 0x16,
+	VOTE_FAILED_TOO_EARLY_SURRENDER = 0x17,
+	VOTE_FAILED_MATCH_PAUSED = 0x18,
+	VOTE_FAILED_MATCH_NOT_PAUSED = 0x19,
+	VOTE_FAILED_NOT_IN_WARMUP = 0x1a,
+	VOTE_FAILED_NOT_10_PLAYERS = 0x1b,
+	VOTE_FAILED_TIMEOUT_ACTIVE = 0x1c,
+	VOTE_FAILED_TIMEOUT_INACTIVE = 0x1d,
+	VOTE_FAILED_TIMEOUT_EXHAUSTED = 0x1e,
+	VOTE_FAILED_CANT_ROUND_END = 0x1f,
+	VOTE_FAILED_REMATCH = 0x20,
+	VOTE_FAILED_CONTINUE = 0x21,
+	VOTE_FAILED_MAX = 0x22,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 27
+// Alignment: 4
+// Size: 0x4
+enum class RumbleEffect_t : std::uint32_t
+{
+	RUMBLE_INVALID = 0xffffffff,
+	// MPropertySuppressEnumerator
+	RUMBLE_STOP_ALL = 0x0,
+	RUMBLE_PISTOL = 0x1,
+	RUMBLE_357 = 0x2,
+	RUMBLE_SMG1 = 0x3,
+	RUMBLE_AR2 = 0x4,
+	RUMBLE_SHOTGUN_SINGLE = 0x5,
+	RUMBLE_SHOTGUN_DOUBLE = 0x6,
+	RUMBLE_AR2_ALT_FIRE = 0x7,
+	RUMBLE_RPG_MISSILE = 0x8,
+	RUMBLE_CROWBAR_SWING = 0x9,
+	RUMBLE_AIRBOAT_GUN = 0xa,
+	RUMBLE_JEEP_ENGINE_LOOP = 0xb,
+	RUMBLE_FLAT_LEFT = 0xc,
+	RUMBLE_FLAT_RIGHT = 0xd,
+	RUMBLE_FLAT_BOTH = 0xe,
+	RUMBLE_DMG_LOW = 0xf,
+	RUMBLE_DMG_MED = 0x10,
+	RUMBLE_DMG_HIGH = 0x11,
+	RUMBLE_FALL_LONG = 0x12,
+	RUMBLE_FALL_SHORT = 0x13,
+	RUMBLE_PHYSCANNON_OPEN = 0x14,
+	RUMBLE_PHYSCANNON_PUNT = 0x15,
+	RUMBLE_PHYSCANNON_LOW = 0x16,
+	RUMBLE_PHYSCANNON_MEDIUM = 0x17,
+	RUMBLE_PHYSCANNON_HIGH = 0x18,
+	// MPropertySuppressEnumerator
+	NUM_RUMBLE_EFFECTS = 0x19,
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Enumerator count: 2
+// Alignment: 1
+// Size: 0x1
+enum class FuseVariableAccess_t : std::uint8_t
+{
+	WRITABLE = 0,
+	READ_ONLY = 1,
+};
+
+// Registered binary: client.dll (project 'client')
 // Enumerator count: 6
 // Alignment: 4
 // Size: 0x4
-enum class CompositeMaterialMatchFilterType_t : uint32_t
+enum class LatchDirtyPermission_t : std::uint32_t
+{
+	LATCH_DIRTY_DISALLOW = 0x0,
+	LATCH_DIRTY_SERVER_CONTROLLED = 0x1,
+	LATCH_DIRTY_CLIENT_SIMULATED = 0x2,
+	LATCH_DIRTY_PREDICTION = 0x3,
+	LATCH_DIRTY_FRAMESIMULATE = 0x4,
+	LATCH_DIRTY_PARTICLE_SIMULATE = 0x5,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class DoorState_t : std::uint32_t
+{
+	DOOR_STATE_CLOSED = 0x0,
+	DOOR_STATE_OPENING = 0x1,
+	DOOR_STATE_OPEN = 0x2,
+	DOOR_STATE_CLOSING = 0x3,
+	DOOR_STATE_AJAR = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class ChoreoLookAtMode_t : std::uint32_t
+{
+	// MPropertySuppressEnumerator
+	eInvalid = 0xffffffff,
+	// MPropertyFriendlyName "Chest"
+	eChest = 0x0,
+	// MPropertyFriendlyName "Head"
+	eHead = 0x1,
+	// MPropertyFriendlyName "Eyes"
+	eEyesOnly = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class ChatIgnoreType_t : std::uint32_t
+{
+	CHAT_IGNORE_NONE = 0x0,
+	CHAT_IGNORE_ALL = 0x1,
+	CHAT_IGNORE_TEAM = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 7
+// Alignment: 4
+// Size: 0x4
+enum class PlayerConnectedState : std::uint32_t
+{
+	PlayerNeverConnected = 0xffffffff,
+	PlayerConnected = 0x0,
+	PlayerConnecting = 0x1,
+	PlayerReconnecting = 0x2,
+	PlayerDisconnecting = 0x3,
+	PlayerDisconnected = 0x4,
+	PlayerReserved = 0x5,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 9
+// Alignment: 1
+// Size: 0x1
+enum class SolidType_t : std::uint8_t
+{
+	SOLID_NONE = 0,
+	SOLID_BSP = 1,
+	SOLID_BBOX = 2,
+	SOLID_OBB = 3,
+	SOLID_SPHERE = 4,
+	SOLID_POINT = 5,
+	SOLID_VPHYSICS = 6,
+	SOLID_CAPSULE = 7,
+	SOLID_LAST = 8,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 24
+// Alignment: 4
+// Size: 0x4
+enum class DamageTypes_t : std::uint32_t
+{
+	DMG_GENERIC = 0x0,
+	DMG_CRUSH = 0x1,
+	DMG_BULLET = 0x2,
+	DMG_SLASH = 0x4,
+	DMG_BURN = 0x8,
+	DMG_VEHICLE = 0x10,
+	DMG_FALL = 0x20,
+	DMG_BLAST = 0x40,
+	DMG_CLUB = 0x80,
+	DMG_SHOCK = 0x100,
+	DMG_SONIC = 0x200,
+	DMG_ENERGYBEAM = 0x400,
+	DMG_DROWN = 0x4000,
+	DMG_POISON = 0x8000,
+	DMG_RADIATION = 0x10000,
+	DMG_DROWNRECOVER = 0x20000,
+	DMG_ACID = 0x40000,
+	DMG_PHYSGUN = 0x100000,
+	DMG_DISSOLVE = 0x200000,
+	DMG_BLAST_SURFACE = 0x400000,
+	DMG_BUCKSHOT = 0x1000000,
+	// MPropertySuppressEnumerator
+	// MEnumeratorIsNotAFlag
+	DMG_LASTGENERICFLAG = 0x1000000,
+	DMG_HEADSHOT = 0x2000000,
+	DMG_DANGERZONE = 0x4000000,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class PointWorldTextJustifyVertical_t : std::uint32_t
+{
+	POINT_WORLD_TEXT_JUSTIFY_VERTICAL_BOTTOM = 0x0,
+	POINT_WORLD_TEXT_JUSTIFY_VERTICAL_CENTER = 0x1,
+	POINT_WORLD_TEXT_JUSTIFY_VERTICAL_TOP = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class attributeprovidertypes_t : std::uint32_t
+{
+	PROVIDER_GENERIC = 0x0,
+	PROVIDER_WEAPON = 0x1,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 73
+// Alignment: 2
+// Size: 0x2
+enum class PulseInstructionCode_t : std::uint16_t
+{
+	INVALID = 0x0,
+	IMMEDIATE_HALT = 0x1,
+	RETURN_VOID = 0x2,
+	RETURN_VALUE = 0x3,
+	NOP = 0x4,
+	JUMP = 0x5,
+	JUMP_COND = 0x6,
+	CHUNK_LEAP = 0x7,
+	CHUNK_LEAP_COND = 0x8,
+	PULSE_CALL_SYNC = 0x9,
+	PULSE_CALL_ASYNC_FIRE = 0xa,
+	CELL_INVOKE = 0xb,
+	LIBRARY_INVOKE = 0xc,
+	SET_VAR = 0xd,
+	GET_VAR = 0xe,
+	GET_CONST = 0xf,
+	GET_DOMAIN_VALUE = 0x10,
+	COPY = 0x11,
+	NOT = 0x12,
+	NEGATE = 0x13,
+	ADD = 0x14,
+	SUB = 0x15,
+	MUL = 0x16,
+	DIV = 0x17,
+	MOD = 0x18,
+	LT = 0x19,
+	LTE = 0x1a,
+	EQ = 0x1b,
+	NE = 0x1c,
+	AND = 0x1d,
+	OR = 0x1e,
+	CONVERT_VALUE = 0x1f,
+	REINTERPRET_INSTANCE = 0x20,
+	GET_BLACKBOARD_REFERENCE = 0x21,
+	SET_BLACKBOARD_REFERENCE = 0x22,
+	REQUIREMENT_RESULT = 0x23,
+	LAST_SERIALIZED_CODE = 0x24,
+	NEGATE_INT = 0x25,
+	NEGATE_FLOAT = 0x26,
+	ADD_INT = 0x27,
+	ADD_FLOAT = 0x28,
+	ADD_STRING = 0x29,
+	SUB_INT = 0x2a,
+	SUB_FLOAT = 0x2b,
+	MUL_INT = 0x2c,
+	MUL_FLOAT = 0x2d,
+	DIV_INT = 0x2e,
+	DIV_FLOAT = 0x2f,
+	MOD_INT = 0x30,
+	MOD_FLOAT = 0x31,
+	LT_INT = 0x32,
+	LT_FLOAT = 0x33,
+	LTE_INT = 0x34,
+	LTE_FLOAT = 0x35,
+	EQ_BOOL = 0x36,
+	EQ_INT = 0x37,
+	EQ_FLOAT = 0x38,
+	EQ_STRING = 0x39,
+	EQ_ENTITY_NAME = 0x3a,
+	EQ_EHANDLE = 0x3b,
+	EQ_PANEL_HANDLE = 0x3c,
+	EQ_OPAQUE_HANDLE = 0x3d,
+	EQ_TEST_HANDLE = 0x3e,
+	NE_BOOL = 0x3f,
+	NE_INT = 0x40,
+	NE_FLOAT = 0x41,
+	NE_STRING = 0x42,
+	NE_ENTITY_NAME = 0x43,
+	NE_EHANDLE = 0x44,
+	NE_PANEL_HANDLE = 0x45,
+	NE_OPAQUE_HANDLE = 0x46,
+	NE_TEST_HANDLE = 0x47,
+	GET_CONST_INLINE_STORAGE = 0x48,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 6
+// Alignment: 1
+// Size: 0x1
+enum class MoveCollide_t : std::uint8_t
+{
+	MOVECOLLIDE_DEFAULT = 0,
+	MOVECOLLIDE_FLY_BOUNCE = 1,
+	MOVECOLLIDE_FLY_CUSTOM = 2,
+	MOVECOLLIDE_FLY_SLIDE = 3,
+	MOVECOLLIDE_COUNT = 4,
+	MOVECOLLIDE_MAX_BITS = 3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 7
+// Alignment: 4
+// Size: 0x4
+enum class IChoreoServices__ChoreoState_t : std::uint32_t
+{
+	STATE_PRE_SCRIPT = 0x0,
+	STATE_WAIT_FOR_SCRIPT = 0x1,
+	STATE_WALK_TO_MARK = 0x2,
+	STATE_SYNCHRONIZE_SCRIPT = 0x3,
+	STATE_PLAY_SCRIPT = 0x4,
+	STATE_PLAY_SCRIPT_POST_IDLE = 0x5,
+	STATE_PLAY_SCRIPT_POST_IDLE_DONE = 0x6,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class PulseTestEnumColor_t : std::uint32_t
+{
+	// MPropertyFriendlyName "Black"
+	BLACK = 0x0,
+	// MPropertyFriendlyName "White"
+	WHITE = 0x1,
+	// MPropertyFriendlyName "Red"
+	RED = 0x2,
+	// MPropertyFriendlyName "Green"
+	GREEN = 0x3,
+	// MPropertyFriendlyName "Blue"
+	BLUE = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class ValueRemapperOutputType_t : std::uint32_t
+{
+	OutputType_AnimationCycle = 0x0,
+	OutputType_RotationX = 0x1,
+	OutputType_RotationY = 0x2,
+	OutputType_RotationZ = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class PointTemplateOwnerSpawnGroupType_t : std::uint32_t
+{
+	INSERT_INTO_POINT_TEMPLATE_SPAWN_GROUP = 0x0,
+	INSERT_INTO_CURRENTLY_ACTIVE_SPAWN_GROUP = 0x1,
+	INSERT_INTO_NEWLY_CREATED_SPAWN_GROUP = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class PointWorldTextJustifyHorizontal_t : std::uint32_t
+{
+	POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_LEFT = 0x0,
+	POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER = 0x1,
+	POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_RIGHT = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 6
+// Alignment: 4
+// Size: 0x4
+enum class ShakeCommand_t : std::uint32_t
+{
+	SHAKE_START = 0x0,
+	SHAKE_STOP = 0x1,
+	SHAKE_AMPLITUDE = 0x2,
+	SHAKE_FREQUENCY = 0x3,
+	SHAKE_START_RUMBLEONLY = 0x4,
+	SHAKE_START_NORUMBLE = 0x5,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class BrushSolidities_e : std::uint32_t
+{
+	BRUSHSOLID_TOGGLE = 0x0,
+	BRUSHSOLID_NEVER = 0x1,
+	BRUSHSOLID_ALWAYS = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 13
+// Alignment: 4
+// Size: 0x4
+enum class QuestProgress__Reason : std::uint32_t
+{
+	QUEST_NONINITIALIZED = 0x0,
+	QUEST_OK = 0x1,
+	QUEST_NOT_ENOUGH_PLAYERS = 0x2,
+	QUEST_WARMUP = 0x3,
+	QUEST_NOT_CONNECTED_TO_STEAM = 0x4,
+	QUEST_NONOFFICIAL_SERVER = 0x5,
+	QUEST_NO_ENTITLEMENT = 0x6,
+	QUEST_NO_QUEST = 0x7,
+	QUEST_PLAYER_IS_BOT = 0x8,
+	QUEST_WRONG_MAP = 0x9,
+	QUEST_WRONG_MODE = 0xa,
+	QUEST_NOT_SYNCED_WITH_SERVER = 0xb,
+	QUEST_REASON_MAX = 0xc,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class ModifyDamageReturn_t : std::uint32_t
+{
+	CONTINUE_TO_APPLY_DAMAGE = 0x0,
+	ABORT_DO_NOT_APPLY_DAMAGE = 0x1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class ShadowType_t : std::uint32_t
+{
+	SHADOWS_NONE = 0x0,
+	SHADOWS_SIMPLE = 0x1,
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class PulseCursorCancelPriority_t : std::uint32_t
+{
+	// MPropertyFriendlyName "Keep running normally."
+	None = 0x0,
+	// MPropertyFriendlyName "Kill after current node."
+	// MPropertyDescription "Do not stop the current yielding node, but do not continue to the next node afterwards."
+	CancelOnSucceeded = 0x1,
+	// MPropertyFriendlyName "Kill elegantly."
+	// MPropertyDescription "Request elegant wind-down of any associated work (e.g. vcd interrupt)."
+	SoftCancel = 0x2,
+	// MPropertyFriendlyName "Kill immediately."
+	// MPropertyDescription "Stop without any wind-down."
+	HardCancel = 0x3,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 8
+// Alignment: 4
+// Size: 0x4
+enum class GrenadeType_t : std::uint32_t
+{
+	GRENADE_TYPE_EXPLOSIVE = 0x0,
+	GRENADE_TYPE_FLASH = 0x1,
+	GRENADE_TYPE_FIRE = 0x2,
+	GRENADE_TYPE_DECOY = 0x3,
+	GRENADE_TYPE_SMOKE = 0x4,
+	GRENADE_TYPE_SENSOR = 0x5,
+	GRENADE_TYPE_SNOWBALL = 0x6,
+	GRENADE_TYPE_TOTAL = 0x7,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class ValueRemapperInputType_t : std::uint32_t
+{
+	InputType_PlayerShootPosition = 0x0,
+	InputType_PlayerShootPositionAroundAxis = 0x1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 8
+// Alignment: 1
+// Size: 0x1
+enum class EKillTypes_t : std::uint8_t
+{
+	KILL_NONE = 0,
+	KILL_DEFAULT = 1,
+	KILL_HEADSHOT = 2,
+	KILL_BLAST = 3,
+	KILL_BURN = 4,
+	KILL_SLASH = 5,
+	KILL_SHOCK = 6,
+	KILLTYPE_COUNT = 7,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 25
+// Alignment: 4
+// Size: 0x4
+enum class WeaponSound_t : std::uint32_t
+{
+	WEAPON_SOUND_EMPTY = 0x0,
+	WEAPON_SOUND_SECONDARY_EMPTY = 0x1,
+	WEAPON_SOUND_SINGLE = 0x2,
+	WEAPON_SOUND_SECONDARY_ATTACK = 0x3,
+	WEAPON_SOUND_MELEE_MISS = 0x4,
+	WEAPON_SOUND_MELEE_HIT = 0x5,
+	WEAPON_SOUND_MELEE_HIT_WORLD = 0x6,
+	WEAPON_SOUND_MELEE_HIT_PLAYER = 0x7,
+	WEAPON_SOUND_MELEE_HIT_NPC = 0x8,
+	WEAPON_SOUND_SPECIAL1 = 0x9,
+	WEAPON_SOUND_SPECIAL2 = 0xa,
+	WEAPON_SOUND_SPECIAL3 = 0xb,
+	WEAPON_SOUND_NEARLYEMPTY = 0xc,
+	WEAPON_SOUND_IMPACT = 0xd,
+	WEAPON_SOUND_REFLECT = 0xe,
+	WEAPON_SOUND_SECONDARY_IMPACT = 0xf,
+	WEAPON_SOUND_SECONDARY_REFLECT = 0x10,
+	WEAPON_SOUND_RELOAD = 0x11,
+	WEAPON_SOUND_SINGLE_ACCURATE = 0x12,
+	WEAPON_SOUND_ZOOM_IN = 0x13,
+	WEAPON_SOUND_ZOOM_OUT = 0x14,
+	WEAPON_SOUND_MOUSE_PRESSED = 0x15,
+	WEAPON_SOUND_DROP = 0x16,
+	WEAPON_SOUND_RADIO_USE = 0x17,
+	// MPropertySuppressEnumerator
+	WEAPON_SOUND_NUM_TYPES = 0x18,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 16
+// Alignment: 8
+// Size: 0x8
+enum class TakeDamageFlags_t : std::uint64_t
+{
+	DFLAG_NONE = 0x0,
+	DFLAG_SUPPRESS_HEALTH_CHANGES = 0x1,
+	DFLAG_SUPPRESS_PHYSICS_FORCE = 0x2,
+	DFLAG_SUPPRESS_EFFECTS = 0x4,
+	DFLAG_PREVENT_DEATH = 0x8,
+	DFLAG_FORCE_DEATH = 0x10,
+	DFLAG_ALWAYS_GIB = 0x20,
+	DFLAG_NEVER_GIB = 0x40,
+	DFLAG_REMOVE_NO_RAGDOLL = 0x80,
+	DFLAG_SUPPRESS_DAMAGE_MODIFICATION = 0x100,
+	DFLAG_ALWAYS_FIRE_DAMAGE_EVENTS = 0x200,
+	DFLAG_RADIUS_DMG = 0x400,
+	DFLAG_FORCEREDUCEARMOR_DMG = 0x800,
+	// MPropertySuppressEnumerator
+	// MEnumeratorIsNotAFlag
+	DMG_LASTDFLAG = 0x800,
+	DFLAG_IGNORE_ARMOR = 0x1000,
+	DFLAG_SUPPRESS_UTILREMOVE = 0x2000,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 2
+// Alignment: 4
+// Size: 0x4
+enum class ValueRemapperHapticsType_t : std::uint32_t
+{
+	HaticsType_Default = 0x0,
+	HaticsType_None = 0x1,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 10
+// Alignment: 4
+// Size: 0x4
+enum class Disposition_t : std::uint32_t
+{
+	D_ER = 0x0,
+	D_HT = 0x1,
+	D_FR = 0x2,
+	D_LI = 0x3,
+	D_NU = 0x4,
+	D_ERROR = 0x0,
+	D_HATE = 0x1,
+	D_FEAR = 0x2,
+	D_LIKE = 0x3,
+	D_NEUTRAL = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 3
+// Alignment: 4
+// Size: 0x4
+enum class CanPlaySequence_t : std::uint32_t
+{
+	CANNOT_PLAY = 0x0,
+	CAN_PLAY_NOW = 0x1,
+	CAN_PLAY_ENQUEUED = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 5
+// Alignment: 4
+// Size: 0x4
+enum class MedalRank_t : std::uint32_t
+{
+	MEDAL_RANK_NONE = 0x0,
+	MEDAL_RANK_BRONZE = 0x1,
+	MEDAL_RANK_SILVER = 0x2,
+	MEDAL_RANK_GOLD = 0x3,
+	MEDAL_RANK_COUNT = 0x4,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 7
+// Alignment: 4
+// Size: 0x4
+enum class ObserverMode_t : std::uint32_t
+{
+	OBS_MODE_NONE = 0x0,
+	OBS_MODE_FIXED = 0x1,
+	OBS_MODE_IN_EYE = 0x2,
+	OBS_MODE_CHASE = 0x3,
+	OBS_MODE_ROAMING = 0x4,
+	OBS_MODE_DIRECTED = 0x5,
+	NUM_OBSERVER_MODES = 0x6,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 6
+// Alignment: 4
+// Size: 0x4
+enum class CompositeMaterialMatchFilterType_t : std::uint32_t
 {
 	// MPropertyFriendlyName "Target Material Attribute Exists"
 	MATCH_FILTER_MATERIAL_ATTRIBUTE_EXISTS = 0x0,
@@ -162,11 +2278,25 @@ enum class CompositeMaterialMatchFilterType_t : uint32_t
 	MATCH_FILTER_MATERIAL_PROPERTY_EQUALS = 0x5,
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Enumerator count: 4
+// Alignment: 4
+// Size: 0x4
+enum class PulseDomainValueType_t : std::uint32_t
+{
+	INVALID = 0xffffffff,
+	// MPropertyFriendlyName "Entity Name"
+	ENTITY_NAME = 0x0,
+	// MPropertyFriendlyName "Panel ID"
+	PANEL_ID = 0x1,
+	COUNT = 0x2,
+};
+
 // Registered binary: client.dll (project 'client')
 // Enumerator count: 3
 // Alignment: 4
 // Size: 0x4
-enum class CompMatPropertyMutatorConditionType_t : uint32_t
+enum class CompMatPropertyMutatorConditionType_t : std::uint32_t
 {
 	// MPropertyFriendlyName "Input Container Exists"
 	COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_EXISTS = 0x0,
@@ -174,6 +2304,28 @@ enum class CompMatPropertyMutatorConditionType_t : uint32_t
 	COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EXISTS = 0x1,
 	// MPropertyFriendlyName "Input Container Variable Exists and Equals"
 	COMP_MAT_MUTATOR_CONDITION_INPUT_CONTAINER_VALUE_EQUALS = 0x2,
+};
+
+// Registered binary: client.dll (project 'client')
+// Enumerator count: 14
+// Alignment: 1
+// Size: 0x1
+enum class MoveType_t : std::uint8_t
+{
+	MOVETYPE_NONE = 0,
+	MOVETYPE_OBSOLETE = 1,
+	MOVETYPE_WALK = 2,
+	MOVETYPE_FLY = 3,
+	MOVETYPE_FLYGRAVITY = 4,
+	MOVETYPE_VPHYSICS = 5,
+	MOVETYPE_PUSH = 6,
+	MOVETYPE_NOCLIP = 7,
+	MOVETYPE_OBSERVER = 8,
+	MOVETYPE_LADDER = 9,
+	MOVETYPE_CUSTOM = 10,
+	MOVETYPE_LAST = 11,
+	MOVETYPE_INVALID = 11,
+	MOVETYPE_MAX_BITS = 5,
 };
 
 struct GameTime_t;
@@ -269,61 +2421,70 @@ struct CGameSceneNodeHandle;
 struct CNetworkOriginCellCoordQuantizedVector;
 struct CCSPointScriptEntity;
 struct CBasePlayerController;
+struct PulseRuntimeOutputIndex_t;
+struct EngineLoopState_t;
+struct SignatureOutflow_Continue;
 struct CDecalInfo;
+struct CPulse_OutflowConnection;
+struct PulseRuntimeChunkIndex_t;
+struct PulseRegisterMap_t;
+struct EntComponentInfo_t;
+struct CEntityComponentHelper;
+struct PulseDocNodeID_t;
+struct CPulse_ResumePoint;
+struct ResponseFollowup;
+struct CTakeDamageInfo;
+struct CRangeInt;
+struct CRangeFloat;
+struct FuseVariableIndex_t;
+struct PulseCursorID_t;
+struct PulseGraphInstanceID_t;
+struct CPulse_BlackboardReference;
+struct PulseRuntimeVarIndex_t;
+struct PulseRuntimeRegisterIndex_t;
+struct PulseRuntimeInvokeIndex_t;
+struct PulseRuntimeCallInfoIndex_t;
+struct PulseRuntimeConstantIndex_t;
+struct PulseRuntimeDomainValueIndex_t;
+struct PulseRuntimeBlackboardReferenceIndex_t;
+struct PulseRuntimeCellIndex_t;
+struct CSoundEnvelope;
+struct CCopyRecipientFilter;
 struct C_FireSmoke;
+struct SignatureOutflow_Resume;
 struct CompositeMaterialInputLooseVariable_t;
-
-// Registered binary: client.dll (project 'entity2')
-// Alignment: 8
-// Size: 0x38
-// Has VTable
-// 
-// MNetworkVarNames "CEntityIdentity * m_pEntity"
-// MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"
-class CEntityInstance
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// MNetworkDisable
-	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8	
-	// MNetworkEnable
-	// MNetworkPriority "56"
-	CEntityIdentity* m_pEntity; // 0x10	
-private:
-	[[maybe_unused]] uint8_t __pad0018[0x10]; // 0x18
-public:
-	// MNetworkEnable
-	// MNetworkDisable
-	CScriptComponent* m_CScriptComponent; // 0x28	
-	bool m_bVisibleinPVS; // 0x30	
-};
+struct CTakeDamageResult;
+struct ResponseParams;
+struct PulseNodeDynamicOutflows_t;
+struct FuseFunctionIndex_t;
+struct PointCameraSettings_t;
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xb0
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedFloatType
+struct GameTime_t
+{
+public:
+	float m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_FLOAT(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("GameTime_t")->GetStaticFields()[0]->m_pInstance);};
+	static GameTime_t &Get_Zero(){return *reinterpret_cast<GameTime_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("GameTime_t")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x28
 // Has VTable
-class C_IronSightController
+class CEntityIOOutput
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
 public:
-	bool m_bIronSightAvailable; // 0x10	
-private:
-	[[maybe_unused]] uint8_t __pad0011[0x3]; // 0x11
-public:
-	float m_flIronSightAmount; // 0x14	
-	float m_flIronSightAmountGained; // 0x18	
-	float m_flIronSightAmountBiased; // 0x1c	
-	float m_flIronSightAmount_Interpolated; // 0x20	
-	float m_flIronSightAmountGained_Interpolated; // 0x24	
-	float m_flIronSightAmountBiased_Interpolated; // 0x28	
-	float m_flInterpolationLastUpdated; // 0x2c	
-	QAngle m_angDeltaAverage[8]; // 0x30	
-	QAngle m_angViewLast; // 0x90	
-	Vector2D m_vecDotCoords; // 0x9c	
-	float m_flDotBlur; // 0xa4	
-	float m_flSpeedRatio; // 0xa8	
+	CVariantBase< CVariantDefaultAllocator > m_Value; // 0x18	
 };
 
 // Registered binary: client.dll (project 'entity2')
@@ -344,6 +2505,7 @@ public:
 // Alignment: 8
 // Size: 0x58
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int32 m_iGlowType"
 // MNetworkVarNames "int32 m_iGlowTeam"
@@ -389,158 +2551,278 @@ public:
 	bool m_bGlowing; // 0x51	
 };
 
-// Registered binary: client.dll (project 'client')
+// Registered binary: client.dll (project 'entity2')
 // Alignment: 8
-// Size: 0x1d8
-// Has VTable
-// 
-// MNetworkVarNames "ButtonBitMask_t m_nToggleButtonDownMask"
-// MNetworkVarNames "float32 m_flMaxspeed"
-// MNetworkVarNames "float32 m_arrForceSubtickMoveWhen"
-class CPlayer_MovementServices : public CPlayerPawnComponent
+// Size: 0x28
+class CNetworkVarChainer
 {
-public:
-	int32_t m_nImpulse; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
 public:
-	CInButtonState m_nButtons; // 0x48	
-	uint64_t m_nQueuedButtonDownMask; // 0x68	
-	uint64_t m_nQueuedButtonChangeMask; // 0x70	
-	uint64_t m_nButtonDoublePressed; // 0x78	
-	uint32_t m_pButtonPressedCmdNumber[64]; // 0x80	
-	uint32_t m_nLastCommandNumberProcessed; // 0x180	
-private:
-	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint64_t m_nToggleButtonDownMask; // 0x188	
-private:
-	[[maybe_unused]] uint8_t __pad0190[0x8]; // 0x190
-public:
-	// MNetworkEnable
-	// MNetworkBitCount "12"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "2048.000000"
-	// MNetworkEncodeFlags "1"
-	float m_flMaxspeed; // 0x198	
-	// MNetworkEnable
-	float m_arrForceSubtickMoveWhen[4]; // 0x19c	
-	float m_flForwardMove; // 0x1ac	
-	float m_flLeftMove; // 0x1b0	
-	float m_flUpMove; // 0x1b4	
-	Vector m_vecLastMovementImpulses; // 0x1b8	
-	QAngle m_vecOldViewAngles; // 0x1c4	
-	
-	// Datamap fields:
-	// void m_pButtonPressedCmdNumber; // 0x80
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x20	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x68
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct GameTick_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("GameTick_t")->GetStaticFields()[0]->m_pInstance);};
+	static GameTick_t &Get_Zero(){return *reinterpret_cast<GameTick_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("GameTick_t")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x38
+// Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// 
+// MNetworkVarNames "CEntityIdentity * m_pEntity"
+// MNetworkVarNames "CScriptComponent::Storage_t m_CScriptComponent"
+class CEntityInstance
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkDisable
+	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8	
+	// MNetworkEnable
+	// MNetworkPriority "56"
+	CEntityIdentity* m_pEntity; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0018[0x10]; // 0x18
+public:
+	// MNetworkEnable
+	// MNetworkDisable
+	CScriptComponent* m_CScriptComponent; // 0x28	
+	bool m_bVisibleinPVS; // 0x30	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct SceneEventId_t
+{
+public:
+	uint32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("SceneEventId_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1a0
+// Has VTable
+// MNetworkAssumeNotNetworkable
+class CNetworkTransmitComponent
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x16c]; // 0x0
+public:
+	uint8_t m_nTransmitStateOwnedCounter; // 0x16c	
+	
+	// Static fields:
+	static int32_t &Get_s_nDebugStateChange(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CNetworkTransmitComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_s_nWatchTransmitEntity(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CNetworkTransmitComponent")->GetStaticFields()[1]->m_pInstance);};
+	static bool &Get_s_bUseNetworkVars(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CNetworkTransmitComponent")->GetStaticFields()[2]->m_pInstance);};
+	static bool &Get_s_bNetworkVarPerFieldTracking(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CNetworkTransmitComponent")->GetStaticFields()[3]->m_pInstance);};
+	static bool &Get_s_bNetworkVarValidate(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CNetworkTransmitComponent")->GetStaticFields()[4]->m_pInstance);};
+	static bool &Get_s_bUsingPVSConvars(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CNetworkTransmitComponent")->GetStaticFields()[5]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xb0
+// Has VTable
+class C_IronSightController
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	bool m_bIronSightAvailable; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0011[0x3]; // 0x11
+public:
+	float m_flIronSightAmount; // 0x14	
+	float m_flIronSightAmountGained; // 0x18	
+	float m_flIronSightAmountBiased; // 0x1c	
+	float m_flIronSightAmount_Interpolated; // 0x20	
+	float m_flIronSightAmountGained_Interpolated; // 0x24	
+	float m_flIronSightAmountBiased_Interpolated; // 0x28	
+	float m_flInterpolationLastUpdated; // 0x2c	
+	QAngle m_angDeltaAverage[8]; // 0x30	
+	QAngle m_angViewLast; // 0x90	
+	Vector2D m_vecDotCoords; // 0x9c	
+	float m_flDotBlur; // 0xa4	
+	float m_flSpeedRatio; // 0xa8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+// Is Abstract
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "int m_nTotalPausedTicks"
+// MNetworkVarNames "int m_nPauseStartTick"
+// MNetworkVarNames "bool m_bGamePaused"
+class C_GameRules
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x8	
+	// MNetworkEnable
+	int32_t m_nTotalPausedTicks; // 0x30	
+	// MNetworkEnable
+	int32_t m_nPauseStartTick; // 0x34	
+	// MNetworkEnable
+	bool m_bGamePaused; // 0x38	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has VTable
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "uint32 m_bvDisabledHitGroups"
+class CHitboxComponent : public CEntityComponent
+{
+private:
+	[[maybe_unused]] uint8_t __pad0008[0x1c]; // 0x8
+public:
+	// MNetworkEnable
+	uint32_t m_bvDisabledHitGroups[1]; // 0x24	
+	
+	// Static fields:
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has Trivial Destructor
+// 
+// MNetworkVarsAtomic
+class CNetworkViewOffsetVector
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "-64,000000"
+	// MNetworkMaxValue "64,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkViewOffsetVector"
+	CNetworkedQuantizedFloat m_vecX; // 0x10	
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "-64,000000"
+	// MNetworkMaxValue "64,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkViewOffsetVector"
+	CNetworkedQuantizedFloat m_vecY; // 0x18	
+	// MNetworkBitCount "20"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "128,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkViewOffsetVector"
+	CNetworkedQuantizedFloat m_vecZ; // 0x20	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
 // Has VTable
 // Has Trivial Destructor
 // 
-// MNetworkVarNames "Vector dirPrimary"
-// MNetworkVarNames "Color colorPrimary"
-// MNetworkVarNames "Color colorSecondary"
-// MNetworkVarNames "Color colorPrimaryLerpTo"
-// MNetworkVarNames "Color colorSecondaryLerpTo"
-// MNetworkVarNames "float32 start"
-// MNetworkVarNames "float32 end"
-// MNetworkVarNames "float32 farz"
-// MNetworkVarNames "float32 maxdensity"
-// MNetworkVarNames "float32 exponent"
-// MNetworkVarNames "float32 HDRColorScale"
-// MNetworkVarNames "float32 skyboxFogFactor"
-// MNetworkVarNames "float32 skyboxFogFactorLerpTo"
-// MNetworkVarNames "float32 startLerpTo"
-// MNetworkVarNames "float32 endLerpTo"
-// MNetworkVarNames "float32 maxdensityLerpTo"
-// MNetworkVarNames "GameTime_t lerptime"
-// MNetworkVarNames "float32 duration"
-// MNetworkVarNames "float32 blendtobackground"
-// MNetworkVarNames "float32 scattering"
-// MNetworkVarNames "float32 locallightscale"
-// MNetworkVarNames "bool enable"
-// MNetworkVarNames "bool blend"
-// MNetworkVarNames "bool m_bNoReflectionFog"
-struct fogparams_t
+// MNetworkVarNames "uint64 m_nInteractsAs"
+// MNetworkVarNames "uint64 m_nInteractsWith"
+// MNetworkVarNames "uint64 m_nInteractsExclude"
+// MNetworkVarNames "uint32 m_nEntityId"
+// MNetworkVarNames "uint32 m_nOwnerId"
+// MNetworkVarNames "uint16 m_nHierarchyId"
+// MNetworkVarNames "uint8 m_nCollisionGroup"
+// MNetworkVarNames "uint8 m_nCollisionFunctionMask"
+struct VPhysicsCollisionAttribute_t
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
-	// MNetworkEncoder "coord"
-	Vector dirPrimary; // 0x8	
+	uint64_t m_nInteractsAs; // 0x8	
 	// MNetworkEnable
-	Color colorPrimary; // 0x14	
+	uint64_t m_nInteractsWith; // 0x10	
 	// MNetworkEnable
-	Color colorSecondary; // 0x18	
+	uint64_t m_nInteractsExclude; // 0x18	
 	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	Color colorPrimaryLerpTo; // 0x1c	
+	uint32_t m_nEntityId; // 0x20	
 	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	Color colorSecondaryLerpTo; // 0x20	
+	uint32_t m_nOwnerId; // 0x24	
 	// MNetworkEnable
-	float start; // 0x24	
+	uint16_t m_nHierarchyId; // 0x28	
 	// MNetworkEnable
-	float end; // 0x28	
+	uint8_t m_nCollisionGroup; // 0x2a	
 	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float farz; // 0x2c	
-	// MNetworkEnable
-	float maxdensity; // 0x30	
-	// MNetworkEnable
-	float exponent; // 0x34	
-	// MNetworkEnable
-	float HDRColorScale; // 0x38	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float skyboxFogFactor; // 0x3c	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float skyboxFogFactorLerpTo; // 0x40	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float startLerpTo; // 0x44	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float endLerpTo; // 0x48	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float maxdensityLerpTo; // 0x4c	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	GameTime_t lerptime; // 0x50	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float duration; // 0x54	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float blendtobackground; // 0x58	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float scattering; // 0x5c	
-	// MNetworkEnable
-	// MNetworkUserGroup "FogController"
-	float locallightscale; // 0x60	
-	// MNetworkEnable
-	bool enable; // 0x64	
-	// MNetworkEnable
-	bool blend; // 0x65	
-	// MNetworkEnable
-	bool m_bNoReflectionFog; // 0x66	
-	bool m_bPadding; // 0x67	
+	uint8_t m_nCollisionFunctionMask; // 0x2b	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has Trivial Destructor
+// 
+// MNetworkVarsAtomic
+class CNetworkVelocityVector
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	// MNetworkBitCount "18"
+	// MNetworkMinValue "-4096,000000"
+	// MNetworkMaxValue "4096,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkVelocityVector"
+	CNetworkedQuantizedFloat m_vecX; // 0x10	
+	// MNetworkBitCount "18"
+	// MNetworkMinValue "-4096,000000"
+	// MNetworkMaxValue "4096,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkVelocityVector"
+	CNetworkedQuantizedFloat m_vecY; // 0x18	
+	// MNetworkBitCount "18"
+	// MNetworkMinValue "-4096,000000"
+	// MNetworkMaxValue "4096,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkVelocityVector"
+	CNetworkedQuantizedFloat m_vecZ; // 0x20	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkExcludeByName "m_bClientSideRagdoll"
 // MNetworkExcludeByName "m_iMaxHealth"
@@ -702,6 +2984,9 @@ public:
 	// MNetworkUserGroup "LocalPlayerExclusive"
 	// MNetworkChangeCallback "OnLocalVelocityChanged"
 	// MNetworkPriority "32"
+	// -> m_vecX - 0x3f0
+	// -> m_vecY - 0x3f8
+	// -> m_vecZ - 0x400
 	CNetworkVelocityVector m_vecVelocity; // 0x3e0	
 private:
 	[[maybe_unused]] uint8_t __pad0408[0x8]; // 0x408
@@ -727,8 +3012,8 @@ public:
 	// MNetworkUserGroup "Water"
 	// MNetworkChangeCallback "OnWaterLevelChangeNetworked"
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1,000000"
 	// MNetworkEncodeFlags "8"
 	float m_flWaterLevel; // 0x428	
 	// MNetworkEnable
@@ -744,8 +3029,8 @@ public:
 	int32_t m_nGroundBodyIndex; // 0x434	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "4.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "4,000000"
 	// MNetworkEncodeFlags "1"
 	// MNetworkUserGroup "LocalPlayerExclusive"
 	float m_flFriction; // 0x438	
@@ -811,18 +3096,18 @@ public:
 	BloodType m_nBloodType; // 0x540	
 	
 	// Static fields:
-	static bool &Get_sm_bDatadescValidating(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[0]->m_instance);};
-	static bool &Get_sm_bAccurateTriggerBboxChecks(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[1]->m_instance);};
-	static bool &Get_sm_bDisableTouchFuncs(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[2]->m_instance);};
-	static bool &Get_m_bAllowPrecache(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[3]->m_instance);};
-	static LatchDirtyPermission_t &Get_s_nLatchPermissions(){return *reinterpret_cast<LatchDirtyPermission_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[4]->m_instance);};
-	static int32_t &Get_m_nPredictionRandomSeed(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[5]->m_instance);};
-	static CBasePlayerController* &Get_m_pPredictionPlayerController(){return *reinterpret_cast<CBasePlayerController**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[6]->m_instance);};
-	static bool &Get_s_bAbsQueriesValid(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[7]->m_instance);};
-	static bool &Get_s_bAbsRecomputationEnabled(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[8]->m_instance);};
-	static bool &Get_s_bComputingInterpolatedValues(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[9]->m_instance);};
-	static bool &Get_s_bPreventingSetAnimRunAnimEvents(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[10]->m_instance);};
-	static CUtlVector< C_BaseEntity* > &Get_gm_UsableObjects(){return *reinterpret_cast<CUtlVector< C_BaseEntity* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->m_static_fields[11]->m_instance);};
+	static bool &Get_sm_bDatadescValidating(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_sm_bAccurateTriggerBboxChecks(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[1]->m_pInstance);};
+	static bool &Get_sm_bDisableTouchFuncs(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[2]->m_pInstance);};
+	static bool &Get_m_bAllowPrecache(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[3]->m_pInstance);};
+	static LatchDirtyPermission_t &Get_s_nLatchPermissions(){return *reinterpret_cast<LatchDirtyPermission_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[4]->m_pInstance);};
+	static int32_t &Get_m_nPredictionRandomSeed(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[5]->m_pInstance);};
+	static CBasePlayerController* &Get_m_pPredictionPlayerController(){return *reinterpret_cast<CBasePlayerController**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[6]->m_pInstance);};
+	static bool &Get_s_bAbsQueriesValid(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[7]->m_pInstance);};
+	static bool &Get_s_bAbsRecomputationEnabled(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[8]->m_pInstance);};
+	static bool &Get_s_bComputingInterpolatedValues(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[9]->m_pInstance);};
+	static bool &Get_s_bPreventingSetAnimRunAnimEvents(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[10]->m_pInstance);};
+	static CUtlVector< C_BaseEntity* > &Get_gm_UsableObjects(){return *reinterpret_cast<CUtlVector< C_BaseEntity* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseEntity")->GetStaticFields()[11]->m_pInstance);};
 	
 	// Datamap fields:
 	// CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
@@ -837,116 +3122,9 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x50
-// Has VTable
-// 
-// MNetworkVarNames "int m_iReapplyProvisionParity"
-// MNetworkVarNames "EHANDLE m_hOuter"
-// MNetworkVarNames "attributeprovidertypes_t m_ProviderType"
-class CAttributeManager
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	CUtlVector< CHandle< C_BaseEntity > > m_Providers; // 0x8	
-	// MNetworkEnable
-	int32_t m_iReapplyProvisionParity; // 0x20	
-	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hOuter; // 0x24	
-	bool m_bPreventLoopback; // 0x28	
-private:
-	[[maybe_unused]] uint8_t __pad0029[0x3]; // 0x29
-public:
-	// MNetworkEnable
-	attributeprovidertypes_t m_ProviderType; // 0x2c	
-	CUtlVector< CAttributeManager::cached_attribute_float_t > m_CachedResults; // 0x30	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x28
-// Has VTable
-// 
-// MNetworkVarNames "uint32 m_bvDisabledHitGroups"
-class CHitboxComponent : public CEntityComponent
-{
-private:
-	[[maybe_unused]] uint8_t __pad0008[0x1c]; // 0x8
-public:
-	// MNetworkEnable
-	uint32_t m_bvDisabledHitGroups[1]; // 0x24	
-	
-	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CHitboxComponent")->m_static_fields[1]->m_instance);};
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x30
-// Has VTable
-// Has Trivial Destructor
-// 
-// MNetworkVarNames "uint64 m_nInteractsAs"
-// MNetworkVarNames "uint64 m_nInteractsWith"
-// MNetworkVarNames "uint64 m_nInteractsExclude"
-// MNetworkVarNames "uint32 m_nEntityId"
-// MNetworkVarNames "uint32 m_nOwnerId"
-// MNetworkVarNames "uint16 m_nHierarchyId"
-// MNetworkVarNames "uint8 m_nCollisionGroup"
-// MNetworkVarNames "uint8 m_nCollisionFunctionMask"
-struct VPhysicsCollisionAttribute_t
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// MNetworkEnable
-	uint64_t m_nInteractsAs; // 0x8	
-	// MNetworkEnable
-	uint64_t m_nInteractsWith; // 0x10	
-	// MNetworkEnable
-	uint64_t m_nInteractsExclude; // 0x18	
-	// MNetworkEnable
-	uint32_t m_nEntityId; // 0x20	
-	// MNetworkEnable
-	uint32_t m_nOwnerId; // 0x24	
-	// MNetworkEnable
-	uint16_t m_nHierarchyId; // 0x28	
-	// MNetworkEnable
-	uint8_t m_nCollisionGroup; // 0x2a	
-	// MNetworkEnable
-	uint8_t m_nCollisionFunctionMask; // 0x2b	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x40
-// Has VTable
-// Is Abstract
-// 
-// MNetworkVarNames "int m_nTotalPausedTicks"
-// MNetworkVarNames "int m_nPauseStartTick"
-// MNetworkVarNames "bool m_bGamePaused"
-class C_GameRules
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// MNetworkDisable
-	// MNetworkChangeAccessorFieldPathIndex
-	CNetworkVarChainer __m_pChainEntity; // 0x8	
-	// MNetworkEnable
-	int32_t m_nTotalPausedTicks; // 0x30	
-	// MNetworkEnable
-	int32_t m_nPauseStartTick; // 0x34	
-	// MNetworkEnable
-	bool m_bGamePaused; // 0x38	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
 // Size: 0xb0
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "VPhysicsCollisionAttribute_t m_collisionAttribute"
 // MNetworkVarNames "Vector m_vecMins"
@@ -1026,25 +3204,42 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x60
+// Size: 0x48
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
-// MNetworkVarNames "CEconItemAttribute m_Attributes"
-class CAttributeList
+// MNetworkVarNames "attrib_definition_index_t m_iAttributeDefinitionIndex"
+// MNetworkVarNames "float m_flValue"
+// MNetworkVarNames "float m_flInitialValue"
+// MNetworkVarNames "int m_nRefundableCurrency"
+// MNetworkVarNames "bool m_bSetBonus"
+class CEconItemAttribute
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
 public:
 	// MNetworkEnable
-	// MNetworkTypeAlias "CUtlVector< CEconItemAttribute >"
-	C_UtlVectorEmbeddedNetworkVar< CEconItemAttribute > m_Attributes; // 0x8	
-	CAttributeManager* m_pManager; // 0x58	
+	uint16_t m_iAttributeDefinitionIndex; // 0x30	
+private:
+	[[maybe_unused]] uint8_t __pad0032[0x2]; // 0x32
+public:
+	// MNetworkEnable
+	// MNetworkAlias "m_iRawValue32"
+	float m_flValue; // 0x34	
+	// MNetworkEnable
+	float m_flInitialValue; // 0x38	
+	// MNetworkEnable
+	int32_t m_nRefundableCurrency; // 0x3c	
+	// MNetworkEnable
+	bool m_bSetBonus; // 0x40	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CRenderComponent::Storage_t m_CRenderComponent"
 // MNetworkVarNames "CHitboxComponent::Storage_t m_CHitboxComponent"
@@ -1165,6 +3360,9 @@ public:
 	// MNetworkPriority "32"
 	// MNetworkUserGroup "Player"
 	// MNetworkChangeCallback "OnViewOffsetChanged"
+	// -> m_vecX - 0xc60
+	// -> m_vecY - 0xc68
+	// -> m_vecZ - 0xc70
 	CNetworkViewOffsetVector m_vecViewOffset; // 0xc50	
 private:
 	[[maybe_unused]] uint8_t __pad0c78[0x8]; // 0xc78
@@ -1190,8 +3388,25 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseProvideFeatureTag "CSPointScriptExtensions"
+// MPulseLibraryBindings
+class CCSPointScriptExtensions_weapon_cs_base
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0xed0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_bClientSideRagdoll"
 // MNetworkVarNames "bool m_bInitiallyPopulateInterpHistory"
@@ -1253,8 +3468,139 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x208
+// Has VTable
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "GameTime_t m_flStartTime"
+// MNetworkVarNames "uint32 m_iWindSeed"
+// MNetworkVarNames "uint16 m_iMinWind"
+// MNetworkVarNames "uint16 m_iMaxWind"
+// MNetworkVarNames "int32 m_windRadius"
+// MNetworkVarNames "uint16 m_iMinGust"
+// MNetworkVarNames "uint16 m_iMaxGust"
+// MNetworkVarNames "float32 m_flMinGustDelay"
+// MNetworkVarNames "float32 m_flMaxGustDelay"
+// MNetworkVarNames "float32 m_flGustDuration"
+// MNetworkVarNames "uint16 m_iGustDirChange"
+// MNetworkVarNames "Vector m_location"
+// MNetworkVarNames "uint16 m_iInitialWindDir"
+// MNetworkVarNames "float32 m_flInitialWindSpeed"
+class C_EnvWindShared
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkEnable
+	GameTime_t m_flStartTime; // 0x8	
+	// MNetworkEnable
+	uint32_t m_iWindSeed; // 0xc	
+	// MNetworkEnable
+	uint16_t m_iMinWind; // 0x10	
+	// MNetworkEnable
+	uint16_t m_iMaxWind; // 0x12	
+	// MNetworkEnable
+	int32_t m_windRadius; // 0x14	
+	// MNetworkEnable
+	uint16_t m_iMinGust; // 0x18	
+	// MNetworkEnable
+	uint16_t m_iMaxGust; // 0x1a	
+	// MNetworkEnable
+	float m_flMinGustDelay; // 0x1c	
+	// MNetworkEnable
+	float m_flMaxGustDelay; // 0x20	
+	// MNetworkEnable
+	float m_flGustDuration; // 0x24	
+	// MNetworkEnable
+	uint16_t m_iGustDirChange; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad002a[0x2]; // 0x2a
+public:
+	// MNetworkEnable
+	// MNetworkEncoder "coord"
+	Vector m_location; // 0x2c	
+	int32_t m_iszGustSound; // 0x38	
+	int32_t m_iWindDir; // 0x3c	
+	float m_flWindSpeed; // 0x40	
+	Vector m_currentWindVector; // 0x44	
+	Vector m_CurrentSwayVector; // 0x50	
+	Vector m_PrevSwayVector; // 0x5c	
+	// MNetworkEnable
+	uint16_t m_iInitialWindDir; // 0x68	
+private:
+	[[maybe_unused]] uint8_t __pad006a[0x2]; // 0x6a
+public:
+	// MNetworkEnable
+	float m_flInitialWindSpeed; // 0x6c	
+	GameTime_t m_flVariationTime; // 0x70	
+	GameTime_t m_flSwayTime; // 0x74	
+	GameTime_t m_flSimTime; // 0x78	
+	GameTime_t m_flSwitchTime; // 0x7c	
+	float m_flAveWindSpeed; // 0x80	
+	bool m_bGusting; // 0x84	
+private:
+	[[maybe_unused]] uint8_t __pad0085[0x3]; // 0x85
+public:
+	float m_flWindAngleVariation; // 0x88	
+	float m_flWindSpeedVariation; // 0x8c	
+	CEntityIndex m_iEntIndex; // 0x90	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xcd8
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "float32 m_flLightScale"
+// MNetworkVarNames "float32 m_Radius"
+class C_SpotlightEnd : public C_BaseModelEntity
+{
+public:
+	// MNetworkEnable
+	float m_flLightScale; // 0xcc8	
+	// MNetworkEnable
+	float m_Radius; // 0xccc	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "int m_iReapplyProvisionParity"
+// MNetworkVarNames "EHANDLE m_hOuter"
+// MNetworkVarNames "attributeprovidertypes_t m_ProviderType"
+class CAttributeManager
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	CUtlVector< CHandle< C_BaseEntity > > m_Providers; // 0x8	
+	// MNetworkEnable
+	int32_t m_iReapplyProvisionParity; // 0x20	
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hOuter; // 0x24	
+	bool m_bPreventLoopback; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad0029[0x3]; // 0x29
+public:
+	// MNetworkEnable
+	attributeprovidertypes_t m_ProviderType; // 0x2c	
+	CUtlVector< CAttributeManager::cached_attribute_float_t > m_CachedResults; // 0x30	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0x1068
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float32 m_flexWeight"
 // MNetworkVarNames "bool m_blinktoggle"
@@ -1265,8 +3611,8 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1,000000"
 	// MNetworkEncodeFlags "1"
 	C_NetworkUtlVectorBase< float32 > m_flexWeight; // 0xee0	
 	// MNetworkEnable
@@ -1310,55 +3656,216 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xcd8
+// Size: 0x8
 // Has VTable
-// 
-// MNetworkVarNames "float32 m_flLightScale"
-// MNetworkVarNames "float32 m_Radius"
-class C_SpotlightEnd : public C_BaseModelEntity
+// Is Abstract
+class IEconItemInterface
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	// MNetworkEnable
-	float m_flLightScale; // 0xcc8	
-	// MNetworkEnable
-	float m_Radius; // 0xccc	
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x48
+// Size: 0x40
 // Has VTable
-// 
-// MNetworkVarNames "attrib_definition_index_t m_iAttributeDefinitionIndex"
-// MNetworkVarNames "float m_flValue"
-// MNetworkVarNames "float m_flInitialValue"
-// MNetworkVarNames "int m_nRefundableCurrency"
-// MNetworkVarNames "bool m_bSetBonus"
-class CEconItemAttribute
+class CPlayerPawnComponent
 {
 private:
-	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	// MNetworkEnable
-	uint16_t m_iAttributeDefinitionIndex; // 0x30	
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x60
+// Has VTable
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CEconItemAttribute m_Attributes"
+class CAttributeList
+{
 private:
-	[[maybe_unused]] uint8_t __pad0032[0x2]; // 0x32
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
-	// MNetworkAlias "m_iRawValue32"
-	float m_flValue; // 0x34	
+	// MNetworkTypeAlias "CUtlVector< CEconItemAttribute >"
+	C_UtlVectorEmbeddedNetworkVar< CEconItemAttribute > m_Attributes; // 0x8	
+	CAttributeManager* m_pManager; // 0x58	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10b8
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkIncludeByName "m_fFlags"
+// MNetworkIncludeByName "m_vecVelocity"
+// MNetworkExcludeByName "m_flexWeight"
+// MNetworkExcludeByName "m_blinktoggle"
+// MNetworkExcludeByUserGroup "m_flPoseParameter"
+// MNetworkExcludeByName "m_nResetEventsParity"
+// MNetworkExcludeByUserGroup "overlay_vars"
+// MNetworkExcludeByName "m_flAnimTime"
+// MNetworkExcludeByUserGroup "m_flCycle"
+// MNetworkExcludeByName "m_baseLayer.m_hSequence"
+// MNetworkExcludeByName "m_animationController.m_flPlaybackRate"
+// MNetworkExcludeByName "m_nNewSequenceParity"
+// MNetworkVarNames "bool m_bIsLive"
+// MNetworkVarNames "float32 m_DmgRadius"
+// MNetworkVarNames "GameTime_t m_flDetonateTime"
+// MNetworkVarNames "float32 m_flDamage"
+// MNetworkVarNames "CHandle< CCSPlayerPawn > m_hThrower"
+class C_BaseGrenade : public C_BaseFlex
+{
+public:
+	bool m_bHasWarnedAI; // 0x1068	
+	bool m_bIsSmokeGrenade; // 0x1069	
 	// MNetworkEnable
-	float m_flInitialValue; // 0x38	
+	bool m_bIsLive; // 0x106a	
+private:
+	[[maybe_unused]] uint8_t __pad106b[0x1]; // 0x106b
+public:
 	// MNetworkEnable
-	int32_t m_nRefundableCurrency; // 0x3c	
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1024,000000"
+	// MNetworkEncodeFlags "1"
+	float m_DmgRadius; // 0x106c	
 	// MNetworkEnable
-	bool m_bSetBonus; // 0x40	
+	GameTime_t m_flDetonateTime; // 0x1070	
+	float m_flWarnAITime; // 0x1074	
+	// MNetworkEnable
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "256,000000"
+	// MNetworkEncodeFlags "1"
+	float m_flDamage; // 0x1078	
+private:
+	[[maybe_unused]] uint8_t __pad107c[0x4]; // 0x107c
+public:
+	CUtlSymbolLarge m_iszBounceSound; // 0x1080	
+	CUtlString m_ExplosionSound; // 0x1088	
+private:
+	[[maybe_unused]] uint8_t __pad1090[0x4]; // 0x1090
+public:
+	// MNetworkEnable
+	CHandle< C_CSPlayerPawn > m_hThrower; // 0x1094	
+private:
+	[[maybe_unused]] uint8_t __pad1098[0x14]; // 0x1098
+public:
+	GameTime_t m_flNextAttack; // 0x10ac	
+	CHandle< C_CSPlayerPawn > m_hOriginalThrower; // 0x10b0	
+	
+	// Datamap fields:
+	// int32_t m_nExplosionType; // 0x1090
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x548
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_PointEntity : public C_BaseEntity
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x5a8
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "bool m_bIsPlayingBack"
+// MNetworkVarNames "bool m_bPaused"
+// MNetworkVarNames "bool m_bMultiplayer"
+// MNetworkVarNames "bool m_bAutogenerated"
+// MNetworkVarNames "float32 m_flForceClientTime"
+// MNetworkVarNames "uint16 m_nSceneStringIndex"
+// MNetworkVarNames "CHandle< C_BaseFlex > m_hActorList"
+class C_SceneEntity : public C_PointEntity
+{
+private:
+	[[maybe_unused]] uint8_t __pad0548[0x8]; // 0x548
+public:
+	// MNetworkEnable
+	bool m_bIsPlayingBack; // 0x550	
+	// MNetworkEnable
+	bool m_bPaused; // 0x551	
+	// MNetworkEnable
+	bool m_bMultiplayer; // 0x552	
+	// MNetworkEnable
+	bool m_bAutogenerated; // 0x553	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnResetClientTime"
+	float m_flForceClientTime; // 0x554	
+	// MNetworkEnable
+	// MNetworkPriority "32"
+	uint16_t m_nSceneStringIndex; // 0x558	
+	bool m_bClientOnly; // 0x55a	
+private:
+	[[maybe_unused]] uint8_t __pad055b[0x1]; // 0x55b
+public:
+	CHandle< C_BaseFlex > m_hOwner; // 0x55c	
+	// MNetworkEnable
+	// MNetworkPriority "32"
+	C_NetworkUtlVectorBase< CHandle< C_BaseFlex > > m_hActorList; // 0x560	
+	bool m_bWasPlaying; // 0x578	
+private:
+	[[maybe_unused]] uint8_t __pad0579[0xf]; // 0x579
+public:
+	CUtlVector< C_SceneEntity::QueuedEvents_t > m_QueuedEvents; // 0x588	
+	float m_flCurrentTime; // 0x5a0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+// Has Trivial Destructor
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CHandle< CFogController> m_hCtrl"
+struct C_fogplayerparams_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "PlayerFogController"
+	CHandle< C_FogController > m_hCtrl; // 0x8	
+	float m_flTransitionTime; // 0xc	
+	Color m_OldColor; // 0x10	
+	float m_flOldStart; // 0x14	
+	float m_flOldEnd; // 0x18	
+	float m_flOldMaxDensity; // 0x1c	
+	float m_flOldHDRColorScale; // 0x20	
+	float m_flOldFarZ; // 0x24	
+	Color m_NewColor; // 0x28	
+	float m_flNewStart; // 0x2c	
+	float m_flNewEnd; // 0x30	
+	float m_flNewMaxDensity; // 0x34	
+	float m_flNewHDRColorScale; // 0x38	
+	float m_flNewFarZ; // 0x3c	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x448
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "item_definition_index_t m_iItemDefinitionIndex"
 // MNetworkVarNames "int m_iEntityQuality"
@@ -1442,469 +3949,15 @@ public:
 	bool m_bInitializedTags; // 0x440	
 	
 	// Static fields:
-	static bool &Get_m_sbHasCleanedInventoryImageCacheDir(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_EconItemView")->m_static_fields[0]->m_instance);};
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1
-// Has Trivial Constructor
-// Has Trivial Destructor
-// 
-// MPulseProvideFeatureTag
-// MPulseLibraryBindings
-class CCSPointScriptExtensions_weapon_cs_base
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
-public:
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0xcd0
-// Has VTable
-// 
-// MNetworkVarNames "CLightComponent::Storage_t m_CLightComponent"
-class C_LightEntity : public C_BaseModelEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "CLightComponent"
-	// MNetworkAlias "CLightComponent"
-	// MNetworkTypeAlias "CLightComponent"
-	CLightComponent* m_CLightComponent; // 0xcc8	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x208
-// Has VTable
-// 
-// MNetworkVarNames "GameTime_t m_flStartTime"
-// MNetworkVarNames "uint32 m_iWindSeed"
-// MNetworkVarNames "uint16 m_iMinWind"
-// MNetworkVarNames "uint16 m_iMaxWind"
-// MNetworkVarNames "int32 m_windRadius"
-// MNetworkVarNames "uint16 m_iMinGust"
-// MNetworkVarNames "uint16 m_iMaxGust"
-// MNetworkVarNames "float32 m_flMinGustDelay"
-// MNetworkVarNames "float32 m_flMaxGustDelay"
-// MNetworkVarNames "float32 m_flGustDuration"
-// MNetworkVarNames "uint16 m_iGustDirChange"
-// MNetworkVarNames "Vector m_location"
-// MNetworkVarNames "uint16 m_iInitialWindDir"
-// MNetworkVarNames "float32 m_flInitialWindSpeed"
-class C_EnvWindShared
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// MNetworkEnable
-	GameTime_t m_flStartTime; // 0x8	
-	// MNetworkEnable
-	uint32_t m_iWindSeed; // 0xc	
-	// MNetworkEnable
-	uint16_t m_iMinWind; // 0x10	
-	// MNetworkEnable
-	uint16_t m_iMaxWind; // 0x12	
-	// MNetworkEnable
-	int32_t m_windRadius; // 0x14	
-	// MNetworkEnable
-	uint16_t m_iMinGust; // 0x18	
-	// MNetworkEnable
-	uint16_t m_iMaxGust; // 0x1a	
-	// MNetworkEnable
-	float m_flMinGustDelay; // 0x1c	
-	// MNetworkEnable
-	float m_flMaxGustDelay; // 0x20	
-	// MNetworkEnable
-	float m_flGustDuration; // 0x24	
-	// MNetworkEnable
-	uint16_t m_iGustDirChange; // 0x28	
-private:
-	[[maybe_unused]] uint8_t __pad002a[0x2]; // 0x2a
-public:
-	// MNetworkEnable
-	// MNetworkEncoder "coord"
-	Vector m_location; // 0x2c	
-	int32_t m_iszGustSound; // 0x38	
-	int32_t m_iWindDir; // 0x3c	
-	float m_flWindSpeed; // 0x40	
-	Vector m_currentWindVector; // 0x44	
-	Vector m_CurrentSwayVector; // 0x50	
-	Vector m_PrevSwayVector; // 0x5c	
-	// MNetworkEnable
-	uint16_t m_iInitialWindDir; // 0x68	
-private:
-	[[maybe_unused]] uint8_t __pad006a[0x2]; // 0x6a
-public:
-	// MNetworkEnable
-	float m_flInitialWindSpeed; // 0x6c	
-	GameTime_t m_flVariationTime; // 0x70	
-	GameTime_t m_flSwayTime; // 0x74	
-	GameTime_t m_flSimTime; // 0x78	
-	GameTime_t m_flSwitchTime; // 0x7c	
-	float m_flAveWindSpeed; // 0x80	
-	bool m_bGusting; // 0x84	
-private:
-	[[maybe_unused]] uint8_t __pad0085[0x3]; // 0x85
-public:
-	float m_flWindAngleVariation; // 0x88	
-	float m_flWindSpeedVariation; // 0x8c	
-	CEntityIndex m_iEntIndex; // 0x90	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x548
-// Has VTable
-class C_GameRulesProxy : public C_BaseEntity
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x10f8
-// Has VTable
-// 
-// MNetworkExcludeByUserGroup "LocalPlayerExclusive"
-// MNetworkVarNames "CHandle<C_EconWearable > m_hMyWearables"
-// MNetworkVarNames "float m_flFieldOfView"
-class C_BaseCombatCharacter : public C_BaseFlex
-{
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnWearablesChanged"
-	C_NetworkUtlVectorBase< CHandle< C_EconWearable > > m_hMyWearables; // 0x1068	
-	AttachmentHandle_t m_leftFootAttachment; // 0x1080	
-	AttachmentHandle_t m_rightFootAttachment; // 0x1081	
-private:
-	[[maybe_unused]] uint8_t __pad1082[0x2]; // 0x1082
-public:
-	C_BaseCombatCharacter::WaterWakeMode_t m_nWaterWakeMode; // 0x1084	
-	float m_flWaterWorldZ; // 0x1088	
-	float m_flWaterNextTraceTime; // 0x108c	
-	// MNetworkEnable
-	float m_flFieldOfView; // 0x1090	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x10b8
-// Has VTable
-// 
-// MNetworkIncludeByName "m_fFlags"
-// MNetworkIncludeByName "m_vecVelocity"
-// MNetworkExcludeByName "m_flexWeight"
-// MNetworkExcludeByName "m_blinktoggle"
-// MNetworkExcludeByUserGroup "m_flPoseParameter"
-// MNetworkExcludeByName "m_nResetEventsParity"
-// MNetworkExcludeByUserGroup "overlay_vars"
-// MNetworkExcludeByName "m_flAnimTime"
-// MNetworkExcludeByUserGroup "m_flCycle"
-// MNetworkExcludeByName "m_baseLayer.m_hSequence"
-// MNetworkExcludeByName "m_animationController.m_flPlaybackRate"
-// MNetworkExcludeByName "m_nNewSequenceParity"
-// MNetworkVarNames "bool m_bIsLive"
-// MNetworkVarNames "float32 m_DmgRadius"
-// MNetworkVarNames "GameTime_t m_flDetonateTime"
-// MNetworkVarNames "float32 m_flDamage"
-// MNetworkVarNames "CHandle< CCSPlayerPawn > m_hThrower"
-class C_BaseGrenade : public C_BaseFlex
-{
-public:
-	bool m_bHasWarnedAI; // 0x1068	
-	bool m_bIsSmokeGrenade; // 0x1069	
-	// MNetworkEnable
-	bool m_bIsLive; // 0x106a	
-private:
-	[[maybe_unused]] uint8_t __pad106b[0x1]; // 0x106b
-public:
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1024.000000"
-	// MNetworkEncodeFlags "1"
-	float m_DmgRadius; // 0x106c	
-	// MNetworkEnable
-	GameTime_t m_flDetonateTime; // 0x1070	
-	float m_flWarnAITime; // 0x1074	
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "256.000000"
-	// MNetworkEncodeFlags "1"
-	float m_flDamage; // 0x1078	
-private:
-	[[maybe_unused]] uint8_t __pad107c[0x4]; // 0x107c
-public:
-	CUtlSymbolLarge m_iszBounceSound; // 0x1080	
-	CUtlString m_ExplosionSound; // 0x1088	
-private:
-	[[maybe_unused]] uint8_t __pad1090[0x4]; // 0x1090
-public:
-	// MNetworkEnable
-	CHandle< C_CSPlayerPawn > m_hThrower; // 0x1094	
-private:
-	[[maybe_unused]] uint8_t __pad1098[0x14]; // 0x1098
-public:
-	GameTime_t m_flNextAttack; // 0x10ac	
-	CHandle< C_CSPlayerPawn > m_hOriginalThrower; // 0x10b0	
-	
-	// Datamap fields:
-	// int32_t m_nExplosionType; // 0x1090
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x548
-// Has VTable
-class C_SoundEventEntity : public C_BaseEntity
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x40
-// Has VTable
-class CPlayer_ViewModelServices : public CPlayerPawnComponent
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x4a8
-// Has VTable
-// 
-// MNetworkIncludeByName "m_ProviderType"
-// MNetworkIncludeByName "m_hOuter"
-// MNetworkIncludeByName "m_iReapplyProvisionParity"
-// MNetworkIncludeByName "m_Item"
-// MNetworkVarNames "CEconItemView m_Item"
-class C_AttributeContainer : public CAttributeManager
-{
-public:
-	// MNetworkEnable
-	C_EconItemView m_Item; // 0x50	
-	int32_t m_iExternalItemProviderRegisteredToken; // 0x498	
-private:
-	[[maybe_unused]] uint8_t __pad049c[0x4]; // 0x49c
-public:
-	uint64_t m_ullRegisteredAsItemID; // 0x4a0	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x15b0
-// Has VTable
-// 
-// MNetworkVarNames "CAttributeContainer m_AttributeManager"
-// MNetworkVarNames "uint32 m_OriginalOwnerXuidLow"
-// MNetworkVarNames "uint32 m_OriginalOwnerXuidHigh"
-// MNetworkVarNames "int m_nFallbackPaintKit"
-// MNetworkVarNames "int m_nFallbackSeed"
-// MNetworkVarNames "float m_flFallbackWear"
-// MNetworkVarNames "int m_nFallbackStatTrak"
-class C_EconEntity : public C_BaseFlex
-{
-private:
-	[[maybe_unused]] uint8_t __pad1068[0x10]; // 0x1068
-public:
-	float m_flFlexDelayTime; // 0x1078	
-private:
-	[[maybe_unused]] uint8_t __pad107c[0x4]; // 0x107c
-public:
-	float32* m_flFlexDelayedWeight; // 0x1080	
-	bool m_bAttributesInitialized; // 0x1088	
-private:
-	[[maybe_unused]] uint8_t __pad1089[0x7]; // 0x1089
-public:
-	// MNetworkEnable
-	// -> m_Item - 0x10e0
-	// -> m_iExternalItemProviderRegisteredToken - 0x1528
-	// -> m_ullRegisteredAsItemID - 0x1530
-	C_AttributeContainer m_AttributeManager; // 0x1090	
-	// MNetworkEnable
-	uint32_t m_OriginalOwnerXuidLow; // 0x1538	
-	// MNetworkEnable
-	uint32_t m_OriginalOwnerXuidHigh; // 0x153c	
-	// MNetworkEnable
-	int32_t m_nFallbackPaintKit; // 0x1540	
-	// MNetworkEnable
-	int32_t m_nFallbackSeed; // 0x1544	
-	// MNetworkEnable
-	float m_flFallbackWear; // 0x1548	
-	// MNetworkEnable
-	int32_t m_nFallbackStatTrak; // 0x154c	
-	bool m_bClientside; // 0x1550	
-	bool m_bParticleSystemsCreated; // 0x1551	
-private:
-	[[maybe_unused]] uint8_t __pad1552[0x6]; // 0x1552
-public:
-	CUtlVector< int32 > m_vecAttachedParticles; // 0x1558	
-	CHandle< CBaseAnimGraph > m_hViewmodelAttachment; // 0x1570	
-	int32_t m_iOldTeam; // 0x1574	
-	bool m_bAttachmentDirty; // 0x1578	
-private:
-	[[maybe_unused]] uint8_t __pad1579[0x3]; // 0x1579
-public:
-	int32_t m_nUnloadedModelIndex; // 0x157c	
-	int32_t m_iNumOwnerValidationRetries; // 0x1580	
-private:
-	[[maybe_unused]] uint8_t __pad1584[0xc]; // 0x1584
-public:
-	CHandle< C_BaseEntity > m_hOldProvidee; // 0x1590	
-private:
-	[[maybe_unused]] uint8_t __pad1594[0x4]; // 0x1594
-public:
-	CUtlVector< C_EconEntity::AttachedModelData_t > m_vecAttachedModels; // 0x1598	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x548
-// Has VTable
-class C_PointEntity : public C_BaseEntity
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x5a8
-// Has VTable
-// 
-// MNetworkVarNames "bool m_bIsPlayingBack"
-// MNetworkVarNames "bool m_bPaused"
-// MNetworkVarNames "bool m_bMultiplayer"
-// MNetworkVarNames "bool m_bAutogenerated"
-// MNetworkVarNames "float32 m_flForceClientTime"
-// MNetworkVarNames "uint16 m_nSceneStringIndex"
-// MNetworkVarNames "CHandle< C_BaseFlex > m_hActorList"
-class C_SceneEntity : public C_PointEntity
-{
-private:
-	[[maybe_unused]] uint8_t __pad0548[0x8]; // 0x548
-public:
-	// MNetworkEnable
-	bool m_bIsPlayingBack; // 0x550	
-	// MNetworkEnable
-	bool m_bPaused; // 0x551	
-	// MNetworkEnable
-	bool m_bMultiplayer; // 0x552	
-	// MNetworkEnable
-	bool m_bAutogenerated; // 0x553	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnResetClientTime"
-	float m_flForceClientTime; // 0x554	
-	// MNetworkEnable
-	// MNetworkPriority "32"
-	uint16_t m_nSceneStringIndex; // 0x558	
-	bool m_bClientOnly; // 0x55a	
-private:
-	[[maybe_unused]] uint8_t __pad055b[0x1]; // 0x55b
-public:
-	CHandle< C_BaseFlex > m_hOwner; // 0x55c	
-	// MNetworkEnable
-	// MNetworkPriority "32"
-	C_NetworkUtlVectorBase< CHandle< C_BaseFlex > > m_hActorList; // 0x560	
-	bool m_bWasPlaying; // 0x578	
-private:
-	[[maybe_unused]] uint8_t __pad0579[0xf]; // 0x579
-public:
-	CUtlVector< C_SceneEntity::QueuedEvents_t > m_QueuedEvents; // 0x588	
-	float m_flCurrentTime; // 0x5a0	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x40
-// Has VTable
-// Has Trivial Destructor
-// 
-// MNetworkVarNames "CHandle< CFogController> m_hCtrl"
-struct C_fogplayerparams_t
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "PlayerFogController"
-	CHandle< C_FogController > m_hCtrl; // 0x8	
-	float m_flTransitionTime; // 0xc	
-	Color m_OldColor; // 0x10	
-	float m_flOldStart; // 0x14	
-	float m_flOldEnd; // 0x18	
-	float m_flOldMaxDensity; // 0x1c	
-	float m_flOldHDRColorScale; // 0x20	
-	float m_flOldFarZ; // 0x24	
-	Color m_NewColor; // 0x28	
-	float m_flNewStart; // 0x2c	
-	float m_flNewEnd; // 0x30	
-	float m_flNewMaxDensity; // 0x34	
-	float m_flNewHDRColorScale; // 0x38	
-	float m_flNewFarZ; // 0x3c	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x15e8
-// Has VTable
-// 
-// MNetworkExcludeByName "m_flexWeight"
-// MNetworkExcludeByName "m_blinktoggle"
-// MNetworkIncludeByName "m_nNextThinkTick"
-// MNetworkExcludeByUserGroup "m_flPoseParameter"
-// MNetworkExcludeByUserGroup "m_flCycle"
-// MNetworkExcludeByUserGroup "overlay_vars"
-// MNetworkUserGroupProxy "CBasePlayerWeapon"
-// MNetworkVarNames "GameTick_t m_nNextPrimaryAttackTick"
-// MNetworkVarNames "float32 m_flNextPrimaryAttackTickRatio"
-// MNetworkVarNames "GameTick_t m_nNextSecondaryAttackTick"
-// MNetworkVarNames "float32 m_flNextSecondaryAttackTickRatio"
-// MNetworkVarNames "int32 m_iClip1"
-// MNetworkVarNames "int32 m_iClip2"
-// MNetworkVarNames "int m_pReserveAmmo"
-class C_BasePlayerWeapon : public C_EconEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	GameTick_t m_nNextPrimaryAttackTick; // 0x15b0	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	float m_flNextPrimaryAttackTickRatio; // 0x15b4	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	GameTick_t m_nNextSecondaryAttackTick; // 0x15b8	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	float m_flNextSecondaryAttackTickRatio; // 0x15bc	
-	// MNetworkEnable
-	// MNetworkSerializer "minusone"
-	// MNetworkPriority "32"
-	int32_t m_iClip1; // 0x15c0	
-	// MNetworkEnable
-	// MNetworkSerializer "minusone"
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_iClip2; // 0x15c4	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalWeaponExclusive"
-	int32_t m_pReserveAmmo[2]; // 0x15c8	
+	static bool &Get_m_sbHasCleanedInventoryImageCacheDir(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_EconItemView")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_FuncBrush : public C_BaseModelEntity
 {
 public:
@@ -1915,6 +3968,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_BaseToggle : public C_BaseModelEntity
 {
 public:
@@ -1984,6 +4039,7 @@ public:
 // Size: 0x570
 // Has VTable
 // Is Abstract
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bDisabled"
 // MNetworkVarNames "string_t m_iszSoundAreaType"
@@ -2011,12 +4067,15 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1d8
+// Size: 0x20
 // Has VTable
-class CCSObserver_MovementServices : public CPlayer_MovementServices
+// Has Trivial Destructor
+class CInButtonState
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	// No schema binary for binding
+	uint64_t m_pButtonStates[3]; // 0x8	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -2062,6 +4121,8 @@ public:
 // Size: 0x18
 // Has VTable
 // Has Trivial Destructor
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float32 m_duration"
 // MNetworkVarNames "GameTime_t m_timestamp"
@@ -2103,8 +4164,34 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x40
+// Has VTable
+// 
+// MNetworkVarNames "GameTick_t nTagTick"
+// MNetworkVarNames "float flFlinchModSmall"
+// MNetworkVarNames "float flFlinchModLarge"
+// MNetworkVarNames "float flFriendlyFireDamageReductionRatio"
+struct PredictedDamageTag_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
+public:
+	// MNetworkEnable
+	GameTick_t nTagTick; // 0x30	
+	// MNetworkEnable
+	float flFlinchModSmall; // 0x34	
+	// MNetworkEnable
+	float flFlinchModLarge; // 0x38	
+	// MNetworkEnable
+	float flFriendlyFireDamageReductionRatio; // 0x3c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0xf10
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CBaseProp : public CBaseAnimGraph
 {
 public:
@@ -2128,6 +4215,8 @@ public:
 // Alignment: 16
 // Size: 0xa40
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_GlobalLight : public C_BaseEntity
 {
 private:
@@ -2136,9 +4225,9 @@ public:
 	uint16_t m_WindClothForceHandle; // 0xa10	
 	
 	// Static fields:
-	static C_GlobalLight* &Get_sm_pGlobalLight(){return *reinterpret_cast<C_GlobalLight**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->m_static_fields[0]->m_instance);};
-	static CUtlStringToken &Get_sm_pSkyboxSlots(){return *reinterpret_cast<CUtlStringToken*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->m_static_fields[1]->m_instance);};
-	static CUtlVector< C_GlobalLight* > &Get_sm_nonPrimaryGlobalLights(){return *reinterpret_cast<CUtlVector< C_GlobalLight* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->m_static_fields[2]->m_instance);};
+	static C_GlobalLight* &Get_sm_pGlobalLight(){return *reinterpret_cast<C_GlobalLight**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->GetStaticFields()[0]->m_pInstance);};
+	static CUtlStringToken &Get_sm_pSkyboxSlots(){return *reinterpret_cast<CUtlStringToken*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->GetStaticFields()[1]->m_pInstance);};
+	static CUtlVector< C_GlobalLight* > &Get_sm_nonPrimaryGlobalLights(){return *reinterpret_cast<CUtlVector< C_GlobalLight* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->GetStaticFields()[2]->m_pInstance);};
 	
 	// Datamap fields:
 	// CGlobalLightBase CGlobalLightBase; // 0x550
@@ -2151,6 +4240,10 @@ public:
 // Alignment: 8
 // Size: 0x5e0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bHostageAlive"
 // MNetworkVarNames "bool m_isHostageFollowingSomeone"
@@ -2187,142 +4280,63 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x160
-// Has VTable
+// Size: 0x30
+// Has Trivial Destructor
 // 
-// MNetworkVarNames "CGameSceneNodeHandle m_hParent"
-// MNetworkVarNames "CNetworkOriginCellCoordQuantizedVector m_vecOrigin"
-// MNetworkVarNames "QAngle m_angRotation"
-// MNetworkVarNames "float m_flScale"
-// MNetworkVarNames "CUtlStringToken m_name"
-// MNetworkVarNames "CUtlStringToken m_hierarchyAttachName"
-class CGameSceneNode
+// MNetworkVarsAtomic
+class CNetworkOriginCellCoordQuantizedVector
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
 public:
-	// MNetworkDisable
-	CTransform m_nodeToWorld; // 0x10	
-	// MNetworkDisable
-	CEntityInstance* m_pOwner; // 0x30	
-	// MNetworkDisable
-	CGameSceneNode* m_pParent; // 0x38	
-	// MNetworkDisable
-	CGameSceneNode* m_pChild; // 0x40	
-	// MNetworkDisable
-	CGameSceneNode* m_pNextSibling; // 0x48	
-private:
-	[[maybe_unused]] uint8_t __pad0050[0x28]; // 0x50
-public:
 	// MNetworkEnable
-	// MNetworkSerializer "gameSceneNode"
-	// MNetworkChangeCallback "gameSceneNodeHierarchyParentChanged"
-	// MNetworkPriority "32"
-	// MNetworkVarEmbeddedFieldOffsetDelta "8"
-	// -> m_hOwner - 0x80
-	// -> m_name - 0x84
-	CGameSceneNodeHandle m_hParent; // 0x78	
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "31"
+	// MNetworkSerializer "cellx"
+	uint16_t m_cellX; // 0x10	
 	// MNetworkEnable
-	// MNetworkPriority "32"
-	// MNetworkUserGroup "Origin"
-	// MNetworkChangeCallback "gameSceneNodeLocalOriginChanged"
-	CNetworkOriginCellCoordQuantizedVector m_vecOrigin; // 0x88	
-private:
-	[[maybe_unused]] uint8_t __pad00b8[0x8]; // 0xb8
-public:
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "31"
+	// MNetworkSerializer "celly"
+	uint16_t m_cellY; // 0x12	
 	// MNetworkEnable
-	// MNetworkEncoder "qangle_precise"
-	// MNetworkPriority "32"
-	// MNetworkSerializer "gameSceneNodeStepSimulationAnglesSerializer"
-	// MNetworkChangeCallback "gameSceneNodeLocalAnglesChanged"
-	QAngle m_angRotation; // 0xc0	
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "31"
+	// MNetworkSerializer "cellz"
+	uint16_t m_cellZ; // 0x14	
 	// MNetworkEnable
-	// MNetworkChangeCallback "gameSceneNodeLocalScaleChanged"
-	// MNetworkPriority "32"
-	float m_flScale; // 0xcc	
-	// MNetworkDisable
-	Vector m_vecAbsOrigin; // 0xd0	
-	// MNetworkDisable
-	QAngle m_angAbsRotation; // 0xdc	
-	// MNetworkDisable
-	float m_flAbsScale; // 0xe8	
-	// MNetworkDisable
-	int16_t m_nParentAttachmentOrBone; // 0xec	
-	// MNetworkDisable
-	bool m_bDebugAbsOriginChanges; // 0xee	
-	// MNetworkDisable
-	bool m_bDormant; // 0xef	
-	// MNetworkDisable
-	bool m_bForceParentToBeNetworked; // 0xf0	
-	struct 
-	{
-		// MNetworkDisable
-		uint8_t m_bDirtyHierarchy: 1; 		
-		// MNetworkDisable
-		uint8_t m_bDirtyBoneMergeInfo: 1; 		
-		// MNetworkDisable
-		uint8_t m_bNetworkedPositionChanged: 1; 		
-		// MNetworkDisable
-		uint8_t m_bNetworkedAnglesChanged: 1; 		
-		// MNetworkDisable
-		uint8_t m_bNetworkedScaleChanged: 1; 		
-		// MNetworkDisable
-		uint8_t m_bWillBeCallingPostDataUpdate: 1; 		
-		// MNetworkDisable
-		uint8_t m_bBoneMergeFlex: 1; 		
-		// MNetworkDisable
-		uint8_t m_nLatchAbsOrigin: 2; 		
-		// MNetworkDisable
-		uint8_t m_bDirtyBoneMergeBoneToRoot: 1; 		
-		uint16_t __pad0: 14;
-	}; // 24 bits
-	// MNetworkDisable
-	uint8_t m_nHierarchicalDepth; // 0xf3	
-	// MNetworkDisable
-	uint8_t m_nHierarchyType; // 0xf4	
-	// MNetworkDisable
-	uint8_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount; // 0xf5	
-private:
-	[[maybe_unused]] uint8_t __pad00f6[0x2]; // 0xf6
-public:
-	// MNetworkEnable
-	CUtlStringToken m_name; // 0xf8	
-private:
-	[[maybe_unused]] uint8_t __pad00fc[0x3c]; // 0xfc
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "gameSceneNodeHierarchyAttachmentChanged"
-	CUtlStringToken m_hierarchyAttachName; // 0x138	
-	// MNetworkDisable
-	float m_flZOffset; // 0x13c	
-	// MNetworkDisable
-	float m_flClientLocalScale; // 0x140	
-	// MNetworkDisable
-	Vector m_vRenderOrigin; // 0x144	
-	
-	// Datamap fields:
-	// void m_bDirtyHierarchy; // -0x1
-	// void m_bDirtyBoneMergeInfo; // -0x1
-	// void m_bNetworkedPositionChanged; // -0x1
-	// void m_bNetworkedAnglesChanged; // -0x1
-	// void m_bNetworkedScaleChanged; // -0x1
-	// void m_bWillBeCallingPostDataUpdate; // -0x1
-	// void m_nLatchAbsOrigin; // -0x1
-	// void m_bDirtyBoneMergeBoneToRoot; // -0x1
-	// CHandle< CBaseEntity > parentname; // 0x7fffffff
-	// bool useLocalOffset; // 0x7fffffff
-	// bool useParentRenderBounds; // 0x7fffffff
-	// bool positionInLocalSpace; // 0x7fffffff
-	// Vector scales; // 0x7fffffff
-	// Vector local.scales; // 0x7fffffff
-	// float scale; // 0x7fffffff
-	// float ModelScale; // 0x7fffffff
+	uint16_t m_nOutsideWorld; // 0x16	
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1024,000000"
+	// MNetworkEncodeFlags "1"
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "31"
+	// MNetworkSerializer "posx"
+	CNetworkedQuantizedFloat m_vecX; // 0x18	
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1024,000000"
+	// MNetworkEncodeFlags "1"
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "31"
+	// MNetworkSerializer "posy"
+	CNetworkedQuantizedFloat m_vecY; // 0x20	
+	// MNetworkBitCount "15"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1024,000000"
+	// MNetworkEncodeFlags "1"
+	// MNetworkChangeCallback "OnCellChanged"
+	// MNetworkPriority "31"
+	// MNetworkSerializer "posz"
+	CNetworkedQuantizedFloat m_vecZ; // 0x28	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x1490
 // Has VTable
+// MIgnoreTypeScopeMetaChecks
 // 
 // MNetworkVarNames "uint32 m_PredNetBoolVariables"
 // MNetworkVarNames "byte m_PredNetByteVariables"
@@ -2482,6 +4496,8 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
+// Construct disallowed
+// MNetworkAssumeNotNetworkable
 class CBodyComponent : public CEntityComponent
 {
 public:
@@ -2495,65 +4511,32 @@ public:
 	CNetworkVarChainer __m_pChainEntity; // 0x20	
 	
 	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->m_static_fields[1]->m_instance);};
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponent")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1150
-// Has VTable
+// Size: 0x4
+// Has Trivial Destructor
 // 
-// MNetworkVarNames "Vector m_vInitialPosition"
-// MNetworkVarNames "Vector m_vInitialVelocity"
-// MNetworkVarNames "int m_nBounces"
-// MNetworkVarNames "HParticleSystemDefinitionStrong m_nExplodeEffectIndex"
-// MNetworkVarNames "int m_nExplodeEffectTickBegin"
-// MNetworkVarNames "Vector m_vecExplodeEffectOrigin"
-class C_BaseCSGrenadeProjectile : public C_BaseGrenade
+// MIsBoxedIntegerType
+struct ParticleIndex_t
 {
 public:
-	// MNetworkEnable
-	Vector m_vInitialPosition; // 0x10b8	
-	// MNetworkEnable
-	Vector m_vInitialVelocity; // 0x10c4	
-	// MNetworkEnable
-	int32_t m_nBounces; // 0x10d0	
-private:
-	[[maybe_unused]] uint8_t __pad10d4[0x4]; // 0x10d4
-public:
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_nExplodeEffectIndex; // 0x10d8	
-	// MNetworkEnable
-	int32_t m_nExplodeEffectTickBegin; // 0x10e0	
-	// MNetworkEnable
-	Vector m_vecExplodeEffectOrigin; // 0x10e4	
-	GameTime_t m_flSpawnTime; // 0x10f0	
-	Vector vecLastTrailLinePos; // 0x10f4	
-	GameTime_t flNextTrailLineTime; // 0x1100	
-	bool m_bExplodeEffectBegan; // 0x1104	
-	bool m_bCanCreateGrenadeTrail; // 0x1105	
-private:
-	[[maybe_unused]] uint8_t __pad1106[0x2]; // 0x1106
-public:
-	ParticleIndex_t m_nSnapshotTrajectoryEffectIndex; // 0x1108	
-private:
-	[[maybe_unused]] uint8_t __pad110c[0x4]; // 0x110c
-public:
-	CStrongHandle< InfoForResourceTypeIParticleSnapshot > m_hSnapshotTrajectoryParticleSnapshot; // 0x1110	
-	CUtlVector< Vector > m_arrTrajectoryTrailPoints; // 0x1118	
-	CUtlVector< float32 > m_arrTrajectoryTrailPointCreationTimes; // 0x1130	
-	float m_flTrajectoryTrailEffectCreationTime; // 0x1148	
+	int32_t m_Value; // 0x0	
 	
 	// Static fields:
-	static float &Get_s_flThinkInterval(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseCSGrenadeProjectile")->m_static_fields[0]->m_instance);};
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("ParticleIndex_t")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x548
 // Has VTable
-class C_SoundEventEntityAlias_snd_event_point : public C_SoundEventEntity
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_SoundEventEntity : public C_BaseEntity
 {
 public:
 	// No schema binary for binding
@@ -2563,6 +4546,8 @@ public:
 // Alignment: 8
 // Size: 0x5b0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_MapPreviewCameraPath : public C_BaseEntity
 {
 public:
@@ -2584,46 +4569,34 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1278
+// Size: 0x4a8
 // Has VTable
-// Is Abstract
+// MNetworkNoBase
 // 
-// MNetworkVarNames "int m_nVariant"
-// MNetworkVarNames "int m_nRandom"
-// MNetworkVarNames "int m_nOrdinal"
-// MNetworkVarNames "CUtlString m_sWeaponName"
-// MNetworkVarNames "XUID m_xuid"
-// MNetworkVarNames "CEconItemView m_agentItem"
-// MNetworkVarNames "CEconItemView m_glovesItem"
-// MNetworkVarNames "CEconItemView m_weaponItem"
-class C_CSGO_TeamPreviewCharacterPosition : public C_BaseEntity
+// MNetworkIncludeByName "m_ProviderType"
+// MNetworkIncludeByName "m_hOuter"
+// MNetworkIncludeByName "m_iReapplyProvisionParity"
+// MNetworkIncludeByName "m_Item"
+// MNetworkVarNames "CEconItemView m_Item"
+class C_AttributeContainer : public CAttributeManager
 {
 public:
 	// MNetworkEnable
-	int32_t m_nVariant; // 0x548	
-	// MNetworkEnable
-	int32_t m_nRandom; // 0x54c	
-	// MNetworkEnable
-	int32_t m_nOrdinal; // 0x550	
+	C_EconItemView m_Item; // 0x50	
+	int32_t m_iExternalItemProviderRegisteredToken; // 0x498	
 private:
-	[[maybe_unused]] uint8_t __pad0554[0x4]; // 0x554
+	[[maybe_unused]] uint8_t __pad049c[0x4]; // 0x49c
 public:
-	// MNetworkEnable
-	CUtlString m_sWeaponName; // 0x558	
-	// MNetworkEnable
-	uint64_t m_xuid; // 0x560	
-	// MNetworkEnable
-	C_EconItemView m_agentItem; // 0x568	
-	// MNetworkEnable
-	C_EconItemView m_glovesItem; // 0x9b0	
-	// MNetworkEnable
-	C_EconItemView m_weaponItem; // 0xdf8	
+	uint64_t m_ullRegisteredAsItemID; // 0x4a0	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
 // Size: 0x82d0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Vector m_firePositions"
 // MNetworkVarNames "Vector m_fireParentPositions"
@@ -2690,6 +4663,8 @@ public:
 // Alignment: 8
 // Size: 0xed8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_HostageCarriableProp : public CBaseAnimGraph
 {
 public:
@@ -2700,6 +4675,9 @@ public:
 // Alignment: 8
 // Size: 0x5d0
 // Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamPreviewCamera : public C_CSGO_MapPreviewCameraPath
 {
 public:
@@ -2719,6 +4697,9 @@ public:
 // Alignment: 8
 // Size: 0x598
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CHandle< CCSPlayerPawn> m_hPlayer"
 // MNetworkVarNames "CHandle< CBaseEntity> m_hPingedEntity"
@@ -2744,8 +4725,180 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1a60
+// Size: 0x15b0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CAttributeContainer m_AttributeManager"
+// MNetworkVarNames "uint32 m_OriginalOwnerXuidLow"
+// MNetworkVarNames "uint32 m_OriginalOwnerXuidHigh"
+// MNetworkVarNames "int m_nFallbackPaintKit"
+// MNetworkVarNames "int m_nFallbackSeed"
+// MNetworkVarNames "float m_flFallbackWear"
+// MNetworkVarNames "int m_nFallbackStatTrak"
+class C_EconEntity : public C_BaseFlex
+{
+private:
+	[[maybe_unused]] uint8_t __pad1068[0x10]; // 0x1068
+public:
+	float m_flFlexDelayTime; // 0x1078	
+private:
+	[[maybe_unused]] uint8_t __pad107c[0x4]; // 0x107c
+public:
+	float32* m_flFlexDelayedWeight; // 0x1080	
+	bool m_bAttributesInitialized; // 0x1088	
+private:
+	[[maybe_unused]] uint8_t __pad1089[0x7]; // 0x1089
+public:
+	// MNetworkEnable
+	// -> m_Item - 0x10e0
+	// -> m_iExternalItemProviderRegisteredToken - 0x1528
+	// -> m_ullRegisteredAsItemID - 0x1530
+	C_AttributeContainer m_AttributeManager; // 0x1090	
+	// MNetworkEnable
+	uint32_t m_OriginalOwnerXuidLow; // 0x1538	
+	// MNetworkEnable
+	uint32_t m_OriginalOwnerXuidHigh; // 0x153c	
+	// MNetworkEnable
+	int32_t m_nFallbackPaintKit; // 0x1540	
+	// MNetworkEnable
+	int32_t m_nFallbackSeed; // 0x1544	
+	// MNetworkEnable
+	float m_flFallbackWear; // 0x1548	
+	// MNetworkEnable
+	int32_t m_nFallbackStatTrak; // 0x154c	
+	bool m_bClientside; // 0x1550	
+	bool m_bParticleSystemsCreated; // 0x1551	
+private:
+	[[maybe_unused]] uint8_t __pad1552[0x6]; // 0x1552
+public:
+	CUtlVector< int32 > m_vecAttachedParticles; // 0x1558	
+	CHandle< CBaseAnimGraph > m_hViewmodelAttachment; // 0x1570	
+	int32_t m_iOldTeam; // 0x1574	
+	bool m_bAttachmentDirty; // 0x1578	
+private:
+	[[maybe_unused]] uint8_t __pad1579[0x3]; // 0x1579
+public:
+	int32_t m_nUnloadedModelIndex; // 0x157c	
+	int32_t m_iNumOwnerValidationRetries; // 0x1580	
+private:
+	[[maybe_unused]] uint8_t __pad1584[0xc]; // 0x1584
+public:
+	CHandle< C_BaseEntity > m_hOldProvidee; // 0x1590	
+private:
+	[[maybe_unused]] uint8_t __pad1594[0x4]; // 0x1594
+public:
+	CUtlVector< C_EconEntity::AttachedModelData_t > m_vecAttachedModels; // 0x1598	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x600
+// Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkIncludeByName "m_iTeamNum"
+// MNetworkVarNames "CHandle< CBasePlayerController > m_aPlayerControllers"
+// MNetworkVarNames "CHandle< C_BasePlayerPawn > m_aPlayers"
+// MNetworkVarNames "int32 m_iScore"
+// MNetworkVarNames "char m_szTeamname"
+class C_Team : public C_BaseEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkAlias "m_aPlayers"
+	C_NetworkUtlVectorBase< CHandle< CBasePlayerController > > m_aPlayerControllers; // 0x548	
+	// MNetworkEnable
+	// MNetworkAlias "m_aPawns"
+	C_NetworkUtlVectorBase< CHandle< C_BasePlayerPawn > > m_aPlayers; // 0x560	
+	// MNetworkEnable
+	int32_t m_iScore; // 0x578	
+	// MNetworkEnable
+	char m_szTeamname[129]; // 0x57c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x598
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_CSGO_MapPreviewCameraPathNode : public C_BaseEntity
+{
+public:
+	CUtlSymbolLarge m_szParentPathUniqueID; // 0x548	
+	int32_t m_nPathIndex; // 0x550	
+	Vector m_vInTangentLocal; // 0x554	
+	Vector m_vOutTangentLocal; // 0x560	
+	float m_flFOV; // 0x56c	
+	float m_flCameraSpeed; // 0x570	
+	float m_flEaseIn; // 0x574	
+	float m_flEaseOut; // 0x578	
+	Vector m_vInTangentWorld; // 0x57c	
+	Vector m_vOutTangentWorld; // 0x588	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x15e8
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkExcludeByName "m_flexWeight"
+// MNetworkExcludeByName "m_blinktoggle"
+// MNetworkIncludeByName "m_nNextThinkTick"
+// MNetworkExcludeByUserGroup "m_flPoseParameter"
+// MNetworkExcludeByUserGroup "m_flCycle"
+// MNetworkExcludeByUserGroup "overlay_vars"
+// MNetworkUserGroupProxy "CBasePlayerWeapon"
+// MNetworkVarNames "GameTick_t m_nNextPrimaryAttackTick"
+// MNetworkVarNames "float32 m_flNextPrimaryAttackTickRatio"
+// MNetworkVarNames "GameTick_t m_nNextSecondaryAttackTick"
+// MNetworkVarNames "float32 m_flNextSecondaryAttackTickRatio"
+// MNetworkVarNames "int32 m_iClip1"
+// MNetworkVarNames "int32 m_iClip2"
+// MNetworkVarNames "int m_pReserveAmmo"
+class C_BasePlayerWeapon : public C_EconEntity
+{
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	GameTick_t m_nNextPrimaryAttackTick; // 0x15b0	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	float m_flNextPrimaryAttackTickRatio; // 0x15b4	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	GameTick_t m_nNextSecondaryAttackTick; // 0x15b8	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	float m_flNextSecondaryAttackTickRatio; // 0x15bc	
+	// MNetworkEnable
+	// MNetworkSerializer "minusone"
+	// MNetworkPriority "32"
+	int32_t m_iClip1; // 0x15c0	
+	// MNetworkEnable
+	// MNetworkSerializer "minusone"
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	int32_t m_iClip2; // 0x15c4	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalWeaponExclusive"
+	int32_t m_pReserveAmmo[2]; // 0x15c8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1a70
+// Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkExcludeByName "m_flTimeWeaponIdle"
 // MNetworkVarNames "float m_flFireSequenceStartTime"
@@ -2884,179 +5037,167 @@ private:
 public:
 	float m_flNextAttackRenderTimeOffset; // 0x175c	
 private:
-	[[maybe_unused]] uint8_t __pad1760[0x88]; // 0x1760
+	[[maybe_unused]] uint8_t __pad1760[0x98]; // 0x1760
 public:
-	bool m_bClearWeaponIdentifyingUGC; // 0x17e8	
-	bool m_bVisualsDataSet; // 0x17e9	
-	bool m_bOldFirstPersonSpectatedState; // 0x17ea	
-	bool m_bUIWeapon; // 0x17eb	
-	int32_t m_nCustomEconReloadEventId; // 0x17ec	
+	bool m_bClearWeaponIdentifyingUGC; // 0x17f8	
+	bool m_bVisualsDataSet; // 0x17f9	
+	bool m_bOldFirstPersonSpectatedState; // 0x17fa	
+	bool m_bUIWeapon; // 0x17fb	
+	int32_t m_nCustomEconReloadEventId; // 0x17fc	
 private:
-	[[maybe_unused]] uint8_t __pad17f0[0x8]; // 0x17f0
+	[[maybe_unused]] uint8_t __pad1800[0x8]; // 0x1800
 public:
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawn > m_hPrevOwner; // 0x17f8	
+	CHandle< C_CSPlayerPawn > m_hPrevOwner; // 0x1808	
 	// MNetworkEnable
-	GameTick_t m_nDropTick; // 0x17fc	
+	GameTick_t m_nDropTick; // 0x180c	
 private:
-	[[maybe_unused]] uint8_t __pad1800[0x1c]; // 0x1800
+	[[maybe_unused]] uint8_t __pad1810[0x1c]; // 0x1810
 public:
-	bool m_donated; // 0x181c	
+	bool m_donated; // 0x182c	
 private:
-	[[maybe_unused]] uint8_t __pad181d[0x3]; // 0x181d
+	[[maybe_unused]] uint8_t __pad182d[0x3]; // 0x182d
 public:
 	// MNetworkEnable
-	GameTime_t m_fLastShotTime; // 0x1820	
-	bool m_bWasOwnedByCT; // 0x1824	
-	bool m_bWasOwnedByTerrorist; // 0x1825	
+	GameTime_t m_fLastShotTime; // 0x1830	
+	bool m_bWasOwnedByCT; // 0x1834	
+	bool m_bWasOwnedByTerrorist; // 0x1835	
 private:
-	[[maybe_unused]] uint8_t __pad1826[0x2]; // 0x1826
+	[[maybe_unused]] uint8_t __pad1836[0x2]; // 0x1836
 public:
-	float m_gunHeat; // 0x1828	
-	uint32_t m_smokeAttachments; // 0x182c	
-	GameTime_t m_lastSmokeTime; // 0x1830	
-	float m_flNextClientFireBulletTime; // 0x1834	
-	float m_flNextClientFireBulletTime_Repredict; // 0x1838	
+	float m_gunHeat; // 0x1838	
+	uint32_t m_smokeAttachments; // 0x183c	
+	GameTime_t m_lastSmokeTime; // 0x1840	
+	float m_flNextClientFireBulletTime; // 0x1844	
+	float m_flNextClientFireBulletTime_Repredict; // 0x1848	
 private:
-	[[maybe_unused]] uint8_t __pad183c[0xd4]; // 0x183c
+	[[maybe_unused]] uint8_t __pad184c[0xd4]; // 0x184c
 public:
-	C_IronSightController m_IronSightController; // 0x1910	
+	C_IronSightController m_IronSightController; // 0x1920	
 	// MNetworkEnable
-	int32_t m_iIronSightMode; // 0x19c0	
+	int32_t m_iIronSightMode; // 0x19d0	
 private:
-	[[maybe_unused]] uint8_t __pad19c4[0xc]; // 0x19c4
+	[[maybe_unused]] uint8_t __pad19d4[0xc]; // 0x19d4
 public:
-	GameTime_t m_flLastLOSTraceFailureTime; // 0x19d0	
+	GameTime_t m_flLastLOSTraceFailureTime; // 0x19e0	
 	// MNetworkEnable
-	int32_t m_iNumEmptyAttacks; // 0x19d4	
+	int32_t m_iNumEmptyAttacks; // 0x19e4	
 private:
-	[[maybe_unused]] uint8_t __pad19d8[0x78]; // 0x19d8
+	[[maybe_unused]] uint8_t __pad19e8[0x78]; // 0x19e8
 public:
-	GameTime_t m_flLastMagDropRequestTime; // 0x1a50	
-	float m_flWatTickOffset; // 0x1a54	
+	GameTime_t m_flLastMagDropRequestTime; // 0x1a60	
+	float m_flWatTickOffset; // 0x1a64	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x600
-// Has VTable
-// 
-// MNetworkIncludeByName "m_iTeamNum"
-// MNetworkVarNames "CHandle< CBasePlayerController > m_aPlayerControllers"
-// MNetworkVarNames "CHandle< C_BasePlayerPawn > m_aPlayers"
-// MNetworkVarNames "int32 m_iScore"
-// MNetworkVarNames "char m_szTeamname"
-class C_Team : public C_BaseEntity
-{
-public:
-	// MNetworkEnable
-	// MNetworkAlias "m_aPlayers"
-	C_NetworkUtlVectorBase< CHandle< CBasePlayerController > > m_aPlayerControllers; // 0x548	
-	// MNetworkEnable
-	// MNetworkAlias "m_aPawns"
-	C_NetworkUtlVectorBase< CHandle< C_BasePlayerPawn > > m_aPlayers; // 0x560	
-	// MNetworkEnable
-	int32_t m_iScore; // 0x578	
-	// MNetworkEnable
-	char m_szTeamname[129]; // 0x57c	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x598
-// Has VTable
-class C_CSGO_MapPreviewCameraPathNode : public C_BaseEntity
-{
-public:
-	CUtlSymbolLarge m_szParentPathUniqueID; // 0x548	
-	int32_t m_nPathIndex; // 0x550	
-	Vector m_vInTangentLocal; // 0x554	
-	Vector m_vOutTangentLocal; // 0x560	
-	float m_flFOV; // 0x56c	
-	float m_flCameraSpeed; // 0x570	
-	float m_flEaseIn; // 0x574	
-	float m_flEaseOut; // 0x578	
-	Vector m_vInTangentWorld; // 0x57c	
-	Vector m_vOutTangentWorld; // 0x588	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
-// Has VTable
-// 
-// MNetworkVarNames "int m_zoomLevel"
-// MNetworkVarNames "int m_iBurstShotsRemaining"
-// MNetworkVarNames "bool m_bNeedsBoltAction"
-class C_CSWeaponBaseGun : public C_CSWeaponBase
-{
-public:
-	// MNetworkEnable
-	int32_t m_zoomLevel; // 0x1a60	
-	// MNetworkEnable
-	int32_t m_iBurstShotsRemaining; // 0x1a64	
-	int32_t m_iSilencerBodygroup; // 0x1a68	
-private:
-	[[maybe_unused]] uint8_t __pad1a6c[0xc]; // 0x1a6c
-public:
-	int32_t m_silencedModelIndex; // 0x1a78	
-	bool m_inPrecache; // 0x1a7c	
-	// MNetworkEnable
-	bool m_bNeedsBoltAction; // 0x1a7d	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
-// Has VTable
-class C_DEagle : public C_CSWeaponBaseGun
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x90
+// Size: 0x68
 // Has VTable
 // Has Trivial Destructor
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
-// MNetworkVarNames "int16 scale"
-// MNetworkVarNames "Vector origin"
-// MNetworkVarNames "bool bClip3DSkyBoxNearToWorldFar"
-// MNetworkVarNames "float32 flClip3DSkyBoxNearToWorldFarOffset"
-// MNetworkVarNames "fogparams_t fog"
-// MNetworkVarNames "WorldGroupId_t m_nWorldGroupID"
-struct sky3dparams_t
+// MNetworkVarNames "Vector dirPrimary"
+// MNetworkVarNames "Color colorPrimary"
+// MNetworkVarNames "Color colorSecondary"
+// MNetworkVarNames "Color colorPrimaryLerpTo"
+// MNetworkVarNames "Color colorSecondaryLerpTo"
+// MNetworkVarNames "float32 start"
+// MNetworkVarNames "float32 end"
+// MNetworkVarNames "float32 farz"
+// MNetworkVarNames "float32 maxdensity"
+// MNetworkVarNames "float32 exponent"
+// MNetworkVarNames "float32 HDRColorScale"
+// MNetworkVarNames "float32 skyboxFogFactor"
+// MNetworkVarNames "float32 skyboxFogFactorLerpTo"
+// MNetworkVarNames "float32 startLerpTo"
+// MNetworkVarNames "float32 endLerpTo"
+// MNetworkVarNames "float32 maxdensityLerpTo"
+// MNetworkVarNames "GameTime_t lerptime"
+// MNetworkVarNames "float32 duration"
+// MNetworkVarNames "float32 blendtobackground"
+// MNetworkVarNames "float32 scattering"
+// MNetworkVarNames "float32 locallightscale"
+// MNetworkVarNames "bool enable"
+// MNetworkVarNames "bool blend"
+// MNetworkVarNames "bool m_bNoReflectionFog"
+struct fogparams_t
 {
 private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// MNetworkEnable
-	int16_t scale; // 0x8	
-private:
-	[[maybe_unused]] uint8_t __pad000a[0x2]; // 0xa
-public:
-	// MNetworkEnable
 	// MNetworkEncoder "coord"
-	Vector origin; // 0xc	
+	Vector dirPrimary; // 0x8	
 	// MNetworkEnable
-	bool bClip3DSkyBoxNearToWorldFar; // 0x18	
-private:
-	[[maybe_unused]] uint8_t __pad0019[0x3]; // 0x19
-public:
+	Color colorPrimary; // 0x14	
 	// MNetworkEnable
-	float flClip3DSkyBoxNearToWorldFarOffset; // 0x1c	
+	Color colorSecondary; // 0x18	
 	// MNetworkEnable
-	fogparams_t fog; // 0x20	
+	// MNetworkUserGroup "FogController"
+	Color colorPrimaryLerpTo; // 0x1c	
 	// MNetworkEnable
-	WorldGroupId_t m_nWorldGroupID; // 0x88	
+	// MNetworkUserGroup "FogController"
+	Color colorSecondaryLerpTo; // 0x20	
+	// MNetworkEnable
+	float start; // 0x24	
+	// MNetworkEnable
+	float end; // 0x28	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float farz; // 0x2c	
+	// MNetworkEnable
+	float maxdensity; // 0x30	
+	// MNetworkEnable
+	float exponent; // 0x34	
+	// MNetworkEnable
+	float HDRColorScale; // 0x38	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float skyboxFogFactor; // 0x3c	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float skyboxFogFactorLerpTo; // 0x40	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float startLerpTo; // 0x44	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float endLerpTo; // 0x48	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float maxdensityLerpTo; // 0x4c	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	GameTime_t lerptime; // 0x50	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float duration; // 0x54	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float blendtobackground; // 0x58	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float scattering; // 0x5c	
+	// MNetworkEnable
+	// MNetworkUserGroup "FogController"
+	float locallightscale; // 0x60	
+	// MNetworkEnable
+	bool enable; // 0x64	
+	// MNetworkEnable
+	bool blend; // 0x65	
+	// MNetworkEnable
+	bool m_bNoReflectionFog; // 0x66	
+	bool m_bPadding; // 0x67	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xf48
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Vector m_ragPos"
 // MNetworkVarNames "QAngle m_ragAngles"
@@ -3078,8 +5219,8 @@ public:
 	C_NetworkUtlVectorBase< QAngle > m_ragAngles; // 0xef0	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1,000000"
 	// MNetworkEncodeFlags "1"
 	float m_flBlendWeight; // 0xf08	
 	// MNetworkEnable
@@ -3097,16 +5238,61 @@ public:
 // Alignment: 8
 // Size: 0x1150
 // Has VTable
-class C_FlashbangProjectile : public C_BaseCSGrenadeProjectile
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "Vector m_vInitialPosition"
+// MNetworkVarNames "Vector m_vInitialVelocity"
+// MNetworkVarNames "int m_nBounces"
+// MNetworkVarNames "HParticleSystemDefinitionStrong m_nExplodeEffectIndex"
+// MNetworkVarNames "int m_nExplodeEffectTickBegin"
+// MNetworkVarNames "Vector m_vecExplodeEffectOrigin"
+class C_BaseCSGrenadeProjectile : public C_BaseGrenade
 {
 public:
-	// No schema binary for binding
+	// MNetworkEnable
+	Vector m_vInitialPosition; // 0x10b8	
+	// MNetworkEnable
+	Vector m_vInitialVelocity; // 0x10c4	
+	// MNetworkEnable
+	int32_t m_nBounces; // 0x10d0	
+private:
+	[[maybe_unused]] uint8_t __pad10d4[0x4]; // 0x10d4
+public:
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIParticleSystemDefinition > m_nExplodeEffectIndex; // 0x10d8	
+	// MNetworkEnable
+	int32_t m_nExplodeEffectTickBegin; // 0x10e0	
+	// MNetworkEnable
+	Vector m_vecExplodeEffectOrigin; // 0x10e4	
+	GameTime_t m_flSpawnTime; // 0x10f0	
+	Vector vecLastTrailLinePos; // 0x10f4	
+	GameTime_t flNextTrailLineTime; // 0x1100	
+	bool m_bExplodeEffectBegan; // 0x1104	
+	bool m_bCanCreateGrenadeTrail; // 0x1105	
+private:
+	[[maybe_unused]] uint8_t __pad1106[0x2]; // 0x1106
+public:
+	ParticleIndex_t m_nSnapshotTrajectoryEffectIndex; // 0x1108	
+private:
+	[[maybe_unused]] uint8_t __pad110c[0x4]; // 0x110c
+public:
+	CStrongHandle< InfoForResourceTypeIParticleSnapshot > m_hSnapshotTrajectoryParticleSnapshot; // 0x1110	
+	CUtlVector< Vector > m_arrTrajectoryTrailPoints; // 0x1118	
+	CUtlVector< float32 > m_arrTrajectoryTrailPointCreationTimes; // 0x1130	
+	float m_flTrajectoryTrailEffectCreationTime; // 0x1148	
+	
+	// Static fields:
+	static float &Get_s_flThinkInterval(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_BaseCSGrenadeProjectile")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_spawnflags"
 // MNetworkVarNames "bool m_bDisabled"
@@ -3122,8 +5308,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CountdownTimer m_SequenceCompleteTimer"
 // MNetworkVarNames "bool m_bRedraw"
@@ -3131,9 +5321,9 @@ class C_WeaponBaseItem : public C_CSWeaponBase
 {
 public:
 	// MNetworkEnable
-	CountdownTimer m_SequenceCompleteTimer; // 0x1a60	
+	CountdownTimer m_SequenceCompleteTimer; // 0x1a70	
 	// MNetworkEnable
-	bool m_bRedraw; // 0x1a78	
+	bool m_bRedraw; // 0x1a88	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -3188,14 +5378,14 @@ public:
 	float m_flScale; // 0x40	
 	// MNetworkEnable
 	// MNetworkBitCount "12"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1023.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1023,000000"
 	// MNetworkEncodeFlags "1"
 	float m_flMagnitude; // 0x44	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1023.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1023,000000"
 	// MNetworkEncodeFlags "1"
 	float m_flRadius; // 0x48	
 	// MNetworkEnable
@@ -3234,6 +5424,9 @@ public:
 // Alignment: 8
 // Size: 0x1170
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_SensorGrenadeProjectile : public C_BaseCSGrenadeProjectile
 {
 public:
@@ -3242,8 +5435,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1aa0
+// Size: 0x1ab0
 // Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bRedraw"
 // MNetworkVarNames "bool m_bIsHeldByPlayer"
@@ -3262,49 +5459,51 @@ public:
 class C_BaseCSGrenade : public C_CSWeaponBase
 {
 public:
-	bool m_bClientPredictDelete; // 0x1a60	
+	bool m_bClientPredictDelete; // 0x1a70	
 	// MNetworkEnable
-	bool m_bRedraw; // 0x1a61	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnGrenadeStateChanged"
-	bool m_bIsHeldByPlayer; // 0x1a62	
+	bool m_bRedraw; // 0x1a71	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnGrenadeStateChanged"
-	bool m_bPinPulled; // 0x1a63	
+	bool m_bIsHeldByPlayer; // 0x1a72	
 	// MNetworkEnable
-	bool m_bJumpThrow; // 0x1a64	
+	// MNetworkChangeCallback "OnGrenadeStateChanged"
+	bool m_bPinPulled; // 0x1a73	
 	// MNetworkEnable
-	bool m_bThrowAnimating; // 0x1a65	
+	bool m_bJumpThrow; // 0x1a74	
+	// MNetworkEnable
+	bool m_bThrowAnimating; // 0x1a75	
 private:
-	[[maybe_unused]] uint8_t __pad1a66[0x2]; // 0x1a66
+	[[maybe_unused]] uint8_t __pad1a76[0x2]; // 0x1a76
 public:
 	// MNetworkEnable
-	GameTime_t m_fThrowTime; // 0x1a68	
+	GameTime_t m_fThrowTime; // 0x1a78	
 	// MNetworkEnable
-	float m_flThrowStrength; // 0x1a6c	
+	float m_flThrowStrength; // 0x1a7c	
 	// MNetworkEnable
-	float m_flThrowStrengthApproach; // 0x1a70	
+	float m_flThrowStrengthApproach; // 0x1a80	
 	// MNetworkEnable
-	GameTime_t m_fDropTime; // 0x1a74	
+	GameTime_t m_fDropTime; // 0x1a84	
 	// MNetworkEnable
-	GameTime_t m_fPinPullTime; // 0x1a78	
+	GameTime_t m_fPinPullTime; // 0x1a88	
 	// MNetworkEnable
-	bool m_bJustPulledPin; // 0x1a7c	
+	bool m_bJustPulledPin; // 0x1a8c	
 private:
-	[[maybe_unused]] uint8_t __pad1a7d[0x3]; // 0x1a7d
+	[[maybe_unused]] uint8_t __pad1a8d[0x3]; // 0x1a8d
 public:
 	// MNetworkEnable
-	GameTick_t m_nNextHoldTick; // 0x1a80	
+	GameTick_t m_nNextHoldTick; // 0x1a90	
 	// MNetworkEnable
-	float m_flNextHoldFrac; // 0x1a84	
+	float m_flNextHoldFrac; // 0x1a94	
 	// MNetworkEnable
-	CHandle< C_CSWeaponBase > m_hSwitchToWeaponAfterThrow; // 0x1a88	
+	CHandle< C_CSWeaponBase > m_hSwitchToWeaponAfterThrow; // 0x1a98	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xcd8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CHandle< C_BaseModelEntity> m_glowEntity"
 // MNetworkVarNames "bool m_usable"
@@ -3325,21 +5524,21 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x50
+// Size: 0x40
 // Has VTable
-// 
-// MNetworkVarNames "CHandle< CBaseViewModel > m_hViewModel"
-class CCSPlayer_ViewModelServices : public CPlayer_ViewModelServices
+// MNetworkAssumeNotNetworkable
+class CPlayer_ViewModelServices : public CPlayerPawnComponent
 {
 public:
-	// MNetworkEnable
-	CHandle< C_BaseViewModel > m_hViewModel[3]; // 0x40	
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CInfoParticleTarget : public C_PointEntity
 {
 public:
@@ -3348,71 +5547,79 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x218
+// Size: 0x1d8
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
-// MNetworkVarNames "float32 m_flFallVelocity"
-// MNetworkVarNames "bool m_bInCrouch"
-// MNetworkVarNames "uint32 m_nCrouchState"
-// MNetworkVarNames "GameTime_t m_flCrouchTransitionStartTime"
-// MNetworkVarNames "bool m_bDucked"
-// MNetworkVarNames "bool m_bDucking"
-// MNetworkVarNames "bool m_bInDuckJump"
-class CPlayer_MovementServices_Humanoid : public CPlayer_MovementServices
+// MNetworkVarNames "ButtonBitMask_t m_nToggleButtonDownMask"
+// MNetworkVarNames "float32 m_flMaxspeed"
+// MNetworkVarNames "float32 m_arrForceSubtickMoveWhen"
+class CPlayer_MovementServices : public CPlayerPawnComponent
 {
 public:
-	float m_flStepSoundTime; // 0x1d8	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	// MNetworkBitCount "17"
-	// MNetworkMinValue "-4096.000000"
-	// MNetworkMaxValue "4096.000000"
-	// MNetworkEncodeFlags "4"
-	float m_flFallVelocity; // 0x1dc	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bInCrouch; // 0x1e0	
+	int32_t m_nImpulse; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad01e1[0x3]; // 0x1e1
+	[[maybe_unused]] uint8_t __pad0044[0x4]; // 0x44
+public:
+	CInButtonState m_nButtons; // 0x48	
+	uint64_t m_nQueuedButtonDownMask; // 0x68	
+	uint64_t m_nQueuedButtonChangeMask; // 0x70	
+	uint64_t m_nButtonDoublePressed; // 0x78	
+	uint32_t m_pButtonPressedCmdNumber[64]; // 0x80	
+	uint32_t m_nLastCommandNumberProcessed; // 0x180	
+private:
+	[[maybe_unused]] uint8_t __pad0184[0x4]; // 0x184
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nCrouchState; // 0x1e4	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	GameTime_t m_flCrouchTransitionStartTime; // 0x1e8	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bDucked; // 0x1ec	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bDucking; // 0x1ed	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bInDuckJump; // 0x1ee	
+	uint64_t m_nToggleButtonDownMask; // 0x188	
 private:
-	[[maybe_unused]] uint8_t __pad01ef[0x1]; // 0x1ef
+	[[maybe_unused]] uint8_t __pad0190[0x8]; // 0x190
 public:
-	Vector m_groundNormal; // 0x1f0	
-	float m_flSurfaceFriction; // 0x1fc	
-	CUtlStringToken m_surfaceProps; // 0x200	
-private:
-	[[maybe_unused]] uint8_t __pad0204[0xc]; // 0x204
-public:
-	int32_t m_nStepside; // 0x210	
+	// MNetworkEnable
+	// MNetworkBitCount "12"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "2048,000000"
+	// MNetworkEncodeFlags "1"
+	float m_flMaxspeed; // 0x198	
+	// MNetworkEnable
+	float m_arrForceSubtickMoveWhen[4]; // 0x19c	
+	float m_flForwardMove; // 0x1ac	
+	float m_flLeftMove; // 0x1b0	
+	float m_flUpMove; // 0x1b4	
+	Vector m_vecLastMovementImpulses; // 0x1b8	
+	QAngle m_vecOldViewAngles; // 0x1c4	
 	
 	// Datamap fields:
-	// void m_pSurfaceData; // 0x208
+	// void m_pButtonPressedCmdNumber; // 0x80
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
-class C_WeaponAug : public C_CSWeaponBaseGun
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "int m_zoomLevel"
+// MNetworkVarNames "int m_iBurstShotsRemaining"
+// MNetworkVarNames "bool m_bNeedsBoltAction"
+class C_CSWeaponBaseGun : public C_CSWeaponBase
 {
 public:
-	// No schema binary for binding
+	// MNetworkEnable
+	int32_t m_zoomLevel; // 0x1a70	
+	// MNetworkEnable
+	int32_t m_iBurstShotsRemaining; // 0x1a74	
+	int32_t m_iSilencerBodygroup; // 0x1a78	
+private:
+	[[maybe_unused]] uint8_t __pad1a7c[0xc]; // 0x1a7c
+public:
+	int32_t m_silencedModelIndex; // 0x1a88	
+	bool m_inPrecache; // 0x1a8c	
+	// MNetworkEnable
+	bool m_bNeedsBoltAction; // 0x1a8d	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -3420,6 +5627,7 @@ public:
 // Size: 0xcf8
 // Has VTable
 // Is Abstract
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bEnabled"
 // MNetworkVarNames "string_t m_DialogXMLName"
@@ -3447,6 +5655,8 @@ public:
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSMinimapBoundary : public C_BaseEntity
 {
 public:
@@ -3457,6 +5667,8 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CCSGameModeRules
 {
 private:
@@ -3471,16 +5683,48 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
-class C_CSGO_EndOfMatchCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
+// Is Abstract
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "int m_nVariant"
+// MNetworkVarNames "int m_nRandom"
+// MNetworkVarNames "int m_nOrdinal"
+// MNetworkVarNames "CUtlString m_sWeaponName"
+// MNetworkVarNames "XUID m_xuid"
+// MNetworkVarNames "CEconItemView m_agentItem"
+// MNetworkVarNames "CEconItemView m_glovesItem"
+// MNetworkVarNames "CEconItemView m_weaponItem"
+class C_CSGO_TeamPreviewCharacterPosition : public C_BaseEntity
 {
 public:
-	// No schema binary for binding
+	// MNetworkEnable
+	int32_t m_nVariant; // 0x548	
+	// MNetworkEnable
+	int32_t m_nRandom; // 0x54c	
+	// MNetworkEnable
+	int32_t m_nOrdinal; // 0x550	
+private:
+	[[maybe_unused]] uint8_t __pad0554[0x4]; // 0x554
+public:
+	// MNetworkEnable
+	CUtlString m_sWeaponName; // 0x558	
+	// MNetworkEnable
+	uint64_t m_xuid; // 0x560	
+	// MNetworkEnable
+	C_EconItemView m_agentItem; // 0x568	
+	// MNetworkEnable
+	C_EconItemView m_glovesItem; // 0x9b0	
+	// MNetworkEnable
+	C_EconItemView m_weaponItem; // 0xdf8	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x568
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "string_t m_iszStackName"
 // MNetworkVarNames "string_t m_iszOperatorName"
@@ -3516,6 +5760,9 @@ public:
 // Alignment: 8
 // Size: 0xed0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_WorldModelNametag : public CBaseAnimGraph
 {
 public:
@@ -3527,6 +5774,7 @@ public:
 // Size: 0x40
 // Has VTable
 // Has Trivial Destructor
+// MNetworkAssumeNotNetworkable
 class CPropDataComponent : public CEntityComponent
 {
 private:
@@ -3547,14 +5795,17 @@ public:
 	int32_t m_nMotionDisabledSpawnFlag; // 0x3c	
 	
 	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPropDataComponent")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPropDataComponent")->m_static_fields[1]->m_instance);};
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPropDataComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_referenced_but_impl_is_contained(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPropDataComponent")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x8b0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "char m_szTeamMatchStat"
 // MNetworkVarNames "int m_numMapVictories"
@@ -3601,6 +5852,8 @@ public:
 // Alignment: 8
 // Size: 0x588
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Vector m_vMin"
 // MNetworkVarNames "Vector m_vMax"
@@ -3617,6 +5870,8 @@ public:
 // Alignment: 8
 // Size: 0xd00
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bLoop"
 // MNetworkVarNames "float m_flFPS"
@@ -3660,6 +5915,8 @@ public:
 // Alignment: 8
 // Size: 0x568
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SoundOpvarSetPointEntity : public C_SoundOpvarSetPointBase
 {
 public:
@@ -3670,6 +5927,9 @@ public:
 // Alignment: 8
 // Size: 0xed0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_WorldModelStattrak : public CBaseAnimGraph
 {
 public:
@@ -3680,16 +5940,25 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
-class C_LightOrthoEntity : public C_LightEntity
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CLightComponent::Storage_t m_CLightComponent"
+class C_LightEntity : public C_BaseModelEntity
 {
 public:
-	// No schema binary for binding
+	// MNetworkEnable
+	// MNetworkUserGroup "CLightComponent"
+	// MNetworkAlias "CLightComponent"
+	// MNetworkTypeAlias "CLightComponent"
+	CLightComponent* m_CLightComponent; // 0xcc8	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x40
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CPlayer_WaterServices : public CPlayerPawnComponent
 {
 public:
@@ -3700,6 +5969,8 @@ public:
 // Alignment: 8
 // Size: 0x550
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CSkyboxReference : public C_BaseEntity
 {
 public:
@@ -3714,6 +5985,8 @@ public:
 // Alignment: 8
 // Size: 0x570
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flAutoExposureMin"
 // MNetworkVarNames "float m_flAutoExposureMax"
@@ -3759,6 +6032,7 @@ public:
 // Alignment: 8
 // Size: 0x2e0
 // Has VTable
+// MDisableDataDescValidation
 // 
 // MNetworkVarNames "CHandle< C_BaseEntity> m_hTargetEntity"
 // MNetworkVarNames "bool m_bState"
@@ -3856,14 +6130,14 @@ public:
 	uint32_t m_nShadowQuality; // 0x258	
 	// MNetworkEnable
 	// MNetworkBitCount "16"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "500.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "500,000000"
 	// MNetworkEncodeFlags "1"
 	float m_flNearZ; // 0x25c	
 	// MNetworkEnable
 	// MNetworkBitCount "18"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1500.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1500,000000"
 	// MNetworkEncodeFlags "1"
 	float m_flFarZ; // 0x260	
 	// MNetworkEnable
@@ -3874,51 +6148,29 @@ public:
 	bool m_bFlipHorizontal; // 0x26c	
 	
 	// Static fields:
-	static float &Get_m_flVisibleBBoxMinHeight(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CProjectedTextureBase")->m_static_fields[0]->m_instance);};
+	static float &Get_m_flVisibleBBoxMinHeight(){return *reinterpret_cast<float*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CProjectedTextureBase")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xc0
+// Size: 0x40
 // Has VTable
-// 
-// MNetworkVarNames "item_definition_index_t m_unMusicID"
-// MNetworkVarNames "MedalRank_t m_rank"
-// MNetworkVarNames "int m_nPersonaDataPublicLevel"
-// MNetworkVarNames "int m_nPersonaDataPublicCommendsLeader"
-// MNetworkVarNames "int m_nPersonaDataPublicCommendsTeacher"
-// MNetworkVarNames "int m_nPersonaDataPublicCommendsFriendly"
-// MNetworkVarNames "int m_nPersonaDataXpTrailLevel"
-// MNetworkVarNames "ServerAuthoritativeWeaponSlot_t m_vecServerAuthoritativeWeaponSlots"
-class CCSPlayerController_InventoryServices : public CPlayerControllerComponent
+class CPlayerControllerComponent
 {
-public:
-	// MNetworkEnable
-	uint16_t m_unMusicID; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0042[0x2]; // 0x42
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	// MNetworkEnable
-	MedalRank_t m_rank[6]; // 0x44	
-	// MNetworkEnable
-	int32_t m_nPersonaDataPublicLevel; // 0x5c	
-	// MNetworkEnable
-	int32_t m_nPersonaDataPublicCommendsLeader; // 0x60	
-	// MNetworkEnable
-	int32_t m_nPersonaDataPublicCommendsTeacher; // 0x64	
-	// MNetworkEnable
-	int32_t m_nPersonaDataPublicCommendsFriendly; // 0x68	
-	// MNetworkEnable
-	int32_t m_nPersonaDataXpTrailLevel; // 0x6c	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	C_UtlVectorEmbeddedNetworkVar< ServerAuthoritativeWeaponSlot_t > m_vecServerAuthoritativeWeaponSlots; // 0x70	
+	// MNetworkDisable
+	// MNetworkChangeAccessorFieldPathIndex
+	CNetworkVarChainer __m_pChainEntity; // 0x8	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x650
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flParticleSpacing"
 // MNetworkVarNames "float m_flSlack"
@@ -3990,6 +6242,7 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CPlayer_UseServices : public CPlayerPawnComponent
 {
 public:
@@ -4000,6 +6253,9 @@ public:
 // Alignment: 8
 // Size: 0xf38
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_nModelIndex"
 // MNetworkIncludeByName "m_hModel"
@@ -4059,6 +6315,8 @@ public:
 // Alignment: 8
 // Size: 0x38
 // Has VTable
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class CScriptComponent : public CEntityComponent
 {
 private:
@@ -4067,14 +6325,16 @@ public:
 	CUtlSymbolLarge m_scriptClassName; // 0x30	
 	
 	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->m_static_fields[1]->m_instance);};
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptComponent")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x1598
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "HRenderTextureStrong m_Entity_hLightProbeTexture"
 // MNetworkVarNames "HRenderTextureStrong m_Entity_hLightProbeDirectLightIndicesTexture"
@@ -4150,6 +6410,9 @@ public:
 // Alignment: 8
 // Size: 0xed8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_ViewmodelAttachmentModel : public CBaseAnimGraph
 {
 public:
@@ -4162,7 +6425,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MPulseProvideFeatureTag
+// MPulseProvideFeatureTag "CSPointScriptExtensions"
 // MPulseLibraryBindings
 class CCSPointScriptExtensions_player_controller
 {
@@ -4173,8 +6436,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1aa0
+// Size: 0x1ab0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_Flashbang : public C_BaseCSGrenade
 {
 public:
@@ -4183,8 +6448,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a60
+// Size: 0x1a70
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CBumpMine : public C_CSWeaponBase
 {
 public:
@@ -4195,6 +6462,7 @@ public:
 // Alignment: 8
 // Size: 0x68
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_iKills"
 // MNetworkVarNames "int m_iDeaths"
@@ -4254,6 +6522,9 @@ public:
 // Alignment: 8
 // Size: 0x590
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bTimerPaused"
 // MNetworkVarNames "float m_flTimeRemaining"
@@ -4356,8 +6627,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1aa0
+// Size: 0x1ab0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SmokeGrenade : public C_BaseCSGrenade
 {
 public:
@@ -4366,8 +6639,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponGalilAR : public C_CSWeaponBaseGun
 {
 public:
@@ -4378,6 +6653,9 @@ public:
 // Alignment: 8
 // Size: 0xed8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_WorldModelGloves : public CBaseAnimGraph
 {
 public:
@@ -4388,6 +6666,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_ModelPointEntity : public C_BaseModelEntity
 {
 public:
@@ -4398,6 +6678,8 @@ public:
 // Alignment: 8
 // Size: 0x5a0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CPathSimple : public C_BaseEntity
 {
 private:
@@ -4411,6 +6693,7 @@ public:
 // Size: 0x78
 // Has VTable
 // Has Trivial Destructor
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Vector localSound"
 // MNetworkVarNames "int32 soundscapeIndex"
@@ -4442,6 +6725,8 @@ public:
 // Alignment: 16
 // Size: 0xf30
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bIgnoreInput"
 // MNetworkVarNames "bool m_bLit"
@@ -4548,7 +6833,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MPulseProvideFeatureTag
+// MPulseProvideFeatureTag "CSPointScriptExtensions"
 // MPulseLibraryBindings
 class CCSPointScriptExtensions_entity
 {
@@ -4559,58 +6844,151 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x410
+// Size: 0x160
 // Has VTable
 // 
-// MNetworkVarNames "CModelState m_modelState"
-// MNetworkVarNames "bool m_bIsAnimationEnabled"
-// MNetworkVarNames "bool m_bUseParentRenderBounds"
-// MNetworkVarNames "CUtlStringToken m_materialGroup"
-// MNetworkVarNames "uint8 m_nHitboxSet"
-class CSkeletonInstance : public CGameSceneNode
+// MNetworkVarNames "CGameSceneNodeHandle m_hParent"
+// MNetworkVarNames "CNetworkOriginCellCoordQuantizedVector m_vecOrigin"
+// MNetworkVarNames "QAngle m_angRotation"
+// MNetworkVarNames "float m_flScale"
+// MNetworkVarNames "CUtlStringToken m_name"
+// MNetworkVarNames "CUtlStringToken m_hierarchyAttachName"
+class CGameSceneNode
 {
 private:
-	[[maybe_unused]] uint8_t __pad0160[0x10]; // 0x160
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	// MNetworkDisable
+	CTransform m_nodeToWorld; // 0x10	
+	// MNetworkDisable
+	CEntityInstance* m_pOwner; // 0x30	
+	// MNetworkDisable
+	CGameSceneNode* m_pParent; // 0x38	
+	// MNetworkDisable
+	CGameSceneNode* m_pChild; // 0x40	
+	// MNetworkDisable
+	CGameSceneNode* m_pNextSibling; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad0050[0x28]; // 0x50
 public:
 	// MNetworkEnable
-	// -> m_hModel - 0x210
-	// -> m_ModelName - 0x218
-	// -> m_bClientClothCreationSuppressed - 0x258
-	// -> m_MeshGroupMask - 0x308
-	// -> m_nIdealMotionType - 0x38a
-	// -> m_nForceLOD - 0x38b
-	// -> m_nClothUpdateFlags - 0x38c
-	CModelState m_modelState; // 0x170	
+	// MNetworkSerializer "gameSceneNode"
+	// MNetworkChangeCallback "gameSceneNodeHierarchyParentChanged"
+	// MNetworkPriority "32"
+	// MNetworkVarEmbeddedFieldOffsetDelta "8"
+	// -> m_hOwner - 0x80
+	// -> m_name - 0x84
+	CGameSceneNodeHandle m_hParent; // 0x78	
 	// MNetworkEnable
-	bool m_bIsAnimationEnabled; // 0x3a0	
+	// MNetworkPriority "32"
+	// MNetworkUserGroup "Origin"
+	// MNetworkChangeCallback "gameSceneNodeLocalOriginChanged"
+	// -> m_cellX - 0x98
+	// -> m_cellY - 0x9a
+	// -> m_cellZ - 0x9c
+	// -> m_nOutsideWorld - 0x9e
+	// -> m_vecX - 0xa0
+	// -> m_vecY - 0xa8
+	// -> m_vecZ - 0xb0
+	CNetworkOriginCellCoordQuantizedVector m_vecOrigin; // 0x88	
+private:
+	[[maybe_unused]] uint8_t __pad00b8[0x8]; // 0xb8
+public:
 	// MNetworkEnable
-	bool m_bUseParentRenderBounds; // 0x3a1	
+	// MNetworkEncoder "qangle_precise"
+	// MNetworkPriority "32"
+	// MNetworkSerializer "gameSceneNodeStepSimulationAnglesSerializer"
+	// MNetworkChangeCallback "gameSceneNodeLocalAnglesChanged"
+	QAngle m_angRotation; // 0xc0	
+	// MNetworkEnable
+	// MNetworkChangeCallback "gameSceneNodeLocalScaleChanged"
+	// MNetworkPriority "32"
+	float m_flScale; // 0xcc	
 	// MNetworkDisable
-	bool m_bDisableSolidCollisionsForHierarchy; // 0x3a2	
+	Vector m_vecAbsOrigin; // 0xd0	
+	// MNetworkDisable
+	QAngle m_angAbsRotation; // 0xdc	
+	// MNetworkDisable
+	float m_flAbsScale; // 0xe8	
+	// MNetworkDisable
+	int16_t m_nParentAttachmentOrBone; // 0xec	
+	// MNetworkDisable
+	bool m_bDebugAbsOriginChanges; // 0xee	
+	// MNetworkDisable
+	bool m_bDormant; // 0xef	
+	// MNetworkDisable
+	bool m_bForceParentToBeNetworked; // 0xf0	
 	struct 
 	{
 		// MNetworkDisable
-		uint8_t m_bDirtyMotionType: 1; 		
+		uint8_t m_bDirtyHierarchy: 1; 		
 		// MNetworkDisable
-		uint8_t m_bIsGeneratingLatchedParentSpaceState: 1; 		
-		uint16_t __pad1: 14;
-	}; // 16 bits
+		uint8_t m_bDirtyBoneMergeInfo: 1; 		
+		// MNetworkDisable
+		uint8_t m_bNetworkedPositionChanged: 1; 		
+		// MNetworkDisable
+		uint8_t m_bNetworkedAnglesChanged: 1; 		
+		// MNetworkDisable
+		uint8_t m_bNetworkedScaleChanged: 1; 		
+		// MNetworkDisable
+		uint8_t m_bWillBeCallingPostDataUpdate: 1; 		
+		// MNetworkDisable
+		uint8_t m_bBoneMergeFlex: 1; 		
+		// MNetworkDisable
+		uint8_t m_nLatchAbsOrigin: 2; 		
+		// MNetworkDisable
+		uint8_t m_bDirtyBoneMergeBoneToRoot: 1; 		
+		uint16_t __pad0: 14;
+	}; // 24 bits
+	// MNetworkDisable
+	uint8_t m_nHierarchicalDepth; // 0xf3	
+	// MNetworkDisable
+	uint8_t m_nHierarchyType; // 0xf4	
+	// MNetworkDisable
+	uint8_t m_nDoNotSetAnimTimeInInvalidatePhysicsCount; // 0xf5	
+private:
+	[[maybe_unused]] uint8_t __pad00f6[0x2]; // 0xf6
+public:
 	// MNetworkEnable
-	// MNetworkChangeCallback "skeletonMaterialGroupChanged"
-	CUtlStringToken m_materialGroup; // 0x3a4	
+	CUtlStringToken m_name; // 0xf8	
+private:
+	[[maybe_unused]] uint8_t __pad00fc[0x3c]; // 0xfc
+public:
 	// MNetworkEnable
-	uint8_t m_nHitboxSet; // 0x3a8	
+	// MNetworkChangeCallback "gameSceneNodeHierarchyAttachmentChanged"
+	CUtlStringToken m_hierarchyAttachName; // 0x138	
+	// MNetworkDisable
+	float m_flZOffset; // 0x13c	
+	// MNetworkDisable
+	float m_flClientLocalScale; // 0x140	
+	// MNetworkDisable
+	Vector m_vRenderOrigin; // 0x144	
 	
 	// Datamap fields:
-	// Vector velocity; // 0x7fffffff
-	// Vector rotationAxis; // 0x7fffffff
-	// float rotationSpeed; // 0x7fffffff
+	// void m_bDirtyHierarchy; // -0x1
+	// void m_bDirtyBoneMergeInfo; // -0x1
+	// void m_bNetworkedPositionChanged; // -0x1
+	// void m_bNetworkedAnglesChanged; // -0x1
+	// void m_bNetworkedScaleChanged; // -0x1
+	// void m_bWillBeCallingPostDataUpdate; // -0x1
+	// void m_nLatchAbsOrigin; // -0x1
+	// void m_bDirtyBoneMergeBoneToRoot; // -0x1
+	// CHandle< CBaseEntity > parentname; // 0x7fffffff
+	// bool useLocalOffset; // 0x7fffffff
+	// bool useParentRenderBounds; // 0x7fffffff
+	// bool positionInLocalSpace; // 0x7fffffff
+	// Vector scales; // 0x7fffffff
+	// Vector local.scales; // 0x7fffffff
+	// float scale; // 0x7fffffff
+	// float ModelScale; // 0x7fffffff
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponM4A1 : public C_CSWeaponBaseGun
 {
 public:
@@ -4619,49 +6997,50 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x5e8
+// Size: 0x90
 // Has VTable
+// Has Trivial Destructor
+// MNetworkAssumeNotNetworkable
 // 
-// MNetworkVarNames "sky3dparams_t m_skyboxData"
-// MNetworkVarNames "CUtlStringToken m_skyboxSlotToken"
-class C_SkyCamera : public C_BaseEntity
+// MNetworkVarNames "int16 scale"
+// MNetworkVarNames "Vector origin"
+// MNetworkVarNames "bool bClip3DSkyBoxNearToWorldFar"
+// MNetworkVarNames "float32 flClip3DSkyBoxNearToWorldFarOffset"
+// MNetworkVarNames "fogparams_t fog"
+// MNetworkVarNames "WorldGroupId_t m_nWorldGroupID"
+struct sky3dparams_t
 {
-public:
-	// MNetworkEnable
-	// -> scale - 0x550
-	// -> origin - 0x554
-	// -> bClip3DSkyBoxNearToWorldFar - 0x560
-	// -> flClip3DSkyBoxNearToWorldFarOffset - 0x564
-	// -> fog - 0x568
-	// -> m_nWorldGroupID - 0x5d0
-	sky3dparams_t m_skyboxData; // 0x548	
-	// MNetworkEnable
-	CUtlStringToken m_skyboxSlotToken; // 0x5d8	
-	bool m_bUseAngles; // 0x5dc	
 private:
-	[[maybe_unused]] uint8_t __pad05dd[0x3]; // 0x5dd
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
-	C_SkyCamera* m_pNext; // 0x5e0	
-	
-	// Datamap fields:
-	// int16_t m_skyboxData.scale; // 0x550
-	// Vector m_skyboxData.origin; // 0x554
-	// bool m_skyboxData.bClip3DSkyBoxNearToWorldFar; // 0x560
-	// float m_skyboxData.flClip3DSkyBoxNearToWorldFarOffset; // 0x564
-	// bool m_skyboxData.fog.enable; // 0x5cc
-	// bool m_skyboxData.fog.blend; // 0x5cd
-	// Vector m_skyboxData.fog.dirPrimary; // 0x570
-	// Color m_skyboxData.fog.colorPrimary; // 0x57c
-	// Color m_skyboxData.fog.colorSecondary; // 0x580
-	// float m_skyboxData.fog.start; // 0x58c
-	// float m_skyboxData.fog.end; // 0x590
-	// float m_skyboxData.fog.maxdensity; // 0x598
+	// MNetworkEnable
+	int16_t scale; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000a[0x2]; // 0xa
+public:
+	// MNetworkEnable
+	// MNetworkEncoder "coord"
+	Vector origin; // 0xc	
+	// MNetworkEnable
+	bool bClip3DSkyBoxNearToWorldFar; // 0x18	
+private:
+	[[maybe_unused]] uint8_t __pad0019[0x3]; // 0x19
+public:
+	// MNetworkEnable
+	float flClip3DSkyBoxNearToWorldFarOffset; // 0x1c	
+	// MNetworkEnable
+	fogparams_t fog; // 0x20	
+	// MNetworkEnable
+	WorldGroupId_t m_nWorldGroupID; // 0x88	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_World : public C_BaseModelEntity
 {
 public:
@@ -4672,6 +7051,9 @@ public:
 // Alignment: 8
 // Size: 0xd10
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "GameTime_t m_flStartTime"
 // MNetworkVarNames "float32 m_flFadeInStart"
@@ -4717,6 +7099,7 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSObserver_UseServices : public CPlayer_UseServices
 {
 public:
@@ -4727,6 +7110,7 @@ public:
 // Alignment: 8
 // Size: 0x210
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "QAngle m_vecCsViewPunchAngle"
 // MNetworkVarNames "GameTick_t m_nCsViewPunchAngleTick"
@@ -4791,8 +7175,971 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x10f8
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkExcludeByUserGroup "LocalPlayerExclusive"
+// MNetworkVarNames "CHandle<C_EconWearable > m_hMyWearables"
+// MNetworkVarNames "float m_flFieldOfView"
+class C_BaseCombatCharacter : public C_BaseFlex
+{
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnWearablesChanged"
+	C_NetworkUtlVectorBase< CHandle< C_EconWearable > > m_hMyWearables; // 0x1068	
+	AttachmentHandle_t m_leftFootAttachment; // 0x1080	
+	AttachmentHandle_t m_rightFootAttachment; // 0x1081	
+private:
+	[[maybe_unused]] uint8_t __pad1082[0x2]; // 0x1082
+public:
+	C_BaseCombatCharacter::WaterWakeMode_t m_nWaterWakeMode; // 0x1084	
+	float m_flWaterWorldZ; // 0x1088	
+	float m_flWaterNextTraceTime; // 0x108c	
+	// MNetworkEnable
+	float m_flFieldOfView; // 0x1090	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a90
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+class C_Item_Healthshot : public C_WeaponBaseItem
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x750
+// Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CEnvWindShared m_EnvWindShared"
+class C_EnvWind : public C_BaseEntity
+{
+public:
+	// MNetworkEnable
+	C_EnvWindShared m_EnvWindShared; // 0x548	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xd20
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "HPostProcessingStrong m_hPostSettings"
+// MNetworkVarNames "float m_flFadeDuration"
+// MNetworkVarNames "float m_flMinLogExposure"
+// MNetworkVarNames "float m_flMaxLogExposure"
+// MNetworkVarNames "float m_flMinExposure"
+// MNetworkVarNames "float m_flMaxExposure"
+// MNetworkVarNames "float m_flExposureCompensation"
+// MNetworkVarNames "float m_flExposureFadeSpeedUp"
+// MNetworkVarNames "float m_flExposureFadeSpeedDown"
+// MNetworkVarNames "float m_flTonemapEVSmoothingRange"
+// MNetworkVarNames "bool m_bMaster"
+// MNetworkVarNames "bool m_bExposureControl"
+// MNetworkVarNames "float m_flRate"
+// MNetworkVarNames "float m_flTonemapPercentTarget"
+// MNetworkVarNames "float m_flTonemapPercentBrightPixels"
+// MNetworkVarNames "float m_flTonemapMinAvgLum"
+class C_PostProcessingVolume : public C_BaseTrigger
+{
+private:
+	[[maybe_unused]] uint8_t __pad0cd0[0x10]; // 0xcd0
+public:
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostSettings; // 0xce0	
+	// MNetworkEnable
+	float m_flFadeDuration; // 0xce8	
+	// MNetworkEnable
+	float m_flMinLogExposure; // 0xcec	
+	// MNetworkEnable
+	float m_flMaxLogExposure; // 0xcf0	
+	// MNetworkEnable
+	float m_flMinExposure; // 0xcf4	
+	// MNetworkEnable
+	float m_flMaxExposure; // 0xcf8	
+	// MNetworkEnable
+	float m_flExposureCompensation; // 0xcfc	
+	// MNetworkEnable
+	float m_flExposureFadeSpeedUp; // 0xd00	
+	// MNetworkEnable
+	float m_flExposureFadeSpeedDown; // 0xd04	
+	// MNetworkEnable
+	float m_flTonemapEVSmoothingRange; // 0xd08	
+	// MNetworkEnable
+	bool m_bMaster; // 0xd0c	
+	// MNetworkEnable
+	bool m_bExposureControl; // 0xd0d	
+private:
+	[[maybe_unused]] uint8_t __pad0d0e[0x2]; // 0xd0e
+public:
+	// MNetworkEnable
+	float m_flRate; // 0xd10	
+	// MNetworkEnable
+	float m_flTonemapPercentTarget; // 0xd14	
+	// MNetworkEnable
+	float m_flTonemapPercentBrightPixels; // 0xd18	
+	// MNetworkEnable
+	float m_flTonemapMinAvgLum; // 0xd1c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CHandle< CBaseEntity> m_hPlayerPing"
+class CCSPlayer_PingServices : public CPlayerPawnComponent
+{
+public:
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hPlayerPing; // 0x40	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+// MNetworkAssumeNotNetworkable
+class CPlayer_FlashlightServices : public CPlayerPawnComponent
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xcc8
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class CServerOnlyModelEntity : public C_BaseModelEntity
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a90
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WeaponAug : public C_CSWeaponBaseGun
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xcc8
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkOverride "m_angRotation CGameSceneNode"
+// MNetworkOverride "m_flSimulationTime C_BaseEntity"
+class C_FuncRotating : public C_BaseModelEntity
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x558
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "float32 m_flScale"
+// MNetworkVarNames "float32 m_flStartScale"
+// MNetworkVarNames "float m_flScaleTime"
+// MNetworkVarNames "uint32 m_nFlags"
+class C_BaseFire : public C_BaseEntity
+{
+public:
+	// MNetworkEnable
+	float m_flScale; // 0x548	
+	// MNetworkEnable
+	float m_flStartScale; // 0x54c	
+	// MNetworkEnable
+	float m_flScaleTime; // 0x550	
+	// MNetworkEnable
+	uint32_t m_nFlags; // 0x554	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xa8
+class C_CommandContext
+{
+public:
+	bool needsprocessing; // 0x0	
+	int32_t command_number; // 0xa0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseProvideFeatureTag "PulseEntities"
+// MPulseLibraryBindings
+class CPointTemplateAPI
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1180
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "int m_nDecoyShotTick"
+class C_DecoyProjectile : public C_BaseCSGrenadeProjectile
+{
+public:
+	// MNetworkEnable
+	int32_t m_nDecoyShotTick; // 0x1150	
+	int32_t m_nClientLastKnownDecoyShotTick; // 0x1154	
+private:
+	[[maybe_unused]] uint8_t __pad1158[0x20]; // 0x1158
+public:
+	GameTime_t m_flTimeParticleEffectSpawn; // 0x1178	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xed0
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WaterBullet : public CBaseAnimGraph
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// 
+// MNetworkVarNames "bool m_bSpotted"
+// MNetworkVarNames "uint32 m_bSpottedByMask"
+struct EntitySpottedState_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnIsSpottedChanged"
+	bool m_bSpotted; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad0009[0x3]; // 0x9
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnIsSpottedChanged"
+	uint32_t m_bSpottedByMask[2]; // 0xc	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has VTable
+// Is Abstract
+// Has Trivial Destructor
+class ISkeletonAnimationController
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x550
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class CCSPointScriptEntity : public C_BaseEntity
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1ad0
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "bool m_bStartedArming"
+// MNetworkVarNames "GameTime_t m_fArmedTime"
+// MNetworkVarNames "bool m_bBombPlacedAnimation"
+// MNetworkVarNames "bool m_bIsPlantingViaUse"
+// MNetworkVarNames "EntitySpottedState_t m_entitySpottedState"
+class C_C4 : public C_CSWeaponBase
+{
+public:
+	char m_szScreenText[32]; // 0x1a70	
+	ParticleIndex_t m_activeLightParticleIndex; // 0x1a90	
+	C4LightEffect_t m_eActiveLightEffect; // 0x1a94	
+	// MNetworkEnable
+	bool m_bStartedArming; // 0x1a98	
+private:
+	[[maybe_unused]] uint8_t __pad1a99[0x3]; // 0x1a99
+public:
+	// MNetworkEnable
+	GameTime_t m_fArmedTime; // 0x1a9c	
+	// MNetworkEnable
+	bool m_bBombPlacedAnimation; // 0x1aa0	
+	// MNetworkEnable
+	bool m_bIsPlantingViaUse; // 0x1aa1	
+private:
+	[[maybe_unused]] uint8_t __pad1aa2[0x6]; // 0x1aa2
+public:
+	// MNetworkEnable
+	EntitySpottedState_t m_entitySpottedState; // 0x1aa8	
+	int32_t m_nSpotRules; // 0x1ac0	
+	bool m_bPlayedArmingBeeps[7]; // 0x1ac4	
+	bool m_bBombPlanted; // 0x1acb	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xf68
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_ClientRagdoll : public CBaseAnimGraph
+{
+public:
+	bool m_bFadeOut; // 0xed0	
+	bool m_bImportant; // 0xed1	
+private:
+	[[maybe_unused]] uint8_t __pad0ed2[0x2]; // 0xed2
+public:
+	GameTime_t m_flEffectTime; // 0xed4	
+	GameTime_t m_gibDespawnTime; // 0xed8	
+	int32_t m_iCurrentFriction; // 0xedc	
+	int32_t m_iMinFriction; // 0xee0	
+	int32_t m_iMaxFriction; // 0xee4	
+	int32_t m_iFrictionAnimState; // 0xee8	
+	bool m_bReleaseRagdoll; // 0xeec	
+	AttachmentHandle_t m_iEyeAttachment; // 0xeed	
+	bool m_bFadingOut; // 0xeee	
+private:
+	[[maybe_unused]] uint8_t __pad0eef[0x1]; // 0xeef
+public:
+	float m_flScaleEnd[10]; // 0xef0	
+	GameTime_t m_flScaleTimeStart[10]; // 0xf18	
+	GameTime_t m_flScaleTimeEnd[10]; // 0xf40	
+	
+	// Datamap fields:
+	// Color m_clrRender; // 0xa7b
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a70
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+class C_Melee : public C_CSWeaponBase
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10b8
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class CBreachChargeProjectile : public C_BaseGrenade
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x548
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_InfoInstructorHintHostageRescueZone : public C_PointEntity
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has VTable
+class C_TeamplayRules : public C_MultiplayRules
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseProvideFeatureTag "PulseEntities"
+// MPulseLibraryBindings
+class CBasePlayerControllerAPI
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x650
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_PathParticleRopeAlias_path_particle_rope_clientside : public C_PathParticleRope
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseProvideFeatureTag "CSPointScriptExtensions"
+// MPulseLibraryBindings
+class CCSPointScriptExtensions_CCSWeaponBaseVData
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x560
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "Vector m_vMins"
+// MNetworkVarNames "Vector m_vMaxs"
+class C_SoundEventAABBEntity : public C_SoundEventEntity
+{
+public:
+	// MNetworkEnable
+	Vector m_vMins; // 0x548	
+	// MNetworkEnable
+	Vector m_vMaxs; // 0x554	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a90
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WeaponP90 : public C_CSWeaponBaseGun
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1ac0
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_MolotovGrenade : public C_BaseCSGrenade
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct AmmoIndex_t
+{
+public:
+	int8_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("AmmoIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xfc0
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkIncludeByName "m_nModelIndex"
+// MNetworkIncludeByName "m_lifeState"
+// MNetworkVarNames "Vector m_poolOrigin"
+// MNetworkVarNames "float32 m_waterLevel"
+// MNetworkVarNames "float32 m_x"
+// MNetworkVarNames "float32 m_y"
+// MNetworkVarNames "float32 m_z"
+// MNetworkVarNames "float32 m_angle"
+class C_Fish : public CBaseAnimGraph
+{
+public:
+	Vector m_pos; // 0xed0	
+	Vector m_vel; // 0xedc	
+	QAngle m_angles; // 0xee8	
+	int32_t m_localLifeState; // 0xef4	
+	float m_deathDepth; // 0xef8	
+	float m_deathAngle; // 0xefc	
+	float m_buoyancy; // 0xf00	
+private:
+	[[maybe_unused]] uint8_t __pad0f04[0x4]; // 0xf04
+public:
+	CountdownTimer m_wiggleTimer; // 0xf08	
+	float m_wigglePhase; // 0xf20	
+	float m_wiggleRate; // 0xf24	
+	Vector m_actualPos; // 0xf28	
+	QAngle m_actualAngles; // 0xf34	
+	// MNetworkEnable
+	// MNetworkEncoder "coord"
+	Vector m_poolOrigin; // 0xf40	
+	// MNetworkEnable
+	float m_waterLevel; // 0xf4c	
+	bool m_gotUpdate; // 0xf50	
+private:
+	[[maybe_unused]] uint8_t __pad0f51[0x3]; // 0xf51
+public:
+	// MNetworkEnable
+	// MNetworkSerializer "fish_pos_x"
+	// MNetworkChangeCallback "OnPosChanged"
+	float m_x; // 0xf54	
+	// MNetworkEnable
+	// MNetworkSerializer "fish_pos_y"
+	// MNetworkChangeCallback "OnPosChanged"
+	float m_y; // 0xf58	
+	// MNetworkEnable
+	// MNetworkSerializer "fish_pos_z"
+	// MNetworkChangeCallback "OnPosChanged"
+	float m_z; // 0xf5c	
+	// MNetworkEnable
+	// MNetworkSerializer "angle_normalize_positive"
+	// MNetworkBitCount "7"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "360,000000"
+	// MNetworkEncodeFlags "1"
+	// MNetworkChangeCallback "OnAngChanged"
+	float m_angle; // 0xf60	
+	float m_errorHistory[20]; // 0xf64	
+	int32_t m_errorHistoryIndex; // 0xfb4	
+	int32_t m_errorHistoryCount; // 0xfb8	
+	float m_averageError; // 0xfbc	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10
+// Has VTable
+// Has Trivial Destructor
+// MDisableDataDescValidation
+// MNetworkNoBase
+// 
+// MNetworkVarNames "GameTime_t m_timestamp"
+// MNetworkVarNames "WorldGroupId_t m_nWorldGroupId"
+class IntervalTimer
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MNetworkEnable
+	GameTime_t m_timestamp; // 0x8	
+	// MNetworkEnable
+	WorldGroupId_t m_nWorldGroupId; // 0xc	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a90
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WeaponAWP : public C_CSWeaponBaseGun
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1278
+// Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MNetworkAssumeNotNetworkable
+class C_CSGO_TeamIntroCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1278
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_CSGO_EndOfMatchCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x548
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class CLogicalEntity : public C_BaseEntity
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x410
+// Has VTable
+// MClassHasEntityLimitedDataDesc
+// 
+// MNetworkVarNames "CModelState m_modelState"
+// MNetworkVarNames "bool m_bIsAnimationEnabled"
+// MNetworkVarNames "bool m_bUseParentRenderBounds"
+// MNetworkVarNames "CUtlStringToken m_materialGroup"
+// MNetworkVarNames "uint8 m_nHitboxSet"
+class CSkeletonInstance : public CGameSceneNode
+{
+private:
+	[[maybe_unused]] uint8_t __pad0160[0x10]; // 0x160
+public:
+	// MNetworkEnable
+	// -> m_hModel - 0x210
+	// -> m_ModelName - 0x218
+	// -> m_bClientClothCreationSuppressed - 0x258
+	// -> m_MeshGroupMask - 0x308
+	// -> m_nIdealMotionType - 0x38a
+	// -> m_nForceLOD - 0x38b
+	// -> m_nClothUpdateFlags - 0x38c
+	CModelState m_modelState; // 0x170	
+	// MNetworkEnable
+	bool m_bIsAnimationEnabled; // 0x3a0	
+	// MNetworkEnable
+	bool m_bUseParentRenderBounds; // 0x3a1	
+	// MNetworkDisable
+	bool m_bDisableSolidCollisionsForHierarchy; // 0x3a2	
+	struct 
+	{
+		// MNetworkDisable
+		uint8_t m_bDirtyMotionType: 1; 		
+		// MNetworkDisable
+		uint8_t m_bIsGeneratingLatchedParentSpaceState: 1; 		
+		uint16_t __pad1: 14;
+	}; // 16 bits
+	// MNetworkEnable
+	// MNetworkChangeCallback "skeletonMaterialGroupChanged"
+	CUtlStringToken m_materialGroup; // 0x3a4	
+	// MNetworkEnable
+	uint8_t m_nHitboxSet; // 0x3a8	
+	
+	// Datamap fields:
+	// Vector velocity; // 0x7fffffff
+	// Vector rotationAxis; // 0x7fffffff
+	// float rotationSpeed; // 0x7fffffff
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+// Has Trivial Destructor
+class CBuoyancyHelper
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
+public:
+	float m_flFluidDensity; // 0x18	
+	
+	// Datamap fields:
+	// void m_pController; // 0x8
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10b0
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkIncludeByUserGroup "Origin"
+// MNetworkIncludeByName "CGameSceneNode::m_hParent"
+// MNetworkIncludeByName "CGameSceneNode::m_hierarchyAttachName"
+// MNetworkIncludeByName "m_nMinCPULevel"
+// MNetworkIncludeByName "m_nMaxCPULevel"
+// MNetworkIncludeByName "m_nMinGPULevel"
+// MNetworkIncludeByName "m_nMaxGPULevel"
+// MNetworkVarNames "float32 m_flScrollSpeed"
+// MNetworkVarNames "uint16 m_RopeFlags"
+// MNetworkVarNames "HMaterialStrong m_iRopeMaterialModelIndex"
+// MNetworkVarNames "uint8 m_nSegments"
+// MNetworkVarNames "CHandle< C_BaseEntity> m_hStartPoint"
+// MNetworkVarNames "CHandle< C_BaseEntity> m_hEndPoint"
+// MNetworkVarNames "AttachmentHandle_t m_iStartAttachment"
+// MNetworkVarNames "AttachmentHandle_t m_iEndAttachment"
+// MNetworkVarNames "uint8 m_Subdiv"
+// MNetworkVarNames "int16 m_RopeLength"
+// MNetworkVarNames "int16 m_Slack"
+// MNetworkVarNames "float32 m_TextureScale"
+// MNetworkVarNames "uint8 m_fLockedPoints"
+// MNetworkVarNames "uint8 m_nChangeCount"
+// MNetworkVarNames "float32 m_Width"
+// MNetworkVarNames "bool m_bConstrainBetweenEndpoints"
+class C_RopeKeyframe : public C_BaseModelEntity
+{
+private:
+	[[maybe_unused]] uint8_t __pad0cc8[0x8]; // 0xcc8
+public:
+	CBitVec< 10 > m_LinksTouchingSomething; // 0xcd0	
+	int32_t m_nLinksTouchingSomething; // 0xcd4	
+	bool m_bApplyWind; // 0xcd8	
+private:
+	[[maybe_unused]] uint8_t __pad0cd9[0x3]; // 0xcd9
+public:
+	int32_t m_fPrevLockedPoints; // 0xcdc	
+	int32_t m_iForcePointMoveCounter; // 0xce0	
+	bool m_bPrevEndPointPos[2]; // 0xce4	
+private:
+	[[maybe_unused]] uint8_t __pad0ce6[0x2]; // 0xce6
+public:
+	Vector m_vPrevEndPointPos[2]; // 0xce8	
+	float m_flCurScroll; // 0xd00	
+	// MNetworkEnable
+	float m_flScrollSpeed; // 0xd04	
+	// MNetworkEnable
+	uint16_t m_RopeFlags; // 0xd08	
+private:
+	[[maybe_unused]] uint8_t __pad0d0a[0x6]; // 0xd0a
+public:
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_iRopeMaterialModelIndex; // 0xd10	
+private:
+	[[maybe_unused]] uint8_t __pad0d18[0x270]; // 0xd18
+public:
+	Vector m_LightValues[10]; // 0xf88	
+	// MNetworkEnable
+	uint8_t m_nSegments; // 0x1000	
+private:
+	[[maybe_unused]] uint8_t __pad1001[0x3]; // 0x1001
+public:
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hStartPoint; // 0x1004	
+	// MNetworkEnable
+	CHandle< C_BaseEntity > m_hEndPoint; // 0x1008	
+	// MNetworkEnable
+	AttachmentHandle_t m_iStartAttachment; // 0x100c	
+	// MNetworkEnable
+	AttachmentHandle_t m_iEndAttachment; // 0x100d	
+	// MNetworkEnable
+	uint8_t m_Subdiv; // 0x100e	
+private:
+	[[maybe_unused]] uint8_t __pad100f[0x1]; // 0x100f
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "RecomputeSprings"
+	int16_t m_RopeLength; // 0x1010	
+	// MNetworkEnable
+	// MNetworkChangeCallback "RecomputeSprings"
+	int16_t m_Slack; // 0x1012	
+	// MNetworkEnable
+	// MNetworkBitCount "10"
+	// MNetworkMinValue "0,100000"
+	// MNetworkMaxValue "10,000000"
+	float m_TextureScale; // 0x1014	
+	// MNetworkEnable
+	uint8_t m_fLockedPoints; // 0x1018	
+	// MNetworkEnable
+	uint8_t m_nChangeCount; // 0x1019	
+private:
+	[[maybe_unused]] uint8_t __pad101a[0x2]; // 0x101a
+public:
+	// MNetworkEnable
+	float m_Width; // 0x101c	
+	C_RopeKeyframe::CPhysicsDelegate m_PhysicsDelegate; // 0x1020	
+	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x1030	
+	int32_t m_TextureHeight; // 0x1038	
+	Vector m_vecImpulse; // 0x103c	
+	Vector m_vecPreviousImpulse; // 0x1048	
+	float m_flCurrentGustTimer; // 0x1054	
+	float m_flCurrentGustLifetime; // 0x1058	
+	float m_flTimeToNextGust; // 0x105c	
+	Vector m_vWindDir; // 0x1060	
+	Vector m_vColorMod; // 0x106c	
+	Vector m_vCachedEndPointAttachmentPos[2]; // 0x1078	
+	QAngle m_vCachedEndPointAttachmentAngle[2]; // 0x1090	
+	// MNetworkEnable
+	bool m_bConstrainBetweenEndpoints; // 0x10a8	
+	struct 
+	{
+		uint8_t m_bEndPointAttachmentPositionsDirty: 1; 		
+		uint8_t m_bEndPointAttachmentAnglesDirty: 1; 		
+		uint8_t m_bNewDataThisFrame: 1; 		
+		uint8_t m_bPhysicsInitted: 1; 		
+		uint8_t __pad2: 4;
+	}; // 8 bits
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x5e0
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "HRenderTextureStrong m_hGradientFogTexture"
+// MNetworkVarNames "float m_flFogStartDistance"
+// MNetworkVarNames "float m_flFogEndDistance"
+// MNetworkVarNames "bool m_bHeightFogEnabled"
+// MNetworkVarNames "float m_flFogStartHeight"
+// MNetworkVarNames "float m_flFogEndHeight"
+// MNetworkVarNames "float m_flFarZ"
+// MNetworkVarNames "float m_flFogMaxOpacity"
+// MNetworkVarNames "float m_flFogFalloffExponent"
+// MNetworkVarNames "float m_flFogVerticalExponent"
+// MNetworkVarNames "Color m_fogColor"
+// MNetworkVarNames "float m_flFogStrength"
+// MNetworkVarNames "float m_flFadeTime"
+// MNetworkVarNames "bool m_bStartDisabled"
+// MNetworkVarNames "bool m_bIsEnabled"
+class C_GradientFog : public C_BaseEntity
+{
+public:
+	// MNetworkEnable
+	CStrongHandle< InfoForResourceTypeCTextureBase > m_hGradientFogTexture; // 0x548	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogStartDistance; // 0x550	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogEndDistance; // 0x554	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	bool m_bHeightFogEnabled; // 0x558	
+private:
+	[[maybe_unused]] uint8_t __pad0559[0x3]; // 0x559
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogStartHeight; // 0x55c	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogEndHeight; // 0x560	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFarZ; // 0x564	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogMaxOpacity; // 0x568	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogFalloffExponent; // 0x56c	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogVerticalExponent; // 0x570	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	Color m_fogColor; // 0x574	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFogStrength; // 0x578	
+	// MNetworkEnable
+	// MNetworkChangeCallback "FogStateChanged"
+	float m_flFadeTime; // 0x57c	
+	// MNetworkEnable
+	bool m_bStartDisabled; // 0x580	
+	// MNetworkEnable
+	bool m_bIsEnabled; // 0x581	
+	bool m_bGradientFogNeedsTextures; // 0x582	
+	
+	// Static fields:
+	static C_GradientFog* &Get_sm_pGradientFog(){return *reinterpret_cast<C_GradientFog**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GradientFog")->GetStaticFields()[0]->m_pInstance);};
+	
+	// Datamap fields:
+	// bool InputEnable; // 0x0
+	// bool InputDisable; // 0x0
+	// float InputSetFogStartDistance; // 0x0
+	// float InputSetFogEndDistance; // 0x0
+	// float InputSetFogStartHeight; // 0x0
+	// float InputSetFogEndHeight; // 0x0
+	// float InputSetFogMaxOpacity; // 0x0
+	// float InputSetFogFalloffExponent; // 0x0
+	// float InputSetFogVerticalExponent; // 0x0
+	// Color InputSetFogColor; // 0x0
+	// float InputSetFogStrength; // 0x0
+	// float InputSetFarZ; // 0x0
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0x1298
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkUserGroupProxy "C_BasePlayerPawn"
 // MNetworkUserGroupProxy "C_BasePlayerPawn"
@@ -4891,1145 +8238,11 @@ public:
 };
 
 // Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
-// Has VTable
-class C_Item_Healthshot : public C_WeaponBaseItem
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x750
-// Has VTable
-// 
-// MNetworkVarNames "CEnvWindShared m_EnvWindShared"
-class C_EnvWind : public C_BaseEntity
-{
-public:
-	// MNetworkEnable
-	C_EnvWindShared m_EnvWindShared; // 0x548	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0xd20
-// Has VTable
-// 
-// MNetworkVarNames "HPostProcessingStrong m_hPostSettings"
-// MNetworkVarNames "float m_flFadeDuration"
-// MNetworkVarNames "float m_flMinLogExposure"
-// MNetworkVarNames "float m_flMaxLogExposure"
-// MNetworkVarNames "float m_flMinExposure"
-// MNetworkVarNames "float m_flMaxExposure"
-// MNetworkVarNames "float m_flExposureCompensation"
-// MNetworkVarNames "float m_flExposureFadeSpeedUp"
-// MNetworkVarNames "float m_flExposureFadeSpeedDown"
-// MNetworkVarNames "float m_flTonemapEVSmoothingRange"
-// MNetworkVarNames "bool m_bMaster"
-// MNetworkVarNames "bool m_bExposureControl"
-// MNetworkVarNames "float m_flRate"
-// MNetworkVarNames "float m_flTonemapPercentTarget"
-// MNetworkVarNames "float m_flTonemapPercentBrightPixels"
-// MNetworkVarNames "float m_flTonemapMinAvgLum"
-class C_PostProcessingVolume : public C_BaseTrigger
-{
-private:
-	[[maybe_unused]] uint8_t __pad0cd0[0x10]; // 0xcd0
-public:
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeCPostProcessingResource > m_hPostSettings; // 0xce0	
-	// MNetworkEnable
-	float m_flFadeDuration; // 0xce8	
-	// MNetworkEnable
-	float m_flMinLogExposure; // 0xcec	
-	// MNetworkEnable
-	float m_flMaxLogExposure; // 0xcf0	
-	// MNetworkEnable
-	float m_flMinExposure; // 0xcf4	
-	// MNetworkEnable
-	float m_flMaxExposure; // 0xcf8	
-	// MNetworkEnable
-	float m_flExposureCompensation; // 0xcfc	
-	// MNetworkEnable
-	float m_flExposureFadeSpeedUp; // 0xd00	
-	// MNetworkEnable
-	float m_flExposureFadeSpeedDown; // 0xd04	
-	// MNetworkEnable
-	float m_flTonemapEVSmoothingRange; // 0xd08	
-	// MNetworkEnable
-	bool m_bMaster; // 0xd0c	
-	// MNetworkEnable
-	bool m_bExposureControl; // 0xd0d	
-private:
-	[[maybe_unused]] uint8_t __pad0d0e[0x2]; // 0xd0e
-public:
-	// MNetworkEnable
-	float m_flRate; // 0xd10	
-	// MNetworkEnable
-	float m_flTonemapPercentTarget; // 0xd14	
-	// MNetworkEnable
-	float m_flTonemapPercentBrightPixels; // 0xd18	
-	// MNetworkEnable
-	float m_flTonemapMinAvgLum; // 0xd1c	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x48
-// Has VTable
-// 
-// MNetworkVarNames "CHandle< CBaseEntity> m_hPlayerPing"
-class CCSPlayer_PingServices : public CPlayerPawnComponent
-{
-public:
-	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hPlayerPing; // 0x40	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x40
-// Has VTable
-class CPlayer_FlashlightServices : public CPlayerPawnComponent
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0xcc8
-// Has VTable
-class CServerOnlyModelEntity : public C_BaseModelEntity
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
-// Has VTable
-class C_WeaponMag7 : public C_CSWeaponBaseGun
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0xcc8
-// Has VTable
-// 
-// MNetworkOverride "m_angRotation CGameSceneNode"
-// MNetworkOverride "m_flSimulationTime C_BaseEntity"
-class C_FuncRotating : public C_BaseModelEntity
-{
-public:
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x558
-// Has VTable
-// 
-// MNetworkVarNames "float32 m_flScale"
-// MNetworkVarNames "float32 m_flStartScale"
-// MNetworkVarNames "float m_flScaleTime"
-// MNetworkVarNames "uint32 m_nFlags"
-class C_BaseFire : public C_BaseEntity
-{
-public:
-	// MNetworkEnable
-	float m_flScale; // 0x548	
-	// MNetworkEnable
-	float m_flStartScale; // 0x54c	
-	// MNetworkEnable
-	float m_flScaleTime; // 0x550	
-	// MNetworkEnable
-	uint32_t m_nFlags; // 0x554	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x98
-class C_CommandContext
-{
-public:
-	bool needsprocessing; // 0x0	
-	int32_t command_number; // 0x90	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1
-// Has Trivial Constructor
-// Has Trivial Destructor
-// 
-// MPulseProvideFeatureTag
-// MPulseLibraryBindings
-class CPointTemplateAPI
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
-public:
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1180
-// Has VTable
-// 
-// MNetworkVarNames "int m_nDecoyShotTick"
-class C_DecoyProjectile : public C_BaseCSGrenadeProjectile
-{
-public:
-	// MNetworkEnable
-	int32_t m_nDecoyShotTick; // 0x1150	
-	int32_t m_nClientLastKnownDecoyShotTick; // 0x1154	
-private:
-	[[maybe_unused]] uint8_t __pad1158[0x20]; // 0x1158
-public:
-	GameTime_t m_flTimeParticleEffectSpawn; // 0x1178	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0xed0
-// Has VTable
-class C_WaterBullet : public CBaseAnimGraph
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x18
-// Has VTable
-// 
-// MNetworkVarNames "bool m_bSpotted"
-// MNetworkVarNames "uint32 m_bSpottedByMask"
-struct EntitySpottedState_t
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnIsSpottedChanged"
-	bool m_bSpotted; // 0x8	
-private:
-	[[maybe_unused]] uint8_t __pad0009[0x3]; // 0x9
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnIsSpottedChanged"
-	uint32_t m_bSpottedByMask[2]; // 0xc	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1858
-// Has VTable
-// 
-// MNetworkVarNames "CAnimGraphNetworkedVariables m_animGraphNetworkedVars"
-// MNetworkVarNames "HSequence m_hSequence"
-// MNetworkVarNames "GameTime_t m_flSeqStartTime"
-// MNetworkVarNames "float m_flSeqFixedCycle"
-// MNetworkVarNames "AnimLoopMode_t m_nAnimLoopMode"
-class CBaseAnimGraphController : public CSkeletonAnimationController
-{
-private:
-	[[maybe_unused]] uint8_t __pad0010[0x8]; // 0x10
-public:
-	// MNetworkEnable
-	CAnimGraphNetworkedVariables m_animGraphNetworkedVars; // 0x18	
-	// MNetworkDisable
-	bool m_bSequenceFinished; // 0x14a8	
-private:
-	[[maybe_unused]] uint8_t __pad14a9[0x3]; // 0x14a9
-public:
-	// MNetworkDisable
-	float m_flSoundSyncTime; // 0x14ac	
-	// MNetworkDisable
-	uint32_t m_nActiveIKChainMask; // 0x14b0	
-	// MNetworkEnable
-	// MNetworkSerializer "minusone"
-	// MNetworkChangeCallback "OnNetworkedSequenceChanged"
-	// MNetworkPriority "32"
-	HSequence m_hSequence; // 0x14b4	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
-	// MNetworkPriority "32"
-	GameTime_t m_flSeqStartTime; // 0x14b8	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
-	// MNetworkPriority "32"
-	float m_flSeqFixedCycle; // 0x14bc	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
-	// MNetworkPriority "32"
-	AnimLoopMode_t m_nAnimLoopMode; // 0x14c0	
-	// MNetworkEnable
-	// MNetworkBitCount "8"
-	// MNetworkMinValue "-4.000000"
-	// MNetworkMaxValue "12.000000"
-	// MNetworkEncodeFlags "5"
-	// MNetworkPriority "32"
-	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
-	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x14c4	
-private:
-	[[maybe_unused]] uint8_t __pad14cc[0x4]; // 0x14cc
-public:
-	// MNetworkDisable
-	SequenceFinishNotifyState_t m_nNotifyState; // 0x14d0	
-private:
-	[[maybe_unused]] uint8_t __pad14d1[0x1]; // 0x14d1
-public:
-	// MNetworkDisable
-	bool m_bNetworkedAnimationInputsChanged; // 0x14d2	
-	// MNetworkDisable
-	bool m_bNetworkedSequenceChanged; // 0x14d3	
-	// MNetworkDisable
-	bool m_bLastUpdateSkipped; // 0x14d4	
-private:
-	[[maybe_unused]] uint8_t __pad14d5[0x3]; // 0x14d5
-public:
-	// MNetworkDisable
-	GameTime_t m_flPrevAnimUpdateTime; // 0x14d8	
-	
-	// Datamap fields:
-	// void m_pAnimGraphInstance; // 0x1778
-	// float m_flCachedSequenceCycleRate; // 0x14cc
-	// void m_iv_AnimOpHistory; // 0x1808
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x550
-// Has VTable
-class CCSPointScriptEntity : public C_BaseEntity
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1ac0
-// Has VTable
-// 
-// MNetworkVarNames "bool m_bStartedArming"
-// MNetworkVarNames "GameTime_t m_fArmedTime"
-// MNetworkVarNames "bool m_bBombPlacedAnimation"
-// MNetworkVarNames "bool m_bIsPlantingViaUse"
-// MNetworkVarNames "EntitySpottedState_t m_entitySpottedState"
-class C_C4 : public C_CSWeaponBase
-{
-public:
-	char m_szScreenText[32]; // 0x1a60	
-	ParticleIndex_t m_activeLightParticleIndex; // 0x1a80	
-	C4LightEffect_t m_eActiveLightEffect; // 0x1a84	
-	// MNetworkEnable
-	bool m_bStartedArming; // 0x1a88	
-private:
-	[[maybe_unused]] uint8_t __pad1a89[0x3]; // 0x1a89
-public:
-	// MNetworkEnable
-	GameTime_t m_fArmedTime; // 0x1a8c	
-	// MNetworkEnable
-	bool m_bBombPlacedAnimation; // 0x1a90	
-	// MNetworkEnable
-	bool m_bIsPlantingViaUse; // 0x1a91	
-private:
-	[[maybe_unused]] uint8_t __pad1a92[0x6]; // 0x1a92
-public:
-	// MNetworkEnable
-	EntitySpottedState_t m_entitySpottedState; // 0x1a98	
-	int32_t m_nSpotRules; // 0x1ab0	
-	bool m_bPlayedArmingBeeps[7]; // 0x1ab4	
-	bool m_bBombPlanted; // 0x1abb	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0xf68
-// Has VTable
-class C_ClientRagdoll : public CBaseAnimGraph
-{
-public:
-	bool m_bFadeOut; // 0xed0	
-	bool m_bImportant; // 0xed1	
-private:
-	[[maybe_unused]] uint8_t __pad0ed2[0x2]; // 0xed2
-public:
-	GameTime_t m_flEffectTime; // 0xed4	
-	GameTime_t m_gibDespawnTime; // 0xed8	
-	int32_t m_iCurrentFriction; // 0xedc	
-	int32_t m_iMinFriction; // 0xee0	
-	int32_t m_iMaxFriction; // 0xee4	
-	int32_t m_iFrictionAnimState; // 0xee8	
-	bool m_bReleaseRagdoll; // 0xeec	
-	AttachmentHandle_t m_iEyeAttachment; // 0xeed	
-	bool m_bFadingOut; // 0xeee	
-private:
-	[[maybe_unused]] uint8_t __pad0eef[0x1]; // 0xeef
-public:
-	float m_flScaleEnd[10]; // 0xef0	
-	GameTime_t m_flScaleTimeStart[10]; // 0xf18	
-	GameTime_t m_flScaleTimeEnd[10]; // 0xf40	
-	
-	// Datamap fields:
-	// Color m_clrRender; // 0xa7b
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a60
-// Has VTable
-class C_Melee : public C_CSWeaponBase
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x10b8
-// Has VTable
-class CBreachChargeProjectile : public C_BaseGrenade
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x548
-// Has VTable
-class C_InfoInstructorHintHostageRescueZone : public C_PointEntity
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x40
-// Has VTable
-class C_TeamplayRules : public C_MultiplayRules
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1
-// Has Trivial Constructor
-// Has Trivial Destructor
-// 
-// MPulseProvideFeatureTag
-// MPulseLibraryBindings
-class CBasePlayerControllerAPI
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
-public:
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x650
-// Has VTable
-class C_PathParticleRopeAlias_path_particle_rope_clientside : public C_PathParticleRope
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1
-// Has Trivial Constructor
-// Has Trivial Destructor
-// 
-// MPulseProvideFeatureTag
-// MPulseLibraryBindings
-class CCSPointScriptExtensions_CCSWeaponBaseVData
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
-public:
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x560
-// Has VTable
-// 
-// MNetworkVarNames "Vector m_vMins"
-// MNetworkVarNames "Vector m_vMaxs"
-class C_SoundEventAABBEntity : public C_SoundEventEntity
-{
-public:
-	// MNetworkEnable
-	Vector m_vMins; // 0x548	
-	// MNetworkEnable
-	Vector m_vMaxs; // 0x554	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
-// Has VTable
-class C_WeaponP90 : public C_CSWeaponBaseGun
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
-// Has VTable
-class C_WeaponCZ75a : public C_CSWeaponBaseGun
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x250
-// Has VTable
-// 
-// MGetKV3ClassDefaults
-class CBasePlayerWeaponVData : public CEntitySubclassVDataBase
-{
-public:
-	// MPropertyDescription "Model used on the ground or held by an entity"
-	// MPropertyGroupName "Visuals"
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szWorldModel; // 0x28	
-	// MPropertyDescription "Was the weapon was built right-handed?"
-	// MPropertyGroupName "Visuals"
-	bool m_bBuiltRightHanded; // 0x108	
-	// MPropertyDescription "Allows flipping the model, regardless of whether it is built left or right handed"
-	// MPropertyGroupName "Visuals"
-	bool m_bAllowFlipping; // 0x109	
-private:
-	[[maybe_unused]] uint8_t __pad010a[0x6]; // 0x10a
-public:
-	// MPropertyGroupName "Visuals"
-	// MPropertyDescription "Attachment to fire bullets from"
-	// MPropertyAttributeEditor "VDataModelAttachment( m_szWorldModel )"
-	CUtlString m_sMuzzleAttachment; // 0x110	
-	// MPropertyDescription "Effect when firing this weapon"
-	// MPropertyGroupName "Visuals"
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticle; // 0x118	
-	ItemFlagTypes_t m_iFlags; // 0x1f8	
-	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
-	// MPropertyGroupName "Ammo"
-	// MPropertyCustomFGDType "string"
-	AmmoIndex_t m_nPrimaryAmmoType; // 0x1f9	
-	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
-	// MPropertyGroupName "Ammo"
-	// MPropertyCustomFGDType "string"
-	AmmoIndex_t m_nSecondaryAmmoType; // 0x1fa	
-private:
-	[[maybe_unused]] uint8_t __pad01fb[0x1]; // 0x1fb
-public:
-	// MPropertyFriendlyName "Primary Clip Size"
-	// MPropertyDescription "How many bullets this gun can fire before it reloads (0 if no clip)"
-	// MPropertyAttributeRange "0 255"
-	// MPropertyGroupName "Ammo"
-	int32_t m_iMaxClip1; // 0x1fc	
-	// MPropertyFriendlyName "Secondary Clip Size"
-	// MPropertyDescription "How many secondary bullets this gun can fire before it reloads (0 if no clip)"
-	// MPropertyGroupName "Ammo"
-	// MPropertyAttributeRange "0 255"
-	int32_t m_iMaxClip2; // 0x200	
-	// MPropertyDescription "Primary Initial Clip (-1 means use clip size)"
-	// MPropertyGroupName "Ammo"
-	// MPropertyAttributeRange "-1 255"
-	int32_t m_iDefaultClip1; // 0x204	
-	// MPropertyDescription "Secondary Initial Clip (-1 means use clip size)"
-	// MPropertyGroupName "Ammo"
-	// MPropertyAttributeRange "-1 255"
-	int32_t m_iDefaultClip2; // 0x208	
-	// MPropertyDescription "This value used to determine this weapon's importance in autoselection"
-	// MPropertyGroupName "UI"
-	int32_t m_iWeight; // 0x20c	
-	// MPropertyFriendlyName "Safe To Auto-Switch To"
-	// MPropertyDescription "Whether this weapon is safe to automatically switch to (should be false for eg. explosives that can the player may accidentally hurt themselves with)"
-	// MPropertyGroupName "UI"
-	bool m_bAutoSwitchTo; // 0x210	
-	// MPropertyFriendlyName "Safe To Auto-Switch Away From"
-	// MPropertyGroupName "UI"
-	bool m_bAutoSwitchFrom; // 0x211	
-private:
-	[[maybe_unused]] uint8_t __pad0212[0x2]; // 0x212
-public:
-	// MPropertyGroupName "UI"
-	RumbleEffect_t m_iRumbleEffect; // 0x214	
-	// MPropertyDescription "Should both primary and secondary attacks be cooled down together (so cooling down primary attack would cooldown both primary + secondary attacks)?"
-	bool m_bLinkedCooldowns; // 0x218	
-private:
-	[[maybe_unused]] uint8_t __pad0219[0x7]; // 0x219
-public:
-	CUtlOrderedMap< WeaponSound_t, CSoundEventName > m_aShootSounds; // 0x220	
-	// MPropertyFriendlyName "HUD Bucket"
-	// MPropertyDescription "Which 'column' to display this weapon in the HUD"
-	// MPropertyGroupName "UI"
-	int32_t m_iSlot; // 0x248	
-	// MPropertyFriendlyName "HUD Bucket Position"
-	// MPropertyDescription "Which 'row' to display this weapon in the HUD"
-	// MPropertyGroupName "UI"
-	int32_t m_iPosition; // 0x24c	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0xfc0
-// Has VTable
-// 
-// MNetworkIncludeByName "m_nModelIndex"
-// MNetworkIncludeByName "m_lifeState"
-// MNetworkVarNames "Vector m_poolOrigin"
-// MNetworkVarNames "float32 m_waterLevel"
-// MNetworkVarNames "float32 m_x"
-// MNetworkVarNames "float32 m_y"
-// MNetworkVarNames "float32 m_z"
-// MNetworkVarNames "float32 m_angle"
-class C_Fish : public CBaseAnimGraph
-{
-public:
-	Vector m_pos; // 0xed0	
-	Vector m_vel; // 0xedc	
-	QAngle m_angles; // 0xee8	
-	int32_t m_localLifeState; // 0xef4	
-	float m_deathDepth; // 0xef8	
-	float m_deathAngle; // 0xefc	
-	float m_buoyancy; // 0xf00	
-private:
-	[[maybe_unused]] uint8_t __pad0f04[0x4]; // 0xf04
-public:
-	CountdownTimer m_wiggleTimer; // 0xf08	
-	float m_wigglePhase; // 0xf20	
-	float m_wiggleRate; // 0xf24	
-	Vector m_actualPos; // 0xf28	
-	QAngle m_actualAngles; // 0xf34	
-	// MNetworkEnable
-	// MNetworkEncoder "coord"
-	Vector m_poolOrigin; // 0xf40	
-	// MNetworkEnable
-	float m_waterLevel; // 0xf4c	
-	bool m_gotUpdate; // 0xf50	
-private:
-	[[maybe_unused]] uint8_t __pad0f51[0x3]; // 0xf51
-public:
-	// MNetworkEnable
-	// MNetworkSerializer "fish_pos_x"
-	// MNetworkChangeCallback "OnPosChanged"
-	float m_x; // 0xf54	
-	// MNetworkEnable
-	// MNetworkSerializer "fish_pos_y"
-	// MNetworkChangeCallback "OnPosChanged"
-	float m_y; // 0xf58	
-	// MNetworkEnable
-	// MNetworkSerializer "fish_pos_z"
-	// MNetworkChangeCallback "OnPosChanged"
-	float m_z; // 0xf5c	
-	// MNetworkEnable
-	// MNetworkSerializer "angle_normalize_positive"
-	// MNetworkBitCount "7"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "360.000000"
-	// MNetworkEncodeFlags "1"
-	// MNetworkChangeCallback "OnAngChanged"
-	float m_angle; // 0xf60	
-	float m_errorHistory[20]; // 0xf64	
-	int32_t m_errorHistoryIndex; // 0xfb4	
-	int32_t m_errorHistoryCount; // 0xfb8	
-	float m_averageError; // 0xfbc	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x10
-// Has VTable
-// Has Trivial Destructor
-// 
-// MNetworkVarNames "GameTime_t m_timestamp"
-// MNetworkVarNames "WorldGroupId_t m_nWorldGroupId"
-class IntervalTimer
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
-public:
-	// MNetworkEnable
-	GameTime_t m_timestamp; // 0x8	
-	// MNetworkEnable
-	WorldGroupId_t m_nWorldGroupId; // 0xc	
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
-// Has VTable
-class C_WeaponAWP : public C_CSWeaponBaseGun
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1278
-// Has VTable
-class C_CSGO_TeamIntroCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1278
-// Has VTable
-class CCSGO_WingmanIntroCharacterPosition : public C_CSGO_TeamIntroCharacterPosition
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x548
-// Has VTable
-class CLogicalEntity : public C_BaseEntity
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x460
-// Has VTable
-// 
-// MNetworkVarNames "CSkeletonInstance m_skeletonInstance"
-class CBodyComponentSkeletonInstance : public CBodyComponent
-{
-public:
-	// MNetworkEnable
-	// -> m_modelState - 0x1c0
-	// -> m_bIsAnimationEnabled - 0x3f0
-	// -> m_bUseParentRenderBounds - 0x3f1
-	// -> m_bDisableSolidCollisionsForHierarchy - 0x3f2
-	// -> m_materialGroup - 0x3f4
-	// -> m_nHitboxSet - 0x3f8
-	CSkeletonInstance m_skeletonInstance; // 0x50	
-	
-	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->m_static_fields[1]->m_instance);};
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x20
-// Has VTable
-// Has Trivial Destructor
-class CBuoyancyHelper
-{
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
-public:
-	float m_flFluidDensity; // 0x18	
-	
-	// Datamap fields:
-	// void m_pController; // 0x8
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x10b0
-// Has VTable
-// 
-// MNetworkIncludeByUserGroup "Origin"
-// MNetworkIncludeByName "CGameSceneNode::m_hParent"
-// MNetworkIncludeByName "CGameSceneNode::m_hierarchyAttachName"
-// MNetworkIncludeByName "m_nMinCPULevel"
-// MNetworkIncludeByName "m_nMaxCPULevel"
-// MNetworkIncludeByName "m_nMinGPULevel"
-// MNetworkIncludeByName "m_nMaxGPULevel"
-// MNetworkVarNames "float32 m_flScrollSpeed"
-// MNetworkVarNames "uint16 m_RopeFlags"
-// MNetworkVarNames "HMaterialStrong m_iRopeMaterialModelIndex"
-// MNetworkVarNames "uint8 m_nSegments"
-// MNetworkVarNames "CHandle< C_BaseEntity> m_hStartPoint"
-// MNetworkVarNames "CHandle< C_BaseEntity> m_hEndPoint"
-// MNetworkVarNames "AttachmentHandle_t m_iStartAttachment"
-// MNetworkVarNames "AttachmentHandle_t m_iEndAttachment"
-// MNetworkVarNames "uint8 m_Subdiv"
-// MNetworkVarNames "int16 m_RopeLength"
-// MNetworkVarNames "int16 m_Slack"
-// MNetworkVarNames "float32 m_TextureScale"
-// MNetworkVarNames "uint8 m_fLockedPoints"
-// MNetworkVarNames "uint8 m_nChangeCount"
-// MNetworkVarNames "float32 m_Width"
-// MNetworkVarNames "bool m_bConstrainBetweenEndpoints"
-class C_RopeKeyframe : public C_BaseModelEntity
-{
-private:
-	[[maybe_unused]] uint8_t __pad0cc8[0x8]; // 0xcc8
-public:
-	CBitVec< 10 > m_LinksTouchingSomething; // 0xcd0	
-	int32_t m_nLinksTouchingSomething; // 0xcd4	
-	bool m_bApplyWind; // 0xcd8	
-private:
-	[[maybe_unused]] uint8_t __pad0cd9[0x3]; // 0xcd9
-public:
-	int32_t m_fPrevLockedPoints; // 0xcdc	
-	int32_t m_iForcePointMoveCounter; // 0xce0	
-	bool m_bPrevEndPointPos[2]; // 0xce4	
-private:
-	[[maybe_unused]] uint8_t __pad0ce6[0x2]; // 0xce6
-public:
-	Vector m_vPrevEndPointPos[2]; // 0xce8	
-	float m_flCurScroll; // 0xd00	
-	// MNetworkEnable
-	float m_flScrollSpeed; // 0xd04	
-	// MNetworkEnable
-	uint16_t m_RopeFlags; // 0xd08	
-private:
-	[[maybe_unused]] uint8_t __pad0d0a[0x6]; // 0xd0a
-public:
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_iRopeMaterialModelIndex; // 0xd10	
-private:
-	[[maybe_unused]] uint8_t __pad0d18[0x270]; // 0xd18
-public:
-	Vector m_LightValues[10]; // 0xf88	
-	// MNetworkEnable
-	uint8_t m_nSegments; // 0x1000	
-private:
-	[[maybe_unused]] uint8_t __pad1001[0x3]; // 0x1001
-public:
-	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hStartPoint; // 0x1004	
-	// MNetworkEnable
-	CHandle< C_BaseEntity > m_hEndPoint; // 0x1008	
-	// MNetworkEnable
-	AttachmentHandle_t m_iStartAttachment; // 0x100c	
-	// MNetworkEnable
-	AttachmentHandle_t m_iEndAttachment; // 0x100d	
-	// MNetworkEnable
-	uint8_t m_Subdiv; // 0x100e	
-private:
-	[[maybe_unused]] uint8_t __pad100f[0x1]; // 0x100f
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "RecomputeSprings"
-	int16_t m_RopeLength; // 0x1010	
-	// MNetworkEnable
-	// MNetworkChangeCallback "RecomputeSprings"
-	int16_t m_Slack; // 0x1012	
-	// MNetworkEnable
-	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.100000"
-	// MNetworkMaxValue "10.000000"
-	float m_TextureScale; // 0x1014	
-	// MNetworkEnable
-	uint8_t m_fLockedPoints; // 0x1018	
-	// MNetworkEnable
-	uint8_t m_nChangeCount; // 0x1019	
-private:
-	[[maybe_unused]] uint8_t __pad101a[0x2]; // 0x101a
-public:
-	// MNetworkEnable
-	float m_Width; // 0x101c	
-	C_RopeKeyframe::CPhysicsDelegate m_PhysicsDelegate; // 0x1020	
-	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x1030	
-	int32_t m_TextureHeight; // 0x1038	
-	Vector m_vecImpulse; // 0x103c	
-	Vector m_vecPreviousImpulse; // 0x1048	
-	float m_flCurrentGustTimer; // 0x1054	
-	float m_flCurrentGustLifetime; // 0x1058	
-	float m_flTimeToNextGust; // 0x105c	
-	Vector m_vWindDir; // 0x1060	
-	Vector m_vColorMod; // 0x106c	
-	Vector m_vCachedEndPointAttachmentPos[2]; // 0x1078	
-	QAngle m_vCachedEndPointAttachmentAngle[2]; // 0x1090	
-	// MNetworkEnable
-	bool m_bConstrainBetweenEndpoints; // 0x10a8	
-	struct 
-	{
-		uint8_t m_bEndPointAttachmentPositionsDirty: 1; 		
-		uint8_t m_bEndPointAttachmentAnglesDirty: 1; 		
-		uint8_t m_bNewDataThisFrame: 1; 		
-		uint8_t m_bPhysicsInitted: 1; 		
-		uint8_t __pad2: 4;
-	}; // 8 bits
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x5e0
-// Has VTable
-// 
-// MNetworkVarNames "HRenderTextureStrong m_hGradientFogTexture"
-// MNetworkVarNames "float m_flFogStartDistance"
-// MNetworkVarNames "float m_flFogEndDistance"
-// MNetworkVarNames "bool m_bHeightFogEnabled"
-// MNetworkVarNames "float m_flFogStartHeight"
-// MNetworkVarNames "float m_flFogEndHeight"
-// MNetworkVarNames "float m_flFarZ"
-// MNetworkVarNames "float m_flFogMaxOpacity"
-// MNetworkVarNames "float m_flFogFalloffExponent"
-// MNetworkVarNames "float m_flFogVerticalExponent"
-// MNetworkVarNames "Color m_fogColor"
-// MNetworkVarNames "float m_flFogStrength"
-// MNetworkVarNames "float m_flFadeTime"
-// MNetworkVarNames "bool m_bStartDisabled"
-// MNetworkVarNames "bool m_bIsEnabled"
-class C_GradientFog : public C_BaseEntity
-{
-public:
-	// MNetworkEnable
-	CStrongHandle< InfoForResourceTypeCTextureBase > m_hGradientFogTexture; // 0x548	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogStartDistance; // 0x550	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogEndDistance; // 0x554	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	bool m_bHeightFogEnabled; // 0x558	
-private:
-	[[maybe_unused]] uint8_t __pad0559[0x3]; // 0x559
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogStartHeight; // 0x55c	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogEndHeight; // 0x560	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFarZ; // 0x564	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogMaxOpacity; // 0x568	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogFalloffExponent; // 0x56c	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogVerticalExponent; // 0x570	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	Color m_fogColor; // 0x574	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFogStrength; // 0x578	
-	// MNetworkEnable
-	// MNetworkChangeCallback "FogStateChanged"
-	float m_flFadeTime; // 0x57c	
-	// MNetworkEnable
-	bool m_bStartDisabled; // 0x580	
-	// MNetworkEnable
-	bool m_bIsEnabled; // 0x581	
-	bool m_bGradientFogNeedsTextures; // 0x582	
-	
-	// Static fields:
-	static C_GradientFog* &Get_sm_pGradientFog(){return *reinterpret_cast<C_GradientFog**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GradientFog")->m_static_fields[0]->m_instance);};
-	
-	// Datamap fields:
-	// bool InputEnable; // 0x0
-	// bool InputDisable; // 0x0
-	// float InputSetFogStartDistance; // 0x0
-	// float InputSetFogEndDistance; // 0x0
-	// float InputSetFogStartHeight; // 0x0
-	// float InputSetFogEndHeight; // 0x0
-	// float InputSetFogMaxOpacity; // 0x0
-	// float InputSetFogFalloffExponent; // 0x0
-	// float InputSetFogVerticalExponent; // 0x0
-	// Color InputSetFogColor; // 0x0
-	// float InputSetFogStrength; // 0x0
-	// float InputSetFarZ; // 0x0
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x1460
-// Has VTable
-// 
-// MNetworkExcludeByName "m_flAnimTime"
-// MNetworkExcludeByName "m_flexWeight"
-// MNetworkExcludeByUserGroup "m_flPoseParameter"
-// MNetworkExcludeByName "m_baseLayer.m_hSequence"
-// MNetworkExcludeByName "m_animationController.m_flPlaybackRate"
-// MNetworkVarNames "CCSPlayer_PingServices * m_pPingServices"
-// MNetworkVarNames "CPlayer_ViewModelServices * m_pViewModelServices"
-// MNetworkVarNames "CSPlayerState m_iPlayerState"
-// MNetworkVarNames "bool m_bIsRescuing"
-// MNetworkVarNames "GameTime_t m_fImmuneToGunGameDamageTime"
-// MNetworkVarNames "bool m_bGunGameImmunity"
-// MNetworkVarNames "bool m_bHasMovedSinceSpawn"
-// MNetworkVarNames "float m_fMolotovUseTime"
-// MNetworkVarNames "float m_fMolotovDamageTime"
-// MNetworkVarNames "int m_iThrowGrenadeCounter"
-// MNetworkVarNames "int m_iProgressBarDuration"
-// MNetworkVarNames "float m_flProgressBarStartTime"
-// MNetworkVarNames "float m_flFlashMaxAlpha"
-// MNetworkVarNames "float m_flFlashDuration"
-// MNetworkVarNames "int m_cycleLatch"
-// MNetworkVarNames "CHandle< CCSPlayerController> m_hOriginalController"
-class C_CSPlayerPawnBase : public C_BasePlayerPawn
-{
-private:
-	[[maybe_unused]] uint8_t __pad1298[0x18]; // 0x1298
-public:
-	// MNetworkEnable
-	CCSPlayer_PingServices* m_pPingServices; // 0x12b0	
-	// MNetworkEnable
-	CPlayer_ViewModelServices* m_pViewModelServices; // 0x12b8	
-	float m_fRenderingClipPlane[4]; // 0x12c0	
-	int32_t m_nLastClipPlaneSetupFrame; // 0x12d0	
-	Vector m_vecLastClipCameraPos; // 0x12d4	
-	Vector m_vecLastClipCameraForward; // 0x12e0	
-	bool m_bClipHitStaticWorld; // 0x12ec	
-	bool m_bCachedPlaneIsValid; // 0x12ed	
-private:
-	[[maybe_unused]] uint8_t __pad12ee[0x2]; // 0x12ee
-public:
-	C_CSWeaponBase* m_pClippingWeapon; // 0x12f0	
-	CSPlayerState m_previousPlayerState; // 0x12f8	
-	// MNetworkEnable
-	CSPlayerState m_iPlayerState; // 0x12fc	
-	// MNetworkEnable
-	bool m_bIsRescuing; // 0x1300	
-private:
-	[[maybe_unused]] uint8_t __pad1301[0x3]; // 0x1301
-public:
-	// MNetworkEnable
-	GameTime_t m_fImmuneToGunGameDamageTime; // 0x1304	
-	GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x1308	
-	// MNetworkEnable
-	bool m_bGunGameImmunity; // 0x130c	
-	// MNetworkEnable
-	bool m_bHasMovedSinceSpawn; // 0x130d	
-private:
-	[[maybe_unused]] uint8_t __pad130e[0x2]; // 0x130e
-public:
-	// MNetworkEnable
-	float m_fMolotovUseTime; // 0x1310	
-	// MNetworkEnable
-	float m_fMolotovDamageTime; // 0x1314	
-	// MNetworkEnable
-	int32_t m_iThrowGrenadeCounter; // 0x1318	
-	GameTime_t m_flLastSpawnTimeIndex; // 0x131c	
-	// MNetworkEnable
-	int32_t m_iProgressBarDuration; // 0x1320	
-	// MNetworkEnable
-	float m_flProgressBarStartTime; // 0x1324	
-	Vector m_vecIntroStartEyePosition; // 0x1328	
-	Vector m_vecIntroStartPlayerForward; // 0x1334	
-	GameTime_t m_flClientDeathTime; // 0x1340	
-	bool m_bScreenTearFrameCaptured; // 0x1344	
-private:
-	[[maybe_unused]] uint8_t __pad1345[0x3]; // 0x1345
-public:
-	float m_flFlashBangTime; // 0x1348	
-	float m_flFlashScreenshotAlpha; // 0x134c	
-	float m_flFlashOverlayAlpha; // 0x1350	
-	bool m_bFlashBuildUp; // 0x1354	
-	bool m_bFlashDspHasBeenCleared; // 0x1355	
-	bool m_bFlashScreenshotHasBeenGrabbed; // 0x1356	
-private:
-	[[maybe_unused]] uint8_t __pad1357[0x1]; // 0x1357
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnFlashMaxAlphaChanged"
-	float m_flFlashMaxAlpha; // 0x1358	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnFlashDurationChanged"
-	float m_flFlashDuration; // 0x135c	
-	int32_t m_iHealthBarRenderMaskIndex; // 0x1360	
-	float m_flHealthFadeValue; // 0x1364	
-	float m_flHealthFadeAlpha; // 0x1368	
-private:
-	[[maybe_unused]] uint8_t __pad136c[0xc]; // 0x136c
-public:
-	float m_flDeathCCWeight; // 0x1378	
-	float m_flPrevRoundEndTime; // 0x137c	
-	float m_flPrevMatchEndTime; // 0x1380	
-private:
-	[[maybe_unused]] uint8_t __pad1384[0x4]; // 0x1384
-public:
-	// MNetworkEnable
-	// MNetworkEncoder "qangle_precise"
-	// MNetworkChangeCallback "playerEyeAnglesChanged"
-	// MNetworkPriority "32"
-	QAngle m_angEyeAngles; // 0x1388	
-private:
-	[[maybe_unused]] uint8_t __pad1394[0xc]; // 0x1394
-public:
-	float m_fNextThinkPushAway; // 0x13a0	
-	bool m_bShouldAutobuyDMWeapons; // 0x13a4	
-	bool m_bShouldAutobuyNow; // 0x13a5	
-private:
-	[[maybe_unused]] uint8_t __pad13a6[0x2]; // 0x13a6
-public:
-	CEntityIndex m_iIDEntIndex; // 0x13a8	
-private:
-	[[maybe_unused]] uint8_t __pad13ac[0x4]; // 0x13ac
-public:
-	CountdownTimer m_delayTargetIDTimer; // 0x13b0	
-	CEntityIndex m_iTargetItemEntIdx; // 0x13c8	
-	CEntityIndex m_iOldIDEntIndex; // 0x13cc	
-	CountdownTimer m_holdTargetIDTimer; // 0x13d0	
-private:
-	[[maybe_unused]] uint8_t __pad13e8[0x4]; // 0x13e8
-public:
-	float m_flCurrentMusicStartTime; // 0x13ec	
-	float m_flMusicRoundStartTime; // 0x13f0	
-	bool m_bDeferStartMusicOnWarmup; // 0x13f4	
-private:
-	[[maybe_unused]] uint8_t __pad13f5[0x3]; // 0x13f5
-public:
-	// MNetworkEnable
-	int32_t m_cycleLatch; // 0x13f8	
-	float m_serverIntendedCycle; // 0x13fc	
-	float m_flLastSmokeOverlayAlpha; // 0x1400	
-	float m_flLastSmokeAge; // 0x1404	
-	Vector m_vLastSmokeOverlayColor; // 0x1408	
-	ParticleIndex_t m_nPlayerSmokedFx; // 0x1414	
-	ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x1418	
-	ParticleIndex_t m_nPlayerInfernoFootFx; // 0x141c	
-	float m_flNextMagDropTime; // 0x1420	
-	int32_t m_nLastMagDropAttachmentIndex; // 0x1424	
-	Vector m_vecLastAliveLocalVelocity; // 0x1428	
-private:
-	[[maybe_unused]] uint8_t __pad1434[0x1c]; // 0x1434
-public:
-	bool m_bGuardianShouldSprayCustomXMark; // 0x1450	
-private:
-	[[maybe_unused]] uint8_t __pad1451[0x7]; // 0x1451
-public:
-	// MNetworkEnable
-	CHandle< CCSPlayerController > m_hOriginalController; // 0x1458	
-};
-
-// Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x5d0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TerroristWingmanIntroCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -6040,6 +8253,7 @@ public:
 // Alignment: 8
 // Size: 0x228
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "uint32 m_iFOV"
 // MNetworkVarNames "uint32 m_iFOVStart"
@@ -6067,17 +8281,10 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamSelectCharacterPosition : public C_CSGO_TeamPreviewCharacterPosition
-{
-public:
-	// No schema binary for binding
-};
-
-// Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1ab0
-// Has VTable
-class C_MolotovGrenade : public C_BaseCSGrenade
 {
 public:
 	// No schema binary for binding
@@ -6087,6 +8294,21 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MNetworkAssumeNotNetworkable
+class CCSGO_WingmanIntroCharacterPosition : public C_CSGO_TeamIntroCharacterPosition
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1278
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CCSGO_WingmanIntroCounterTerroristPosition : public CCSGO_WingmanIntroCharacterPosition
 {
 public:
@@ -6097,6 +8319,7 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_iEnemy5Ks"
 // MNetworkVarNames "int m_iEnemy4Ks"
@@ -6122,6 +8345,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_FuncMover : public C_BaseToggle
 {
 public:
@@ -6132,6 +8357,8 @@ public:
 // Alignment: 8
 // Size: 0x590
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bActive"
 // MNetworkVarNames "Vector m_vBoxMins"
@@ -6197,6 +8424,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CWaterSplasher : public C_BaseModelEntity
 {
 public:
@@ -6207,6 +8436,9 @@ public:
 // Alignment: 8
 // Size: 0xfb0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_EnvProjectedTexture : public C_ModelPointEntity
 {
 public:
@@ -6217,6 +8449,7 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSObserver_ViewModelServices : public CPlayer_ViewModelServices
 {
 public:
@@ -6236,8 +8469,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponRevolver : public C_CSWeaponBaseGun
 {
 public:
@@ -6248,6 +8483,8 @@ public:
 // Alignment: 8
 // Size: 0xdd8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "HMaterialStrong m_hSpriteMaterial"
 // MNetworkVarNames "CHandle< CBaseEntity> m_hAttachedToEntity"
@@ -6275,14 +8512,14 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "60.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "60,000000"
 	// MNetworkEncodeFlags "2"
 	float m_flSpriteFramerate; // 0xcd8	
 	// MNetworkEnable
 	// MNetworkBitCount "20"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "256.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "256,000000"
 	// MNetworkEncodeFlags "1"
 	float m_flFrame; // 0xcdc	
 	GameTime_t m_flDieTime; // 0xce0	
@@ -6305,8 +8542,8 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "6"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "64.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "64,000000"
 	// MNetworkEncodeFlags "2"
 	float m_flGlowProxySize; // 0xd04	
 	// MNetworkEnable
@@ -6334,6 +8571,8 @@ public:
 // Alignment: 8
 // Size: 0x1650
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Color m_Entity_Color"
 // MNetworkVarNames "float m_Entity_flBrightness"
@@ -6436,6 +8675,8 @@ public:
 // Alignment: 8
 // Size: 0x568
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SoundOpvarSetOBBWindEntity : public C_SoundOpvarSetPointBase
 {
 public:
@@ -6444,34 +8685,25 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x68
+// Size: 0x4
+// Has Trivial Destructor
 // 
-// MNetworkVarNames "ModelConfigHandle_t m_Handle"
-// MNetworkVarNames "string_t m_Name"
-// MNetworkVarNames "CHandle< C_BaseModelEntity > m_AssociatedEntities"
-// MNetworkVarNames "string_t m_AssociatedEntityNames"
-struct ActiveModelConfig_t
+// MIsBoxedIntegerType
+struct ModelConfigHandle_t
 {
-private:
-	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
-	// MNetworkEnable
-	ModelConfigHandle_t m_Handle; // 0x28	
-private:
-	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
-public:
-	// MNetworkEnable
-	CUtlSymbolLarge m_Name; // 0x30	
-	// MNetworkEnable
-	C_NetworkUtlVectorBase< CHandle< C_BaseModelEntity > > m_AssociatedEntities; // 0x38	
-	// MNetworkEnable
-	C_NetworkUtlVectorBase< CUtlSymbolLarge > m_AssociatedEntityNames; // 0x50	
+	uint32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("ModelConfigHandle_t")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponMP5SD : public C_CSWeaponBaseGun
 {
 public:
@@ -6482,6 +8714,8 @@ public:
 // Alignment: 8
 // Size: 0x1040
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CPropDataComponent::Storage_t m_CPropDataComponent"
 // MNetworkVarNames "bool m_noGhostCollision"
@@ -6553,6 +8787,7 @@ public:
 // Alignment: 8
 // Size: 0x80
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int32 m_totalHitsOnServer"
 class CCSPlayer_BulletServices : public CPlayerPawnComponent
@@ -6566,6 +8801,8 @@ public:
 // Alignment: 8
 // Size: 0x5a0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CLogicRelay : public CLogicalEntity
 {
 public:
@@ -6590,6 +8827,8 @@ public:
 // Alignment: 8
 // Size: 0x5a8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_FOV"
 // MNetworkVarNames "float m_Resolution"
@@ -6697,6 +8936,7 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CPlayer_ItemServices : public CPlayerPawnComponent
 {
 public:
@@ -6707,6 +8947,8 @@ public:
 // Alignment: 8
 // Size: 0xf10
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bEnabled"
 // MNetworkVarNames "int m_nColorMode"
@@ -6937,6 +9179,8 @@ public:
 // Alignment: 8
 // Size: 0x570
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_TonemapController2Alias_env_tonemap_controller2 : public C_TonemapController2
 {
 public:
@@ -6945,8 +9189,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponG3SG1 : public C_CSWeaponBaseGun
 {
 public:
@@ -6957,6 +9203,8 @@ public:
 // Alignment: 8
 // Size: 0xce8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CFuncWater : public C_BaseModelEntity
 {
 public:
@@ -6967,6 +9215,8 @@ public:
 // Alignment: 8
 // Size: 0x568
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SoundOpvarSetAutoRoomEntity : public C_SoundOpvarSetPointEntity
 {
 public:
@@ -6975,9 +9225,12 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
-class C_WeaponMP7 : public C_CSWeaponBaseGun
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+class C_DEagle : public C_CSWeaponBaseGun
 {
 public:
 	// No schema binary for binding
@@ -6985,8 +9238,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponSG556 : public C_CSWeaponBaseGun
 {
 public:
@@ -6997,6 +9252,8 @@ public:
 // Alignment: 8
 // Size: 0xf18
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bShowLight"
 class C_RectLight : public C_BarnLight
@@ -7011,6 +9268,9 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByUserGroup "Origin"
 // MNetworkIncludeByName "CGameSceneNode::m_angRotation"
@@ -7099,386 +9359,175 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x2358
+// Size: 0x1460
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
-// MNetworkVarNames "CCSPlayer_BulletServices * m_pBulletServices"
-// MNetworkVarNames "CCSPlayer_HostageServices * m_pHostageServices"
-// MNetworkVarNames "CCSPlayer_BuyServices * m_pBuyServices"
-// MNetworkVarNames "CCSPlayer_GlowServices * m_pGlowServices"
-// MNetworkVarNames "CCSPlayer_ActionTrackingServices * m_pActionTrackingServices"
-// MNetworkVarTypeOverride "CCSPlayer_UseServices m_pUseServices"
-// MNetworkIncludeByName "m_pUseServices"
-// MNetworkVarTypeOverride "CCSPlayer_ItemServices m_pItemServices"
-// MNetworkIncludeByName "m_pItemServices"
-// MNetworkVarTypeOverride "CCSPlayer_MovementServices m_pMovementServices"
-// MNetworkIncludeByName "m_pMovementServices"
-// MNetworkVarTypeOverride "CCSPlayer_WaterServices m_pWaterServices"
-// MNetworkIncludeByName "m_pWaterServices"
-// MNetworkVarTypeOverride "CCSPlayer_ViewModelServices m_pViewModelServices"
-// MNetworkIncludeByName "m_pViewModelServices"
-// MNetworkVarTypeOverride "CCSPlayer_CameraServices m_pCameraServices"
-// MNetworkIncludeByName "m_pCameraServices"
-// MNetworkVarTypeOverride "CCSPlayer_WeaponServices m_pWeaponServices"
-// MNetworkIncludeByName "m_pWeaponServices"
-// MNetworkIncludeByName "m_ArmorValue"
-// MNetworkVarNames "GameTime_t m_flHealthShotBoostExpirationTime"
-// MNetworkVarNames "bool m_bHasFemaleVoice"
-// MNetworkVarNames "char m_szLastPlaceName"
-// MNetworkVarNames "bool m_bInBuyZone"
-// MNetworkVarNames "QAngle m_aimPunchAngle"
-// MNetworkVarNames "QAngle m_aimPunchAngleVel"
-// MNetworkVarNames "int m_aimPunchTickBase"
-// MNetworkVarNames "float m_aimPunchTickFraction"
-// MNetworkVarNames "bool m_bInHostageRescueZone"
-// MNetworkVarNames "bool m_bInBombZone"
-// MNetworkVarNames "bool m_bIsBuyMenuOpen"
-// MNetworkVarNames "GameTime_t m_flTimeOfLastInjury"
-// MNetworkVarNames "GameTime_t m_flNextSprayDecalTime"
-// MNetworkVarNames "int m_iRetakesOffering"
-// MNetworkVarNames "int m_iRetakesOfferingCard"
-// MNetworkVarNames "bool m_bRetakesHasDefuseKit"
-// MNetworkVarNames "bool m_bRetakesMVPLastRound"
-// MNetworkVarNames "int m_iRetakesMVPBoostItem"
-// MNetworkVarNames "loadout_slot_t m_RetakesMVPBoostExtraUtility"
-// MNetworkVarNames "CEconItemView m_EconGloves"
-// MNetworkVarNames "uint8 m_nEconGlovesChanged"
-// MNetworkVarNames "int m_nRagdollDamageBone"
-// MNetworkVarNames "Vector m_vRagdollDamageForce"
-// MNetworkVarNames "Vector m_vRagdollDamagePosition"
-// MNetworkVarNames "char m_szRagdollDamageWeaponName"
-// MNetworkVarNames "bool m_bRagdollDamageHeadshot"
-// MNetworkVarNames "Vector m_vRagdollServerOrigin"
-// MNetworkReplayCompatField "m_bClientRagdoll"
-// MNetworkVarNames "QAngle m_qDeathEyeAngles"
-// MNetworkVarNames "bool m_bLeftHanded"
-// MNetworkVarNames "GameTime_t m_fSwitchedHandednessTime"
-// MNetworkVarNames "float m_flViewmodelOffsetX"
-// MNetworkVarNames "float m_flViewmodelOffsetY"
-// MNetworkVarNames "float m_flViewmodelOffsetZ"
-// MNetworkVarNames "float m_flViewmodelFOV"
-// MNetworkVarNames "uint32 m_vecPlayerPatchEconIndices"
-// MNetworkVarNames "Color m_GunGameImmunityColor"
-// MNetworkVarNames "bool m_bIsWalking"
-// MNetworkVarNames "EntitySpottedState_t m_entitySpottedState"
-// MNetworkVarNames "bool m_bIsScoped"
-// MNetworkVarNames "bool m_bResumeZoom"
-// MNetworkVarNames "bool m_bIsDefusing"
-// MNetworkVarNames "bool m_bIsGrabbingHostage"
-// MNetworkVarNames "CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress"
-// MNetworkVarNames "GameTime_t m_flEmitSoundTime"
-// MNetworkVarNames "bool m_bInNoDefuseArea"
-// MNetworkVarNames "int m_nWhichBombZone"
-// MNetworkVarNames "int m_iShotsFired"
-// MNetworkVarNames "float m_flVelocityModifier"
-// MNetworkVarNames "float m_flHitHeading"
-// MNetworkVarNames "int m_nHitBodyPart"
-// MNetworkVarNames "bool m_bWaitForNoAttack"
-// MNetworkVarNames "bool m_bKilledByHeadshot"
-// MNetworkVarNames "int32 m_ArmorValue"
-// MNetworkVarNames "uint16 m_unCurrentEquipmentValue"
-// MNetworkVarNames "uint16 m_unRoundStartEquipmentValue"
-// MNetworkVarNames "uint16 m_unFreezetimeEndEquipmentValue"
-// MNetworkVarNames "CEntityIndex m_nLastKillerIndex"
-class C_CSPlayerPawn : public C_CSPlayerPawnBase
+// MNetworkExcludeByName "m_flAnimTime"
+// MNetworkExcludeByName "m_flexWeight"
+// MNetworkExcludeByUserGroup "m_flPoseParameter"
+// MNetworkExcludeByName "m_baseLayer.m_hSequence"
+// MNetworkExcludeByName "m_animationController.m_flPlaybackRate"
+// MNetworkVarNames "CCSPlayer_PingServices * m_pPingServices"
+// MNetworkVarNames "CPlayer_ViewModelServices * m_pViewModelServices"
+// MNetworkVarNames "CSPlayerState m_iPlayerState"
+// MNetworkVarNames "bool m_bIsRescuing"
+// MNetworkVarNames "GameTime_t m_fImmuneToGunGameDamageTime"
+// MNetworkVarNames "bool m_bGunGameImmunity"
+// MNetworkVarNames "bool m_bHasMovedSinceSpawn"
+// MNetworkVarNames "float m_fMolotovUseTime"
+// MNetworkVarNames "float m_fMolotovDamageTime"
+// MNetworkVarNames "int m_iThrowGrenadeCounter"
+// MNetworkVarNames "int m_iProgressBarDuration"
+// MNetworkVarNames "float m_flProgressBarStartTime"
+// MNetworkVarNames "float m_flFlashMaxAlpha"
+// MNetworkVarNames "float m_flFlashDuration"
+// MNetworkVarNames "int m_cycleLatch"
+// MNetworkVarNames "CHandle< CCSPlayerController> m_hOriginalController"
+class C_CSPlayerPawnBase : public C_BasePlayerPawn
 {
 private:
-	[[maybe_unused]] uint8_t __pad1460[0x8]; // 0x1460
+	[[maybe_unused]] uint8_t __pad1298[0x18]; // 0x1298
 public:
 	// MNetworkEnable
-	CCSPlayer_BulletServices* m_pBulletServices; // 0x1468	
+	CCSPlayer_PingServices* m_pPingServices; // 0x12b0	
 	// MNetworkEnable
-	CCSPlayer_HostageServices* m_pHostageServices; // 0x1470	
-	// MNetworkEnable
-	CCSPlayer_BuyServices* m_pBuyServices; // 0x1478	
-	// MNetworkEnable
-	CCSPlayer_GlowServices* m_pGlowServices; // 0x1480	
-	// MNetworkEnable
-	CCSPlayer_ActionTrackingServices* m_pActionTrackingServices; // 0x1488	
-	// MNetworkEnable
-	GameTime_t m_flHealthShotBoostExpirationTime; // 0x1490	
-	GameTime_t m_flLastFiredWeaponTime; // 0x1494	
-	// MNetworkEnable
-	bool m_bHasFemaleVoice; // 0x1498	
+	CPlayer_ViewModelServices* m_pViewModelServices; // 0x12b8	
+	float m_fRenderingClipPlane[4]; // 0x12c0	
+	int32_t m_nLastClipPlaneSetupFrame; // 0x12d0	
+	Vector m_vecLastClipCameraPos; // 0x12d4	
+	Vector m_vecLastClipCameraForward; // 0x12e0	
+	bool m_bClipHitStaticWorld; // 0x12ec	
+	bool m_bCachedPlaneIsValid; // 0x12ed	
 private:
-	[[maybe_unused]] uint8_t __pad1499[0x3]; // 0x1499
+	[[maybe_unused]] uint8_t __pad12ee[0x2]; // 0x12ee
 public:
-	float m_flLandingTimeSeconds; // 0x149c	
-	float m_flOldFallVelocity; // 0x14a0	
+	C_CSWeaponBase* m_pClippingWeapon; // 0x12f0	
+	CSPlayerState m_previousPlayerState; // 0x12f8	
 	// MNetworkEnable
-	char m_szLastPlaceName[18]; // 0x14a4	
-	bool m_bPrevDefuser; // 0x14b6	
-	bool m_bPrevHelmet; // 0x14b7	
-	int32_t m_nPrevArmorVal; // 0x14b8	
-	int32_t m_nPrevGrenadeAmmoCount; // 0x14bc	
-	uint32_t m_unPreviousWeaponHash; // 0x14c0	
-	uint32_t m_unWeaponHash; // 0x14c4	
+	CSPlayerState m_iPlayerState; // 0x12fc	
 	// MNetworkEnable
-	bool m_bInBuyZone; // 0x14c8	
-	bool m_bPreviouslyInBuyZone; // 0x14c9	
+	bool m_bIsRescuing; // 0x1300	
 private:
-	[[maybe_unused]] uint8_t __pad14ca[0x2]; // 0x14ca
+	[[maybe_unused]] uint8_t __pad1301[0x3]; // 0x1301
 public:
 	// MNetworkEnable
-	// MNetworkBitCount "32"
-	QAngle m_aimPunchAngle; // 0x14cc	
+	GameTime_t m_fImmuneToGunGameDamageTime; // 0x1304	
+	GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x1308	
 	// MNetworkEnable
-	// MNetworkBitCount "32"
-	QAngle m_aimPunchAngleVel; // 0x14d8	
+	bool m_bGunGameImmunity; // 0x130c	
 	// MNetworkEnable
-	int32_t m_aimPunchTickBase; // 0x14e4	
-	// MNetworkEnable
-	float m_aimPunchTickFraction; // 0x14e8	
+	bool m_bHasMovedSinceSpawn; // 0x130d	
 private:
-	[[maybe_unused]] uint8_t __pad14ec[0x4]; // 0x14ec
-public:
-	CUtlVector< QAngle > m_aimPunchCache; // 0x14f0	
-private:
-	[[maybe_unused]] uint8_t __pad1508[0x8]; // 0x1508
-public:
-	bool m_bInLanding; // 0x1510	
-private:
-	[[maybe_unused]] uint8_t __pad1511[0x3]; // 0x1511
-public:
-	float m_flLandingStartTime; // 0x1514	
-	// MNetworkEnable
-	bool m_bInHostageRescueZone; // 0x1518	
-	// MNetworkEnable
-	bool m_bInBombZone; // 0x1519	
-	// MNetworkEnable
-	bool m_bIsBuyMenuOpen; // 0x151a	
-private:
-	[[maybe_unused]] uint8_t __pad151b[0x1]; // 0x151b
+	[[maybe_unused]] uint8_t __pad130e[0x2]; // 0x130e
 public:
 	// MNetworkEnable
-	GameTime_t m_flTimeOfLastInjury; // 0x151c	
+	float m_fMolotovUseTime; // 0x1310	
 	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	GameTime_t m_flNextSprayDecalTime; // 0x1520	
+	float m_fMolotovDamageTime; // 0x1314	
+	// MNetworkEnable
+	int32_t m_iThrowGrenadeCounter; // 0x1318	
+	GameTime_t m_flLastSpawnTimeIndex; // 0x131c	
+	// MNetworkEnable
+	int32_t m_iProgressBarDuration; // 0x1320	
+	// MNetworkEnable
+	float m_flProgressBarStartTime; // 0x1324	
+	Vector m_vecIntroStartEyePosition; // 0x1328	
+	Vector m_vecIntroStartPlayerForward; // 0x1334	
+	GameTime_t m_flClientDeathTime; // 0x1340	
+	bool m_bScreenTearFrameCaptured; // 0x1344	
 private:
-	[[maybe_unused]] uint8_t __pad1524[0x11c]; // 0x1524
+	[[maybe_unused]] uint8_t __pad1345[0x3]; // 0x1345
+public:
+	float m_flFlashBangTime; // 0x1348	
+	float m_flFlashScreenshotAlpha; // 0x134c	
+	float m_flFlashOverlayAlpha; // 0x1350	
+	bool m_bFlashBuildUp; // 0x1354	
+	bool m_bFlashDspHasBeenCleared; // 0x1355	
+	bool m_bFlashScreenshotHasBeenGrabbed; // 0x1356	
+private:
+	[[maybe_unused]] uint8_t __pad1357[0x1]; // 0x1357
 public:
 	// MNetworkEnable
-	// MNetworkChangeCallback "OnRetakesOfferingChanged"
-	int32_t m_iRetakesOffering; // 0x1640	
+	// MNetworkChangeCallback "OnFlashMaxAlphaChanged"
+	float m_flFlashMaxAlpha; // 0x1358	
 	// MNetworkEnable
-	// MNetworkChangeCallback "OnRetakesOfferingCardChanged"
-	int32_t m_iRetakesOfferingCard; // 0x1644	
-	// MNetworkEnable
-	bool m_bRetakesHasDefuseKit; // 0x1648	
-	// MNetworkEnable
-	bool m_bRetakesMVPLastRound; // 0x1649	
+	// MNetworkChangeCallback "OnFlashDurationChanged"
+	float m_flFlashDuration; // 0x135c	
+	int32_t m_iHealthBarRenderMaskIndex; // 0x1360	
+	float m_flHealthFadeValue; // 0x1364	
+	float m_flHealthFadeAlpha; // 0x1368	
 private:
-	[[maybe_unused]] uint8_t __pad164a[0x2]; // 0x164a
+	[[maybe_unused]] uint8_t __pad136c[0xc]; // 0x136c
 public:
-	// MNetworkEnable
-	int32_t m_iRetakesMVPBoostItem; // 0x164c	
-	// MNetworkEnable
-	loadout_slot_t m_RetakesMVPBoostExtraUtility; // 0x1650	
+	float m_flDeathCCWeight; // 0x1378	
+	float m_flPrevRoundEndTime; // 0x137c	
+	float m_flPrevMatchEndTime; // 0x1380	
 private:
-	[[maybe_unused]] uint8_t __pad1654[0x1c]; // 0x1654
-public:
-	bool m_bNeedToReApplyGloves; // 0x1670	
-private:
-	[[maybe_unused]] uint8_t __pad1671[0x7]; // 0x1671
-public:
-	// MNetworkEnable
-	C_EconItemView m_EconGloves; // 0x1678	
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnEconGlovesChanged"
-	uint8_t m_nEconGlovesChanged; // 0x1ac0	
-	bool m_bMustSyncRagdollState; // 0x1ac1	
-private:
-	[[maybe_unused]] uint8_t __pad1ac2[0x2]; // 0x1ac2
-public:
-	// MNetworkEnable
-	int32_t m_nRagdollDamageBone; // 0x1ac4	
-	// MNetworkEnable
-	Vector m_vRagdollDamageForce; // 0x1ac8	
-	// MNetworkEnable
-	Vector m_vRagdollDamagePosition; // 0x1ad4	
-	// MNetworkEnable
-	char m_szRagdollDamageWeaponName[64]; // 0x1ae0	
-	// MNetworkEnable
-	bool m_bRagdollDamageHeadshot; // 0x1b20	
-private:
-	[[maybe_unused]] uint8_t __pad1b21[0x3]; // 0x1b21
-public:
-	// MNetworkEnable
-	Vector m_vRagdollServerOrigin; // 0x1b24	
-private:
-	[[maybe_unused]] uint8_t __pad1b30[0x608]; // 0x1b30
-public:
-	bool m_bLastHeadBoneTransformIsValid; // 0x2138	
-private:
-	[[maybe_unused]] uint8_t __pad2139[0x3]; // 0x2139
-public:
-	GameTime_t m_lastLandTime; // 0x213c	
-	bool m_bOnGroundLastTick; // 0x2140	
-private:
-	[[maybe_unused]] uint8_t __pad2141[0x1b]; // 0x2141
-public:
-	// MNetworkEnable
-	QAngle m_qDeathEyeAngles; // 0x215c	
-	bool m_bSkipOneHeadConstraintUpdate; // 0x2168	
-	// MNetworkEnable
-	bool m_bLeftHanded; // 0x2169	
-private:
-	[[maybe_unused]] uint8_t __pad216a[0x2]; // 0x216a
-public:
-	// MNetworkEnable
-	GameTime_t m_fSwitchedHandednessTime; // 0x216c	
-	// MNetworkEnable
-	// MNetworkMinValue "-2.000000"
-	// MNetworkMaxValue "2.500000"
-	float m_flViewmodelOffsetX; // 0x2170	
-	// MNetworkEnable
-	// MNetworkMinValue "-2.000000"
-	// MNetworkMaxValue "2.000000"
-	float m_flViewmodelOffsetY; // 0x2174	
-	// MNetworkEnable
-	// MNetworkMinValue "-2.000000"
-	// MNetworkMaxValue "2.000000"
-	float m_flViewmodelOffsetZ; // 0x2178	
-	// MNetworkEnable
-	// MNetworkMinValue "60.000000"
-	// MNetworkMaxValue "68.000000"
-	float m_flViewmodelFOV; // 0x217c	
-	// MNetworkEnable
-	// MNetworkChangeCallback "RecvProxy_PatchEconIndices"
-	uint32_t m_vecPlayerPatchEconIndices[5]; // 0x2180	
-private:
-	[[maybe_unused]] uint8_t __pad2194[0x24]; // 0x2194
-public:
-	// MNetworkEnable
-	Color m_GunGameImmunityColor; // 0x21b8	
-private:
-	[[maybe_unused]] uint8_t __pad21bc[0x4c]; // 0x21bc
-public:
-	CUtlVector< C_BulletHitModel* > m_vecBulletHitModels; // 0x2208	
-	// MNetworkEnable
-	bool m_bIsWalking; // 0x2220	
-private:
-	[[maybe_unused]] uint8_t __pad2221[0x7]; // 0x2221
+	[[maybe_unused]] uint8_t __pad1384[0x4]; // 0x1384
 public:
 	// MNetworkEnable
 	// MNetworkEncoder "qangle_precise"
-	// MNetworkChangeCallback "OnThirdPersonHeadingChanged"
+	// MNetworkChangeCallback "playerEyeAnglesChanged"
 	// MNetworkPriority "32"
-	QAngle m_thirdPersonHeading; // 0x2228	
+	QAngle m_angEyeAngles; // 0x1388	
 private:
-	[[maybe_unused]] uint8_t __pad2234[0xc]; // 0x2234
+	[[maybe_unused]] uint8_t __pad1394[0xc]; // 0x1394
+public:
+	float m_fNextThinkPushAway; // 0x13a0	
+	bool m_bShouldAutobuyDMWeapons; // 0x13a4	
+	bool m_bShouldAutobuyNow; // 0x13a5	
+private:
+	[[maybe_unused]] uint8_t __pad13a6[0x2]; // 0x13a6
+public:
+	CEntityIndex m_iIDEntIndex; // 0x13a8	
+private:
+	[[maybe_unused]] uint8_t __pad13ac[0x4]; // 0x13ac
+public:
+	CountdownTimer m_delayTargetIDTimer; // 0x13b0	
+	CEntityIndex m_iTargetItemEntIdx; // 0x13c8	
+	CEntityIndex m_iOldIDEntIndex; // 0x13cc	
+	CountdownTimer m_holdTargetIDTimer; // 0x13d0	
+private:
+	[[maybe_unused]] uint8_t __pad13e8[0x4]; // 0x13e8
+public:
+	float m_flCurrentMusicStartTime; // 0x13ec	
+	float m_flMusicRoundStartTime; // 0x13f0	
+	bool m_bDeferStartMusicOnWarmup; // 0x13f4	
+private:
+	[[maybe_unused]] uint8_t __pad13f5[0x3]; // 0x13f5
 public:
 	// MNetworkEnable
-	// MNetworkChangeCallback "OnSlopeDropOffsetChanged"
-	// MNetworkPriority "32"
-	float m_flSlopeDropOffset; // 0x2240	
+	int32_t m_cycleLatch; // 0x13f8	
+	float m_serverIntendedCycle; // 0x13fc	
+	float m_flLastSmokeOverlayAlpha; // 0x1400	
+	float m_flLastSmokeAge; // 0x1404	
+	Vector m_vLastSmokeOverlayColor; // 0x1408	
+	ParticleIndex_t m_nPlayerSmokedFx; // 0x1414	
+	ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x1418	
+	ParticleIndex_t m_nPlayerInfernoFootFx; // 0x141c	
+	float m_flNextMagDropTime; // 0x1420	
+	int32_t m_nLastMagDropAttachmentIndex; // 0x1424	
+	Vector m_vecLastAliveLocalVelocity; // 0x1428	
 private:
-	[[maybe_unused]] uint8_t __pad2244[0xc]; // 0x2244
+	[[maybe_unused]] uint8_t __pad1434[0x1c]; // 0x1434
+public:
+	bool m_bGuardianShouldSprayCustomXMark; // 0x1450	
+private:
+	[[maybe_unused]] uint8_t __pad1451[0x7]; // 0x1451
 public:
 	// MNetworkEnable
-	// MNetworkChangeCallback "OnSlopeDropHeightChanged"
-	// MNetworkPriority "32"
-	float m_flSlopeDropHeight; // 0x2250	
-private:
-	[[maybe_unused]] uint8_t __pad2254[0xc]; // 0x2254
-public:
-	// MNetworkEnable
-	// MNetworkChangeCallback "OnHeadConstraintChanged"
-	// MNetworkPriority "32"
-	Vector m_vHeadConstraintOffset; // 0x2260	
-private:
-	[[maybe_unused]] uint8_t __pad226c[0xc]; // 0x226c
-public:
-	// MNetworkEnable
-	EntitySpottedState_t m_entitySpottedState; // 0x2278	
-	// MNetworkEnable
-	bool m_bIsScoped; // 0x2290	
-	// MNetworkEnable
-	bool m_bResumeZoom; // 0x2291	
-	// MNetworkEnable
-	bool m_bIsDefusing; // 0x2292	
-	// MNetworkEnable
-	bool m_bIsGrabbingHostage; // 0x2293	
-	// MNetworkEnable
-	CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress; // 0x2294	
-	// MNetworkEnable
-	GameTime_t m_flEmitSoundTime; // 0x2298	
-	// MNetworkEnable
-	bool m_bInNoDefuseArea; // 0x229c	
-private:
-	[[maybe_unused]] uint8_t __pad229d[0x3]; // 0x229d
-public:
-	// MNetworkEnable
-	int32_t m_nWhichBombZone; // 0x22a0	
-	// MNetworkEnable
-	int32_t m_iShotsFired; // 0x22a4	
-	// MNetworkEnable
-	float m_flVelocityModifier; // 0x22a8	
-	// MNetworkEnable
-	float m_flHitHeading; // 0x22ac	
-	// MNetworkEnable
-	int32_t m_nHitBodyPart; // 0x22b0	
-	// MNetworkEnable
-	bool m_bWaitForNoAttack; // 0x22b4	
-private:
-	[[maybe_unused]] uint8_t __pad22b5[0x3]; // 0x22b5
-public:
-	float m_ignoreLadderJumpTime; // 0x22b8	
-private:
-	[[maybe_unused]] uint8_t __pad22bc[0x1]; // 0x22bc
-public:
-	// MNetworkEnable
-	bool m_bKilledByHeadshot; // 0x22bd	
-private:
-	[[maybe_unused]] uint8_t __pad22be[0x2]; // 0x22be
-public:
-	// MNetworkEnable
-	int32_t m_ArmorValue; // 0x22c0	
-	// MNetworkEnable
-	uint16_t m_unCurrentEquipmentValue; // 0x22c4	
-	// MNetworkEnable
-	uint16_t m_unRoundStartEquipmentValue; // 0x22c6	
-	// MNetworkEnable
-	uint16_t m_unFreezetimeEndEquipmentValue; // 0x22c8	
-private:
-	[[maybe_unused]] uint8_t __pad22ca[0x2]; // 0x22ca
-public:
-	// MNetworkEnable
-	CEntityIndex m_nLastKillerIndex; // 0x22cc	
-	bool m_bOldIsScoped; // 0x22d0	
-	bool m_bHasDeathInfo; // 0x22d1	
-private:
-	[[maybe_unused]] uint8_t __pad22d2[0x2]; // 0x22d2
-public:
-	float m_flDeathInfoTime; // 0x22d4	
-	Vector m_vecDeathInfoOrigin; // 0x22d8	
-	GameTime_t m_grenadeParameterStashTime; // 0x22e4	
-	bool m_bGrenadeParametersStashed; // 0x22e8	
-private:
-	[[maybe_unused]] uint8_t __pad22e9[0x3]; // 0x22e9
-public:
-	QAngle m_angStashedShootAngles; // 0x22ec	
-	Vector m_vecStashedGrenadeThrowPosition; // 0x22f8	
-	Vector m_vecStashedVelocity; // 0x2304	
-	QAngle m_angShootAngleHistory[2]; // 0x2310	
-	Vector m_vecThrowPositionHistory[2]; // 0x2328	
-	Vector m_vecVelocityHistory[2]; // 0x2340	
-	
-	// Datamap fields:
-	// CCSPlayer_ItemServices m_pItemServices; // 0x1100
-	// CCSPlayer_UseServices m_pUseServices; // 0x1120
-	// CCSPlayer_WaterServices m_pWaterServices; // 0x1118
-	// CCSPlayer_MovementServices m_pMovementServices; // 0x1138
-	// CCSPlayer_ViewModelServices m_pViewModelServices; // 0x12b8
-	// CCSPlayer_WeaponServices m_pWeaponServices; // 0x10f8
-	// CCSPlayer_CameraServices m_pCameraServices; // 0x1130
+	CHandle< CCSPlayerController > m_hOriginalController; // 0x1458	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponGlock : public C_CSWeaponBaseGun
 {
 public:
@@ -7487,23 +9536,22 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x550
+// Size: 0x548
 // Has VTable
-// 
-// MNetworkVarNames "C_CSGameRules* m_pGameRules"
-class C_CSGameRulesProxy : public C_GameRulesProxy
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
+class C_GameRulesProxy : public C_BaseEntity
 {
 public:
-	// MNetworkEnable
-	// MNetworkTypeAlias "CCSGameRules*"
-	// MNetworkPriority "32"
-	C_CSGameRules* m_pGameRules; // 0x548	
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x58
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "uint8 m_iObserverMode"
 // MNetworkVarNames "CHandle< CBaseEntity> m_hObserverTarget"
@@ -7530,8 +9578,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CWeaponZoneRepulsor : public C_CSWeaponBaseGun
 {
 public:
@@ -7542,6 +9592,7 @@ public:
 // Alignment: 8
 // Size: 0x60
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSPlayer_WaterServices : public CPlayer_WaterServices
 {
 public:
@@ -7554,6 +9605,9 @@ public:
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct disallowed
+// MConstructibleClassBase
+// MNetworkAssumeNotNetworkable
 class C_CSGO_EndOfMatchLineupEndpoint : public C_BaseEntity
 {
 public:
@@ -7579,6 +9633,9 @@ public:
 // Alignment: 8
 // Size: 0xee0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_Multimeter : public CBaseAnimGraph
 {
 private:
@@ -7591,6 +9648,8 @@ public:
 // Alignment: 8
 // Size: 0x558
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CsmFovOverride : public C_BaseEntity
 {
 public:
@@ -7602,6 +9661,8 @@ public:
 // Alignment: 8
 // Size: 0xd00
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "HMaterialStrong m_hDecalMaterial"
 // MNetworkVarNames "float m_flWidth"
@@ -7645,6 +9706,8 @@ public:
 // Alignment: 8
 // Size: 0x30
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CCSGameModeRules_Noop : public CCSGameModeRules
 {
 public:
@@ -7655,6 +9718,10 @@ public:
 // Alignment: 8
 // Size: 0x790
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByUserGroup "Origin"
 // MNetworkVarNames "float32 m_MinFalloff"
@@ -7712,6 +9779,8 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CHostageRescueZoneShim : public C_BaseTrigger
 {
 public:
@@ -7722,19 +9791,33 @@ public:
 // Alignment: 8
 // Size: 0x460
 // Has VTable
-class CBodyComponentBaseModelEntity : public CBodyComponentSkeletonInstance
+// Construct disallowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CSkeletonInstance m_skeletonInstance"
+class CBodyComponentSkeletonInstance : public CBodyComponent
 {
 public:
+	// MNetworkEnable
+	// -> m_modelState - 0x1c0
+	// -> m_bIsAnimationEnabled - 0x3f0
+	// -> m_bUseParentRenderBounds - 0x3f1
+	// -> m_bDisableSolidCollisionsForHierarchy - 0x3f2
+	// -> m_materialGroup - 0x3f4
+	// -> m_nHitboxSet - 0x3f8
+	CSkeletonInstance m_skeletonInstance; // 0x50	
+	
 	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->m_static_fields[1]->m_instance);};
-	// No schema binary for binding
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentSkeletonInstance")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponP250 : public C_CSWeaponBaseGun
 {
 public:
@@ -7753,13 +9836,15 @@ public:
 };
 
 // Registered binary: client.dll (project 'client')
-// Alignment: 8
-// Size: 0x16b0
+// Alignment: 16
+// Size: 0x1a90
 // Has VTable
-class C_Item : public C_EconEntity
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WeaponMag7 : public C_CSWeaponBaseGun
 {
 public:
-	char m_pReticleHintTextName[256]; // 0x15b0	
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
@@ -7796,6 +9881,8 @@ public:
 // Alignment: 8
 // Size: 0x5d0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_CounterTerroristWingmanIntroCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -7804,8 +9891,11 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a60
+// Size: 0x1a70
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_WeaponNOVA : public C_CSWeaponBase
 {
 public:
@@ -7816,6 +9906,9 @@ public:
 // Alignment: 8
 // Size: 0x1150
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_HEGrenadeProjectile : public C_BaseCSGrenadeProjectile
 {
 public:
@@ -7826,6 +9919,9 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bIsUsable"
 class C_BaseDoor : public C_BaseToggle
@@ -7839,6 +9935,8 @@ public:
 // Alignment: 16
 // Size: 0x11b0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CGrenadeTracer : public C_BaseModelEntity
 {
 private:
@@ -7848,13 +9946,16 @@ public:
 	GrenadeType_t m_nType; // 0xcec	
 	
 	// Static fields:
-	static int32_t &Get_s_nColorIdx(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CGrenadeTracer")->m_static_fields[0]->m_instance);};
+	static int32_t &Get_s_nColorIdx(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CGrenadeTracer")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xcd8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bBombPlantedHere"
 class CBombTarget : public C_BaseTrigger
@@ -7868,6 +9969,8 @@ public:
 // Alignment: 8
 // Size: 0xd00
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "EHANDLE m_hActivator"
 class C_PointClientUIDialog : public C_BaseClientUIEntity
@@ -7883,6 +9986,8 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CUtlString m_WeaponSequence"
 class CCSGameModeRules_ArmsRace : public CCSGameModeRules
@@ -7949,6 +10054,8 @@ public:
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_InfoLadderDismount : public C_BaseEntity
 {
 public:
@@ -7959,6 +10066,7 @@ public:
 // Alignment: 8
 // Size: 0x98
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_nSendUpdate"
 // MNetworkVarNames "CDamageRecord m_DamageList"
@@ -7981,6 +10089,8 @@ public:
 // Alignment: 8
 // Size: 0xd8
 // Has VTable
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class CRenderComponent : public CEntityComponent
 {
 private:
@@ -8007,14 +10117,16 @@ public:
 	bool m_bInterpolationReadyToDraw; // 0xb0	
 	
 	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->m_static_fields[1]->m_instance);};
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CRenderComponent")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x560
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Vector m_vMins"
 // MNetworkVarNames "Vector m_vMaxs"
@@ -8031,6 +10143,8 @@ public:
 // Alignment: 8
 // Size: 0x1b0
 // Has VTable
+// Construct disallowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Color m_Color"
 // MNetworkVarNames "Color m_SecondaryColor"
@@ -8310,8 +10424,8 @@ public:
 	float m_flMinRoughness; // 0x19c	
 	
 	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->m_static_fields[1]->m_instance);};
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CLightComponent")->GetStaticFields()[1]->m_pInstance);};
 	
 	// Datamap fields:
 	// SHIM m_bRenderSpecular; // 0xc4
@@ -8322,6 +10436,8 @@ public:
 // Alignment: 8
 // Size: 0x5d0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_CounterTerroristTeamIntroCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -8332,6 +10448,8 @@ public:
 // Alignment: 8
 // Size: 0x1b0
 // Has VTable
+// Construct disallowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CGameSceneNode m_sceneNode"
 class CBodyComponentPoint : public CBodyComponent
@@ -8341,26 +10459,412 @@ public:
 	CGameSceneNode m_sceneNode; // 0x50	
 	
 	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->m_static_fields[1]->m_instance);};
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentPoint")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x23f0
+// Size: 0x23c8
 // Has VTable
-class C_CSGO_PreviewPlayer : public C_CSPlayerPawn
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CCSPlayer_BulletServices * m_pBulletServices"
+// MNetworkVarNames "CCSPlayer_HostageServices * m_pHostageServices"
+// MNetworkVarNames "CCSPlayer_BuyServices * m_pBuyServices"
+// MNetworkVarNames "CCSPlayer_GlowServices * m_pGlowServices"
+// MNetworkVarNames "CCSPlayer_ActionTrackingServices * m_pActionTrackingServices"
+// MNetworkVarTypeOverride "CCSPlayer_UseServices m_pUseServices"
+// MNetworkIncludeByName "m_pUseServices"
+// MNetworkVarTypeOverride "CCSPlayer_ItemServices m_pItemServices"
+// MNetworkIncludeByName "m_pItemServices"
+// MNetworkVarTypeOverride "CCSPlayer_MovementServices m_pMovementServices"
+// MNetworkIncludeByName "m_pMovementServices"
+// MNetworkVarTypeOverride "CCSPlayer_WaterServices m_pWaterServices"
+// MNetworkIncludeByName "m_pWaterServices"
+// MNetworkVarTypeOverride "CCSPlayer_ViewModelServices m_pViewModelServices"
+// MNetworkIncludeByName "m_pViewModelServices"
+// MNetworkVarTypeOverride "CCSPlayer_CameraServices m_pCameraServices"
+// MNetworkIncludeByName "m_pCameraServices"
+// MNetworkVarTypeOverride "CCSPlayer_WeaponServices m_pWeaponServices"
+// MNetworkIncludeByName "m_pWeaponServices"
+// MNetworkIncludeByName "m_ArmorValue"
+// MNetworkVarNames "GameTime_t m_flHealthShotBoostExpirationTime"
+// MNetworkVarNames "bool m_bHasFemaleVoice"
+// MNetworkVarNames "char m_szLastPlaceName"
+// MNetworkVarNames "bool m_bInBuyZone"
+// MNetworkVarNames "QAngle m_aimPunchAngle"
+// MNetworkVarNames "QAngle m_aimPunchAngleVel"
+// MNetworkVarNames "int m_aimPunchTickBase"
+// MNetworkVarNames "float m_aimPunchTickFraction"
+// MNetworkVarNames "bool m_bInHostageRescueZone"
+// MNetworkVarNames "bool m_bInBombZone"
+// MNetworkVarNames "bool m_bIsBuyMenuOpen"
+// MNetworkVarNames "GameTime_t m_flTimeOfLastInjury"
+// MNetworkVarNames "GameTime_t m_flNextSprayDecalTime"
+// MNetworkVarNames "int m_iRetakesOffering"
+// MNetworkVarNames "int m_iRetakesOfferingCard"
+// MNetworkVarNames "bool m_bRetakesHasDefuseKit"
+// MNetworkVarNames "bool m_bRetakesMVPLastRound"
+// MNetworkVarNames "int m_iRetakesMVPBoostItem"
+// MNetworkVarNames "loadout_slot_t m_RetakesMVPBoostExtraUtility"
+// MNetworkVarNames "CEconItemView m_EconGloves"
+// MNetworkVarNames "uint8 m_nEconGlovesChanged"
+// MNetworkVarNames "int m_nRagdollDamageBone"
+// MNetworkVarNames "Vector m_vRagdollDamageForce"
+// MNetworkVarNames "Vector m_vRagdollDamagePosition"
+// MNetworkVarNames "char m_szRagdollDamageWeaponName"
+// MNetworkVarNames "bool m_bRagdollDamageHeadshot"
+// MNetworkVarNames "Vector m_vRagdollServerOrigin"
+// MNetworkReplayCompatField "m_bClientRagdoll"
+// MNetworkVarNames "QAngle m_qDeathEyeAngles"
+// MNetworkVarNames "bool m_bLeftHanded"
+// MNetworkVarNames "GameTime_t m_fSwitchedHandednessTime"
+// MNetworkVarNames "float m_flViewmodelOffsetX"
+// MNetworkVarNames "float m_flViewmodelOffsetY"
+// MNetworkVarNames "float m_flViewmodelOffsetZ"
+// MNetworkVarNames "float m_flViewmodelFOV"
+// MNetworkVarNames "uint32 m_vecPlayerPatchEconIndices"
+// MNetworkVarNames "Color m_GunGameImmunityColor"
+// MNetworkVarNames "bool m_bIsWalking"
+// MNetworkVarNames "EntitySpottedState_t m_entitySpottedState"
+// MNetworkVarNames "bool m_bIsScoped"
+// MNetworkVarNames "bool m_bResumeZoom"
+// MNetworkVarNames "bool m_bIsDefusing"
+// MNetworkVarNames "bool m_bIsGrabbingHostage"
+// MNetworkVarNames "CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress"
+// MNetworkVarNames "GameTime_t m_flEmitSoundTime"
+// MNetworkVarNames "bool m_bInNoDefuseArea"
+// MNetworkVarNames "int m_nWhichBombZone"
+// MNetworkVarNames "int m_iShotsFired"
+// MNetworkVarNames "float m_flFlinchStack"
+// MNetworkVarNames "float m_flVelocityModifier"
+// MNetworkVarNames "float m_flHitHeading"
+// MNetworkVarNames "int m_nHitBodyPart"
+// MNetworkVarNames "bool m_bWaitForNoAttack"
+// MNetworkVarNames "bool m_bKilledByHeadshot"
+// MNetworkVarNames "int32 m_ArmorValue"
+// MNetworkVarNames "uint16 m_unCurrentEquipmentValue"
+// MNetworkVarNames "uint16 m_unRoundStartEquipmentValue"
+// MNetworkVarNames "uint16 m_unFreezetimeEndEquipmentValue"
+// MNetworkVarNames "CEntityIndex m_nLastKillerIndex"
+// MNetworkVarNames "PredictedDamageTag_t m_PredictedDamageTags"
+class C_CSPlayerPawn : public C_CSPlayerPawnBase
 {
+private:
+	[[maybe_unused]] uint8_t __pad1460[0x8]; // 0x1460
 public:
-	CUtlString m_animgraph; // 0x2358	
-	CGlobalSymbol m_animgraphCharacterModeString; // 0x2360	
-	float m_flInitialModelScale; // 0x2368	
+	// MNetworkEnable
+	CCSPlayer_BulletServices* m_pBulletServices; // 0x1468	
+	// MNetworkEnable
+	CCSPlayer_HostageServices* m_pHostageServices; // 0x1470	
+	// MNetworkEnable
+	CCSPlayer_BuyServices* m_pBuyServices; // 0x1478	
+	// MNetworkEnable
+	CCSPlayer_GlowServices* m_pGlowServices; // 0x1480	
+	// MNetworkEnable
+	CCSPlayer_ActionTrackingServices* m_pActionTrackingServices; // 0x1488	
+	// MNetworkEnable
+	GameTime_t m_flHealthShotBoostExpirationTime; // 0x1490	
+	GameTime_t m_flLastFiredWeaponTime; // 0x1494	
+	// MNetworkEnable
+	bool m_bHasFemaleVoice; // 0x1498	
+private:
+	[[maybe_unused]] uint8_t __pad1499[0x3]; // 0x1499
+public:
+	float m_flLandingTimeSeconds; // 0x149c	
+	float m_flOldFallVelocity; // 0x14a0	
+	// MNetworkEnable
+	char m_szLastPlaceName[18]; // 0x14a4	
+	bool m_bPrevDefuser; // 0x14b6	
+	bool m_bPrevHelmet; // 0x14b7	
+	int32_t m_nPrevArmorVal; // 0x14b8	
+	int32_t m_nPrevGrenadeAmmoCount; // 0x14bc	
+	uint32_t m_unPreviousWeaponHash; // 0x14c0	
+	uint32_t m_unWeaponHash; // 0x14c4	
+	// MNetworkEnable
+	bool m_bInBuyZone; // 0x14c8	
+	bool m_bPreviouslyInBuyZone; // 0x14c9	
+private:
+	[[maybe_unused]] uint8_t __pad14ca[0x2]; // 0x14ca
+public:
+	// MNetworkEnable
+	// MNetworkBitCount "32"
+	QAngle m_aimPunchAngle; // 0x14cc	
+	// MNetworkEnable
+	// MNetworkBitCount "32"
+	QAngle m_aimPunchAngleVel; // 0x14d8	
+	// MNetworkEnable
+	int32_t m_aimPunchTickBase; // 0x14e4	
+	// MNetworkEnable
+	float m_aimPunchTickFraction; // 0x14e8	
+private:
+	[[maybe_unused]] uint8_t __pad14ec[0x4]; // 0x14ec
+public:
+	CUtlVector< QAngle > m_aimPunchCache; // 0x14f0	
+private:
+	[[maybe_unused]] uint8_t __pad1508[0x8]; // 0x1508
+public:
+	bool m_bInLanding; // 0x1510	
+private:
+	[[maybe_unused]] uint8_t __pad1511[0x3]; // 0x1511
+public:
+	float m_flLandingStartTime; // 0x1514	
+	// MNetworkEnable
+	bool m_bInHostageRescueZone; // 0x1518	
+	// MNetworkEnable
+	bool m_bInBombZone; // 0x1519	
+	// MNetworkEnable
+	bool m_bIsBuyMenuOpen; // 0x151a	
+private:
+	[[maybe_unused]] uint8_t __pad151b[0x1]; // 0x151b
+public:
+	// MNetworkEnable
+	GameTime_t m_flTimeOfLastInjury; // 0x151c	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	GameTime_t m_flNextSprayDecalTime; // 0x1520	
+private:
+	[[maybe_unused]] uint8_t __pad1524[0x12c]; // 0x1524
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnRetakesOfferingChanged"
+	int32_t m_iRetakesOffering; // 0x1650	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnRetakesOfferingCardChanged"
+	int32_t m_iRetakesOfferingCard; // 0x1654	
+	// MNetworkEnable
+	bool m_bRetakesHasDefuseKit; // 0x1658	
+	// MNetworkEnable
+	bool m_bRetakesMVPLastRound; // 0x1659	
+private:
+	[[maybe_unused]] uint8_t __pad165a[0x2]; // 0x165a
+public:
+	// MNetworkEnable
+	int32_t m_iRetakesMVPBoostItem; // 0x165c	
+	// MNetworkEnable
+	loadout_slot_t m_RetakesMVPBoostExtraUtility; // 0x1660	
+private:
+	[[maybe_unused]] uint8_t __pad1664[0x1c]; // 0x1664
+public:
+	bool m_bNeedToReApplyGloves; // 0x1680	
+private:
+	[[maybe_unused]] uint8_t __pad1681[0x7]; // 0x1681
+public:
+	// MNetworkEnable
+	C_EconItemView m_EconGloves; // 0x1688	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnEconGlovesChanged"
+	uint8_t m_nEconGlovesChanged; // 0x1ad0	
+	bool m_bMustSyncRagdollState; // 0x1ad1	
+private:
+	[[maybe_unused]] uint8_t __pad1ad2[0x2]; // 0x1ad2
+public:
+	// MNetworkEnable
+	int32_t m_nRagdollDamageBone; // 0x1ad4	
+	// MNetworkEnable
+	Vector m_vRagdollDamageForce; // 0x1ad8	
+	// MNetworkEnable
+	Vector m_vRagdollDamagePosition; // 0x1ae4	
+	// MNetworkEnable
+	char m_szRagdollDamageWeaponName[64]; // 0x1af0	
+	// MNetworkEnable
+	bool m_bRagdollDamageHeadshot; // 0x1b30	
+private:
+	[[maybe_unused]] uint8_t __pad1b31[0x3]; // 0x1b31
+public:
+	// MNetworkEnable
+	Vector m_vRagdollServerOrigin; // 0x1b34	
+private:
+	[[maybe_unused]] uint8_t __pad1b40[0x608]; // 0x1b40
+public:
+	bool m_bLastHeadBoneTransformIsValid; // 0x2148	
+private:
+	[[maybe_unused]] uint8_t __pad2149[0x3]; // 0x2149
+public:
+	GameTime_t m_lastLandTime; // 0x214c	
+	bool m_bOnGroundLastTick; // 0x2150	
+private:
+	[[maybe_unused]] uint8_t __pad2151[0x1b]; // 0x2151
+public:
+	// MNetworkEnable
+	QAngle m_qDeathEyeAngles; // 0x216c	
+	bool m_bSkipOneHeadConstraintUpdate; // 0x2178	
+	// MNetworkEnable
+	bool m_bLeftHanded; // 0x2179	
+private:
+	[[maybe_unused]] uint8_t __pad217a[0x2]; // 0x217a
+public:
+	// MNetworkEnable
+	GameTime_t m_fSwitchedHandednessTime; // 0x217c	
+	// MNetworkEnable
+	// MNetworkMinValue "-2,000000"
+	// MNetworkMaxValue "2,500000"
+	float m_flViewmodelOffsetX; // 0x2180	
+	// MNetworkEnable
+	// MNetworkMinValue "-2,000000"
+	// MNetworkMaxValue "2,000000"
+	float m_flViewmodelOffsetY; // 0x2184	
+	// MNetworkEnable
+	// MNetworkMinValue "-2,000000"
+	// MNetworkMaxValue "2,000000"
+	float m_flViewmodelOffsetZ; // 0x2188	
+	// MNetworkEnable
+	// MNetworkMinValue "60,000000"
+	// MNetworkMaxValue "68,000000"
+	float m_flViewmodelFOV; // 0x218c	
+	// MNetworkEnable
+	// MNetworkChangeCallback "RecvProxy_PatchEconIndices"
+	uint32_t m_vecPlayerPatchEconIndices[5]; // 0x2190	
+private:
+	[[maybe_unused]] uint8_t __pad21a4[0x24]; // 0x21a4
+public:
+	// MNetworkEnable
+	Color m_GunGameImmunityColor; // 0x21c8	
+private:
+	[[maybe_unused]] uint8_t __pad21cc[0x4c]; // 0x21cc
+public:
+	CUtlVector< C_BulletHitModel* > m_vecBulletHitModels; // 0x2218	
+	// MNetworkEnable
+	bool m_bIsWalking; // 0x2230	
+private:
+	[[maybe_unused]] uint8_t __pad2231[0x7]; // 0x2231
+public:
+	// MNetworkEnable
+	// MNetworkEncoder "qangle_precise"
+	// MNetworkChangeCallback "OnThirdPersonHeadingChanged"
+	// MNetworkPriority "32"
+	QAngle m_thirdPersonHeading; // 0x2238	
+private:
+	[[maybe_unused]] uint8_t __pad2244[0xc]; // 0x2244
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnSlopeDropOffsetChanged"
+	// MNetworkPriority "32"
+	float m_flSlopeDropOffset; // 0x2250	
+private:
+	[[maybe_unused]] uint8_t __pad2254[0xc]; // 0x2254
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnSlopeDropHeightChanged"
+	// MNetworkPriority "32"
+	float m_flSlopeDropHeight; // 0x2260	
+private:
+	[[maybe_unused]] uint8_t __pad2264[0xc]; // 0x2264
+public:
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnHeadConstraintChanged"
+	// MNetworkPriority "32"
+	Vector m_vHeadConstraintOffset; // 0x2270	
+private:
+	[[maybe_unused]] uint8_t __pad227c[0xc]; // 0x227c
+public:
+	// MNetworkEnable
+	EntitySpottedState_t m_entitySpottedState; // 0x2288	
+	// MNetworkEnable
+	bool m_bIsScoped; // 0x22a0	
+	// MNetworkEnable
+	bool m_bResumeZoom; // 0x22a1	
+	// MNetworkEnable
+	bool m_bIsDefusing; // 0x22a2	
+	// MNetworkEnable
+	bool m_bIsGrabbingHostage; // 0x22a3	
+	// MNetworkEnable
+	CSPlayerBlockingUseAction_t m_iBlockingUseActionInProgress; // 0x22a4	
+	// MNetworkEnable
+	GameTime_t m_flEmitSoundTime; // 0x22a8	
+	// MNetworkEnable
+	bool m_bInNoDefuseArea; // 0x22ac	
+private:
+	[[maybe_unused]] uint8_t __pad22ad[0x3]; // 0x22ad
+public:
+	// MNetworkEnable
+	int32_t m_nWhichBombZone; // 0x22b0	
+	// MNetworkEnable
+	int32_t m_iShotsFired; // 0x22b4	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flFlinchStack; // 0x22b8	
+	// MNetworkEnable
+	float m_flVelocityModifier; // 0x22bc	
+	// MNetworkEnable
+	float m_flHitHeading; // 0x22c0	
+	// MNetworkEnable
+	int32_t m_nHitBodyPart; // 0x22c4	
+	// MNetworkEnable
+	bool m_bWaitForNoAttack; // 0x22c8	
+private:
+	[[maybe_unused]] uint8_t __pad22c9[0x3]; // 0x22c9
+public:
+	float m_ignoreLadderJumpTime; // 0x22cc	
+private:
+	[[maybe_unused]] uint8_t __pad22d0[0x1]; // 0x22d0
+public:
+	// MNetworkEnable
+	bool m_bKilledByHeadshot; // 0x22d1	
+private:
+	[[maybe_unused]] uint8_t __pad22d2[0x2]; // 0x22d2
+public:
+	// MNetworkEnable
+	int32_t m_ArmorValue; // 0x22d4	
+	// MNetworkEnable
+	uint16_t m_unCurrentEquipmentValue; // 0x22d8	
+	// MNetworkEnable
+	uint16_t m_unRoundStartEquipmentValue; // 0x22da	
+	// MNetworkEnable
+	uint16_t m_unFreezetimeEndEquipmentValue; // 0x22dc	
+private:
+	[[maybe_unused]] uint8_t __pad22de[0x2]; // 0x22de
+public:
+	// MNetworkEnable
+	CEntityIndex m_nLastKillerIndex; // 0x22e0	
+	bool m_bOldIsScoped; // 0x22e4	
+	bool m_bHasDeathInfo; // 0x22e5	
+private:
+	[[maybe_unused]] uint8_t __pad22e6[0x2]; // 0x22e6
+public:
+	float m_flDeathInfoTime; // 0x22e8	
+	Vector m_vecDeathInfoOrigin; // 0x22ec	
+	GameTime_t m_grenadeParameterStashTime; // 0x22f8	
+	bool m_bGrenadeParametersStashed; // 0x22fc	
+private:
+	[[maybe_unused]] uint8_t __pad22fd[0x3]; // 0x22fd
+public:
+	QAngle m_angStashedShootAngles; // 0x2300	
+	Vector m_vecStashedGrenadeThrowPosition; // 0x230c	
+	Vector m_vecStashedVelocity; // 0x2318	
+	QAngle m_angShootAngleHistory[2]; // 0x2324	
+	Vector m_vecThrowPositionHistory[2]; // 0x233c	
+	Vector m_vecVelocityHistory[2]; // 0x2354	
+private:
+	[[maybe_unused]] uint8_t __pad236c[0x4]; // 0x236c
+public:
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkChangeCallback "OnPredictedDamageTagsChanged"
+	C_UtlVectorEmbeddedNetworkVar< PredictedDamageTag_t > m_PredictedDamageTags; // 0x2370	
+	GameTick_t m_nPrevHighestReceivedDamageTagTick; // 0x23c0	
+	int32_t m_nHighestAppliedDamageTagTick; // 0x23c4	
+	
+	// Datamap fields:
+	// CCSPlayer_ItemServices m_pItemServices; // 0x1100
+	// CCSPlayer_UseServices m_pUseServices; // 0x1120
+	// CCSPlayer_WaterServices m_pWaterServices; // 0x1118
+	// CCSPlayer_MovementServices m_pMovementServices; // 0x1138
+	// CCSPlayer_ViewModelServices m_pViewModelServices; // 0x12b8
+	// CCSPlayer_WeaponServices m_pWeaponServices; // 0x10f8
+	// CCSPlayer_CameraServices m_pCameraServices; // 0x1130
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x550
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CHandle< CBaseEntity> m_Handle"
 // MNetworkVarNames "bool m_bSendHandle"
@@ -8377,6 +10881,8 @@ public:
 // Alignment: 8
 // Size: 0x750
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CEnvWindShared m_EnvWindShared"
 class C_EnvWindClientside : public C_BaseEntity
@@ -8389,8 +10895,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponMAC10 : public C_CSWeaponBaseGun
 {
 public:
@@ -8399,21 +10907,26 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a90
+// Size: 0x1aa0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flDisplayHealth"
 class C_WeaponShield : public C_CSWeaponBaseGun
 {
 public:
 	// MNetworkEnable
-	float m_flDisplayHealth; // 0x1a80	
+	float m_flDisplayHealth; // 0x1a90	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
 // Size: 0x1130
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "char m_messageText"
 class C_PointClientUIWorldTextPanel : public C_PointClientUIWorldPanel
@@ -8432,6 +10945,7 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSPlayer_UseServices : public CPlayer_UseServices
 {
 public:
@@ -8440,154 +10954,81 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x4e0
+// Size: 0x218
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
-// MNetworkVarNames "float m_flMaxFallVelocity"
-// MNetworkVarNames "Vector m_vecLadderNormal"
-// MNetworkVarNames "int m_nLadderSurfacePropIndex"
-// MNetworkVarNames "float m_flDuckAmount"
-// MNetworkVarNames "float m_flDuckSpeed"
-// MNetworkVarNames "bool m_bDuckOverride"
-// MNetworkVarNames "bool m_bDesiresDuck"
-// MNetworkVarNames "uint32 m_nDuckTimeMsecs"
-// MNetworkVarNames "uint32 m_nDuckJumpTimeMsecs"
-// MNetworkVarNames "uint32 m_nJumpTimeMsecs"
-// MNetworkVarNames "float m_flLastDuckTime"
-// MNetworkVarNames "int m_nGameCodeHasMovedPlayerAfterCommand"
-// MNetworkVarNames "bool m_bOldJumpPressed"
-// MNetworkVarNames "float m_flJumpUntil"
-// MNetworkVarNames "float m_flJumpVel"
-// MNetworkVarNames "GameTime_t m_fStashGrenadeParameterWhen"
-// MNetworkVarNames "ButtonBitMask_t m_nButtonDownMaskPrev"
-// MNetworkVarNames "float m_flOffsetTickCompleteTime"
-// MNetworkVarNames "float m_flOffsetTickStashedSpeed"
-// MNetworkVarNames "float m_flStamina"
-class CCSPlayer_MovementServices : public CPlayer_MovementServices_Humanoid
+// MNetworkVarNames "float32 m_flFallVelocity"
+// MNetworkVarNames "bool m_bInCrouch"
+// MNetworkVarNames "uint32 m_nCrouchState"
+// MNetworkVarNames "GameTime_t m_flCrouchTransitionStartTime"
+// MNetworkVarNames "bool m_bDucked"
+// MNetworkVarNames "bool m_bDucking"
+// MNetworkVarNames "bool m_bInDuckJump"
+class CPlayer_MovementServices_Humanoid : public CPlayer_MovementServices
 {
 public:
-	// MNetworkEnable
-	float m_flMaxFallVelocity; // 0x218	
-	// MNetworkEnable
-	// MNetworkEncoder "normal"
-	Vector m_vecLadderNormal; // 0x21c	
-	// MNetworkEnable
-	int32_t m_nLadderSurfacePropIndex; // 0x228	
-	// MNetworkEnable
-	float m_flDuckAmount; // 0x22c	
-	// MNetworkEnable
-	float m_flDuckSpeed; // 0x230	
-	// MNetworkEnable
-	bool m_bDuckOverride; // 0x234	
-	// MNetworkEnable
-	bool m_bDesiresDuck; // 0x235	
-private:
-	[[maybe_unused]] uint8_t __pad0236[0x2]; // 0x236
-public:
-	float m_flDuckOffset; // 0x238	
+	float m_flStepSoundTime; // 0x1d8	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	// MNetworkPriority "32"
-	uint32_t m_nDuckTimeMsecs; // 0x23c	
+	// MNetworkBitCount "17"
+	// MNetworkMinValue "-4096,000000"
+	// MNetworkMaxValue "4096,000000"
+	// MNetworkEncodeFlags "4"
+	float m_flFallVelocity; // 0x1dc	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nDuckJumpTimeMsecs; // 0x240	
+	bool m_bInCrouch; // 0x1e0	
+private:
+	[[maybe_unused]] uint8_t __pad01e1[0x3]; // 0x1e1
+public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nJumpTimeMsecs; // 0x244	
+	uint32_t m_nCrouchState; // 0x1e4	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	float m_flLastDuckTime; // 0x248	
-private:
-	[[maybe_unused]] uint8_t __pad024c[0xc]; // 0x24c
-public:
-	Vector2D m_vecLastPositionAtFullCrouchSpeed; // 0x258	
-	bool m_duckUntilOnGround; // 0x260	
-	bool m_bHasWalkMovedSinceLastJump; // 0x261	
-	bool m_bInStuckTest; // 0x262	
-private:
-	[[maybe_unused]] uint8_t __pad0263[0xd]; // 0x263
-public:
-	float m_flStuckCheckTime[2][64]; // 0x270	
-	int32_t m_nTraceCount; // 0x470	
-	int32_t m_StuckLast; // 0x474	
-	bool m_bSpeedCropped; // 0x478	
-private:
-	[[maybe_unused]] uint8_t __pad0479[0x3]; // 0x479
-public:
-	int32_t m_nOldWaterLevel; // 0x47c	
-	float m_flWaterEntryTime; // 0x480	
-	Vector m_vecForward; // 0x484	
-	Vector m_vecLeft; // 0x490	
-	Vector m_vecUp; // 0x49c	
+	GameTime_t m_flCrouchTransitionStartTime; // 0x1e8	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	int32_t m_nGameCodeHasMovedPlayerAfterCommand; // 0x4a8	
+	bool m_bDucked; // 0x1ec	
 	// MNetworkEnable
-	bool m_bOldJumpPressed; // 0x4ac	
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	bool m_bDucking; // 0x1ed	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	bool m_bInDuckJump; // 0x1ee	
 private:
-	[[maybe_unused]] uint8_t __pad04ad[0x3]; // 0x4ad
+	[[maybe_unused]] uint8_t __pad01ef[0x1]; // 0x1ef
 public:
-	float m_flJumpPressedTime; // 0x4b0	
-	// MNetworkEnable
-	float m_flJumpUntil; // 0x4b4	
-	// MNetworkEnable
-	float m_flJumpVel; // 0x4b8	
-	// MNetworkEnable
-	GameTime_t m_fStashGrenadeParameterWhen; // 0x4bc	
-	// MNetworkEnable
-	uint64_t m_nButtonDownMaskPrev; // 0x4c0	
-	// MNetworkEnable
-	float m_flOffsetTickCompleteTime; // 0x4c8	
-	// MNetworkEnable
-	float m_flOffsetTickStashedSpeed; // 0x4cc	
-	// MNetworkEnable
-	float m_flStamina; // 0x4d0	
-	float m_flHeightAtJumpStart; // 0x4d4	
-	float m_flMaxJumpHeightThisJump; // 0x4d8	
+	Vector m_groundNormal; // 0x1f0	
+	float m_flSurfaceFriction; // 0x1fc	
+	CUtlStringToken m_surfaceProps; // 0x200	
+private:
+	[[maybe_unused]] uint8_t __pad0204[0xc]; // 0x204
+public:
+	int32_t m_nStepside; // 0x210	
+	
+	// Datamap fields:
+	// void m_pSurfaceData; // 0x208
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x178
-// Has VTable
+// Size: 0x10
+// Has Trivial Destructor
 // 
-// MGetKV3ClassDefaults
-class CBasePlayerVData : public CEntitySubclassVDataBase
+// MPropertyCustomEditor "multi_float( 4 )"
+class CSkillFloat
 {
 public:
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_sModelName; // 0x28	
-	CSkillFloat m_flHeadDamageMultiplier; // 0x108	
-	CSkillFloat m_flChestDamageMultiplier; // 0x118	
-	CSkillFloat m_flStomachDamageMultiplier; // 0x128	
-	CSkillFloat m_flArmDamageMultiplier; // 0x138	
-	CSkillFloat m_flLegDamageMultiplier; // 0x148	
-	// MPropertyGroupName "Water"
-	float m_flHoldBreathTime; // 0x158	
-	// MPropertyGroupName "Water"
-	// MPropertyDescription "Seconds between drowning ticks"
-	float m_flDrowningDamageInterval; // 0x15c	
-	// MPropertyGroupName "Water"
-	// MPropertyDescription "Amount of damage done on the first drowning tick (+1 each subsequent interval)"
-	int32_t m_nDrowningDamageInitial; // 0x160	
-	// MPropertyGroupName "Water"
-	// MPropertyDescription "Max damage done by a drowning tick"
-	int32_t m_nDrowningDamageMax; // 0x164	
-	// MPropertyGroupName "Water"
-	int32_t m_nWaterSpeed; // 0x168	
-	// MPropertyGroupName "Use"
-	float m_flUseRange; // 0x16c	
-	// MPropertyGroupName "Use"
-	float m_flUseAngleTolerance; // 0x170	
-	// MPropertyGroupName "Crouch"
-	// MPropertyDescription "Time to move between crouch and stand"
-	float m_flCrouchTime; // 0x174	
+	float m_pValue[4]; // 0x0	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x50
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_iAccount"
 // MNetworkVarNames "int m_iStartAccount"
@@ -8620,8 +11061,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponUSPSilencer : public C_CSWeaponBaseGun
 {
 public:
@@ -8632,6 +11075,8 @@ public:
 // Alignment: 8
 // Size: 0xdd8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CSpriteOriented : public C_Sprite
 {
 public:
@@ -8642,6 +11087,8 @@ public:
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_EndOfMatchLineupStart : public C_CSGO_EndOfMatchLineupEndpoint
 {
 public:
@@ -8650,8 +11097,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponFamas : public C_CSWeaponBaseGun
 {
 public:
@@ -8662,6 +11111,8 @@ public:
 // Alignment: 8
 // Size: 0x1290
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float32 m_flAlphaScale"
 // MNetworkVarNames "float32 m_flRadiusScale"
@@ -8692,6 +11143,8 @@ public:
 // Alignment: 8
 // Size: 0x560
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "SoundeventPathCornerPairNetworked_t m_vecCornerPairsNetworked"
 class C_SoundEventPathCornerEntity : public C_SoundEventEntity
@@ -8705,6 +11158,8 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CCSGO_WingmanIntroTerroristPosition : public CCSGO_WingmanIntroCharacterPosition
 {
 public:
@@ -8713,8 +11168,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1588
+// Size: 0x1590
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_PreviewModel : public C_BaseFlex
 {
 public:
@@ -8724,12 +11181,19 @@ public:
 	AnimLoopMode_t m_nDefaultAnimLoopMode; // 0x1080	
 	float m_flInitialModelScale; // 0x1084	
 	CUtlString m_sInitialWeaponState; // 0x1088	
+	
+	// Datamap fields:
+	// CUtlSymbolLarge InputSetItem; // 0x0
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xd28
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_clrRender"
 // MNetworkExcludeByName "CGameSceneNode::m_vecOrigin"
@@ -8783,27 +11247,27 @@ public:
 	// MNetworkBitCount "10"
 	float m_flHazeScale; // 0xd0c	
 	// MNetworkEnable
-	// MNetworkMinValue "-360.000000"
-	// MNetworkMaxValue "360.000000"
+	// MNetworkMinValue "-360,000000"
+	// MNetworkMaxValue "360,000000"
 	float m_flRotation; // 0xd10	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnHDRScaleChanged"
 	float m_flHDRColorScale; // 0xd14	
 	// MNetworkEnable
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "2.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "2,000000"
 	float m_flAlphaHaze; // 0xd18	
 	// MNetworkEnable
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "2.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "2,000000"
 	float m_flAlphaScale; // 0xd1c	
 	// MNetworkEnable
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "2.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "2,000000"
 	float m_flAlphaHdr; // 0xd20	
 	// MNetworkEnable
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1,000000"
 	float m_flFarZScale; // 0xd24	
 };
 
@@ -8811,6 +11275,8 @@ public:
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_EndOfMatchLineupEnd : public C_CSGO_EndOfMatchLineupEndpoint
 {
 public:
@@ -8821,6 +11287,7 @@ public:
 // Alignment: 8
 // Size: 0x120
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CSPerRoundStats_t m_perRoundStats"
 // MNetworkVarNames "CSMatchStats_t m_matchStats"
@@ -8851,6 +11318,8 @@ public:
 // Alignment: 8
 // Size: 0xce0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "string_t m_source"
 // MNetworkVarNames "string_t m_destination"
@@ -8863,13 +11332,16 @@ public:
 	CUtlSymbolLarge m_destination; // 0xcd8	
 	
 	// Static fields:
-	static CUtlVector< C_FootstepControl* > &Get_sm_footstepControllers(){return *reinterpret_cast<CUtlVector< C_FootstepControl* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_FootstepControl")->m_static_fields[0]->m_instance);};
+	static CUtlVector< C_FootstepControl* > &Get_sm_footstepControllers(){return *reinterpret_cast<CUtlVector< C_FootstepControl* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_FootstepControl")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xef8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bEnabled"
 // MNetworkVarNames "float m_MaxWeight"
@@ -8902,6 +11374,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_PrecipitationBlocker : public C_BaseModelEntity
 {
 public:
@@ -8912,6 +11386,7 @@ public:
 // Alignment: 8
 // Size: 0xf20
 // Has VTable
+// Construct allowed
 class C_BulletHitModel : public CBaseAnimGraph
 {
 public:
@@ -8930,6 +11405,9 @@ public:
 // Alignment: 8
 // Size: 0xe90
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_nDraftType"
 // MNetworkVarNames "int m_nTeamWinningCoinToss"
@@ -8998,13 +11476,15 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// Static fields:
-	static CSharedGapTypeQueryRegistration &Get_s_Instance(){return *reinterpret_cast<CSharedGapTypeQueryRegistration*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CSharedGapTypeQueryRegistration")->m_static_fields[0]->m_instance);};
+	static CSharedGapTypeQueryRegistration &Get_s_Instance(){return *reinterpret_cast<CSharedGapTypeQueryRegistration*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CSharedGapTypeQueryRegistration")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xf20
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flInnerAngle"
 // MNetworkVarNames "float m_flOuterAngle"
@@ -9027,6 +11507,8 @@ public:
 // Alignment: 16
 // Size: 0x82d0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_FireCrackerBlast : public C_Inferno
 {
 public:
@@ -9035,8 +11517,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponMP9 : public C_CSWeaponBaseGun
 {
 public:
@@ -9062,6 +11546,7 @@ public:
 // Alignment: 8
 // Size: 0x8ed8
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bFreezePeriod"
 // MNetworkVarNames "bool m_bWarmupPeriod"
@@ -9434,6 +11919,8 @@ public:
 // Size: 0x18
 // Has VTable
 // Has Trivial Destructor
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float32 m_duration"
 // MNetworkVarNames "float32 m_timestamp"
@@ -9455,6 +11942,7 @@ public:
 // Alignment: 8
 // Size: 0x50
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSPlayer_GlowServices : public CPlayerPawnComponent
 {
 public:
@@ -9479,6 +11967,7 @@ public:
 // Size: 0x228
 // Has VTable
 // Has Trivial Destructor
+// MNetworkNoBase
 // 
 // MNetworkVarNames "float m_flValues"
 // MNetworkVarNames "int m_nValueCounts"
@@ -9508,8 +11997,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponSSG08 : public C_CSWeaponBaseGun
 {
 public:
@@ -9520,6 +12011,8 @@ public:
 // Alignment: 8
 // Size: 0xd20
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "Vector m_vecLadderDir"
 // MNetworkVarNames "Vector m_vecPlayerMountPositionTop"
@@ -9551,13 +12044,15 @@ public:
 	bool m_bHasSlack; // 0xd1a	
 	
 	// Static fields:
-	static CUtlVector< C_FuncLadder* > &Get_s_Ladders(){return *reinterpret_cast<CUtlVector< C_FuncLadder* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_FuncLadder")->m_static_fields[0]->m_instance);};
+	static CUtlVector< C_FuncLadder* > &Get_s_Ladders(){return *reinterpret_cast<CUtlVector< C_FuncLadder* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_FuncLadder")->GetStaticFields()[0]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x568
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SoundOpvarSetAABBEntity : public C_SoundOpvarSetPointEntity
 {
 public:
@@ -9568,6 +12063,7 @@ public:
 // Alignment: 8
 // Size: 0xa0
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CHandle< C_BasePlayerWeapon > m_hMyWeapons"
 // MNetworkVarNames "CHandle< CBasePlayerWeapon> m_hActiveWeapon"
@@ -9603,6 +12099,9 @@ public:
 // Alignment: 8
 // Size: 0x12f0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_nSmokeEffectTickBegin"
 // MNetworkVarNames "bool m_bDidSmokeEffect"
@@ -9642,6 +12141,8 @@ public:
 // Alignment: 8
 // Size: 0x40
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "GameTime_t m_flDMBonusStartTime"
 // MNetworkVarNames "float m_flDMBonusTimeLength"
@@ -9658,25 +12159,23 @@ public:
 };
 
 // Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0xf40
+// Alignment: 8
+// Size: 0xcd0
 // Has VTable
-class CPointOffScreenIndicatorUi : public C_PointClientUIWorldPanel
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_LightOrthoEntity : public C_LightEntity
 {
 public:
-	bool m_bBeenEnabled; // 0xf30	
-	bool m_bHide; // 0xf31	
-private:
-	[[maybe_unused]] uint8_t __pad0f32[0x2]; // 0xf32
-public:
-	float m_flSeenTargetTime; // 0xf34	
-	C_PointClientUIWorldPanel* m_pTargetPanel; // 0xf38	
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x5e0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flScattering"
 // MNetworkVarNames "float m_flAnisotropy"
@@ -9796,8 +12295,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponTec9 : public C_CSWeaponBaseGun
 {
 public:
@@ -9808,6 +12309,8 @@ public:
 // Alignment: 8
 // Size: 0xf20
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bActive"
 // MNetworkVarNames "GameTime_t m_flStartTime"
@@ -9862,6 +12365,7 @@ public:
 // Alignment: 8
 // Size: 0x228
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSObserver_CameraServices : public CCSPlayerBase_CameraServices
 {
 public:
@@ -9872,6 +12376,8 @@ public:
 // Alignment: 8
 // Size: 0x550
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CCSClientPointScriptEntity : public CCSPointScriptEntity
 {
 public:
@@ -9882,6 +12388,7 @@ public:
 // Alignment: 8
 // Size: 0x230
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSPlayer_CameraServices : public CCSPlayerBase_CameraServices
 {
 public:
@@ -9892,6 +12399,8 @@ public:
 // Alignment: 8
 // Size: 0x560
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_nMode"
 // MNetworkVarNames "Vector m_vBoxSize"
@@ -9917,6 +12426,9 @@ public:
 // Alignment: 8
 // Size: 0xde8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_FireSprite : public C_Sprite
 {
 public:
@@ -9928,6 +12440,8 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamIntroTerroristPosition : public C_CSGO_TeamIntroCharacterPosition
 {
 public:
@@ -9938,6 +12452,9 @@ public:
 // Alignment: 8
 // Size: 0xd20
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_Precipitation : public C_BaseTrigger
 {
 public:
@@ -9967,32 +12484,28 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x128
+// Size: 0x28
 // Has VTable
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
-class CPrecipitationVData : public CEntitySubclassVDataBase
+// MVDataRoot
+// MVDataNodeType "1"
+// MVDataOverlayType "1"
+// MVDataUseLinkedEntityClasses
+class CEntitySubclassVDataBase
 {
-public:
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szParticlePrecipitationEffect; // 0x28	
-	float m_flInnerDistance; // 0x108	
-	ParticleAttachment_t m_nAttachType; // 0x10c	
-	bool m_bBatchSameVolumeType; // 0x110	
 private:
-	[[maybe_unused]] uint8_t __pad0111[0x3]; // 0x111
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
 public:
-	int32_t m_nRTEnvCP; // 0x114	
-	int32_t m_nRTEnvCPComponent; // 0x118	
-private:
-	[[maybe_unused]] uint8_t __pad011c[0x4]; // 0x11c
-public:
-	CUtlString m_szModifier; // 0x120	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xcf8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flFluidDensity"
 class C_TriggerBuoyancy : public C_BaseTrigger
@@ -10007,6 +12520,8 @@ public:
 // Alignment: 8
 // Size: 0xec8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bIgnoreInput"
 // MNetworkVarNames "float m_flWidth"
@@ -10065,6 +12580,9 @@ public:
 // Alignment: 8
 // Size: 0xcd8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_FuncTrackTrain : public C_BaseModelEntity
 {
 public:
@@ -10077,6 +12595,7 @@ public:
 // Alignment: 8
 // Size: 0xf8
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bIsRescuing"
 // MNetworkVarNames "WeaponPurchaseTracker_t m_weaponPurchasesThisMatch"
@@ -10100,6 +12619,7 @@ public:
 // Alignment: 8
 // Size: 0x60
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int32 m_nModelID"
 // MNetworkVarNames "HMaterialStrong m_hMaterial"
@@ -10171,6 +12691,8 @@ public:
 // Alignment: 8
 // Size: 0x1158
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bUseHitboxesForRenderBox"
 // MNetworkVarNames "bool m_bUseAnimGraph"
@@ -10241,12 +12763,16 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x23f0
+// Size: 0x2460
 // Has VTable
-class C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel : public C_CSGO_PreviewPlayer
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_CSGO_PreviewPlayer : public C_CSPlayerPawn
 {
 public:
-	// No schema binary for binding
+	CUtlString m_animgraph; // 0x23c8	
+	CGlobalSymbol m_animgraphCharacterModeString; // 0x23d0	
+	float m_flInitialModelScale; // 0x23d8	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -10255,7 +12781,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MPulseProvideFeatureTag
+// MPulseProvideFeatureTag "CSPointScriptExtensions"
 // MPulseLibraryBindings
 class CCSPointScriptExtensions_observer
 {
@@ -10268,6 +12794,8 @@ public:
 // Alignment: 8
 // Size: 0x5d8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CPointTemplate : public CLogicalEntity
 {
 public:
@@ -10294,8 +12822,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponHKP2000 : public C_CSWeaponBaseGun
 {
 public:
@@ -10304,8 +12834,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1aa0
+// Size: 0x1ab0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CTripWireFire : public C_BaseCSGrenade
 {
 public:
@@ -10314,8 +12846,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1588
+// Size: 0x1590
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_PreviewModelAlias_csgo_item_previewmodel : public C_CSGO_PreviewModel
 {
 public:
@@ -10326,6 +12860,8 @@ public:
 // Alignment: 8
 // Size: 0x560
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CInfoDynamicShadowHint : public C_PointEntity
 {
 public:
@@ -10339,7 +12875,7 @@ public:
 	CHandle< C_BaseEntity > m_hLight; // 0x558	
 	
 	// Static fields:
-	static CUtlVector< CInfoDynamicShadowHint* > &Get_m_AllHints(){return *reinterpret_cast<CUtlVector< CInfoDynamicShadowHint* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CInfoDynamicShadowHint")->m_static_fields[0]->m_instance);};
+	static CUtlVector< CInfoDynamicShadowHint* > &Get_m_AllHints(){return *reinterpret_cast<CUtlVector< CInfoDynamicShadowHint* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CInfoDynamicShadowHint")->GetStaticFields()[0]->m_pInstance);};
 	
 	// Datamap fields:
 	// void InputEnable; // 0x0
@@ -10352,7 +12888,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MPulseProvideFeatureTag
+// MPulseProvideFeatureTag "PulseEntities"
 // MPulseLibraryBindings
 class CTakeDamageInfoAPI
 {
@@ -10367,7 +12903,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MPulseProvideFeatureTag
+// MPulseProvideFeatureTag "PulseEntities"
 // MPulseLibraryBindings
 class C_BaseEntityAPI
 {
@@ -10378,8 +12914,11 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a60
+// Size: 0x1a70
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_WeaponXM1014 : public C_CSWeaponBase
 {
 public:
@@ -10390,6 +12929,8 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_MapPreviewParticleSystem : public C_ParticleSystem
 {
 public:
@@ -10400,6 +12941,8 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_TriggerMultiple : public C_BaseTrigger
 {
 public:
@@ -10410,6 +12953,8 @@ public:
 // Alignment: 8
 // Size: 0xd20
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_gravityScale"
 // MNetworkVarNames "float m_linearLimit"
@@ -10462,6 +13007,7 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CHandle< CBaseEntity> m_hCarriedHostage"
 // MNetworkVarNames "CHandle< CBaseEntity> m_hCarriedHostageProp"
@@ -10476,8 +13022,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a60
+// Size: 0x1a70
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CBreachCharge : public C_CSWeaponBase
 {
 public:
@@ -10488,6 +13036,8 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_LightDirectionalEntity : public C_LightEntity
 {
 public:
@@ -10498,6 +13048,8 @@ public:
 // Alignment: 8
 // Size: 0x630
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "HRenderTextureStrong m_Entity_hCubemapTexture"
 // MNetworkVarNames "bool m_Entity_bCustomCubemapTexture"
@@ -10576,6 +13128,9 @@ public:
 // Alignment: 8
 // Size: 0xf60
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_PredictedViewModel : public C_BaseViewModel
 {
 public:
@@ -10586,8 +13141,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponBizon : public C_CSWeaponBaseGun
 {
 public:
@@ -10596,8 +13153,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_AK47 : public C_CSWeaponBaseGun
 {
 public:
@@ -10608,6 +13167,8 @@ public:
 // Alignment: 8
 // Size: 0x5c0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bDisabled"
 // MNetworkVarNames "bool m_bUpdateOnClient"
@@ -10687,8 +13248,11 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a60
+// Size: 0x1a70
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_Knife : public C_CSWeaponBase
 {
 public:
@@ -10699,6 +13263,8 @@ public:
 // Alignment: 8
 // Size: 0x630
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_EnvCubemapBox : public C_EnvCubemap
 {
 public:
@@ -10707,24 +13273,23 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x16b8
+// Size: 0x16b0
 // Has VTable
-// 
-// MNetworkVarNames "CHandle<CCSPlayerPawn> m_OwningPlayer"
-// MNetworkVarNames "CHandle<CCSPlayerPawn> m_KillingPlayer"
-class C_ItemDogtags : public C_Item
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+class C_Item : public C_EconEntity
 {
 public:
-	// MNetworkEnable
-	CHandle< C_CSPlayerPawn > m_OwningPlayer; // 0x16b0	
-	// MNetworkEnable
-	CHandle< C_CSPlayerPawn > m_KillingPlayer; // 0x16b4	
+	char m_pReticleHintTextName[256]; // 0x15b0	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x5d0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_EndOfMatchCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -10735,6 +13300,8 @@ public:
 // Alignment: 8
 // Size: 0x568
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SoundOpvarSetOBBEntity : public C_SoundOpvarSetAABBEntity
 {
 public:
@@ -10745,6 +13312,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_Breakable : public C_BaseModelEntity
 {
 public:
@@ -10755,6 +13324,7 @@ public:
 // Alignment: 8
 // Size: 0x90
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "SellbackPurchaseEntry_t m_vecSellbackPurchaseEntries"
 class CCSPlayer_BuyServices : public CPlayerPawnComponent
@@ -10766,8 +13336,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1aa0
+// Size: 0x1ab0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SensorGrenade : public C_BaseCSGrenade
 {
 public:
@@ -10776,22 +13348,28 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a90
+// Size: 0x1aa0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "GameTime_t m_fFireTime"
 class C_WeaponTaser : public C_CSWeaponBaseGun
 {
 public:
 	// MNetworkEnable
-	GameTime_t m_fFireTime; // 0x1a80	
-	int32_t m_nLastAttackTick; // 0x1a84	
+	GameTime_t m_fFireTime; // 0x1a90	
+	int32_t m_nLastAttackTick; // 0x1a94	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a70
+// Size: 0x1a80
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bPlayingUninterruptableAct"
 // MNetworkVarNames "PlayerAnimEvent_t m_nUninterruptableActivity"
@@ -10799,19 +13377,21 @@ class C_Fists : public C_CSWeaponBase
 {
 public:
 	// MNetworkEnable
-	bool m_bPlayingUninterruptableAct; // 0x1a60	
+	bool m_bPlayingUninterruptableAct; // 0x1a70	
 private:
-	[[maybe_unused]] uint8_t __pad1a61[0x3]; // 0x1a61
+	[[maybe_unused]] uint8_t __pad1a71[0x3]; // 0x1a71
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnUninterruptChanged"
-	PlayerAnimEvent_t m_nUninterruptableActivity; // 0x1a64	
+	PlayerAnimEvent_t m_nUninterruptableActivity; // 0x1a74	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x1048
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkExcludeByName "m_flAnimTime"
 // MNetworkExcludeByName "m_flexWeight"
@@ -10832,6 +13412,8 @@ public:
 // Alignment: 8
 // Size: 0x578
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CInfoDynamicShadowHintBox : public CInfoDynamicShadowHint
 {
 public:
@@ -10843,6 +13425,8 @@ public:
 // Alignment: 8
 // Size: 0x568
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_SoundOpvarSetPathCornerEntity : public C_SoundOpvarSetPointEntity
 {
 public:
@@ -10853,6 +13437,8 @@ public:
 // Alignment: 8
 // Size: 0x598
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flEndDistance"
 // MNetworkVarNames "float m_flStartDistance"
@@ -10923,8 +13509,11 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a60
+// Size: 0x1a70
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_WeaponSawedoff : public C_CSWeaponBase
 {
 public:
@@ -10935,6 +13524,8 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_TriggerLerpObject : public C_BaseTrigger
 {
 public:
@@ -10962,8 +13553,8 @@ public:
 	HSequence m_hSequence; // 0x8	
 	// MNetworkEnable
 	// MNetworkBitCount "15"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1,000000"
 	// MNetworkEncodeFlags "8"
 	// MNetworkPriority "32"
 	// MNetworkSendProxyRecipientsFilter
@@ -10971,8 +13562,8 @@ public:
 	float m_flPrevCycle; // 0xc	
 	// MNetworkEnable
 	// MNetworkBitCount "15"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1,000000"
 	// MNetworkEncodeFlags "8"
 	// MNetworkPriority "32"
 	// MNetworkSendProxyRecipientsFilter
@@ -10980,8 +13571,8 @@ public:
 	float m_flCycle; // 0x10	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "1.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "1,000000"
 	// MNetworkEncodeFlags "0"
 	CNetworkedQuantizedFloat m_flWeight; // 0x14	
 	// MNetworkDisable
@@ -11034,6 +13625,8 @@ public:
 // Alignment: 8
 // Size: 0x10b0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkExcludeByName "m_hModel"
 // MNetworkVarNames "shard_model_desc_t m_ShardDesc"
@@ -11060,8 +13653,11 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_WeaponElite : public C_CSWeaponBaseGun
 {
 public:
@@ -11072,6 +13668,8 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_LightSpotEntity : public C_LightEntity
 {
 public:
@@ -11082,6 +13680,8 @@ public:
 // Alignment: 8
 // Size: 0x578
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flVisibilityStrength"
 // MNetworkVarNames "float m_flFogDistanceMultiplier"
@@ -11119,8 +13719,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x23f0
+// Size: 0x2460
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamPreviewModel : public C_CSGO_PreviewPlayer
 {
 public:
@@ -11131,6 +13733,9 @@ public:
 // Alignment: 8
 // Size: 0x15b8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_EconWearable : public C_EconEntity
 {
 public:
@@ -11142,6 +13747,10 @@ public:
 // Alignment: 8
 // Size: 0x550
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int8 m_iCurrentMaxRagdollCount"
 class C_RagdollManager : public C_BaseEntity
@@ -11155,6 +13764,8 @@ public:
 // Alignment: 8
 // Size: 0xd28
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "HMaterialStrong m_hSkyMaterial"
 // MNetworkVarNames "HMaterialStrong m_hSkyMaterialLightingOnly"
@@ -11216,6 +13827,8 @@ public:
 // Alignment: 8
 // Size: 0x548
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CInfoTarget : public C_PointEntity
 {
 public:
@@ -11226,6 +13839,8 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamIntroCounterTerroristPosition : public C_CSGO_TeamIntroCharacterPosition
 {
 public:
@@ -11236,6 +13851,9 @@ public:
 // Alignment: 8
 // Size: 0x1198
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkExcludeByName "m_flAnimTime"
 // MNetworkExcludeByName "m_flexWeight"
@@ -11275,6 +13893,8 @@ public:
 // Alignment: 8
 // Size: 0x1158
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_DynamicPropAlias_cable_dynamic : public C_DynamicProp
 {
 public:
@@ -11283,8 +13903,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponSCAR20 : public C_CSWeaponBaseGun
 {
 public:
@@ -11293,8 +13915,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1aa0
+// Size: 0x1ab0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_DecoyGrenade : public C_BaseCSGrenade
 {
 public:
@@ -11307,7 +13931,7 @@ public:
 // Has Trivial Constructor
 // Has Trivial Destructor
 // 
-// MPulseProvideFeatureTag
+// MPulseProvideFeatureTag "CSPointScriptExtensions"
 // MPulseLibraryBindings
 class CCSPointScriptExtensions_player
 {
@@ -11320,6 +13944,8 @@ public:
 // Alignment: 8
 // Size: 0x5b0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "string_t m_iszStackName"
 // MNetworkVarNames "string_t m_iszOperatorName"
@@ -11399,6 +14025,9 @@ public:
 // Alignment: 8
 // Size: 0xf78
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_LocalTempEntity : public CBaseAnimGraph
 {
 public:
@@ -11451,6 +14080,9 @@ public:
 // Alignment: 8
 // Size: 0x1178
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bIsIncGrenade"
 class C_MolotovProjectile : public C_BaseCSGrenadeProjectile
@@ -11464,6 +14096,8 @@ public:
 // Alignment: 8
 // Size: 0xcd0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_LightEnvironmentEntity : public C_LightDirectionalEntity
 {
 public:
@@ -11472,8 +14106,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponUMP45 : public C_CSWeaponBaseGun
 {
 public:
@@ -11484,6 +14120,8 @@ public:
 // Alignment: 8
 // Size: 0x728
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bDisabled"
 // MNetworkVarNames "int m_nResolutionX"
@@ -11531,6 +14169,9 @@ public:
 // Alignment: 8
 // Size: 0xcf0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "uint8 m_Flags"
 // MNetworkVarNames "uint8 m_LightStyle"
@@ -11555,13 +14196,13 @@ public:
 	int32_t m_Exponent; // 0xcd0	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "360.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "360,000000"
 	float m_InnerAngle; // 0xcd4	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "360.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "360,000000"
 	float m_OuterAngle; // 0xcd8	
 	// MNetworkEnable
 	float m_SpotRadius; // 0xcdc	
@@ -11569,8 +14210,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1aa0
+// Size: 0x1ab0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_HEGrenade : public C_BaseCSGrenade
 {
 public:
@@ -11581,6 +14224,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_TriggerVolume : public C_BaseModelEntity
 {
 public:
@@ -11591,6 +14236,9 @@ public:
 // Alignment: 8
 // Size: 0xce0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "string_t m_EffectName"
 // MNetworkVarNames "bool m_bState"
@@ -11611,6 +14259,7 @@ public:
 // Alignment: 8
 // Size: 0x1370
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "GameTime_t m_flNextAttack"
 // MNetworkVarNames "bool m_bIsLookingAtWeapon"
@@ -11641,6 +14290,9 @@ public:
 // Alignment: 8
 // Size: 0x550
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float32 m_flFadeStartDist"
 // MNetworkVarNames "float32 m_flFadeEndDist"
@@ -11657,6 +14309,8 @@ public:
 // Alignment: 8
 // Size: 0x550
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flRadius"
 class C_SoundEventSphereEntity : public C_SoundEventEntity
@@ -11669,6 +14323,7 @@ public:
 // Registered binary: client.dll (project 'entity2')
 // Alignment: 8
 // Size: 0x78
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int32 m_nameStringableIndex"
 class CEntityIdentity
@@ -11695,7 +14350,7 @@ public:
 	// MNetworkChangeAccessorFieldPathIndex
 	ChangeAccessorFieldPathIndex_t m_PathIndex; // 0x40	
 private:
-	[[maybe_unused]] uint8_t __pad0042[0x16]; // 0x42
+	[[maybe_unused]] uint8_t __pad0044[0x14]; // 0x44
 public:
 	CEntityIdentity* m_pPrev; // 0x58	
 	CEntityIdentity* m_pNext; // 0x60	
@@ -11710,6 +14365,9 @@ public:
 // Alignment: 8
 // Size: 0x1048
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_PhysicsPropMultiplayer : public C_PhysicsProp
 {
 public:
@@ -11720,6 +14378,8 @@ public:
 // Alignment: 8
 // Size: 0x1158
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_DynamicPropAlias_dynamic_prop : public C_DynamicProp
 {
 public:
@@ -11730,6 +14390,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_fFlags"
 // MNetworkIncludeByName "m_vecVelocity"
@@ -11743,6 +14405,9 @@ public:
 // Alignment: 8
 // Size: 0xd88
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByUserGroup "Origin"
 // MNetworkIncludeByName "m_nModelIndex"
@@ -11776,8 +14441,8 @@ class C_Beam : public C_BaseModelEntity
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "-25.000000"
-	// MNetworkMaxValue "25.000000"
+	// MNetworkMinValue "-25,000000"
+	// MNetworkMaxValue "25,000000"
 	// MNetworkEncodeFlags "2"
 	float m_flFrameRate; // 0xcc8	
 	// MNetworkEnable
@@ -11810,14 +14475,14 @@ private:
 public:
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "102.300003"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "102,300003"
 	// MNetworkEncodeFlags "2"
 	float m_fWidth; // 0xd4c	
 	// MNetworkEnable
 	// MNetworkBitCount "10"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "102.300003"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "102,300003"
 	// MNetworkEncodeFlags "2"
 	float m_fEndWidth; // 0xd50	
 	// MNetworkEnable
@@ -11826,25 +14491,25 @@ public:
 	float m_fHaloScale; // 0xd58	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "64.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "64,000000"
 	// MNetworkEncodeFlags "1"
 	float m_fAmplitude; // 0xd5c	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "256.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "256,000000"
 	// MNetworkEncodeFlags "1"
 	float m_fStartFrame; // 0xd60	
 	// MNetworkEnable
 	// MNetworkBitCount "8"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "100.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "100,000000"
 	float m_fSpeed; // 0xd64	
 	// MNetworkEnable
 	// MNetworkBitCount "20"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "256.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "256,000000"
 	// MNetworkEncodeFlags "1"
 	// MNetworkPriority "32"
 	float m_flFrame; // 0xd68	
@@ -11865,6 +14530,8 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamSelectCounterTerroristPosition : public C_CSGO_TeamSelectCharacterPosition
 {
 public:
@@ -11875,6 +14542,8 @@ public:
 // Alignment: 8
 // Size: 0x1158
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_DynamicPropAlias_prop_dynamic_override : public C_DynamicProp
 {
 public:
@@ -11885,6 +14554,9 @@ public:
 // Alignment: 8
 // Size: 0x5d8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "string_t m_iszOverlayNames"
 // MNetworkVarNames "float32 m_flOverlayTimes"
@@ -11898,8 +14570,8 @@ public:
 	CUtlSymbolLarge m_iszOverlayNames[10]; // 0x548	
 	// MNetworkEnable
 	// MNetworkBitCount "11"
-	// MNetworkMinValue "-1.000000"
-	// MNetworkMaxValue "63.000000"
+	// MNetworkMinValue "-1,000000"
+	// MNetworkMaxValue "63,000000"
 	float m_flOverlayTimes[10]; // 0x598	
 	// MNetworkEnable
 	GameTime_t m_flStartTime; // 0x5c0	
@@ -11918,145 +14590,100 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xdc8
+// Size: 0x250
 // Has VTable
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
-// MPropertySuppressBaseClassField
-// MPropertySuppressBaseClassField
-class CCSWeaponBaseVData : public CBasePlayerWeaponVData
+class CBasePlayerWeaponVData : public CEntitySubclassVDataBase
 {
 public:
-	CSWeaponType m_WeaponType; // 0x250	
-	CSWeaponCategory m_WeaponCategory; // 0x254	
-	// MPropertyStartGroup "Visuals"
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szViewModel; // 0x258	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szPlayerModel; // 0x338	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szWorldDroppedModel; // 0x418	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szAimsightLensMaskModel; // 0x4f8	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szMagazineModel; // 0x5d8	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szHeatEffect; // 0x6b8	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szEjectBrassEffect; // 0x798	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticleAlt; // 0x878	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticle; // 0x958	
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticleAlt; // 0xa38	
-	// MPropertyDescription "Effect to actually fire into the world from this weapon"
-	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szTracerParticle; // 0xb18	
-	// MPropertyStartGroup "HUD Positions"
+	// MPropertyDescription "Model used on the ground or held by an entity"
+	// MPropertyGroupName "Visuals"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szWorldModel; // 0x28	
+	// MPropertyDescription "Was the weapon was built right-handed?"
+	// MPropertyGroupName "Visuals"
+	bool m_bBuiltRightHanded; // 0x108	
+	// MPropertyDescription "Allows flipping the model, regardless of whether it is built left or right handed"
+	// MPropertyGroupName "Visuals"
+	bool m_bAllowFlipping; // 0x109	
+private:
+	[[maybe_unused]] uint8_t __pad010a[0x6]; // 0x10a
+public:
+	// MPropertyGroupName "Visuals"
+	// MPropertyDescription "Attachment to fire bullets from"
+	// MPropertyAttributeEditor "VDataModelAttachment( m_szWorldModel )"
+	CUtlString m_sMuzzleAttachment; // 0x110	
+	// MPropertyDescription "Effect when firing this weapon"
+	// MPropertyGroupName "Visuals"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticle; // 0x118	
+	ItemFlagTypes_t m_iFlags; // 0x1f8	
+	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
+	// MPropertyGroupName "Ammo"
+	// MPropertyCustomFGDType "string"
+	AmmoIndex_t m_nPrimaryAmmoType; // 0x1f9	
+	// MPropertyAttributeEditor "VDataChoice( scripts/ammo.vdata )"
+	// MPropertyGroupName "Ammo"
+	// MPropertyCustomFGDType "string"
+	AmmoIndex_t m_nSecondaryAmmoType; // 0x1fa	
+private:
+	[[maybe_unused]] uint8_t __pad01fb[0x1]; // 0x1fb
+public:
+	// MPropertyFriendlyName "Primary Clip Size"
+	// MPropertyDescription "How many bullets this gun can fire before it reloads (0 if no clip)"
+	// MPropertyAttributeRange "0 255"
+	// MPropertyGroupName "Ammo"
+	int32_t m_iMaxClip1; // 0x1fc	
+	// MPropertyFriendlyName "Secondary Clip Size"
+	// MPropertyDescription "How many secondary bullets this gun can fire before it reloads (0 if no clip)"
+	// MPropertyGroupName "Ammo"
+	// MPropertyAttributeRange "0 255"
+	int32_t m_iMaxClip2; // 0x200	
+	// MPropertyDescription "Primary Initial Clip (-1 means use clip size)"
+	// MPropertyGroupName "Ammo"
+	// MPropertyAttributeRange "-1 255"
+	int32_t m_iDefaultClip1; // 0x204	
+	// MPropertyDescription "Secondary Initial Clip (-1 means use clip size)"
+	// MPropertyGroupName "Ammo"
+	// MPropertyAttributeRange "-1 255"
+	int32_t m_iDefaultClip2; // 0x208	
+	// MPropertyDescription "This value used to determine this weapon's importance in autoselection"
+	// MPropertyGroupName "UI"
+	int32_t m_iWeight; // 0x20c	
+	// MPropertyFriendlyName "Safe To Auto-Switch To"
+	// MPropertyDescription "Whether this weapon is safe to automatically switch to (should be false for eg. explosives that can the player may accidentally hurt themselves with)"
+	// MPropertyGroupName "UI"
+	bool m_bAutoSwitchTo; // 0x210	
+	// MPropertyFriendlyName "Safe To Auto-Switch Away From"
+	// MPropertyGroupName "UI"
+	bool m_bAutoSwitchFrom; // 0x211	
+private:
+	[[maybe_unused]] uint8_t __pad0212[0x2]; // 0x212
+public:
+	// MPropertyGroupName "UI"
+	RumbleEffect_t m_iRumbleEffect; // 0x214	
+	// MPropertyDescription "Should both primary and secondary attacks be cooled down together (so cooling down primary attack would cooldown both primary + secondary attacks)?"
+	bool m_bLinkedCooldowns; // 0x218	
+private:
+	[[maybe_unused]] uint8_t __pad0219[0x7]; // 0x219
+public:
+	CUtlOrderedMap< WeaponSound_t, CSoundEventName > m_aShootSounds; // 0x220	
 	// MPropertyFriendlyName "HUD Bucket"
 	// MPropertyDescription "Which 'column' to display this weapon in the HUD"
-	gear_slot_t m_GearSlot; // 0xbf8	
-	int32_t m_GearSlotPosition; // 0xbfc	
+	// MPropertyGroupName "UI"
+	int32_t m_iSlot; // 0x248	
 	// MPropertyFriendlyName "HUD Bucket Position"
-	// MPropertyDescription "Default team (non Terrorist or Counter-Terrorist) 'row' to display this weapon in the HUD."
-	loadout_slot_t m_DefaultLoadoutSlot; // 0xc00	
-private:
-	[[maybe_unused]] uint8_t __pad0c04[0x4]; // 0xc04
-public:
-	CUtlString m_sWrongTeamMsg; // 0xc08	
-	// MPropertyStartGroup "In-Game Data"
-	int32_t m_nPrice; // 0xc10	
-	int32_t m_nKillAward; // 0xc14	
-	int32_t m_nPrimaryReserveAmmoMax; // 0xc18	
-	int32_t m_nSecondaryReserveAmmoMax; // 0xc1c	
-	bool m_bMeleeWeapon; // 0xc20	
-	bool m_bHasBurstMode; // 0xc21	
-	bool m_bIsRevolver; // 0xc22	
-	bool m_bCannotShootUnderwater; // 0xc23	
-private:
-	[[maybe_unused]] uint8_t __pad0c24[0x4]; // 0xc24
-public:
-	// MPropertyFriendlyName "In-Code weapon name"
-	CGlobalSymbol m_szName; // 0xc28	
-	// MPropertyFriendlyName "Player Animation Extension"
-	CUtlString m_szAnimExtension; // 0xc30	
-	CSWeaponSilencerType m_eSilencerType; // 0xc38	
-	int32_t m_nCrosshairMinDistance; // 0xc3c	
-	int32_t m_nCrosshairDeltaDistance; // 0xc40	
-	bool m_bIsFullAuto; // 0xc44	
-private:
-	[[maybe_unused]] uint8_t __pad0c45[0x3]; // 0xc45
-public:
-	int32_t m_nNumBullets; // 0xc48	
-	// MPropertyStartGroup "Firing Mode Data"
-	CFiringModeFloat m_flCycleTime; // 0xc4c	
-	CFiringModeFloat m_flMaxSpeed; // 0xc54	
-	CFiringModeFloat m_flSpread; // 0xc5c	
-	CFiringModeFloat m_flInaccuracyCrouch; // 0xc64	
-	CFiringModeFloat m_flInaccuracyStand; // 0xc6c	
-	CFiringModeFloat m_flInaccuracyJump; // 0xc74	
-	CFiringModeFloat m_flInaccuracyLand; // 0xc7c	
-	CFiringModeFloat m_flInaccuracyLadder; // 0xc84	
-	CFiringModeFloat m_flInaccuracyFire; // 0xc8c	
-	CFiringModeFloat m_flInaccuracyMove; // 0xc94	
-	CFiringModeFloat m_flRecoilAngle; // 0xc9c	
-	CFiringModeFloat m_flRecoilAngleVariance; // 0xca4	
-	CFiringModeFloat m_flRecoilMagnitude; // 0xcac	
-	CFiringModeFloat m_flRecoilMagnitudeVariance; // 0xcb4	
-	CFiringModeInt m_nTracerFrequency; // 0xcbc	
-	float m_flInaccuracyJumpInitial; // 0xcc4	
-	float m_flInaccuracyJumpApex; // 0xcc8	
-	float m_flInaccuracyReload; // 0xccc	
-	// MPropertyStartGroup "Firing"
-	int32_t m_nRecoilSeed; // 0xcd0	
-	int32_t m_nSpreadSeed; // 0xcd4	
-	float m_flTimeToIdleAfterFire; // 0xcd8	
-	float m_flIdleInterval; // 0xcdc	
-	float m_flAttackMovespeedFactor; // 0xce0	
-	float m_flHeatPerShot; // 0xce4	
-	float m_flInaccuracyPitchShift; // 0xce8	
-	float m_flInaccuracyAltSoundThreshold; // 0xcec	
-	float m_flBotAudibleRange; // 0xcf0	
-private:
-	[[maybe_unused]] uint8_t __pad0cf4[0x4]; // 0xcf4
-public:
-	CUtlString m_szUseRadioSubtitle; // 0xcf8	
-	// MPropertyStartGroup "Zooming"
-	bool m_bUnzoomsAfterShot; // 0xd00	
-	bool m_bHideViewModelWhenZoomed; // 0xd01	
-private:
-	[[maybe_unused]] uint8_t __pad0d02[0x2]; // 0xd02
-public:
-	int32_t m_nZoomLevels; // 0xd04	
-	int32_t m_nZoomFOV1; // 0xd08	
-	int32_t m_nZoomFOV2; // 0xd0c	
-	float m_flZoomTime0; // 0xd10	
-	float m_flZoomTime1; // 0xd14	
-	float m_flZoomTime2; // 0xd18	
-	// MPropertyStartGroup "Iron Sights"
-	float m_flIronSightPullUpSpeed; // 0xd1c	
-	float m_flIronSightPutDownSpeed; // 0xd20	
-	float m_flIronSightFOV; // 0xd24	
-	float m_flIronSightPivotForward; // 0xd28	
-	float m_flIronSightLooseness; // 0xd2c	
-	QAngle m_angPivotAngle; // 0xd30	
-	Vector m_vecIronSightEyePos; // 0xd3c	
-	// MPropertyStartGroup "Damage"
-	int32_t m_nDamage; // 0xd48	
-	float m_flHeadshotMultiplier; // 0xd4c	
-	float m_flArmorRatio; // 0xd50	
-	float m_flPenetration; // 0xd54	
-	float m_flRange; // 0xd58	
-	float m_flRangeModifier; // 0xd5c	
-	float m_flFlinchVelocityModifierLarge; // 0xd60	
-	float m_flFlinchVelocityModifierSmall; // 0xd64	
-	// MPropertyStartGroup "Recovery"
-	float m_flRecoveryTimeCrouch; // 0xd68	
-	float m_flRecoveryTimeStand; // 0xd6c	
-	float m_flRecoveryTimeCrouchFinal; // 0xd70	
-	float m_flRecoveryTimeStandFinal; // 0xd74	
-	int32_t m_nRecoveryTransitionStartBullet; // 0xd78	
-	int32_t m_nRecoveryTransitionEndBullet; // 0xd7c	
-	// MPropertyStartGroup "Grenade Data"
-	float m_flThrowVelocity; // 0xd80	
-	Vector m_vSmokeColor; // 0xd84	
-	CGlobalSymbol m_szAnimClass; // 0xd90	
+	// MPropertyDescription "Which 'row' to display this weapon in the HUD"
+	// MPropertyGroupName "UI"
+	int32_t m_iPosition; // 0x24c	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xf40
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "char m_messageText"
 // MNetworkVarNames "char m_FontName"
@@ -12116,6 +14743,8 @@ public:
 // Alignment: 8
 // Size: 0x10b8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CBumpMineProjectile : public C_BaseGrenade
 {
 public:
@@ -12124,8 +14753,11 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x6e0
+// Size: 0x6f0
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_pEntity"
 // MNetworkIncludeByName "m_flSimulationTime"
@@ -12154,64 +14786,66 @@ private:
 	[[maybe_unused]] uint8_t __pad0554[0x4]; // 0x554
 public:
 	// -> needsprocessing - 0x558
-	// -> command_number - 0x5e8
+	// -> command_number - 0x5f8
 	C_CommandContext m_CommandContext; // 0x558	
-	uint64_t m_nInButtonsWhichAreToggles; // 0x5f0	
+	uint64_t m_nInButtonsWhichAreToggles; // 0x600	
 	// MNetworkEnable
 	// MNetworkPriority "1"
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_nTickBase; // 0x5f8	
+	uint32_t m_nTickBase; // 0x608	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnPawnChanged"
-	CHandle< C_BasePlayerPawn > m_hPawn; // 0x5fc	
+	CHandle< C_BasePlayerPawn > m_hPawn; // 0x60c	
 	// MNetworkEnable
-	bool m_bKnownTeamMismatch; // 0x600	
+	bool m_bKnownTeamMismatch; // 0x610	
 private:
-	[[maybe_unused]] uint8_t __pad0601[0x3]; // 0x601
+	[[maybe_unused]] uint8_t __pad0611[0x3]; // 0x611
 public:
-	CHandle< C_BasePlayerPawn > m_hPredictedPawn; // 0x604	
-	CSplitScreenSlot m_nSplitScreenSlot; // 0x608	
-	CHandle< CBasePlayerController > m_hSplitOwner; // 0x60c	
-	CUtlVector< CHandle< CBasePlayerController > > m_hSplitScreenPlayers; // 0x610	
-	bool m_bIsHLTV; // 0x628	
+	CHandle< C_BasePlayerPawn > m_hPredictedPawn; // 0x614	
+	CSplitScreenSlot m_nSplitScreenSlot; // 0x618	
+	CHandle< CBasePlayerController > m_hSplitOwner; // 0x61c	
+	CUtlVector< CHandle< CBasePlayerController > > m_hSplitScreenPlayers; // 0x620	
+	bool m_bIsHLTV; // 0x638	
 private:
-	[[maybe_unused]] uint8_t __pad0629[0x3]; // 0x629
+	[[maybe_unused]] uint8_t __pad0639[0x3]; // 0x639
 public:
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnConnectionStateChanged"
-	PlayerConnectedState m_iConnected; // 0x62c	
+	PlayerConnectedState m_iConnected; // 0x63c	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnPlayerControllerNameChanged"
-	char m_iszPlayerName[128]; // 0x630	
+	char m_iszPlayerName[128]; // 0x640	
 private:
-	[[maybe_unused]] uint8_t __pad06b0[0x8]; // 0x6b0
+	[[maybe_unused]] uint8_t __pad06c0[0x8]; // 0x6c0
 public:
 	// MNetworkEnable
 	// MNetworkEncoder "fixed64"
 	// MNetworkChangeCallback "OnSteamIDChanged"
-	uint64_t m_steamID; // 0x6b8	
-	bool m_bIsLocalPlayerController; // 0x6c0	
+	uint64_t m_steamID; // 0x6c8	
+	bool m_bIsLocalPlayerController; // 0x6d0	
 private:
-	[[maybe_unused]] uint8_t __pad06c1[0x3]; // 0x6c1
+	[[maybe_unused]] uint8_t __pad06d1[0x3]; // 0x6d1
 public:
 	// MNetworkEnable
-	uint32_t m_iDesiredFOV; // 0x6c4	
+	uint32_t m_iDesiredFOV; // 0x6d4	
 	
 	// Static fields:
-	static bool &Get_sm_bRunningPredictedClientStringCommands(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBasePlayerController")->m_static_fields[0]->m_instance);};
+	static bool &Get_sm_bRunningPredictedClientStringCommands(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBasePlayerController")->GetStaticFields()[0]->m_pInstance);};
 	
 	// Datamap fields:
 	// bool fakeclient; // 0x7fffffff
 	// bool is_hltv; // 0x7fffffff
 	// const char * playername; // 0x7fffffff
 	// bool reserving; // 0x7fffffff
-	// void m_pCurrentCommand; // 0x6b0
+	// void m_pCurrentCommand; // 0x6c0
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponFiveSeven : public C_CSWeaponBaseGun
 {
 public:
@@ -12222,6 +14856,8 @@ public:
 // Alignment: 8
 // Size: 0x1198
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_PropDoorRotating : public C_BasePropDoor
 {
 public:
@@ -12232,6 +14868,8 @@ public:
 // Alignment: 8
 // Size: 0x1278
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamSelectTerroristPosition : public C_CSGO_TeamSelectCharacterPosition
 {
 public:
@@ -12242,6 +14880,9 @@ public:
 // Alignment: 8
 // Size: 0x1068
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_PhysPropClientside : public C_BreakableProp
 {
 public:
@@ -12267,6 +14908,8 @@ public:
 // Alignment: 8
 // Size: 0x5d0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TeamSelectCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -12277,6 +14920,8 @@ public:
 // Alignment: 8
 // Size: 0x578
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "float m_flRadius"
 class C_SoundAreaEntitySphere : public C_SoundAreaEntityBase
@@ -12290,6 +14935,9 @@ public:
 // Alignment: 8
 // Size: 0x5b8
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "fogparams_t m_fog"
 class C_FogController : public C_BaseEntity
@@ -12328,6 +14976,7 @@ public:
 // Alignment: 8
 // Size: 0x48
 // Has VTable
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bHasDefuser"
 // MNetworkVarNames "bool m_bHasHelmet"
@@ -12347,6 +14996,8 @@ public:
 // Alignment: 16
 // Size: 0x1190
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CUtlString m_targetCamera"
 // MNetworkVarNames "int m_nResolutionEnum"
@@ -12384,6 +15035,8 @@ public:
 // Alignment: 8
 // Size: 0x590
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "string_t m_worldName"
 // MNetworkVarNames "string_t m_layerName"
@@ -12421,6 +15074,8 @@ public:
 // Alignment: 8
 // Size: 0x10f8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_NetTestBaseCombatCharacter : public C_BaseCombatCharacter
 {
 public:
@@ -12431,6 +15086,9 @@ public:
 // Alignment: 8
 // Size: 0xed8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_ViewmodelWeapon : public CBaseAnimGraph
 {
 public:
@@ -12441,6 +15099,9 @@ public:
 // Alignment: 8
 // Size: 0xf00
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_PhysMagnet : public CBaseAnimGraph
 {
 public:
@@ -12452,6 +15113,8 @@ public:
 // Alignment: 8
 // Size: 0xd10
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_fFlags"
 // MNetworkOverride "m_fFlags C_BaseEntity"
@@ -12493,6 +15156,8 @@ public:
 // Alignment: 8
 // Size: 0x5b0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_PointCameraVFOV : public C_PointCamera
 {
 public:
@@ -12521,6 +15186,9 @@ public:
 // Alignment: 8
 // Size: 0x1000
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkOverride "m_hWeapon"
 // MNetworkVarNames "bool m_bShouldIgnoreOffsetAndAccuracy"
@@ -12550,6 +15218,8 @@ public:
 // Alignment: 8
 // Size: 0xcd8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CHostageRescueZone : public CHostageRescueZoneShim
 {
 public:
@@ -12558,8 +15228,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponNegev : public C_CSWeaponBaseGun
 {
 public:
@@ -12568,25 +15240,22 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x1cc0
+// Size: 0x10
 // Has VTable
-// 
-// MNetworkVarNames "CBaseAnimGraphController m_animationController"
-class CBodyComponentBaseAnimGraph : public CBodyComponentSkeletonInstance
+// Is Abstract
+class CSkeletonAnimationController : public ISkeletonAnimationController
 {
 public:
-	// MNetworkEnable
-	CBaseAnimGraphController m_animationController; // 0x460	
-	
-	// Static fields:
-	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseAnimGraph")->m_static_fields[0]->m_instance);};
-	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseAnimGraph")->m_static_fields[1]->m_instance);};
+	// MNetworkDisable
+	CSkeletonInstance* m_pSkeletonInstance; // 0x8	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1ab0
+// Size: 0x1ac0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_IncendiaryGrenade : public C_MolotovGrenade
 {
 public:
@@ -12595,33 +15264,37 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a60
+// Size: 0x1a70
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CTablet : public C_CSWeaponBase
 {
 public:
 	// No schema binary for binding
 };
 
-// Registered binary: client.dll (project 'client')
+// Registered binary: client.dll (project 'pulse_runtime_lib')
 // Alignment: 8
-// Size: 0x100
+// Size: 0xf8
 // Has VTable
 // 
 // MPulseInstanceDomainInfo
-// MPulseDomainHookInfo
-// MPulseLibraryBindings
-// MPulseDomainOptInFeatureTag
-class CCSPointScript : public CBasePulseGraphInstance
+// MPulseDomainHiddenInTool
+class CBasePulseGraphInstance
 {
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xf8]; // 0x0
 public:
-	CCSPointScriptEntity* m_pParent; // 0xf8	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x1468
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarTypeOverride "CCSObserver_ObserverServices m_pObserverServices"
 // MNetworkIncludeByName "m_pObserverServices"
@@ -12650,6 +15323,8 @@ public:
 // Alignment: 8
 // Size: 0x580
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "CHandle< C_BaseEntity> m_hEntAttached"
 // MNetworkVarNames "bool m_bCheapEffect"
@@ -12673,6 +15348,8 @@ public:
 // Alignment: 8
 // Size: 0x10b8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class CTripWireFireProjectile : public C_BaseGrenade
 {
 public:
@@ -12683,6 +15360,8 @@ public:
 // Alignment: 8
 // Size: 0xcc8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_PhysBox : public C_Breakable
 {
 public:
@@ -12693,6 +15372,7 @@ public:
 // Alignment: 8
 // Size: 0xb0
 // Has VTable
+// MNetworkAssumeNotNetworkable
 class CCSObserver_ObserverServices : public CPlayer_ObserverServices
 {
 public:
@@ -12713,6 +15393,9 @@ public:
 // Alignment: 8
 // Size: 0x560
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 class C_TintController : public C_BaseEntity
 {
 public:
@@ -12724,6 +15407,7 @@ public:
 // Size: 0x40
 // Has VTable
 // Is Abstract
+// MNetworkAssumeNotNetworkable
 class CPlayer_AutoaimServices : public CPlayerPawnComponent
 {
 public:
@@ -12734,6 +15418,9 @@ public:
 // Alignment: 8
 // Size: 0x11c8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByName "m_iMaxHealth"
 // MNetworkIncludeByName "m_iHealth"
@@ -12819,6 +15506,8 @@ public:
 // Alignment: 8
 // Size: 0xdd8
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_FireFromAboveSprite : public C_Sprite
 {
 public:
@@ -12827,8 +15516,10 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 16
-// Size: 0x1a80
+// Size: 0x1a90
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_WeaponM4A1Silencer : public C_CSWeaponBaseGun
 {
 public:
@@ -12839,6 +15530,9 @@ public:
 // Alignment: 8
 // Size: 0xf70
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_bBombTicking"
 // MNetworkVarNames "int m_nBombSite"
@@ -12931,6 +15625,9 @@ public:
 // Alignment: 8
 // Size: 0xf80
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "uint32 m_boneIndexAttached"
 // MNetworkVarNames "uint32 m_ragdollAttachedObjectIndex"
@@ -12958,6 +15655,8 @@ public:
 // Alignment: 8
 // Size: 0x5d0
 // Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
 class C_CSGO_TerroristTeamIntroCamera : public C_CSGO_TeamPreviewCamera
 {
 public:
@@ -12968,6 +15667,9 @@ public:
 // Alignment: 8
 // Size: 0x580
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_iActiveIssueIndex"
 // MNetworkVarNames "int m_iOnlyTeamToVote"
@@ -13024,6 +15726,9 @@ public:
 // Alignment: 8
 // Size: 0x1628
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "bool m_jumpedThisFrame"
 // MNetworkVarNames "CHandle< CCSPlayerPawn> m_leader"
@@ -13062,6 +15767,7 @@ public:
 // Alignment: 8
 // Size: 0x70
 // Has VTable
+// Construct allowed
 // 
 // MNetworkVarNames "CTransform m_Transforms"
 // MNetworkVarNames "EHANDLE m_hOwner"
@@ -13099,7 +15805,81 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x20
+// Has VTable
+// Is Abstract
+// Has Trivial Destructor
+class CAnimEventListenerBase
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EngineLoopState_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
+public:
+	int32_t m_nPlatWindowWidth; // 0x18	
+	int32_t m_nPlatWindowHeight; // 0x1c	
+	int32_t m_nRenderWidth; // 0x20	
+	int32_t m_nRenderHeight; // 0x24	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseDocNodeID_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseDocNodeID_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseCell_Base
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// MFgdFromSchemaCompletelySkipField
+	PulseDocNodeID_t m_nEditorNodeID; // 0x8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventSimpleLoopFrameUpdate_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	float m_flRealTime; // 0x28	
+	float m_flFrameTime; // 0x2c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0x138
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -13136,7 +15916,99 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventSimulate_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	bool m_bFirstTick; // 0x28	
+	bool m_bLastTick; // 0x29	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MPropertyCustomEditor "multi_float( 4 )"
+class CRemapFloat
+{
+public:
+	float m_pValue[4]; // 0x0	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseCell_BaseFlow : public CPulseCell_Base
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has VTable
+// Is Abstract
+// Has Trivial Destructor
+class IGapHost_GameEntity
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x20
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PulseRegisterMap_t
+{
+public:
+	KeyValues3 m_Inparams; // 0x0	
+	KeyValues3 m_Outparams; // 0x10	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeVarIndex_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeVarIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MPropertyCustomFGDType "string"
+class CFootstepTableHandle
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0x60
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -13154,9 +16026,39 @@ public:
 	CUtlVector< CompMatPropertyMutator_t > m_vecPropertyMutators; // 0x48	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeEntrypointIndex_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeEntrypointIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x2
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeDomainValueIndex_t
+{
+public:
+	int16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeDomainValueIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0xb0
+// Size: 0xd8
 class CDecalInfo
 {
 public:
@@ -13178,9 +16080,9 @@ public:
 	CDecalInfo* m_pNext; // 0x40	
 	CDecalInfo* m_pPrev; // 0x48	
 private:
-	[[maybe_unused]] uint8_t __pad0050[0x58]; // 0x50
+	[[maybe_unused]] uint8_t __pad0050[0x80]; // 0x50
 public:
-	int32_t m_nDecalMaterialIndex; // 0xa8	
+	int32_t m_nDecalMaterialIndex; // 0xd0	
 	
 	// Datamap fields:
 	// void m_decalEvent; // 0x50
@@ -13189,7 +16091,156 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0xc0
+// Has VTable
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "item_definition_index_t m_unMusicID"
+// MNetworkVarNames "MedalRank_t m_rank"
+// MNetworkVarNames "int m_nPersonaDataPublicLevel"
+// MNetworkVarNames "int m_nPersonaDataPublicCommendsLeader"
+// MNetworkVarNames "int m_nPersonaDataPublicCommendsTeacher"
+// MNetworkVarNames "int m_nPersonaDataPublicCommendsFriendly"
+// MNetworkVarNames "int m_nPersonaDataXpTrailLevel"
+// MNetworkVarNames "ServerAuthoritativeWeaponSlot_t m_vecServerAuthoritativeWeaponSlots"
+class CCSPlayerController_InventoryServices : public CPlayerControllerComponent
+{
+public:
+	// MNetworkEnable
+	uint16_t m_unMusicID; // 0x40	
+private:
+	[[maybe_unused]] uint8_t __pad0042[0x2]; // 0x42
+public:
+	// MNetworkEnable
+	MedalRank_t m_rank[6]; // 0x44	
+	// MNetworkEnable
+	int32_t m_nPersonaDataPublicLevel; // 0x5c	
+	// MNetworkEnable
+	int32_t m_nPersonaDataPublicCommendsLeader; // 0x60	
+	// MNetworkEnable
+	int32_t m_nPersonaDataPublicCommendsTeacher; // 0x64	
+	// MNetworkEnable
+	int32_t m_nPersonaDataPublicCommendsFriendly; // 0x68	
+	// MNetworkEnable
+	int32_t m_nPersonaDataXpTrailLevel; // 0x6c	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	C_UtlVectorEmbeddedNetworkVar< ServerAuthoritativeWeaponSlot_t > m_vecServerAuthoritativeWeaponSlots; // 0x70	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x58
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_Chunk
+{
+public:
+	CUtlLeanVector< PGDInstruction_t > m_Instructions; // 0x0	
+	CUtlLeanVector< CPulse_RegisterInfo > m_Registers; // 0x10	
+	CUtlLeanVector< PulseDocNodeID_t > m_InstructionEditorIDs; // 0x20	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeInvokeIndex_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeInvokeIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 4
+// Size: 0x4
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_Outflow_CycleOrdered__InstanceState_t
+{
+public:
+	int32_t m_nNextIndex; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xa0
+// Has VTable
+// MNetworkAssumeNotNetworkable
+class CScriptUniformRandomStream
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	HSCRIPT m_hScriptScope; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad0010[0x8c]; // 0x10
+public:
+	int32_t m_nInitialSeed; // 0x9c	
+	
+	// Static fields:
+	static CUtlVector< CScriptUniformRandomStream* > &Get_sm_UniformStreams(){return *reinterpret_cast<CUtlVector< CScriptUniformRandomStream* >*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CScriptUniformRandomStream")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a90
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WeaponM249 : public C_CSWeaponBaseGun
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Destructor
+struct EventClientSceneSystemThreadStateChange_t
+{
+public:
+	bool m_bThreadsActive; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x38
+// Has Trivial Destructor
+struct EventClientOutput_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	float m_flRenderTime; // 0x28	
+	float m_flRealTime; // 0x2c	
+	float m_flRenderFrameTimeUnbounded; // 0x30	
+	bool m_bRenderOnly; // 0x34	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has Trivial Destructor
+class CSimpleSimTimer
+{
+public:
+	GameTime_t m_next; // 0x0	
+	WorldGroupId_t m_nWorldGroupId; // 0x4	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0x280
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -13334,19 +16385,385 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x98
-// Has VTable
-class C_CSGO_PreviewModel_GraphController : public CAnimGraphControllerBase
+// Size: 0x30
+// Has Trivial Destructor
+struct EventServerPostSimulate_t : public EventSimulate_t
 {
 public:
-	CAnimGraphParamOptionalRef< char* > m_pszCharacterMode; // 0x18	
-	CAnimGraphParamOptionalRef< char* > m_pszWeaponState; // 0x38	
-	CAnimGraphParamOptionalRef< char* > m_pszWeaponType; // 0x58	
-	CAnimGraphParamOptionalRef< char* > m_pszEndOfMatchCelebration; // 0x78	
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseLibraryBindings
+// MPropertyDescription "Testing script helpers."
+class CPulseTestScriptLib
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x8
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct PackedAABB_t
+{
+public:
+	uint32_t m_nPackedMin; // 0x0	
+	uint32_t m_nPackedMax; // 0x4	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x18
+// Has VTable
+// Is Abstract
+class CAnimGraphControllerBase
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x18]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x2
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeRegisterIndex_t
+{
+public:
+	int16_t m_Value; // 0x0	
 	
 	// Static fields:
-	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewModel_GraphController")->m_static_fields[0]->m_instance);};
-	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewModel_GraphController")->m_static_fields[1]->m_instance);};
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeRegisterIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 4
+// Size: 0x18
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CSkillDamage
+{
+public:
+	// MPropertyDescription "Damage Dealt (in the case of NPC vs NPC damage, medium skill times the NPC damage scalar is used)"
+	CSkillFloat m_flDamage; // 0x0	
+	// MPropertyDescription "Damage Scalar for NPC vs NPC cases"
+	float m_flNPCDamageScalarVsNPC; // 0x10	
+	// MPropertyDescription "If specified, the damage used to compute physics forces. Otherwise normal damage is used (and is not scaled by the NPC damage scalar."
+	float m_flPhysicsForceDamage; // 0x14	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeChunkIndex_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeChunkIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x30
+class CPulse_OutflowConnection
+{
+public:
+	CUtlSymbolLarge m_SourceOutflowName; // 0x0	
+	PulseRuntimeChunkIndex_t m_nDestChunk; // 0x8	
+	int32_t m_nInstruction; // 0xc	
+	PulseRegisterMap_t m_OutflowRegisterMap; // 0x10	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseCursorID_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseCursorID_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x100
+// Has VTable
+// 
+// MPulseInstanceDomainInfo
+// MPulseDomainHookInfo
+// MPulseLibraryBindings
+// MPulseDomainOptInFeatureTag
+class CCSPointScript : public CBasePulseGraphInstance
+{
+public:
+	CCSPointScriptEntity* m_pParent; // 0xf8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+class CAnimEventQueueListener : public CAnimEventListenerBase
+{
+private:
+	[[maybe_unused]] uint8_t __pad0020[0x10]; // 0x20
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x10
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct ConstantInfo_t
+{
+public:
+	CUtlString m_name; // 0x0	
+	CUtlStringToken m_nameToken; // 0x8	
+	float m_flValue; // 0xc	
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x28
+// Has VTable
+// Is Abstract
+// Has Trivial Destructor
+class CEntityComponentHelper
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	uint32_t m_flags; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
+	EntComponentInfo_t* m_pInfo; // 0x10	
+	int32_t m_nPriority; // 0x18	
+private:
+	[[maybe_unused]] uint8_t __pad001c[0x4]; // 0x1c
+public:
+	CEntityComponentHelper* m_pNext; // 0x20	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x5e8
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "sky3dparams_t m_skyboxData"
+// MNetworkVarNames "CUtlStringToken m_skyboxSlotToken"
+class C_SkyCamera : public C_BaseEntity
+{
+public:
+	// MNetworkEnable
+	// -> scale - 0x550
+	// -> origin - 0x554
+	// -> bClip3DSkyBoxNearToWorldFar - 0x560
+	// -> flClip3DSkyBoxNearToWorldFarOffset - 0x564
+	// -> fog - 0x568
+	// -> m_nWorldGroupID - 0x5d0
+	sky3dparams_t m_skyboxData; // 0x548	
+	// MNetworkEnable
+	CUtlStringToken m_skyboxSlotToken; // 0x5d8	
+	bool m_bUseAngles; // 0x5dc	
+private:
+	[[maybe_unused]] uint8_t __pad05dd[0x3]; // 0x5dd
+public:
+	C_SkyCamera* m_pNext; // 0x5e0	
+	
+	// Datamap fields:
+	// int16_t m_skyboxData.scale; // 0x550
+	// Vector m_skyboxData.origin; // 0x554
+	// bool m_skyboxData.bClip3DSkyBoxNearToWorldFar; // 0x560
+	// float m_skyboxData.flClip3DSkyBoxNearToWorldFarOffset; // 0x564
+	// bool m_skyboxData.fog.enable; // 0x5cc
+	// bool m_skyboxData.fog.blend; // 0x5cd
+	// Vector m_skyboxData.fog.dirPrimary; // 0x570
+	// Color m_skyboxData.fog.colorPrimary; // 0x57c
+	// Color m_skyboxData.fog.colorSecondary; // 0x580
+	// float m_skyboxData.fog.start; // 0x58c
+	// float m_skyboxData.fog.end; // 0x590
+	// float m_skyboxData.fog.maxdensity; // 0x598
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Destroy Fake Entity "
+// MPropertyFriendlyName "Destroy Fake Entity"
+class CPulseCell_Step_TestDomainDestroyFakeEntity : public CPulseCell_BaseFlow
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0xf40
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+class CPointOffScreenIndicatorUi : public C_PointClientUIWorldPanel
+{
+public:
+	bool m_bBeenEnabled; // 0xf30	
+	bool m_bHide; // 0xf31	
+private:
+	[[maybe_unused]] uint8_t __pad0f32[0x2]; // 0xf32
+public:
+	float m_flSeenTargetTime; // 0xf34	
+	C_PointClientUIWorldPanel* m_pTargetPanel; // 0xf38	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MPropertyCustomEditor "multi_float(2)"
+class CFiringModeFloat
+{
+public:
+	float m_flValues[2]; // 0x0	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 4
+// Size: 0x4
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_Test_MultiOutflow_WithParams_Yielding__CursorState_t
+{
+public:
+	int32_t nTestStep; // 0x0	
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x2
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct FuseFunctionIndex_t
+{
+public:
+	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("FuseFunctionIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x20
+class CRopeOverlapHit
+{
+public:
+	CHandle< C_BaseEntity > m_hEntity; // 0x0	
+	CUtlVector< int32 > m_vecOverlappingLinks; // 0x8	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseLibraryBindings
+// MPropertyDescription "Test functions for the derived test domain."
+class CPulseTestFuncs_DerivedDomain
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseCell_BaseValue : public CPulseCell_Base
+{
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x30
+class SignatureOutflow_Continue : public CPulse_OutflowConnection
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x70
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseCell_Inflow_BaseEntrypoint : public CPulseCell_BaseFlow
+{
+public:
+	PulseRuntimeChunkIndex_t m_EntryChunk; // 0x48	
+private:
+	[[maybe_unused]] uint8_t __pad004c[0x4]; // 0x4c
+public:
+	PulseRegisterMap_t m_RegisterMap; // 0x50	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Is Abstract
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseCell_BaseYieldingInflow : public CPulseCell_BaseFlow
+{
+public:
 };
 
 // Registered binary: client.dll (project 'client')
@@ -13365,6 +16782,376 @@ public:
 	bool m_bModulateByDot; // 0xf5	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xa0
+// Has VTable
+// 
+// MPulseInternal_IsCursor
+class CPulseExecCursor
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0xa0]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x38
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_Timeline__TimelineEvent_t
+{
+public:
+	float m_flTimeFromPrevious; // 0x0	
+	bool m_bPauseForPreviousEvents; // 0x4	
+	bool m_bCallModeSync; // 0x5	
+private:
+	[[maybe_unused]] uint8_t __pad0006[0x2]; // 0x6
+public:
+	CPulse_OutflowConnection m_EventOutflow; // 0x8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1d8
+// Has VTable
+// MNetworkAssumeNotNetworkable
+class CCSObserver_MovementServices : public CPlayer_MovementServices
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x608
+// Has VTable
+class CCSGOPlayerAnimGraphState
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x608]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventAdvanceTick_t : public EventSimulate_t
+{
+public:
+	int32_t m_nCurrentTick; // 0x30	
+	int32_t m_nCurrentTickThisFrame; // 0x34	
+	int32_t m_nTotalTicksThisFrame; // 0x38	
+	int32_t m_nTotalTicks; // 0x3c	
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EntInput_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x30]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseCell_BaseRequirement : public CPulseCell_Base
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1858
+// Has VTable
+// 
+// MNetworkVarNames "CAnimGraphNetworkedVariables m_animGraphNetworkedVars"
+// MNetworkVarNames "HSequence m_hSequence"
+// MNetworkVarNames "GameTime_t m_flSeqStartTime"
+// MNetworkVarNames "float m_flSeqFixedCycle"
+// MNetworkVarNames "AnimLoopMode_t m_nAnimLoopMode"
+class CBaseAnimGraphController : public CSkeletonAnimationController
+{
+private:
+	[[maybe_unused]] uint8_t __pad0010[0x8]; // 0x10
+public:
+	// MNetworkEnable
+	CAnimGraphNetworkedVariables m_animGraphNetworkedVars; // 0x18	
+	// MNetworkDisable
+	bool m_bSequenceFinished; // 0x14a8	
+private:
+	[[maybe_unused]] uint8_t __pad14a9[0x3]; // 0x14a9
+public:
+	// MNetworkDisable
+	float m_flSoundSyncTime; // 0x14ac	
+	// MNetworkDisable
+	uint32_t m_nActiveIKChainMask; // 0x14b0	
+	// MNetworkEnable
+	// MNetworkSerializer "minusone"
+	// MNetworkChangeCallback "OnNetworkedSequenceChanged"
+	// MNetworkPriority "32"
+	HSequence m_hSequence; // 0x14b4	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
+	// MNetworkPriority "32"
+	GameTime_t m_flSeqStartTime; // 0x14b8	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
+	// MNetworkPriority "32"
+	float m_flSeqFixedCycle; // 0x14bc	
+	// MNetworkEnable
+	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
+	// MNetworkPriority "32"
+	AnimLoopMode_t m_nAnimLoopMode; // 0x14c0	
+	// MNetworkEnable
+	// MNetworkBitCount "8"
+	// MNetworkMinValue "-4,000000"
+	// MNetworkMaxValue "12,000000"
+	// MNetworkEncodeFlags "5"
+	// MNetworkPriority "32"
+	// MNetworkChangeCallback "OnNetworkedAnimationChanged"
+	CNetworkedQuantizedFloat m_flPlaybackRate; // 0x14c4	
+private:
+	[[maybe_unused]] uint8_t __pad14cc[0x4]; // 0x14cc
+public:
+	// MNetworkDisable
+	SequenceFinishNotifyState_t m_nNotifyState; // 0x14d0	
+private:
+	[[maybe_unused]] uint8_t __pad14d1[0x1]; // 0x14d1
+public:
+	// MNetworkDisable
+	bool m_bNetworkedAnimationInputsChanged; // 0x14d2	
+	// MNetworkDisable
+	bool m_bNetworkedSequenceChanged; // 0x14d3	
+	// MNetworkDisable
+	bool m_bLastUpdateSkipped; // 0x14d4	
+private:
+	[[maybe_unused]] uint8_t __pad14d5[0x3]; // 0x14d5
+public:
+	// MNetworkDisable
+	GameTime_t m_flPrevAnimUpdateTime; // 0x14d8	
+	
+	// Datamap fields:
+	// void m_pAnimGraphInstance; // 0x1778
+	// float m_flCachedSequenceCycleRate; // 0x14cc
+	// void m_iv_AnimOpHistory; // 0x1808
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x18
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PulseNodeDynamicOutflows_t
+{
+public:
+	CUtlVector< PulseNodeDynamicOutflows_t::DynamicOutflow_t > m_Outflows; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CHandle< CBaseViewModel > m_hViewModel"
+class CCSPlayer_ViewModelServices : public CPlayer_ViewModelServices
+{
+public:
+	// MNetworkEnable
+	CHandle< C_BaseViewModel > m_hViewModel[3]; // 0x40	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has VTable
+class CResponseCriteriaSet
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x20]; // 0x0
+public:
+	int32_t m_nNumPrefixedContexts; // 0x20	
+	bool m_bOverrideOnAppend; // 0x24	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventClientSimulate_t : public EventSimulate_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_nEditorNodeID "
+// MPropertyFriendlyName "[Test] Int Value 50"
+// MPropertyDescription "Test node that just generates the integer 50. Nothing to see here!"
+class CPulseCell_Value_TestValue50 : public CPulseCell_BaseValue
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has VTable
+// Is Abstract
+class IChoreoServices
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+class CPulseCell_Test_MultiInflow_WithDefault : public CPulseCell_BaseFlow
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xc
+// Has Trivial Destructor
+class CStopwatchBase : public CSimpleSimTimer
+{
+public:
+	bool m_fIsRunning; // 0x8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x20
+// Has Trivial Destructor
+class ResponseParams
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	int16_t odds; // 0x10	
+	int16_t flags; // 0x12	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
+public:
+	ResponseFollowup* m_pFollowup; // 0x18	
+	
+	// Datamap fields:
+	// int32_t delay; // 0x0
+	// int32_t respeakdelay; // 0x4
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventClientPostOutput_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	double m_flRenderTime; // 0x28	
+	float m_flRenderFrameTime; // 0x30	
+	float m_flRenderFrameTimeUnbounded; // 0x34	
+	bool m_bRenderOnly; // 0x38	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a90
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WeaponCZ75a : public C_CSWeaponBaseGun
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x8
+// Has VTable
+// Has Trivial Destructor
+// 
+// MGapTypeQueriesForScopeSingleton
+class CPulseTestGapTypeQueryRegistration
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// Static fields:
+	static CPulseTestGapTypeQueryRegistration &Get_s_Instance(){return *reinterpret_cast<CPulseTestGapTypeQueryRegistration*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPulseTestGapTypeQueryRegistration")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0xb0
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CFuseSymbolTable
+{
+public:
+	CUtlVector< ConstantInfo_t > m_constants; // 0x0	
+	CUtlVector< VariableInfo_t > m_variables; // 0x18	
+	CUtlVector< FunctionInfo_t > m_functions; // 0x30	
+	CUtlHashtable< CUtlStringToken, int32 > m_constantMap; // 0x48	
+	CUtlHashtable< CUtlStringToken, int32 > m_variableMap; // 0x68	
+	CUtlHashtable< CUtlStringToken, int32 > m_functionMap; // 0x88	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x90
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_DefaultCaseOutflow "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Outflow_StringSwitch : public CPulseCell_BaseFlow
+{
+public:
+	CPulse_OutflowConnection m_DefaultCaseOutflow; // 0x48	
+	CUtlVector< CPulse_OutflowConnection > m_CaseOutflows; // 0x78	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xd8
@@ -13373,6 +17160,22 @@ class C_SunGlowOverlay : public CGlowOverlay
 {
 public:
 	bool m_bModulateByDot; // 0xd0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 4
+// Size: 0x10
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PointCameraSettings_t
+{
+public:
+	float m_flNearBlurryDistance; // 0x0	
+	float m_flNearCrispDistance; // 0x4	
+	float m_flFarCrispDistance; // 0x8	
+	float m_flFarBlurryDistance; // 0xc	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -13389,6 +17192,55 @@ public:
 	int32_t m_nInterpType; // 0x10	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+class CPulseCell_Test_NoInflow : public CPulseCell_BaseFlow
+{
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x30
+class CPulse_ResumePoint : public CPulse_OutflowConnection
+{
+public:
+	// Static fields:
+	static CPulse_ResumePoint &Get_Invalid(){return *reinterpret_cast<CPulse_ResumePoint*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPulse_ResumePoint")->GetStaticFields()[0]->m_pInstance);};
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+class CSoundEnvelope
+{
+public:
+	float m_current; // 0x0	
+	float m_target; // 0x4	
+	float m_rate; // 0x8	
+	bool m_forceupdate; // 0xc	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+class CStopwatch : public CStopwatchBase
+{
+public:
+	float m_interval; // 0xc	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x70
@@ -13402,14 +17254,198 @@ public:
 	float m_flSquatProbability; // 0x68	
 	
 	// Static fields:
-	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_Chicken_GraphController")->m_static_fields[0]->m_instance);};
-	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_Chicken_GraphController")->m_static_fields[1]->m_instance);};
+	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_Chicken_GraphController")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_Chicken_GraphController")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x28
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_Outflow_CycleShuffled__InstanceState_t
+{
+public:
+	CUtlVectorFixedGrowable< uint8 > m_Shuffle; // 0x0	
+	int32_t m_nNextShuffle; // 0x20	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Find Fake Entity "
+// MPropertyFriendlyName "Find Fake Entity"
+class CPulseCell_Val_TestDomainFindEntityByName : public CPulseCell_BaseValue
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventClientPollInput_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	float m_flRealTime; // 0x28	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x78
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_UnyieldResume "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Inflow_Yield : public CPulseCell_BaseYieldingInflow
+{
+public:
+	CPulse_ResumePoint m_UnyieldResume; // 0x48	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x60
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_Outputs "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Outflow_CycleRandom : public CPulseCell_BaseFlow
+{
+public:
+	CUtlVector< CPulse_OutflowConnection > m_Outputs; // 0x48	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x78
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_EventName "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Inflow_EventHandler : public CPulseCell_Inflow_BaseEntrypoint
+{
+public:
+	CUtlSymbolLarge m_EventName; // 0x70	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 4
+// Size: 0x8
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_BaseLerp__CursorState_t
+{
+public:
+	GameTime_t m_StartTime; // 0x0	
+	GameTime_t m_EndTime; // 0x4	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 4
+// Size: 0x4
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_PlaySequence__CursorState_t
+{
+public:
+	CHandle< CBaseAnimGraph > m_hTarget; // 0x0	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x20
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_PublicOutput
+{
+public:
+	CUtlSymbolLarge m_Name; // 0x0	
+	CUtlString m_Description; // 0x8	
+	CPulseValueFullType m_ParamType; // 0x10	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EventPreDataUpdate_t
+{
+public:
+	int32_t m_nCount; // 0x0	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xc8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+// MPulseCellWithCustomDocNode
+class CPulseCell_Timeline : public CPulseCell_BaseYieldingInflow
+{
+public:
+	CUtlVector< CPulseCell_Timeline::TimelineEvent_t > m_TimelineEvents; // 0x48	
+	bool m_bWaitForChildOutflows; // 0x60	
+private:
+	[[maybe_unused]] uint8_t __pad0061[0x7]; // 0x61
+public:
+	CPulse_ResumePoint m_OnFinished; // 0x68	
+	CPulse_ResumePoint m_OnCanceled; // 0x98	
+	
+	// Static fields:
+	static char* &Get_m_pTagName(){return *reinterpret_cast<char**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPulseCell_Timeline")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x18
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct AABB_t
+{
+public:
+	Vector m_vMinBounds; // 0x0	
+	Vector m_vMaxBounds; // 0xc	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x5c0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkOverride "m_flScale"
 // MNetworkOverride "m_flScaleTime"
@@ -13441,6 +17477,22 @@ public:
 	// -> m_fNextEvent - 0x594
 	TimedEvent m_tParticleSpawn; // 0x590	
 	CFireOverlay* m_pFireOverlay; // 0x598	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x20
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_OutputConnection
+{
+public:
+	CUtlSymbolLarge m_SourceOutput; // 0x0	
+	CUtlSymbolLarge m_TargetEntity; // 0x8	
+	CUtlSymbolLarge m_TargetInput; // 0x10	
+	CUtlSymbolLarge m_Param; // 0x18	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -13479,6 +17531,89 @@ public:
 	char m_textureName[64]; // 0x70	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Limit Count "
+// MPropertyFriendlyName "Limit Count"
+// MPropertyDescription "Skip this node after the limit. Check Type does not apply, the limit will always be checked."
+// MPulseRequirementPass
+class CPulseCell_LimitCount : public CPulseCell_BaseRequirement
+{
+public:
+	// MPropertyFlattenIntoParentRow
+	int32_t m_nLimitCount; // 0x48	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x18
+// Has Trivial Destructor
+class CTakeDamageResult
+{
+public:
+	CTakeDamageInfo* m_pOriginatingInfo; // 0x0	
+	int32_t m_nHealthLost; // 0x8	
+	int32_t m_nDamageTaken; // 0xc	
+	int32_t m_nTotalledHealthLost; // 0x10	
+	int32_t m_nTotalledDamageTaken; // 0x14	
+	
+	// Static fields:
+	static CTakeDamageResult &Get_EmptyResult(){return *reinterpret_cast<CTakeDamageResult*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CTakeDamageResult")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x18
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PulseGraphExecutionHistoryNodeDesc_t
+{
+public:
+	CBufferString strCellDesc; // 0x0	
+	CUtlSymbolLarge strBindingName; // 0x10	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventClientProcessGameInput_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	float m_flRealTime; // 0x28	
+	float m_flFrameTime; // 0x2c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x2460
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_CSGO_PreviewPlayerAlias_csgo_player_previewmodel : public C_CSGO_PreviewPlayer
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x30
+class SignatureOutflow_Resume : public CPulse_ResumePoint
+{
+public:
+	// No schema binary for binding
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x20
@@ -13492,6 +17627,46 @@ private:
 	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
 public:
 	CStrongHandle< InfoForResourceTypeIMaterial2 > m_hMaterial; // 0x18	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EventFrameBoundary_t
+{
+public:
+	float m_flFrameTime; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x31
+// Has Trivial Destructor
+class ResponseFollowup
+{
+public:
+	char* followup_concept; // 0x0	
+	char* followup_contexts; // 0x8	
+	float followup_delay; // 0x10	
+	char* followup_target; // 0x14	
+	char* followup_entityiotarget; // 0x1c	
+	char* followup_entityioinput; // 0x24	
+	float followup_entityiodelay; // 0x2c	
+	bool bFired; // 0x30	
+};
+
+// Registered binary: client.dll (project 'tier2')
+// Alignment: 8
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MPropertyCustomEditor "multi_int(2)"
+class CRangeInt
+{
+public:
+	int32_t m_pValue[2]; // 0x0	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -13511,14 +17686,350 @@ public:
 	CAnimGraphParamOptionalRef< bool > m_bCT; // 0xf0	
 	
 	// Static fields:
-	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewPlayer_GraphController")->m_static_fields[0]->m_instance);};
-	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewPlayer_GraphController")->m_static_fields[1]->m_instance);};
+	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewPlayer_GraphController")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewPlayer_GraphController")->GetStaticFields()[1]->m_pInstance);};
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
-// Size: 0x838
+// Size: 0x10
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CNavLinkAnimgraphVar
+{
+public:
+	// MPropertyFriendlyName "Animgraph Navlink Type"
+	// MPropertyDescription "The value of the 'e_navlink_type' or 'e_navlink_type_shared' parameter that should be set on the NPC's animgraph as it starts a 'navlink' movement handshake."
+	// MPropertyAttributeEditor "VDataAnimGraphParamEnumValue( m_sToolsOnlyOwnerModelName; literal; e_navlink_type; e_navlink_type_shared )"
+	CGlobalSymbol m_sAnimGraphNavlinkType; // 0x0	
+	// MPropertyFriendlyName "Alignment Degrees"
+	// MPropertyDescription "Amount of angular slack the animation has when aligning to the navlink. 0 indicates that it must be strictly aligned."
+	uint32_t m_unAlignmentDegrees; // 0x8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x550
 // Has VTable
+// Construct allowed
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "C_CSGameRules* m_pGameRules"
+class C_CSGameRulesProxy : public C_GameRulesProxy
+{
+public:
+	// MNetworkEnable
+	// MNetworkTypeAlias "CCSGameRules*"
+	// MNetworkPriority "32"
+	C_CSGameRules* m_pGameRules; // 0x548	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+struct EventAppShutdown_t
+{
+public:
+	int32_t m_nDummy0; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x100
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MVDataRoot
+class CNavLinkMovementVData
+{
+public:
+	// MPropertyDescription "Model used by the tools only to populate comboboxes for things like animgraph parameter pickers"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_sToolsOnlyOwnerModelName; // 0x0	
+	// MPropertyFriendlyName "Is Interpolated"
+	// MPropertyDescription "Indicates that the animation has a segment that's interpolated. In general using this on navlinks that traverse +/- 50% of the recommended distance should look okay."
+	bool m_bIsInterpolated; // 0xe0	
+private:
+	[[maybe_unused]] uint8_t __pad00e1[0x3]; // 0xe1
+public:
+	// MPropertyFriendlyName "Recommended Distance"
+	// MPropertyDescription "Recommended distance this movement traverses"
+	uint32_t m_unRecommendedDistance; // 0xe4	
+	// MPropertyFriendlyName "Animgraph Variables"
+	// MPropertyDescription "List of animgraph variables to use when moving through this navlink. Can include multiple, with different amounts of angular slack. The most permissive animgraph variable that exists on the entity's animgraph will be used,"
+	// MPropertyAutoExpandSelf
+	CUtlVector< CNavLinkAnimgraphVar > m_vecAnimgraphVars; // 0xe8	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseProvideFeatureTag "PulseFakeEntities"
+// MPulseLibraryBindings
+class FakeEntity_tAPI
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xa0
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_MethodName "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Step_CallExternalMethod : public CPulseCell_BaseYieldingInflow
+{
+public:
+	CUtlSymbolLarge m_MethodName; // 0x48	
+	CUtlSymbolLarge m_GameBlackboard; // 0x50	
+	CUtlLeanVector< CPulseRuntimeMethodArg > m_ExpectedArgs; // 0x58	
+	PulseMethodCallMode_t m_nAsyncCallMode; // 0x68	
+private:
+	[[maybe_unused]] uint8_t __pad006c[0x4]; // 0x6c
+public:
+	CPulse_ResumePoint m_OnFinished; // 0x70	
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x2
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct FuseVariableIndex_t
+{
+public:
+	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("FuseVariableIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x118
+// Has VTable
+// 
+// MPulseInstanceDomainInfo
+// MPulseDomainHookInfo
+// MPulseLibraryBindings
+class CPulseGraphInstance_TurtleGraphics : public CBasePulseGraphInstance
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x14
+// Has Trivial Destructor
+struct RagdollCreationParams_t
+{
+public:
+	Vector m_vForce; // 0x0	
+	int32_t m_nForceBone; // 0xc	
+	bool m_bForceCurrentWorldTransform; // 0x10	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeOutputIndex_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeOutputIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventServerSimulate_t : public EventSimulate_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Constructor
+// Has Trivial Destructor
+class FourQuaternions
+{
+public:
+	fltx4 x; // 0x0	
+	fltx4 y; // 0x10	
+	fltx4 z; // 0x20	
+	fltx4 w; // 0x30	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x18
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PulseGraphExecutionHistoryEntry_t
+{
+public:
+	PulseCursorID_t nCursorID; // 0x0	
+	PulseDocNodeID_t nEditorID; // 0x4	
+	float flExecTime; // 0x8	
+	uint32_t unFlags; // 0xc	
+	CUtlSymbolLarge tagName; // 0x10	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseCursorYieldToken_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseCursorYieldToken_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventPostAdvanceTick_t : public EventSimulate_t
+{
+public:
+	int32_t m_nCurrentTick; // 0x30	
+	int32_t m_nCurrentTickThisFrame; // 0x34	
+	int32_t m_nTotalTicksThisFrame; // 0x38	
+	int32_t m_nTotalTicks; // 0x3c	
+};
+
+// Registered binary: client.dll (project 'tier2')
+// Alignment: 8
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MPropertyCustomEditor "multi_float(2)"
+class CRangeFloat
+{
+public:
+	float m_pValue[2]; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+struct EventProfileStorageAvailable_t
+{
+public:
+	CSplitScreenSlot m_nSplitScreenSlot; // 0x0	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseGraphInstanceID_t
+{
+public:
+	uint32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseGraphInstanceID_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xd8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_WakeResume "
+class CPulseCell_TestWaitWithCursorState : public CPulseCell_BaseYieldingInflow
+{
+public:
+	// MPulseCellOutflow_IsDefault
+	CPulse_ResumePoint m_WakeResume; // 0x48	
+	CPulse_ResumePoint m_WakeCancel; // 0x78	
+	CPulse_ResumePoint m_WakeFail; // 0xa8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EventPostDataUpdate_t
+{
+public:
+	int32_t m_nCount; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x14
+// Has Trivial Destructor
+class CRandStopwatch : public CStopwatchBase
+{
+public:
+	float m_minInterval; // 0xc	
+	float m_maxInterval; // 0x10	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xf8
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_BlackboardReference
+{
+public:
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIPulseGraphDef > > m_hBlackboardResource; // 0x0	
+	CUtlSymbolLarge m_BlackboardResource; // 0xe0	
+	PulseDocNodeID_t m_nNodeID; // 0xe8	
+private:
+	[[maybe_unused]] uint8_t __pad00ec[0x4]; // 0xec
+public:
+	CGlobalSymbol m_NodeName; // 0xf0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x848
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkUserGroupProxy "CCSPlayerController"
 // MNetworkUserGroupProxy "CCSPlayerController"
@@ -13574,176 +18085,177 @@ public:
 class CCSPlayerController : public CBasePlayerController
 {
 private:
-	[[maybe_unused]] uint8_t __pad06e0[0x10]; // 0x6e0
+	[[maybe_unused]] uint8_t __pad06f0[0x10]; // 0x6f0
 public:
 	// MNetworkEnable
-	CCSPlayerController_InGameMoneyServices* m_pInGameMoneyServices; // 0x6f0	
+	CCSPlayerController_InGameMoneyServices* m_pInGameMoneyServices; // 0x700	
 	// MNetworkEnable
-	CCSPlayerController_InventoryServices* m_pInventoryServices; // 0x6f8	
+	CCSPlayerController_InventoryServices* m_pInventoryServices; // 0x708	
 	// MNetworkEnable
-	CCSPlayerController_ActionTrackingServices* m_pActionTrackingServices; // 0x700	
+	CCSPlayerController_ActionTrackingServices* m_pActionTrackingServices; // 0x710	
 	// MNetworkEnable
-	CCSPlayerController_DamageServices* m_pDamageServices; // 0x708	
+	CCSPlayerController_DamageServices* m_pDamageServices; // 0x718	
 	// MNetworkEnable
-	uint32_t m_iPing; // 0x710	
+	uint32_t m_iPing; // 0x720	
 	// MNetworkEnable
-	bool m_bHasCommunicationAbuseMute; // 0x714	
+	bool m_bHasCommunicationAbuseMute; // 0x724	
 private:
-	[[maybe_unused]] uint8_t __pad0715[0x3]; // 0x715
+	[[maybe_unused]] uint8_t __pad0725[0x3]; // 0x725
 public:
 	// MNetworkEnable
-	CUtlSymbolLarge m_szCrosshairCodes; // 0x718	
+	CUtlSymbolLarge m_szCrosshairCodes; // 0x728	
 	// MNetworkEnable
-	uint8_t m_iPendingTeamNum; // 0x720	
+	uint8_t m_iPendingTeamNum; // 0x730	
 private:
-	[[maybe_unused]] uint8_t __pad0721[0x3]; // 0x721
+	[[maybe_unused]] uint8_t __pad0731[0x3]; // 0x731
 public:
 	// MNetworkEnable
-	GameTime_t m_flForceTeamTime; // 0x724	
+	GameTime_t m_flForceTeamTime; // 0x734	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnCompTeammateColorChanged"
-	int32_t m_iCompTeammateColor; // 0x728	
+	int32_t m_iCompTeammateColor; // 0x738	
 	// MNetworkEnable
-	bool m_bEverPlayedOnTeam; // 0x72c	
+	bool m_bEverPlayedOnTeam; // 0x73c	
 private:
-	[[maybe_unused]] uint8_t __pad072d[0x3]; // 0x72d
+	[[maybe_unused]] uint8_t __pad073d[0x3]; // 0x73d
 public:
-	GameTime_t m_flPreviousForceJoinTeamTime; // 0x730	
+	GameTime_t m_flPreviousForceJoinTeamTime; // 0x740	
 private:
-	[[maybe_unused]] uint8_t __pad0734[0x4]; // 0x734
-public:
-	// MNetworkEnable
-	CUtlSymbolLarge m_szClan; // 0x738	
-	CUtlString m_sSanitizedPlayerName; // 0x740	
-	// MNetworkEnable
-	int32_t m_iCoachingTeam; // 0x748	
-private:
-	[[maybe_unused]] uint8_t __pad074c[0x4]; // 0x74c
+	[[maybe_unused]] uint8_t __pad0744[0x4]; // 0x744
 public:
 	// MNetworkEnable
-	uint64_t m_nPlayerDominated; // 0x750	
+	CUtlSymbolLarge m_szClan; // 0x748	
+	CUtlString m_sSanitizedPlayerName; // 0x750	
 	// MNetworkEnable
-	uint64_t m_nPlayerDominatingMe; // 0x758	
-	// MNetworkEnable
-	int32_t m_iCompetitiveRanking; // 0x760	
-	// MNetworkEnable
-	int32_t m_iCompetitiveWins; // 0x764	
-	// MNetworkEnable
-	int8_t m_iCompetitiveRankType; // 0x768	
+	int32_t m_iCoachingTeam; // 0x758	
 private:
-	[[maybe_unused]] uint8_t __pad0769[0x3]; // 0x769
+	[[maybe_unused]] uint8_t __pad075c[0x4]; // 0x75c
 public:
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Win; // 0x76c	
+	uint64_t m_nPlayerDominated; // 0x760	
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Loss; // 0x770	
+	uint64_t m_nPlayerDominatingMe; // 0x768	
 	// MNetworkEnable
-	int32_t m_iCompetitiveRankingPredicted_Tie; // 0x774	
+	int32_t m_iCompetitiveRanking; // 0x770	
 	// MNetworkEnable
-	int32_t m_nEndMatchNextMapVote; // 0x778	
+	int32_t m_iCompetitiveWins; // 0x774	
+	// MNetworkEnable
+	int8_t m_iCompetitiveRankType; // 0x778	
+private:
+	[[maybe_unused]] uint8_t __pad0779[0x3]; // 0x779
+public:
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Win; // 0x77c	
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Loss; // 0x780	
+	// MNetworkEnable
+	int32_t m_iCompetitiveRankingPredicted_Tie; // 0x784	
+	// MNetworkEnable
+	int32_t m_nEndMatchNextMapVote; // 0x788	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint16_t m_unActiveQuestId; // 0x77c	
+	uint16_t m_unActiveQuestId; // 0x78c	
 private:
-	[[maybe_unused]] uint8_t __pad077e[0x2]; // 0x77e
-public:
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	QuestProgress::Reason m_nQuestProgressReason; // 0x780	
-	// MNetworkEnable
-	// MNetworkUserGroup "LocalPlayerExclusive"
-	uint32_t m_unPlayerTvControlFlags; // 0x784	
-private:
-	[[maybe_unused]] uint8_t __pad0788[0x28]; // 0x788
-public:
-	int32_t m_iDraftIndex; // 0x7b0	
-	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x7b4	
-	uint32_t m_uiAbandonRecordedReason; // 0x7b8	
-	bool m_bCannotBeKicked; // 0x7bc	
-	bool m_bEverFullyConnected; // 0x7bd	
-	bool m_bAbandonAllowsSurrender; // 0x7be	
-	bool m_bAbandonOffersInstantSurrender; // 0x7bf	
-	bool m_bDisconnection1MinWarningPrinted; // 0x7c0	
-	bool m_bScoreReported; // 0x7c1	
-private:
-	[[maybe_unused]] uint8_t __pad07c2[0x2]; // 0x7c2
+	[[maybe_unused]] uint8_t __pad078e[0x2]; // 0x78e
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	int32_t m_nDisconnectionTick; // 0x7c4	
-private:
-	[[maybe_unused]] uint8_t __pad07c8[0x8]; // 0x7c8
-public:
-	// MNetworkEnable
-	bool m_bControllingBot; // 0x7d0	
-	// MNetworkEnable
-	bool m_bHasControlledBotThisRound; // 0x7d1	
-	bool m_bHasBeenControlledByPlayerThisRound; // 0x7d2	
-private:
-	[[maybe_unused]] uint8_t __pad07d3[0x1]; // 0x7d3
-public:
-	int32_t m_nBotsControlledThisRound; // 0x7d4	
+	QuestProgress::Reason m_nQuestProgressReason; // 0x790	
 	// MNetworkEnable
 	// MNetworkUserGroup "LocalPlayerExclusive"
-	bool m_bCanControlObservedBot; // 0x7d8	
+	uint32_t m_unPlayerTvControlFlags; // 0x794	
 private:
-	[[maybe_unused]] uint8_t __pad07d9[0x3]; // 0x7d9
+	[[maybe_unused]] uint8_t __pad0798[0x28]; // 0x798
+public:
+	int32_t m_iDraftIndex; // 0x7c0	
+	uint32_t m_msQueuedModeDisconnectionTimestamp; // 0x7c4	
+	uint32_t m_uiAbandonRecordedReason; // 0x7c8	
+	bool m_bCannotBeKicked; // 0x7cc	
+	bool m_bEverFullyConnected; // 0x7cd	
+	bool m_bAbandonAllowsSurrender; // 0x7ce	
+	bool m_bAbandonOffersInstantSurrender; // 0x7cf	
+	bool m_bDisconnection1MinWarningPrinted; // 0x7d0	
+	bool m_bScoreReported; // 0x7d1	
+private:
+	[[maybe_unused]] uint8_t __pad07d2[0x2]; // 0x7d2
 public:
 	// MNetworkEnable
-	CHandle< C_CSPlayerPawn > m_hPlayerPawn; // 0x7dc	
-	// MNetworkEnable
-	CHandle< C_CSObserverPawn > m_hObserverPawn; // 0x7e0	
-	// MNetworkEnable
-	bool m_bPawnIsAlive; // 0x7e4	
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	int32_t m_nDisconnectionTick; // 0x7d4	
 private:
-	[[maybe_unused]] uint8_t __pad07e5[0x3]; // 0x7e5
+	[[maybe_unused]] uint8_t __pad07d8[0x8]; // 0x7d8
+public:
+	// MNetworkEnable
+	bool m_bControllingBot; // 0x7e0	
+	// MNetworkEnable
+	bool m_bHasControlledBotThisRound; // 0x7e1	
+	bool m_bHasBeenControlledByPlayerThisRound; // 0x7e2	
+private:
+	[[maybe_unused]] uint8_t __pad07e3[0x1]; // 0x7e3
+public:
+	int32_t m_nBotsControlledThisRound; // 0x7e4	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	bool m_bCanControlObservedBot; // 0x7e8	
+private:
+	[[maybe_unused]] uint8_t __pad07e9[0x3]; // 0x7e9
+public:
+	// MNetworkEnable
+	CHandle< C_CSPlayerPawn > m_hPlayerPawn; // 0x7ec	
+	// MNetworkEnable
+	CHandle< C_CSObserverPawn > m_hObserverPawn; // 0x7f0	
+	// MNetworkEnable
+	bool m_bPawnIsAlive; // 0x7f4	
+private:
+	[[maybe_unused]] uint8_t __pad07f5[0x3]; // 0x7f5
 public:
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	uint32_t m_iPawnHealth; // 0x7e8	
+	uint32_t m_iPawnHealth; // 0x7f8	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	int32_t m_iPawnArmor; // 0x7ec	
+	int32_t m_iPawnArmor; // 0x7fc	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	bool m_bPawnHasDefuser; // 0x7f0	
+	bool m_bPawnHasDefuser; // 0x800	
 	// MNetworkEnable
 	// MNetworkUserGroup "TeammateAndSpectatorExclusive"
-	bool m_bPawnHasHelmet; // 0x7f1	
+	bool m_bPawnHasHelmet; // 0x801	
 	// MNetworkEnable
-	uint16_t m_nPawnCharacterDefIndex; // 0x7f2	
+	uint16_t m_nPawnCharacterDefIndex; // 0x802	
 	// MNetworkEnable
-	int32_t m_iPawnLifetimeStart; // 0x7f4	
+	int32_t m_iPawnLifetimeStart; // 0x804	
 	// MNetworkEnable
-	int32_t m_iPawnLifetimeEnd; // 0x7f8	
+	int32_t m_iPawnLifetimeEnd; // 0x808	
 	// MNetworkEnable
-	int32_t m_iPawnBotDifficulty; // 0x7fc	
+	int32_t m_iPawnBotDifficulty; // 0x80c	
 	// MNetworkEnable
-	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x800	
+	CHandle< CCSPlayerController > m_hOriginalControllerOfCurrentPawn; // 0x810	
 	// MNetworkEnable
-	int32_t m_iScore; // 0x804	
+	int32_t m_iScore; // 0x814	
 	// MNetworkEnable
-	C_NetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x808	
+	C_NetworkUtlVectorBase< EKillTypes_t > m_vecKills; // 0x818	
 	// MNetworkEnable
-	bool m_bMvpNoMusic; // 0x820	
+	bool m_bMvpNoMusic; // 0x830	
 private:
-	[[maybe_unused]] uint8_t __pad0821[0x3]; // 0x821
+	[[maybe_unused]] uint8_t __pad0831[0x3]; // 0x831
 public:
 	// MNetworkEnable
-	int32_t m_eMvpReason; // 0x824	
+	int32_t m_eMvpReason; // 0x834	
 	// MNetworkEnable
-	int32_t m_iMusicKitID; // 0x828	
+	int32_t m_iMusicKitID; // 0x838	
 	// MNetworkEnable
-	int32_t m_iMusicKitMVPs; // 0x82c	
+	int32_t m_iMusicKitMVPs; // 0x83c	
 	// MNetworkEnable
 	// MNetworkChangeCallback "OnMVPCountChanged"
-	int32_t m_iMVPs; // 0x830	
-	bool m_bIsPlayerNameDirty; // 0x834	
+	int32_t m_iMVPs; // 0x840	
+	bool m_bIsPlayerNameDirty; // 0x844	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x218
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct CompositeMaterialEditorPoint_t
@@ -13783,10 +18295,324 @@ public:
 	CUtlVector< CompositeMaterial_t > m_vecCompositeMaterials; // 0x1f8	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x78
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Wait "
+// MPropertyFriendlyName "Wait"
+// MPropertyDescription "Causes each execution cursor to pause at this node for a fixed period of time. Each cursor will wake up and resume execution when the time expires, unless aborted or early-woken."
+// MPulseEditorHeaderIcon "tools/images/pulse_editor/inflow_wait.png"
+class CPulseCell_Inflow_Wait : public CPulseCell_BaseYieldingInflow
+{
+public:
+	CPulse_ResumePoint m_WakeResume; // 0x48	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x2
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeBlackboardReferenceIndex_t
+{
+public:
+	int16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeBlackboardReferenceIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventClientPreSimulate_t : public EventSimulate_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventClientPauseSimulate_t : public EventSimulate_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeCellIndex_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeCellIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xc
+// Has Trivial Destructor
+class CSimpleStopwatch : public CStopwatchBase
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x50
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CommandToolCommand_t
+{
+public:
+	bool m_bEnabled; // 0x0	
+	bool m_bOpened; // 0x1	
+private:
+	[[maybe_unused]] uint8_t __pad0002[0x2]; // 0x2
+public:
+	uint32_t m_InternalId; // 0x4	
+	CUtlString m_ShortName; // 0x8	
+	CommandExecMode_t m_ExecMode; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0x4]; // 0x14
+public:
+	CUtlString m_SpawnGroup; // 0x18	
+	float m_PeriodicExecDelay; // 0x20	
+	CommandEntitySpecType_t m_SpecType; // 0x24	
+	CUtlString m_EntitySpec; // 0x28	
+	CUtlString m_Commands; // 0x30	
+	DebugOverlayBits_t m_SetDebugBits; // 0x38	
+	DebugOverlayBits_t m_ClearDebugBits; // 0x40	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct ragdollelement_t
+{
+public:
+	Vector originParentSpace; // 0x0	
+	int32_t parentIndex; // 0x20	
+	float m_flRadius; // 0x24	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x38
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_Variable
+{
+public:
+	CUtlSymbolLarge m_Name; // 0x0	
+	CUtlString m_Description; // 0x8	
+	CPulseValueFullType m_Type; // 0x10	
+	KeyValues3 m_DefaultValue; // 0x20	
+private:
+	[[maybe_unused]] uint8_t __pad0030[0x2]; // 0x30
+public:
+	bool m_bIsPublic; // 0x32	
+	bool m_bIsObservable; // 0x33	
+	PulseDocNodeID_t m_nEditorNodeID; // 0x34	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xa8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+// MPulseCellWithCustomDocNode
+class CPulseCell_Inflow_Method : public CPulseCell_Inflow_BaseEntrypoint
+{
+public:
+	CUtlSymbolLarge m_MethodName; // 0x70	
+	CUtlString m_Description; // 0x78	
+	bool m_bIsPublic; // 0x80	
+private:
+	[[maybe_unused]] uint8_t __pad0081[0x7]; // 0x81
+public:
+	CPulseValueFullType m_ReturnType; // 0x88	
+	CUtlLeanVector< CPulseRuntimeMethodArg > m_Args; // 0x98	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x460
+// Has VTable
+// Construct disallowed
+// MNetworkAssumeNotNetworkable
+class CBodyComponentBaseModelEntity : public CBodyComponentSkeletonInstance
+{
+public:
+	// Static fields:
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseModelEntity")->GetStaticFields()[1]->m_pInstance);};
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x120
+// Has VTable
+// 
+// MPulseInstanceDomainInfo
+// MPulseDomainHookInfo
+// MPulseLibraryBindings
+// MPulseDomainOptInFeatureTag
+class CPulseGraphInstance_TestDomain : public CBasePulseGraphInstance
+{
+public:
+	bool m_bIsRunningUnitTests; // 0xf8	
+	bool m_bExplicitTimeStepping; // 0xf9	
+	bool m_bExpectingToDestroyWithYieldedCursors; // 0xfa	
+private:
+	[[maybe_unused]] uint8_t __pad00fb[0x1]; // 0xfb
+public:
+	int32_t m_nNextValidateIndex; // 0xfc	
+	CUtlVector< CUtlString > m_Tracepoints; // 0x100	
+	bool m_bTestYesOrNoPath; // 0x118	
+	
+	// Static fields:
+	static double &Get_s_flExplicitCurTime(){return *reinterpret_cast<double*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPulseGraphInstance_TestDomain")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Destructor
+struct EventClientProcessNetworking_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseLibraryBindings
+// MPulseDomainOptInFeatureTag
+class CPulseAnimFuncs
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseProvideFeatureTag "PulseFakeEntities"
+// MPulseLibraryBindings
+class FakeEntityDerivedB_tAPI
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x38
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PulseNodeDynamicOutflows_t__DynamicOutflow_t
+{
+public:
+	CGlobalSymbol m_OutflowID; // 0x0	
+	// MFgdFromSchemaCompletelySkipField
+	CPulse_OutflowConnection m_Connection; // 0x8	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has Trivial Destructor
+// 
+// MNetworkVarsAtomic
+class CNetworkOriginQuantizedVector
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	// MNetworkBitCount "19"
+	// MNetworkMinValue "-16384,000000"
+	// MNetworkMaxValue "16384,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkOriginQuantizedVector"
+	CNetworkedQuantizedFloat m_vecX; // 0x10	
+	// MNetworkBitCount "19"
+	// MNetworkMinValue "-16384,000000"
+	// MNetworkMaxValue "16384,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkOriginQuantizedVector"
+	CNetworkedQuantizedFloat m_vecY; // 0x18	
+	// MNetworkBitCount "19"
+	// MNetworkMinValue "-16384,000000"
+	// MNetworkMaxValue "16384,000000"
+	// MNetworkEncodeFlags "4"
+	// MNetworkChangeCallback "CNetworkOriginQuantizedVector"
+	CNetworkedQuantizedFloat m_vecZ; // 0x20	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x60
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_Outputs "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Outflow_CycleShuffled : public CPulseCell_BaseFlow
+{
+public:
+	CUtlVector< CPulse_OutflowConnection > m_Outputs; // 0x48	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0xdd8
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkVarNames "int m_nUniqueID"
 // MNetworkVarNames "uint32 m_unAccountID"
@@ -13843,13 +18669,211 @@ public:
 };
 
 // Registered binary: client.dll (project 'client')
-// Alignment: 16
-// Size: 0x1a80
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+// 
+// MPropertyCustomEditor "multi_int( 4 )"
+class CSkillInt
+{
+public:
+	int32_t m_pValue[4]; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x20
+// Has Trivial Destructor
+struct thinkfunc_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	HSCRIPT m_hFn; // 0x8	
+	CUtlStringToken m_nContext; // 0x10	
+	GameTick_t m_nNextThinkTick; // 0x14	
+	GameTick_t m_nLastThinkTick; // 0x18	
+	
+	// Datamap fields:
+	// void m_think; // 0x0
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x50
 // Has VTable
-class C_WeaponM249 : public C_CSWeaponBaseGun
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_OutputIndex "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Step_PublicOutput : public CPulseCell_BaseFlow
+{
+public:
+	PulseRuntimeOutputIndex_t m_OutputIndex; // 0x48	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventClientAdvanceTick_t : public EventAdvanceTick_t
 {
 public:
 	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x178
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CBasePlayerVData : public CEntitySubclassVDataBase
+{
+public:
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_sModelName; // 0x28	
+	CSkillFloat m_flHeadDamageMultiplier; // 0x108	
+	CSkillFloat m_flChestDamageMultiplier; // 0x118	
+	CSkillFloat m_flStomachDamageMultiplier; // 0x128	
+	CSkillFloat m_flArmDamageMultiplier; // 0x138	
+	CSkillFloat m_flLegDamageMultiplier; // 0x148	
+	// MPropertyGroupName "Water"
+	float m_flHoldBreathTime; // 0x158	
+	// MPropertyGroupName "Water"
+	// MPropertyDescription "Seconds between drowning ticks"
+	float m_flDrowningDamageInterval; // 0x15c	
+	// MPropertyGroupName "Water"
+	// MPropertyDescription "Amount of damage done on the first drowning tick (+1 each subsequent interval)"
+	int32_t m_nDrowningDamageInitial; // 0x160	
+	// MPropertyGroupName "Water"
+	// MPropertyDescription "Max damage done by a drowning tick"
+	int32_t m_nDrowningDamageMax; // 0x164	
+	// MPropertyGroupName "Water"
+	int32_t m_nWaterSpeed; // 0x168	
+	// MPropertyGroupName "Use"
+	float m_flUseRange; // 0x16c	
+	// MPropertyGroupName "Use"
+	float m_flUseAngleTolerance; // 0x170	
+	// MPropertyGroupName "Crouch"
+	// MPropertyDescription "Time to move between crouch and stand"
+	float m_flCrouchTime; // 0x174	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 4
+// Size: 0x8
+// Has Trivial Constructor
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_TestWaitWithCursorState__CursorState_t
+{
+public:
+	float flWaitValue; // 0x0	
+	bool bFailOnCancel; // 0x4	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x50
+// Has Trivial Destructor
+class CSceneEventInfo
+{
+public:
+	int32_t m_iLayer; // 0x0	
+	int32_t m_iPriority; // 0x4	
+	HSequence m_hSequence; // 0x8	
+	float m_flWeight; // 0xc	
+	bool m_bHasArrived; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0011[0x3]; // 0x11
+public:
+	int32_t m_nType; // 0x14	
+	GameTime_t m_flNext; // 0x18	
+	bool m_bIsGesture; // 0x1c	
+	bool m_bShouldRemove; // 0x1d	
+private:
+	[[maybe_unused]] uint8_t __pad001e[0x26]; // 0x1e
+public:
+	CHandle< C_BaseEntity > m_hTarget; // 0x44	
+	SceneEventId_t m_nSceneEventId; // 0x48	
+	bool m_bClientSide; // 0x4c	
+	bool m_bStarted; // 0x4d	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x18
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_DomainValue
+{
+public:
+	PulseDomainValueType_t m_nType; // 0x0	
+	CGlobalSymbol m_Value; // 0x8	
+	CGlobalSymbol m_ExpectedRuntimeType; // 0x10	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 16
+// Size: 0x1a90
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_WeaponMP7 : public C_CSWeaponBaseGun
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EventSplitScreenStateChanged_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x24
+// Has Trivial Destructor
+struct SoundeventPathCornerPairNetworked_t
+{
+public:
+	Vector vP1; // 0x0	
+	Vector vP2; // 0xc	
+	float flPathLengthSqr; // 0x18	
+	float flP1Pct; // 0x1c	
+	float flP2Pct; // 0x20	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x28
+// Has VTable
+class CCopyRecipientFilter
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	int32_t m_Flags; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
+	CUtlVector< CPlayerSlot > m_Recipients; // 0x10	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -13865,9 +18889,69 @@ public:
 	int32_t m_nGUID; // 0x10c	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Spawn Fake Entity "
+// MPropertyFriendlyName "Spawn Fake Entity"
+class CPulseCell_Step_TestDomainCreateFakeEntity : public CPulseCell_BaseFlow
+{
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Fake Ent-Fire "
+// MPropertyFriendlyName "Fake Ent-Fire"
+// MPulseEditorHeaderText
+class CPulseCell_Step_TestDomainEntFire : public CPulseCell_BaseFlow
+{
+public:
+	CUtlString m_Input; // 0x48	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventClientPostAdvanceTick_t : public EventPostAdvanceTick_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseLibraryBindings
+// MPropertyDescription "Basic math support."
+class CPulseMathlib
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x28
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -13890,9 +18974,247 @@ public:
 	bool m_bPassWhenTrue; // 0x20	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x2
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeConstantIndex_t
+{
+public:
+	int16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeConstantIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has Trivial Destructor
+// 
+// MPropertyCustomEditor "multi_int(2)"
+class CFiringModeInt
+{
+public:
+	int32_t m_nValues[2]; // 0x0	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x90
+// Has VTable
+class CSoundPatch
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// -> m_current - 0x8
+	// -> m_target - 0xc
+	// -> m_rate - 0x10
+	// -> m_forceupdate - 0x14
+	CSoundEnvelope m_pitch; // 0x8	
+	// -> m_current - 0x18
+	// -> m_target - 0x1c
+	// -> m_rate - 0x20
+	// -> m_forceupdate - 0x24
+	CSoundEnvelope m_volume; // 0x18	
+private:
+	[[maybe_unused]] uint8_t __pad0028[0x8]; // 0x28
+public:
+	float m_shutdownTime; // 0x30	
+	float m_flLastTime; // 0x34	
+	CUtlSymbolLarge m_iszSoundScriptName; // 0x38	
+	CHandle< C_BaseEntity > m_hEnt; // 0x40	
+	CEntityIndex m_soundEntityIndex; // 0x44	
+	Vector m_soundOrigin; // 0x48	
+	int32_t m_isPlaying; // 0x54	
+	// -> m_Flags - 0x60
+	// -> m_Recipients - 0x68
+	CCopyRecipientFilter m_Filter; // 0x58	
+	float m_flCloseCaptionDuration; // 0x80	
+	bool m_bUpdatedSoundOrigin; // 0x84	
+private:
+	[[maybe_unused]] uint8_t __pad0085[0x3]; // 0x85
+public:
+	CUtlSymbolLarge m_iszClassName; // 0x88	
+	
+	// Static fields:
+	static int32_t &Get_g_SoundPatchCount(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CSoundPatch")->GetStaticFields()[0]->m_pInstance);};
+	
+	// Datamap fields:
+	// void m_guid; // 0x28
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+class CVariantDefaultAllocator
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has VTable
+// Is Abstract
+// Has Trivial Destructor
+class IHasAttributes
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x38
+struct ragdoll_t
+{
+public:
+	CUtlVector< ragdollelement_t > list; // 0x0	
+	CUtlVector< int32 > boneIndex; // 0x18	
+	bool allowStretch; // 0x30	
+	bool unused; // 0x31	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_Input "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Step_EntFire : public CPulseCell_BaseFlow
+{
+public:
+	CUtlString m_Input; // 0x48	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xa8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo ""
+class CPulseCell_Test_MultiOutflow_WithParams : public CPulseCell_BaseFlow
+{
+public:
+	// MPulseCellOutflow_IsDefault
+	SignatureOutflow_Continue m_Out1; // 0x48	
+	SignatureOutflow_Continue m_Out2; // 0x78	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EventModInitialized_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1cc0
+// Has VTable
+// Construct disallowed
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CBaseAnimGraphController m_animationController"
+class CBodyComponentBaseAnimGraph : public CBodyComponentSkeletonInstance
+{
+public:
+	// MNetworkEnable
+	CBaseAnimGraphController m_animationController; // 0x460	
+	
+	// Static fields:
+	static EntComponentInfo_t &Get_s_EntComponentInfo(){return *reinterpret_cast<EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseAnimGraph")->GetStaticFields()[0]->m_pInstance);};
+	static int32_t &Get_entity_component_error_class_decl_says_contained_but_impl_is_referenced(){return *reinterpret_cast<int32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseAnimGraph")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x138
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo ""
+class CPulseCell_Test_MultiOutflow_WithParams_Yielding : public CPulseCell_BaseYieldingInflow
+{
+public:
+	// MPulseCellOutflow_IsDefault
+	SignatureOutflow_Continue m_Out1; // 0x48	
+	SignatureOutflow_Continue m_AsyncChild1; // 0x78	
+	SignatureOutflow_Continue m_AsyncChild2; // 0xa8	
+	SignatureOutflow_Resume m_YieldResume1; // 0xd8	
+	SignatureOutflow_Resume m_YieldResume2; // 0x108	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x38
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct AmmoTypeInfo_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	int32_t m_nMaxCarry; // 0x10	
+private:
+	[[maybe_unused]] uint8_t __pad0014[0x8]; // 0x14
+public:
+	CRangeInt m_nSplashSize; // 0x1c	
+	AmmoFlags_t m_nFlags; // 0x24	
+	float m_flMass; // 0x28	
+	CRangeFloat m_flSpeed; // 0x2c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x48
+// Has Trivial Destructor
+struct EventClientPreOutput_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	double m_flRenderTime; // 0x28	
+	double m_flRenderFrameTime; // 0x30	
+	double m_flRenderFrameTimeUnbounded; // 0x38	
+	float m_flRealTime; // 0x40	
+	bool m_bRenderOnly; // 0x44	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x378
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -13995,10 +19317,210 @@ public:
 	CUtlVector< CompMatMutatorCondition_t > m_vecConditions; // 0x360	
 };
 
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x50
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CFuseProgram
+{
+public:
+	CUtlVector< uint8 > m_programBuffer; // 0x0	
+	CUtlVector< FuseVariableIndex_t > m_variablesRead; // 0x18	
+	CUtlVector< FuseVariableIndex_t > m_variablesWritten; // 0x30	
+	int32_t m_nMaxTempVarsUsed; // 0x48	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x38
+// Has Trivial Destructor
+struct EventClientFrameSimulate_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	float m_flRealTime; // 0x28	
+	float m_flFrameTime; // 0x2c	
+	bool m_bScheduleSendTickPacket; // 0x30	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xc
+// Has Trivial Destructor
+class CSimTimer : public CSimpleSimTimer
+{
+public:
+	float m_interval; // 0x8	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x128
+// Has VTable
+// 
+// MPulseInstanceDomainInfo
+// MPulseDomainHookInfo
+// MPulseLibraryBindings
+// MPulseDomainHiddenInTool
+class CPulseGraphInstance_TestDomain_Derived : public CPulseGraphInstance_TestDomain
+{
+public:
+	int32_t m_nInstanceValueX; // 0x120	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x98
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+// MPulseCellWithCustomDocNode
+class CPulseCell_Inflow_EntOutputHandler : public CPulseCell_Inflow_BaseEntrypoint
+{
+public:
+	CUtlSymbolLarge m_SourceEntity; // 0x70	
+	CUtlSymbolLarge m_SourceOutput; // 0x78	
+	CUtlSymbolLarge m_TargetInput; // 0x80	
+	CPulseValueFullType m_ExpectedParamType; // 0x88	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeCallInfoIndex_t
+{
+public:
+	int32_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeCallInfoIndex_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xa8
+// Has VTable
+class CTakeDamageInfo
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	Vector m_vecDamageForce; // 0x8	
+	Vector m_vecDamagePosition; // 0x14	
+	Vector m_vecReportedPosition; // 0x20	
+	Vector m_vecDamageDirection; // 0x2c	
+	CHandle< C_BaseEntity > m_hInflictor; // 0x38	
+	CHandle< C_BaseEntity > m_hAttacker; // 0x3c	
+	CHandle< C_BaseEntity > m_hAbility; // 0x40	
+	float m_flDamage; // 0x44	
+	float m_flTotalledDamage; // 0x48	
+	int32_t m_bitsDamageType; // 0x4c	
+	int32_t m_iDamageCustom; // 0x50	
+	AmmoIndex_t m_iAmmoType; // 0x54	
+private:
+	[[maybe_unused]] uint8_t __pad0055[0xb]; // 0x55
+public:
+	float m_flOriginalDamage; // 0x60	
+	bool m_bShouldBleed; // 0x64	
+	bool m_bShouldSpark; // 0x65	
+private:
+	[[maybe_unused]] uint8_t __pad0066[0xa]; // 0x66
+public:
+	TakeDamageFlags_t m_nDamageFlags; // 0x70	
+	int32_t m_nNumObjectsPenetrated; // 0x78	
+	float m_flFriendlyFireDamageReductionRatio; // 0x7c	
+	HSCRIPT m_hScriptInstance; // 0x80	
+private:
+	[[maybe_unused]] uint8_t __pad0088[0x14]; // 0x88
+public:
+	bool m_bInTakeDamageFlow; // 0x9c	
+	
+	// Static fields:
+	static CTakeDamageInfo &Get_EmptyInfo(){return *reinterpret_cast<CTakeDamageInfo*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CTakeDamageInfo")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// 
+// MPulseProvideFeatureTag "PulseFakeEntities"
+// MPulseLibraryBindings
+class FakeEntityDerivedA_tAPI
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Tracepoint "
+// MPropertyFriendlyName "Tracepoint"
+class CPulseCell_Step_TestDomainTracepoint : public CPulseCell_BaseFlow
+{
+public:
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x28
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PulseGraphExecutionHistoryCursorDesc_t
+{
+public:
+	CUtlVector< PulseCursorID_t > vecAncestorCursorIDs; // 0x0	
+	PulseDocNodeID_t nSpawnNodeID; // 0x18	
+	PulseDocNodeID_t nRetiredAtNodeID; // 0x1c	
+	float flLastReferenced; // 0x20	
+	int32_t nLastValidEntryIdx; // 0x24	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x168
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_BlackboardReference "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Inflow_ObservableVariableListener : public CPulseCell_Inflow_BaseEntrypoint
+{
+public:
+	// -> m_hBlackboardResource - 0x70
+	// -> m_BlackboardResource - 0x150
+	// -> m_nNodeID - 0x158
+	// -> m_NodeName - 0x160
+	CPulse_BlackboardReference m_BlackboardReference; // 0x70	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x38
 // Has VTable
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 class CCompositeMaterialEditorDoc
@@ -14012,6 +19534,77 @@ private:
 public:
 	CUtlVector< CompositeMaterialEditorPoint_t > m_Points; // 0x10	
 	KeyValues3 m_KVthumbnail; // 0x28	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 4
+// Size: 0x4
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_LimitCount__InstanceState_t
+{
+public:
+	int32_t m_nCurrentCount; // 0x0	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Get Fake Entity Name "
+// MPropertyFriendlyName "Get Fake Entity Name"
+class CPulseCell_Val_TestDomainGetEntityName : public CPulseCell_BaseValue
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1e8
+class CRR_Response
+{
+public:
+	uint8_t m_Type; // 0x0	
+	char m_szResponseName[192]; // 0x1	
+	char m_szMatchingRule[128]; // 0xc1	
+private:
+	[[maybe_unused]] uint8_t __pad0141[0x7]; // 0x141
+public:
+	// -> odds - 0x158
+	// -> flags - 0x15a
+	// -> m_pFollowup - 0x160
+	ResponseParams m_Params; // 0x148	
+	float m_fMatchScore; // 0x168	
+private:
+	[[maybe_unused]] uint8_t __pad016c[0x4]; // 0x16c
+public:
+	char* m_szSpeakerContext; // 0x170	
+	char* m_szWorldContext; // 0x178	
+	// -> followup_concept - 0x180
+	// -> followup_contexts - 0x188
+	// -> followup_delay - 0x190
+	// -> followup_target - 0x194
+	// -> followup_entityiotarget - 0x19c
+	// -> followup_entityioinput - 0x1a4
+	// -> followup_entityiodelay - 0x1ac
+	// -> bFired - 0x1b0
+	ResponseFollowup m_Followup; // 0x180	
+private:
+	[[maybe_unused]] uint8_t __pad01b1[0x1]; // 0x1b1
+public:
+	CUtlSymbol m_recipientFilter; // 0x1b2	
+private:
+	[[maybe_unused]] uint8_t __pad01b4[0x4]; // 0x1b4
+public:
+	CUtlVector< CUtlSymbol > m_pchCriteriaNames; // 0x1b8	
+	CUtlVector< char* > m_pchCriteriaValues; // 0x1d0	
 };
 
 // Registered binary: client.dll (project 'client')
@@ -14041,13 +19634,137 @@ private:
 	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
 public:
 	// Static fields:
-	static CClientGapTypeQueryRegistration &Get_s_Instance(){return *reinterpret_cast<CClientGapTypeQueryRegistration*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CClientGapTypeQueryRegistration")->m_static_fields[0]->m_instance);};
+	static CClientGapTypeQueryRegistration &Get_s_Instance(){return *reinterpret_cast<CClientGapTypeQueryRegistration*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CClientGapTypeQueryRegistration")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xd0
+struct SummaryTakeDamageInfo_t
+{
+public:
+	int32_t nSummarisedCount; // 0x0	
+	CTakeDamageInfo info; // 0x8	
+	// -> m_pOriginatingInfo - 0xb0
+	// -> m_nHealthLost - 0xb8
+	// -> m_nDamageTaken - 0xbc
+	// -> m_nTotalledHealthLost - 0xc0
+	// -> m_nTotalledDamageTaken - 0xc4
+	CTakeDamageResult result; // 0xb0	
+	CHandle< C_BaseEntity > hTarget; // 0xc8	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x40
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_CallInfo
+{
+public:
+	CUtlSymbolLarge m_PortName; // 0x0	
+	PulseDocNodeID_t m_nEditorNodeID; // 0x8	
+private:
+	[[maybe_unused]] uint8_t __pad000c[0x4]; // 0xc
+public:
+	PulseRegisterMap_t m_RegisterMap; // 0x10	
+	PulseDocNodeID_t m_CallMethodID; // 0x30	
+	PulseRuntimeChunkIndex_t m_nSrcChunk; // 0x34	
+	int32_t m_nSrcInstruction; // 0x38	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x58
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_RegisterInfo
+{
+public:
+	PulseRuntimeRegisterIndex_t m_nReg; // 0x0	
+	CPulseValueFullType m_Type; // 0x8	
+	CKV3MemberNameWithStorage m_OriginName; // 0x18	
+	int32_t m_nWrittenByInstruction; // 0x50	
+	int32_t m_nLastReadByInstruction; // 0x54	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+class CRandSimTimer : public CSimpleSimTimer
+{
+public:
+	float m_minInterval; // 0x8	
+	float m_maxInterval; // 0xc	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has VTable
+// Has Trivial Destructor
+// MNetworkAssumeNotNetworkable
+struct sndopvarlatchdata_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	CUtlSymbolLarge m_iszStack; // 0x8	
+	CUtlSymbolLarge m_iszOperator; // 0x10	
+	CUtlSymbolLarge m_iszOpvar; // 0x18	
+	float m_flVal; // 0x20	
+	Vector m_vPos; // 0x24	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x88
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_InvokeBinding
+{
+public:
+	PulseRegisterMap_t m_RegisterMap; // 0x0	
+	CUtlSymbolLarge m_FuncName; // 0x20	
+	PulseRuntimeCellIndex_t m_nCellIndex; // 0x28	
+	PulseRuntimeChunkIndex_t m_nSrcChunk; // 0x2c	
+	int32_t m_nSrcInstruction; // 0x30	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xc8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "PulseEntities "
+// MPulseDomainOptInFeatureTag
+// MPropertyFriendlyName "Play Sequence"
+// MPropertyDescription "Play the specified animation sequence on a NON-ANIMGRAPH entity, and wait for it to complete."
+class CPulseCell_PlaySequence : public CPulseCell_BaseYieldingInflow
+{
+public:
+	// MPropertyAttributeSuggestionName "pulse_model_sequence_name"
+	CUtlString m_SequenceName; // 0x48	
+	// MPulseDocCustomAttr
+	PulseNodeDynamicOutflows_t m_PulseAnimEvents; // 0x50	
+	// MPulseCellOutflow_IsDefault
+	CPulse_ResumePoint m_OnFinished; // 0x68	
+	CPulse_ResumePoint m_OnCanceled; // 0x98	
 };
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x4c0
 // Has VTable
+// MClassHasEntityLimitedDataDesc
 class CGlobalLightBase
 {
 private:
@@ -14118,6 +19835,279 @@ public:
 
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
+// Size: 0x16b8
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "CHandle<CCSPlayerPawn> m_OwningPlayer"
+// MNetworkVarNames "CHandle<CCSPlayerPawn> m_KillingPlayer"
+class C_ItemDogtags : public C_Item
+{
+public:
+	// MNetworkEnable
+	CHandle< C_CSPlayerPawn > m_OwningPlayer; // 0x16b0	
+	// MNetworkEnable
+	CHandle< C_CSPlayerPawn > m_KillingPlayer; // 0x16b4	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventServerAdvanceTick_t : public EventAdvanceTick_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x60
+// Has Trivial Destructor
+struct EventSetTime_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	int32_t m_nClientOutputFrames; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
+public:
+	double m_flRealTime; // 0x30	
+	double m_flRenderTime; // 0x38	
+	double m_flRenderFrameTime; // 0x40	
+	double m_flRenderFrameTimeUnbounded; // 0x48	
+	double m_flRenderFrameTimeUnscaled; // 0x50	
+	double m_flTickRemainder; // 0x58	
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x20
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct FunctionInfo_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	CUtlString m_name; // 0x8	
+	CUtlStringToken m_nameToken; // 0x10	
+	int32_t m_nParamCount; // 0x14	
+	FuseFunctionIndex_t m_nIndex; // 0x18	
+	bool m_bIsPure; // 0x1a	
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x10
+// Has Trivial Destructor
+struct EntOutput_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x10]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventClientPostSimulate_t : public EventSimulate_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 4
+// Size: 0x2c
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct CPulseCell_LerpCameraSettings__CursorState_t : public CPulseCell_BaseLerp::CursorState_t
+{
+public:
+	CHandle< C_PointCamera > m_hCamera; // 0x8	
+	PointCameraSettings_t m_OverlaidStart; // 0xc	
+	PointCameraSettings_t m_OverlaidEnd; // 0x1c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+class QuestProgress
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xa8
+// Has VTable
+// 
+// MPulseLibraryBindings
+// MPulseInternal_IsCursor
+class CTestDomainDerived_Cursor : public CPulseExecCursor
+{
+public:
+	int32_t m_nCursorValueA; // 0xa0	
+	int32_t m_nCursorValueB; // 0xa4	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x78
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseGraphExecutionHistory
+{
+public:
+	PulseGraphInstanceID_t m_nInstanceID; // 0x0	
+	CUtlString m_strFileName; // 0x8	
+	CUtlVector< PulseGraphExecutionHistoryEntry_t* > m_vecHistory; // 0x10	
+	CUtlOrderedMap< PulseDocNodeID_t, PulseGraphExecutionHistoryNodeDesc_t* > m_mapCellDesc; // 0x28	
+	CUtlOrderedMap< PulseCursorID_t, PulseGraphExecutionHistoryCursorDesc_t* > m_mapCursorDesc; // 0x50	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+struct EventClientAdvanceNonRenderedFrame_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventServerProcessNetworking_t : public EventSimulate_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x1150
+// Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkAssumeNotNetworkable
+class C_FlashbangProjectile : public C_BaseCSGrenadeProjectile
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x90
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_DefaultCaseOutflow "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Outflow_IntSwitch : public CPulseCell_BaseFlow
+{
+public:
+	CPulse_OutflowConnection m_DefaultCaseOutflow; // 0x48	
+	CUtlVector< CPulse_OutflowConnection > m_CaseOutflows; // 0x78	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x178
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseGraphDef
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	CUtlSymbolLarge m_DomainIdentifier; // 0x8	
+	CUtlSymbolLarge m_ParentMapName; // 0x10	
+	CUtlSymbolLarge m_ParentXmlName; // 0x18	
+	CUtlVector< CUtlSymbolLarge > m_vecGameBlackboards; // 0x20	
+	CUtlVector< CPulse_Chunk* > m_Chunks; // 0x38	
+	CUtlVector< CPulseCell_Base* > m_Cells; // 0x50	
+	CUtlVector< CPulse_Variable > m_Vars; // 0x68	
+	CUtlVector< CPulse_PublicOutput > m_PublicOutputs; // 0x80	
+	CUtlVector< CPulse_InvokeBinding* > m_InvokeBindings; // 0x98	
+	CUtlVector< CPulse_CallInfo* > m_CallInfos; // 0xb0	
+	CUtlVector< CPulse_Constant > m_Constants; // 0xc8	
+	CUtlVector< CPulse_DomainValue > m_DomainValues; // 0xe0	
+	CUtlVector< CPulse_BlackboardReference > m_BlackboardReferences; // 0xf8	
+	CUtlVector< CPulse_OutputConnection* > m_OutputConnections; // 0x110	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x20
+// Has VTable
+class CTakeDamageSummaryScopeGuard
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	CUtlVector< SummaryTakeDamageInfo_t* > m_vecSummaries; // 0x8	
+	
+	// Static fields:
+	static SummaryTakeDamageInfo_t &Get_EmptySummary(){return *reinterpret_cast<SummaryTakeDamageInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CTakeDamageSummaryScopeGuard")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "TestDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+class CPulseCell_Test_MultiInflow_NoDefault : public CPulseCell_BaseFlow
+{
+public:
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x1
+// Has Trivial Constructor
+// Has Trivial Destructor
+// Construct disallowed
+class CEmptyEntityInstance
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x1]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
 // Size: 0x30
 // Has VTable
 // Has Trivial Destructor
@@ -14145,9 +20135,468 @@ public:
 	float m_flRenderFxDuration; // 0x24	
 };
 
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x28
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulse_Constant
+{
+public:
+	CPulseValueFullType m_Type; // 0x0	
+	KeyValues3 m_Value; // 0x10	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x4e0
+// Has VTable
+// MNetworkAssumeNotNetworkable
+// 
+// MNetworkVarNames "float m_flMaxFallVelocity"
+// MNetworkVarNames "Vector m_vecLadderNormal"
+// MNetworkVarNames "int m_nLadderSurfacePropIndex"
+// MNetworkVarNames "float m_flDuckAmount"
+// MNetworkVarNames "float m_flDuckSpeed"
+// MNetworkVarNames "bool m_bDuckOverride"
+// MNetworkVarNames "bool m_bDesiresDuck"
+// MNetworkVarNames "uint32 m_nDuckTimeMsecs"
+// MNetworkVarNames "uint32 m_nDuckJumpTimeMsecs"
+// MNetworkVarNames "uint32 m_nJumpTimeMsecs"
+// MNetworkVarNames "float m_flLastDuckTime"
+// MNetworkVarNames "int m_nGameCodeHasMovedPlayerAfterCommand"
+// MNetworkVarNames "bool m_bOldJumpPressed"
+// MNetworkVarNames "float m_flJumpUntil"
+// MNetworkVarNames "float m_flJumpVel"
+// MNetworkVarNames "GameTime_t m_fStashGrenadeParameterWhen"
+// MNetworkVarNames "ButtonBitMask_t m_nButtonDownMaskPrev"
+// MNetworkVarNames "float m_flOffsetTickCompleteTime"
+// MNetworkVarNames "float m_flOffsetTickStashedSpeed"
+// MNetworkVarNames "float m_flStamina"
+class CCSPlayer_MovementServices : public CPlayer_MovementServices_Humanoid
+{
+public:
+	// MNetworkEnable
+	float m_flMaxFallVelocity; // 0x218	
+	// MNetworkEnable
+	// MNetworkEncoder "normal"
+	Vector m_vecLadderNormal; // 0x21c	
+	// MNetworkEnable
+	int32_t m_nLadderSurfacePropIndex; // 0x228	
+	// MNetworkEnable
+	float m_flDuckAmount; // 0x22c	
+	// MNetworkEnable
+	float m_flDuckSpeed; // 0x230	
+	// MNetworkEnable
+	bool m_bDuckOverride; // 0x234	
+	// MNetworkEnable
+	bool m_bDesiresDuck; // 0x235	
+private:
+	[[maybe_unused]] uint8_t __pad0236[0x2]; // 0x236
+public:
+	float m_flDuckOffset; // 0x238	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	// MNetworkPriority "32"
+	uint32_t m_nDuckTimeMsecs; // 0x23c	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	uint32_t m_nDuckJumpTimeMsecs; // 0x240	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	uint32_t m_nJumpTimeMsecs; // 0x244	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	float m_flLastDuckTime; // 0x248	
+private:
+	[[maybe_unused]] uint8_t __pad024c[0xc]; // 0x24c
+public:
+	Vector2D m_vecLastPositionAtFullCrouchSpeed; // 0x258	
+	bool m_duckUntilOnGround; // 0x260	
+	bool m_bHasWalkMovedSinceLastJump; // 0x261	
+	bool m_bInStuckTest; // 0x262	
+private:
+	[[maybe_unused]] uint8_t __pad0263[0xd]; // 0x263
+public:
+	float m_flStuckCheckTime[2][64]; // 0x270	
+	int32_t m_nTraceCount; // 0x470	
+	int32_t m_StuckLast; // 0x474	
+	bool m_bSpeedCropped; // 0x478	
+private:
+	[[maybe_unused]] uint8_t __pad0479[0x3]; // 0x479
+public:
+	int32_t m_nOldWaterLevel; // 0x47c	
+	float m_flWaterEntryTime; // 0x480	
+	Vector m_vecForward; // 0x484	
+	Vector m_vecLeft; // 0x490	
+	Vector m_vecUp; // 0x49c	
+	// MNetworkEnable
+	// MNetworkUserGroup "LocalPlayerExclusive"
+	int32_t m_nGameCodeHasMovedPlayerAfterCommand; // 0x4a8	
+	// MNetworkEnable
+	bool m_bOldJumpPressed; // 0x4ac	
+private:
+	[[maybe_unused]] uint8_t __pad04ad[0x3]; // 0x4ad
+public:
+	float m_flJumpPressedTime; // 0x4b0	
+	// MNetworkEnable
+	float m_flJumpUntil; // 0x4b4	
+	// MNetworkEnable
+	float m_flJumpVel; // 0x4b8	
+	// MNetworkEnable
+	GameTime_t m_fStashGrenadeParameterWhen; // 0x4bc	
+	// MNetworkEnable
+	uint64_t m_nButtonDownMaskPrev; // 0x4c0	
+	// MNetworkEnable
+	float m_flOffsetTickCompleteTime; // 0x4c8	
+	// MNetworkEnable
+	float m_flOffsetTickStashedSpeed; // 0x4cc	
+	// MNetworkEnable
+	float m_flStamina; // 0x4d0	
+	float m_flHeightAtJumpStart; // 0x4d4	
+	float m_flMaxJumpHeightThisJump; // 0x4d8	
+};
+
+// Registered binary: client.dll (project 'entity2')
+// Alignment: 8
+// Size: 0x68
+// Has Trivial Destructor
+struct EntComponentInfo_t
+{
+public:
+	char* m_pName; // 0x0	
+	char* m_pCPPClassname; // 0x8	
+	char* m_pNetworkDataReferencedDescription; // 0x10	
+	char* m_pNetworkDataReferencedPtrPropDescription; // 0x18	
+	int32_t m_nRuntimeIndex; // 0x20	
+	uint32_t m_nFlags; // 0x24	
+private:
+	[[maybe_unused]] uint8_t __pad0028[0x38]; // 0x28
+public:
+	CEntityComponentHelper* m_pBaseClassComponentHelper; // 0x60	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x40
+// Has Trivial Destructor
+struct EventServerPostAdvanceTick_t : public EventPostAdvanceTick_t
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x4
+// Has Trivial Destructor
+struct EventClientPollNetworking_t
+{
+public:
+	int32_t m_nTickCount; // 0x0	
+};
+
 // Registered binary: client.dll (project 'client')
 // Alignment: 8
 // Size: 0x20
+// Has VTable
+// Has Trivial Destructor
+class CAnimEventListener : public CAnimEventListenerBase
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x78
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_HookName "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Inflow_GraphHook : public CPulseCell_Inflow_BaseEntrypoint
+{
+public:
+	CUtlSymbolLarge m_HookName; // 0x70	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x38
+// Has Trivial Destructor
+struct EventClientProcessInput_t
+{
+public:
+	EngineLoopState_t m_LoopState; // 0x0	
+	float m_flRealTime; // 0x28	
+	float m_flTickInterval; // 0x2c	
+	double m_flTickStartTime; // 0x30	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x38
+// Has Trivial Destructor
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct PGDInstruction_t
+{
+public:
+	PulseInstructionCode_t m_nCode; // 0x0	
+	PulseRuntimeVarIndex_t m_nVar; // 0x4	
+	PulseRuntimeRegisterIndex_t m_nReg0; // 0x8	
+	PulseRuntimeRegisterIndex_t m_nReg1; // 0xa	
+	PulseRuntimeRegisterIndex_t m_nReg2; // 0xc	
+private:
+	[[maybe_unused]] uint8_t __pad000e[0x2]; // 0xe
+public:
+	PulseRuntimeInvokeIndex_t m_nInvokeBindingIndex; // 0x10	
+	PulseRuntimeChunkIndex_t m_nChunk; // 0x14	
+	int32_t m_nDestInstruction; // 0x18	
+	PulseRuntimeCallInfoIndex_t m_nCallInfoIndex; // 0x1c	
+	PulseRuntimeConstantIndex_t m_nConstIdx; // 0x20	
+	PulseRuntimeDomainValueIndex_t m_nDomainValueIdx; // 0x22	
+	PulseRuntimeBlackboardReferenceIndex_t m_nBlackboardReferenceIdx; // 0x24	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x50
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct GameAmmoTypeInfo_t : public AmmoTypeInfo_t
+{
+public:
+	int32_t m_nBuySize; // 0x38	
+	int32_t m_nCost; // 0x3c	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xdc8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MPropertySuppressBaseClassField
+// MPropertySuppressBaseClassField
+class CCSWeaponBaseVData : public CBasePlayerWeaponVData
+{
+public:
+	CSWeaponType m_WeaponType; // 0x250	
+	CSWeaponCategory m_WeaponCategory; // 0x254	
+	// MPropertyStartGroup "Visuals"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szViewModel; // 0x258	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szPlayerModel; // 0x338	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szWorldDroppedModel; // 0x418	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szAimsightLensMaskModel; // 0x4f8	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeCModel > > m_szMagazineModel; // 0x5d8	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szHeatEffect; // 0x6b8	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szEjectBrassEffect; // 0x798	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashParticleAlt; // 0x878	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticle; // 0x958	
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szMuzzleFlashThirdPersonParticleAlt; // 0xa38	
+	// MPropertyDescription "Effect to actually fire into the world from this weapon"
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szTracerParticle; // 0xb18	
+	// MPropertyStartGroup "HUD Positions"
+	// MPropertyFriendlyName "HUD Bucket"
+	// MPropertyDescription "Which 'column' to display this weapon in the HUD"
+	gear_slot_t m_GearSlot; // 0xbf8	
+	int32_t m_GearSlotPosition; // 0xbfc	
+	// MPropertyFriendlyName "HUD Bucket Position"
+	// MPropertyDescription "Default team (non Terrorist or Counter-Terrorist) 'row' to display this weapon in the HUD."
+	loadout_slot_t m_DefaultLoadoutSlot; // 0xc00	
+private:
+	[[maybe_unused]] uint8_t __pad0c04[0x4]; // 0xc04
+public:
+	CUtlString m_sWrongTeamMsg; // 0xc08	
+	// MPropertyStartGroup "In-Game Data"
+	int32_t m_nPrice; // 0xc10	
+	int32_t m_nKillAward; // 0xc14	
+	int32_t m_nPrimaryReserveAmmoMax; // 0xc18	
+	int32_t m_nSecondaryReserveAmmoMax; // 0xc1c	
+	bool m_bMeleeWeapon; // 0xc20	
+	bool m_bHasBurstMode; // 0xc21	
+	bool m_bIsRevolver; // 0xc22	
+	bool m_bCannotShootUnderwater; // 0xc23	
+private:
+	[[maybe_unused]] uint8_t __pad0c24[0x4]; // 0xc24
+public:
+	// MPropertyFriendlyName "In-Code weapon name"
+	CGlobalSymbol m_szName; // 0xc28	
+	// MPropertyFriendlyName "Player Animation Extension"
+	CUtlString m_szAnimExtension; // 0xc30	
+	CSWeaponSilencerType m_eSilencerType; // 0xc38	
+	int32_t m_nCrosshairMinDistance; // 0xc3c	
+	int32_t m_nCrosshairDeltaDistance; // 0xc40	
+	bool m_bIsFullAuto; // 0xc44	
+private:
+	[[maybe_unused]] uint8_t __pad0c45[0x3]; // 0xc45
+public:
+	int32_t m_nNumBullets; // 0xc48	
+	// MPropertyStartGroup "Firing Mode Data"
+	CFiringModeFloat m_flCycleTime; // 0xc4c	
+	CFiringModeFloat m_flMaxSpeed; // 0xc54	
+	CFiringModeFloat m_flSpread; // 0xc5c	
+	CFiringModeFloat m_flInaccuracyCrouch; // 0xc64	
+	CFiringModeFloat m_flInaccuracyStand; // 0xc6c	
+	CFiringModeFloat m_flInaccuracyJump; // 0xc74	
+	CFiringModeFloat m_flInaccuracyLand; // 0xc7c	
+	CFiringModeFloat m_flInaccuracyLadder; // 0xc84	
+	CFiringModeFloat m_flInaccuracyFire; // 0xc8c	
+	CFiringModeFloat m_flInaccuracyMove; // 0xc94	
+	CFiringModeFloat m_flRecoilAngle; // 0xc9c	
+	CFiringModeFloat m_flRecoilAngleVariance; // 0xca4	
+	CFiringModeFloat m_flRecoilMagnitude; // 0xcac	
+	CFiringModeFloat m_flRecoilMagnitudeVariance; // 0xcb4	
+	CFiringModeInt m_nTracerFrequency; // 0xcbc	
+	float m_flInaccuracyJumpInitial; // 0xcc4	
+	float m_flInaccuracyJumpApex; // 0xcc8	
+	float m_flInaccuracyReload; // 0xccc	
+	// MPropertyStartGroup "Firing"
+	int32_t m_nRecoilSeed; // 0xcd0	
+	int32_t m_nSpreadSeed; // 0xcd4	
+	float m_flTimeToIdleAfterFire; // 0xcd8	
+	float m_flIdleInterval; // 0xcdc	
+	float m_flAttackMovespeedFactor; // 0xce0	
+	float m_flHeatPerShot; // 0xce4	
+	float m_flInaccuracyPitchShift; // 0xce8	
+	float m_flInaccuracyAltSoundThreshold; // 0xcec	
+	float m_flBotAudibleRange; // 0xcf0	
+private:
+	[[maybe_unused]] uint8_t __pad0cf4[0x4]; // 0xcf4
+public:
+	CUtlString m_szUseRadioSubtitle; // 0xcf8	
+	// MPropertyStartGroup "Zooming"
+	bool m_bUnzoomsAfterShot; // 0xd00	
+	bool m_bHideViewModelWhenZoomed; // 0xd01	
+private:
+	[[maybe_unused]] uint8_t __pad0d02[0x2]; // 0xd02
+public:
+	int32_t m_nZoomLevels; // 0xd04	
+	int32_t m_nZoomFOV1; // 0xd08	
+	int32_t m_nZoomFOV2; // 0xd0c	
+	float m_flZoomTime0; // 0xd10	
+	float m_flZoomTime1; // 0xd14	
+	float m_flZoomTime2; // 0xd18	
+	// MPropertyStartGroup "Iron Sights"
+	float m_flIronSightPullUpSpeed; // 0xd1c	
+	float m_flIronSightPutDownSpeed; // 0xd20	
+	float m_flIronSightFOV; // 0xd24	
+	float m_flIronSightPivotForward; // 0xd28	
+	float m_flIronSightLooseness; // 0xd2c	
+	QAngle m_angPivotAngle; // 0xd30	
+	Vector m_vecIronSightEyePos; // 0xd3c	
+	// MPropertyStartGroup "Damage"
+	int32_t m_nDamage; // 0xd48	
+	float m_flHeadshotMultiplier; // 0xd4c	
+	float m_flArmorRatio; // 0xd50	
+	float m_flPenetration; // 0xd54	
+	float m_flRange; // 0xd58	
+	float m_flRangeModifier; // 0xd5c	
+	float m_flFlinchVelocityModifierLarge; // 0xd60	
+	float m_flFlinchVelocityModifierSmall; // 0xd64	
+	// MPropertyStartGroup "Recovery"
+	float m_flRecoveryTimeCrouch; // 0xd68	
+	float m_flRecoveryTimeStand; // 0xd6c	
+	float m_flRecoveryTimeCrouchFinal; // 0xd70	
+	float m_flRecoveryTimeStandFinal; // 0xd74	
+	int32_t m_nRecoveryTransitionStartBullet; // 0xd78	
+	int32_t m_nRecoveryTransitionEndBullet; // 0xd7c	
+	// MPropertyStartGroup "Grenade Data"
+	float m_flThrowVelocity; // 0xd80	
+	Vector m_vSmokeColor; // 0xd84	
+	CGlobalSymbol m_szAnimClass; // 0xd90	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x78
+// Has VTable
+// Is Abstract
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseCell_BaseLerp : public CPulseCell_BaseYieldingInflow
+{
+public:
+	CPulse_ResumePoint m_WakeResume; // 0x48	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0xa0
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+class CPulseCell_LerpCameraSettings : public CPulseCell_BaseLerp
+{
+public:
+	float m_flSeconds; // 0x78	
+	PointCameraSettings_t m_Start; // 0x7c	
+	PointCameraSettings_t m_End; // 0x8c	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xa8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "[Test] Explicit Yes/No Outflow "
+// MPropertyFriendlyName "[Test] Explicit Yes/No Outflow"
+// MPropertyDescription "Test node that picks between two outflows as specified in the test domain."
+class CPulseCell_Outflow_TestExplicitYesNo : public CPulseCell_BaseFlow
+{
+public:
+	// MPropertyFriendlyName "Yes"
+	CPulse_OutflowConnection m_Yes; // 0x48	
+	// MPropertyFriendlyName "No"
+	CPulse_OutflowConnection m_No; // 0x78	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xa8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "[Test] Random Yes/No Outflow "
+// MPropertyFriendlyName "[Test] Random Yes/No Outflow"
+// MPropertyDescription "Test node that randomly picks between two outflows."
+class CPulseCell_Outflow_TestRandomYesNo : public CPulseCell_BaseFlow
+{
+public:
+	// MPropertyFriendlyName "Yes"
+	// MPropertyDescription "Randomly taken half of the time"
+	CPulse_OutflowConnection m_Yes; // 0x48	
+	// MPropertyFriendlyName "No"
+	// MPropertyDescription "Randomly taken half of the time"
+	CPulse_OutflowConnection m_No; // 0x78	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x20
+// Construct allowed
 // 
 // MGetKV3ClassDefaults
 // MPropertyElementNameFn
@@ -14169,6 +20618,10 @@ public:
 // Alignment: 8
 // Size: 0xde0
 // Has VTable
+// Construct allowed
+// MClassHasEntityLimitedDataDesc
+// MNetworkNoBase
+// MNetworkAssumeNotNetworkable
 // 
 // MNetworkIncludeByUserGroup "Origin"
 // MNetworkIncludeByName "CGameSceneNode::m_angRotation"
@@ -14197,13 +20650,13 @@ public:
 	uint32_t m_nOuterMaxDist; // 0xcd8	
 	// MNetworkEnable
 	// MNetworkBitCount "6"
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "64.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "64,000000"
 	// MNetworkEncodeFlags "2"
 	float m_flGlowProxySize; // 0xcdc	
 	// MNetworkEnable
-	// MNetworkMinValue "0.000000"
-	// MNetworkMaxValue "100.000000"
+	// MNetworkMinValue "0,000000"
+	// MNetworkMaxValue "100,000000"
 	// MNetworkChangeCallback "OnHDRColorScaleChanged"
 	float m_flHDRColorScale; // 0xce0	
 private:
@@ -14217,6 +20670,184 @@ public:
 	// -> m_bOneSided - 0xddc
 	// -> m_bModulateByDot - 0xddd
 	C_LightGlowOverlay m_GlowOverlay; // 0xce8	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+// MPulseCellWithCustomDocNode
+class CPulseCell_Step_DebugLog : public CPulseCell_BaseFlow
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x68
+// 
+// MNetworkVarNames "ModelConfigHandle_t m_Handle"
+// MNetworkVarNames "string_t m_Name"
+// MNetworkVarNames "CHandle< C_BaseModelEntity > m_AssociatedEntities"
+// MNetworkVarNames "string_t m_AssociatedEntityNames"
+struct ActiveModelConfig_t
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x28]; // 0x0
+public:
+	// MNetworkEnable
+	ModelConfigHandle_t m_Handle; // 0x28	
+private:
+	[[maybe_unused]] uint8_t __pad002c[0x4]; // 0x2c
+public:
+	// MNetworkEnable
+	CUtlSymbolLarge m_Name; // 0x30	
+	// MNetworkEnable
+	C_NetworkUtlVectorBase< CHandle< C_BaseModelEntity > > m_AssociatedEntities; // 0x38	
+	// MNetworkEnable
+	C_NetworkUtlVectorBase< CUtlSymbolLarge > m_AssociatedEntityNames; // 0x50	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xc8
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo
+// MPulseCellWithCustomDocNode
+class CPulseCell_FireCursors : public CPulseCell_BaseYieldingInflow
+{
+public:
+	CUtlVector< CPulse_OutflowConnection > m_Outflows; // 0x48	
+	bool m_bWaitForChildOutflows; // 0x60	
+private:
+	[[maybe_unused]] uint8_t __pad0061[0x7]; // 0x61
+public:
+	CPulse_ResumePoint m_OnFinished; // 0x68	
+	CPulse_ResumePoint m_OnCanceled; // 0x98	
+	
+	// Static fields:
+	static char* &Get_m_pTagName(){return *reinterpret_cast<char**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CPulseCell_FireCursors")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x128
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPrecipitationVData : public CEntitySubclassVDataBase
+{
+public:
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szParticlePrecipitationEffect; // 0x28	
+	float m_flInnerDistance; // 0x108	
+	ParticleAttachment_t m_nAttachType; // 0x10c	
+	bool m_bBatchSameVolumeType; // 0x110	
+private:
+	[[maybe_unused]] uint8_t __pad0111[0x3]; // 0x111
+public:
+	int32_t m_nRTEnvCP; // 0x114	
+	int32_t m_nRTEnvCPComponent; // 0x118	
+private:
+	[[maybe_unused]] uint8_t __pad011c[0x4]; // 0x11c
+public:
+	CUtlString m_szModifier; // 0x120	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x18
+class CBreakableStageHelper
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	int32_t m_nCurrentStage; // 0x8	
+	int32_t m_nStageCount; // 0xc	
+};
+
+// Registered binary: client.dll (project 'mathlib_extended')
+// Alignment: 8
+// Size: 0x18
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct VariableInfo_t
+{
+public:
+	CUtlString m_name; // 0x0	
+	CUtlStringToken m_nameToken; // 0x8	
+	FuseVariableIndex_t m_nIndex; // 0xc	
+	uint8_t m_nNumComponents; // 0xe	
+	FuseVariableType_t m_eVarType; // 0xf	
+	FuseVariableAccess_t m_eAccess; // 0x10	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x60
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "m_Outputs "
+// MPulseCellWithCustomDocNode
+class CPulseCell_Outflow_CycleOrdered : public CPulseCell_BaseFlow
+{
+public:
+	CUtlVector< CPulse_OutflowConnection > m_Outputs; // 0x48	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x50
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+class CPulseRuntimeMethodArg
+{
+public:
+	CKV3MemberNameWithStorage m_Name; // 0x0	
+	CUtlString m_Description; // 0x38	
+	CPulseValueFullType m_Type; // 0x40	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x2
+// Has Trivial Destructor
+// 
+// MIsBoxedIntegerType
+struct PulseRuntimeStateOffset_t
+{
+public:
+	uint16_t m_Value; // 0x0	
+	
+	// Static fields:
+	static bool &Get_IS_TYPESAFE_INTEGER(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("PulseRuntimeStateOffset_t")->GetStaticFields()[0]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x30
+// Has Trivial Destructor
+struct EventServerPollNetworking_t : public EventSimulate_t
+{
+public:
+	// No schema binary for binding
 };
 
 // Registered binary: client.dll (project 'client')
@@ -14246,5 +20877,99 @@ private:
 public:
 	// MPropertyFriendlyName "Generated Textures"
 	CUtlVector< GeneratedTextureHandle_t > m_vecGeneratedTextures; // 0x70	
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x8
+// Has VTable
+// Is Abstract
+class IRagdoll
+{
+private:
+	[[maybe_unused]] uint8_t __pad0000[0x8]; // 0x0
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x14
+// Has Trivial Destructor
+struct hudtextparms_t
+{
+public:
+	Color color1; // 0x0	
+	Color color2; // 0x4	
+	uint8_t effect; // 0x8	
+	uint8_t channel; // 0x9	
+private:
+	[[maybe_unused]] uint8_t __pad000a[0x2]; // 0xa
+public:
+	float x; // 0xc	
+	float y; // 0x10	
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0x48
+// Has VTable
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+// MCellForDomain "BaseDomain"
+// MPulseCellMethodBindings
+// MPulseCellOutflowHookInfo "Random Integer "
+// MPropertyFriendlyName "Random Integer"
+// MPropertyDescription "Generate a random integer between min and max (inclusive)"
+// MPulseEditorHeaderIcon "tools/images/pulse_editor/exit_cycle_random.png"
+class CPulseCell_Value_RandomInt : public CPulseCell_BaseValue
+{
+public:
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x98
+// Has VTable
+class C_CSGO_PreviewModel_GraphController : public CAnimGraphControllerBase
+{
+public:
+	CAnimGraphParamOptionalRef< char* > m_pszCharacterMode; // 0x18	
+	CAnimGraphParamOptionalRef< char* > m_pszWeaponState; // 0x38	
+	CAnimGraphParamOptionalRef< char* > m_pszWeaponType; // 0x58	
+	CAnimGraphParamOptionalRef< char* > m_pszEndOfMatchCelebration; // 0x78	
+	
+	// Static fields:
+	static uint32_t &Get_s_nControllerTypeID(){return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewModel_GraphController")->GetStaticFields()[0]->m_pInstance);};
+	static bool &Get_s_bSchemaTest(){return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_CSGO_PreviewModel_GraphController")->GetStaticFields()[1]->m_pInstance);};
+};
+
+// Registered binary: client.dll (project 'client')
+// Alignment: 8
+// Size: 0x548
+// Has VTable
+// Construct allowed
+// MNetworkAssumeNotNetworkable
+class C_SoundEventEntityAlias_snd_event_point : public C_SoundEventEntity
+{
+public:
+	// No schema binary for binding
+};
+
+// Registered binary: client.dll (project 'pulse_runtime_lib')
+// Alignment: 8
+// Size: 0xb8
+// Has VTable
+// 
+// MPulseLibraryBindings
+// MPulseInternal_IsCursor
+class CPulseTurtleGraphicsCursor : public CPulseExecCursor
+{
+public:
+	Color m_Color; // 0xa0	
+	Vector2D m_vPos; // 0xa4	
+	float m_flHeadingDeg; // 0xac	
+	bool m_bPenUp; // 0xb0	
 };
 
