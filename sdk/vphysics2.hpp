@@ -4,7 +4,7 @@
 
 // /////////////////////////////////////////////////////////////
 // Binary: vphysics2.dll
-// Classes count: 0 (Allocated) | 88 (Unallocated)
+// Classes count: 0 (Allocated) | 90 (Unallocated)
 // Enums count: 0 (Allocated) | 2 (Unallocated)
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
@@ -150,7 +150,7 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x10
+// Size: 0x18
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
@@ -160,6 +160,12 @@ public:
 	uint32_t m_nCollisionAttributeIndex; // 0x0	
 	uint32_t m_nSurfacePropertyIndex; // 0x4	
 	CUtlString m_UserFriendlyName; // 0x8	
+	bool m_bUserFriendlyNameSealed; // 0x10	
+	bool m_bUserFriendlyNameLong; // 0x11	
+private:
+	[[maybe_unused]] uint8_t __pad0012[0x2]; // 0x12
+public:
+	uint32_t m_nToolMaterialHash; // 0x14	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -185,7 +191,7 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x618
+// Size: 0x638
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
@@ -265,36 +271,38 @@ public:
 	uint8_t m_nExtraPressureIterations; // 0x49d	
 	uint8_t m_nExtraGoalIterations; // 0x49e	
 	uint8_t m_nExtraIterations; // 0x49f	
-	CUtlVector< FeBoxRigid_t > m_BoxRigids; // 0x4a0	
-	CUtlVector< uint8 > m_DynNodeVertexSet; // 0x4b8	
-	CUtlVector< uint32 > m_VertexSetNames; // 0x4d0	
-	CUtlVector< FeRigidColliderIndices_t > m_RigidColliderPriorities; // 0x4e8	
-	CUtlVector< FeMorphLayerDepr_t > m_MorphLayers; // 0x500	
-	CUtlVector< uint8 > m_MorphSetData; // 0x518	
-	CUtlVector< FeVertexMapDesc_t > m_VertexMaps; // 0x530	
-	CUtlVector< uint8 > m_VertexMapValues; // 0x548	
-	CUtlVector< FeEffectDesc_t > m_Effects; // 0x560	
-	CUtlVector< FeCtrlOffset_t > m_LockToParent; // 0x578	
-	CUtlVector< uint16 > m_LockToGoal; // 0x590	
-	CUtlVector< int16 > m_SkelParents; // 0x5a8	
-	CUtlVector< FeNodeWindBase_t > m_DynNodeWindBases; // 0x5c0	
-	float m_flInternalPressure; // 0x5d8	
-	float m_flDefaultTimeDilation; // 0x5dc	
-	float m_flWindage; // 0x5e0	
-	float m_flWindDrag; // 0x5e4	
-	float m_flDefaultSurfaceStretch; // 0x5e8	
-	float m_flDefaultThreadStretch; // 0x5ec	
-	float m_flDefaultGravityScale; // 0x5f0	
-	float m_flDefaultVelAirDrag; // 0x5f4	
-	float m_flDefaultExpAirDrag; // 0x5f8	
-	float m_flDefaultVelQuadAirDrag; // 0x5fc	
-	float m_flDefaultExpQuadAirDrag; // 0x600	
-	float m_flRodVelocitySmoothRate; // 0x604	
-	float m_flQuadVelocitySmoothRate; // 0x608	
-	float m_flAddWorldCollisionRadius; // 0x60c	
-	float m_flDefaultVolumetricSolveAmount; // 0x610	
-	uint16_t m_nRodVelocitySmoothIterations; // 0x614	
-	uint16_t m_nQuadVelocitySmoothIterations; // 0x616	
+	CUtlVector< FeSDFRigid_t > m_SDFRigids; // 0x4a0	
+	CUtlVector< FeBoxRigid_t > m_BoxRigids; // 0x4b8	
+	CUtlVector< uint8 > m_DynNodeVertexSet; // 0x4d0	
+	CUtlVector< uint32 > m_VertexSetNames; // 0x4e8	
+	CUtlVector< FeRigidColliderIndices_t > m_RigidColliderPriorities; // 0x500	
+	CUtlVector< FeMorphLayerDepr_t > m_MorphLayers; // 0x518	
+	CUtlVector< uint8 > m_MorphSetData; // 0x530	
+	CUtlVector< FeVertexMapDesc_t > m_VertexMaps; // 0x548	
+	CUtlVector< uint8 > m_VertexMapValues; // 0x560	
+	CUtlVector< FeEffectDesc_t > m_Effects; // 0x578	
+	CUtlVector< FeCtrlOffset_t > m_LockToParent; // 0x590	
+	CUtlVector< uint16 > m_LockToGoal; // 0x5a8	
+	CUtlVector< int16 > m_SkelParents; // 0x5c0	
+	CUtlVector< FeNodeWindBase_t > m_DynNodeWindBases; // 0x5d8	
+	float m_flInternalPressure; // 0x5f0	
+	float m_flDefaultTimeDilation; // 0x5f4	
+	float m_flWindage; // 0x5f8	
+	float m_flWindDrag; // 0x5fc	
+	float m_flDefaultSurfaceStretch; // 0x600	
+	float m_flDefaultThreadStretch; // 0x604	
+	float m_flDefaultGravityScale; // 0x608	
+	float m_flDefaultVelAirDrag; // 0x60c	
+	float m_flDefaultExpAirDrag; // 0x610	
+	float m_flDefaultVelQuadAirDrag; // 0x614	
+	float m_flDefaultExpQuadAirDrag; // 0x618	
+	float m_flRodVelocitySmoothRate; // 0x61c	
+	float m_flQuadVelocitySmoothRate; // 0x620	
+	float m_flAddWorldCollisionRadius; // 0x624	
+	float m_flDefaultVolumetricSolveAmount; // 0x628	
+	float m_flMotionSmoothCDT; // 0x62c	
+	uint16_t m_nRodVelocitySmoothIterations; // 0x630	
+	uint16_t m_nQuadVelocitySmoothIterations; // 0x632	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -564,16 +572,16 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x30
+// Size: 0x38
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnCapsuleDesc_t : public RnShapeDesc_t
 {
 public:
-	// -> m_vCenter[2] - 0x10
-	// -> m_flRadius - 0x28
-	RnCapsule_t m_Capsule; // 0x10	
+	// -> m_vCenter[2] - 0x18
+	// -> m_flRadius - 0x30
+	RnCapsule_t m_Capsule; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -644,24 +652,24 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0xb8
+// Size: 0xc0
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnMeshDesc_t : public RnShapeDesc_t
 {
 public:
-	// -> m_vMin - 0x10
-	// -> m_vMax - 0x1c
-	// -> m_Nodes - 0x28
-	// -> m_Vertices - 0x40
-	// -> m_Triangles - 0x58
-	// -> m_Wings - 0x70
-	// -> m_Materials - 0x88
-	// -> m_vOrthographicAreas - 0xa0
-	// -> m_nFlags - 0xac
-	// -> m_nDebugFlags - 0xb0
-	RnMesh_t m_Mesh; // 0x10	
+	// -> m_vMin - 0x18
+	// -> m_vMax - 0x24
+	// -> m_Nodes - 0x30
+	// -> m_Vertices - 0x48
+	// -> m_Triangles - 0x60
+	// -> m_Wings - 0x78
+	// -> m_Materials - 0x90
+	// -> m_vOrthographicAreas - 0xa8
+	// -> m_nFlags - 0xb4
+	// -> m_nDebugFlags - 0xb8
+	RnMesh_t m_Mesh; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -674,6 +682,27 @@ struct VertexPositionNormal_t
 public:
 	Vector m_vPosition; // 0x0	
 	Vector m_vNormal; // 0xc	
+};
+
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
+// Size: 0x48
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct FeSDFRigid_t
+{
+public:
+	Vector vLocalMin; // 0x0	
+	Vector vLocalMax; // 0xc	
+	uint16_t nNode; // 0x18	
+	uint16_t nCollisionMask; // 0x1a	
+	uint16_t nVertexMapIndex; // 0x1c	
+	uint16_t nFlags; // 0x1e	
+	CUtlVector< float32 > m_Distances; // 0x20	
+	int32_t m_nWidth; // 0x38	
+	int32_t m_nHeight; // 0x3c	
+	int32_t m_nDepth; // 0x40	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -833,6 +862,19 @@ struct RnPlane_t
 public:
 	Vector m_vNormal; // 0x0	
 	float m_flOffset; // 0xc	
+};
+
+// Registered binary: vphysics2.dll (project 'physicslib')
+// Alignment: 8
+// Size: 0x50
+// Construct allowed
+// 
+// MGetKV3ClassDefaults
+struct FeBuildSDFRigid_t : public FeSDFRigid_t
+{
+public:
+	int32_t m_nPriority; // 0x48	
+	uint32_t m_nVertexMapHash; // 0x4c	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -1092,7 +1134,7 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 2
-// Size: 0x8
+// Size: 0xa
 // Has Trivial Destructor
 // Construct allowed
 // 
@@ -1103,7 +1145,8 @@ public:
 	uint16_t m_nTaperedCapsuleRigidIndex; // 0x0	
 	uint16_t m_nSphereRigidIndex; // 0x2	
 	uint16_t m_nBoxRigidIndex; // 0x4	
-	uint16_t m_nCollisionPlaneIndex; // 0x6	
+	uint16_t m_nSDFRigidIndex; // 0x6	
+	uint16_t m_nCollisionPlaneIndex; // 0x8	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -1271,14 +1314,14 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x108
+// Size: 0x110
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnHullDesc_t : public RnShapeDesc_t
 {
 public:
-	RnHull_t m_Hull; // 0x10	
+	RnHull_t m_Hull; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')
@@ -1500,14 +1543,14 @@ public:
 
 // Registered binary: vphysics2.dll (project 'physicslib')
 // Alignment: 8
-// Size: 0x20
+// Size: 0x28
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
 struct RnSphereDesc_t : public RnShapeDesc_t
 {
 public:
-	SphereBase_t< float32 > m_Sphere; // 0x10	
+	SphereBase_t< float32 > m_Sphere; // 0x18	
 };
 
 // Registered binary: vphysics2.dll (project 'physicslib')

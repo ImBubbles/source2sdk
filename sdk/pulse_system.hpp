@@ -33,6 +33,7 @@ public:
 // Construct allowed
 // 
 // MGetKV3ClassDefaults
+// MPulseEditorIsControlFlowNode
 class CPulseCell_WaitForCursorsWithTagBase : public CPulseCell_BaseYieldingInflow
 {
 public:
