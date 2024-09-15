@@ -25,6 +25,7 @@ namespace source2sdk::client
     // static metadata: MNetworkVarNames "bool m_bFlashing"
     // static metadata: MNetworkVarNames "float m_flGlowTime"
     // static metadata: MNetworkVarNames "float m_flGlowStartTime"
+    // static metadata: MNetworkVarNames "bool m_bEligibleForScreenHighlight"
     #pragma pack(push, 1)
     class CGlowProperty
     {
@@ -51,8 +52,10 @@ namespace source2sdk::client
         float m_flGlowTime; // 0x48        
         // metadata: MNetworkEnable
         float m_flGlowStartTime; // 0x4c        
-        bool m_bGlowing; // 0x50        
-        [[maybe_unused]] std::uint8_t pad_0x51[0x7];
+        // metadata: MNetworkEnable
+        bool m_bEligibleForScreenHighlight; // 0x50        
+        bool m_bGlowing; // 0x51        
+        [[maybe_unused]] std::uint8_t pad_0x52[0x6];
     };
     #pragma pack(pop)
     
@@ -65,7 +68,8 @@ namespace source2sdk::client
     static_assert(offsetof(CGlowProperty, m_bFlashing) == 0x44);
     static_assert(offsetof(CGlowProperty, m_flGlowTime) == 0x48);
     static_assert(offsetof(CGlowProperty, m_flGlowStartTime) == 0x4c);
-    static_assert(offsetof(CGlowProperty, m_bGlowing) == 0x50);
+    static_assert(offsetof(CGlowProperty, m_bEligibleForScreenHighlight) == 0x50);
+    static_assert(offsetof(CGlowProperty, m_bGlowing) == 0x51);
     
     static_assert(sizeof(CGlowProperty) == 0x58);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x330
+    // Size: 0x318
     // Has VTable
     // Construct allowed
     // 
@@ -25,13 +25,10 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "cull distance"
-        particleslib::CPerParticleFloatInput m_flDistance; // 0x1c8        
-        // metadata: MPropertyFriendlyName "include particle radius"
-        bool m_bIncludeRadii; // 0x328        
-        [[maybe_unused]] std::uint8_t pad_0x329[0x7];
+        particleslib::CPerParticleFloatInput m_flDistance; // 0x1c0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_DistanceToNeighborCull because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_DistanceToNeighborCull) == 0x330);
+    static_assert(sizeof(C_INIT_DistanceToNeighborCull) == 0x318);
 };

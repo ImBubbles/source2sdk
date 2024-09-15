@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x350
+    // Size: 0x340
     // Has VTable
     // Construct allowed
     // 
@@ -26,22 +26,22 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "warp min"
         // metadata: MVectorIsCoordinate
-        Vector m_vecWarpMin; // 0x1c8        
+        Vector m_vecWarpMin; // 0x1c0        
         // metadata: MPropertyFriendlyName "warp max"
         // metadata: MVectorIsCoordinate
-        Vector m_vecWarpMax; // 0x1d4        
+        Vector m_vecWarpMax; // 0x1cc        
         // metadata: MPropertyFriendlyName "warp amount"
-        particleslib::CPerParticleFloatInput m_InputValue; // 0x1e0        
+        particleslib::CPerParticleFloatInput m_InputValue; // 0x1d8        
         // metadata: MPropertyFriendlyName "previous position scale"
-        float m_flPrevPosScale; // 0x340        
+        float m_flPrevPosScale; // 0x330        
         // metadata: MPropertyFriendlyName "warp scale control point number"
-        int32_t m_nScaleControlPointNumber; // 0x344        
+        int32_t m_nScaleControlPointNumber; // 0x334        
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x348        
-        [[maybe_unused]] std::uint8_t pad_0x34c[0x4];
+        int32_t m_nControlPointNumber; // 0x338        
+        [[maybe_unused]] std::uint8_t pad_0x33c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_PositionWarpScalar because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_PositionWarpScalar) == 0x350);
+    static_assert(sizeof(C_INIT_PositionWarpScalar) == 0x340);
 };

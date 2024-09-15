@@ -14,7 +14,7 @@ namespace source2sdk::animlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x20
+    // Size: 0x18
     // Has VTable
     // Construct allowed
     // 
@@ -23,10 +23,10 @@ namespace source2sdk::animlib
     class CNmIDEvent : public animlib::CNmEvent
     {
     public:
-        CGlobalSymbol m_ID; // 0x18        
+        CGlobalSymbol m_ID; // 0x10        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CNmIDEvent because it is not a standard-layout class
-    static_assert(sizeof(CNmIDEvent) == 0x20);
+    static_assert(sizeof(CNmIDEvent) == 0x18);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xeb8
+    // Size: 0xe70
     // Has VTable
     // Construct allowed
     // 
@@ -27,15 +27,15 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4]; // 0x1bc
         // metadata: MPropertyFriendlyName "first vector"
-        particleslib::CPerParticleVecInput m_vecPoint1; // 0x1c8        
+        particleslib::CPerParticleVecInput m_vecPoint1; // 0x1c0        
         // metadata: MPropertyFriendlyName "second vector"
-        particleslib::CPerParticleVecInput m_vecPoint2; // 0x840        
+        particleslib::CPerParticleVecInput m_vecPoint2; // 0x818        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_DirectionBetweenVecsToVec because it is not a standard-layout class
-    static_assert(sizeof(C_OP_DirectionBetweenVecsToVec) == 0xeb8);
+    static_assert(sizeof(C_OP_DirectionBetweenVecsToVec) == 0xe70);
 };

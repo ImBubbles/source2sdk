@@ -8,7 +8,7 @@
 
 namespace source2sdk::particleslib
 {
-    // Enumerator count: 9
+    // Enumerator count: 8
     // Alignment: 4
     // Size: 0x4
     enum class ParticleFloatMapType_t : std::uint32_t
@@ -20,7 +20,6 @@ namespace source2sdk::particleslib
         PF_MAP_TYPE_REMAP_BIASED = 0x3,
         PF_MAP_TYPE_CURVE = 0x4,
         PF_MAP_TYPE_NOTCHED = 0x5,
-        PF_MAP_TYPE_ROUND = 0x6,
-        PF_MAP_TYPE_COUNT = 0x7,
+        PF_MAP_TYPE_COUNT = 0x6,
     };
 };

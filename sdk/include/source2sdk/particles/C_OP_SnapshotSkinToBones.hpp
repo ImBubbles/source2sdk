@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d8
+    // Size: 0x1d0
     // Has VTable
     // Construct allowed
     // 
@@ -24,23 +24,23 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "rotate normals"
-        bool m_bTransformNormals; // 0x1c0        
+        bool m_bTransformNormals; // 0x1b8        
         // metadata: MPropertyFriendlyName "scale radii"
-        bool m_bTransformRadii; // 0x1c1        
-        [[maybe_unused]] std::uint8_t pad_0x1c2[0x2]; // 0x1c2
+        bool m_bTransformRadii; // 0x1b9        
+        [[maybe_unused]] std::uint8_t pad_0x1ba[0x2]; // 0x1ba
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x1c4        
+        int32_t m_nControlPointNumber; // 0x1bc        
         // metadata: MPropertyFriendlyName "lifetime fade start"
-        float m_flLifeTimeFadeStart; // 0x1c8        
+        float m_flLifeTimeFadeStart; // 0x1c0        
         // metadata: MPropertyFriendlyName "lifetime fade end"
-        float m_flLifeTimeFadeEnd; // 0x1cc        
+        float m_flLifeTimeFadeEnd; // 0x1c4        
         // metadata: MPropertyFriendlyName "instant jump threshold"
-        float m_flJumpThreshold; // 0x1d0        
+        float m_flJumpThreshold; // 0x1c8        
         // metadata: MPropertyFriendlyName "previous position scale"
-        float m_flPrevPosScale; // 0x1d4        
+        float m_flPrevPosScale; // 0x1cc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SnapshotSkinToBones because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SnapshotSkinToBones) == 0x1d8);
+    static_assert(sizeof(C_OP_SnapshotSkinToBones) == 0x1d0);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x338
+    // Size: 0x328
     // Has VTable
     // Construct allowed
     // 
@@ -25,23 +25,23 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "group ID to affect"
-        int32_t m_nChildGroupID; // 0x1c8        
+        int32_t m_nChildGroupID; // 0x1c0        
         // metadata: MPropertyFriendlyName "first child to enable"
-        int32_t m_nFirstChild; // 0x1cc        
+        int32_t m_nFirstChild; // 0x1c4        
         // metadata: MPropertyFriendlyName "max # of children to enable (-1 for max particle count)"
-        particleslib::CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x1d0        
+        particleslib::CParticleCollectionFloatInput m_nNumChildrenToEnable; // 0x1c8        
         // metadata: MPropertyFriendlyName "remove children when particle count lowers"
-        bool m_bDisableChildren; // 0x330        
+        bool m_bDisableChildren; // 0x320        
         // metadata: MPropertyFriendlyName "play endcap when children are removed"
         // metadata: MPropertySuppressExpr "!m_bDisableChildren"
-        bool m_bPlayEndcapOnStop; // 0x331        
+        bool m_bPlayEndcapOnStop; // 0x321        
         // metadata: MPropertyFriendlyName "destroy particles immediately when child is removed"
         // metadata: MPropertySuppressExpr "!m_bDisableChildren"
-        bool m_bDestroyImmediately; // 0x332        
-        [[maybe_unused]] std::uint8_t pad_0x333[0x5];
+        bool m_bDestroyImmediately; // 0x322        
+        [[maybe_unused]] std::uint8_t pad_0x323[0x5];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_EnableChildrenFromParentParticleCount because it is not a standard-layout class
-    static_assert(sizeof(C_OP_EnableChildrenFromParentParticleCount) == 0x338);
+    static_assert(sizeof(C_OP_EnableChildrenFromParentParticleCount) == 0x328);
 };

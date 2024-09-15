@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9a0
+    // Size: 0x928
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,11 +22,11 @@ namespace source2sdk::server
     class CScriptTriggerPush : public server::CTriggerPush
     {
     public:
-        Vector m_vExtent; // 0x990        
-        [[maybe_unused]] std::uint8_t pad_0x99c[0x4];
+        Vector m_vExtent; // 0x918        
+        [[maybe_unused]] std::uint8_t pad_0x924[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CScriptTriggerPush because it is not a standard-layout class
-    static_assert(sizeof(CScriptTriggerPush) == 0x9a0);
+    static_assert(sizeof(CScriptTriggerPush) == 0x928);
 };

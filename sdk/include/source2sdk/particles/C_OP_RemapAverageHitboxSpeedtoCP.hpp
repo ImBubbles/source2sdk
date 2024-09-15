@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xe58
+    // Size: 0xe10
     // Has VTable
     // Construct allowed
     // 
@@ -27,34 +27,34 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "input control point"
-        int32_t m_nInControlPointNumber; // 0x1c8        
+        int32_t m_nInControlPointNumber; // 0x1c0        
         // metadata: MPropertyFriendlyName "output control point"
-        int32_t m_nOutControlPointNumber; // 0x1cc        
+        int32_t m_nOutControlPointNumber; // 0x1c4        
         // metadata: MPropertyFriendlyName "Output component"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nField; // 0x1d0        
+        int32_t m_nField; // 0x1c8        
         // metadata: MPropertyFriendlyName "hitbox data"
-        particles::ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x1d4        
+        particles::ParticleHitboxDataSelection_t m_nHitboxDataType; // 0x1cc        
         // metadata: MPropertyFriendlyName "input minimum"
-        particleslib::CParticleCollectionFloatInput m_flInputMin; // 0x1d8        
+        particleslib::CParticleCollectionFloatInput m_flInputMin; // 0x1d0        
         // metadata: MPropertyFriendlyName "input maximum"
-        particleslib::CParticleCollectionFloatInput m_flInputMax; // 0x338        
+        particleslib::CParticleCollectionFloatInput m_flInputMax; // 0x328        
         // metadata: MPropertyFriendlyName "output minimum"
-        particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x498        
+        particleslib::CParticleCollectionFloatInput m_flOutputMin; // 0x480        
         // metadata: MPropertyFriendlyName "output maximum"
-        particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x5f8        
+        particleslib::CParticleCollectionFloatInput m_flOutputMax; // 0x5d8        
         // metadata: MPropertyFriendlyName "intersection height CP"
         // metadata: MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
-        int32_t m_nHeightControlPointNumber; // 0x758        
-        [[maybe_unused]] std::uint8_t pad_0x75c[0x4]; // 0x75c
+        int32_t m_nHeightControlPointNumber; // 0x730        
+        [[maybe_unused]] std::uint8_t pad_0x734[0x4]; // 0x734
         // metadata: MPropertyFriendlyName "comparison velocity"
         // metadata: MPropertySuppressExpr "m_nHitboxDataType != PARTICLE_HITBOX_AVERAGE_SPEED"
-        particleslib::CParticleCollectionVecInput m_vecComparisonVelocity; // 0x760        
+        particleslib::CParticleCollectionVecInput m_vecComparisonVelocity; // 0x738        
         // metadata: MPropertyFriendlyName "hitbox set"
-        char m_HitboxSetName[128]; // 0xdd8        
+        char m_HitboxSetName[128]; // 0xd90        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapAverageHitboxSpeedtoCP because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapAverageHitboxSpeedtoCP) == 0xe58);
+    static_assert(sizeof(C_OP_RemapAverageHitboxSpeedtoCP) == 0xe10);
 };

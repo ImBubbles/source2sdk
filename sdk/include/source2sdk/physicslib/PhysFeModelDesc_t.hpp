@@ -20,7 +20,6 @@
 #include "source2sdk/physicslib/FeQuad_t.hpp"
 #include "source2sdk/physicslib/FeRigidColliderIndices_t.hpp"
 #include "source2sdk/physicslib/FeRodConstraint_t.hpp"
-#include "source2sdk/physicslib/FeSDFRigid_t.hpp"
 #include "source2sdk/physicslib/FeSimdAnimStrayRadius_t.hpp"
 #include "source2sdk/physicslib/FeSimdNodeBase_t.hpp"
 #include "source2sdk/physicslib/FeSimdQuad_t.hpp"
@@ -51,7 +50,7 @@ namespace source2sdk::physicslib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x638
+    // Size: 0x620
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -224,67 +223,64 @@ namespace source2sdk::physicslib
         uint8_t m_nExtraPressureIterations; // 0x49d        
         uint8_t m_nExtraGoalIterations; // 0x49e        
         uint8_t m_nExtraIterations; // 0x49f        
-        // m_SDFRigids has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<physicslib::FeSDFRigid_t> m_SDFRigids;
-        char m_SDFRigids[0x18]; // 0x4a0        
         // m_BoxRigids has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<physicslib::FeBoxRigid_t> m_BoxRigids;
-        char m_BoxRigids[0x18]; // 0x4b8        
+        char m_BoxRigids[0x18]; // 0x4a0        
         // m_DynNodeVertexSet has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<uint8_t> m_DynNodeVertexSet;
-        char m_DynNodeVertexSet[0x18]; // 0x4d0        
+        char m_DynNodeVertexSet[0x18]; // 0x4b8        
         // m_VertexSetNames has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<uint32_t> m_VertexSetNames;
-        char m_VertexSetNames[0x18]; // 0x4e8        
+        char m_VertexSetNames[0x18]; // 0x4d0        
         // m_RigidColliderPriorities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<physicslib::FeRigidColliderIndices_t> m_RigidColliderPriorities;
-        char m_RigidColliderPriorities[0x18]; // 0x500        
+        char m_RigidColliderPriorities[0x18]; // 0x4e8        
         // m_MorphLayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<physicslib::FeMorphLayerDepr_t> m_MorphLayers;
-        char m_MorphLayers[0x18]; // 0x518        
+        char m_MorphLayers[0x18]; // 0x500        
         // m_MorphSetData has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<uint8_t> m_MorphSetData;
-        char m_MorphSetData[0x18]; // 0x530        
+        char m_MorphSetData[0x18]; // 0x518        
         // m_VertexMaps has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<physicslib::FeVertexMapDesc_t> m_VertexMaps;
-        char m_VertexMaps[0x18]; // 0x548        
+        char m_VertexMaps[0x18]; // 0x530        
         // m_VertexMapValues has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<uint8_t> m_VertexMapValues;
-        char m_VertexMapValues[0x18]; // 0x560        
+        char m_VertexMapValues[0x18]; // 0x548        
         // m_Effects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<physicslib::FeEffectDesc_t> m_Effects;
-        char m_Effects[0x18]; // 0x578        
+        char m_Effects[0x18]; // 0x560        
         // m_LockToParent has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<physicslib::FeCtrlOffset_t> m_LockToParent;
-        char m_LockToParent[0x18]; // 0x590        
+        char m_LockToParent[0x18]; // 0x578        
         // m_LockToGoal has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<uint16_t> m_LockToGoal;
-        char m_LockToGoal[0x18]; // 0x5a8        
+        char m_LockToGoal[0x18]; // 0x590        
         // m_SkelParents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<int16_t> m_SkelParents;
-        char m_SkelParents[0x18]; // 0x5c0        
+        char m_SkelParents[0x18]; // 0x5a8        
         // m_DynNodeWindBases has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<physicslib::FeNodeWindBase_t> m_DynNodeWindBases;
-        char m_DynNodeWindBases[0x18]; // 0x5d8        
-        float m_flInternalPressure; // 0x5f0        
-        float m_flDefaultTimeDilation; // 0x5f4        
-        float m_flWindage; // 0x5f8        
-        float m_flWindDrag; // 0x5fc        
-        float m_flDefaultSurfaceStretch; // 0x600        
-        float m_flDefaultThreadStretch; // 0x604        
-        float m_flDefaultGravityScale; // 0x608        
-        float m_flDefaultVelAirDrag; // 0x60c        
-        float m_flDefaultExpAirDrag; // 0x610        
-        float m_flDefaultVelQuadAirDrag; // 0x614        
-        float m_flDefaultExpQuadAirDrag; // 0x618        
-        float m_flRodVelocitySmoothRate; // 0x61c        
-        float m_flQuadVelocitySmoothRate; // 0x620        
-        float m_flAddWorldCollisionRadius; // 0x624        
-        float m_flDefaultVolumetricSolveAmount; // 0x628        
-        float m_flMotionSmoothCDT; // 0x62c        
-        uint16_t m_nRodVelocitySmoothIterations; // 0x630        
-        uint16_t m_nQuadVelocitySmoothIterations; // 0x632        
-        [[maybe_unused]] std::uint8_t pad_0x634[0x4];
+        char m_DynNodeWindBases[0x18]; // 0x5c0        
+        float m_flInternalPressure; // 0x5d8        
+        float m_flDefaultTimeDilation; // 0x5dc        
+        float m_flWindage; // 0x5e0        
+        float m_flWindDrag; // 0x5e4        
+        float m_flDefaultSurfaceStretch; // 0x5e8        
+        float m_flDefaultThreadStretch; // 0x5ec        
+        float m_flDefaultGravityScale; // 0x5f0        
+        float m_flDefaultVelAirDrag; // 0x5f4        
+        float m_flDefaultExpAirDrag; // 0x5f8        
+        float m_flDefaultVelQuadAirDrag; // 0x5fc        
+        float m_flDefaultExpQuadAirDrag; // 0x600        
+        float m_flRodVelocitySmoothRate; // 0x604        
+        float m_flQuadVelocitySmoothRate; // 0x608        
+        float m_flAddWorldCollisionRadius; // 0x60c        
+        float m_flDefaultVolumetricSolveAmount; // 0x610        
+        float m_flMotionSmoothCDT; // 0x614        
+        uint16_t m_nRodVelocitySmoothIterations; // 0x618        
+        uint16_t m_nQuadVelocitySmoothIterations; // 0x61a        
+        [[maybe_unused]] std::uint8_t pad_0x61c[0x4];
     };
     #pragma pack(pop)
     
@@ -358,38 +354,37 @@ namespace source2sdk::physicslib
     static_assert(offsetof(PhysFeModelDesc_t, m_nExtraPressureIterations) == 0x49d);
     static_assert(offsetof(PhysFeModelDesc_t, m_nExtraGoalIterations) == 0x49e);
     static_assert(offsetof(PhysFeModelDesc_t, m_nExtraIterations) == 0x49f);
-    static_assert(offsetof(PhysFeModelDesc_t, m_SDFRigids) == 0x4a0);
-    static_assert(offsetof(PhysFeModelDesc_t, m_BoxRigids) == 0x4b8);
-    static_assert(offsetof(PhysFeModelDesc_t, m_DynNodeVertexSet) == 0x4d0);
-    static_assert(offsetof(PhysFeModelDesc_t, m_VertexSetNames) == 0x4e8);
-    static_assert(offsetof(PhysFeModelDesc_t, m_RigidColliderPriorities) == 0x500);
-    static_assert(offsetof(PhysFeModelDesc_t, m_MorphLayers) == 0x518);
-    static_assert(offsetof(PhysFeModelDesc_t, m_MorphSetData) == 0x530);
-    static_assert(offsetof(PhysFeModelDesc_t, m_VertexMaps) == 0x548);
-    static_assert(offsetof(PhysFeModelDesc_t, m_VertexMapValues) == 0x560);
-    static_assert(offsetof(PhysFeModelDesc_t, m_Effects) == 0x578);
-    static_assert(offsetof(PhysFeModelDesc_t, m_LockToParent) == 0x590);
-    static_assert(offsetof(PhysFeModelDesc_t, m_LockToGoal) == 0x5a8);
-    static_assert(offsetof(PhysFeModelDesc_t, m_SkelParents) == 0x5c0);
-    static_assert(offsetof(PhysFeModelDesc_t, m_DynNodeWindBases) == 0x5d8);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flInternalPressure) == 0x5f0);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultTimeDilation) == 0x5f4);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flWindage) == 0x5f8);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flWindDrag) == 0x5fc);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultSurfaceStretch) == 0x600);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultThreadStretch) == 0x604);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultGravityScale) == 0x608);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultVelAirDrag) == 0x60c);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultExpAirDrag) == 0x610);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultVelQuadAirDrag) == 0x614);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultExpQuadAirDrag) == 0x618);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flRodVelocitySmoothRate) == 0x61c);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flQuadVelocitySmoothRate) == 0x620);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flAddWorldCollisionRadius) == 0x624);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultVolumetricSolveAmount) == 0x628);
-    static_assert(offsetof(PhysFeModelDesc_t, m_flMotionSmoothCDT) == 0x62c);
-    static_assert(offsetof(PhysFeModelDesc_t, m_nRodVelocitySmoothIterations) == 0x630);
-    static_assert(offsetof(PhysFeModelDesc_t, m_nQuadVelocitySmoothIterations) == 0x632);
+    static_assert(offsetof(PhysFeModelDesc_t, m_BoxRigids) == 0x4a0);
+    static_assert(offsetof(PhysFeModelDesc_t, m_DynNodeVertexSet) == 0x4b8);
+    static_assert(offsetof(PhysFeModelDesc_t, m_VertexSetNames) == 0x4d0);
+    static_assert(offsetof(PhysFeModelDesc_t, m_RigidColliderPriorities) == 0x4e8);
+    static_assert(offsetof(PhysFeModelDesc_t, m_MorphLayers) == 0x500);
+    static_assert(offsetof(PhysFeModelDesc_t, m_MorphSetData) == 0x518);
+    static_assert(offsetof(PhysFeModelDesc_t, m_VertexMaps) == 0x530);
+    static_assert(offsetof(PhysFeModelDesc_t, m_VertexMapValues) == 0x548);
+    static_assert(offsetof(PhysFeModelDesc_t, m_Effects) == 0x560);
+    static_assert(offsetof(PhysFeModelDesc_t, m_LockToParent) == 0x578);
+    static_assert(offsetof(PhysFeModelDesc_t, m_LockToGoal) == 0x590);
+    static_assert(offsetof(PhysFeModelDesc_t, m_SkelParents) == 0x5a8);
+    static_assert(offsetof(PhysFeModelDesc_t, m_DynNodeWindBases) == 0x5c0);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flInternalPressure) == 0x5d8);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultTimeDilation) == 0x5dc);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flWindage) == 0x5e0);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flWindDrag) == 0x5e4);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultSurfaceStretch) == 0x5e8);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultThreadStretch) == 0x5ec);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultGravityScale) == 0x5f0);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultVelAirDrag) == 0x5f4);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultExpAirDrag) == 0x5f8);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultVelQuadAirDrag) == 0x5fc);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultExpQuadAirDrag) == 0x600);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flRodVelocitySmoothRate) == 0x604);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flQuadVelocitySmoothRate) == 0x608);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flAddWorldCollisionRadius) == 0x60c);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flDefaultVolumetricSolveAmount) == 0x610);
+    static_assert(offsetof(PhysFeModelDesc_t, m_flMotionSmoothCDT) == 0x614);
+    static_assert(offsetof(PhysFeModelDesc_t, m_nRodVelocitySmoothIterations) == 0x618);
+    static_assert(offsetof(PhysFeModelDesc_t, m_nQuadVelocitySmoothIterations) == 0x61a);
     
-    static_assert(sizeof(PhysFeModelDesc_t) == 0x638);
+    static_assert(sizeof(PhysFeModelDesc_t) == 0x620);
 };

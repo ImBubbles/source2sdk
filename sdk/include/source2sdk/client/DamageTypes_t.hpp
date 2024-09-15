@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 22
+    // Enumerator count: 24
     // Alignment: 4
     // Size: 0x4
     enum class DamageTypes_t : std::uint32_t
@@ -37,5 +37,7 @@ namespace source2sdk::client
         // MPropertySuppressEnumerator
         // MEnumeratorIsNotAFlag
         DMG_LASTGENERICFLAG = 0x1000000,
+        DMG_HEADSHOT = 0x2000000,
+        DMG_DANGERZONE = 0x4000000,
     };
 };

@@ -1,6 +1,6 @@
 #pragma once
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/ragdoll_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CBaseAnimGraph.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -26,7 +26,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb38
+    // Size: 0xa88
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -39,71 +39,71 @@ namespace source2sdk::server
     class CRagdollProp : public server::CBaseAnimGraph
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x998[0x8]; // 0x998
-        client::ragdoll_t m_ragdoll; // 0x9a0        
-        bool m_bStartDisabled; // 0x9d8        
-        [[maybe_unused]] std::uint8_t pad_0x9d9[0x7]; // 0x9d9
+        [[maybe_unused]] std::uint8_t pad_0x8e8[0x8]; // 0x8e8
+        client::ragdoll_t m_ragdoll; // 0x8f0        
+        bool m_bStartDisabled; // 0x928        
+        [[maybe_unused]] std::uint8_t pad_0x929[0x7]; // 0x929
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "coord"
         // m_ragPos has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<Vector> m_ragPos;
-        char m_ragPos[0x18]; // 0x9e0        
+        char m_ragPos[0x18]; // 0x930        
         // metadata: MNetworkEnable
         // metadata: MNetworkEncoder "qangle"
         // metadata: MNetworkBitCount "13"
         // m_ragAngles has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<QAngle> m_ragAngles;
-        char m_ragAngles[0x18]; // 0x9f8        
+        char m_ragAngles[0x18]; // 0x948        
         // metadata: MNetworkEnable
         // m_hRagdollSource has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hRagdollSource;
-        char m_hRagdollSource[0x4]; // 0xa10        
-        uint32_t m_lastUpdateTickCount; // 0xa14        
-        bool m_allAsleep; // 0xa18        
-        bool m_bFirstCollisionAfterLaunch; // 0xa19        
-        [[maybe_unused]] std::uint8_t pad_0xa1a[0x2]; // 0xa1a
+        char m_hRagdollSource[0x4]; // 0x960        
+        uint32_t m_lastUpdateTickCount; // 0x964        
+        bool m_allAsleep; // 0x968        
+        bool m_bFirstCollisionAfterLaunch; // 0x969        
+        [[maybe_unused]] std::uint8_t pad_0x96a[0x2]; // 0x96a
         // m_hDamageEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hDamageEntity;
-        char m_hDamageEntity[0x4]; // 0xa1c        
+        char m_hDamageEntity[0x4]; // 0x96c        
         // m_hKiller has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hKiller;
-        char m_hKiller[0x4]; // 0xa20        
+        char m_hKiller[0x4]; // 0x970        
         // m_hPhysicsAttacker has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBasePlayerPawn> m_hPhysicsAttacker;
-        char m_hPhysicsAttacker[0x4]; // 0xa24        
-        entity2::GameTime_t m_flLastPhysicsInfluenceTime; // 0xa28        
-        entity2::GameTime_t m_flFadeOutStartTime; // 0xa2c        
-        float m_flFadeTime; // 0xa30        
+        char m_hPhysicsAttacker[0x4]; // 0x974        
+        client::GameTime_t m_flLastPhysicsInfluenceTime; // 0x978        
+        client::GameTime_t m_flFadeOutStartTime; // 0x97c        
+        float m_flFadeTime; // 0x980        
         // metadata: MNetworkDisable
-        Vector m_vecLastOrigin; // 0xa34        
-        entity2::GameTime_t m_flAwakeTime; // 0xa40        
-        entity2::GameTime_t m_flLastOriginChangeTime; // 0xa44        
-        CUtlSymbolLarge m_strOriginClassName; // 0xa48        
-        CUtlSymbolLarge m_strSourceClassName; // 0xa50        
-        bool m_bHasBeenPhysgunned; // 0xa58        
-        bool m_bShouldTeleportPhysics; // 0xa59        
-        [[maybe_unused]] std::uint8_t pad_0xa5a[0x2]; // 0xa5a
+        Vector m_vecLastOrigin; // 0x984        
+        client::GameTime_t m_flAwakeTime; // 0x990        
+        client::GameTime_t m_flLastOriginChangeTime; // 0x994        
+        CUtlSymbolLarge m_strOriginClassName; // 0x998        
+        CUtlSymbolLarge m_strSourceClassName; // 0x9a0        
+        bool m_bHasBeenPhysgunned; // 0x9a8        
+        bool m_bShouldTeleportPhysics; // 0x9a9        
+        [[maybe_unused]] std::uint8_t pad_0x9aa[0x2]; // 0x9aa
         // metadata: MNetworkEnable
         // metadata: MNetworkBitCount "8"
         // metadata: MNetworkMinValue "0,000000"
         // metadata: MNetworkMaxValue "1,000000"
         // metadata: MNetworkEncodeFlags "1"
-        float m_flBlendWeight; // 0xa5c        
-        float m_flDefaultFadeScale; // 0xa60        
-        [[maybe_unused]] std::uint8_t pad_0xa64[0x4]; // 0xa64
+        float m_flBlendWeight; // 0x9ac        
+        float m_flDefaultFadeScale; // 0x9b0        
+        [[maybe_unused]] std::uint8_t pad_0x9b4[0x4]; // 0x9b4
         // m_ragdollMins has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<Vector> m_ragdollMins;
-        char m_ragdollMins[0x18]; // 0xa68        
+        char m_ragdollMins[0x18]; // 0x9b8        
         // m_ragdollMaxs has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<Vector> m_ragdollMaxs;
-        char m_ragdollMaxs[0x18]; // 0xa80        
-        bool m_bShouldDeleteActivationRecord; // 0xa98        
-        [[maybe_unused]] std::uint8_t pad_0xa99[0x5f]; // 0xa99
-        bool m_bValidatePoweredRagdollPose; // 0xaf8        
-        [[maybe_unused]] std::uint8_t pad_0xaf9[0x3f];
+        char m_ragdollMaxs[0x18]; // 0x9d0        
+        bool m_bShouldDeleteActivationRecord; // 0x9e8        
+        [[maybe_unused]] std::uint8_t pad_0x9e9[0x5f]; // 0x9e9
+        bool m_bValidatePoweredRagdollPose; // 0xa48        
+        [[maybe_unused]] std::uint8_t pad_0xa49[0x3f];
         
         // Datamap fields:
-        // void m_ragdoll.boneIndex; // 0x9b8
+        // void m_ragdoll.boneIndex; // 0x908
         // void InputEnableMotion; // 0x0
         // void InputDisableMotion; // 0x0
         // void InputTurnOn; // 0x0
@@ -115,11 +115,11 @@ namespace source2sdk::server
         // void CRagdollPropSettleThink; // 0x0
         // void CRagdollPropAttachedItemsThink; // 0x0
         // void CRagdollPropRagdollTouch; // 0x0
-        // void m_ragdoll.list; // 0x9a0
-        // bool m_ragdoll.allowStretch; // 0x9d0
+        // void m_ragdoll.list; // 0x8f0
+        // bool m_ragdoll.allowStretch; // 0x920
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CRagdollProp because it is not a standard-layout class
-    static_assert(sizeof(CRagdollProp) == 0xb38);
+    static_assert(sizeof(CRagdollProp) == 0xa88);
 };

@@ -17,7 +17,7 @@ namespace source2sdk::particleslib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x678
+    // Size: 0x658
     // Has VTable
     // Construct allowed
     // 
@@ -43,19 +43,19 @@ namespace source2sdk::particleslib
         Vector m_vCPRelativePosition; // 0x90        
         Vector m_vCPRelativeDir; // 0x9c        
         particleslib::CParticleFloatInput m_FloatComponentX; // 0xa8        
-        particleslib::CParticleFloatInput m_FloatComponentY; // 0x208        
-        particleslib::CParticleFloatInput m_FloatComponentZ; // 0x368        
-        particleslib::CParticleFloatInput m_FloatInterp; // 0x4c8        
-        float m_flInterpInput0; // 0x628        
-        float m_flInterpInput1; // 0x62c        
-        Vector m_vInterpOutput0; // 0x630        
-        Vector m_vInterpOutput1; // 0x63c        
-        CColorGradient m_Gradient; // 0x648        
-        Vector m_vRandomMin; // 0x660        
-        Vector m_vRandomMax; // 0x66c        
+        particleslib::CParticleFloatInput m_FloatComponentY; // 0x200        
+        particleslib::CParticleFloatInput m_FloatComponentZ; // 0x358        
+        particleslib::CParticleFloatInput m_FloatInterp; // 0x4b0        
+        float m_flInterpInput0; // 0x608        
+        float m_flInterpInput1; // 0x60c        
+        Vector m_vInterpOutput0; // 0x610        
+        Vector m_vInterpOutput1; // 0x61c        
+        CColorGradient m_Gradient; // 0x628        
+        Vector m_vRandomMin; // 0x640        
+        Vector m_vRandomMax; // 0x64c        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CParticleVecInput because it is not a standard-layout class
-    static_assert(sizeof(CParticleVecInput) == 0x678);
+    static_assert(sizeof(CParticleVecInput) == 0x658);
 };

@@ -14,6 +14,7 @@ namespace source2sdk::soundsystem_lowlevel
     // Alignment: 0x4
     // Standard-layout class: true
     // Size: 0x20
+    // Has Trivial Constructor
     // Has Trivial Destructor
     // Construct allowed
     // 

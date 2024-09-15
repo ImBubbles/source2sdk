@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x8c8
+    // Size: 0x8a0
     // Has VTable
     // Construct allowed
     // 
@@ -25,26 +25,26 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x1c0        
+        int32_t m_nControlPointNumber; // 0x1b8        
         // metadata: MPropertyFriendlyName "use only bounding box"
-        bool m_bBoundBox; // 0x1c4        
+        bool m_bBoundBox; // 0x1bc        
         // metadata: MPropertyFriendlyName "dampen outside instead of inside"
-        bool m_bOutside; // 0x1c5        
+        bool m_bOutside; // 0x1bd        
         // metadata: MPropertyFriendlyName "use bones instead of hitboxes"
-        bool m_bUseBones; // 0x1c6        
+        bool m_bUseBones; // 0x1be        
         // metadata: MPropertyFriendlyName "hitbox set"
-        char m_HitboxSetName[128]; // 0x1c7        
-        [[maybe_unused]] std::uint8_t pad_0x247[0x1]; // 0x247
+        char m_HitboxSetName[128]; // 0x1bf        
+        [[maybe_unused]] std::uint8_t pad_0x23f[0x1]; // 0x23f
         // metadata: MPropertyFriendlyName "test position offset"
         // metadata: MVectorIsCoordinate
-        particleslib::CPerParticleVecInput m_vecPosOffset; // 0x248        
+        particleslib::CPerParticleVecInput m_vecPosOffset; // 0x240        
         // metadata: MPropertyFriendlyName "drag"
         // metadata: MPropertyAttributeRange "-1 1"
-        float m_fDrag; // 0x8c0        
-        [[maybe_unused]] std::uint8_t pad_0x8c4[0x4];
+        float m_fDrag; // 0x898        
+        [[maybe_unused]] std::uint8_t pad_0x89c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ModelDampenMovement because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ModelDampenMovement) == 0x8c8);
+    static_assert(sizeof(C_OP_ModelDampenMovement) == 0x8a0);
 };

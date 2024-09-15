@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x350
+    // Size: 0x340
     // Has VTable
     // Construct allowed
     // 
@@ -26,20 +26,20 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Interpolation"
-        particleslib::CPerParticleFloatInput m_flInterpolation; // 0x1c0        
+        particleslib::CPerParticleFloatInput m_flInterpolation; // 0x1b8        
         // metadata: MPropertyFriendlyName "input attribute from"
         // metadata: MPropertyAttributeChoiceName "particlefield"
-        particles::ParticleAttributeIndex_t m_nFieldInputFrom; // 0x320        
+        particles::ParticleAttributeIndex_t m_nFieldInputFrom; // 0x310        
         // metadata: MPropertyFriendlyName "input attribute to"
         // metadata: MPropertyAttributeChoiceName "particlefield"
-        particles::ParticleAttributeIndex_t m_nFieldInput; // 0x324        
+        particles::ParticleAttributeIndex_t m_nFieldInput; // 0x314        
         // metadata: MPropertyFriendlyName "output attribute"
         // metadata: MPropertyAttributeChoiceName "particlefield"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x328        
-        [[maybe_unused]] std::uint8_t pad_0x32c[0x24];
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x318        
+        [[maybe_unused]] std::uint8_t pad_0x31c[0x24];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_LerpToOtherAttribute because it is not a standard-layout class
-    static_assert(sizeof(C_OP_LerpToOtherAttribute) == 0x350);
+    static_assert(sizeof(C_OP_LerpToOtherAttribute) == 0x340);
 };

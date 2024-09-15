@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x210
+    // Size: 0x208
     // Has VTable
     // Construct allowed
     // 
@@ -26,40 +26,40 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "input control point number"
-        int32_t m_nCPInput; // 0x1c0        
+        int32_t m_nCPInput; // 0x1b8        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc        
         // metadata: MPropertyFriendlyName "local space CP"
-        int32_t m_nLocalSpaceCP; // 0x1c8        
+        int32_t m_nLocalSpaceCP; // 0x1c0        
         // metadata: MPropertyFriendlyName "input minimum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vInputMin; // 0x1cc        
+        Vector m_vInputMin; // 0x1c4        
         // metadata: MPropertyFriendlyName "input maximum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vInputMax; // 0x1d8        
+        Vector m_vInputMax; // 0x1d0        
         // metadata: MPropertyFriendlyName "output minimum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vOutputMin; // 0x1e4        
+        Vector m_vOutputMin; // 0x1dc        
         // metadata: MPropertyFriendlyName "output maximum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vOutputMax; // 0x1f0        
+        Vector m_vOutputMax; // 0x1e8        
         // metadata: MPropertyFriendlyName "emitter lifetime start time (seconds)"
-        float m_flStartTime; // 0x1fc        
+        float m_flStartTime; // 0x1f4        
         // metadata: MPropertyFriendlyName "emitter lifetime end time (seconds)"
-        float m_flEndTime; // 0x200        
+        float m_flEndTime; // 0x1f8        
         // metadata: MPropertyFriendlyName "interpolation scale"
-        float m_flInterpRate; // 0x204        
+        float m_flInterpRate; // 0x1fc        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x208        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x200        
         // metadata: MPropertyFriendlyName "offset position"
-        bool m_bOffset; // 0x20c        
+        bool m_bOffset; // 0x204        
         // metadata: MPropertyFriendlyName "accelerate position"
-        bool m_bAccelerate; // 0x20d        
-        [[maybe_unused]] std::uint8_t pad_0x20e[0x2];
+        bool m_bAccelerate; // 0x205        
+        [[maybe_unused]] std::uint8_t pad_0x206[0x2];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapCPtoVector because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapCPtoVector) == 0x210);
+    static_assert(sizeof(C_OP_RemapCPtoVector) == 0x208);
 };

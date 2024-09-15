@@ -16,10 +16,10 @@ namespace source2sdk::animlib
         None = 0,
         ClampDuration = 1,
         Synchronized = 2,
-        MatchSourceTime = 3,
-        MatchSyncEventIndex = 4,
-        MatchSyncEventID = 5,
-        MatchSyncEventPercentage = 6,
-        PreferClosestSyncEventID = 7,
+        MatchSourceTime = 4,
+        MatchSyncEventIndex = 8,
+        MatchSyncEventID = 16,
+        MatchSyncEventPercentage = 32,
+        PreferClosestSyncEventID = 64,
     };
 };

@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x790
+    // Size: 0x718
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,8 +22,8 @@ namespace source2sdk::server
     class CMarkupVolume : public server::CBaseModelEntity
     {
     public:
-        bool m_bDisabled; // 0x788        
-        [[maybe_unused]] std::uint8_t pad_0x789[0x7];
+        bool m_bDisabled; // 0x710        
+        [[maybe_unused]] std::uint8_t pad_0x711[0x7];
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -32,5 +32,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CMarkupVolume because it is not a standard-layout class
-    static_assert(sizeof(CMarkupVolume) == 0x790);
+    static_assert(sizeof(CMarkupVolume) == 0x718);
 };

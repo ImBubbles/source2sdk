@@ -25,8 +25,8 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "maximum distance"
-        float m_fMaxDistance; // 0x1c8        
-        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
+        float m_fMaxDistance; // 0x1c0        
+        [[maybe_unused]] std::uint8_t pad_0x1c4[0xc]; // 0x1c4
         particles::CPathParameters m_PathParams; // 0x1d0        
         // metadata: MPropertyFriendlyName "randomly select sequential CP pairs between start and end points"
         bool m_bUseRandomCPs; // 0x210        

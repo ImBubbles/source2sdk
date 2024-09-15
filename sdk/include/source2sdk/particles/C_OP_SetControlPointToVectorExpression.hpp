@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xec8
+    // Size: 0xe80
     // Has VTable
     // Construct allowed
     // 
@@ -26,19 +26,19 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "expression"
-        particles::VectorExpressionType_t m_nExpression; // 0x1c8        
+        particles::VectorExpressionType_t m_nExpression; // 0x1c0        
         // metadata: MPropertyFriendlyName "output control point"
-        int32_t m_nOutputCP; // 0x1cc        
+        int32_t m_nOutputCP; // 0x1c4        
         // metadata: MPropertyFriendlyName "input 1"
-        particleslib::CParticleCollectionVecInput m_vInput1; // 0x1d0        
+        particleslib::CParticleCollectionVecInput m_vInput1; // 0x1c8        
         // metadata: MPropertyFriendlyName "input 2"
-        particleslib::CParticleCollectionVecInput m_vInput2; // 0x848        
+        particleslib::CParticleCollectionVecInput m_vInput2; // 0x820        
         // metadata: MPropertyFriendlyName "normalize result"
-        bool m_bNormalizedOutput; // 0xec0        
-        [[maybe_unused]] std::uint8_t pad_0xec1[0x7];
+        bool m_bNormalizedOutput; // 0xe78        
+        [[maybe_unused]] std::uint8_t pad_0xe79[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetControlPointToVectorExpression because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetControlPointToVectorExpression) == 0xec8);
+    static_assert(sizeof(C_OP_SetControlPointToVectorExpression) == 0xe80);
 };

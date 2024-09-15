@@ -14,7 +14,7 @@ namespace source2sdk::modellib
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: true
-    // Size: 0xc0
+    // Size: 0xb0
     // Has Trivial Destructor
     // Construct allowed
     // 
@@ -53,10 +53,6 @@ namespace source2sdk::modellib
         float m_flAngularFrequency; // 0xa4        
         float m_flAngularDampingRatio; // 0xa8        
         float m_flFriction; // 0xac        
-        float m_flElasticity; // 0xb0        
-        float m_flElasticDamping; // 0xb4        
-        float m_flPlasticity; // 0xb8        
-        [[maybe_unused]] std::uint8_t pad_0xbc[0x4];
     };
     #pragma pack(pop)
     
@@ -84,9 +80,6 @@ namespace source2sdk::modellib
     static_assert(offsetof(VPhysXJoint_t, m_flAngularFrequency) == 0xa4);
     static_assert(offsetof(VPhysXJoint_t, m_flAngularDampingRatio) == 0xa8);
     static_assert(offsetof(VPhysXJoint_t, m_flFriction) == 0xac);
-    static_assert(offsetof(VPhysXJoint_t, m_flElasticity) == 0xb0);
-    static_assert(offsetof(VPhysXJoint_t, m_flElasticDamping) == 0xb4);
-    static_assert(offsetof(VPhysXJoint_t, m_flPlasticity) == 0xb8);
     
-    static_assert(sizeof(VPhysXJoint_t) == 0xc0);
+    static_assert(sizeof(VPhysXJoint_t) == 0xb0);
 };

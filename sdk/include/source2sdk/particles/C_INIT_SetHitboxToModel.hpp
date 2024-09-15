@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa40
+    // Size: 0xa10
     // Has VTable
     // Construct allowed
     // 
@@ -26,31 +26,31 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x1c8        
+        int32_t m_nControlPointNumber; // 0x1c0        
         // metadata: MPropertyFriendlyName "force to be inside model"
-        int32_t m_nForceInModel; // 0x1cc        
+        int32_t m_nForceInModel; // 0x1c4        
         // metadata: MPropertyFriendlyName "even distribution"
-        bool m_bEvenDistribution; // 0x1d0        
-        [[maybe_unused]] std::uint8_t pad_0x1d1[0x3]; // 0x1d1
+        bool m_bEvenDistribution; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1c9[0x3]; // 0x1c9
         // metadata: MPropertyFriendlyName "desired hitbox"
-        int32_t m_nDesiredHitbox; // 0x1d4        
+        int32_t m_nDesiredHitbox; // 0x1cc        
         // metadata: MPropertyFriendlyName "model hitbox scale"
-        particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x1d8        
+        particleslib::CParticleCollectionVecInput m_vecHitBoxScale; // 0x1d0        
         // metadata: MPropertyFriendlyName "direction bias"
         // metadata: MVectorIsCoordinate
-        Vector m_vecDirectionBias; // 0x850        
+        Vector m_vecDirectionBias; // 0x828        
         // metadata: MPropertyFriendlyName "maintain existing hitbox"
-        bool m_bMaintainHitbox; // 0x85c        
+        bool m_bMaintainHitbox; // 0x834        
         // metadata: MPropertyFriendlyName "use bones instead of hitboxes"
-        bool m_bUseBones; // 0x85d        
+        bool m_bUseBones; // 0x835        
         // metadata: MPropertyFriendlyName "hitbox set"
-        char m_HitboxSetName[128]; // 0x85e        
-        [[maybe_unused]] std::uint8_t pad_0x8de[0x2]; // 0x8de
+        char m_HitboxSetName[128]; // 0x836        
+        [[maybe_unused]] std::uint8_t pad_0x8b6[0x2]; // 0x8b6
         // metadata: MPropertyFriendlyName "hitbox shell thickness"
-        particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x8e0        
+        particleslib::CParticleCollectionFloatInput m_flShellSize; // 0x8b8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_SetHitboxToModel because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_SetHitboxToModel) == 0xa40);
+    static_assert(sizeof(C_INIT_SetHitboxToModel) == 0xa10);
 };

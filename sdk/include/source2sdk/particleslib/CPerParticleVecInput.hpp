@@ -14,7 +14,7 @@ namespace source2sdk::particleslib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x678
+    // Size: 0x658
     // Has VTable
     // Construct allowed
     // 
@@ -27,5 +27,5 @@ namespace source2sdk::particleslib
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CPerParticleVecInput) == 0x678);
+    static_assert(sizeof(CPerParticleVecInput) == 0x658);
 };

@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x8b0
+    // Size: 0x880
     // Has VTable
     // Construct allowed
     // 
@@ -27,18 +27,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "position input"
-        particleslib::CPerParticleVecInput m_vInput1; // 0x1c0        
+        particleslib::CPerParticleVecInput m_vInput1; // 0x1b8        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0x838        
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0x810        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x83c        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x814        
         // metadata: MPropertyFriendlyName "normalize result"
-        bool m_bNormalizedOutput; // 0x840        
-        [[maybe_unused]] std::uint8_t pad_0x841[0x6f];
+        bool m_bNormalizedOutput; // 0x818        
+        [[maybe_unused]] std::uint8_t pad_0x819[0x67];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapGravityToVector because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapGravityToVector) == 0x8b0);
+    static_assert(sizeof(C_OP_RemapGravityToVector) == 0x880);
 };

@@ -11,9 +11,9 @@
 namespace source2sdk::animlib
 {
     // Registered alignment: unknown
-    // Alignment: 0x8
+    // Alignment: 0x4
     // Standard-layout class: true
-    // Size: 0x18
+    // Size: 0x10
     // Has VTable
     // Is Abstract
     // Construct allowed
@@ -24,15 +24,13 @@ namespace source2sdk::animlib
     {
     public:
         [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
-        float m_flStartTimeSeconds; // 0x8        
-        float m_flDurationSeconds; // 0xc        
-        CGlobalSymbol m_syncID; // 0x10        
+        float m_flStartTime; // 0x8        
+        float m_flDuration; // 0xc        
     };
     #pragma pack(pop)
     
-    static_assert(offsetof(CNmEvent, m_flStartTimeSeconds) == 0x8);
-    static_assert(offsetof(CNmEvent, m_flDurationSeconds) == 0xc);
-    static_assert(offsetof(CNmEvent, m_syncID) == 0x10);
+    static_assert(offsetof(CNmEvent, m_flStartTime) == 0x8);
+    static_assert(offsetof(CNmEvent, m_flDuration) == 0xc);
     
-    static_assert(sizeof(CNmEvent) == 0x18);
+    static_assert(sizeof(CNmEvent) == 0x10);
 };

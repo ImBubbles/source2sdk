@@ -1,7 +1,7 @@
 #pragma once
+#include "source2sdk/client/GameTick_t.hpp"
 #include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/entity2/GameTick_t.hpp"
-#include "source2sdk/server/CBaseAnimatingActivity.hpp"
+#include "source2sdk/server/CEconEntity.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7e0
+    // Size: 0xcb8
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -36,33 +36,33 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "int32 m_iClip2"
     // static metadata: MNetworkVarNames "int m_pReserveAmmo"
     #pragma pack(push, 1)
-    class CBasePlayerWeapon : public server::CBaseAnimatingActivity
+    class CBasePlayerWeapon : public server::CEconEntity
     {
     public:
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        entity2::GameTick_t m_nNextPrimaryAttackTick; // 0x798        
+        client::GameTick_t m_nNextPrimaryAttackTick; // 0xc70        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        float m_flNextPrimaryAttackTickRatio; // 0x79c        
+        float m_flNextPrimaryAttackTickRatio; // 0xc74        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        entity2::GameTick_t m_nNextSecondaryAttackTick; // 0x7a0        
+        client::GameTick_t m_nNextSecondaryAttackTick; // 0xc78        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        float m_flNextSecondaryAttackTickRatio; // 0x7a4        
+        float m_flNextSecondaryAttackTickRatio; // 0xc7c        
         // metadata: MNetworkEnable
         // metadata: MNetworkSerializer "minusone"
         // metadata: MNetworkPriority "32"
-        int32_t m_iClip1; // 0x7a8        
+        int32_t m_iClip1; // 0xc80        
         // metadata: MNetworkEnable
         // metadata: MNetworkSerializer "minusone"
         // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        int32_t m_iClip2; // 0x7ac        
+        int32_t m_iClip2; // 0xc84        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        int32_t m_pReserveAmmo[2]; // 0x7b0        
-        entity2::CEntityIOOutput m_OnPlayerUse; // 0x7b8        
+        int32_t m_pReserveAmmo[2]; // 0xc88        
+        entity2::CEntityIOOutput m_OnPlayerUse; // 0xc90        
         
         // Datamap fields:
         // int32_t InputSetClipPrimary; // 0x0
@@ -71,5 +71,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBasePlayerWeapon because it is not a standard-layout class
-    static_assert(sizeof(CBasePlayerWeapon) == 0x7e0);
+    static_assert(sizeof(CBasePlayerWeapon) == 0xcb8);
 };

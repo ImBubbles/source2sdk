@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1f0
+    // Size: 0x1e8
     // Has VTable
     // Construct allowed
     // 
@@ -24,27 +24,27 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "absolute value"
-        bool m_bAbsVal; // 0x1c8        
+        bool m_bAbsVal; // 0x1c0        
         // metadata: MPropertyFriendlyName "invert absolute value"
-        bool m_bAbsValInv; // 0x1c9        
-        [[maybe_unused]] std::uint8_t pad_0x1ca[0x2]; // 0x1ca
+        bool m_bAbsValInv; // 0x1c1        
+        [[maybe_unused]] std::uint8_t pad_0x1c2[0x2]; // 0x1c2
         // metadata: MPropertyFriendlyName "time coordinate offset"
-        float m_flOffset; // 0x1cc        
+        float m_flOffset; // 0x1c4        
         // metadata: MPropertyFriendlyName "start age minimum"
-        float m_flAgeMin; // 0x1d0        
+        float m_flAgeMin; // 0x1c8        
         // metadata: MPropertyFriendlyName "start age maximum"
-        float m_flAgeMax; // 0x1d4        
+        float m_flAgeMax; // 0x1cc        
         // metadata: MPropertyFriendlyName "time noise coordinate scale"
-        float m_flNoiseScale; // 0x1d8        
+        float m_flNoiseScale; // 0x1d0        
         // metadata: MPropertyFriendlyName "spatial noise coordinate scale"
-        float m_flNoiseScaleLoc; // 0x1dc        
+        float m_flNoiseScaleLoc; // 0x1d4        
         // metadata: MPropertyFriendlyName "spatial coordinate offset"
         // metadata: MVectorIsCoordinate
-        Vector m_vecOffsetLoc; // 0x1e0        
-        [[maybe_unused]] std::uint8_t pad_0x1ec[0x4];
+        Vector m_vecOffsetLoc; // 0x1d8        
+        [[maybe_unused]] std::uint8_t pad_0x1e4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_AgeNoise because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_AgeNoise) == 0x1f0);
+    static_assert(sizeof(C_INIT_AgeNoise) == 0x1e8);
 };

@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTick_t.hpp"
+#include "source2sdk/client/GameTick_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -23,8 +23,8 @@ namespace source2sdk::client
         [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
         HSCRIPT m_hFn; // 0x8        
         CUtlStringToken m_nContext; // 0x10        
-        entity2::GameTick_t m_nNextThinkTick; // 0x14        
-        entity2::GameTick_t m_nLastThinkTick; // 0x18        
+        client::GameTick_t m_nNextThinkTick; // 0x14        
+        client::GameTick_t m_nLastThinkTick; // 0x18        
         [[maybe_unused]] std::uint8_t pad_0x1c[0x4];
         
         // Datamap fields:

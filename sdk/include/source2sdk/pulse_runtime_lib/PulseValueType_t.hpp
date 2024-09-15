@@ -8,7 +8,7 @@
 
 namespace source2sdk::pulse_runtime_lib
 {
-    // Enumerator count: 21
+    // Enumerator count: 20
     // Alignment: 4
     // Size: 0x4
     enum class PulseValueType_t : std::uint32_t
@@ -33,27 +33,25 @@ namespace source2sdk::pulse_runtime_lib
         PVAL_EHANDLE = 0x7,
         // MPropertyFriendlyName "Resource"
         PVAL_RESOURCE = 0x8,
-        // MPropertyFriendlyName "SoundEvent Instance Handle"
+        // MPropertyFriendlyName "SoundEvent Handle"
         PVAL_SNDEVT_GUID = 0x9,
-        // MPropertyFriendlyName "SoundEvent"
-        PVAL_SNDEVT_NAME = 0xa,
         // MPropertyFriendlyName "Entity Name"
-        PVAL_ENTITY_NAME = 0xb,
+        PVAL_ENTITY_NAME = 0xa,
         // MPropertyFriendlyName "Opaque Handle"
-        PVAL_OPAQUE_HANDLE = 0xc,
+        PVAL_OPAQUE_HANDLE = 0xb,
         // MPropertyFriendlyName "Typesafe Int"
-        PVAL_TYPESAFE_INT = 0xd,
+        PVAL_TYPESAFE_INT = 0xc,
         // MPropertySuppressEnumerator
-        PVAL_CURSOR_FLOW = 0xe,
+        PVAL_CURSOR_FLOW = 0xd,
         // MPropertyFriendlyName "Any"
-        PVAL_ANY = 0xf,
+        PVAL_ANY = 0xe,
         // MPropertyFriendlyName "Schema Enum"
-        PVAL_SCHEMA_ENUM = 0x10,
+        PVAL_SCHEMA_ENUM = 0xf,
         // MPropertyFriendlyName "Panorama Panel Handle"
-        PVAL_PANORAMA_PANEL_HANDLE = 0x11,
+        PVAL_PANORAMA_PANEL_HANDLE = 0x10,
         // MPropertyFriendlyName "Test Handle"
-        PVAL_TEST_HANDLE = 0x12,
+        PVAL_TEST_HANDLE = 0x11,
         // MPropertySuppressEnumerator
-        PVAL_COUNT = 0x13,
+        PVAL_COUNT = 0x12,
     };
 };

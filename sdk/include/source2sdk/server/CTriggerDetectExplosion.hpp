@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9a8
+    // Size: 0x930
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -23,11 +23,11 @@ namespace source2sdk::server
     class CTriggerDetectExplosion : public server::CBaseTrigger
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x958[0x28]; // 0x958
-        entity2::CEntityIOOutput m_OnDetectedExplosion; // 0x980        
+        [[maybe_unused]] std::uint8_t pad_0x8e0[0x28]; // 0x8e0
+        entity2::CEntityIOOutput m_OnDetectedExplosion; // 0x908        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTriggerDetectExplosion because it is not a standard-layout class
-    static_assert(sizeof(CTriggerDetectExplosion) == 0x9a8);
+    static_assert(sizeof(CTriggerDetectExplosion) == 0x930);
 };

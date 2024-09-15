@@ -18,7 +18,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1440
+    // Size: 0x13d8
     // Has VTable
     // Construct allowed
     // 
@@ -29,28 +29,28 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4]; // 0x1bc
         // metadata: MPropertyFriendlyName "first vector"
-        particleslib::CPerParticleVecInput m_vecPoint1; // 0x1c8        
+        particleslib::CPerParticleVecInput m_vecPoint1; // 0x1c0        
         // metadata: MPropertyFriendlyName "second vector"
-        particleslib::CPerParticleVecInput m_vecPoint2; // 0x840        
+        particleslib::CPerParticleVecInput m_vecPoint2; // 0x818        
         // metadata: MPropertyFriendlyName "distance minimum"
-        particleslib::CPerParticleFloatInput m_flInputMin; // 0xeb8        
+        particleslib::CPerParticleFloatInput m_flInputMin; // 0xe70        
         // metadata: MPropertyFriendlyName "distance maximum"
-        particleslib::CPerParticleFloatInput m_flInputMax; // 0x1018        
+        particleslib::CPerParticleFloatInput m_flInputMax; // 0xfc8        
         // metadata: MPropertyFriendlyName "output minimum"
-        particleslib::CPerParticleFloatInput m_flOutputMin; // 0x1178        
+        particleslib::CPerParticleFloatInput m_flOutputMin; // 0x1120        
         // metadata: MPropertyFriendlyName "output maximum"
-        particleslib::CPerParticleFloatInput m_flOutputMax; // 0x12d8        
+        particleslib::CPerParticleFloatInput m_flOutputMax; // 0x1278        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x1438        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x13d0        
         // metadata: MPropertyFriendlyName "divide by deltatime (for comparing motion since last simulation)"
-        bool m_bDeltaTime; // 0x143c        
-        [[maybe_unused]] std::uint8_t pad_0x143d[0x3];
+        bool m_bDeltaTime; // 0x13d4        
+        [[maybe_unused]] std::uint8_t pad_0x13d5[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_DistanceBetweenVecs because it is not a standard-layout class
-    static_assert(sizeof(C_OP_DistanceBetweenVecs) == 0x1440);
+    static_assert(sizeof(C_OP_DistanceBetweenVecs) == 0x13d8);
 };

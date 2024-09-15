@@ -23,7 +23,7 @@ namespace source2sdk::animlib
     {
     public:
         // m_syncEvents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<animlib::CNmSyncTrack__Event_t,10> m_syncEvents;
+        // CUtlLeanVectorFixedGrowable<animlib::CNmSyncTrack__Event_t> m_syncEvents;
         char m_syncEvents[0xa8]; // 0x0        
         int32_t m_nStartEventOffset; // 0xa8        
         [[maybe_unused]] std::uint8_t pad_0xac[0x4];

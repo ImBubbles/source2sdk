@@ -16,7 +16,7 @@ namespace source2sdk::modellib
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x68
+    // Size: 0x70
     // Has VTable
     // Is Abstract
     // Construct allowed
@@ -30,14 +30,14 @@ namespace source2sdk::modellib
         Vector m_vUpVector; // 0x30        
         [[maybe_unused]] std::uint8_t pad_0x3c[0x4]; // 0x3c
         // m_slaves has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVector<modellib::CConstraintSlave> m_slaves;
-        char m_slaves[0x10]; // 0x40        
+        // CUtlVector<modellib::CConstraintSlave> m_slaves;
+        char m_slaves[0x18]; // 0x40        
         // m_targets has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<modellib::CConstraintTarget> m_targets;
-        char m_targets[0x18]; // 0x50        
+        char m_targets[0x18]; // 0x58        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBaseConstraint because it is not a standard-layout class
-    static_assert(sizeof(CBaseConstraint) == 0x68);
+    static_assert(sizeof(CBaseConstraint) == 0x70);
 };

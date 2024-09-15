@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1f0
+    // Size: 0x1e8
     // Has VTable
     // Construct allowed
     // 
@@ -27,19 +27,19 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "min"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vecMin; // 0x1c8        
+        Vector m_vecMin; // 0x1c0        
         // metadata: MPropertyFriendlyName "max"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vecMax; // 0x1d4        
+        Vector m_vecMax; // 0x1cc        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1e0        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8        
         // metadata: MPropertyFriendlyName "Random number generator controls"
-        particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1e4        
-        [[maybe_unused]] std::uint8_t pad_0x1ec[0x4];
+        particles::CRandomNumberGeneratorParameters m_randomnessParameters; // 0x1dc        
+        [[maybe_unused]] std::uint8_t pad_0x1e4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RandomVector because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RandomVector) == 0x1f0);
+    static_assert(sizeof(C_INIT_RandomVector) == 0x1e8);
 };

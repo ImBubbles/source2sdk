@@ -1,8 +1,8 @@
 #pragma once
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/entity2/CEntityComponent.hpp"
 #include "source2sdk/entity2/CNetworkVarChainer.hpp"
 #include "source2sdk/entity2/EntComponentInfo_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeCTextureBase.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -279,7 +279,7 @@ namespace source2sdk::client
         [[maybe_unused]] std::uint8_t pad_0x192[0x2]; // 0x192
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "LightRenderingChanged"
-        entity2::GameTime_t m_flLightStyleStartTime; // 0x194        
+        client::GameTime_t m_flLightStyleStartTime; // 0x194        
         // metadata: MNetworkEnable
         float m_flCapsuleLength; // 0x198        
         // metadata: MNetworkEnable

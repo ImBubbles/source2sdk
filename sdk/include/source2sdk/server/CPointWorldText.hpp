@@ -17,7 +17,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9e8
+    // Size: 0x970
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -38,28 +38,28 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        char m_messageText[512]; // 0x788        
+        char m_messageText[512]; // 0x710        
         // metadata: MNetworkEnable
-        char m_FontName[64]; // 0x988        
+        char m_FontName[64]; // 0x910        
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x9c8        
+        bool m_bEnabled; // 0x950        
         // metadata: MNetworkEnable
-        bool m_bFullbright; // 0x9c9        
-        [[maybe_unused]] std::uint8_t pad_0x9ca[0x2]; // 0x9ca
+        bool m_bFullbright; // 0x951        
+        [[maybe_unused]] std::uint8_t pad_0x952[0x2]; // 0x952
         // metadata: MNetworkEnable
-        float m_flWorldUnitsPerPx; // 0x9cc        
+        float m_flWorldUnitsPerPx; // 0x954        
         // metadata: MNetworkEnable
-        float m_flFontSize; // 0x9d0        
+        float m_flFontSize; // 0x958        
         // metadata: MNetworkEnable
-        float m_flDepthOffset; // 0x9d4        
+        float m_flDepthOffset; // 0x95c        
         // metadata: MNetworkEnable
-        Color m_Color; // 0x9d8        
+        Color m_Color; // 0x960        
         // metadata: MNetworkEnable
-        client::PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x9dc        
+        client::PointWorldTextJustifyHorizontal_t m_nJustifyHorizontal; // 0x964        
         // metadata: MNetworkEnable
-        client::PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x9e0        
+        client::PointWorldTextJustifyVertical_t m_nJustifyVertical; // 0x968        
         // metadata: MNetworkEnable
-        client::PointWorldTextReorientMode_t m_nReorientMode; // 0x9e4        
+        client::PointWorldTextReorientMode_t m_nReorientMode; // 0x96c        
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -71,5 +71,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPointWorldText because it is not a standard-layout class
-    static_assert(sizeof(CPointWorldText) == 0x9e8);
+    static_assert(sizeof(CPointWorldText) == 0x970);
 };

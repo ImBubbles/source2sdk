@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/client/C_EconItemAttribute.hpp"
+#include "source2sdk/client/CEconItemAttribute.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -23,7 +23,7 @@ namespace source2sdk::client
     // Has VTable
     // MNetworkAssumeNotNetworkable
     // 
-    // static metadata: MNetworkVarNames "C_EconItemAttribute m_Attributes"
+    // static metadata: MNetworkVarNames "CEconItemAttribute m_Attributes"
     #pragma pack(push, 1)
     class CAttributeList
     {
@@ -32,7 +32,7 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         // metadata: MNetworkTypeAlias "CUtlVector< CEconItemAttribute >"
         // m_Attributes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // C_UtlVectorEmbeddedNetworkVar<client::C_EconItemAttribute> m_Attributes;
+        // C_UtlVectorEmbeddedNetworkVar<client::CEconItemAttribute> m_Attributes;
         char m_Attributes[0x50]; // 0x8        
         client::CAttributeManager* m_pManager; // 0x58        
     };

@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -29,7 +29,7 @@ namespace source2sdk::server
         bool m_bCommentaryConvarsChanging; // 0x11        
         bool m_bCommentaryEnabledMidGame; // 0x12        
         [[maybe_unused]] std::uint8_t pad_0x13[0x1]; // 0x13
-        entity2::GameTime_t m_flNextTeleportTime; // 0x14        
+        client::GameTime_t m_flNextTeleportTime; // 0x14        
         int32_t m_iTeleportStage; // 0x18        
         bool m_bCheatState; // 0x1c        
         bool m_bIsFirstSpawnGroupToLoad; // 0x1d        

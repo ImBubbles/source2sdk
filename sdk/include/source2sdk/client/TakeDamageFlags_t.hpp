@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 15
+    // Enumerator count: 16
     // Alignment: 8
     // Size: 0x8
     enum class TakeDamageFlags_t : std::uint64_t
@@ -26,9 +26,10 @@ namespace source2sdk::client
         DFLAG_ALWAYS_FIRE_DAMAGE_EVENTS = 0x200,
         DFLAG_RADIUS_DMG = 0x400,
         DFLAG_FORCEREDUCEARMOR_DMG = 0x800,
-        DFLAG_SUPPRESS_INTERRUPT_FLINCH = 0x1000,
         // MPropertySuppressEnumerator
         // MEnumeratorIsNotAFlag
-        DMG_LASTDFLAG = 0x1000,
+        DMG_LASTDFLAG = 0x800,
+        DFLAG_IGNORE_ARMOR = 0x1000,
+        DFLAG_SUPPRESS_UTILREMOVE = 0x2000,
     };
 };

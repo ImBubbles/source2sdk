@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/server/CBaseTrigger.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb80
+    // Size: 0xb08
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -30,23 +30,23 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x958        
-        [[maybe_unused]] std::uint8_t pad_0x959[0x3]; // 0x959
+        bool m_bEnabled; // 0x8e0        
+        [[maybe_unused]] std::uint8_t pad_0x8e1[0x3]; // 0x8e1
         // metadata: MNetworkEnable
-        float m_MaxWeight; // 0x95c        
+        float m_MaxWeight; // 0x8e4        
         // metadata: MNetworkEnable
-        float m_FadeDuration; // 0x960        
-        bool m_bStartDisabled; // 0x964        
-        [[maybe_unused]] std::uint8_t pad_0x965[0x3]; // 0x965
+        float m_FadeDuration; // 0x8e8        
+        bool m_bStartDisabled; // 0x8ec        
+        [[maybe_unused]] std::uint8_t pad_0x8ed[0x3]; // 0x8ed
         // metadata: MNetworkEnable
-        float m_Weight; // 0x968        
+        float m_Weight; // 0x8f0        
         // metadata: MNetworkEnable
-        char m_lookupFilename[512]; // 0x96c        
-        float m_LastEnterWeight; // 0xb6c        
-        entity2::GameTime_t m_LastEnterTime; // 0xb70        
-        float m_LastExitWeight; // 0xb74        
-        entity2::GameTime_t m_LastExitTime; // 0xb78        
-        [[maybe_unused]] std::uint8_t pad_0xb7c[0x4];
+        char m_lookupFilename[512]; // 0x8f4        
+        float m_LastEnterWeight; // 0xaf4        
+        client::GameTime_t m_LastEnterTime; // 0xaf8        
+        float m_LastExitWeight; // 0xafc        
+        client::GameTime_t m_LastExitTime; // 0xb00        
+        [[maybe_unused]] std::uint8_t pad_0xb04[0x4];
         
         // Datamap fields:
         // void CColorCorrectionVolumeThinkFunc; // 0x0
@@ -56,5 +56,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CColorCorrectionVolume because it is not a standard-layout class
-    static_assert(sizeof(CColorCorrectionVolume) == 0xb80);
+    static_assert(sizeof(CColorCorrectionVolume) == 0xb08);
 };

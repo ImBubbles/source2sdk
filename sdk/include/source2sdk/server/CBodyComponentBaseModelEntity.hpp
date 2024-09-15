@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: unknown
     // Standard-layout class: false
-    // Size: 0x470
+    // Size: 0x460
     // Has VTable
     // Construct disallowed
     // MNetworkAssumeNotNetworkable
@@ -30,5 +30,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CBodyComponentBaseModelEntity) == 0x470);
+    static_assert(sizeof(CBodyComponentBaseModelEntity) == 0x460);
 };

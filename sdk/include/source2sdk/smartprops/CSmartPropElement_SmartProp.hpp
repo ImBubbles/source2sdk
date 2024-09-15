@@ -20,7 +20,7 @@ namespace source2sdk::smartprops
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
-    // static metadata: MPropertyFriendlyName "Smart Prop Reference"
+    // static metadata: MPropertyFriendlyName "Smart Prop"
     // static metadata: MPropertyDescription "Evaluates a specified smart prop as a child of the current element."
     // static metadata: MVDataOutlinerAssetNameExpr
     #pragma pack(push, 1)

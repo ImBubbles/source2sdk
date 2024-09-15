@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x240
+    // Size: 0x238
     // Has VTable
     // Construct allowed
     // 
@@ -25,17 +25,17 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "transform input"
-        particleslib::CParticleTransformInput m_TransformInput; // 0x1c8        
+        particleslib::CParticleTransformInput m_TransformInput; // 0x1c0        
         // metadata: MPropertyFriendlyName "offset pitch/yaw/roll"
-        Vector m_vecRotation; // 0x230        
+        Vector m_vecRotation; // 0x228        
         // metadata: MPropertyFriendlyName "Use Quaternians Internally"
-        bool m_bUseQuat; // 0x23c        
+        bool m_bUseQuat; // 0x234        
         // metadata: MPropertyFriendlyName "Write normal instead of rotation"
-        bool m_bWriteNormal; // 0x23d        
-        [[maybe_unused]] std::uint8_t pad_0x23e[0x2];
+        bool m_bWriteNormal; // 0x235        
+        [[maybe_unused]] std::uint8_t pad_0x236[0x2];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RemapTransformOrientationToRotations because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RemapTransformOrientationToRotations) == 0x240);
+    static_assert(sizeof(C_INIT_RemapTransformOrientationToRotations) == 0x238);
 };

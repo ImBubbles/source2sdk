@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x250
+    // Size: 0x248
     // Has VTable
     // Construct allowed
     // 
@@ -26,23 +26,23 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "transform input"
-        particleslib::CParticleTransformInput m_TransformInput; // 0x1c8        
+        particleslib::CParticleTransformInput m_TransformInput; // 0x1c0        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x230        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x228        
         // metadata: MPropertyFriendlyName "scale factor"
-        float m_flScale; // 0x234        
+        float m_flScale; // 0x22c        
         // metadata: MPropertyFriendlyName "offset rotation"
-        float m_flOffsetRot; // 0x238        
+        float m_flOffsetRot; // 0x230        
         // metadata: MPropertyFriendlyName "offset axis"
         // metadata: MVectorIsCoordinate
-        Vector m_vecOffsetAxis; // 0x23c        
+        Vector m_vecOffsetAxis; // 0x234        
         // metadata: MPropertyFriendlyName "normalize"
-        bool m_bNormalize; // 0x248        
-        [[maybe_unused]] std::uint8_t pad_0x249[0x7];
+        bool m_bNormalize; // 0x240        
+        [[maybe_unused]] std::uint8_t pad_0x241[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RemapInitialDirectionToTransformToVector because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RemapInitialDirectionToTransformToVector) == 0x250);
+    static_assert(sizeof(C_INIT_RemapInitialDirectionToTransformToVector) == 0x248);
 };

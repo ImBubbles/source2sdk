@@ -21,7 +21,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb90
+    // Size: 0xb58
     // Has VTable
     // Construct allowed
     // 
@@ -31,30 +31,30 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Control Point for Model"
-        int32_t m_nMaterialControlPoint; // 0x210        
+        int32_t m_nMaterialControlPoint; // 0x208        
         // metadata: MPropertyFriendlyName "proxy type"
-        particles::MaterialProxyType_t m_nProxyType; // 0x214        
+        particles::MaterialProxyType_t m_nProxyType; // 0x20c        
         // metadata: MPropertyFriendlyName "material variables"
         // metadata: MPropertyAutoExpandSelf
         // m_MaterialVars has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<particles::MaterialVariable_t> m_MaterialVars;
-        char m_MaterialVars[0x18]; // 0x218        
+        char m_MaterialVars[0x18]; // 0x210        
         // metadata: MPropertyFriendlyName "material override"
         // m_hOverrideMaterial has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeIMaterial2> m_hOverrideMaterial;
-        char m_hOverrideMaterial[0x8]; // 0x230        
+        char m_hOverrideMaterial[0x8]; // 0x228        
         // metadata: MPropertyFriendlyName "material override enable"
-        particleslib::CParticleCollectionFloatInput m_flMaterialOverrideEnabled; // 0x238        
+        particleslib::CParticleCollectionFloatInput m_flMaterialOverrideEnabled; // 0x230        
         // metadata: MPropertyFriendlyName "model tint"
-        particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x398        
+        particleslib::CParticleCollectionVecInput m_vecColorScale; // 0x388        
         // metadata: MPropertyFriendlyName "model alpha"
-        particleslib::CPerParticleFloatInput m_flAlpha; // 0xa10        
+        particleslib::CPerParticleFloatInput m_flAlpha; // 0x9e0        
         // metadata: MPropertyFriendlyName "model tint blend type"
-        particles::ParticleColorBlendType_t m_nColorBlendType; // 0xb70        
-        [[maybe_unused]] std::uint8_t pad_0xb74[0x1c];
+        particles::ParticleColorBlendType_t m_nColorBlendType; // 0xb38        
+        [[maybe_unused]] std::uint8_t pad_0xb3c[0x1c];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RenderMaterialProxy because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RenderMaterialProxy) == 0xb90);
+    static_assert(sizeof(C_OP_RenderMaterialProxy) == 0xb58);
 };

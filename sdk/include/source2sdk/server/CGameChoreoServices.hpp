@@ -1,8 +1,8 @@
 #pragma once
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/IChoreoServices.hpp"
 #include "source2sdk/client/IChoreoServices__ChoreoState_t.hpp"
 #include "source2sdk/client/IChoreoServices__ScriptState_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -41,7 +41,7 @@ namespace source2sdk::server
         char m_hScriptedSequence[0x4]; // 0xc        
         client::IChoreoServices__ScriptState_t m_scriptState; // 0x10        
         client::IChoreoServices__ChoreoState_t m_choreoState; // 0x14        
-        entity2::GameTime_t m_flTimeStartedState; // 0x18        
+        client::GameTime_t m_flTimeStartedState; // 0x18        
         [[maybe_unused]] std::uint8_t pad_0x1c[0x4];
     };
     #pragma pack(pop)

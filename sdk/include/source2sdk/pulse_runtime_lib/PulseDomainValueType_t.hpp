@@ -13,11 +13,10 @@ namespace source2sdk::pulse_runtime_lib
     // Size: 0x4
     enum class PulseDomainValueType_t : std::uint32_t
     {
-        // MPropertyFriendlyName "Invalid"
         INVALID = 0xffffffff,
-        // MPropertyFriendlyName "Parent Map Entity"
+        // MPropertyFriendlyName "Entity Name"
         ENTITY_NAME = 0x0,
-        // MPropertyFriendlyName "Parent XML Panel"
+        // MPropertyFriendlyName "Panel ID"
         PANEL_ID = 0x1,
         COUNT = 0x2,
     };

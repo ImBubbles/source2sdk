@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e0
+    // Size: 0x1d8
     // Has VTable
     // Construct allowed
     // 
@@ -24,19 +24,19 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "output control point"
-        int32_t m_nOutControlPointNumber; // 0x1c8        
+        int32_t m_nOutControlPointNumber; // 0x1c0        
         // metadata: MPropertyFriendlyName "input volume minimum in cubic units"
-        float m_flInputMin; // 0x1cc        
+        float m_flInputMin; // 0x1c4        
         // metadata: MPropertyFriendlyName "input volume maximum in cubic units"
-        float m_flInputMax; // 0x1d0        
+        float m_flInputMax; // 0x1c8        
         // metadata: MPropertyFriendlyName "output minimum"
-        float m_flOutputMin; // 0x1d4        
+        float m_flOutputMin; // 0x1cc        
         // metadata: MPropertyFriendlyName "output maximum"
-        float m_flOutputMax; // 0x1d8        
-        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4];
+        float m_flOutputMax; // 0x1d0        
+        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapBoundingVolumetoCP because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapBoundingVolumetoCP) == 0x1e0);
+    static_assert(sizeof(C_OP_RemapBoundingVolumetoCP) == 0x1d8);
 };

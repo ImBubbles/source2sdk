@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x208
+    // Size: 0x200
     // Has VTable
     // Construct allowed
     // 
@@ -24,42 +24,42 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "emission duration"
-        float m_flEmissionDuration; // 0x1c8        
+        float m_flEmissionDuration; // 0x1c0        
         // metadata: MPropertyFriendlyName "emission start time"
-        float m_flStartTime; // 0x1cc        
+        float m_flStartTime; // 0x1c4        
         // metadata: MPropertyFriendlyName "scale emission to used control points"
         // metadata: MParticleMaxVersion "1"
-        float m_flEmissionScale; // 0x1d0        
+        float m_flEmissionScale; // 0x1c8        
         // metadata: MPropertyFriendlyName "emission count scale control point"
-        int32_t m_nScaleControlPoint; // 0x1d4        
+        int32_t m_nScaleControlPoint; // 0x1cc        
         // metadata: MPropertyFriendlyName "emission count scale control point field"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nScaleControlPointField; // 0x1d8        
+        int32_t m_nScaleControlPointField; // 0x1d0        
         // metadata: MPropertyFriendlyName "world noise scale control point"
-        int32_t m_nWorldNoisePoint; // 0x1dc        
+        int32_t m_nWorldNoisePoint; // 0x1d4        
         // metadata: MPropertyFriendlyName "absolute value"
-        bool m_bAbsVal; // 0x1e0        
+        bool m_bAbsVal; // 0x1d8        
         // metadata: MPropertyFriendlyName "invert absolute value"
-        bool m_bAbsValInv; // 0x1e1        
-        [[maybe_unused]] std::uint8_t pad_0x1e2[0x2]; // 0x1e2
+        bool m_bAbsValInv; // 0x1d9        
+        [[maybe_unused]] std::uint8_t pad_0x1da[0x2]; // 0x1da
         // metadata: MPropertyFriendlyName "time coordinate offset"
-        float m_flOffset; // 0x1e4        
+        float m_flOffset; // 0x1dc        
         // metadata: MPropertyFriendlyName "emission minimum"
-        float m_flOutputMin; // 0x1e8        
+        float m_flOutputMin; // 0x1e0        
         // metadata: MPropertyFriendlyName "emission maximum"
-        float m_flOutputMax; // 0x1ec        
+        float m_flOutputMax; // 0x1e4        
         // metadata: MPropertyFriendlyName "time noise coordinate scale"
-        float m_flNoiseScale; // 0x1f0        
+        float m_flNoiseScale; // 0x1e8        
         // metadata: MPropertyFriendlyName "world spatial noise coordinate scale"
-        float m_flWorldNoiseScale; // 0x1f4        
+        float m_flWorldNoiseScale; // 0x1ec        
         // metadata: MPropertyFriendlyName "spatial coordinate offset"
         // metadata: MVectorIsCoordinate
-        Vector m_vecOffsetLoc; // 0x1f8        
+        Vector m_vecOffsetLoc; // 0x1f0        
         // metadata: MPropertyFriendlyName "world time noise coordinate scale"
-        float m_flWorldTimeScale; // 0x204        
+        float m_flWorldTimeScale; // 0x1fc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_NoiseEmitter because it is not a standard-layout class
-    static_assert(sizeof(C_OP_NoiseEmitter) == 0x208);
+    static_assert(sizeof(C_OP_NoiseEmitter) == 0x200);
 };

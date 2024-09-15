@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1c8
+    // Size: 0x1c0
     // Has VTable
     // Is Abstract
     // Construct allowed
@@ -25,11 +25,11 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Emitter Index"
-        int32_t m_nEmitterIndex; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4];
+        int32_t m_nEmitterIndex; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CParticleFunctionEmitter because it is not a standard-layout class
-    static_assert(sizeof(CParticleFunctionEmitter) == 0x1c8);
+    static_assert(sizeof(CParticleFunctionEmitter) == 0x1c0);
 };

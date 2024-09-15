@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x4b0
+    // Size: 0x490
     // Has VTable
     // Construct allowed
     // 
@@ -27,18 +27,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "value"
-        particleslib::CPerParticleFloatInput m_InputValue; // 0x1c0        
+        particleslib::CPerParticleFloatInput m_InputValue; // 0x1b8        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0x320        
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0x310        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x324        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x314        
         // metadata: MPropertyFriendlyName "interpolation"
-        particleslib::CPerParticleFloatInput m_Lerp; // 0x328        
-        [[maybe_unused]] std::uint8_t pad_0x488[0x28];
+        particleslib::CPerParticleFloatInput m_Lerp; // 0x318        
+        [[maybe_unused]] std::uint8_t pad_0x470[0x20];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetFloat because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetFloat) == 0x4b0);
+    static_assert(sizeof(C_OP_SetFloat) == 0x490);
 };

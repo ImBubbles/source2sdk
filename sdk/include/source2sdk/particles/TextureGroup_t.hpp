@@ -19,7 +19,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb58
+    // Size: 0xb18
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -56,10 +56,10 @@ namespace source2sdk::particles
         particleslib::CParticleCollectionRendererFloatInput m_flTextureBlend; // 0x38        
         // metadata: MPropertyFriendlyName "Texture Controls"
         // metadata: MPropertySuppressExpr "( m_nTextureType == SPRITECARD_TEXTURE_NORMALMAP || m_nTextureType == SPRITECARD_TEXTURE_ANIMMOTIONVEC || m_nTextureType == SPRITECARD_TEXTURE_6POINT_XYZ_A || m_nTextureType == SPRITECARD_TEXTURE_6POINT_NEGXYZ_E )"
-        particles::TextureControls_t m_TextureControls; // 0x198        
+        particles::TextureControls_t m_TextureControls; // 0x190        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in TextureGroup_t because it is not a standard-layout class
-    static_assert(sizeof(TextureGroup_t) == 0xb58);
+    static_assert(sizeof(TextureGroup_t) == 0xb18);
 };

@@ -1,7 +1,7 @@
 #pragma once
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/MoveType_t.hpp"
 #include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -32,7 +32,7 @@ namespace source2sdk::server
         char m_hEnt[0x4]; // 0x0        
         client::MoveType_t m_MoveType; // 0x4        
         [[maybe_unused]] std::uint8_t pad_0x05[0x3]; // 0x5
-        entity2::GameTime_t m_flStartTime; // 0x8        
+        client::GameTime_t m_flStartTime; // 0x8        
         Vector m_vecStartOrigin; // 0xc        
         [[maybe_unused]] std::uint8_t pad_0x18[0x8]; // 0x18
         Quaternion m_qStartRot; // 0x20        

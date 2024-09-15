@@ -8,7 +8,7 @@
 
 namespace source2sdk::soundsystem
 {
-    // Enumerator count: 10
+    // Enumerator count: 8
     // Alignment: 4
     // Size: 0x4
     enum class ActionType_t : std::uint32_t
@@ -29,9 +29,5 @@ namespace source2sdk::soundsystem
         SOS_ACTION_SOUNDEVENT_PRIORITY = 0x6,
         // MPropertyFriendlyName "Count Envelope"
         SOS_ACTION_COUNT_ENVELOPE = 0x7,
-        // MPropertyFriendlyName "Soundevent Count"
-        SOS_ACTION_SOUNDEVENT_COUNT = 0x8,
-        // MPropertyFriendlyName "Soundevent Min/Max Values"
-        SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES = 0x9,
     };
 };

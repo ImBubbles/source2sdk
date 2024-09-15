@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d8
+    // Size: 0x1d0
     // Has VTable
     // Is Abstract
     // Construct allowed
@@ -25,16 +25,16 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "spin rate degrees"
-        int32_t m_nSpinRateDegrees; // 0x1c0        
+        int32_t m_nSpinRateDegrees; // 0x1b8        
         // metadata: MPropertyFriendlyName "spin rate min"
-        int32_t m_nSpinRateMinDegrees; // 0x1c4        
-        [[maybe_unused]] std::uint8_t pad_0x1c8[0x4]; // 0x1c8
+        int32_t m_nSpinRateMinDegrees; // 0x1bc        
+        [[maybe_unused]] std::uint8_t pad_0x1c0[0x4]; // 0x1c0
         // metadata: MPropertyFriendlyName "spin stop time"
-        float m_fSpinRateStopTime; // 0x1cc        
-        [[maybe_unused]] std::uint8_t pad_0x1d0[0x8];
+        float m_fSpinRateStopTime; // 0x1c4        
+        [[maybe_unused]] std::uint8_t pad_0x1c8[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CGeneralSpin because it is not a standard-layout class
-    static_assert(sizeof(CGeneralSpin) == 0x1d8);
+    static_assert(sizeof(CGeneralSpin) == 0x1d0);
 };

@@ -1,7 +1,7 @@
 #pragma once
 #include "source2sdk/animationsystem/HSequence.hpp"
+#include "source2sdk/animgraphlib/CLeafUpdateNode.hpp"
 #include "source2sdk/animgraphlib/CParamSpanUpdater.hpp"
-#include "source2sdk/animgraphlib/CSequenceUpdateNodeBase.hpp"
 #include "source2sdk/animgraphlib/TagSpan_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -23,15 +23,20 @@ namespace source2sdk::animgraphlib
     // 
     // static metadata: MGetKV3ClassDefaults
     #pragma pack(push, 1)
-    class CSequenceUpdateNode : public animgraphlib::CSequenceUpdateNodeBase
+    class CSequenceUpdateNode : public animgraphlib::CLeafUpdateNode
     {
     public:
-        animationsystem::HSequence m_hSequence; // 0x70        
-        float m_duration; // 0x74        
-        animgraphlib::CParamSpanUpdater m_paramSpans; // 0x78        
+        [[maybe_unused]] std::uint8_t pad_0x58[0x8]; // 0x58
+        animgraphlib::CParamSpanUpdater m_paramSpans; // 0x60        
         // m_tags has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<animgraphlib::TagSpan_t> m_tags;
-        char m_tags[0x18]; // 0x90        
+        char m_tags[0x18]; // 0x78        
+        [[maybe_unused]] std::uint8_t pad_0x90[0x4]; // 0x90
+        animationsystem::HSequence m_hSequence; // 0x94        
+        float m_playbackSpeed; // 0x98        
+        float m_duration; // 0x9c        
+        bool m_bLoop; // 0xa0        
+        [[maybe_unused]] std::uint8_t pad_0xa1[0x7];
     };
     #pragma pack(pop)
     

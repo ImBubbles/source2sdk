@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -92,7 +92,7 @@ namespace source2sdk::client
         float maxdensityLerpTo; // 0x4c        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "FogController"
-        entity2::GameTime_t lerptime; // 0x50        
+        client::GameTime_t lerptime; // 0x50        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "FogController"
         float duration; // 0x54        

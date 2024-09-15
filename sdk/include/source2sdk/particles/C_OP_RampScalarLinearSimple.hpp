@@ -25,12 +25,12 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "ramp rate"
-        float m_Rate; // 0x1c0        
+        float m_Rate; // 0x1b8        
         // metadata: MPropertyFriendlyName "start time"
-        float m_flStartTime; // 0x1c4        
+        float m_flStartTime; // 0x1bc        
         // metadata: MPropertyFriendlyName "end time"
-        float m_flEndTime; // 0x1c8        
-        [[maybe_unused]] std::uint8_t pad_0x1cc[0x24]; // 0x1cc
+        float m_flEndTime; // 0x1c0        
+        [[maybe_unused]] std::uint8_t pad_0x1c4[0x2c]; // 0x1c4
         // metadata: MPropertyFriendlyName "ramp field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
         particles::ParticleAttributeIndex_t m_nField; // 0x1f0        

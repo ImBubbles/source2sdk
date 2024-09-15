@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1f0
+    // Size: 0x1e8
     // Has VTable
     // Construct allowed
     // 
@@ -24,18 +24,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "time to start transition"
-        float m_flStartLerpTime; // 0x1d0        
+        float m_flStartLerpTime; // 0x1c8        
         // metadata: MPropertyFriendlyName "starting force"
         // metadata: MVectorIsCoordinate
-        Vector m_StartingForce; // 0x1d4        
+        Vector m_StartingForce; // 0x1cc        
         // metadata: MPropertyFriendlyName "time to end transition"
-        float m_flEndLerpTime; // 0x1e0        
+        float m_flEndLerpTime; // 0x1d8        
         // metadata: MPropertyFriendlyName "ending force"
         // metadata: MVectorIsCoordinate
-        Vector m_EndingForce; // 0x1e4        
+        Vector m_EndingForce; // 0x1dc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_TimeVaryingForce because it is not a standard-layout class
-    static_assert(sizeof(C_OP_TimeVaryingForce) == 0x1f0);
+    static_assert(sizeof(C_OP_TimeVaryingForce) == 0x1e8);
 };

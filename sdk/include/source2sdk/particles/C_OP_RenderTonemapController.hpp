@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x220
+    // Size: 0x218
     // Has VTable
     // Construct allowed
     // 
@@ -25,18 +25,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "tonemap level scale"
-        float m_flTonemapLevel; // 0x210        
+        float m_flTonemapLevel; // 0x208        
         // metadata: MPropertyFriendlyName "tonemap weight scale"
-        float m_flTonemapWeight; // 0x214        
+        float m_flTonemapWeight; // 0x20c        
         // metadata: MPropertyFriendlyName "tonemap level"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nTonemapLevelField; // 0x218        
+        particles::ParticleAttributeIndex_t m_nTonemapLevelField; // 0x210        
         // metadata: MPropertyFriendlyName "tonemap weight"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nTonemapWeightField; // 0x21c        
+        particles::ParticleAttributeIndex_t m_nTonemapWeightField; // 0x214        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RenderTonemapController because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RenderTonemapController) == 0x220);
+    static_assert(sizeof(C_OP_RenderTonemapController) == 0x218);
 };

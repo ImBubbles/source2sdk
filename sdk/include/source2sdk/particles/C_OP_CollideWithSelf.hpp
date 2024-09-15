@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x480
+    // Size: 0x468
     // Has VTable
     // Construct allowed
     // 
@@ -25,12 +25,12 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "particle radius scale"
-        particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x1c0        
+        particleslib::CPerParticleFloatInput m_flRadiusScale; // 0x1b8        
         // metadata: MPropertyFriendlyName "minimum speed for check"
-        particleslib::CPerParticleFloatInput m_flMinimumSpeed; // 0x320        
+        particleslib::CPerParticleFloatInput m_flMinimumSpeed; // 0x310        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_CollideWithSelf because it is not a standard-layout class
-    static_assert(sizeof(C_OP_CollideWithSelf) == 0x480);
+    static_assert(sizeof(C_OP_CollideWithSelf) == 0x468);
 };

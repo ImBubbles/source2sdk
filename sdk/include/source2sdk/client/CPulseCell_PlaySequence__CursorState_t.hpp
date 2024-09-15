@@ -10,7 +10,7 @@
 
 namespace source2sdk::client
 {
-    class CBaseAnimatingActivity;
+    class CBaseAnimGraph;
 };
 
 namespace source2sdk::client
@@ -28,7 +28,7 @@ namespace source2sdk::client
     {
     public:
         // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<client::CBaseAnimatingActivity> m_hTarget;
+        // CHandle<client::CBaseAnimGraph> m_hTarget;
         char m_hTarget[0x4]; // 0x0        
     };
     #pragma pack(pop)

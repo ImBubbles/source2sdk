@@ -18,7 +18,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1448
+    // Size: 0x13e0
     // Has VTable
     // Construct allowed
     // 
@@ -29,30 +29,30 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4]; // 0x1bc
         // metadata: MPropertyFriendlyName "wave minimum"
-        particleslib::CPerParticleFloatInput m_flInputMin; // 0x1c8        
+        particleslib::CPerParticleFloatInput m_flInputMin; // 0x1c0        
         // metadata: MPropertyFriendlyName "wave maximum"
-        particleslib::CPerParticleFloatInput m_flInputMax; // 0x328        
+        particleslib::CPerParticleFloatInput m_flInputMax; // 0x318        
         // metadata: MPropertyFriendlyName "output minimum"
-        particleslib::CPerParticleFloatInput m_flOutputMin; // 0x488        
+        particleslib::CPerParticleFloatInput m_flOutputMin; // 0x470        
         // metadata: MPropertyFriendlyName "output maximum"
-        particleslib::CPerParticleFloatInput m_flOutputMax; // 0x5e8        
+        particleslib::CPerParticleFloatInput m_flOutputMax; // 0x5c8        
         // metadata: MPropertyFriendlyName "wave length"
-        particleslib::CPerParticleVecInput m_vecWaveLength; // 0x748        
+        particleslib::CPerParticleVecInput m_vecWaveLength; // 0x720        
         // metadata: MPropertyFriendlyName "harmonics"
-        particleslib::CPerParticleVecInput m_vecHarmonics; // 0xdc0        
+        particleslib::CPerParticleVecInput m_vecHarmonics; // 0xd78        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x1438        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x13d0        
         // metadata: MPropertyFriendlyName "local space control point"
-        int32_t m_nLocalSpaceControlPoint; // 0x143c        
+        int32_t m_nLocalSpaceControlPoint; // 0x13d4        
         // metadata: MPropertyFriendlyName "3D"
-        bool m_b3D; // 0x1440        
-        [[maybe_unused]] std::uint8_t pad_0x1441[0x7];
+        bool m_b3D; // 0x13d8        
+        [[maybe_unused]] std::uint8_t pad_0x13d9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ChladniWave because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ChladniWave) == 0x1448);
+    static_assert(sizeof(C_OP_ChladniWave) == 0x13e0);
 };

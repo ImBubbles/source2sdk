@@ -14,7 +14,7 @@ namespace source2sdk::modellib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x68
+    // Size: 0x70
     // Has VTable
     // Construct allowed
     // 
@@ -26,5 +26,5 @@ namespace source2sdk::modellib
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CPointConstraint) == 0x68);
+    static_assert(sizeof(CPointConstraint) == 0x70);
 };

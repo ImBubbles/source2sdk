@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e8
+    // Size: 0x1e0
     // Has VTable
     // Construct allowed
     // 
@@ -24,15 +24,15 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Lighting dir"
-        Vector m_vLightingDir; // 0x1c0        
+        Vector m_vLightingDir; // 0x1b8        
         // metadata: MPropertyFriendlyName "shadow color"
-        Vector m_vTint_0; // 0x1cc        
+        Vector m_vTint_0; // 0x1c4        
         // metadata: MPropertyFriendlyName "lit color"
-        Vector m_vTint_1; // 0x1d8        
-        [[maybe_unused]] std::uint8_t pad_0x1e4[0x4];
+        Vector m_vTint_1; // 0x1d0        
+        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SDFLighting because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SDFLighting) == 0x1e8);
+    static_assert(sizeof(C_OP_SDFLighting) == 0x1e0);
 };

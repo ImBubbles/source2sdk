@@ -1,7 +1,7 @@
 #pragma once
 #include "source2sdk/animationsystem/HSequence.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/SceneEventId_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -34,7 +34,7 @@ namespace source2sdk::client
         bool m_bHasArrived; // 0x10        
         [[maybe_unused]] std::uint8_t pad_0x11[0x3]; // 0x11
         int32_t m_nType; // 0x14        
-        entity2::GameTime_t m_flNext; // 0x18        
+        client::GameTime_t m_flNext; // 0x18        
         bool m_bIsGesture; // 0x1c        
         bool m_bShouldRemove; // 0x1d        
         [[maybe_unused]] std::uint8_t pad_0x1e[0x26]; // 0x1e

@@ -18,7 +18,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0xf30
+    // Size: 0xef0
     // Has VTable
     // Construct allowed
     // 
@@ -28,23 +28,23 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "expression"
-        particles::VectorExpressionType_t m_nExpression; // 0x1c8        
-        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
+        particles::VectorExpressionType_t m_nExpression; // 0x1c0        
+        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
         // metadata: MPropertyFriendlyName "input 1"
-        particleslib::CPerParticleVecInput m_vInput1; // 0x1d0        
+        particleslib::CPerParticleVecInput m_vInput1; // 0x1c8        
         // metadata: MPropertyFriendlyName "input 2"
-        particleslib::CPerParticleVecInput m_vInput2; // 0x848        
+        particleslib::CPerParticleVecInput m_vInput2; // 0x820        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0xec0        
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0xe78        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0xec4        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0xe7c        
         // metadata: MPropertyFriendlyName "normalize result"
-        bool m_bNormalizedOutput; // 0xec8        
-        [[maybe_unused]] std::uint8_t pad_0xec9[0x67];
+        bool m_bNormalizedOutput; // 0xe80        
+        [[maybe_unused]] std::uint8_t pad_0xe81[0x6f];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_SetVectorAttributeToVectorExpression because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_SetVectorAttributeToVectorExpression) == 0xf30);
+    static_assert(sizeof(C_INIT_SetVectorAttributeToVectorExpression) == 0xef0);
 };

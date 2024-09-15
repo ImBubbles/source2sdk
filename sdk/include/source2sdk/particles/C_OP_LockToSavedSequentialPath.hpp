@@ -26,14 +26,14 @@ namespace source2sdk::particles
     class C_OP_LockToSavedSequentialPath : public particles::CParticleFunctionOperator
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x1c0[0x4]; // 0x1c0
+        [[maybe_unused]] std::uint8_t pad_0x1b8[0x4]; // 0x1b8
         // metadata: MPropertyFriendlyName "start fade time"
-        float m_flFadeStart; // 0x1c4        
+        float m_flFadeStart; // 0x1bc        
         // metadata: MPropertyFriendlyName "end fade time"
-        float m_flFadeEnd; // 0x1c8        
+        float m_flFadeEnd; // 0x1c0        
         // metadata: MPropertyFriendlyName "Use sequential CP pairs between start and end point"
-        bool m_bCPPairs; // 0x1cc        
-        [[maybe_unused]] std::uint8_t pad_0x1cd[0x3]; // 0x1cd
+        bool m_bCPPairs; // 0x1c4        
+        [[maybe_unused]] std::uint8_t pad_0x1c5[0xb]; // 0x1c5
         particles::CPathParameters m_PathParams; // 0x1d0        
     };
     #pragma pack(pop)

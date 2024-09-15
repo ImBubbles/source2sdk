@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x218
+    // Size: 0x210
     // Has VTable
     // Construct allowed
     // 
@@ -26,16 +26,16 @@ namespace source2sdk::particles
     public:
         // m_hModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCModel> m_hModel;
-        char m_hModel[0x8]; // 0x1f8        
+        char m_hModel[0x8]; // 0x1f0        
         // metadata: MPropertyFriendlyName "output min name"
-        CUtlString m_outputMinName; // 0x200        
+        CUtlString m_outputMinName; // 0x1f8        
         // metadata: MPropertyFriendlyName "output max name"
-        CUtlString m_outputMaxName; // 0x208        
-        bool m_bModelFromRenderer; // 0x210        
-        [[maybe_unused]] std::uint8_t pad_0x211[0x7];
+        CUtlString m_outputMaxName; // 0x200        
+        bool m_bModelFromRenderer; // 0x208        
+        [[maybe_unused]] std::uint8_t pad_0x209[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RemapParticleCountToNamedModelElementScalar because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RemapParticleCountToNamedModelElementScalar) == 0x218);
+    static_assert(sizeof(C_INIT_RemapParticleCountToNamedModelElementScalar) == 0x210);
 };

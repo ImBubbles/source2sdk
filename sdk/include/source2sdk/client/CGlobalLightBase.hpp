@@ -18,7 +18,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x4
     // Standard-layout class: true
-    // Size: 0x520
+    // Size: 0x4c0
     // Has VTable
     // MClassHasEntityLimitedDataDesc
     #pragma pack(push, 1)
@@ -79,9 +79,6 @@ namespace source2sdk::client
         // m_hEnvSky has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<client::C_BaseEntity> m_hEnvSky;
         char m_hEnvSky[0x4]; // 0x4bc        
-        float m_fSmoothedAmount; // 0x4c0        
-        float m_fSlowSmoothedAmount; // 0x4c4        
-        [[maybe_unused]] std::uint8_t pad_0x4c8[0x58];
     };
     #pragma pack(pop)
     
@@ -128,8 +125,6 @@ namespace source2sdk::client
     static_assert(offsetof(CGlobalLightBase, m_vFogOffsetLayer1) == 0x4b0);
     static_assert(offsetof(CGlobalLightBase, m_hEnvWind) == 0x4b8);
     static_assert(offsetof(CGlobalLightBase, m_hEnvSky) == 0x4bc);
-    static_assert(offsetof(CGlobalLightBase, m_fSmoothedAmount) == 0x4c0);
-    static_assert(offsetof(CGlobalLightBase, m_fSlowSmoothedAmount) == 0x4c4);
     
-    static_assert(sizeof(CGlobalLightBase) == 0x520);
+    static_assert(sizeof(CGlobalLightBase) == 0x4c0);
 };

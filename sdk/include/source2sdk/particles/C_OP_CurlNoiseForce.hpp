@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e78
+    // Size: 0x1de0
     // Has VTable
     // Construct allowed
     // 
@@ -27,27 +27,27 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "noise type"
-        particles::ParticleDirectionNoiseType_t m_nNoiseType; // 0x1d0        
-        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4]; // 0x1d4
+        particles::ParticleDirectionNoiseType_t m_nNoiseType; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
         // metadata: MPropertyFriendlyName "noise frequency"
         // metadata: MVectorIsCoordinate
-        particleslib::CPerParticleVecInput m_vecNoiseFreq; // 0x1d8        
+        particleslib::CPerParticleVecInput m_vecNoiseFreq; // 0x1d0        
         // metadata: MPropertyFriendlyName "noise amplitude"
         // metadata: MVectorIsCoordinate
-        particleslib::CPerParticleVecInput m_vecNoiseScale; // 0x850        
+        particleslib::CPerParticleVecInput m_vecNoiseScale; // 0x828        
         // metadata: MPropertyFriendlyName "offset"
         // metadata: MVectorIsCoordinate
-        particleslib::CPerParticleVecInput m_vecOffset; // 0xec8        
+        particleslib::CPerParticleVecInput m_vecOffset; // 0xe80        
         // metadata: MPropertyFriendlyName "offset rate"
         // metadata: MVectorIsCoordinate
-        particleslib::CPerParticleVecInput m_vecOffsetRate; // 0x1540        
+        particleslib::CPerParticleVecInput m_vecOffsetRate; // 0x14d8        
         // metadata: MPropertyFriendlyName "worley seed"
-        particleslib::CPerParticleFloatInput m_flWorleySeed; // 0x1bb8        
+        particleslib::CPerParticleFloatInput m_flWorleySeed; // 0x1b30        
         // metadata: MPropertyFriendlyName "worley jitter"
-        particleslib::CPerParticleFloatInput m_flWorleyJitter; // 0x1d18        
+        particleslib::CPerParticleFloatInput m_flWorleyJitter; // 0x1c88        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_CurlNoiseForce because it is not a standard-layout class
-    static_assert(sizeof(C_OP_CurlNoiseForce) == 0x1e78);
+    static_assert(sizeof(C_OP_CurlNoiseForce) == 0x1de0);
 };

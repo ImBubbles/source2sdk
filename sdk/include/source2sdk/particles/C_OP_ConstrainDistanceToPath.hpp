@@ -26,13 +26,14 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "minimum distance"
-        float m_fMinDistance; // 0x1c0        
+        float m_fMinDistance; // 0x1b8        
         // metadata: MPropertyFriendlyName "maximum distance"
-        float m_flMaxDistance0; // 0x1c4        
+        float m_flMaxDistance0; // 0x1bc        
         // metadata: MPropertyFriendlyName "maximum distance middle"
-        float m_flMaxDistanceMid; // 0x1c8        
+        float m_flMaxDistanceMid; // 0x1c0        
         // metadata: MPropertyFriendlyName "maximum distance end"
-        float m_flMaxDistance1; // 0x1cc        
+        float m_flMaxDistance1; // 0x1c4        
+        [[maybe_unused]] std::uint8_t pad_0x1c8[0x8]; // 0x1c8
         particles::CPathParameters m_PathParameters; // 0x1d0        
         // metadata: MPropertyFriendlyName "travel time"
         float m_flTravelTime; // 0x210        

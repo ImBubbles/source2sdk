@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x2e8
+    // Size: 0x2e0
     // Has VTable
     // Construct allowed
     // 
@@ -28,42 +28,42 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
         // metadata: MPropertyFriendlyName "input minimum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vInputMin; // 0x1cc        
+        Vector m_vInputMin; // 0x1c4        
         // metadata: MPropertyFriendlyName "input maximum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vInputMax; // 0x1d8        
+        Vector m_vInputMax; // 0x1d0        
         // metadata: MPropertyFriendlyName "output minimum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vOutputMin; // 0x1e4        
+        Vector m_vOutputMin; // 0x1dc        
         // metadata: MPropertyFriendlyName "output maximum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vOutputMax; // 0x1f0        
-        [[maybe_unused]] std::uint8_t pad_0x1fc[0x4]; // 0x1fc
+        Vector m_vOutputMax; // 0x1e8        
+        [[maybe_unused]] std::uint8_t pad_0x1f4[0x4]; // 0x1f4
         // metadata: MPropertyFriendlyName "transform input"
-        particleslib::CParticleTransformInput m_TransformInput; // 0x200        
+        particleslib::CParticleTransformInput m_TransformInput; // 0x1f8        
         // metadata: MPropertyFriendlyName "local space transform"
         // metadata: MParticleInputOptional
-        particleslib::CParticleTransformInput m_LocalSpaceTransform; // 0x268        
+        particleslib::CParticleTransformInput m_LocalSpaceTransform; // 0x260        
         // metadata: MPropertyFriendlyName "emitter lifetime start time (seconds)"
-        float m_flStartTime; // 0x2d0        
+        float m_flStartTime; // 0x2c8        
         // metadata: MPropertyFriendlyName "emitter lifetime end time (seconds)"
-        float m_flEndTime; // 0x2d4        
+        float m_flEndTime; // 0x2cc        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x2d8        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x2d0        
         // metadata: MPropertyFriendlyName "offset position"
-        bool m_bOffset; // 0x2dc        
+        bool m_bOffset; // 0x2d4        
         // metadata: MPropertyFriendlyName "accelerate position"
-        bool m_bAccelerate; // 0x2dd        
-        [[maybe_unused]] std::uint8_t pad_0x2de[0x2]; // 0x2de
+        bool m_bAccelerate; // 0x2d5        
+        [[maybe_unused]] std::uint8_t pad_0x2d6[0x2]; // 0x2d6
         // metadata: MPropertyFriendlyName "remap bias"
-        float m_flRemapBias; // 0x2e0        
-        [[maybe_unused]] std::uint8_t pad_0x2e4[0x4];
+        float m_flRemapBias; // 0x2d8        
+        [[maybe_unused]] std::uint8_t pad_0x2dc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RemapTransformToVector because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RemapTransformToVector) == 0x2e8);
+    static_assert(sizeof(C_INIT_RemapTransformToVector) == 0x2e0);
 };

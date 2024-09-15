@@ -14,7 +14,7 @@ namespace source2sdk::animlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x40
+    // Size: 0x38
     // Has VTable
     // Construct allowed
     // 
@@ -23,9 +23,9 @@ namespace source2sdk::animlib
     class CNmLegacyEvent : public animlib::CNmEvent
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x18[0x28];
+        [[maybe_unused]] std::uint8_t pad_0x10[0x28];
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CNmLegacyEvent) == 0x40);
+    static_assert(sizeof(CNmLegacyEvent) == 0x38);
 };

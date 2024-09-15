@@ -32,9 +32,9 @@ namespace source2sdk::animgraphlib
         // metadata: MPropertyAttributeEditor "TextBlock()"
         // metadata: MPropertySortPriority "-100"
         CUtlString m_sComment; // 0x20        
-        // metadata: MPropertyReadOnly
+        // metadata: MPropertyHideField
         CUtlString m_group; // 0x28        
-        // metadata: MPropertyReadOnly
+        // metadata: MPropertyHideField
         modellib::AnimParamID m_id; // 0x30        
         [[maybe_unused]] std::uint8_t pad_0x34[0x14]; // 0x34
         // metadata: MPropertyHideField

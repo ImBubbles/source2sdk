@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x320
+    // Size: 0x310
     // Has VTable
     // Construct allowed
     // 
@@ -25,10 +25,10 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Maximum Count"
-        particleslib::CParticleCollectionFloatInput m_nCount; // 0x1c0        
+        particleslib::CParticleCollectionFloatInput m_nCount; // 0x1b8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_DecayClampCount because it is not a standard-layout class
-    static_assert(sizeof(C_OP_DecayClampCount) == 0x320);
+    static_assert(sizeof(C_OP_DecayClampCount) == 0x310);
 };

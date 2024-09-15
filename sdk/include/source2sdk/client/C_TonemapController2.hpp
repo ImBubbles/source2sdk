@@ -14,12 +14,11 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x560
+    // Size: 0x570
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
     // 
-    // static metadata: MEntityAllowsPortraitWorldSpawn
     // static metadata: MNetworkVarNames "float m_flAutoExposureMin"
     // static metadata: MNetworkVarNames "float m_flAutoExposureMax"
     // static metadata: MNetworkVarNames "float m_flTonemapPercentTarget"
@@ -33,22 +32,22 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        float m_flAutoExposureMin; // 0x538        
+        float m_flAutoExposureMin; // 0x548        
         // metadata: MNetworkEnable
-        float m_flAutoExposureMax; // 0x53c        
+        float m_flAutoExposureMax; // 0x54c        
         // metadata: MNetworkEnable
-        float m_flTonemapPercentTarget; // 0x540        
+        float m_flTonemapPercentTarget; // 0x550        
         // metadata: MNetworkEnable
-        float m_flTonemapPercentBrightPixels; // 0x544        
+        float m_flTonemapPercentBrightPixels; // 0x554        
         // metadata: MNetworkEnable
-        float m_flTonemapMinAvgLum; // 0x548        
+        float m_flTonemapMinAvgLum; // 0x558        
         // metadata: MNetworkEnable
-        float m_flExposureAdaptationSpeedUp; // 0x54c        
+        float m_flExposureAdaptationSpeedUp; // 0x55c        
         // metadata: MNetworkEnable
-        float m_flExposureAdaptationSpeedDown; // 0x550        
+        float m_flExposureAdaptationSpeedDown; // 0x560        
         // metadata: MNetworkEnable
-        float m_flTonemapEVSmoothingRange; // 0x554        
-        [[maybe_unused]] std::uint8_t pad_0x558[0x8];
+        float m_flTonemapEVSmoothingRange; // 0x564        
+        [[maybe_unused]] std::uint8_t pad_0x568[0x8];
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -64,5 +63,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_TonemapController2 because it is not a standard-layout class
-    static_assert(sizeof(C_TonemapController2) == 0x560);
+    static_assert(sizeof(C_TonemapController2) == 0x570);
 };

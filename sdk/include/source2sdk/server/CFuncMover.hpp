@@ -1,10 +1,8 @@
 #pragma once
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/SolidType_t.hpp"
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CBaseModelEntity.hpp"
 #include "source2sdk/server/CFuncMover__Move_t.hpp"
-#include "source2sdk/server/CFuncMover__OrientationUpdate_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -26,10 +24,10 @@ namespace source2sdk::server
 
 namespace source2sdk::server
 {
-    // Registered alignment: 0x10
-    // Alignment: 0x10
+    // Registered alignment: 0x8
+    // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x880
+    // Size: 0x788
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -37,53 +35,40 @@ namespace source2sdk::server
     class CFuncMover : public server::CBaseModelEntity
     {
     public:
-        CUtlSymbolLarge m_iszPathName; // 0x788        
+        CUtlSymbolLarge m_iszPathName; // 0x710        
         // m_hPathMover has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CPathMover> m_hPathMover;
-        char m_hPathMover[0x4]; // 0x790        
-        [[maybe_unused]] std::uint8_t pad_0x794[0x4]; // 0x794
-        CUtlSymbolLarge m_iszPathNodeStart; // 0x798        
-        server::CFuncMover__Move_t m_eMoveType; // 0x7a0        
-        bool m_bIsReversing; // 0x7a4        
-        [[maybe_unused]] std::uint8_t pad_0x7a5[0x3]; // 0x7a5
-        Vector m_vTarget; // 0x7a8        
-        float m_flStartSpeed; // 0x7b4        
-        float m_flPathLocation; // 0x7b8        
-        float m_flT; // 0x7bc        
-        int32_t m_nCurrentNodeIndex; // 0x7c0        
-        int32_t m_nPreviousNodeIndex; // 0x7c4        
-        bool m_bFixedOrientation; // 0x7c8        
-        bool m_bFixedPitch; // 0x7c9        
-        client::SolidType_t m_eSolidType; // 0x7ca        
-        bool m_bIsMoving; // 0x7cb        
-        float m_flTimeToReachMaxSpeed; // 0x7cc        
-        float m_flDistanceToReachMaxSpeed; // 0x7d0        
-        float m_flTimeToReachZeroSpeed; // 0x7d4        
-        float m_flDistanceToReachZeroSpeed; // 0x7d8        
-        entity2::GameTime_t m_flTimeMovementStart; // 0x7dc        
-        entity2::GameTime_t m_flTimeMovementStop; // 0x7e0        
+        char m_hPathMover[0x4]; // 0x718        
+        [[maybe_unused]] std::uint8_t pad_0x71c[0x4]; // 0x71c
+        CUtlSymbolLarge m_iszPathNodeStart; // 0x720        
+        server::CFuncMover__Move_t m_eMoveType; // 0x728        
+        bool m_bIsReversing; // 0x72c        
+        [[maybe_unused]] std::uint8_t pad_0x72d[0x3]; // 0x72d
+        Vector m_vTarget; // 0x730        
+        float m_flStartSpeed; // 0x73c        
+        float m_flPathLocation; // 0x740        
+        float m_flT; // 0x744        
+        int32_t m_nCurrentNodeIndex; // 0x748        
+        int32_t m_nPreviousNodeIndex; // 0x74c        
+        bool m_bFixedOrientation; // 0x750        
+        bool m_bFixedPitch; // 0x751        
+        client::SolidType_t m_eSolidType; // 0x752        
+        bool m_bIsMoving; // 0x753        
+        float m_flTimeToReachMaxSpeed; // 0x754        
+        float m_flTimeToReachZeroSpeed; // 0x758        
+        client::GameTime_t m_flTimeMovementStart; // 0x75c        
+        client::GameTime_t m_flTimeMovementStop; // 0x760        
         // m_hStopAtNode has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CMoverPathNode> m_hStopAtNode;
-        char m_hStopAtNode[0x4]; // 0x7e4        
-        float m_flPathLocationToBeginStop; // 0x7e8        
-        [[maybe_unused]] std::uint8_t pad_0x7ec[0x4]; // 0x7ec
-        CUtlSymbolLarge m_iszStartForwardSound; // 0x7f0        
-        CUtlSymbolLarge m_iszLoopForwardSound; // 0x7f8        
-        CUtlSymbolLarge m_iszStopForwardSound; // 0x800        
-        CUtlSymbolLarge m_iszStartReverseSound; // 0x808        
-        CUtlSymbolLarge m_iszLoopReverseSound; // 0x810        
-        CUtlSymbolLarge m_iszStopReverseSound; // 0x818        
-        CUtlSymbolLarge m_iszArriveAtDestinationSound; // 0x820        
-        [[maybe_unused]] std::uint8_t pad_0x828[0x8]; // 0x828
-        entity2::CEntityIOOutput m_OnMovementEnd; // 0x830        
-        bool m_bStartAtEnd; // 0x858        
-        [[maybe_unused]] std::uint8_t pad_0x859[0x3]; // 0x859
-        server::CFuncMover__OrientationUpdate_t m_eOrientationUpdate; // 0x85c        
-        entity2::GameTime_t m_flTimeStartOrientationChange; // 0x860        
-        float m_flTimeToBlendToNewOrientation; // 0x864        
-        float m_flDurationBlendToNewOrientationRan; // 0x868        
-        [[maybe_unused]] std::uint8_t pad_0x86c[0x4]; // 0x86c
-        Quaternion m_qOriginalOrientation; // 0x870        
+        char m_hStopAtNode[0x4]; // 0x764        
+        float m_flPathLocationToBeginStop; // 0x768        
+        bool m_bMatchPathNodeUp; // 0x76c        
+        bool m_bFacePlayer; // 0x76d        
+        [[maybe_unused]] std::uint8_t pad_0x76e[0x2]; // 0x76e
+        client::GameTime_t m_flTimeStartRoll; // 0x770        
+        Vector m_vOriginalUp; // 0x774        
+        float m_flTimeToRollToNewUp; // 0x780        
+        [[maybe_unused]] std::uint8_t pad_0x784[0x4];
         
         // Datamap fields:
         // void InputStartForward; // 0x0
@@ -96,11 +81,10 @@ namespace source2sdk::server
         // float InputSetSpeed; // 0x0
         // float InputSetSpeedImmediate; // 0x0
         // float InputSetTimeToReachMaxSpeed; // 0x0
-        // float InputSetTimeToBlendToNewOrientation; // 0x0
         // void CFuncMoverMove; // 0x0
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CFuncMover because it is not a standard-layout class
-    static_assert(sizeof(CFuncMover) == 0x880);
+    static_assert(sizeof(CFuncMover) == 0x788);
 };

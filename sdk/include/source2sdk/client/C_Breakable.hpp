@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7d8
+    // Size: 0xcc8
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -26,5 +26,5 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_Breakable) == 0x7d8);
+    static_assert(sizeof(C_Breakable) == 0xcc8);
 };

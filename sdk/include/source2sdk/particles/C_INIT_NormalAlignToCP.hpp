@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x238
+    // Size: 0x230
     // Has VTable
     // Construct allowed
     // 
@@ -26,13 +26,13 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "input"
-        particleslib::CParticleTransformInput m_transformInput; // 0x1c8        
+        particleslib::CParticleTransformInput m_transformInput; // 0x1c0        
         // metadata: MPropertyFriendlyName "control point axis"
-        particles::ParticleControlPointAxis_t m_nControlPointAxis; // 0x230        
-        [[maybe_unused]] std::uint8_t pad_0x234[0x4];
+        particles::ParticleControlPointAxis_t m_nControlPointAxis; // 0x228        
+        [[maybe_unused]] std::uint8_t pad_0x22c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_NormalAlignToCP because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_NormalAlignToCP) == 0x238);
+    static_assert(sizeof(C_INIT_NormalAlignToCP) == 0x230);
 };

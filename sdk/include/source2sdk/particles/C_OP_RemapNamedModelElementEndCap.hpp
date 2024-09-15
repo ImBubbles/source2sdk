@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x220
+    // Size: 0x218
     // Has VTable
     // Is Abstract
     // Construct allowed
@@ -28,32 +28,32 @@ namespace source2sdk::particles
     public:
         // m_hModel has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCModel> m_hModel;
-        char m_hModel[0x8]; // 0x1c0        
+        char m_hModel[0x8]; // 0x1b8        
         // metadata: MPropertyFriendlyName "input names"
         // m_inNames has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CUtlString> m_inNames;
-        char m_inNames[0x18]; // 0x1c8        
+        char m_inNames[0x18]; // 0x1c0        
         // metadata: MPropertyFriendlyName "output names"
         // m_outNames has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CUtlString> m_outNames;
-        char m_outNames[0x18]; // 0x1e0        
+        char m_outNames[0x18]; // 0x1d8        
         // metadata: MPropertyFriendlyName "fallback names when the input doesn't match"
         // m_fallbackNames has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CUtlString> m_fallbackNames;
-        char m_fallbackNames[0x18]; // 0x1f8        
+        char m_fallbackNames[0x18]; // 0x1f0        
         // metadata: MPropertyFriendlyName "model from renderer"
-        bool m_bModelFromRenderer; // 0x210        
-        [[maybe_unused]] std::uint8_t pad_0x211[0x3]; // 0x211
+        bool m_bModelFromRenderer; // 0x208        
+        [[maybe_unused]] std::uint8_t pad_0x209[0x3]; // 0x209
         // metadata: MPropertyFriendlyName "input field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldInput; // 0x214        
+        particles::ParticleAttributeIndex_t m_nFieldInput; // 0x20c        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x218        
-        [[maybe_unused]] std::uint8_t pad_0x21c[0x4];
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x210        
+        [[maybe_unused]] std::uint8_t pad_0x214[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapNamedModelElementEndCap because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapNamedModelElementEndCap) == 0x220);
+    static_assert(sizeof(C_OP_RemapNamedModelElementEndCap) == 0x218);
 };

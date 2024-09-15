@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e8
+    // Size: 0x1e0
     // Has VTable
     // Construct allowed
     // 
@@ -25,27 +25,27 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point"
-        int32_t m_nCP; // 0x1c0        
+        int32_t m_nCP; // 0x1b8        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1bc        
         // metadata: MPropertyFriendlyName "scale factor"
-        float m_flScale; // 0x1c8        
+        float m_flScale; // 0x1c0        
         // metadata: MPropertyFriendlyName "offset rotation"
-        float m_flOffsetRot; // 0x1cc        
+        float m_flOffsetRot; // 0x1c4        
         // metadata: MPropertyFriendlyName "offset axis"
         // metadata: MVectorIsCoordinate
-        Vector m_vecOffsetAxis; // 0x1d0        
+        Vector m_vecOffsetAxis; // 0x1c8        
         // metadata: MPropertyFriendlyName "normalize"
-        bool m_bNormalize; // 0x1dc        
-        [[maybe_unused]] std::uint8_t pad_0x1dd[0x3]; // 0x1dd
+        bool m_bNormalize; // 0x1d4        
+        [[maybe_unused]] std::uint8_t pad_0x1d5[0x3]; // 0x1d5
         // metadata: MPropertyFriendlyName "strength field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldStrength; // 0x1e0        
-        [[maybe_unused]] std::uint8_t pad_0x1e4[0x4];
+        particles::ParticleAttributeIndex_t m_nFieldStrength; // 0x1d8        
+        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapDirectionToCPToVector because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapDirectionToCPToVector) == 0x1e8);
+    static_assert(sizeof(C_OP_RemapDirectionToCPToVector) == 0x1e0);
 };

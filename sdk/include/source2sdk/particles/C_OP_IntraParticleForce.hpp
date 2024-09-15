@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1f0
+    // Size: 0x1e8
     // Has VTable
     // Construct allowed
     // 
@@ -24,25 +24,25 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "min attraction distance"
-        float m_flAttractionMinDistance; // 0x1d0        
+        float m_flAttractionMinDistance; // 0x1c8        
         // metadata: MPropertyFriendlyName "max attraction distance"
-        float m_flAttractionMaxDistance; // 0x1d4        
+        float m_flAttractionMaxDistance; // 0x1cc        
         // metadata: MPropertyFriendlyName "max attraction force"
-        float m_flAttractionMaxStrength; // 0x1d8        
+        float m_flAttractionMaxStrength; // 0x1d0        
         // metadata: MPropertyFriendlyName "min repulsion distance"
-        float m_flRepulsionMinDistance; // 0x1dc        
+        float m_flRepulsionMinDistance; // 0x1d4        
         // metadata: MPropertyFriendlyName "max repulsion distance"
-        float m_flRepulsionMaxDistance; // 0x1e0        
+        float m_flRepulsionMaxDistance; // 0x1d8        
         // metadata: MPropertyFriendlyName "max repulsion force"
-        float m_flRepulsionMaxStrength; // 0x1e4        
+        float m_flRepulsionMaxStrength; // 0x1dc        
         // metadata: MPropertyFriendlyName "use aabbtree"
-        bool m_bUseAABB; // 0x1e8        
+        bool m_bUseAABB; // 0x1e0        
         // metadata: MPropertyFriendlyName "thread pairwise collision"
-        bool m_bThreadIt; // 0x1e9        
-        [[maybe_unused]] std::uint8_t pad_0x1ea[0x6];
+        bool m_bThreadIt; // 0x1e1        
+        [[maybe_unused]] std::uint8_t pad_0x1e2[0x6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_IntraParticleForce because it is not a standard-layout class
-    static_assert(sizeof(C_OP_IntraParticleForce) == 0x1f0);
+    static_assert(sizeof(C_OP_IntraParticleForce) == 0x1e8);
 };

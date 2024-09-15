@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9d8
+    // Size: 0xec8
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -35,40 +35,40 @@ namespace source2sdk::client
     class C_PointClientUIHUD : public client::C_BaseClientUIEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x808[0x8]; // 0x808
-        bool m_bCheckCSSClasses; // 0x810        
-        [[maybe_unused]] std::uint8_t pad_0x811[0x17f]; // 0x811
+        [[maybe_unused]] std::uint8_t pad_0xcf8[0x8]; // 0xcf8
+        bool m_bCheckCSSClasses; // 0xd00        
+        [[maybe_unused]] std::uint8_t pad_0xd01[0x17f]; // 0xd01
         // metadata: MNetworkEnable
-        bool m_bIgnoreInput; // 0x990        
-        [[maybe_unused]] std::uint8_t pad_0x991[0x3]; // 0x991
+        bool m_bIgnoreInput; // 0xe80        
+        [[maybe_unused]] std::uint8_t pad_0xe81[0x3]; // 0xe81
         // metadata: MNetworkEnable
-        float m_flWidth; // 0x994        
+        float m_flWidth; // 0xe84        
         // metadata: MNetworkEnable
-        float m_flHeight; // 0x998        
+        float m_flHeight; // 0xe88        
         // metadata: MNetworkEnable
-        float m_flDPI; // 0x99c        
+        float m_flDPI; // 0xe8c        
         // metadata: MNetworkEnable
-        float m_flInteractDistance; // 0x9a0        
+        float m_flInteractDistance; // 0xe90        
         // metadata: MNetworkEnable
-        float m_flDepthOffset; // 0x9a4        
+        float m_flDepthOffset; // 0xe94        
         // metadata: MNetworkEnable
-        uint32_t m_unOwnerContext; // 0x9a8        
+        uint32_t m_unOwnerContext; // 0xe98        
         // metadata: MNetworkEnable
-        uint32_t m_unHorizontalAlign; // 0x9ac        
+        uint32_t m_unHorizontalAlign; // 0xe9c        
         // metadata: MNetworkEnable
-        uint32_t m_unVerticalAlign; // 0x9b0        
+        uint32_t m_unVerticalAlign; // 0xea0        
         // metadata: MNetworkEnable
-        uint32_t m_unOrientation; // 0x9b4        
+        uint32_t m_unOrientation; // 0xea4        
         // metadata: MNetworkEnable
-        bool m_bAllowInteractionFromAllSceneWorlds; // 0x9b8        
-        [[maybe_unused]] std::uint8_t pad_0x9b9[0x7]; // 0x9b9
+        bool m_bAllowInteractionFromAllSceneWorlds; // 0xea8        
+        [[maybe_unused]] std::uint8_t pad_0xea9[0x7]; // 0xea9
         // metadata: MNetworkEnable
         // m_vecCSSClasses has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // C_NetworkUtlVectorBase<CUtlSymbolLarge> m_vecCSSClasses;
-        char m_vecCSSClasses[0x18]; // 0x9c0        
+        char m_vecCSSClasses[0x18]; // 0xeb0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PointClientUIHUD because it is not a standard-layout class
-    static_assert(sizeof(C_PointClientUIHUD) == 0x9d8);
+    static_assert(sizeof(C_PointClientUIHUD) == 0xec8);
 };

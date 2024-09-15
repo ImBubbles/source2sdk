@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x498
+    // Size: 0x480
     // Has VTable
     // Construct allowed
     // 
@@ -25,20 +25,20 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "minimum distance"
-        particleslib::CParticleCollectionFloatInput m_fMinDistance; // 0x1c0        
+        particleslib::CParticleCollectionFloatInput m_fMinDistance; // 0x1b8        
         // metadata: MPropertyFriendlyName "maximum distance"
-        particleslib::CParticleCollectionFloatInput m_fMaxDistance; // 0x320        
+        particleslib::CParticleCollectionFloatInput m_fMaxDistance; // 0x310        
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x480        
+        int32_t m_nControlPointNumber; // 0x468        
         // metadata: MPropertyFriendlyName "offset of center"
         // metadata: MVectorIsCoordinate
-        Vector m_CenterOffset; // 0x484        
+        Vector m_CenterOffset; // 0x46c        
         // metadata: MPropertyFriendlyName "global center point"
-        bool m_bGlobalCenter; // 0x490        
-        [[maybe_unused]] std::uint8_t pad_0x491[0x7];
+        bool m_bGlobalCenter; // 0x478        
+        [[maybe_unused]] std::uint8_t pad_0x479[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ConstrainDistance because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ConstrainDistance) == 0x498);
+    static_assert(sizeof(C_OP_ConstrainDistance) == 0x480);
 };

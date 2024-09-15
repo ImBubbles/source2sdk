@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x790
+    // Size: 0x718
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -26,5 +26,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CFuncWallToggle) == 0x790);
+    static_assert(sizeof(CFuncWallToggle) == 0x718);
 };

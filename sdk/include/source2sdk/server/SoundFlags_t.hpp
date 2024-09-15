@@ -8,7 +8,7 @@
 
 namespace source2sdk::server
 {
-    // Enumerator count: 10
+    // Enumerator count: 9
     // Alignment: 2
     // Size: 0x2
     enum class SoundFlags_t : std::uint16_t
@@ -24,6 +24,5 @@ namespace source2sdk::server
         SOUND_FLAG_DANGER_APPROACH = 0x20,
         SOUND_FLAG_ALLIES_ONLY = 0x40,
         SOUND_FLAG_PANIC_NPCS = 0x80,
-        SOUND_FLAG_SQUAD_ONLY = 0x100,
     };
 };

@@ -8,7 +8,7 @@
 
 namespace source2sdk::smartprops
 {
-    // Enumerator count: 3
+    // Enumerator count: 2
     // Alignment: 4
     // Size: 0x4
     enum class SmartPropChoiceSelectionMode_t : std::uint32_t
@@ -19,8 +19,5 @@ namespace source2sdk::smartprops
         // MPropertyFriendlyName "First"
         // MPropertyDescription "Pick the first valid choice. Selection criteria may be added to a choice to determine if it is valid."
         FIRST = 0x1,
-        // MPropertyFriendlyName "Specific"
-        // MPropertyDescription "Pick a choice specified by an additional authored value."
-        SPECIFIC = 0x2,
     };
 };

@@ -26,7 +26,7 @@ namespace source2sdk::modellib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x1c0
+    // Size: 0x1f8
     // Has VTable
     // Construct allowed
     // 
@@ -37,24 +37,24 @@ namespace source2sdk::modellib
     public:
         [[maybe_unused]] std::uint8_t pad_0x00[0x10]; // 0x0
         // m_sceneObjects has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<modellib::CSceneObjectData,1> m_sceneObjects;
-        char m_sceneObjects[0x68]; // 0x10        
+        // CUtlVectorFixedGrowable<modellib::CSceneObjectData> m_sceneObjects;
+        char m_sceneObjects[0x90]; // 0x10        
         // m_constraints has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVector<modellib::CBaseConstraint*> m_constraints;
-        char m_constraints[0x10]; // 0x78        
-        modellib::CRenderSkeleton m_skeleton; // 0x88        
-        [[maybe_unused]] std::uint8_t pad_0xd8[0xd0]; // 0xd8
-        modellib::DynamicMeshDeformParams_t m_meshDeformParams; // 0x1a8        
-        [[maybe_unused]] std::uint8_t pad_0x1b4[0x4]; // 0x1b4
-        modellib::CRenderGroom* m_pGroomData; // 0x1b8        
+        // CUtlVector<modellib::CBaseConstraint*> m_constraints;
+        char m_constraints[0x18]; // 0xa0        
+        modellib::CRenderSkeleton m_skeleton; // 0xb8        
+        [[maybe_unused]] std::uint8_t pad_0x108[0xd8]; // 0x108
+        modellib::DynamicMeshDeformParams_t m_meshDeformParams; // 0x1e0        
+        [[maybe_unused]] std::uint8_t pad_0x1ec[0x4]; // 0x1ec
+        modellib::CRenderGroom* m_pGroomData; // 0x1f0        
     };
     #pragma pack(pop)
     
     static_assert(offsetof(CRenderMesh, m_sceneObjects) == 0x10);
-    static_assert(offsetof(CRenderMesh, m_constraints) == 0x78);
-    static_assert(offsetof(CRenderMesh, m_skeleton) == 0x88);
-    static_assert(offsetof(CRenderMesh, m_meshDeformParams) == 0x1a8);
-    static_assert(offsetof(CRenderMesh, m_pGroomData) == 0x1b8);
+    static_assert(offsetof(CRenderMesh, m_constraints) == 0xa0);
+    static_assert(offsetof(CRenderMesh, m_skeleton) == 0xb8);
+    static_assert(offsetof(CRenderMesh, m_meshDeformParams) == 0x1e0);
+    static_assert(offsetof(CRenderMesh, m_pGroomData) == 0x1f0);
     
-    static_assert(sizeof(CRenderMesh) == 0x1c0);
+    static_assert(sizeof(CRenderMesh) == 0x1f8);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x510
+    // Size: 0x518
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -23,14 +23,14 @@ namespace source2sdk::server
     class CLogicRelay : public server::CLogicalEntity
     {
     public:
-        entity2::CEntityIOOutput m_OnTrigger; // 0x4b8        
-        entity2::CEntityIOOutput m_OnSpawn; // 0x4e0        
-        bool m_bDisabled; // 0x508        
-        bool m_bWaitForRefire; // 0x509        
-        bool m_bTriggerOnce; // 0x50a        
-        bool m_bFastRetrigger; // 0x50b        
-        bool m_bPassthoughCaller; // 0x50c        
-        [[maybe_unused]] std::uint8_t pad_0x50d[0x3];
+        entity2::CEntityIOOutput m_OnTrigger; // 0x4c0        
+        entity2::CEntityIOOutput m_OnSpawn; // 0x4e8        
+        bool m_bDisabled; // 0x510        
+        bool m_bWaitForRefire; // 0x511        
+        bool m_bTriggerOnce; // 0x512        
+        bool m_bFastRetrigger; // 0x513        
+        bool m_bPassthoughCaller; // 0x514        
+        [[maybe_unused]] std::uint8_t pad_0x515[0x3];
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -43,5 +43,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CLogicRelay because it is not a standard-layout class
-    static_assert(sizeof(CLogicRelay) == 0x510);
+    static_assert(sizeof(CLogicRelay) == 0x518);
 };

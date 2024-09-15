@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x250
+    // Size: 0x248
     // Has VTable
     // Construct allowed
     // 
@@ -24,19 +24,19 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x1c8        
+        int32_t m_nControlPointNumber; // 0x1c0        
         // metadata: MPropertyFriendlyName "use only bounding box"
-        bool m_bBoundBox; // 0x1cc        
+        bool m_bBoundBox; // 0x1c4        
         // metadata: MPropertyFriendlyName "cull outside instead of inside"
-        bool m_bCullOutside; // 0x1cd        
+        bool m_bCullOutside; // 0x1c5        
         // metadata: MPropertyFriendlyName "use bones instead of hitboxes"
-        bool m_bUseBones; // 0x1ce        
+        bool m_bUseBones; // 0x1c6        
         // metadata: MPropertyFriendlyName "hitbox set"
-        char m_HitboxSetName[128]; // 0x1cf        
-        [[maybe_unused]] std::uint8_t pad_0x24f[0x1];
+        char m_HitboxSetName[128]; // 0x1c7        
+        [[maybe_unused]] std::uint8_t pad_0x247[0x1];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_ModelCull because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_ModelCull) == 0x250);
+    static_assert(sizeof(C_INIT_ModelCull) == 0x248);
 };

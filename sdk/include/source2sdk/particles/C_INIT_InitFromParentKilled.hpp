@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x250
+    // Size: 0x248
     // Has VTable
     // Construct allowed
     // 
@@ -27,13 +27,13 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "field to init"
         // metadata: MPropertyAttributeChoiceName "particlefield"
-        particles::ParticleAttributeIndex_t m_nAttributeToCopy; // 0x1c8        
+        particles::ParticleAttributeIndex_t m_nAttributeToCopy; // 0x1c0        
         // metadata: MPropertyFriendlyName "event type"
-        particles::EventTypeSelection_t m_nEventType; // 0x1cc        
-        [[maybe_unused]] std::uint8_t pad_0x1d0[0x80];
+        particles::EventTypeSelection_t m_nEventType; // 0x1c4        
+        [[maybe_unused]] std::uint8_t pad_0x1c8[0x80];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_InitFromParentKilled because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_InitFromParentKilled) == 0x250);
+    static_assert(sizeof(C_INIT_InitFromParentKilled) == 0x248);
 };

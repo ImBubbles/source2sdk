@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d0
+    // Size: 0x1c8
     // Has VTable
     // Construct allowed
     // 
@@ -24,16 +24,16 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "maximum velocity"
-        float m_flMaxVelocity; // 0x1c0        
+        float m_flMaxVelocity; // 0x1b8        
         // metadata: MPropertyFriendlyName "minimum velocity"
-        float m_flMinVelocity; // 0x1c4        
+        float m_flMinVelocity; // 0x1bc        
         // metadata: MPropertyFriendlyName "override max velocity from this CP"
-        int32_t m_nOverrideCP; // 0x1c8        
+        int32_t m_nOverrideCP; // 0x1c0        
         // metadata: MPropertyFriendlyName "override CP field"
-        int32_t m_nOverrideCPField; // 0x1cc        
+        int32_t m_nOverrideCPField; // 0x1c4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_MaxVelocity because it is not a standard-layout class
-    static_assert(sizeof(C_OP_MaxVelocity) == 0x1d0);
+    static_assert(sizeof(C_OP_MaxVelocity) == 0x1c8);
 };

@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x968
+    // Size: 0x8f0
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,13 +22,13 @@ namespace source2sdk::server
     class CTriggerTeleport : public server::CBaseTrigger
     {
     public:
-        CUtlSymbolLarge m_iLandmark; // 0x958        
-        bool m_bUseLandmarkAngles; // 0x960        
-        bool m_bMirrorPlayer; // 0x961        
-        [[maybe_unused]] std::uint8_t pad_0x962[0x6];
+        CUtlSymbolLarge m_iLandmark; // 0x8e0        
+        bool m_bUseLandmarkAngles; // 0x8e8        
+        bool m_bMirrorPlayer; // 0x8e9        
+        [[maybe_unused]] std::uint8_t pad_0x8ea[0x6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTriggerTeleport because it is not a standard-layout class
-    static_assert(sizeof(CTriggerTeleport) == 0x968);
+    static_assert(sizeof(CTriggerTeleport) == 0x8f0);
 };

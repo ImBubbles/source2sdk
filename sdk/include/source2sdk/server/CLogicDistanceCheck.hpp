@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x548
+    // Size: 0x550
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -23,13 +23,13 @@ namespace source2sdk::server
     class CLogicDistanceCheck : public server::CLogicalEntity
     {
     public:
-        CUtlSymbolLarge m_iszEntityA; // 0x4b8        
-        CUtlSymbolLarge m_iszEntityB; // 0x4c0        
-        float m_flZone1Distance; // 0x4c8        
-        float m_flZone2Distance; // 0x4cc        
-        entity2::CEntityIOOutput m_InZone1; // 0x4d0        
-        entity2::CEntityIOOutput m_InZone2; // 0x4f8        
-        entity2::CEntityIOOutput m_InZone3; // 0x520        
+        CUtlSymbolLarge m_iszEntityA; // 0x4c0        
+        CUtlSymbolLarge m_iszEntityB; // 0x4c8        
+        float m_flZone1Distance; // 0x4d0        
+        float m_flZone2Distance; // 0x4d4        
+        entity2::CEntityIOOutput m_InZone1; // 0x4d8        
+        entity2::CEntityIOOutput m_InZone2; // 0x500        
+        entity2::CEntityIOOutput m_InZone3; // 0x528        
         
         // Datamap fields:
         // void InputCheckDistance; // 0x0
@@ -37,5 +37,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CLogicDistanceCheck because it is not a standard-layout class
-    static_assert(sizeof(CLogicDistanceCheck) == 0x548);
+    static_assert(sizeof(CLogicDistanceCheck) == 0x550);
 };

@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1f0
+    // Size: 0x1e8
     // Has VTable
     // Construct allowed
     // 
@@ -24,31 +24,31 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "input control point number"
-        int32_t m_nInputControlPoint; // 0x1c8        
+        int32_t m_nInputControlPoint; // 0x1c0        
         // metadata: MPropertyFriendlyName "output control point number"
-        int32_t m_nOutputControlPoint; // 0x1cc        
+        int32_t m_nOutputControlPoint; // 0x1c4        
         // metadata: MPropertyFriendlyName "input field"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nInputField; // 0x1d0        
+        int32_t m_nInputField; // 0x1c8        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nOutputField; // 0x1d4        
+        int32_t m_nOutputField; // 0x1cc        
         // metadata: MPropertyFriendlyName "input minimum"
-        float m_flInputMin; // 0x1d8        
+        float m_flInputMin; // 0x1d0        
         // metadata: MPropertyFriendlyName "input maximum"
-        float m_flInputMax; // 0x1dc        
+        float m_flInputMax; // 0x1d4        
         // metadata: MPropertyFriendlyName "output minimum"
-        float m_flOutputMin; // 0x1e0        
+        float m_flOutputMin; // 0x1d8        
         // metadata: MPropertyFriendlyName "output maximum"
-        float m_flOutputMax; // 0x1e4        
+        float m_flOutputMax; // 0x1dc        
         // metadata: MPropertyFriendlyName "use the derivative"
-        bool m_bDerivative; // 0x1e8        
-        [[maybe_unused]] std::uint8_t pad_0x1e9[0x3]; // 0x1e9
+        bool m_bDerivative; // 0x1e0        
+        [[maybe_unused]] std::uint8_t pad_0x1e1[0x3]; // 0x1e1
         // metadata: MPropertyFriendlyName "interpolation"
-        float m_flInterpRate; // 0x1ec        
+        float m_flInterpRate; // 0x1e4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapCPtoCP because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapCPtoCP) == 0x1f0);
+    static_assert(sizeof(C_OP_RemapCPtoCP) == 0x1e8);
 };

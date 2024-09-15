@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9b0
+    // Size: 0x980
     // Has VTable
     // Construct allowed
     // 
@@ -26,16 +26,16 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "force scale"
-        particleslib::CPerParticleFloatInput m_flForceScale; // 0x1d0        
+        particleslib::CPerParticleFloatInput m_flForceScale; // 0x1c8        
         // metadata: MPropertyFriendlyName "force to apply"
         // metadata: MVectorIsCoordinate
-        particleslib::CPerParticleVecInput m_vForce; // 0x330        
+        particleslib::CPerParticleVecInput m_vForce; // 0x320        
         // metadata: MPropertyFriendlyName "local space control point"
-        int32_t m_nCP; // 0x9a8        
-        [[maybe_unused]] std::uint8_t pad_0x9ac[0x4];
+        int32_t m_nCP; // 0x978        
+        [[maybe_unused]] std::uint8_t pad_0x97c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_PerParticleForce because it is not a standard-layout class
-    static_assert(sizeof(C_OP_PerParticleForce) == 0x9b0);
+    static_assert(sizeof(C_OP_PerParticleForce) == 0x980);
 };

@@ -1,6 +1,6 @@
 #pragma once
 #include "source2sdk/client/EntityDisolveType_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/server/CBaseModelEntity.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -16,7 +16,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7b8
+    // Size: 0x740
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -36,25 +36,25 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        float m_flFadeInStart; // 0x788        
+        float m_flFadeInStart; // 0x710        
         // metadata: MNetworkEnable
-        float m_flFadeInLength; // 0x78c        
+        float m_flFadeInLength; // 0x714        
         // metadata: MNetworkEnable
-        float m_flFadeOutModelStart; // 0x790        
+        float m_flFadeOutModelStart; // 0x718        
         // metadata: MNetworkEnable
-        float m_flFadeOutModelLength; // 0x794        
+        float m_flFadeOutModelLength; // 0x71c        
         // metadata: MNetworkEnable
-        float m_flFadeOutStart; // 0x798        
+        float m_flFadeOutStart; // 0x720        
         // metadata: MNetworkEnable
-        float m_flFadeOutLength; // 0x79c        
+        float m_flFadeOutLength; // 0x724        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartTime; // 0x7a0        
+        client::GameTime_t m_flStartTime; // 0x728        
         // metadata: MNetworkEnable
-        client::EntityDisolveType_t m_nDissolveType; // 0x7a4        
+        client::EntityDisolveType_t m_nDissolveType; // 0x72c        
         // metadata: MNetworkEnable
-        Vector m_vDissolverOrigin; // 0x7a8        
+        Vector m_vDissolverOrigin; // 0x730        
         // metadata: MNetworkEnable
-        uint32_t m_nMagnitude; // 0x7b4        
+        uint32_t m_nMagnitude; // 0x73c        
         
         // Datamap fields:
         // void CEntityDissolveDissolveThink; // 0x0
@@ -64,5 +64,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CEntityDissolve because it is not a standard-layout class
-    static_assert(sizeof(CEntityDissolve) == 0x7b8);
+    static_assert(sizeof(CEntityDissolve) == 0x740);
 };

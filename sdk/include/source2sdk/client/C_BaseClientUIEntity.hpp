@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x808
+    // Size: 0xcf8
     // Has VTable
     // Is Abstract
     // MNetworkAssumeNotNetworkable
@@ -27,20 +27,20 @@ namespace source2sdk::client
     class C_BaseClientUIEntity : public client::C_BaseModelEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x7d8[0x8]; // 0x7d8
+        [[maybe_unused]] std::uint8_t pad_0xcc8[0x8]; // 0xcc8
         // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x7e0        
-        [[maybe_unused]] std::uint8_t pad_0x7e1[0x7]; // 0x7e1
+        bool m_bEnabled; // 0xcd0        
+        [[maybe_unused]] std::uint8_t pad_0xcd1[0x7]; // 0xcd1
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_DialogXMLName; // 0x7e8        
+        CUtlSymbolLarge m_DialogXMLName; // 0xcd8        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_PanelClassName; // 0x7f0        
+        CUtlSymbolLarge m_PanelClassName; // 0xce0        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_PanelID; // 0x7f8        
-        [[maybe_unused]] std::uint8_t pad_0x800[0x8];
+        CUtlSymbolLarge m_PanelID; // 0xce8        
+        [[maybe_unused]] std::uint8_t pad_0xcf0[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_BaseClientUIEntity because it is not a standard-layout class
-    static_assert(sizeof(C_BaseClientUIEntity) == 0x808);
+    static_assert(sizeof(C_BaseClientUIEntity) == 0xcf8);
 };

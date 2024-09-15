@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/server/AISound_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -36,7 +36,7 @@ namespace source2sdk::server
         float m_flOcclusionScale; // 0xc        
         server::AISound_t m_Sound; // 0x10        
         int32_t m_iNextAudible; // 0x14        
-        entity2::GameTime_t m_flExpireTime; // 0x18        
+        client::GameTime_t m_flExpireTime; // 0x18        
         int16_t m_iNext; // 0x1c        
         bool m_bNoExpirationTime; // 0x1e        
         [[maybe_unused]] std::uint8_t pad_0x1f[0x1]; // 0x1f

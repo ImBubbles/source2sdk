@@ -14,19 +14,17 @@ namespace source2sdk::client
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0xa90
+    // Size: 0xa40
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MEntityAllowsPortraitWorldSpawn
     #pragma pack(push, 1)
     class C_GlobalLight : public client::C_BaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x538[0x528]; // 0x538
-        uint16_t m_WindClothForceHandle; // 0xa60        
-        [[maybe_unused]] std::uint8_t pad_0xa62[0x2e];
+        [[maybe_unused]] std::uint8_t pad_0x548[0x4c8]; // 0x548
+        uint16_t m_WindClothForceHandle; // 0xa10        
+        [[maybe_unused]] std::uint8_t pad_0xa12[0x2e];
         
         // Static fields:
         static client::C_GlobalLight* &Get_sm_pGlobalLight() {return *reinterpret_cast<client::C_GlobalLight**>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->GetStaticFields()[0]->m_pInstance);};
@@ -34,7 +32,7 @@ namespace source2sdk::client
         static CUtlVector<client::C_GlobalLight*> &Get_sm_nonPrimaryGlobalLights() {return *reinterpret_cast<CUtlVector<client::C_GlobalLight*>*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("C_GlobalLight")->GetStaticFields()[2]->m_pInstance);};
         
         // Datamap fields:
-        // CGlobalLightBase CGlobalLightBase; // 0x540
+        // CGlobalLightBase CGlobalLightBase; // 0x550
         // void InputTurnOn; // 0x0
         // void InputTurnOff; // 0x0
         // float InputSetLightScale; // 0x0
@@ -42,5 +40,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_GlobalLight because it is not a standard-layout class
-    static_assert(sizeof(C_GlobalLight) == 0xa90);
+    static_assert(sizeof(C_GlobalLight) == 0xa40);
 };

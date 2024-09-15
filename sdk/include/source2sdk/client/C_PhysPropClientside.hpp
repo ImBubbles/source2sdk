@@ -1,6 +1,6 @@
 #pragma once
 #include "source2sdk/client/C_BreakableProp.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9b0
+    // Size: 0x1068
     // Has VTable
     // Construct allowed
     // MClassHasEntityLimitedDataDesc
@@ -24,15 +24,15 @@ namespace source2sdk::client
     class C_PhysPropClientside : public client::C_BreakableProp
     {
     public:
-        entity2::GameTime_t m_flTouchDelta; // 0x988        
-        entity2::GameTime_t m_fDeathTime; // 0x98c        
-        float m_inertiaScale; // 0x990        
-        Vector m_vecDamagePosition; // 0x994        
-        Vector m_vecDamageDirection; // 0x9a0        
-        int32_t m_nDamageType; // 0x9ac        
+        client::GameTime_t m_flTouchDelta; // 0x1040        
+        client::GameTime_t m_fDeathTime; // 0x1044        
+        float m_inertiaScale; // 0x1048        
+        Vector m_vecDamagePosition; // 0x104c        
+        Vector m_vecDamageDirection; // 0x1058        
+        int32_t m_nDamageType; // 0x1064        
         
         // Datamap fields:
-        // float m_impactEnergyScale; // 0x8f8
+        // float m_impactEnergyScale; // 0xfc8
         // bool forcemotiondisabled; // 0x7fffffff
         // bool phys_start_asleep; // 0x7fffffff
         // float fademaxdist; // 0x7fffffff
@@ -44,5 +44,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_PhysPropClientside because it is not a standard-layout class
-    static_assert(sizeof(C_PhysPropClientside) == 0x9b0);
+    static_assert(sizeof(C_PhysPropClientside) == 0x1068);
 };

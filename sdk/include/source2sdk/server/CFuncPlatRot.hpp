@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x850
+    // Size: 0x7d8
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,11 +22,11 @@ namespace source2sdk::server
     class CFuncPlatRot : public server::CFuncPlat
     {
     public:
-        QAngle m_end; // 0x838        
-        QAngle m_start; // 0x844        
+        QAngle m_end; // 0x7c0        
+        QAngle m_start; // 0x7cc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CFuncPlatRot because it is not a standard-layout class
-    static_assert(sizeof(CFuncPlatRot) == 0x850);
+    static_assert(sizeof(CFuncPlatRot) == 0x7d8);
 };

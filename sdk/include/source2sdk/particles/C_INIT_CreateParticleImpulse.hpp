@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5f8
+    // Size: 0x5d8
     // Has VTable
     // Construct allowed
     // 
@@ -27,20 +27,20 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "radius"
-        particleslib::CPerParticleFloatInput m_InputRadius; // 0x1c8        
+        particleslib::CPerParticleFloatInput m_InputRadius; // 0x1c0        
         // metadata: MPropertyFriendlyName "magnitude"
-        particleslib::CPerParticleFloatInput m_InputMagnitude; // 0x328        
+        particleslib::CPerParticleFloatInput m_InputMagnitude; // 0x318        
         // metadata: MPropertyFriendlyName "force falloff function"
-        particles::ParticleFalloffFunction_t m_nFalloffFunction; // 0x488        
-        [[maybe_unused]] std::uint8_t pad_0x48c[0x4]; // 0x48c
+        particles::ParticleFalloffFunction_t m_nFalloffFunction; // 0x470        
+        [[maybe_unused]] std::uint8_t pad_0x474[0x4]; // 0x474
         // metadata: MPropertyFriendlyName "exponential falloff exponent"
-        particleslib::CPerParticleFloatInput m_InputFalloffExp; // 0x490        
+        particleslib::CPerParticleFloatInput m_InputFalloffExp; // 0x478        
         // metadata: MPropertyFriendlyName "impulse type"
-        particles::ParticleImpulseType_t m_nImpulseType; // 0x5f0        
-        [[maybe_unused]] std::uint8_t pad_0x5f4[0x4];
+        particles::ParticleImpulseType_t m_nImpulseType; // 0x5d0        
+        [[maybe_unused]] std::uint8_t pad_0x5d4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_CreateParticleImpulse because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_CreateParticleImpulse) == 0x5f8);
+    static_assert(sizeof(C_INIT_CreateParticleImpulse) == 0x5d8);
 };

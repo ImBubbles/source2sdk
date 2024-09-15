@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x518
+    // Size: 0x500
     // Has VTable
     // Construct allowed
     // 
@@ -27,23 +27,23 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "component scale"
         // metadata: MVectorIsCoordinate
-        Vector m_vecComponentScale; // 0x1d0        
-        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4]; // 0x1dc
+        Vector m_vecComponentScale; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4]; // 0x1d4
         // metadata: MPropertyFriendlyName "amount of force (or Max Force)"
-        particleslib::CPerParticleFloatInput m_fForceAmount; // 0x1e0        
+        particleslib::CPerParticleFloatInput m_fForceAmount; // 0x1d8        
         // metadata: MPropertyFriendlyName "falloff power"
-        float m_fFalloffPower; // 0x340        
-        [[maybe_unused]] std::uint8_t pad_0x344[0x4]; // 0x344
+        float m_fFalloffPower; // 0x330        
+        [[maybe_unused]] std::uint8_t pad_0x334[0x4]; // 0x334
         // metadata: MPropertyFriendlyName "input position transform"
-        particleslib::CParticleTransformInput m_TransformInput; // 0x348        
+        particleslib::CParticleTransformInput m_TransformInput; // 0x338        
         // metadata: MPropertyFriendlyName "Min Pullforce"
-        particleslib::CPerParticleFloatInput m_fForceAmountMin; // 0x3b0        
+        particleslib::CPerParticleFloatInput m_fForceAmountMin; // 0x3a0        
         // metadata: MPropertyFriendlyName "Apply Min Pullforce"
-        bool m_bApplyMinForce; // 0x510        
-        [[maybe_unused]] std::uint8_t pad_0x511[0x7];
+        bool m_bApplyMinForce; // 0x4f8        
+        [[maybe_unused]] std::uint8_t pad_0x4f9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_AttractToControlPoint because it is not a standard-layout class
-    static_assert(sizeof(C_OP_AttractToControlPoint) == 0x518);
+    static_assert(sizeof(C_OP_AttractToControlPoint) == 0x500);
 };

@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa08
+    // Size: 0x9d8
     // Has VTable
     // Construct allowed
     // 
@@ -28,17 +28,17 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "rotation axis"
         // metadata: MVectorIsCoordinate
-        particleslib::CParticleCollectionVecInput m_vecRotAxis; // 0x1c0        
+        particleslib::CParticleCollectionVecInput m_vecRotAxis; // 0x1b8        
         // metadata: MPropertyFriendlyName "rotation rate"
-        particleslib::CParticleCollectionFloatInput m_flRotRate; // 0x838        
+        particleslib::CParticleCollectionFloatInput m_flRotRate; // 0x810        
         // metadata: MPropertyFriendlyName "transform input"
-        particleslib::CParticleTransformInput m_TransformInput; // 0x998        
+        particleslib::CParticleTransformInput m_TransformInput; // 0x968        
         // metadata: MPropertyFriendlyName "use local space"
-        bool m_bLocalSpace; // 0xa00        
-        [[maybe_unused]] std::uint8_t pad_0xa01[0x7];
+        bool m_bLocalSpace; // 0x9d0        
+        [[maybe_unused]] std::uint8_t pad_0x9d1[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_MovementRotateParticleAroundAxis because it is not a standard-layout class
-    static_assert(sizeof(C_OP_MovementRotateParticleAroundAxis) == 0xa08);
+    static_assert(sizeof(C_OP_MovementRotateParticleAroundAxis) == 0x9d8);
 };

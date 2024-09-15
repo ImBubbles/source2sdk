@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e0
+    // Size: 0x1d8
     // Has VTable
     // Construct allowed
     // 
@@ -24,16 +24,16 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nCP1; // 0x1c8        
+        int32_t m_nCP1; // 0x1c0        
         // metadata: MPropertyFriendlyName "control point offset"
         // metadata: MVectorIsCoordinate
-        Vector m_vecCP1Pos; // 0x1cc        
+        Vector m_vecCP1Pos; // 0x1c4        
         // metadata: MPropertyFriendlyName "use eye orientation"
-        bool m_bOrientToEyes; // 0x1d8        
-        [[maybe_unused]] std::uint8_t pad_0x1d9[0x7];
+        bool m_bOrientToEyes; // 0x1d0        
+        [[maybe_unused]] std::uint8_t pad_0x1d1[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetControlPointToPlayer because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetControlPointToPlayer) == 0x1e0);
+    static_assert(sizeof(C_OP_SetControlPointToPlayer) == 0x1d8);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7c0
+    // Size: 0x798
     // Has VTable
     // Construct allowed
     // 
@@ -27,30 +27,30 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "first dimension 0-2 (-1 disables)"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nComponent1; // 0x1c8        
+        int32_t m_nComponent1; // 0x1c0        
         // metadata: MPropertyFriendlyName "second dimension 0-2 (-1 disables)"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nComponent2; // 0x1cc        
+        int32_t m_nComponent2; // 0x1c4        
         // metadata: MPropertyFriendlyName "input transform"
-        particleslib::CParticleTransformInput m_TransformInput; // 0x1d0        
+        particleslib::CParticleTransformInput m_TransformInput; // 0x1c8        
         // metadata: MPropertyFriendlyName "particle density"
-        particleslib::CPerParticleFloatInput m_flParticleDensity; // 0x238        
+        particleslib::CPerParticleFloatInput m_flParticleDensity; // 0x230        
         // metadata: MPropertyFriendlyName "point offset"
-        particleslib::CPerParticleFloatInput m_flOffset; // 0x398        
+        particleslib::CPerParticleFloatInput m_flOffset; // 0x388        
         // metadata: MPropertyFriendlyName "radius 1"
-        particleslib::CPerParticleFloatInput m_flRadius1; // 0x4f8        
+        particleslib::CPerParticleFloatInput m_flRadius1; // 0x4e0        
         // metadata: MPropertyFriendlyName "radius 2"
-        particleslib::CPerParticleFloatInput m_flRadius2; // 0x658        
+        particleslib::CPerParticleFloatInput m_flRadius2; // 0x638        
         // metadata: MPropertyFriendlyName "use particle count instead of creation time"
-        bool m_bUseCount; // 0x7b8        
+        bool m_bUseCount; // 0x790        
         // metadata: MPropertyFriendlyName "local space"
-        bool m_bUseLocalCoords; // 0x7b9        
+        bool m_bUseLocalCoords; // 0x791        
         // metadata: MPropertyFriendlyName "offset from existing position"
-        bool m_bOffsetExistingPos; // 0x7ba        
-        [[maybe_unused]] std::uint8_t pad_0x7bb[0x5];
+        bool m_bOffsetExistingPos; // 0x792        
+        [[maybe_unused]] std::uint8_t pad_0x793[0x5];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_CreateInEpitrochoid because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_CreateInEpitrochoid) == 0x7c0);
+    static_assert(sizeof(C_INIT_CreateInEpitrochoid) == 0x798);
 };

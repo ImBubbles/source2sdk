@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e8
+    // Size: 0x1e0
     // Has VTable
     // Construct allowed
     // 
@@ -26,15 +26,15 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1d8        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1d0        
         // metadata: MPropertyFriendlyName "output value at min distance"
-        float m_flMinOutputValue; // 0x1dc        
+        float m_flMinOutputValue; // 0x1d4        
         // metadata: MPropertyFriendlyName "output value at max distance"
-        float m_flMaxOutputValue; // 0x1e0        
-        [[maybe_unused]] std::uint8_t pad_0x1e4[0x4];
+        float m_flMaxOutputValue; // 0x1d8        
+        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapDistanceToLineSegmentToScalar because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapDistanceToLineSegmentToScalar) == 0x1e8);
+    static_assert(sizeof(C_OP_RemapDistanceToLineSegmentToScalar) == 0x1e0);
 };

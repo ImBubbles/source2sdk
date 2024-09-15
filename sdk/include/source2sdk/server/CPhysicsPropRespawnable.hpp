@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb28
+    // Size: 0xc20
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,12 +22,12 @@ namespace source2sdk::server
     class CPhysicsPropRespawnable : public server::CPhysicsProp
     {
     public:
-        Vector m_vOriginalSpawnOrigin; // 0xaf0        
-        QAngle m_vOriginalSpawnAngles; // 0xafc        
-        Vector m_vOriginalMins; // 0xb08        
-        Vector m_vOriginalMaxs; // 0xb14        
-        float m_flRespawnDuration; // 0xb20        
-        [[maybe_unused]] std::uint8_t pad_0xb24[0x4];
+        Vector m_vOriginalSpawnOrigin; // 0xbe8        
+        QAngle m_vOriginalSpawnAngles; // 0xbf4        
+        Vector m_vOriginalMins; // 0xc00        
+        Vector m_vOriginalMaxs; // 0xc0c        
+        float m_flRespawnDuration; // 0xc18        
+        [[maybe_unused]] std::uint8_t pad_0xc1c[0x4];
         
         // Datamap fields:
         // void CPhysicsPropRespawnableMaterialize; // 0x0
@@ -35,5 +35,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPhysicsPropRespawnable because it is not a standard-layout class
-    static_assert(sizeof(CPhysicsPropRespawnable) == 0xb28);
+    static_assert(sizeof(CPhysicsPropRespawnable) == 0xc20);
 };

@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9a8
+    // Size: 0x978
     // Has VTable
     // Construct allowed
     // 
@@ -27,19 +27,19 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point"
-        int32_t m_nCP; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
+        int32_t m_nCP; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4]; // 0x1bc
         // metadata: MPropertyFriendlyName "distance maximum"
-        particleslib::CParticleCollectionFloatInput m_flDistance; // 0x1c8        
+        particleslib::CParticleCollectionFloatInput m_flDistance; // 0x1c0        
         // metadata: MPropertyFriendlyName "component scale"
-        particleslib::CParticleCollectionVecInput m_vecScale; // 0x328        
+        particleslib::CParticleCollectionVecInput m_vecScale; // 0x318        
         // metadata: MPropertyFriendlyName "distance squared output attribute"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nDistSqrAttr; // 0x9a0        
-        [[maybe_unused]] std::uint8_t pad_0x9a4[0x4];
+        particles::ParticleAttributeIndex_t m_nDistSqrAttr; // 0x970        
+        [[maybe_unused]] std::uint8_t pad_0x974[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_MovementLoopInsideSphere because it is not a standard-layout class
-    static_assert(sizeof(C_OP_MovementLoopInsideSphere) == 0x9a8);
+    static_assert(sizeof(C_OP_MovementLoopInsideSphere) == 0x978);
 };

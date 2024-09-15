@@ -21,7 +21,6 @@ namespace source2sdk::smartprops
     // 
     // static metadata: MGetKV3ClassDefaults
     // static metadata: MPropertyFriendlyName "Model"
-    // static metadata: MPropertyDescription "Model Asset Variable"
     #pragma pack(push, 1)
     class CSmartPropVariable_Model : public smartprops::CSmartPropVariable
     {

@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1f8
+    // Size: 0x1f0
     // Has VTable
     // Construct allowed
     // 
@@ -26,31 +26,31 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
         // metadata: MPropertyFriendlyName "absolute value"
-        bool m_bAbsVal; // 0x1cc        
+        bool m_bAbsVal; // 0x1c4        
         // metadata: MPropertyFriendlyName "invert absolute value"
-        bool m_bAbsValInv; // 0x1cd        
-        [[maybe_unused]] std::uint8_t pad_0x1ce[0x2]; // 0x1ce
+        bool m_bAbsValInv; // 0x1c5        
+        [[maybe_unused]] std::uint8_t pad_0x1c6[0x2]; // 0x1c6
         // metadata: MPropertyFriendlyName "time coordinate offset"
-        float m_flOffset; // 0x1d0        
+        float m_flOffset; // 0x1c8        
         // metadata: MPropertyFriendlyName "output minimum"
-        float m_flOutputMin; // 0x1d4        
+        float m_flOutputMin; // 0x1cc        
         // metadata: MPropertyFriendlyName "output maximum"
-        float m_flOutputMax; // 0x1d8        
+        float m_flOutputMax; // 0x1d0        
         // metadata: MPropertyFriendlyName "time noise coordinate scale"
-        float m_flNoiseScale; // 0x1dc        
+        float m_flNoiseScale; // 0x1d4        
         // metadata: MPropertyFriendlyName "spatial noise coordinate scale"
-        float m_flNoiseScaleLoc; // 0x1e0        
+        float m_flNoiseScaleLoc; // 0x1d8        
         // metadata: MPropertyFriendlyName "spatial coordinate offset"
         // metadata: MVectorIsCoordinate
-        Vector m_vecOffsetLoc; // 0x1e4        
+        Vector m_vecOffsetLoc; // 0x1dc        
         // metadata: MPropertyFriendlyName "world time noise coordinate scale"
-        float m_flWorldTimeScale; // 0x1f0        
-        [[maybe_unused]] std::uint8_t pad_0x1f4[0x4];
+        float m_flWorldTimeScale; // 0x1e8        
+        [[maybe_unused]] std::uint8_t pad_0x1ec[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_CreationNoise because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_CreationNoise) == 0x1f8);
+    static_assert(sizeof(C_INIT_CreationNoise) == 0x1f0);
 };

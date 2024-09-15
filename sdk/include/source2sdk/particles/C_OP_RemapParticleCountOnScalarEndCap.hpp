@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e0
+    // Size: 0x1d8
     // Has VTable
     // Construct allowed
     // 
@@ -27,24 +27,24 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8        
         // metadata: MPropertyFriendlyName "input minimum"
-        int32_t m_nInputMin; // 0x1c4        
+        int32_t m_nInputMin; // 0x1bc        
         // metadata: MPropertyFriendlyName "input maximum"
-        int32_t m_nInputMax; // 0x1c8        
+        int32_t m_nInputMax; // 0x1c0        
         // metadata: MPropertyFriendlyName "output minimum"
-        float m_flOutputMin; // 0x1cc        
+        float m_flOutputMin; // 0x1c4        
         // metadata: MPropertyFriendlyName "output maximum"
-        float m_flOutputMax; // 0x1d0        
+        float m_flOutputMax; // 0x1c8        
         // metadata: MPropertyFriendlyName "count back from last particle"
-        bool m_bBackwards; // 0x1d4        
-        [[maybe_unused]] std::uint8_t pad_0x1d5[0x3]; // 0x1d5
+        bool m_bBackwards; // 0x1cc        
+        [[maybe_unused]] std::uint8_t pad_0x1cd[0x3]; // 0x1cd
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x1d8        
-        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4];
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x1d0        
+        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapParticleCountOnScalarEndCap because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapParticleCountOnScalarEndCap) == 0x1e0);
+    static_assert(sizeof(C_OP_RemapParticleCountOnScalarEndCap) == 0x1d8);
 };

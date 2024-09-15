@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x990
+    // Size: 0x918
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,11 +22,11 @@ namespace source2sdk::server
     class CScriptTriggerOnce : public server::CTriggerOnce
     {
     public:
-        Vector m_vExtent; // 0x980        
-        [[maybe_unused]] std::uint8_t pad_0x98c[0x4];
+        Vector m_vExtent; // 0x908        
+        [[maybe_unused]] std::uint8_t pad_0x914[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CScriptTriggerOnce because it is not a standard-layout class
-    static_assert(sizeof(CScriptTriggerOnce) == 0x990);
+    static_assert(sizeof(CScriptTriggerOnce) == 0x918);
 };

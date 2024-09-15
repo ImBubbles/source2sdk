@@ -13,7 +13,7 @@ namespace source2sdk::physicslib
     // Registered alignment: 0x2
     // Alignment: 0x2
     // Standard-layout class: true
-    // Size: 0xa
+    // Size: 0x8
     // Has Trivial Destructor
     // Construct allowed
     // 
@@ -25,16 +25,14 @@ namespace source2sdk::physicslib
         uint16_t m_nTaperedCapsuleRigidIndex; // 0x0        
         uint16_t m_nSphereRigidIndex; // 0x2        
         uint16_t m_nBoxRigidIndex; // 0x4        
-        uint16_t m_nSDFRigidIndex; // 0x6        
-        uint16_t m_nCollisionPlaneIndex; // 0x8        
+        uint16_t m_nCollisionPlaneIndex; // 0x6        
     };
     #pragma pack(pop)
     
     static_assert(offsetof(FeRigidColliderIndices_t, m_nTaperedCapsuleRigidIndex) == 0x0);
     static_assert(offsetof(FeRigidColliderIndices_t, m_nSphereRigidIndex) == 0x2);
     static_assert(offsetof(FeRigidColliderIndices_t, m_nBoxRigidIndex) == 0x4);
-    static_assert(offsetof(FeRigidColliderIndices_t, m_nSDFRigidIndex) == 0x6);
-    static_assert(offsetof(FeRigidColliderIndices_t, m_nCollisionPlaneIndex) == 0x8);
+    static_assert(offsetof(FeRigidColliderIndices_t, m_nCollisionPlaneIndex) == 0x6);
     
-    static_assert(sizeof(FeRigidColliderIndices_t) == 0xa);
+    static_assert(sizeof(FeRigidColliderIndices_t) == 0x8);
 };

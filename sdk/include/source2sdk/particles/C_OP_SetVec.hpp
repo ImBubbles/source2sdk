@@ -18,7 +18,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x9a8
+    // Size: 0x978
     // Has VTable
     // Construct allowed
     // 
@@ -28,20 +28,20 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "value"
-        particleslib::CPerParticleVecInput m_InputValue; // 0x1c0        
+        particleslib::CPerParticleVecInput m_InputValue; // 0x1b8        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0x838        
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0x810        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x83c        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x814        
         // metadata: MPropertyFriendlyName "interpolation"
-        particleslib::CPerParticleFloatInput m_Lerp; // 0x840        
+        particleslib::CPerParticleFloatInput m_Lerp; // 0x818        
         // metadata: MPropertyFriendlyName "normalize result"
-        bool m_bNormalizedOutput; // 0x9a0        
-        [[maybe_unused]] std::uint8_t pad_0x9a1[0x7];
+        bool m_bNormalizedOutput; // 0x970        
+        [[maybe_unused]] std::uint8_t pad_0x971[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetVec because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetVec) == 0x9a8);
+    static_assert(sizeof(C_OP_SetVec) == 0x978);
 };

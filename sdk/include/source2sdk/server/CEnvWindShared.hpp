@@ -1,6 +1,6 @@
 #pragma once
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -9,11 +9,6 @@
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
-
-namespace source2sdk::server
-{
-    class CBaseEntity;
-};
 
 namespace source2sdk::server
 {
@@ -45,7 +40,7 @@ namespace source2sdk::server
     public:
         [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartTime; // 0x8        
+        client::GameTime_t m_flStartTime; // 0x8        
         // metadata: MNetworkEnable
         uint32_t m_iWindSeed; // 0xc        
         // metadata: MNetworkEnable
@@ -83,18 +78,16 @@ namespace source2sdk::server
         float m_flInitialWindSpeed; // 0x6c        
         entity2::CEntityIOOutput m_OnGustStart; // 0x70        
         entity2::CEntityIOOutput m_OnGustEnd; // 0x98        
-        entity2::GameTime_t m_flVariationTime; // 0xc0        
-        entity2::GameTime_t m_flSwayTime; // 0xc4        
-        entity2::GameTime_t m_flSimTime; // 0xc8        
-        entity2::GameTime_t m_flSwitchTime; // 0xcc        
+        client::GameTime_t m_flVariationTime; // 0xc0        
+        client::GameTime_t m_flSwayTime; // 0xc4        
+        client::GameTime_t m_flSimTime; // 0xc8        
+        client::GameTime_t m_flSwitchTime; // 0xcc        
         float m_flAveWindSpeed; // 0xd0        
         bool m_bGusting; // 0xd4        
         [[maybe_unused]] std::uint8_t pad_0xd5[0x3]; // 0xd5
         float m_flWindAngleVariation; // 0xd8        
         float m_flWindSpeedVariation; // 0xdc        
-        // m_hEntOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hEntOwner;
-        char m_hEntOwner[0x4]; // 0xe0        
+        CEntityIndex m_iEntIndex; // 0xe0        
         [[maybe_unused]] std::uint8_t pad_0xe4[0x174];
     };
     #pragma pack(pop)
@@ -129,7 +122,7 @@ namespace source2sdk::server
     static_assert(offsetof(CEnvWindShared, m_bGusting) == 0xd4);
     static_assert(offsetof(CEnvWindShared, m_flWindAngleVariation) == 0xd8);
     static_assert(offsetof(CEnvWindShared, m_flWindSpeedVariation) == 0xdc);
-    static_assert(offsetof(CEnvWindShared, m_hEntOwner) == 0xe0);
+    static_assert(offsetof(CEnvWindShared, m_iEntIndex) == 0xe0);
     
     static_assert(sizeof(CEnvWindShared) == 0x258);
 };

@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5f0
+    // Size: 0x5d0
     // Has VTable
     // Construct allowed
     // 
@@ -26,20 +26,20 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "input value"
-        particleslib::CPerParticleFloatInput m_flInput; // 0x1c0        
+        particleslib::CPerParticleFloatInput m_flInput; // 0x1b8        
         // metadata: MPropertyFriendlyName "rising edge value"
-        particleslib::CPerParticleFloatInput m_flRisingEdge; // 0x320        
+        particleslib::CPerParticleFloatInput m_flRisingEdge; // 0x310        
         // metadata: MPropertyFriendlyName "rising edge event type"
-        particles::EventTypeSelection_t m_nRisingEventType; // 0x480        
-        [[maybe_unused]] std::uint8_t pad_0x484[0x4]; // 0x484
+        particles::EventTypeSelection_t m_nRisingEventType; // 0x468        
+        [[maybe_unused]] std::uint8_t pad_0x46c[0x4]; // 0x46c
         // metadata: MPropertyFriendlyName "falling edge value"
-        particleslib::CPerParticleFloatInput m_flFallingEdge; // 0x488        
+        particleslib::CPerParticleFloatInput m_flFallingEdge; // 0x470        
         // metadata: MPropertyFriendlyName "falling edge event type"
-        particles::EventTypeSelection_t m_nFallingEventType; // 0x5e8        
-        [[maybe_unused]] std::uint8_t pad_0x5ec[0x4];
+        particles::EventTypeSelection_t m_nFallingEventType; // 0x5c8        
+        [[maybe_unused]] std::uint8_t pad_0x5cc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetUserEvent because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetUserEvent) == 0x5f0);
+    static_assert(sizeof(C_OP_SetUserEvent) == 0x5d0);
 };

@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x210
+    // Size: 0x208
     // Has VTable
     // Construct allowed
     // 
@@ -24,28 +24,28 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "noise scale 0"
-        float m_flNoiseCoordScale0; // 0x1d0        
+        float m_flNoiseCoordScale0; // 0x1c8        
         // metadata: MPropertyFriendlyName "noise scale 1"
-        float m_flNoiseCoordScale1; // 0x1d4        
+        float m_flNoiseCoordScale1; // 0x1cc        
         // metadata: MPropertyFriendlyName "noise scale 2"
-        float m_flNoiseCoordScale2; // 0x1d8        
+        float m_flNoiseCoordScale2; // 0x1d0        
         // metadata: MPropertyFriendlyName "noise scale 3"
-        float m_flNoiseCoordScale3; // 0x1dc        
+        float m_flNoiseCoordScale3; // 0x1d4        
         // metadata: MPropertyFriendlyName "noise amount 0"
         // metadata: MVectorIsCoordinate
-        Vector m_vecNoiseAmount0; // 0x1e0        
+        Vector m_vecNoiseAmount0; // 0x1d8        
         // metadata: MPropertyFriendlyName "noise amount 1"
         // metadata: MVectorIsCoordinate
-        Vector m_vecNoiseAmount1; // 0x1ec        
+        Vector m_vecNoiseAmount1; // 0x1e4        
         // metadata: MPropertyFriendlyName "noise amount 2"
         // metadata: MVectorIsCoordinate
-        Vector m_vecNoiseAmount2; // 0x1f8        
+        Vector m_vecNoiseAmount2; // 0x1f0        
         // metadata: MPropertyFriendlyName "noise amount 3"
         // metadata: MVectorIsCoordinate
-        Vector m_vecNoiseAmount3; // 0x204        
+        Vector m_vecNoiseAmount3; // 0x1fc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_TurbulenceForce because it is not a standard-layout class
-    static_assert(sizeof(C_OP_TurbulenceForce) == 0x210);
+    static_assert(sizeof(C_OP_TurbulenceForce) == 0x208);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::animlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x130
+    // Size: 0x120
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -43,11 +43,7 @@ namespace source2sdk::animlib
         // m_externalGraphSlots has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<animlib::CNmGraphDefinition__ExternalGraphSlot_t> m_externalGraphSlots;
         char m_externalGraphSlots[0x18]; // 0x80        
-        [[maybe_unused]] std::uint8_t pad_0x98[0x70]; // 0x98
-        // m_nodePaths has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<CUtlString> m_nodePaths;
-        char m_nodePaths[0x18]; // 0x108        
-        V_uuid_t m_runtimeVersionID; // 0x120        
+        [[maybe_unused]] std::uint8_t pad_0x98[0x88];
     };
     #pragma pack(pop)
     
@@ -58,8 +54,6 @@ namespace source2sdk::animlib
     static_assert(offsetof(CNmGraphDefinition, m_virtualParameterNodeIndices) == 0x50);
     static_assert(offsetof(CNmGraphDefinition, m_childGraphSlots) == 0x68);
     static_assert(offsetof(CNmGraphDefinition, m_externalGraphSlots) == 0x80);
-    static_assert(offsetof(CNmGraphDefinition, m_nodePaths) == 0x108);
-    static_assert(offsetof(CNmGraphDefinition, m_runtimeVersionID) == 0x120);
     
-    static_assert(sizeof(CNmGraphDefinition) == 0x130);
+    static_assert(sizeof(CNmGraphDefinition) == 0x120);
 };

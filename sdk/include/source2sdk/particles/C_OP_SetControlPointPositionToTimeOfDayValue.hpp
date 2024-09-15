@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x260
+    // Size: 0x258
     // Has VTable
     // Construct allowed
     // 
@@ -24,15 +24,15 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x1c8        
+        int32_t m_nControlPointNumber; // 0x1c0        
         // metadata: MPropertyFriendlyName "time-of-day parameter"
-        char m_pszTimeOfDayParameter[128]; // 0x1cc        
+        char m_pszTimeOfDayParameter[128]; // 0x1c4        
         // metadata: MPropertyFriendlyName "default value"
-        Vector m_vecDefaultValue; // 0x24c        
-        [[maybe_unused]] std::uint8_t pad_0x258[0x8];
+        Vector m_vecDefaultValue; // 0x244        
+        [[maybe_unused]] std::uint8_t pad_0x250[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetControlPointPositionToTimeOfDayValue because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetControlPointPositionToTimeOfDayValue) == 0x260);
+    static_assert(sizeof(C_OP_SetControlPointPositionToTimeOfDayValue) == 0x258);
 };

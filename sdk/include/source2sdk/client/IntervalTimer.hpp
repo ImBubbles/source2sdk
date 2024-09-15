@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -28,7 +28,7 @@ namespace source2sdk::client
     public:
         [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_timestamp; // 0x8        
+        client::GameTime_t m_timestamp; // 0x8        
         // metadata: MNetworkEnable
         WorldGroupId_t m_nWorldGroupId; // 0xc        
     };

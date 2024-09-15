@@ -14,7 +14,7 @@ namespace source2sdk::pulse_runtime_lib
     // Registered alignment: unknown
     // Alignment: 0x4
     // Standard-layout class: false
-    // Size: 0xb0
+    // Size: 0xa8
     // Has VTable
     // 
     // static metadata: MPulseLibraryBindings
@@ -23,11 +23,11 @@ namespace source2sdk::pulse_runtime_lib
     class CTestDomainDerived_Cursor : public pulse_runtime_lib::CPulseExecCursor
     {
     public:
-        int32_t m_nCursorValueA; // 0xa8        
-        int32_t m_nCursorValueB; // 0xac        
+        int32_t m_nCursorValueA; // 0xa0        
+        int32_t m_nCursorValueB; // 0xa4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTestDomainDerived_Cursor because it is not a standard-layout class
-    static_assert(sizeof(CTestDomainDerived_Cursor) == 0xb0);
+    static_assert(sizeof(CTestDomainDerived_Cursor) == 0xa8);
 };

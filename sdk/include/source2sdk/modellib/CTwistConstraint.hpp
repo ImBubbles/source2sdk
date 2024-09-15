@@ -14,7 +14,7 @@ namespace source2sdk::modellib
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x90
+    // Size: 0xa0
     // Has VTable
     // Construct allowed
     // 
@@ -23,13 +23,13 @@ namespace source2sdk::modellib
     class CTwistConstraint : public modellib::CBaseConstraint
     {
     public:
-        bool m_bInverse; // 0x68        
-        [[maybe_unused]] std::uint8_t pad_0x69[0x7]; // 0x69
-        Quaternion m_qParentBindRotation; // 0x70        
-        Quaternion m_qChildBindRotation; // 0x80        
+        bool m_bInverse; // 0x70        
+        [[maybe_unused]] std::uint8_t pad_0x71[0xf]; // 0x71
+        Quaternion m_qParentBindRotation; // 0x80        
+        Quaternion m_qChildBindRotation; // 0x90        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTwistConstraint because it is not a standard-layout class
-    static_assert(sizeof(CTwistConstraint) == 0x90);
+    static_assert(sizeof(CTwistConstraint) == 0xa0);
 };

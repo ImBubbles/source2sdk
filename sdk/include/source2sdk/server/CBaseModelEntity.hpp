@@ -1,9 +1,9 @@
 #pragma once
 #include "source2sdk/client/CNetworkViewOffsetVector.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/RenderFx_t.hpp"
 #include "source2sdk/client/RenderMode_t.hpp"
 #include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CBaseEntity.hpp"
 #include "source2sdk/server/CCollisionProperty.hpp"
 #include "source2sdk/server/CGlowProperty.hpp"
@@ -28,7 +28,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x788
+    // Size: 0x710
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -40,7 +40,6 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "Color m_clrRender"
     // static metadata: MNetworkVarNames "EntityRenderAttribute_t m_vecRenderAttributes"
     // static metadata: MNetworkVarNames "bool m_bRenderToCubemaps"
-    // static metadata: MNetworkVarNames "bool m_bNoInterpolate"
     // static metadata: MNetworkVarNames "CCollisionProperty m_Collision"
     // static metadata: MNetworkVarNames "CGlowProperty m_Glow"
     // static metadata: MNetworkVarNames "float m_flGlowBackfaceMult"
@@ -64,77 +63,69 @@ namespace source2sdk::server
         // metadata: MNetworkUserGroup "CRenderComponent"
         // metadata: MNetworkAlias "CRenderComponent"
         // metadata: MNetworkTypeAlias "CRenderComponent"
-        server::CRenderComponent* m_CRenderComponent; // 0x4b8        
+        server::CRenderComponent* m_CRenderComponent; // 0x4c0        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "CHitboxComponent"
         // metadata: MNetworkAlias "CHitboxComponent"
         // metadata: MNetworkTypeAlias "CHitboxComponent"
-        server::CHitboxComponent m_CHitboxComponent; // 0x4c0        
-        entity2::GameTime_t m_flDissolveStartTime; // 0x4e8        
-        [[maybe_unused]] std::uint8_t pad_0x4ec[0x4]; // 0x4ec
-        entity2::CEntityIOOutput m_OnIgnite; // 0x4f0        
-        int32_t m_iViewerID; // 0x518        
-        [[maybe_unused]] std::uint8_t pad_0x51c[0x44]; // 0x51c
-        int32_t m_iTeamVisibilityBitmask; // 0x560        
+        server::CHitboxComponent m_CHitboxComponent; // 0x4c8        
+        client::GameTime_t m_flDissolveStartTime; // 0x4f0        
+        [[maybe_unused]] std::uint8_t pad_0x4f4[0x4]; // 0x4f4
+        entity2::CEntityIOOutput m_OnIgnite; // 0x4f8        
         // metadata: MNetworkEnable
-        client::RenderMode_t m_nRenderMode; // 0x564        
-        bool m_bVisibilityDirtyFlag; // 0x565        
-        int16_t m_iFOWTempViewerID[10]; // 0x566        
+        client::RenderMode_t m_nRenderMode; // 0x520        
         // metadata: MNetworkEnable
-        client::RenderFx_t m_nRenderFX; // 0x57a        
-        bool m_bAllowFadeInView; // 0x57b        
-        [[maybe_unused]] std::uint8_t pad_0x57c[0x1c]; // 0x57c
+        client::RenderFx_t m_nRenderFX; // 0x521        
+        bool m_bAllowFadeInView; // 0x522        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnColorChanged"
-        Color m_clrRender; // 0x598        
-        [[maybe_unused]] std::uint8_t pad_0x59c[0x4]; // 0x59c
+        Color m_clrRender; // 0x523        
+        [[maybe_unused]] std::uint8_t pad_0x527[0x1]; // 0x527
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnRenderAttributesChanged"
         // m_vecRenderAttributes has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVectorEmbeddedNetworkVar<server::EntityRenderAttribute_t> m_vecRenderAttributes;
-        char m_vecRenderAttributes[0x50]; // 0x5a0        
+        char m_vecRenderAttributes[0x50]; // 0x528        
         // metadata: MNetworkEnable
-        bool m_bRenderToCubemaps; // 0x5f0        
+        bool m_bRenderToCubemaps; // 0x578        
+        [[maybe_unused]] std::uint8_t pad_0x579[0x7]; // 0x579
         // metadata: MNetworkEnable
-        bool m_bNoInterpolate; // 0x5f1        
-        [[maybe_unused]] std::uint8_t pad_0x5f2[0x6]; // 0x5f2
+        server::CCollisionProperty m_Collision; // 0x580        
         // metadata: MNetworkEnable
-        server::CCollisionProperty m_Collision; // 0x5f8        
+        server::CGlowProperty m_Glow; // 0x630        
         // metadata: MNetworkEnable
-        server::CGlowProperty m_Glow; // 0x6a8        
+        float m_flGlowBackfaceMult; // 0x688        
         // metadata: MNetworkEnable
-        float m_flGlowBackfaceMult; // 0x700        
+        float m_fadeMinDist; // 0x68c        
         // metadata: MNetworkEnable
-        float m_fadeMinDist; // 0x704        
+        float m_fadeMaxDist; // 0x690        
         // metadata: MNetworkEnable
-        float m_fadeMaxDist; // 0x708        
+        float m_flFadeScale; // 0x694        
         // metadata: MNetworkEnable
-        float m_flFadeScale; // 0x70c        
+        float m_flShadowStrength; // 0x698        
         // metadata: MNetworkEnable
-        float m_flShadowStrength; // 0x710        
+        uint8_t m_nObjectCulling; // 0x69c        
+        [[maybe_unused]] std::uint8_t pad_0x69d[0x3]; // 0x69d
         // metadata: MNetworkEnable
-        uint8_t m_nObjectCulling; // 0x714        
-        [[maybe_unused]] std::uint8_t pad_0x715[0x3]; // 0x715
+        int32_t m_nAddDecal; // 0x6a0        
         // metadata: MNetworkEnable
-        int32_t m_nAddDecal; // 0x718        
+        Vector m_vDecalPosition; // 0x6a4        
         // metadata: MNetworkEnable
-        Vector m_vDecalPosition; // 0x71c        
+        Vector m_vDecalForwardAxis; // 0x6b0        
         // metadata: MNetworkEnable
-        Vector m_vDecalForwardAxis; // 0x728        
+        float m_flDecalHealBloodRate; // 0x6bc        
         // metadata: MNetworkEnable
-        float m_flDecalHealBloodRate; // 0x734        
-        // metadata: MNetworkEnable
-        float m_flDecalHealHeightRate; // 0x738        
-        [[maybe_unused]] std::uint8_t pad_0x73c[0x4]; // 0x73c
+        float m_flDecalHealHeightRate; // 0x6c0        
+        [[maybe_unused]] std::uint8_t pad_0x6c4[0x4]; // 0x6c4
         // metadata: MNetworkEnable
         // m_ConfigEntitiesToPropagateMaterialDecalsTo has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<CHandle<server::CBaseModelEntity>> m_ConfigEntitiesToPropagateMaterialDecalsTo;
-        char m_ConfigEntitiesToPropagateMaterialDecalsTo[0x18]; // 0x740        
+        char m_ConfigEntitiesToPropagateMaterialDecalsTo[0x18]; // 0x6c8        
         // metadata: MNetworkEnable
         // metadata: MNetworkPriority "32"
         // metadata: MNetworkUserGroup "Player"
-        client::CNetworkViewOffsetVector m_vecViewOffset; // 0x758        
-        [[maybe_unused]] std::uint8_t pad_0x780[0x8];
+        client::CNetworkViewOffsetVector m_vecViewOffset; // 0x6e0        
+        [[maybe_unused]] std::uint8_t pad_0x708[0x8];
         
         // Datamap fields:
         // int32_t InputAlpha; // 0x0
@@ -155,7 +146,6 @@ namespace source2sdk::server
         // void CBaseModelEntitySUB_StartShadowFadeIn; // 0x0
         // void CBaseModelEntitySUB_PerformShadowFadeIn; // 0x0
         // void CBaseModelEntitySUB_StopShadowFade; // 0x0
-        // void m_iFOWTempViewerID; // 0x566
         // Color rendercolor32; // 0x7fffffff
         // Color rendercolor; // 0x7fffffff
         // int32_t renderamt; // 0x7fffffff
@@ -167,5 +157,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBaseModelEntity because it is not a standard-layout class
-    static_assert(sizeof(CBaseModelEntity) == 0x788);
+    static_assert(sizeof(CBaseModelEntity) == 0x710);
 };

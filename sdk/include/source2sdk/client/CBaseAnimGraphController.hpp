@@ -1,9 +1,10 @@
 #pragma once
 #include "source2sdk/animationsystem/HSequence.hpp"
 #include "source2sdk/client/AnimLoopMode_t.hpp"
+#include "source2sdk/client/CAnimGraphNetworkedVariables.hpp"
 #include "source2sdk/client/CSkeletonAnimationController.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/SequenceFinishNotifyState_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -18,9 +19,10 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x3c8
+    // Size: 0x1858
     // Has VTable
     // 
+    // static metadata: MNetworkVarNames "CAnimGraphNetworkedVariables m_animGraphNetworkedVars"
     // static metadata: MNetworkVarNames "HSequence m_hSequence"
     // static metadata: MNetworkVarNames "GameTime_t m_flSeqStartTime"
     // static metadata: MNetworkVarNames "float m_flSeqFixedCycle"
@@ -30,60 +32,62 @@ namespace source2sdk::client
     {
     public:
         [[maybe_unused]] std::uint8_t pad_0x10[0x8]; // 0x10
+        // metadata: MNetworkEnable
+        client::CAnimGraphNetworkedVariables m_animGraphNetworkedVars; // 0x18        
         // metadata: MNetworkDisable
-        bool m_bSequenceFinished; // 0x18        
-        [[maybe_unused]] std::uint8_t pad_0x19[0x3]; // 0x19
+        bool m_bSequenceFinished; // 0x14a8        
+        [[maybe_unused]] std::uint8_t pad_0x14a9[0x3]; // 0x14a9
         // metadata: MNetworkDisable
-        float m_flSoundSyncTime; // 0x1c        
+        float m_flSoundSyncTime; // 0x14ac        
         // metadata: MNetworkDisable
-        uint32_t m_nActiveIKChainMask; // 0x20        
+        uint32_t m_nActiveIKChainMask; // 0x14b0        
         // metadata: MNetworkEnable
         // metadata: MNetworkSerializer "minusone"
         // metadata: MNetworkChangeCallback "OnNetworkedSequenceChanged"
         // metadata: MNetworkPriority "32"
-        animationsystem::HSequence m_hSequence; // 0x24        
+        animationsystem::HSequence m_hSequence; // 0x14b4        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnNetworkedAnimationChanged"
         // metadata: MNetworkPriority "32"
-        entity2::GameTime_t m_flSeqStartTime; // 0x28        
+        client::GameTime_t m_flSeqStartTime; // 0x14b8        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnNetworkedAnimationChanged"
         // metadata: MNetworkPriority "32"
-        float m_flSeqFixedCycle; // 0x2c        
+        float m_flSeqFixedCycle; // 0x14bc        
         // metadata: MNetworkEnable
         // metadata: MNetworkChangeCallback "OnNetworkedAnimationChanged"
         // metadata: MNetworkPriority "32"
-        client::AnimLoopMode_t m_nAnimLoopMode; // 0x30        
+        client::AnimLoopMode_t m_nAnimLoopMode; // 0x14c0        
         // metadata: MNetworkEnable
-        // metadata: MNetworkBitCount "10"
-        // metadata: MNetworkMinValue "0,000000"
-        // metadata: MNetworkMaxValue "5,000000"
-        // metadata: MNetworkEncodeFlags "8"
+        // metadata: MNetworkBitCount "8"
+        // metadata: MNetworkMinValue "-4,000000"
+        // metadata: MNetworkMaxValue "12,000000"
+        // metadata: MNetworkEncodeFlags "5"
         // metadata: MNetworkPriority "32"
         // metadata: MNetworkChangeCallback "OnNetworkedAnimationChanged"
-        CNetworkedQuantizedFloat m_flPlaybackRate; // 0x34        
-        [[maybe_unused]] std::uint8_t pad_0x3c[0x4]; // 0x3c
+        CNetworkedQuantizedFloat m_flPlaybackRate; // 0x14c4        
+        [[maybe_unused]] std::uint8_t pad_0x14cc[0x4]; // 0x14cc
         // metadata: MNetworkDisable
-        client::SequenceFinishNotifyState_t m_nNotifyState; // 0x40        
-        [[maybe_unused]] std::uint8_t pad_0x41[0x1]; // 0x41
+        client::SequenceFinishNotifyState_t m_nNotifyState; // 0x14d0        
+        [[maybe_unused]] std::uint8_t pad_0x14d1[0x1]; // 0x14d1
         // metadata: MNetworkDisable
-        bool m_bNetworkedAnimationInputsChanged; // 0x42        
+        bool m_bNetworkedAnimationInputsChanged; // 0x14d2        
         // metadata: MNetworkDisable
-        bool m_bNetworkedSequenceChanged; // 0x43        
+        bool m_bNetworkedSequenceChanged; // 0x14d3        
         // metadata: MNetworkDisable
-        bool m_bLastUpdateSkipped; // 0x44        
-        [[maybe_unused]] std::uint8_t pad_0x45[0x3]; // 0x45
+        bool m_bLastUpdateSkipped; // 0x14d4        
+        [[maybe_unused]] std::uint8_t pad_0x14d5[0x3]; // 0x14d5
         // metadata: MNetworkDisable
-        entity2::GameTime_t m_flPrevAnimUpdateTime; // 0x48        
-        [[maybe_unused]] std::uint8_t pad_0x4c[0x37c];
+        client::GameTime_t m_flPrevAnimUpdateTime; // 0x14d8        
+        [[maybe_unused]] std::uint8_t pad_0x14dc[0x37c];
         
         // Datamap fields:
-        // void m_pAnimGraphInstance; // 0x2e8
-        // float m_flCachedSequenceCycleRate; // 0x3c
-        // void m_iv_AnimOpHistory; // 0x378
+        // void m_pAnimGraphInstance; // 0x1778
+        // float m_flCachedSequenceCycleRate; // 0x14cc
+        // void m_iv_AnimOpHistory; // 0x1808
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBaseAnimGraphController because it is not a standard-layout class
-    static_assert(sizeof(CBaseAnimGraphController) == 0x3c8);
+    static_assert(sizeof(CBaseAnimGraphController) == 0x1858);
 };

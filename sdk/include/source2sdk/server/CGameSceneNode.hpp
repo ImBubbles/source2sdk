@@ -58,6 +58,7 @@ namespace source2sdk::server
         client::CNetworkOriginCellCoordQuantizedVector m_vecOrigin; // 0x88        
         [[maybe_unused]] std::uint8_t pad_0xb8[0x8]; // 0xb8
         // metadata: MNetworkEnable
+        // metadata: MNetworkEncoder "qangle_precise"
         // metadata: MNetworkPriority "32"
         // metadata: MNetworkSerializer "gameSceneNodeStepSimulationAnglesSerializer"
         // metadata: MNetworkChangeCallback "gameSceneNodeLocalAnglesChanged"

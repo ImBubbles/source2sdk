@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e8
+    // Size: 0x1e0
     // Has VTable
     // Construct allowed
     // 
@@ -24,21 +24,21 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "source Control Point in World"
-        int32_t m_nCPIn; // 0x1c8        
+        int32_t m_nCPIn; // 0x1c0        
         // metadata: MPropertyFriendlyName "Source Control Point offset"
         // metadata: MVectorIsCoordinate
-        Vector m_vecCP1Pos; // 0x1cc        
+        Vector m_vecCP1Pos; // 0x1c4        
         // metadata: MPropertyFriendlyName "Set control point number"
-        int32_t m_nCPOut; // 0x1d8        
+        int32_t m_nCPOut; // 0x1d0        
         // metadata: MPropertyFriendlyName "Output field 0-2 X/Y/Z"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nCPOutField; // 0x1dc        
+        int32_t m_nCPOutField; // 0x1d4        
         // metadata: MPropertyFriendlyName "Ss Pos and Dot OUT CP"
-        int32_t m_nCPSSPosOut; // 0x1e0        
-        [[maybe_unused]] std::uint8_t pad_0x1e4[0x4];
+        int32_t m_nCPSSPosOut; // 0x1d8        
+        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ControlPointToRadialScreenSpace because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ControlPointToRadialScreenSpace) == 0x1e8);
+    static_assert(sizeof(C_OP_ControlPointToRadialScreenSpace) == 0x1e0);
 };

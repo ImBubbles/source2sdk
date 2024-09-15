@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x490
+    // Size: 0x478
     // Has VTable
     // Construct allowed
     // 
@@ -27,17 +27,17 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "value"
-        particleslib::CPerParticleFloatInput m_InputValue; // 0x1c8        
+        particleslib::CPerParticleFloatInput m_InputValue; // 0x1c0        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0x328        
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0x318        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x32c        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x31c        
         // metadata: MPropertyFriendlyName "per-particle strength"
-        particleslib::CPerParticleFloatInput m_InputStrength; // 0x330        
+        particleslib::CPerParticleFloatInput m_InputStrength; // 0x320        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_InitFloat because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_InitFloat) == 0x490);
+    static_assert(sizeof(C_INIT_InitFloat) == 0x478);
 };

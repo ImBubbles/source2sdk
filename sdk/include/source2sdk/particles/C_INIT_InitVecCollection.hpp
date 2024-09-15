@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x848
+    // Size: 0x820
     // Has VTable
     // Construct allowed
     // 
@@ -26,14 +26,14 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "value"
-        particleslib::CParticleCollectionVecInput m_InputValue; // 0x1c8        
+        particleslib::CParticleCollectionVecInput m_InputValue; // 0x1c0        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0x840        
-        [[maybe_unused]] std::uint8_t pad_0x844[0x4];
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0x818        
+        [[maybe_unused]] std::uint8_t pad_0x81c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_InitVecCollection because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_InitVecCollection) == 0x848);
+    static_assert(sizeof(C_INIT_InitVecCollection) == 0x820);
 };

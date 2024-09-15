@@ -24,14 +24,14 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "fade out time min"
-        float m_flFadeOutTimeMin; // 0x1c0        
+        float m_flFadeOutTimeMin; // 0x1b8        
         // metadata: MPropertyFriendlyName "fade out time max"
-        float m_flFadeOutTimeMax; // 0x1c4        
+        float m_flFadeOutTimeMax; // 0x1bc        
         // metadata: MPropertyFriendlyName "fade out time exponent"
-        float m_flFadeOutTimeExp; // 0x1c8        
+        float m_flFadeOutTimeExp; // 0x1c0        
         // metadata: MPropertyFriendlyName "fade bias"
-        float m_flFadeBias; // 0x1cc        
-        [[maybe_unused]] std::uint8_t pad_0x1d0[0x30]; // 0x1d0
+        float m_flFadeBias; // 0x1c4        
+        [[maybe_unused]] std::uint8_t pad_0x1c8[0x38]; // 0x1c8
         // metadata: MPropertyFriendlyName "proportional 0/1"
         bool m_bProportional; // 0x200        
         // metadata: MPropertyFriendlyName "ease in and out"

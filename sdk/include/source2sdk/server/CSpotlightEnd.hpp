@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7a8
+    // Size: 0x730
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -26,14 +26,14 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        float m_flLightScale; // 0x788        
+        float m_flLightScale; // 0x710        
         // metadata: MNetworkEnable
-        float m_Radius; // 0x78c        
-        Vector m_vSpotlightDir; // 0x790        
-        Vector m_vSpotlightOrg; // 0x79c        
+        float m_Radius; // 0x714        
+        Vector m_vSpotlightDir; // 0x718        
+        Vector m_vSpotlightOrg; // 0x724        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSpotlightEnd because it is not a standard-layout class
-    static_assert(sizeof(CSpotlightEnd) == 0x7a8);
+    static_assert(sizeof(CSpotlightEnd) == 0x730);
 };

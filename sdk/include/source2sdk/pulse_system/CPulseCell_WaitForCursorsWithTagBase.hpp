@@ -20,7 +20,6 @@ namespace source2sdk::pulse_system
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
-    // static metadata: MPulseEditorIsControlFlowNode
     #pragma pack(push, 1)
     class CPulseCell_WaitForCursorsWithTagBase : public pulse_runtime_lib::CPulseCell_BaseYieldingInflow
     {

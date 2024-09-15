@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x530
+    // Size: 0x538
     // Has VTable
     // Is Abstract
     // MNetworkAssumeNotNetworkable
@@ -28,28 +28,28 @@ namespace source2sdk::server
     class CPhysConstraint : public server::CLogicalEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x4b8[0x8]; // 0x4b8
-        CUtlSymbolLarge m_nameAttach1; // 0x4c0        
-        CUtlSymbolLarge m_nameAttach2; // 0x4c8        
+        [[maybe_unused]] std::uint8_t pad_0x4c0[0x8]; // 0x4c0
+        CUtlSymbolLarge m_nameAttach1; // 0x4c8        
+        CUtlSymbolLarge m_nameAttach2; // 0x4d0        
         // m_hAttach1 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hAttach1;
-        char m_hAttach1[0x4]; // 0x4d0        
+        char m_hAttach1[0x4]; // 0x4d8        
         // m_hAttach2 has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hAttach2;
-        char m_hAttach2[0x4]; // 0x4d4        
-        CUtlSymbolLarge m_nameAttachment1; // 0x4d8        
-        CUtlSymbolLarge m_nameAttachment2; // 0x4e0        
-        CUtlSymbolLarge m_breakSound; // 0x4e8        
-        float m_forceLimit; // 0x4f0        
-        float m_torqueLimit; // 0x4f4        
-        uint32_t m_teleportTick; // 0x4f8        
-        float m_minTeleportDistance; // 0x4fc        
-        bool m_bSnapObjectPositions; // 0x500        
-        [[maybe_unused]] std::uint8_t pad_0x501[0x7]; // 0x501
-        entity2::CEntityIOOutput m_OnBreak; // 0x508        
+        char m_hAttach2[0x4]; // 0x4dc        
+        CUtlSymbolLarge m_nameAttachment1; // 0x4e0        
+        CUtlSymbolLarge m_nameAttachment2; // 0x4e8        
+        CUtlSymbolLarge m_breakSound; // 0x4f0        
+        float m_forceLimit; // 0x4f8        
+        float m_torqueLimit; // 0x4fc        
+        uint32_t m_teleportTick; // 0x500        
+        float m_minTeleportDistance; // 0x504        
+        bool m_bSnapObjectPositions; // 0x508        
+        [[maybe_unused]] std::uint8_t pad_0x509[0x7]; // 0x509
+        entity2::CEntityIOOutput m_OnBreak; // 0x510        
         
         // Datamap fields:
-        // void m_hJoint; // 0x4b8
+        // void m_hJoint; // 0x4c0
         // void InputBreak; // 0x0
         // void InputOnBreak; // 0x0
         // void InputTurnOn; // 0x0
@@ -66,5 +66,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPhysConstraint because it is not a standard-layout class
-    static_assert(sizeof(CPhysConstraint) == 0x530);
+    static_assert(sizeof(CPhysConstraint) == 0x538);
 };

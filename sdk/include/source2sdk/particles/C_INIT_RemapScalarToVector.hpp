@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x210
+    // Size: 0x208
     // Has VTable
     // Construct allowed
     // 
@@ -27,37 +27,37 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "input field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldInput; // 0x1c8        
+        particles::ParticleAttributeIndex_t m_nFieldInput; // 0x1c0        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4        
         // metadata: MPropertyFriendlyName "input minimum"
-        float m_flInputMin; // 0x1d0        
+        float m_flInputMin; // 0x1c8        
         // metadata: MPropertyFriendlyName "input maximum"
-        float m_flInputMax; // 0x1d4        
+        float m_flInputMax; // 0x1cc        
         // metadata: MPropertyFriendlyName "output minimum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vecOutputMin; // 0x1d8        
+        Vector m_vecOutputMin; // 0x1d0        
         // metadata: MPropertyFriendlyName "output maximum"
         // metadata: MVectorIsSometimesCoordinate "m_nFieldOutput"
-        Vector m_vecOutputMax; // 0x1e4        
+        Vector m_vecOutputMax; // 0x1dc        
         // metadata: MPropertyFriendlyName "emitter lifetime start time (seconds)"
-        float m_flStartTime; // 0x1f0        
+        float m_flStartTime; // 0x1e8        
         // metadata: MPropertyFriendlyName "emitter lifetime end time (seconds)"
-        float m_flEndTime; // 0x1f4        
+        float m_flEndTime; // 0x1ec        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x1f8        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x1f0        
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x1fc        
+        int32_t m_nControlPointNumber; // 0x1f4        
         // metadata: MPropertyFriendlyName "use local system"
-        bool m_bLocalCoords; // 0x200        
-        [[maybe_unused]] std::uint8_t pad_0x201[0x3]; // 0x201
+        bool m_bLocalCoords; // 0x1f8        
+        [[maybe_unused]] std::uint8_t pad_0x1f9[0x3]; // 0x1f9
         // metadata: MPropertyFriendlyName "remap bias"
-        float m_flRemapBias; // 0x204        
-        [[maybe_unused]] std::uint8_t pad_0x208[0x8];
+        float m_flRemapBias; // 0x1fc        
+        [[maybe_unused]] std::uint8_t pad_0x200[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RemapScalarToVector because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RemapScalarToVector) == 0x210);
+    static_assert(sizeof(C_INIT_RemapScalarToVector) == 0x208);
 };

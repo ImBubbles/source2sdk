@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x5e0
+    // Size: 0x5c0
     // Has VTable
     // Construct allowed
     // 
@@ -25,14 +25,14 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "hue adjust"
-        particleslib::CPerParticleFloatInput m_flHueAdjust; // 0x1c0        
+        particleslib::CPerParticleFloatInput m_flHueAdjust; // 0x1b8        
         // metadata: MPropertyFriendlyName "saturation adjust"
-        particleslib::CPerParticleFloatInput m_flSaturationAdjust; // 0x320        
+        particleslib::CPerParticleFloatInput m_flSaturationAdjust; // 0x310        
         // metadata: MPropertyFriendlyName "lightness adjust"
-        particleslib::CPerParticleFloatInput m_flLightnessAdjust; // 0x480        
+        particleslib::CPerParticleFloatInput m_flLightnessAdjust; // 0x468        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ColorAdjustHSL because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ColorAdjustHSL) == 0x5e0);
+    static_assert(sizeof(C_OP_ColorAdjustHSL) == 0x5c0);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: unknown
     // Standard-layout class: false
-    // Size: 0x420
+    // Size: 0x410
     // Has VTable
     // MClassHasEntityLimitedDataDesc
     // 
@@ -48,7 +48,7 @@ namespace source2sdk::client
         CUtlStringToken m_materialGroup; // 0x3a4        
         // metadata: MNetworkEnable
         uint8_t m_nHitboxSet; // 0x3a8        
-        [[maybe_unused]] std::uint8_t pad_0x3a9[0x77];
+        [[maybe_unused]] std::uint8_t pad_0x3a9[0x67];
         
         // Datamap fields:
         // Vector velocity; // 0x7fffffff
@@ -58,5 +58,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSkeletonInstance because it is not a standard-layout class
-    static_assert(sizeof(CSkeletonInstance) == 0x420);
+    static_assert(sizeof(CSkeletonInstance) == 0x410);
 };

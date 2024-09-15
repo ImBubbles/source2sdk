@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -24,7 +24,7 @@ namespace source2sdk::server
         [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
         CUtlSymbolLarge sLockedSound; // 0x8        
         CUtlSymbolLarge sUnlockedSound; // 0x10        
-        entity2::GameTime_t flwaitSound; // 0x18        
+        client::GameTime_t flwaitSound; // 0x18        
         [[maybe_unused]] std::uint8_t pad_0x1c[0x4];
     };
     #pragma pack(pop)

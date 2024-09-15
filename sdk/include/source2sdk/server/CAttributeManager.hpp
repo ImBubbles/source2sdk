@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0x68
+    // Size: 0x50
     // Has VTable
     // MNetworkAssumeNotNetworkable
     // 
@@ -35,33 +35,29 @@ namespace source2sdk::server
         // m_Providers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<CHandle<server::CBaseEntity>> m_Providers;
         char m_Providers[0x18]; // 0x8        
-        // m_Receivers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<CHandle<server::CBaseEntity>> m_Receivers;
-        char m_Receivers[0x18]; // 0x20        
         // metadata: MNetworkEnable
-        int32_t m_iReapplyProvisionParity; // 0x38        
+        int32_t m_iReapplyProvisionParity; // 0x20        
         // metadata: MNetworkEnable
         // m_hOuter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hOuter;
-        char m_hOuter[0x4]; // 0x3c        
-        bool m_bPreventLoopback; // 0x40        
-        [[maybe_unused]] std::uint8_t pad_0x41[0x3]; // 0x41
+        char m_hOuter[0x4]; // 0x24        
+        bool m_bPreventLoopback; // 0x28        
+        [[maybe_unused]] std::uint8_t pad_0x29[0x3]; // 0x29
         // metadata: MNetworkEnable
-        client::attributeprovidertypes_t m_ProviderType; // 0x44        
+        client::attributeprovidertypes_t m_ProviderType; // 0x2c        
         // m_CachedResults has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<server::CAttributeManager__cached_attribute_float_t> m_CachedResults;
-        char m_CachedResults[0x18]; // 0x48        
-        [[maybe_unused]] std::uint8_t pad_0x60[0x8];
+        char m_CachedResults[0x18]; // 0x30        
+        [[maybe_unused]] std::uint8_t pad_0x48[0x8];
     };
     #pragma pack(pop)
     
     static_assert(offsetof(CAttributeManager, m_Providers) == 0x8);
-    static_assert(offsetof(CAttributeManager, m_Receivers) == 0x20);
-    static_assert(offsetof(CAttributeManager, m_iReapplyProvisionParity) == 0x38);
-    static_assert(offsetof(CAttributeManager, m_hOuter) == 0x3c);
-    static_assert(offsetof(CAttributeManager, m_bPreventLoopback) == 0x40);
-    static_assert(offsetof(CAttributeManager, m_ProviderType) == 0x44);
-    static_assert(offsetof(CAttributeManager, m_CachedResults) == 0x48);
+    static_assert(offsetof(CAttributeManager, m_iReapplyProvisionParity) == 0x20);
+    static_assert(offsetof(CAttributeManager, m_hOuter) == 0x24);
+    static_assert(offsetof(CAttributeManager, m_bPreventLoopback) == 0x28);
+    static_assert(offsetof(CAttributeManager, m_ProviderType) == 0x2c);
+    static_assert(offsetof(CAttributeManager, m_CachedResults) == 0x30);
     
-    static_assert(sizeof(CAttributeManager) == 0x68);
+    static_assert(sizeof(CAttributeManager) == 0x50);
 };

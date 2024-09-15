@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d8
+    // Size: 0x1d0
     // Has VTable
     // Construct allowed
     // 
@@ -24,15 +24,15 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "min"
-        float m_flMin; // 0x1c8        
+        float m_flMin; // 0x1c0        
         // metadata: MPropertyFriendlyName "max"
-        float m_flMax; // 0x1cc        
+        float m_flMax; // 0x1c4        
         // metadata: MPropertyFriendlyName "exponent"
-        float m_flExponent; // 0x1d0        
-        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4];
+        float m_flExponent; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RandomAlphaWindowThreshold because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RandomAlphaWindowThreshold) == 0x1d8);
+    static_assert(sizeof(C_INIT_RandomAlphaWindowThreshold) == 0x1d0);
 };

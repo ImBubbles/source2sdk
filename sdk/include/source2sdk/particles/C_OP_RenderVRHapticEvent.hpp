@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x380
+    // Size: 0x370
     // Has VTable
     // Construct allowed
     // 
@@ -26,18 +26,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "haptic hand"
-        particles::ParticleVRHandChoiceList_t m_nHand; // 0x210        
+        particles::ParticleVRHandChoiceList_t m_nHand; // 0x208        
         // metadata: MPropertyFriendlyName "hand control point number"
-        int32_t m_nOutputHandCP; // 0x214        
+        int32_t m_nOutputHandCP; // 0x20c        
         // metadata: MPropertyFriendlyName "cp field"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nOutputField; // 0x218        
-        [[maybe_unused]] std::uint8_t pad_0x21c[0x4]; // 0x21c
+        int32_t m_nOutputField; // 0x210        
+        [[maybe_unused]] std::uint8_t pad_0x214[0x4]; // 0x214
         // metadata: MPropertyFriendlyName "amplitude"
-        particleslib::CPerParticleFloatInput m_flAmplitude; // 0x220        
+        particleslib::CPerParticleFloatInput m_flAmplitude; // 0x218        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RenderVRHapticEvent because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RenderVRHapticEvent) == 0x380);
+    static_assert(sizeof(C_OP_RenderVRHapticEvent) == 0x370);
 };

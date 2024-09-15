@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x238
+    // Size: 0x230
     // Has VTable
     // Construct allowed
     // 
@@ -26,24 +26,24 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "animation rate"
-        float m_flAnimationRate; // 0x218        
+        float m_flAnimationRate; // 0x210        
         // metadata: MPropertyFriendlyName "animation type"
-        particles::AnimationType_t m_nAnimationType; // 0x21c        
+        particles::AnimationType_t m_nAnimationType; // 0x214        
         // metadata: MPropertyFriendlyName "set animation value in FPS"
-        bool m_bAnimateInFPS; // 0x220        
-        [[maybe_unused]] std::uint8_t pad_0x221[0x3]; // 0x221
+        bool m_bAnimateInFPS; // 0x218        
+        [[maybe_unused]] std::uint8_t pad_0x219[0x3]; // 0x219
         // metadata: MPropertyFriendlyName "minimum visual size"
-        float m_flMinSize; // 0x224        
+        float m_flMinSize; // 0x21c        
         // metadata: MPropertyFriendlyName "maximum visual size"
-        float m_flMaxSize; // 0x228        
+        float m_flMaxSize; // 0x220        
         // metadata: MPropertyFriendlyName "size at which to start fading"
-        float m_flStartFadeSize; // 0x22c        
+        float m_flStartFadeSize; // 0x224        
         // metadata: MPropertyFriendlyName "size at which to fade away"
-        float m_flEndFadeSize; // 0x230        
-        [[maybe_unused]] std::uint8_t pad_0x234[0x4];
+        float m_flEndFadeSize; // 0x228        
+        [[maybe_unused]] std::uint8_t pad_0x22c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RenderLights because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RenderLights) == 0x238);
+    static_assert(sizeof(C_OP_RenderLights) == 0x230);
 };

@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x338
+    // Size: 0x328
     // Has VTable
     // Construct allowed
     // 
@@ -25,18 +25,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point increment amount"
-        int32_t m_nIncrement; // 0x1c8        
+        int32_t m_nIncrement; // 0x1c0        
         // metadata: MPropertyFriendlyName "starting control point"
-        int32_t m_nMinCP; // 0x1cc        
+        int32_t m_nMinCP; // 0x1c4        
         // metadata: MPropertyFriendlyName "ending control point"
         // metadata: MParticleMinVersion "2"
-        int32_t m_nMaxCP; // 0x1d0        
-        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4]; // 0x1d4
+        int32_t m_nMaxCP; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
         // metadata: MPropertyFriendlyName "dynamic control point count"
-        particleslib::CParticleCollectionFloatInput m_nDynamicCPCount; // 0x1d8        
+        particleslib::CParticleCollectionFloatInput m_nDynamicCPCount; // 0x1d0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_CreateFromCPs because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_CreateFromCPs) == 0x338);
+    static_assert(sizeof(C_INIT_CreateFromCPs) == 0x328);
 };

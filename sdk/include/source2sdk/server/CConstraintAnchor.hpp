@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/server/CBaseAnimatingActivity.hpp"
+#include "source2sdk/server/CBaseAnimGraph.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -14,19 +14,19 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x7a0
+    // Size: 0x8f0
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
     #pragma pack(push, 1)
-    class CConstraintAnchor : public server::CBaseAnimatingActivity
+    class CConstraintAnchor : public server::CBaseAnimGraph
     {
     public:
-        float m_massScale; // 0x798        
-        [[maybe_unused]] std::uint8_t pad_0x79c[0x4];
+        float m_massScale; // 0x8e8        
+        [[maybe_unused]] std::uint8_t pad_0x8ec[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CConstraintAnchor because it is not a standard-layout class
-    static_assert(sizeof(CConstraintAnchor) == 0x7a0);
+    static_assert(sizeof(CConstraintAnchor) == 0x8f0);
 };

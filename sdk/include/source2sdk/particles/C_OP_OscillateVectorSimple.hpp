@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e8
+    // Size: 0x1e0
     // Has VTable
     // Construct allowed
     // 
@@ -26,22 +26,22 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "oscillation rate"
         // metadata: MVectorIsSometimesCoordinate "m_nField"
-        Vector m_Rate; // 0x1c0        
+        Vector m_Rate; // 0x1b8        
         // metadata: MPropertyFriendlyName "oscillation frequency"
-        Vector m_Frequency; // 0x1cc        
+        Vector m_Frequency; // 0x1c4        
         // metadata: MPropertyFriendlyName "oscillation field"
         // metadata: MPropertyAttributeChoiceName "particlefield_vector"
-        particles::ParticleAttributeIndex_t m_nField; // 0x1d8        
+        particles::ParticleAttributeIndex_t m_nField; // 0x1d0        
         // metadata: MPropertyFriendlyName "oscillation multiplier"
-        float m_flOscMult; // 0x1dc        
+        float m_flOscMult; // 0x1d4        
         // metadata: MPropertyFriendlyName "oscillation start phase"
-        float m_flOscAdd; // 0x1e0        
+        float m_flOscAdd; // 0x1d8        
         // metadata: MPropertyFriendlyName "offset instead of accelerate position"
-        bool m_bOffset; // 0x1e4        
-        [[maybe_unused]] std::uint8_t pad_0x1e5[0x3];
+        bool m_bOffset; // 0x1dc        
+        [[maybe_unused]] std::uint8_t pad_0x1dd[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_OscillateVectorSimple because it is not a standard-layout class
-    static_assert(sizeof(C_OP_OscillateVectorSimple) == 0x1e8);
+    static_assert(sizeof(C_OP_OscillateVectorSimple) == 0x1e0);
 };

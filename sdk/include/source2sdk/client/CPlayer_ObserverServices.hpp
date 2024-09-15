@@ -1,7 +1,7 @@
 #pragma once
 #include "source2sdk/client/CPlayerPawnComponent.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/ObserverMode_t.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -44,7 +44,7 @@ namespace source2sdk::client
         bool m_bForcedObserverMode; // 0x4c        
         [[maybe_unused]] std::uint8_t pad_0x4d[0x3]; // 0x4d
         float m_flObserverChaseDistance; // 0x50        
-        entity2::GameTime_t m_flObserverChaseDistanceCalcTime; // 0x54        
+        client::GameTime_t m_flObserverChaseDistanceCalcTime; // 0x54        
     };
     #pragma pack(pop)
     

@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x588
+    // Size: 0x590
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,9 +22,9 @@ namespace source2sdk::server
     class CSplineConstraint : public server::CPhysConstraint
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x530[0x48]; // 0x530
-        Vector m_vAnchorOffsetRestore; // 0x578        
-        [[maybe_unused]] std::uint8_t pad_0x584[0x4];
+        [[maybe_unused]] std::uint8_t pad_0x538[0x48]; // 0x538
+        Vector m_vAnchorOffsetRestore; // 0x580        
+        [[maybe_unused]] std::uint8_t pad_0x58c[0x4];
         
         // Datamap fields:
         // void CSplineConstraintUpdateThink; // 0x0
@@ -32,5 +32,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSplineConstraint because it is not a standard-layout class
-    static_assert(sizeof(CSplineConstraint) == 0x588);
+    static_assert(sizeof(CSplineConstraint) == 0x590);
 };

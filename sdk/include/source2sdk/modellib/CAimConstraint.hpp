@@ -23,7 +23,6 @@ namespace source2sdk::modellib
     class CAimConstraint : public modellib::CBaseConstraint
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x68[0x8]; // 0x68
         Quaternion m_qAimOffset; // 0x70        
         uint32_t m_nUpType; // 0x80        
         [[maybe_unused]] std::uint8_t pad_0x84[0xc];

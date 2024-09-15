@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1c8
+    // Size: 0x1c0
     // Has VTable
     // Is Abstract
     // Construct allowed
@@ -25,11 +25,11 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Run Only Once"
-        bool m_bRunOnce; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c1[0x7];
+        bool m_bRunOnce; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1b9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CParticleFunctionPreEmission because it is not a standard-layout class
-    static_assert(sizeof(CParticleFunctionPreEmission) == 0x1c8);
+    static_assert(sizeof(CParticleFunctionPreEmission) == 0x1c0);
 };

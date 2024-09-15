@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x4e0
+    // Size: 0x4d0
     // Has VTable
     // Construct allowed
     // 
@@ -28,21 +28,21 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "maximum distance"
-        particleslib::CPerParticleFloatInput m_fMaxDistance; // 0x1c8        
+        particleslib::CPerParticleFloatInput m_fMaxDistance; // 0x1c0        
         // metadata: MPropertyFriendlyName "particles to map from start to end"
-        particleslib::CParticleCollectionFloatInput m_flNumToAssign; // 0x328        
+        particleslib::CParticleCollectionFloatInput m_flNumToAssign; // 0x318        
         // metadata: MPropertyFriendlyName "restart behavior (0 = bounce, 1 = loop )"
-        bool m_bLoop; // 0x488        
+        bool m_bLoop; // 0x470        
         // metadata: MPropertyFriendlyName "use sequential CP pairs between start and end point"
-        bool m_bCPPairs; // 0x489        
+        bool m_bCPPairs; // 0x471        
         // metadata: MPropertyFriendlyName "save offset"
-        bool m_bSaveOffset; // 0x48a        
-        [[maybe_unused]] std::uint8_t pad_0x48b[0x5]; // 0x48b
-        particles::CPathParameters m_PathParams; // 0x490        
-        [[maybe_unused]] std::uint8_t pad_0x4d0[0x10];
+        bool m_bSaveOffset; // 0x472        
+        [[maybe_unused]] std::uint8_t pad_0x473[0xd]; // 0x473
+        particles::CPathParameters m_PathParams; // 0x480        
+        [[maybe_unused]] std::uint8_t pad_0x4c0[0x10];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_CreateSequentialPathV2 because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_CreateSequentialPathV2) == 0x4e0);
+    static_assert(sizeof(C_INIT_CreateSequentialPathV2) == 0x4d0);
 };

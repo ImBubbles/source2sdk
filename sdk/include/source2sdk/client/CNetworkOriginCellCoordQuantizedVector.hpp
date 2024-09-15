@@ -39,25 +39,25 @@ namespace source2sdk::client
         uint16_t m_cellZ; // 0x14        
         // metadata: MNetworkEnable
         uint16_t m_nOutsideWorld; // 0x16        
-        // metadata: MNetworkBitCount "13"
+        // metadata: MNetworkBitCount "15"
         // metadata: MNetworkMinValue "0,000000"
-        // metadata: MNetworkMaxValue "256,000000"
+        // metadata: MNetworkMaxValue "1024,000000"
         // metadata: MNetworkEncodeFlags "1"
         // metadata: MNetworkChangeCallback "OnCellChanged"
         // metadata: MNetworkPriority "31"
         // metadata: MNetworkSerializer "posx"
         CNetworkedQuantizedFloat m_vecX; // 0x18        
-        // metadata: MNetworkBitCount "13"
+        // metadata: MNetworkBitCount "15"
         // metadata: MNetworkMinValue "0,000000"
-        // metadata: MNetworkMaxValue "256,000000"
+        // metadata: MNetworkMaxValue "1024,000000"
         // metadata: MNetworkEncodeFlags "1"
         // metadata: MNetworkChangeCallback "OnCellChanged"
         // metadata: MNetworkPriority "31"
         // metadata: MNetworkSerializer "posy"
         CNetworkedQuantizedFloat m_vecY; // 0x20        
-        // metadata: MNetworkBitCount "13"
+        // metadata: MNetworkBitCount "15"
         // metadata: MNetworkMinValue "0,000000"
-        // metadata: MNetworkMaxValue "256,000000"
+        // metadata: MNetworkMaxValue "1024,000000"
         // metadata: MNetworkEncodeFlags "1"
         // metadata: MNetworkChangeCallback "OnCellChanged"
         // metadata: MNetworkPriority "31"

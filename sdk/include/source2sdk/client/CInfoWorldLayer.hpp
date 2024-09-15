@@ -15,7 +15,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x580
+    // Size: 0x590
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -28,20 +28,20 @@ namespace source2sdk::client
     class CInfoWorldLayer : public client::C_BaseEntity
     {
     public:
-        entity2::CEntityIOOutput m_pOutputOnEntitiesSpawned; // 0x538        
+        entity2::CEntityIOOutput m_pOutputOnEntitiesSpawned; // 0x548        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_worldName; // 0x560        
+        CUtlSymbolLarge m_worldName; // 0x570        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_layerName; // 0x568        
+        CUtlSymbolLarge m_layerName; // 0x578        
         // metadata: MNetworkEnable
-        bool m_bWorldLayerVisible; // 0x570        
+        bool m_bWorldLayerVisible; // 0x580        
         // metadata: MNetworkEnable
-        bool m_bEntitiesSpawned; // 0x571        
-        bool m_bCreateAsChildSpawnGroup; // 0x572        
-        [[maybe_unused]] std::uint8_t pad_0x573[0x1]; // 0x573
-        uint32_t m_hLayerSpawnGroup; // 0x574        
-        bool m_bWorldLayerActuallyVisible; // 0x578        
-        [[maybe_unused]] std::uint8_t pad_0x579[0x7];
+        bool m_bEntitiesSpawned; // 0x581        
+        bool m_bCreateAsChildSpawnGroup; // 0x582        
+        [[maybe_unused]] std::uint8_t pad_0x583[0x1]; // 0x583
+        uint32_t m_hLayerSpawnGroup; // 0x584        
+        bool m_bWorldLayerActuallyVisible; // 0x588        
+        [[maybe_unused]] std::uint8_t pad_0x589[0x7];
         
         // Datamap fields:
         // void ShowWorldLayer; // 0x0
@@ -54,5 +54,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CInfoWorldLayer because it is not a standard-layout class
-    static_assert(sizeof(CInfoWorldLayer) == 0x580);
+    static_assert(sizeof(CInfoWorldLayer) == 0x590);
 };

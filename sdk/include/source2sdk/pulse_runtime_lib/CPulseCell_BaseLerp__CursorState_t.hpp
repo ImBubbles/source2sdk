@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -23,8 +23,8 @@ namespace source2sdk::pulse_runtime_lib
     struct CPulseCell_BaseLerp__CursorState_t
     {
     public:
-        entity2::GameTime_t m_StartTime; // 0x0        
-        entity2::GameTime_t m_EndTime; // 0x4        
+        client::GameTime_t m_StartTime; // 0x0        
+        client::GameTime_t m_EndTime; // 0x4        
     };
     #pragma pack(pop)
     

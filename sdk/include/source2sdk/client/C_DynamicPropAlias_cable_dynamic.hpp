@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xab0
+    // Size: 0x1158
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -26,5 +26,5 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_DynamicPropAlias_cable_dynamic) == 0xab0);
+    static_assert(sizeof(C_DynamicPropAlias_cable_dynamic) == 0x1158);
 };

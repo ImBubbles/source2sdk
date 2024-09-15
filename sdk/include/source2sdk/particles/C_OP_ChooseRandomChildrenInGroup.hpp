@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x330
+    // Size: 0x320
     // Has VTable
     // Construct allowed
     // 
@@ -25,13 +25,13 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "group ID to affect"
-        int32_t m_nChildGroupID; // 0x1c8        
-        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
+        int32_t m_nChildGroupID; // 0x1c0        
+        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
         // metadata: MPropertyFriendlyName "Number of Children to Use"
-        particleslib::CParticleCollectionFloatInput m_flNumberOfChildren; // 0x1d0        
+        particleslib::CParticleCollectionFloatInput m_flNumberOfChildren; // 0x1c8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ChooseRandomChildrenInGroup because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ChooseRandomChildrenInGroup) == 0x330);
+    static_assert(sizeof(C_OP_ChooseRandomChildrenInGroup) == 0x320);
 };

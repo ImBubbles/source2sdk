@@ -20,7 +20,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x598
+    // Size: 0x5a0
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -28,17 +28,17 @@ namespace source2sdk::server
     class CFilterMultiple : public server::CBaseFilter
     {
     public:
-        server::filter_t m_nFilterType; // 0x510        
-        [[maybe_unused]] std::uint8_t pad_0x514[0x4]; // 0x514
-        CUtlSymbolLarge m_iFilterName[10]; // 0x518        
+        server::filter_t m_nFilterType; // 0x518        
+        [[maybe_unused]] std::uint8_t pad_0x51c[0x4]; // 0x51c
+        CUtlSymbolLarge m_iFilterName[10]; // 0x520        
         // m_hFilter has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CHandle<server::CBaseEntity> m_hFilter[10];
-        char m_hFilter[0x28]; // 0x568        
-        int32_t m_nFilterCount; // 0x590        
-        [[maybe_unused]] std::uint8_t pad_0x594[0x4];
+        char m_hFilter[0x28]; // 0x570        
+        int32_t m_nFilterCount; // 0x598        
+        [[maybe_unused]] std::uint8_t pad_0x59c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CFilterMultiple because it is not a standard-layout class
-    static_assert(sizeof(CFilterMultiple) == 0x598);
+    static_assert(sizeof(CFilterMultiple) == 0x5a0);
 };

@@ -22,7 +22,7 @@ namespace source2sdk::pulse_runtime_lib
     {
     public:
         // m_Shuffle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVectorFixedGrowable<uint8_t,8> m_Shuffle;
+        // CUtlVectorFixedGrowable<uint8_t> m_Shuffle;
         char m_Shuffle[0x20]; // 0x0        
         int32_t m_nNextShuffle; // 0x20        
         [[maybe_unused]] std::uint8_t pad_0x24[0x4];

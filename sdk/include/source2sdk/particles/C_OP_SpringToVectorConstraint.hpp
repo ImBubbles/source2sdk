@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdb8
+    // Size: 0xd70
     // Has VTable
     // Construct allowed
     // 
@@ -26,18 +26,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "slack"
-        particleslib::CPerParticleFloatInput m_flRestLength; // 0x1c0        
+        particleslib::CPerParticleFloatInput m_flRestLength; // 0x1b8        
         // metadata: MPropertyFriendlyName "minimum segment length %"
-        particleslib::CPerParticleFloatInput m_flMinDistance; // 0x320        
+        particleslib::CPerParticleFloatInput m_flMinDistance; // 0x310        
         // metadata: MPropertyFriendlyName "maximum segment length %"
-        particleslib::CPerParticleFloatInput m_flMaxDistance; // 0x480        
+        particleslib::CPerParticleFloatInput m_flMaxDistance; // 0x468        
         // metadata: MPropertyFriendlyName "resting spacing"
-        particleslib::CPerParticleFloatInput m_flRestingLength; // 0x5e0        
+        particleslib::CPerParticleFloatInput m_flRestingLength; // 0x5c0        
         // metadata: MPropertyFriendlyName "anchor vector"
-        particleslib::CPerParticleVecInput m_vecAnchorVector; // 0x740        
+        particleslib::CPerParticleVecInput m_vecAnchorVector; // 0x718        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SpringToVectorConstraint because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SpringToVectorConstraint) == 0xdb8);
+    static_assert(sizeof(C_OP_SpringToVectorConstraint) == 0xd70);
 };

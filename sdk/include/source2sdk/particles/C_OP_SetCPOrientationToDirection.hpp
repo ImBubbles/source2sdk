@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1c8
+    // Size: 0x1c0
     // Has VTable
     // Construct allowed
     // 
@@ -24,12 +24,12 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "input control point"
-        int32_t m_nInputControlPoint; // 0x1c0        
+        int32_t m_nInputControlPoint; // 0x1b8        
         // metadata: MPropertyFriendlyName "output control point"
-        int32_t m_nOutputControlPoint; // 0x1c4        
+        int32_t m_nOutputControlPoint; // 0x1bc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetCPOrientationToDirection because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetCPOrientationToDirection) == 0x1c8);
+    static_assert(sizeof(C_OP_SetCPOrientationToDirection) == 0x1c0);
 };

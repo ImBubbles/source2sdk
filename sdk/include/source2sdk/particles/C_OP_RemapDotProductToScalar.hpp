@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e8
+    // Size: 0x1e0
     // Has VTable
     // Construct allowed
     // 
@@ -26,33 +26,33 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "first input control point"
-        int32_t m_nInputCP1; // 0x1c0        
+        int32_t m_nInputCP1; // 0x1b8        
         // metadata: MPropertyFriendlyName "second input control point"
-        int32_t m_nInputCP2; // 0x1c4        
+        int32_t m_nInputCP2; // 0x1bc        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c8        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
         // metadata: MPropertyFriendlyName "input minimum (-1 to 1)"
-        float m_flInputMin; // 0x1cc        
+        float m_flInputMin; // 0x1c4        
         // metadata: MPropertyFriendlyName "input maximum (-1 to 1)"
-        float m_flInputMax; // 0x1d0        
+        float m_flInputMax; // 0x1c8        
         // metadata: MPropertyFriendlyName "output minimum"
-        float m_flOutputMin; // 0x1d4        
+        float m_flOutputMin; // 0x1cc        
         // metadata: MPropertyFriendlyName "output maximum"
-        float m_flOutputMax; // 0x1d8        
+        float m_flOutputMax; // 0x1d0        
         // metadata: MPropertyFriendlyName "use particle velocity for first input"
-        bool m_bUseParticleVelocity; // 0x1dc        
-        [[maybe_unused]] std::uint8_t pad_0x1dd[0x3]; // 0x1dd
+        bool m_bUseParticleVelocity; // 0x1d4        
+        [[maybe_unused]] std::uint8_t pad_0x1d5[0x3]; // 0x1d5
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x1e0        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x1d8        
         // metadata: MPropertyFriendlyName "only active within specified input range"
-        bool m_bActiveRange; // 0x1e4        
+        bool m_bActiveRange; // 0x1dc        
         // metadata: MPropertyFriendlyName "use particle normal for first input"
-        bool m_bUseParticleNormal; // 0x1e5        
-        [[maybe_unused]] std::uint8_t pad_0x1e6[0x2];
+        bool m_bUseParticleNormal; // 0x1dd        
+        [[maybe_unused]] std::uint8_t pad_0x1de[0x2];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RemapDotProductToScalar because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RemapDotProductToScalar) == 0x1e8);
+    static_assert(sizeof(C_OP_RemapDotProductToScalar) == 0x1e0);
 };

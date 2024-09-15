@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -32,7 +32,7 @@ namespace source2sdk::client
         // metadata: MNetworkEnable
         float m_duration; // 0x8        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_timestamp; // 0xc        
+        client::GameTime_t m_timestamp; // 0xc        
         // metadata: MNetworkEnable
         float m_timescale; // 0x10        
         // metadata: MNetworkEnable

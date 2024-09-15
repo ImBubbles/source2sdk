@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4e8
+    // Size: 0x4f0
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,11 +22,11 @@ namespace source2sdk::server
     class CInfoDynamicShadowHintBox : public server::CInfoDynamicShadowHint
     {
     public:
-        Vector m_vBoxMins; // 0x4d0        
-        Vector m_vBoxMaxs; // 0x4dc        
+        Vector m_vBoxMins; // 0x4d8        
+        Vector m_vBoxMaxs; // 0x4e4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CInfoDynamicShadowHintBox because it is not a standard-layout class
-    static_assert(sizeof(CInfoDynamicShadowHintBox) == 0x4e8);
+    static_assert(sizeof(CInfoDynamicShadowHintBox) == 0x4f0);
 };

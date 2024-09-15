@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4d0
+    // Size: 0x4d8
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,13 +22,13 @@ namespace source2sdk::server
     class CMessageEntity : public server::CPointEntity
     {
     public:
-        int32_t m_radius; // 0x4b8        
-        [[maybe_unused]] std::uint8_t pad_0x4bc[0x4]; // 0x4bc
-        CUtlSymbolLarge m_messageText; // 0x4c0        
-        bool m_drawText; // 0x4c8        
-        bool m_bDeveloperOnly; // 0x4c9        
-        bool m_bEnabled; // 0x4ca        
-        [[maybe_unused]] std::uint8_t pad_0x4cb[0x5];
+        int32_t m_radius; // 0x4c0        
+        [[maybe_unused]] std::uint8_t pad_0x4c4[0x4]; // 0x4c4
+        CUtlSymbolLarge m_messageText; // 0x4c8        
+        bool m_drawText; // 0x4d0        
+        bool m_bDeveloperOnly; // 0x4d1        
+        bool m_bEnabled; // 0x4d2        
+        [[maybe_unused]] std::uint8_t pad_0x4d3[0x5];
         
         // Datamap fields:
         // void InputEnable; // 0x0
@@ -38,5 +38,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CMessageEntity because it is not a standard-layout class
-    static_assert(sizeof(CMessageEntity) == 0x4d0);
+    static_assert(sizeof(CMessageEntity) == 0x4d8);
 };

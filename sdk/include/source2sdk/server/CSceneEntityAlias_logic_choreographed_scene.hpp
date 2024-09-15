@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xa18
+    // Size: 0xa20
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -26,5 +26,5 @@ namespace source2sdk::server
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CSceneEntityAlias_logic_choreographed_scene) == 0xa18);
+    static_assert(sizeof(CSceneEntityAlias_logic_choreographed_scene) == 0xa20);
 };

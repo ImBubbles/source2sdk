@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x128
+    // Size: 0x2c8
     // Has VTable
     // MNetworkNoBase
     // 
@@ -29,10 +29,10 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        server::CEconItemView m_Item; // 0x68        
+        server::CEconItemView m_Item; // 0x50        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAttributeContainer because it is not a standard-layout class
-    static_assert(sizeof(CAttributeContainer) == 0x128);
+    static_assert(sizeof(CAttributeContainer) == 0x2c8);
 };

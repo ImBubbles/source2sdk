@@ -24,9 +24,9 @@ namespace source2sdk::animlib
     class CNmStateMachineNode__CDefinition : public animlib::CNmPoseNode__CDefinition
     {
     public:
-        // m_stateDefinitions has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<animlib::CNmStateMachineNode__StateDefinition_t,5> m_stateDefinitions;
-        char m_stateDefinitions[0x120]; // 0x10        
+        // m_stateDefinition has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CUtlLeanVectorFixedGrowable<animlib::CNmStateMachineNode__StateDefinition_t> m_stateDefinition;
+        char m_stateDefinition[0x120]; // 0x10        
         int16_t m_nDefaultStateIndex; // 0x130        
         [[maybe_unused]] std::uint8_t pad_0x132[0x6];
     };

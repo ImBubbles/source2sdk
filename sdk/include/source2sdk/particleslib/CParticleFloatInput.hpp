@@ -8,7 +8,6 @@
 #include "source2sdk/particleslib/ParticleFloatInputMode_t.hpp"
 #include "source2sdk/particleslib/ParticleFloatMapType_t.hpp"
 #include "source2sdk/particleslib/ParticleFloatRandomMode_t.hpp"
-#include "source2sdk/particleslib/ParticleFloatRoundType_t.hpp"
 #include "source2sdk/particleslib/ParticleFloatType_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -24,7 +23,7 @@ namespace source2sdk::particleslib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x160
+    // Size: 0x158
     // Has VTable
     // Construct allowed
     // 
@@ -83,14 +82,12 @@ namespace source2sdk::particleslib
         float m_flNotchedRangeMax; // 0x104        
         float m_flNotchedOutputOutside; // 0x108        
         float m_flNotchedOutputInside; // 0x10c        
-        particleslib::ParticleFloatRoundType_t m_nRoundType; // 0x110        
-        particleslib::ParticleFloatBiasType_t m_nBiasType; // 0x114        
-        float m_flBiasParameter; // 0x118        
-        [[maybe_unused]] std::uint8_t pad_0x11c[0x4]; // 0x11c
-        CPiecewiseCurve m_Curve; // 0x120        
+        particleslib::ParticleFloatBiasType_t m_nBiasType; // 0x110        
+        float m_flBiasParameter; // 0x114        
+        CPiecewiseCurve m_Curve; // 0x118        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CParticleFloatInput because it is not a standard-layout class
-    static_assert(sizeof(CParticleFloatInput) == 0x160);
+    static_assert(sizeof(CParticleFloatInput) == 0x158);
 };

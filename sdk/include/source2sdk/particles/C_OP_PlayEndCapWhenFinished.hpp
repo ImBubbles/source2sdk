@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d0
+    // Size: 0x1c8
     // Has VTable
     // Construct allowed
     // 
@@ -24,13 +24,13 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "play when emission ends"
-        bool m_bFireOnEmissionEnd; // 0x1c8        
+        bool m_bFireOnEmissionEnd; // 0x1c0        
         // metadata: MPropertyFriendlyName "wait for children to finish"
-        bool m_bIncludeChildren; // 0x1c9        
-        [[maybe_unused]] std::uint8_t pad_0x1ca[0x6];
+        bool m_bIncludeChildren; // 0x1c1        
+        [[maybe_unused]] std::uint8_t pad_0x1c2[0x6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_PlayEndCapWhenFinished because it is not a standard-layout class
-    static_assert(sizeof(C_OP_PlayEndCapWhenFinished) == 0x1d0);
+    static_assert(sizeof(C_OP_PlayEndCapWhenFinished) == 0x1c8);
 };

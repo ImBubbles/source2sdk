@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x268
+    // Size: 0x260
     // Has VTable
     // Construct allowed
     // 
@@ -25,26 +25,26 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "test direction"
         // metadata: MVectorIsCoordinate
-        Vector m_vecTestDir; // 0x1c0        
+        Vector m_vecTestDir; // 0x1b8        
         // metadata: MPropertyFriendlyName "cull normal"
         // metadata: MVectorIsCoordinate
-        Vector m_vecTestNormal; // 0x1cc        
+        Vector m_vecTestNormal; // 0x1c4        
         // metadata: MPropertyFriendlyName "cull on miss"
-        bool m_bCullOnMiss; // 0x1d8        
+        bool m_bCullOnMiss; // 0x1d0        
         // metadata: MPropertyFriendlyName "stick instead of cull"
-        bool m_bStickInsteadOfCull; // 0x1d9        
+        bool m_bStickInsteadOfCull; // 0x1d1        
         // metadata: MPropertyFriendlyName "ray trace environment name"
-        char m_RtEnvName[128]; // 0x1da        
-        [[maybe_unused]] std::uint8_t pad_0x25a[0x2]; // 0x25a
+        char m_RtEnvName[128]; // 0x1d2        
+        [[maybe_unused]] std::uint8_t pad_0x252[0x2]; // 0x252
         // metadata: MPropertyFriendlyName "ray trace environment cp"
-        int32_t m_nRTEnvCP; // 0x25c        
+        int32_t m_nRTEnvCP; // 0x254        
         // metadata: MPropertyFriendlyName "rt env control point component"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nComponent; // 0x260        
-        [[maybe_unused]] std::uint8_t pad_0x264[0x4];
+        int32_t m_nComponent; // 0x258        
+        [[maybe_unused]] std::uint8_t pad_0x25c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RtEnvCull because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RtEnvCull) == 0x268);
+    static_assert(sizeof(C_OP_RtEnvCull) == 0x260);
 };

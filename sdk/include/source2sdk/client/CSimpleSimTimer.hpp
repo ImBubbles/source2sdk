@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -20,7 +20,7 @@ namespace source2sdk::client
     class CSimpleSimTimer
     {
     public:
-        entity2::GameTime_t m_next; // 0x0        
+        client::GameTime_t m_next; // 0x0        
         WorldGroupId_t m_nWorldGroupId; // 0x4        
     };
     #pragma pack(pop)

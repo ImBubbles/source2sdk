@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb08
+    // Size: 0xad0
     // Has VTable
     // Construct allowed
     // 
@@ -26,21 +26,21 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "dampening"
-        particleslib::CParticleCollectionFloatInput m_flDragAtPlane; // 0x1c0        
+        particleslib::CParticleCollectionFloatInput m_flDragAtPlane; // 0x1b8        
         // metadata: MPropertyFriendlyName "falloff"
-        particleslib::CParticleCollectionFloatInput m_flFalloff; // 0x320        
+        particleslib::CParticleCollectionFloatInput m_flFalloff; // 0x310        
         // metadata: MPropertyFriendlyName "dampen on only one side of plane"
-        bool m_bDirectional; // 0x480        
-        [[maybe_unused]] std::uint8_t pad_0x481[0x7]; // 0x481
+        bool m_bDirectional; // 0x468        
+        [[maybe_unused]] std::uint8_t pad_0x469[0x7]; // 0x469
         // metadata: MPropertyFriendlyName "plane normal"
         // metadata: MVectorIsCoordinate
-        particleslib::CParticleCollectionVecInput m_vecPlaneNormal; // 0x488        
+        particleslib::CParticleCollectionVecInput m_vecPlaneNormal; // 0x470        
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0xb00        
-        [[maybe_unused]] std::uint8_t pad_0xb04[0x4];
+        int32_t m_nControlPointNumber; // 0xac8        
+        [[maybe_unused]] std::uint8_t pad_0xacc[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_DragRelativeToPlane because it is not a standard-layout class
-    static_assert(sizeof(C_OP_DragRelativeToPlane) == 0xb08);
+    static_assert(sizeof(C_OP_DragRelativeToPlane) == 0xad0);
 };

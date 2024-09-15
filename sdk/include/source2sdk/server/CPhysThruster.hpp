@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x528
+    // Size: 0x530
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,11 +22,11 @@ namespace source2sdk::server
     class CPhysThruster : public server::CPhysForce
     {
     public:
-        Vector m_localOrigin; // 0x518        
-        [[maybe_unused]] std::uint8_t pad_0x524[0x4];
+        Vector m_localOrigin; // 0x520        
+        [[maybe_unused]] std::uint8_t pad_0x52c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPhysThruster because it is not a standard-layout class
-    static_assert(sizeof(CPhysThruster) == 0x528);
+    static_assert(sizeof(CPhysThruster) == 0x530);
 };

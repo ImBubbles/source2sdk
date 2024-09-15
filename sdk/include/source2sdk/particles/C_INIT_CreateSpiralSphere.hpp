@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e8
+    // Size: 0x1e0
     // Has VTable
     // Construct allowed
     // 
@@ -24,23 +24,23 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0x1c8        
+        int32_t m_nControlPointNumber; // 0x1c0        
         // metadata: MPropertyFriendlyName "override CP (X/Y/Z *= radius/density/speed)"
-        int32_t m_nOverrideCP; // 0x1cc        
+        int32_t m_nOverrideCP; // 0x1c4        
         // metadata: MPropertyFriendlyName "density"
-        int32_t m_nDensity; // 0x1d0        
+        int32_t m_nDensity; // 0x1c8        
         // metadata: MPropertyFriendlyName "initial radius"
-        float m_flInitialRadius; // 0x1d4        
+        float m_flInitialRadius; // 0x1cc        
         // metadata: MPropertyFriendlyName "min initial speed"
-        float m_flInitialSpeedMin; // 0x1d8        
+        float m_flInitialSpeedMin; // 0x1d0        
         // metadata: MPropertyFriendlyName "max initial speed"
-        float m_flInitialSpeedMax; // 0x1dc        
+        float m_flInitialSpeedMax; // 0x1d4        
         // metadata: MPropertyFriendlyName "use particle count as density scale"
-        bool m_bUseParticleCount; // 0x1e0        
-        [[maybe_unused]] std::uint8_t pad_0x1e1[0x7];
+        bool m_bUseParticleCount; // 0x1d8        
+        [[maybe_unused]] std::uint8_t pad_0x1d9[0x7];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_CreateSpiralSphere because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_CreateSpiralSphere) == 0x1e8);
+    static_assert(sizeof(C_INIT_CreateSpiralSphere) == 0x1e0);
 };

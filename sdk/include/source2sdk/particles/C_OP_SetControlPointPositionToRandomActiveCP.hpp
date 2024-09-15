@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x338
+    // Size: 0x328
     // Has VTable
     // Construct allowed
     // 
@@ -25,17 +25,17 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nCP1; // 0x1c8        
+        int32_t m_nCP1; // 0x1c0        
         // metadata: MPropertyFriendlyName "min active CP"
-        int32_t m_nHeadLocationMin; // 0x1cc        
+        int32_t m_nHeadLocationMin; // 0x1c4        
         // metadata: MPropertyFriendlyName "max active CP"
-        int32_t m_nHeadLocationMax; // 0x1d0        
-        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4]; // 0x1d4
+        int32_t m_nHeadLocationMax; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
         // metadata: MPropertyFriendlyName "reset rate"
-        particleslib::CParticleCollectionFloatInput m_flResetRate; // 0x1d8        
+        particleslib::CParticleCollectionFloatInput m_flResetRate; // 0x1d0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetControlPointPositionToRandomActiveCP because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetControlPointPositionToRandomActiveCP) == 0x338);
+    static_assert(sizeof(C_OP_SetControlPointPositionToRandomActiveCP) == 0x328);
 };

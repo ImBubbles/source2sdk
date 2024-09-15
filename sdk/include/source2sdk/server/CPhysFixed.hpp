@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x548
+    // Size: 0x550
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,13 +22,13 @@ namespace source2sdk::server
     class CPhysFixed : public server::CPhysConstraint
     {
     public:
-        float m_flLinearFrequency; // 0x530        
-        float m_flLinearDampingRatio; // 0x534        
-        float m_flAngularFrequency; // 0x538        
-        float m_flAngularDampingRatio; // 0x53c        
-        bool m_bEnableLinearConstraint; // 0x540        
-        bool m_bEnableAngularConstraint; // 0x541        
-        [[maybe_unused]] std::uint8_t pad_0x542[0x6];
+        float m_flLinearFrequency; // 0x538        
+        float m_flLinearDampingRatio; // 0x53c        
+        float m_flAngularFrequency; // 0x540        
+        float m_flAngularDampingRatio; // 0x544        
+        bool m_bEnableLinearConstraint; // 0x548        
+        bool m_bEnableAngularConstraint; // 0x549        
+        [[maybe_unused]] std::uint8_t pad_0x54a[0x6];
         
         // Datamap fields:
         // float InputSetLinearFrequency; // 0x0
@@ -39,5 +39,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPhysFixed because it is not a standard-layout class
-    static_assert(sizeof(CPhysFixed) == 0x548);
+    static_assert(sizeof(CPhysFixed) == 0x550);
 };

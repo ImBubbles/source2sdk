@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x210
+    // Size: 0x208
     // Has VTable
     // Construct allowed
     // 
@@ -26,5 +26,5 @@ namespace source2sdk::particles
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_INIT_RemapNamedModelMeshGroupToScalar) == 0x210);
+    static_assert(sizeof(C_INIT_RemapNamedModelMeshGroupToScalar) == 0x208);
 };

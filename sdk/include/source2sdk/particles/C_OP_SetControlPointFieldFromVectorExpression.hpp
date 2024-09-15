@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1028
+    // Size: 0xfd8
     // Has VTable
     // Construct allowed
     // 
@@ -27,22 +27,22 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "expression"
-        particles::VectorFloatExpressionType_t m_nExpression; // 0x1c8        
-        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
+        particles::VectorFloatExpressionType_t m_nExpression; // 0x1c0        
+        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
         // metadata: MPropertyFriendlyName "input 1"
-        particleslib::CParticleCollectionVecInput m_vecInput1; // 0x1d0        
+        particleslib::CParticleCollectionVecInput m_vecInput1; // 0x1c8        
         // metadata: MPropertyFriendlyName "input 2"
-        particleslib::CParticleCollectionVecInput m_vecInput2; // 0x848        
+        particleslib::CParticleCollectionVecInput m_vecInput2; // 0x820        
         // metadata: MPropertyFriendlyName "output"
-        particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0xec0        
+        particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0xe78        
         // metadata: MPropertyFriendlyName "output control point"
-        int32_t m_nOutputCP; // 0x1020        
+        int32_t m_nOutputCP; // 0xfd0        
         // metadata: MPropertyFriendlyName "output component"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nOutVectorField; // 0x1024        
+        int32_t m_nOutVectorField; // 0xfd4        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetControlPointFieldFromVectorExpression because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetControlPointFieldFromVectorExpression) == 0x1028);
+    static_assert(sizeof(C_OP_SetControlPointFieldFromVectorExpression) == 0xfd8);
 };

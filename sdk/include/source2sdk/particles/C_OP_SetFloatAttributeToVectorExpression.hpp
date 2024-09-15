@@ -19,7 +19,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1020
+    // Size: 0xfd0
     // Has VTable
     // Construct allowed
     // 
@@ -29,22 +29,22 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "expression"
-        particles::VectorFloatExpressionType_t m_nExpression; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
+        particles::VectorFloatExpressionType_t m_nExpression; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4]; // 0x1bc
         // metadata: MPropertyFriendlyName "input 1"
-        particleslib::CPerParticleVecInput m_vInput1; // 0x1c8        
+        particleslib::CPerParticleVecInput m_vInput1; // 0x1c0        
         // metadata: MPropertyFriendlyName "input 2"
-        particleslib::CPerParticleVecInput m_vInput2; // 0x840        
+        particleslib::CPerParticleVecInput m_vInput2; // 0x818        
         // metadata: MPropertyFriendlyName "output"
-        particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0xeb8        
+        particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0xe70        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0x1018        
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0xfc8        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x101c        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0xfcc        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetFloatAttributeToVectorExpression because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetFloatAttributeToVectorExpression) == 0x1020);
+    static_assert(sizeof(C_OP_SetFloatAttributeToVectorExpression) == 0xfd0);
 };

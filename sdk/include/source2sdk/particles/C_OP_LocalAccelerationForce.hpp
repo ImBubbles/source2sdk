@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x850
+    // Size: 0x828
     // Has VTable
     // Construct allowed
     // 
@@ -25,14 +25,14 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "local space control point"
-        int32_t m_nCP; // 0x1d0        
+        int32_t m_nCP; // 0x1c8        
         // metadata: MPropertyFriendlyName "scale control point"
-        int32_t m_nScaleCP; // 0x1d4        
+        int32_t m_nScaleCP; // 0x1cc        
         // metadata: MPropertyFriendlyName "local space acceleration"
-        particleslib::CParticleCollectionVecInput m_vecAccel; // 0x1d8        
+        particleslib::CParticleCollectionVecInput m_vecAccel; // 0x1d0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_LocalAccelerationForce because it is not a standard-layout class
-    static_assert(sizeof(C_OP_LocalAccelerationForce) == 0x850);
+    static_assert(sizeof(C_OP_LocalAccelerationForce) == 0x828);
 };

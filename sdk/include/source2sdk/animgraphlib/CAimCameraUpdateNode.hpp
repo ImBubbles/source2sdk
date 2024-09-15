@@ -16,7 +16,7 @@ namespace source2sdk::animgraphlib
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xb8
+    // Size: 0xb0
     // Has VTable
     // Construct allowed
     // 
@@ -30,16 +30,14 @@ namespace source2sdk::animgraphlib
         animgraphlib::CAnimParamHandle m_hParameterSpineRotationWeight; // 0x6c        
         animgraphlib::CAnimParamHandle m_hParameterPelvisOffset; // 0x6e        
         animgraphlib::CAnimParamHandle m_hParameterUseIK; // 0x70        
-        animgraphlib::CAnimParamHandle m_hParameterCameraOnly; // 0x72        
-        animgraphlib::CAnimParamHandle m_hParameterWeaponDepenetrationDistance; // 0x74        
-        animgraphlib::CAnimParamHandle m_hParameterWeaponDepenetrationDelta; // 0x76        
-        animgraphlib::CAnimParamHandle m_hParameterCameraClearanceDistance; // 0x78        
-        [[maybe_unused]] std::uint8_t pad_0x7a[0x6]; // 0x7a
-        animgraphlib::AimCameraOpFixedSettings_t m_opFixedSettings; // 0x80        
-        [[maybe_unused]] std::uint8_t pad_0xb0[0x8];
+        animgraphlib::CAnimParamHandle m_hParameterWeaponDepenetrationDistance; // 0x72        
+        animgraphlib::CAnimParamHandle m_hParameterCameraClearanceDistance; // 0x74        
+        [[maybe_unused]] std::uint8_t pad_0x76[0x2]; // 0x76
+        animgraphlib::AimCameraOpFixedSettings_t m_opFixedSettings; // 0x78        
+        [[maybe_unused]] std::uint8_t pad_0xa8[0x8];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CAimCameraUpdateNode because it is not a standard-layout class
-    static_assert(sizeof(CAimCameraUpdateNode) == 0xb8);
+    static_assert(sizeof(CAimCameraUpdateNode) == 0xb0);
 };

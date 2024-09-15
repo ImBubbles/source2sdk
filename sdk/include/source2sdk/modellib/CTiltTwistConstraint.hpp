@@ -23,9 +23,9 @@ namespace source2sdk::modellib
     class CTiltTwistConstraint : public modellib::CBaseConstraint
     {
     public:
-        int32_t m_nTargetAxis; // 0x68        
-        int32_t m_nSlaveAxis; // 0x6c        
-        [[maybe_unused]] std::uint8_t pad_0x70[0x30];
+        int32_t m_nTargetAxis; // 0x70        
+        int32_t m_nSlaveAxis; // 0x74        
+        [[maybe_unused]] std::uint8_t pad_0x78[0x28];
     };
     #pragma pack(pop)
     

@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x968
+    // Size: 0x8f0
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,14 +22,14 @@ namespace source2sdk::server
     class CTriggerSave : public server::CBaseTrigger
     {
     public:
-        bool m_bForceNewLevelUnit; // 0x958        
-        [[maybe_unused]] std::uint8_t pad_0x959[0x3]; // 0x959
-        float m_fDangerousTimer; // 0x95c        
-        int32_t m_minHitPoints; // 0x960        
-        [[maybe_unused]] std::uint8_t pad_0x964[0x4];
+        bool m_bForceNewLevelUnit; // 0x8e0        
+        [[maybe_unused]] std::uint8_t pad_0x8e1[0x3]; // 0x8e1
+        float m_fDangerousTimer; // 0x8e4        
+        int32_t m_minHitPoints; // 0x8e8        
+        [[maybe_unused]] std::uint8_t pad_0x8ec[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTriggerSave because it is not a standard-layout class
-    static_assert(sizeof(CTriggerSave) == 0x968);
+    static_assert(sizeof(CTriggerSave) == 0x8f0);
 };

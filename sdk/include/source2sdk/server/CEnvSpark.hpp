@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4f0
+    // Size: 0x4f8
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -23,11 +23,11 @@ namespace source2sdk::server
     class CEnvSpark : public server::CPointEntity
     {
     public:
-        float m_flDelay; // 0x4b8        
-        int32_t m_nMagnitude; // 0x4bc        
-        int32_t m_nTrailLength; // 0x4c0        
-        int32_t m_nType; // 0x4c4        
-        entity2::CEntityIOOutput m_OnSpark; // 0x4c8        
+        float m_flDelay; // 0x4c0        
+        int32_t m_nMagnitude; // 0x4c4        
+        int32_t m_nTrailLength; // 0x4c8        
+        int32_t m_nType; // 0x4cc        
+        entity2::CEntityIOOutput m_OnSpark; // 0x4d0        
         
         // Datamap fields:
         // void CEnvSparkSparkThink; // 0x0
@@ -39,5 +39,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CEnvSpark because it is not a standard-layout class
-    static_assert(sizeof(CEnvSpark) == 0x4f0);
+    static_assert(sizeof(CEnvSpark) == 0x4f8);
 };

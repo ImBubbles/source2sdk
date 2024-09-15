@@ -8,7 +8,7 @@
 
 namespace source2sdk::client
 {
-    // Enumerator count: 13
+    // Enumerator count: 14
     // Alignment: 1
     // Size: 0x1
     enum class MoveType_t : std::uint8_t
@@ -22,9 +22,10 @@ namespace source2sdk::client
         MOVETYPE_PUSH = 6,
         MOVETYPE_NOCLIP = 7,
         MOVETYPE_OBSERVER = 8,
-        MOVETYPE_CUSTOM = 9,
-        MOVETYPE_LAST = 10,
-        MOVETYPE_INVALID = 10,
+        MOVETYPE_LADDER = 9,
+        MOVETYPE_CUSTOM = 10,
+        MOVETYPE_LAST = 11,
+        MOVETYPE_INVALID = 11,
         MOVETYPE_MAX_BITS = 5,
     };
 };

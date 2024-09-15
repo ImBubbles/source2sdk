@@ -37,7 +37,7 @@ namespace source2sdk::smartprops
         // metadata: MPropertyDescription "Radius at which the rotator handle should be displayed."
         CSmartPropAttributeFloat m_flDisplayRadius; // 0xd8        
         // metadata: MPropertyDescription "Should the rotation be applied to the current transform."
-        CSmartPropAttributeBool m_bApplyToCurrentTransform; // 0x118        
+        CSmartPropAttributeBool m_bApplyToCurrentTrasnform; // 0x118        
         // metadata: MPropertyDescription "Specifies the number of degrees the rotation should snap to. If set to 0, then the rotation snapping will be controlled by the rotation snapping in Hammer."
         CSmartPropAttributeFloat m_flSnappingIncrement; // 0x158        
         // metadata: MPropertyFriendlyName "Enforce Limits"

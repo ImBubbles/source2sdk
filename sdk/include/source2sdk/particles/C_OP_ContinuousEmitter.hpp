@@ -16,7 +16,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x608
+    // Size: 0x5e8
     // Has VTable
     // Construct allowed
     // 
@@ -26,34 +26,34 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "emission duration"
-        particleslib::CParticleCollectionFloatInput m_flEmissionDuration; // 0x1c8        
+        particleslib::CParticleCollectionFloatInput m_flEmissionDuration; // 0x1c0        
         // metadata: MPropertyFriendlyName "emission start time"
-        particleslib::CParticleCollectionFloatInput m_flStartTime; // 0x328        
+        particleslib::CParticleCollectionFloatInput m_flStartTime; // 0x318        
         // metadata: MPropertyFriendlyName "emission rate"
-        particleslib::CParticleCollectionFloatInput m_flEmitRate; // 0x488        
+        particleslib::CParticleCollectionFloatInput m_flEmitRate; // 0x470        
         // metadata: MPropertyFriendlyName "scale emission to used control points"
         // metadata: MParticleMaxVersion "1"
-        float m_flEmissionScale; // 0x5e8        
+        float m_flEmissionScale; // 0x5c8        
         // metadata: MPropertyFriendlyName "scale emission by parent particle count"
-        float m_flScalePerParentParticle; // 0x5ec        
+        float m_flScalePerParentParticle; // 0x5cc        
         // metadata: MPropertyFriendlyName "emit particles for parent particle events"
-        bool m_bInitFromKilledParentParticles; // 0x5f0        
-        [[maybe_unused]] std::uint8_t pad_0x5f1[0x3]; // 0x5f1
+        bool m_bInitFromKilledParentParticles; // 0x5d0        
+        [[maybe_unused]] std::uint8_t pad_0x5d1[0x3]; // 0x5d1
         // metadata: MPropertyFriendlyName "emission parent particle event type"
         // metadata: MPropertySuppressExpr "m_bInitFromKilledParentParticles == false"
-        particles::EventTypeSelection_t m_nEventType; // 0x5f4        
+        particles::EventTypeSelection_t m_nEventType; // 0x5d4        
         // metadata: MPropertyFriendlyName "control point with snapshot data"
-        int32_t m_nSnapshotControlPoint; // 0x5f8        
+        int32_t m_nSnapshotControlPoint; // 0x5d8        
         // metadata: MPropertyFriendlyName "limit per update"
-        int32_t m_nLimitPerUpdate; // 0x5fc        
+        int32_t m_nLimitPerUpdate; // 0x5dc        
         // metadata: MPropertyFriendlyName "force emit on first update"
-        bool m_bForceEmitOnFirstUpdate; // 0x600        
+        bool m_bForceEmitOnFirstUpdate; // 0x5e0        
         // metadata: MPropertyFriendlyName "force emit on last update"
-        bool m_bForceEmitOnLastUpdate; // 0x601        
-        [[maybe_unused]] std::uint8_t pad_0x602[0x6];
+        bool m_bForceEmitOnLastUpdate; // 0x5e1        
+        [[maybe_unused]] std::uint8_t pad_0x5e2[0x6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ContinuousEmitter because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ContinuousEmitter) == 0x608);
+    static_assert(sizeof(C_OP_ContinuousEmitter) == 0x5e8);
 };

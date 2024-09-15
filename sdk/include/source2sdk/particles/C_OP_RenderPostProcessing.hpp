@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x380
+    // Size: 0x370
     // Has VTable
     // Construct allowed
     // 
@@ -27,18 +27,18 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Post Processing Strength"
-        particleslib::CPerParticleFloatInput m_flPostProcessStrength; // 0x210        
+        particleslib::CPerParticleFloatInput m_flPostProcessStrength; // 0x208        
         // metadata: MPropertyFriendlyName "Post Processing File"
         // metadata: MPropertyAttributeEditor "AssetBrowse( vpost, *showassetpreview )"
         // m_hPostTexture has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CStrongHandle<resourcesystem::InfoForResourceTypeCPostProcessingResource> m_hPostTexture;
-        char m_hPostTexture[0x8]; // 0x370        
+        char m_hPostTexture[0x8]; // 0x360        
         // metadata: MPropertyFriendlyName "Post Processing Priority Group"
-        particles::ParticlePostProcessPriorityGroup_t m_nPriority; // 0x378        
-        [[maybe_unused]] std::uint8_t pad_0x37c[0x4];
+        particles::ParticlePostProcessPriorityGroup_t m_nPriority; // 0x368        
+        [[maybe_unused]] std::uint8_t pad_0x36c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RenderPostProcessing because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RenderPostProcessing) == 0x380);
+    static_assert(sizeof(C_OP_RenderPostProcessing) == 0x370);
 };

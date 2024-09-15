@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1d0
+    // Size: 0x1c8
     // Has VTable
     // Construct allowed
     // 
@@ -24,11 +24,11 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "control point"
-        int32_t m_ControlPoint; // 0x1c8        
-        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4];
+        int32_t m_ControlPoint; // 0x1c0        
+        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_ForceControlPointStub because it is not a standard-layout class
-    static_assert(sizeof(C_OP_ForceControlPointStub) == 0x1d0);
+    static_assert(sizeof(C_OP_ForceControlPointStub) == 0x1c8);
 };

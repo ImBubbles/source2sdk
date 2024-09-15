@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: unknown
     // Standard-layout class: false
-    // Size: 0x840
+    // Size: 0x1cc0
     // Has VTable
     // Construct disallowed
     // MNetworkAssumeNotNetworkable
@@ -27,8 +27,8 @@ namespace source2sdk::client
     {
     public:
         // metadata: MNetworkEnable
-        client::CBaseAnimGraphController m_animationController; // 0x470        
-        [[maybe_unused]] std::uint8_t pad_0x838[0x8];
+        client::CBaseAnimGraphController m_animationController; // 0x460        
+        [[maybe_unused]] std::uint8_t pad_0x1cb8[0x8];
         
         // Static fields:
         static entity2::EntComponentInfo_t &Get_s_EntComponentInfo() {return *reinterpret_cast<entity2::EntComponentInfo_t*>(interfaces::g_schema->FindTypeScopeForModule("client.dll")->FindDeclaredClass("CBodyComponentBaseAnimGraph")->GetStaticFields()[0]->m_pInstance);};
@@ -37,5 +37,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBodyComponentBaseAnimGraph because it is not a standard-layout class
-    static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0x840);
+    static_assert(sizeof(CBodyComponentBaseAnimGraph) == 0x1cc0);
 };

@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -26,11 +26,11 @@ namespace source2sdk::server
     {
     public:
         [[maybe_unused]] std::uint8_t pad_0x00[0x38]; // 0x0
-        entity2::GameTime_t m_flStopTalkTime; // 0x38        
-        entity2::GameTime_t m_flStopTalkTimeWithoutDelay; // 0x3c        
-        entity2::GameTime_t m_flBlockedTalkTime; // 0x40        
+        client::GameTime_t m_flStopTalkTime; // 0x38        
+        client::GameTime_t m_flStopTalkTimeWithoutDelay; // 0x3c        
+        client::GameTime_t m_flBlockedTalkTime; // 0x40        
         int32_t m_voicePitch; // 0x44        
-        entity2::GameTime_t m_flLastTimeAcceptedSpeak; // 0x48        
+        client::GameTime_t m_flLastTimeAcceptedSpeak; // 0x48        
         bool m_bAllowSpeakingInterrupts; // 0x4c        
         bool m_bConsiderSceneInvolvementAsSpeech; // 0x4d        
         bool m_bSceneEntityDisabled; // 0x4e        
@@ -41,7 +41,7 @@ namespace source2sdk::server
         
         // Datamap fields:
         // void m_pSink; // 0x8
-        // void m_conceptCooldowns; // 0x10
+        // void m_ConceptHistories; // 0x10
     };
     #pragma pack(pop)
     

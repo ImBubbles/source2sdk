@@ -18,7 +18,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x820
+    // Size: 0x7f8
     // Has VTable
     // Construct allowed
     // 
@@ -29,32 +29,32 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4]; // 0x1bc
         // metadata: MPropertyFriendlyName "cylinder inner radius"
-        particleslib::CPerParticleFloatInput m_flInputMin; // 0x1c8        
+        particleslib::CPerParticleFloatInput m_flInputMin; // 0x1c0        
         // metadata: MPropertyFriendlyName "cylinder outer radius"
-        particleslib::CPerParticleFloatInput m_flInputMax; // 0x328        
+        particleslib::CPerParticleFloatInput m_flInputMax; // 0x318        
         // metadata: MPropertyFriendlyName "cylinder inner output"
-        particleslib::CPerParticleFloatInput m_flOutputMin; // 0x488        
+        particleslib::CPerParticleFloatInput m_flOutputMin; // 0x470        
         // metadata: MPropertyFriendlyName "cylinder outer output"
-        particleslib::CPerParticleFloatInput m_flOutputMax; // 0x5e8        
+        particleslib::CPerParticleFloatInput m_flOutputMax; // 0x5c8        
         // metadata: MPropertyFriendlyName "cylindrical top transform"
-        particleslib::CParticleTransformInput m_TransformStart; // 0x748        
+        particleslib::CParticleTransformInput m_TransformStart; // 0x720        
         // metadata: MPropertyFriendlyName "cylindrical bottom transform"
-        particleslib::CParticleTransformInput m_TransformEnd; // 0x7b0        
+        particleslib::CParticleTransformInput m_TransformEnd; // 0x788        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x818        
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x7f0        
         // metadata: MPropertyFriendlyName "only active within specified distance"
-        bool m_bActiveRange; // 0x81c        
+        bool m_bActiveRange; // 0x7f4        
         // metadata: MPropertyFriendlyName "output is additive"
-        bool m_bAdditive; // 0x81d        
+        bool m_bAdditive; // 0x7f5        
         // metadata: MPropertyFriendlyName "apply radius to ends (capsule)"
-        bool m_bCapsule; // 0x81e        
-        [[maybe_unused]] std::uint8_t pad_0x81f[0x1];
+        bool m_bCapsule; // 0x7f6        
+        [[maybe_unused]] std::uint8_t pad_0x7f7[0x1];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_CylindricalDistanceToTransform because it is not a standard-layout class
-    static_assert(sizeof(C_OP_CylindricalDistanceToTransform) == 0x820);
+    static_assert(sizeof(C_OP_CylindricalDistanceToTransform) == 0x7f8);
 };

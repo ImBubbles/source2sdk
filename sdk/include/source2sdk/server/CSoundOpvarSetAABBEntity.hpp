@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x6c8
+    // Size: 0x6d0
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,16 +22,16 @@ namespace source2sdk::server
     class CSoundOpvarSetAABBEntity : public server::CSoundOpvarSetPointEntity
     {
     public:
-        Vector m_vDistanceInnerMins; // 0x660        
-        Vector m_vDistanceInnerMaxs; // 0x66c        
-        Vector m_vDistanceOuterMins; // 0x678        
-        Vector m_vDistanceOuterMaxs; // 0x684        
-        int32_t m_nAABBDirection; // 0x690        
-        Vector m_vInnerMins; // 0x694        
-        Vector m_vInnerMaxs; // 0x6a0        
-        Vector m_vOuterMins; // 0x6ac        
-        Vector m_vOuterMaxs; // 0x6b8        
-        [[maybe_unused]] std::uint8_t pad_0x6c4[0x4];
+        Vector m_vDistanceInnerMins; // 0x668        
+        Vector m_vDistanceInnerMaxs; // 0x674        
+        Vector m_vDistanceOuterMins; // 0x680        
+        Vector m_vDistanceOuterMaxs; // 0x68c        
+        int32_t m_nAABBDirection; // 0x698        
+        Vector m_vInnerMins; // 0x69c        
+        Vector m_vInnerMaxs; // 0x6a8        
+        Vector m_vOuterMins; // 0x6b4        
+        Vector m_vOuterMaxs; // 0x6c0        
+        [[maybe_unused]] std::uint8_t pad_0x6cc[0x4];
         
         // Datamap fields:
         // void CSoundOpvarSetAABBEntitySetOpvarThink; // 0x0
@@ -39,5 +39,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CSoundOpvarSetAABBEntity because it is not a standard-layout class
-    static_assert(sizeof(CSoundOpvarSetAABBEntity) == 0x6c8);
+    static_assert(sizeof(CSoundOpvarSetAABBEntity) == 0x6d0);
 };

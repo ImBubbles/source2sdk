@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xdc8
+    // Size: 0xd80
     // Has VTable
     // Construct allowed
     // 
@@ -28,20 +28,20 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "gravity"
         // metadata: MVectorIsCoordinate
-        particleslib::CParticleCollectionVecInput m_Gravity; // 0x1c0        
+        particleslib::CParticleCollectionVecInput m_Gravity; // 0x1b8        
         // metadata: MPropertyFriendlyName "drag"
         // metadata: MPropertyAttributeRange "-1 1"
-        particleslib::CParticleCollectionFloatInput m_fDrag; // 0x838        
+        particleslib::CParticleCollectionFloatInput m_fDrag; // 0x810        
         // metadata: MPropertyFriendlyName "Mass controls"
-        particles::CParticleMassCalculationParameters m_massControls; // 0x998        
+        particles::CParticleMassCalculationParameters m_massControls; // 0x968        
         // metadata: MPropertyFriendlyName "max constraint passes"
-        int32_t m_nMaxConstraintPasses; // 0xdc0        
+        int32_t m_nMaxConstraintPasses; // 0xd78        
         // metadata: MPropertyFriendlyName "use new code"
-        bool m_bUseNewCode; // 0xdc4        
-        [[maybe_unused]] std::uint8_t pad_0xdc5[0x3];
+        bool m_bUseNewCode; // 0xd7c        
+        [[maybe_unused]] std::uint8_t pad_0xd7d[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_BasicMovement because it is not a standard-layout class
-    static_assert(sizeof(C_OP_BasicMovement) == 0xdc8);
+    static_assert(sizeof(C_OP_BasicMovement) == 0xd80);
 };

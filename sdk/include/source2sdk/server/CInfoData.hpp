@@ -22,7 +22,7 @@ namespace source2sdk::server
     class CInfoData : public server::CServerOnlyEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x4b8[0x398];
+        [[maybe_unused]] std::uint8_t pad_0x4c0[0x390];
         // No schema binary for binding
     };
     #pragma pack(pop)

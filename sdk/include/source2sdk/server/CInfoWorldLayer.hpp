@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4f8
+    // Size: 0x500
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -28,18 +28,18 @@ namespace source2sdk::server
     class CInfoWorldLayer : public server::CBaseEntity
     {
     public:
-        entity2::CEntityIOOutput m_pOutputOnEntitiesSpawned; // 0x4b8        
+        entity2::CEntityIOOutput m_pOutputOnEntitiesSpawned; // 0x4c0        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_worldName; // 0x4e0        
+        CUtlSymbolLarge m_worldName; // 0x4e8        
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_layerName; // 0x4e8        
+        CUtlSymbolLarge m_layerName; // 0x4f0        
         // metadata: MNetworkEnable
-        bool m_bWorldLayerVisible; // 0x4f0        
+        bool m_bWorldLayerVisible; // 0x4f8        
         // metadata: MNetworkEnable
-        bool m_bEntitiesSpawned; // 0x4f1        
-        bool m_bCreateAsChildSpawnGroup; // 0x4f2        
-        [[maybe_unused]] std::uint8_t pad_0x4f3[0x1]; // 0x4f3
-        uint32_t m_hLayerSpawnGroup; // 0x4f4        
+        bool m_bEntitiesSpawned; // 0x4f9        
+        bool m_bCreateAsChildSpawnGroup; // 0x4fa        
+        [[maybe_unused]] std::uint8_t pad_0x4fb[0x1]; // 0x4fb
+        uint32_t m_hLayerSpawnGroup; // 0x4fc        
         
         // Datamap fields:
         // void ShowWorldLayer; // 0x0
@@ -52,5 +52,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CInfoWorldLayer because it is not a standard-layout class
-    static_assert(sizeof(CInfoWorldLayer) == 0x4f8);
+    static_assert(sizeof(CInfoWorldLayer) == 0x500);
 };

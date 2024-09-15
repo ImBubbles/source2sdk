@@ -23,22 +23,21 @@ namespace source2sdk::server
     class CSoundEventEntity : public server::CBaseEntity
     {
     public:
-        bool m_bStartOnSpawn; // 0x4b8        
-        bool m_bToLocalPlayer; // 0x4b9        
-        bool m_bStopOnNew; // 0x4ba        
-        bool m_bSaveRestore; // 0x4bb        
-        bool m_bSavedIsPlaying; // 0x4bc        
-        [[maybe_unused]] std::uint8_t pad_0x4bd[0x3]; // 0x4bd
-        float m_flSavedElapsedTime; // 0x4c0        
-        [[maybe_unused]] std::uint8_t pad_0x4c4[0x4]; // 0x4c4
-        CUtlSymbolLarge m_iszSourceEntityName; // 0x4c8        
-        CUtlSymbolLarge m_iszAttachmentName; // 0x4d0        
+        bool m_bStartOnSpawn; // 0x4c0        
+        bool m_bToLocalPlayer; // 0x4c1        
+        bool m_bStopOnNew; // 0x4c2        
+        bool m_bSaveRestore; // 0x4c3        
+        bool m_bSavedIsPlaying; // 0x4c4        
+        [[maybe_unused]] std::uint8_t pad_0x4c5[0x3]; // 0x4c5
+        float m_flSavedElapsedTime; // 0x4c8        
+        [[maybe_unused]] std::uint8_t pad_0x4cc[0x4]; // 0x4cc
+        CUtlSymbolLarge m_iszSourceEntityName; // 0x4d0        
+        CUtlSymbolLarge m_iszAttachmentName; // 0x4d8        
         // m_onGUIDChanged has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CEntityOutputTemplate<uint64_t> m_onGUIDChanged;
-        char m_onGUIDChanged[0x28]; // 0x4d8        
-        entity2::CEntityIOOutput m_onSoundFinished; // 0x500        
-        float m_flClientCullRadius; // 0x528        
-        [[maybe_unused]] std::uint8_t pad_0x52c[0x2c]; // 0x52c
+        char m_onGUIDChanged[0x28]; // 0x4e0        
+        entity2::CEntityIOOutput m_onSoundFinished; // 0x508        
+        [[maybe_unused]] std::uint8_t pad_0x530[0x28]; // 0x530
         CUtlSymbolLarge m_iszSoundName; // 0x558        
         [[maybe_unused]] std::uint8_t pad_0x560[0x8]; // 0x560
         CEntityHandle m_hSource; // 0x568        

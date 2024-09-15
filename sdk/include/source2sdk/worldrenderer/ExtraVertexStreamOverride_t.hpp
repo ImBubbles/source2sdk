@@ -16,7 +16,7 @@ namespace source2sdk::worldrenderer
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x30
+    // Size: 0x28
     // Has Trivial Destructor
     // Construct allowed
     // 
@@ -33,5 +33,5 @@ namespace source2sdk::worldrenderer
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in ExtraVertexStreamOverride_t because it is not a standard-layout class
-    static_assert(sizeof(ExtraVertexStreamOverride_t) == 0x30);
+    static_assert(sizeof(ExtraVertexStreamOverride_t) == 0x28);
 };

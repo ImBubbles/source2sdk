@@ -20,7 +20,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0xb0
+    // Size: 0xa8
     // Has VTable
     #pragma pack(push, 1)
     class CTakeDamageInfo
@@ -51,15 +51,12 @@ namespace source2sdk::client
         bool m_bShouldSpark; // 0x65        
         [[maybe_unused]] std::uint8_t pad_0x66[0xa]; // 0x66
         client::TakeDamageFlags_t m_nDamageFlags; // 0x70        
-        int32_t m_bitsDotaDamageType; // 0x78        
-        int32_t m_nDotaDamageCategory; // 0x7c        
-        float m_flCombatLogCreditFactor; // 0x80        
-        int16_t m_iRecord; // 0x84        
-        [[maybe_unused]] std::uint8_t pad_0x86[0x2]; // 0x86
-        HSCRIPT m_hScriptInstance; // 0x88        
-        [[maybe_unused]] std::uint8_t pad_0x90[0x14]; // 0x90
-        bool m_bInTakeDamageFlow; // 0xa4        
-        [[maybe_unused]] std::uint8_t pad_0xa5[0xb];
+        int32_t m_nNumObjectsPenetrated; // 0x78        
+        float m_flFriendlyFireDamageReductionRatio; // 0x7c        
+        HSCRIPT m_hScriptInstance; // 0x80        
+        [[maybe_unused]] std::uint8_t pad_0x88[0x14]; // 0x88
+        bool m_bInTakeDamageFlow; // 0x9c        
+        [[maybe_unused]] std::uint8_t pad_0x9d[0xb];
         
         // Static fields:
         static client::CTakeDamageInfo &Get_EmptyInfo() {return *reinterpret_cast<client::CTakeDamageInfo*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("CTakeDamageInfo")->GetStaticFields()[0]->m_pInstance);};
@@ -82,12 +79,10 @@ namespace source2sdk::client
     static_assert(offsetof(CTakeDamageInfo, m_bShouldBleed) == 0x64);
     static_assert(offsetof(CTakeDamageInfo, m_bShouldSpark) == 0x65);
     static_assert(offsetof(CTakeDamageInfo, m_nDamageFlags) == 0x70);
-    static_assert(offsetof(CTakeDamageInfo, m_bitsDotaDamageType) == 0x78);
-    static_assert(offsetof(CTakeDamageInfo, m_nDotaDamageCategory) == 0x7c);
-    static_assert(offsetof(CTakeDamageInfo, m_flCombatLogCreditFactor) == 0x80);
-    static_assert(offsetof(CTakeDamageInfo, m_iRecord) == 0x84);
-    static_assert(offsetof(CTakeDamageInfo, m_hScriptInstance) == 0x88);
-    static_assert(offsetof(CTakeDamageInfo, m_bInTakeDamageFlow) == 0xa4);
+    static_assert(offsetof(CTakeDamageInfo, m_nNumObjectsPenetrated) == 0x78);
+    static_assert(offsetof(CTakeDamageInfo, m_flFriendlyFireDamageReductionRatio) == 0x7c);
+    static_assert(offsetof(CTakeDamageInfo, m_hScriptInstance) == 0x80);
+    static_assert(offsetof(CTakeDamageInfo, m_bInTakeDamageFlow) == 0x9c);
     
-    static_assert(sizeof(CTakeDamageInfo) == 0xb0);
+    static_assert(sizeof(CTakeDamageInfo) == 0xa8);
 };

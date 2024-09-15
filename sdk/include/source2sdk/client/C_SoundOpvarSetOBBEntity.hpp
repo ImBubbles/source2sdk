@@ -14,7 +14,7 @@ namespace source2sdk::client
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x558
+    // Size: 0x568
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -26,5 +26,5 @@ namespace source2sdk::client
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(C_SoundOpvarSetOBBEntity) == 0x558);
+    static_assert(sizeof(C_SoundOpvarSetOBBEntity) == 0x568);
 };

@@ -1,6 +1,6 @@
 #pragma once
 #include "source2sdk/client/CPlayer_MovementServices.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -47,7 +47,7 @@ namespace source2sdk::client
         uint32_t m_nCrouchState; // 0x1e4        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        entity2::GameTime_t m_flCrouchTransitionStartTime; // 0x1e8        
+        client::GameTime_t m_flCrouchTransitionStartTime; // 0x1e8        
         // metadata: MNetworkEnable
         // metadata: MNetworkUserGroup "LocalPlayerExclusive"
         bool m_bDucked; // 0x1ec        

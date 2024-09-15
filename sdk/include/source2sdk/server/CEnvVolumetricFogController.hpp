@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/resourcesystem/InfoForResourceTypeCTextureBase.hpp"
 #include "source2sdk/server/CBaseEntity.hpp"
 #include "source2sdk/source2gen.hpp"
@@ -21,7 +21,6 @@ namespace source2sdk::server
     // Construct allowed
     // MNetworkAssumeNotNetworkable
     // 
-    // static metadata: MEntityAllowsPortraitWorldSpawn
     // static metadata: MNetworkVarNames "float m_flScattering"
     // static metadata: MNetworkVarNames "float m_flAnisotropy"
     // static metadata: MNetworkVarNames "float m_flFadeSpeed"
@@ -29,8 +28,6 @@ namespace source2sdk::server
     // static metadata: MNetworkVarNames "float m_flFadeInStart"
     // static metadata: MNetworkVarNames "float m_flFadeInEnd"
     // static metadata: MNetworkVarNames "float m_flIndirectStrength"
-    // static metadata: MNetworkVarNames "int m_nVolumeDepth"
-    // static metadata: MNetworkVarNames "float m_fFirstVolumeSliceThickness"
     // static metadata: MNetworkVarNames "int m_nIndirectTextureDimX"
     // static metadata: MNetworkVarNames "int m_nIndirectTextureDimY"
     // static metadata: MNetworkVarNames "int m_nIndirectTextureDimZ"
@@ -60,23 +57,19 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        float m_flScattering; // 0x4b8        
+        float m_flScattering; // 0x4c0        
         // metadata: MNetworkEnable
-        float m_flAnisotropy; // 0x4bc        
+        float m_flAnisotropy; // 0x4c4        
         // metadata: MNetworkEnable
-        float m_flFadeSpeed; // 0x4c0        
+        float m_flFadeSpeed; // 0x4c8        
         // metadata: MNetworkEnable
-        float m_flDrawDistance; // 0x4c4        
+        float m_flDrawDistance; // 0x4cc        
         // metadata: MNetworkEnable
-        float m_flFadeInStart; // 0x4c8        
+        float m_flFadeInStart; // 0x4d0        
         // metadata: MNetworkEnable
-        float m_flFadeInEnd; // 0x4cc        
+        float m_flFadeInEnd; // 0x4d4        
         // metadata: MNetworkEnable
-        float m_flIndirectStrength; // 0x4d0        
-        // metadata: MNetworkEnable
-        int32_t m_nVolumeDepth; // 0x4d4        
-        // metadata: MNetworkEnable
-        float m_fFirstVolumeSliceThickness; // 0x4d8        
+        float m_flIndirectStrength; // 0x4d8        
         // metadata: MNetworkEnable
         int32_t m_nIndirectTextureDimX; // 0x4dc        
         // metadata: MNetworkEnable
@@ -91,11 +84,11 @@ namespace source2sdk::server
         bool m_bActive; // 0x500        
         [[maybe_unused]] std::uint8_t pad_0x501[0x3]; // 0x501
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartAnisoTime; // 0x504        
+        client::GameTime_t m_flStartAnisoTime; // 0x504        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartScatterTime; // 0x508        
+        client::GameTime_t m_flStartScatterTime; // 0x508        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartDrawDistanceTime; // 0x50c        
+        client::GameTime_t m_flStartDrawDistanceTime; // 0x50c        
         // metadata: MNetworkEnable
         float m_flStartAnisotropy; // 0x510        
         // metadata: MNetworkEnable

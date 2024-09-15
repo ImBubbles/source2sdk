@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x168
+    // Size: 0x160
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -30,5 +30,5 @@ namespace source2sdk::particles
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in FloatInputMaterialVariable_t because it is not a standard-layout class
-    static_assert(sizeof(FloatInputMaterialVariable_t) == 0x168);
+    static_assert(sizeof(FloatInputMaterialVariable_t) == 0x160);
 };

@@ -8,7 +8,7 @@
 
 namespace source2sdk::soundsystem_voicecontainers
 {
-    // Enumerator count: 5
+    // Enumerator count: 4
     // Alignment: 4
     // Size: 0x4
     enum class PlayBackMode_t : std::uint32_t
@@ -21,7 +21,5 @@ namespace source2sdk::soundsystem_voicecontainers
         RandomAvoidLast = 0x2,
         // MPropertyFriendlyName "Sequential"
         Sequential = 0x3,
-        // MPropertyFriendlyName "Random With Weights"
-        RandomWeights = 0x4,
     };
 };

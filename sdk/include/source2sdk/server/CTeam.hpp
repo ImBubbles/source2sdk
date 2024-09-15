@@ -24,7 +24,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x570
+    // Size: 0x578
     // Has VTable
     // Construct allowed
     // MNetworkNoBase
@@ -43,20 +43,20 @@ namespace source2sdk::server
         // metadata: MNetworkAlias "m_aPlayers"
         // m_aPlayerControllers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<CHandle<server::CBasePlayerController>> m_aPlayerControllers;
-        char m_aPlayerControllers[0x18]; // 0x4b8        
+        char m_aPlayerControllers[0x18]; // 0x4c0        
         // metadata: MNetworkEnable
         // metadata: MNetworkAlias "m_aPawns"
         // m_aPlayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CNetworkUtlVectorBase<CHandle<server::CBasePlayerPawn>> m_aPlayers;
-        char m_aPlayers[0x18]; // 0x4d0        
+        char m_aPlayers[0x18]; // 0x4d8        
         // metadata: MNetworkEnable
-        int32_t m_iScore; // 0x4e8        
+        int32_t m_iScore; // 0x4f0        
         // metadata: MNetworkEnable
-        char m_szTeamname[129]; // 0x4ec        
-        [[maybe_unused]] std::uint8_t pad_0x56d[0x3];
+        char m_szTeamname[129]; // 0x4f4        
+        [[maybe_unused]] std::uint8_t pad_0x575[0x3];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTeam because it is not a standard-layout class
-    static_assert(sizeof(CTeam) == 0x570);
+    static_assert(sizeof(CTeam) == 0x578);
 };

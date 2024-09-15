@@ -8,7 +8,7 @@
 
 namespace source2sdk::server
 {
-    // Enumerator count: 14
+    // Enumerator count: 12
     // Alignment: 2
     // Size: 0x2
     enum class SoundTypes_t : std::uint16_t
@@ -24,8 +24,6 @@ namespace source2sdk::server
         SOUND_PLAYER_VEHICLE = 0x8,
         SOUND_GLASS_BREAK = 0x9,
         SOUND_PHYSICS_OBJECT = 0xa,
-        SOUND_WARN_FRIENDS = 0xb,
-        SOUND_FOOD = 0xc,
-        NUM_AI_SOUND_TYPES = 0xd,
+        NUM_AI_SOUND_TYPES = 0xb,
     };
 };

@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x518
+    // Size: 0x520
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,11 +22,11 @@ namespace source2sdk::server
     class CFilterMassGreater : public server::CBaseFilter
     {
     public:
-        float m_fFilterMass; // 0x510        
-        [[maybe_unused]] std::uint8_t pad_0x514[0x4];
+        float m_fFilterMass; // 0x518        
+        [[maybe_unused]] std::uint8_t pad_0x51c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CFilterMassGreater because it is not a standard-layout class
-    static_assert(sizeof(CFilterMassGreater) == 0x518);
+    static_assert(sizeof(CFilterMassGreater) == 0x520);
 };

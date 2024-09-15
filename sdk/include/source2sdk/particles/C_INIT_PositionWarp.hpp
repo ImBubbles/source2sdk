@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0xed8
+    // Size: 0xe90
     // Has VTable
     // Construct allowed
     // 
@@ -26,31 +26,31 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "warp min"
         // metadata: MVectorIsCoordinate
-        particleslib::CParticleCollectionVecInput m_vecWarpMin; // 0x1c8        
+        particleslib::CParticleCollectionVecInput m_vecWarpMin; // 0x1c0        
         // metadata: MPropertyFriendlyName "warp max"
         // metadata: MVectorIsCoordinate
-        particleslib::CParticleCollectionVecInput m_vecWarpMax; // 0x840        
+        particleslib::CParticleCollectionVecInput m_vecWarpMax; // 0x818        
         // metadata: MPropertyFriendlyName "warp scale control point number"
-        int32_t m_nScaleControlPointNumber; // 0xeb8        
+        int32_t m_nScaleControlPointNumber; // 0xe70        
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nControlPointNumber; // 0xebc        
+        int32_t m_nControlPointNumber; // 0xe74        
         // metadata: MPropertyFriendlyName "radius scale component"
         // metadata: MPropertyAttributeChoiceName "vector_component"
-        int32_t m_nRadiusComponent; // 0xec0        
+        int32_t m_nRadiusComponent; // 0xe78        
         // metadata: MPropertyFriendlyName "warp transition time (treats min/max as start/end sizes)"
-        float m_flWarpTime; // 0xec4        
+        float m_flWarpTime; // 0xe7c        
         // metadata: MPropertyFriendlyName "warp transition start time"
-        float m_flWarpStartTime; // 0xec8        
+        float m_flWarpStartTime; // 0xe80        
         // metadata: MPropertyFriendlyName "previous position sacale"
-        float m_flPrevPosScale; // 0xecc        
+        float m_flPrevPosScale; // 0xe84        
         // metadata: MPropertyFriendlyName "reverse warp (0/1)"
-        bool m_bInvertWarp; // 0xed0        
+        bool m_bInvertWarp; // 0xe88        
         // metadata: MPropertyFriendlyName "use particle count instead of time"
-        bool m_bUseCount; // 0xed1        
-        [[maybe_unused]] std::uint8_t pad_0xed2[0x6];
+        bool m_bUseCount; // 0xe89        
+        [[maybe_unused]] std::uint8_t pad_0xe8a[0x6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_PositionWarp because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_PositionWarp) == 0xed8);
+    static_assert(sizeof(C_INIT_PositionWarp) == 0xe90);
 };

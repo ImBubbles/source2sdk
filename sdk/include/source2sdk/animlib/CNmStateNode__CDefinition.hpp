@@ -27,19 +27,19 @@ namespace source2sdk::animlib
         int16_t m_nChildNodeIdx; // 0x10        
         [[maybe_unused]] std::uint8_t pad_0x12[0x6]; // 0x12
         // m_entryEvents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<CGlobalSymbol,3> m_entryEvents;
+        // CUtlLeanVectorFixedGrowable<CGlobalSymbol> m_entryEvents;
         char m_entryEvents[0x20]; // 0x18        
         // m_executeEvents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<CGlobalSymbol,3> m_executeEvents;
+        // CUtlLeanVectorFixedGrowable<CGlobalSymbol> m_executeEvents;
         char m_executeEvents[0x20]; // 0x38        
         // m_exitEvents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<CGlobalSymbol,3> m_exitEvents;
+        // CUtlLeanVectorFixedGrowable<CGlobalSymbol> m_exitEvents;
         char m_exitEvents[0x20]; // 0x58        
         // m_timedRemainingEvents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<animlib::CNmStateNode__TimedEvent_t,1> m_timedRemainingEvents;
+        // CUtlLeanVectorFixedGrowable<animlib::CNmStateNode__TimedEvent_t> m_timedRemainingEvents;
         char m_timedRemainingEvents[0x18]; // 0x78        
         // m_timedElapsedEvents has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlLeanVectorFixedGrowable<animlib::CNmStateNode__TimedEvent_t,1> m_timedElapsedEvents;
+        // CUtlLeanVectorFixedGrowable<animlib::CNmStateNode__TimedEvent_t> m_timedElapsedEvents;
         char m_timedElapsedEvents[0x18]; // 0x90        
         int16_t m_nLayerWeightNodeIdx; // 0xa8        
         int16_t m_nLayerRootMotionWeightNodeIdx; // 0xaa        

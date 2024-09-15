@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x558
+    // Size: 0x560
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,10 +22,10 @@ namespace source2sdk::server
     class CEnvSoundscapeProxy : public server::CEnvSoundscape
     {
     public:
-        CUtlSymbolLarge m_MainSoundscapeName; // 0x550        
+        CUtlSymbolLarge m_MainSoundscapeName; // 0x558        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CEnvSoundscapeProxy because it is not a standard-layout class
-    static_assert(sizeof(CEnvSoundscapeProxy) == 0x558);
+    static_assert(sizeof(CEnvSoundscapeProxy) == 0x560);
 };

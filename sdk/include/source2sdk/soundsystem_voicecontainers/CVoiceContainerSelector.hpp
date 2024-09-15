@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/soundsystem_voicecontainers/CSoundContainerReferenceArray.hpp"
+#include "source2sdk/resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp"
 #include "source2sdk/soundsystem_voicecontainers/CVoiceContainerBase.hpp"
 #include "source2sdk/soundsystem_voicecontainers/PlayBackMode_t.hpp"
 #include "source2sdk/source2gen.hpp"
@@ -28,14 +28,14 @@ namespace source2sdk::soundsystem_voicecontainers
     {
     public:
         // metadata: MPropertyFriendlyName "Playback Mode"
-        soundsystem_voicecontainers::PlayBackMode_t m_mode; // 0xb8        
-        [[maybe_unused]] std::uint8_t pad_0xbc[0x4]; // 0xbc
+        soundsystem_voicecontainers::PlayBackMode_t m_mode; // 0xf0        
+        // metadata: MPropertyFriendlyName "Retrigger"
+        bool m_bRetrigger; // 0xf4        
+        [[maybe_unused]] std::uint8_t pad_0xf5[0x3]; // 0xf5
         // metadata: MPropertyFriendlyName "Sounds To play"
-        soundsystem_voicecontainers::CSoundContainerReferenceArray m_soundsToPlay; // 0xc0        
-        // metadata: MPropertyFriendlyName "Relative Weights"
-        // m_fProbabilityWeights has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<float> m_fProbabilityWeights;
-        char m_fProbabilityWeights[0x18]; // 0xf8        
+        // m_soundsToPlay has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+        // CUtlVector<CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>> m_soundsToPlay;
+        char m_soundsToPlay[0x18]; // 0xf8        
         [[maybe_unused]] std::uint8_t pad_0x110[0x20];
     };
     #pragma pack(pop)

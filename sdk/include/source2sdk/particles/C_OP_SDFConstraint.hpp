@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x488
+    // Size: 0x470
     // Has VTable
     // Construct allowed
     // 
@@ -25,15 +25,15 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "min dist to sdf"
-        particleslib::CParticleCollectionFloatInput m_flMinDist; // 0x1c0        
+        particleslib::CParticleCollectionFloatInput m_flMinDist; // 0x1b8        
         // metadata: MPropertyFriendlyName "max dist to sdf"
-        particleslib::CParticleCollectionFloatInput m_flMaxDist; // 0x320        
+        particleslib::CParticleCollectionFloatInput m_flMaxDist; // 0x310        
         // metadata: MPropertyFriendlyName "Max # of iterations"
-        int32_t m_nMaxIterations; // 0x480        
-        [[maybe_unused]] std::uint8_t pad_0x484[0x4];
+        int32_t m_nMaxIterations; // 0x468        
+        [[maybe_unused]] std::uint8_t pad_0x46c[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SDFConstraint because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SDFConstraint) == 0x488);
+    static_assert(sizeof(C_OP_SDFConstraint) == 0x470);
 };

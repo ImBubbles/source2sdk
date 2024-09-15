@@ -20,11 +20,6 @@ namespace source2sdk::smartprops
 
 namespace source2sdk::smartprops
 {
-    class CSmartPropModifier;
-};
-
-namespace source2sdk::smartprops
-{
     class CSmartPropVariable;
 };
 
@@ -33,7 +28,7 @@ namespace source2sdk::smartprops
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: true
-    // Size: 0xc8
+    // Size: 0xb0
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -44,7 +39,7 @@ namespace source2sdk::smartprops
     // static metadata: MVDataPreviewWidget
     // static metadata: MVDataGroupNodeClass
     // static metadata: MVDataUsesComponentEditor
-    // static metadata: MPropertyFriendlyName "Smart Prop Root"
+    // static metadata: MPropertyFriendlyName "Smart Prop"
     // static metadata: MPropertyDescription "Root of a smart prop, contains a list of elements to evaluate."
     #pragma pack(push, 1)
     class CSmartPropRoot
@@ -70,12 +65,7 @@ namespace source2sdk::smartprops
         // m_Children has a template type with potentially unknown template parameters. You can try uncommenting the field below.
         // CUtlVector<smartprops::CSmartPropElement*> m_Children;
         char m_Children[0x18]; // 0x78        
-        // metadata: MPropertyFriendlyName "Modifiers"
-        // metadata: MVDataPromoteField
-        // m_Modifiers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<smartprops::CSmartPropModifier*> m_Modifiers;
-        char m_Modifiers[0x18]; // 0x90        
-        [[maybe_unused]] std::uint8_t pad_0xa8[0x20];
+        [[maybe_unused]] std::uint8_t pad_0x90[0x20];
     };
     #pragma pack(pop)
     
@@ -84,7 +74,6 @@ namespace source2sdk::smartprops
     static_assert(offsetof(CSmartPropRoot, m_Variables) == 0x48);
     static_assert(offsetof(CSmartPropRoot, m_Choices) == 0x60);
     static_assert(offsetof(CSmartPropRoot, m_Children) == 0x78);
-    static_assert(offsetof(CSmartPropRoot, m_Modifiers) == 0x90);
     
-    static_assert(sizeof(CSmartPropRoot) == 0xc8);
+    static_assert(sizeof(CSmartPropRoot) == 0xb0);
 };

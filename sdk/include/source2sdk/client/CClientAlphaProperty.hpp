@@ -1,6 +1,6 @@
 #pragma once
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/client/IClientAlphaProperty.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -36,7 +36,7 @@ namespace source2sdk::client
         uint16_t m_nDistFadeStart; // 0x18        
         uint16_t m_nDistFadeEnd; // 0x1a        
         float m_flFadeScale; // 0x1c        
-        entity2::GameTime_t m_flRenderFxStartTime; // 0x20        
+        client::GameTime_t m_flRenderFxStartTime; // 0x20        
         float m_flRenderFxDuration; // 0x24        
         [[maybe_unused]] std::uint8_t pad_0x28[0x8];
     };

@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/server/CPointEntity.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x540
+    // Size: 0x548
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -30,19 +30,19 @@ namespace source2sdk::server
     {
     public:
         // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszOverlayNames[10]; // 0x4b8        
+        CUtlSymbolLarge m_iszOverlayNames[10]; // 0x4c0        
         // metadata: MNetworkEnable
         // metadata: MNetworkBitCount "11"
         // metadata: MNetworkMinValue "-1,000000"
         // metadata: MNetworkMaxValue "63,000000"
-        float m_flOverlayTimes[10]; // 0x508        
+        float m_flOverlayTimes[10]; // 0x510        
         // metadata: MNetworkEnable
-        entity2::GameTime_t m_flStartTime; // 0x530        
+        client::GameTime_t m_flStartTime; // 0x538        
         // metadata: MNetworkEnable
-        int32_t m_iDesiredOverlay; // 0x534        
+        int32_t m_iDesiredOverlay; // 0x53c        
         // metadata: MNetworkEnable
-        bool m_bIsActive; // 0x538        
-        [[maybe_unused]] std::uint8_t pad_0x539[0x7];
+        bool m_bIsActive; // 0x540        
+        [[maybe_unused]] std::uint8_t pad_0x541[0x7];
         
         // Datamap fields:
         // void InputStartOverlay; // 0x0
@@ -52,5 +52,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CEnvScreenOverlay because it is not a standard-layout class
-    static_assert(sizeof(CEnvScreenOverlay) == 0x540);
+    static_assert(sizeof(CEnvScreenOverlay) == 0x548);
 };

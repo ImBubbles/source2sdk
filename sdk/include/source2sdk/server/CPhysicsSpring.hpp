@@ -14,7 +14,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x500
+    // Size: 0x508
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -22,20 +22,20 @@ namespace source2sdk::server
     class CPhysicsSpring : public server::CBaseEntity
     {
     public:
-        [[maybe_unused]] std::uint8_t pad_0x4b8[0x8]; // 0x4b8
-        float m_flFrequency; // 0x4c0        
-        float m_flDampingRatio; // 0x4c4        
-        float m_flRestLength; // 0x4c8        
-        [[maybe_unused]] std::uint8_t pad_0x4cc[0x4]; // 0x4cc
-        CUtlSymbolLarge m_nameAttachStart; // 0x4d0        
-        CUtlSymbolLarge m_nameAttachEnd; // 0x4d8        
-        Vector m_start; // 0x4e0        
-        Vector m_end; // 0x4ec        
-        uint32_t m_teleportTick; // 0x4f8        
-        [[maybe_unused]] std::uint8_t pad_0x4fc[0x4];
+        [[maybe_unused]] std::uint8_t pad_0x4c0[0x8]; // 0x4c0
+        float m_flFrequency; // 0x4c8        
+        float m_flDampingRatio; // 0x4cc        
+        float m_flRestLength; // 0x4d0        
+        [[maybe_unused]] std::uint8_t pad_0x4d4[0x4]; // 0x4d4
+        CUtlSymbolLarge m_nameAttachStart; // 0x4d8        
+        CUtlSymbolLarge m_nameAttachEnd; // 0x4e0        
+        Vector m_start; // 0x4e8        
+        Vector m_end; // 0x4f4        
+        uint32_t m_teleportTick; // 0x500        
+        [[maybe_unused]] std::uint8_t pad_0x504[0x4];
         
         // Datamap fields:
-        // void m_pSpringJoint; // 0x4b8
+        // void m_pSpringJoint; // 0x4c0
         // float InputSetFrequency; // 0x0
         // float InputSetDampingRatio; // 0x0
         // float InputSetRestLength; // 0x0
@@ -43,5 +43,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CPhysicsSpring because it is not a standard-layout class
-    static_assert(sizeof(CPhysicsSpring) == 0x500);
+    static_assert(sizeof(CPhysicsSpring) == 0x508);
 };

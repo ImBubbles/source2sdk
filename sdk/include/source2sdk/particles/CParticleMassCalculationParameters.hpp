@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x428
+    // Size: 0x410
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
@@ -29,12 +29,12 @@ namespace source2sdk::particles
         // metadata: MPropertyFriendlyName "Radius input"
         particleslib::CPerParticleFloatInput m_flRadius; // 0x8        
         // metadata: MPropertyFriendlyName "Nominal radius value"
-        particleslib::CPerParticleFloatInput m_flNominalRadius; // 0x168        
+        particleslib::CPerParticleFloatInput m_flNominalRadius; // 0x160        
         // metadata: MPropertyFriendlyName "Scale to apply to result"
-        particleslib::CPerParticleFloatInput m_flScale; // 0x2c8        
+        particleslib::CPerParticleFloatInput m_flScale; // 0x2b8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CParticleMassCalculationParameters because it is not a standard-layout class
-    static_assert(sizeof(CParticleMassCalculationParameters) == 0x428);
+    static_assert(sizeof(CParticleMassCalculationParameters) == 0x410);
 };

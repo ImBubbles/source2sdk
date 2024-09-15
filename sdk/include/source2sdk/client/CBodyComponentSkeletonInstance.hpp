@@ -16,7 +16,7 @@ namespace source2sdk::client
     // Registered alignment: unknown
     // Alignment: unknown
     // Standard-layout class: false
-    // Size: 0x470
+    // Size: 0x460
     // Has VTable
     // Construct disallowed
     // MNetworkAssumeNotNetworkable
@@ -36,5 +36,5 @@ namespace source2sdk::client
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CBodyComponentSkeletonInstance because it is not a standard-layout class
-    static_assert(sizeof(CBodyComponentSkeletonInstance) == 0x470);
+    static_assert(sizeof(CBodyComponentSkeletonInstance) == 0x460);
 };

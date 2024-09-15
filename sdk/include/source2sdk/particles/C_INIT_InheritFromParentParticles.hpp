@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1e0
+    // Size: 0x1d8
     // Has VTable
     // Construct allowed
     // 
@@ -25,21 +25,21 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "scale"
-        float m_flScale; // 0x1c8        
+        float m_flScale; // 0x1c0        
         // metadata: MPropertyFriendlyName "inherited field"
         // metadata: MPropertyAttributeChoiceName "particlefield"
-        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1cc        
+        particles::ParticleAttributeIndex_t m_nFieldOutput; // 0x1c4        
         // metadata: MPropertyFriendlyName "particle increment amount"
-        int32_t m_nIncrement; // 0x1d0        
+        int32_t m_nIncrement; // 0x1c8        
         // metadata: MPropertyFriendlyName "random parent particle distribution"
-        bool m_bRandomDistribution; // 0x1d4        
-        [[maybe_unused]] std::uint8_t pad_0x1d5[0x3]; // 0x1d5
+        bool m_bRandomDistribution; // 0x1cc        
+        [[maybe_unused]] std::uint8_t pad_0x1cd[0x3]; // 0x1cd
         // metadata: MPropertyFriendlyName "random seed"
-        int32_t m_nRandomSeed; // 0x1d8        
-        [[maybe_unused]] std::uint8_t pad_0x1dc[0x4];
+        int32_t m_nRandomSeed; // 0x1d0        
+        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_InheritFromParentParticles because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_InheritFromParentParticles) == 0x1e0);
+    static_assert(sizeof(C_INIT_InheritFromParentParticles) == 0x1d8);
 };

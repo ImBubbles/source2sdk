@@ -17,7 +17,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x530
+    // Size: 0x518
     // Has VTable
     // Construct allowed
     // 
@@ -27,38 +27,38 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "offset"
-        particleslib::CPerParticleFloatInput m_flOffset; // 0x1c8        
+        particleslib::CPerParticleFloatInput m_flOffset; // 0x1c0        
         // metadata: MPropertyFriendlyName "max trace length"
-        particleslib::CPerParticleFloatInput m_flMaxTraceLength; // 0x328        
+        particleslib::CPerParticleFloatInput m_flMaxTraceLength; // 0x318        
         // metadata: MPropertyFriendlyName "collision group"
-        char m_CollisionGroupName[128]; // 0x488        
+        char m_CollisionGroupName[128]; // 0x470        
         // metadata: MPropertyFriendlyName "Trace Set"
-        particles::ParticleTraceSet_t m_nTraceSet; // 0x508        
-        [[maybe_unused]] std::uint8_t pad_0x50c[0xc]; // 0x50c
+        particles::ParticleTraceSet_t m_nTraceSet; // 0x4f0        
+        [[maybe_unused]] std::uint8_t pad_0x4f4[0xc]; // 0x4f4
         // metadata: MPropertyFriendlyName "No Collision Behavior"
-        particles::ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x518        
+        particles::ParticleTraceMissBehavior_t m_nTraceMissBehavior; // 0x500        
         // metadata: MPropertyFriendlyName "include water"
         // metadata: MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
-        bool m_bIncludeWater; // 0x51c        
+        bool m_bIncludeWater; // 0x504        
         // metadata: MPropertyFriendlyName "set normal"
-        bool m_bSetNormal; // 0x51d        
+        bool m_bSetNormal; // 0x505        
         // metadata: MPropertyFriendlyName "set Previous XYZ only"
-        bool m_bSetPXYZOnly; // 0x51e        
+        bool m_bSetPXYZOnly; // 0x506        
         // metadata: MPropertyFriendlyName "Trace along particle normal"
-        bool m_bTraceAlongNormal; // 0x51f        
+        bool m_bTraceAlongNormal; // 0x507        
         // metadata: MPropertyFriendlyName "Offset only if trace hit"
-        bool m_bOffsetonColOnly; // 0x520        
-        [[maybe_unused]] std::uint8_t pad_0x521[0x3]; // 0x521
+        bool m_bOffsetonColOnly; // 0x508        
+        [[maybe_unused]] std::uint8_t pad_0x509[0x3]; // 0x509
         // metadata: MPropertyFriendlyName "offset final position by this fraction of the particle radius"
-        float m_flOffsetByRadiusFactor; // 0x524        
+        float m_flOffsetByRadiusFactor; // 0x50c        
         // metadata: MPropertyFriendlyName "preserve initial Z-offset relative to cp"
-        int32_t m_nPreserveOffsetCP; // 0x528        
+        int32_t m_nPreserveOffsetCP; // 0x510        
         // metadata: MPropertyFriendlyName "CP Entity to Ignore for Collisions"
         // metadata: MPropertySuppressExpr "m_nTraceSet == PARTICLE_TRACE_SET_STATIC"
-        int32_t m_nIgnoreCP; // 0x52c        
+        int32_t m_nIgnoreCP; // 0x514        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_PositionPlaceOnGround because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_PositionPlaceOnGround) == 0x530);
+    static_assert(sizeof(C_INIT_PositionPlaceOnGround) == 0x518);
 };

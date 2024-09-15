@@ -14,7 +14,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x1c8
+    // Size: 0x1c0
     // Has VTable
     // Construct allowed
     // 
@@ -24,13 +24,13 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "Reduce rope popping on decay"
-        bool m_bRopeDecay; // 0x1c0        
+        bool m_bRopeDecay; // 0x1b8        
         // metadata: MPropertyFriendlyName "force preserving particle order"
-        bool m_bForcePreserveParticleOrder; // 0x1c1        
-        [[maybe_unused]] std::uint8_t pad_0x1c2[0x6];
+        bool m_bForcePreserveParticleOrder; // 0x1b9        
+        [[maybe_unused]] std::uint8_t pad_0x1ba[0x6];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_Decay because it is not a standard-layout class
-    static_assert(sizeof(C_OP_Decay) == 0x1c8);
+    static_assert(sizeof(C_OP_Decay) == 0x1c0);
 };

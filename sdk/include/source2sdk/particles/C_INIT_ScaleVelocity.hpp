@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x840
+    // Size: 0x818
     // Has VTable
     // Construct allowed
     // 
@@ -26,10 +26,10 @@ namespace source2sdk::particles
     public:
         // metadata: MPropertyFriendlyName "velocity scale"
         // metadata: MVectorIsCoordinate
-        particleslib::CParticleCollectionVecInput m_vecScale; // 0x1c8        
+        particleslib::CParticleCollectionVecInput m_vecScale; // 0x1c0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_ScaleVelocity because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_ScaleVelocity) == 0x840);
+    static_assert(sizeof(C_INIT_ScaleVelocity) == 0x818);
 };

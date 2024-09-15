@@ -28,7 +28,7 @@ namespace source2sdk::smartprops
     // Construct allowed
     // 
     // static metadata: MGetKV3ClassDefaults
-    // static metadata: MVDataBase
+    // static metadata: MVDataRoot
     // static metadata: MVDataNodeType "1"
     // static metadata: MVDataAnonymousNode
     // static metadata: MPropertyFriendlyName "Smart Prop Element"

@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x748
+    // Size: 0x720
     // Has VTable
     // Construct allowed
     // 
@@ -25,19 +25,19 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "slack"
-        particleslib::CParticleCollectionFloatInput m_flRestLength; // 0x1c0        
+        particleslib::CParticleCollectionFloatInput m_flRestLength; // 0x1b8        
         // metadata: MPropertyFriendlyName "minimum segment length %"
-        particleslib::CParticleCollectionFloatInput m_flMinDistance; // 0x320        
+        particleslib::CParticleCollectionFloatInput m_flMinDistance; // 0x310        
         // metadata: MPropertyFriendlyName "maximum segment length %"
-        particleslib::CParticleCollectionFloatInput m_flMaxDistance; // 0x480        
+        particleslib::CParticleCollectionFloatInput m_flMaxDistance; // 0x468        
         // metadata: MPropertyFriendlyName "scale factor for spring correction"
-        float m_flAdjustmentScale; // 0x5e0        
-        [[maybe_unused]] std::uint8_t pad_0x5e4[0x4]; // 0x5e4
+        float m_flAdjustmentScale; // 0x5c0        
+        [[maybe_unused]] std::uint8_t pad_0x5c4[0x4]; // 0x5c4
         // metadata: MPropertyFriendlyName "manual resting spacing"
-        particleslib::CParticleCollectionFloatInput m_flInitialRestingLength; // 0x5e8        
+        particleslib::CParticleCollectionFloatInput m_flInitialRestingLength; // 0x5c8        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_RopeSpringConstraint because it is not a standard-layout class
-    static_assert(sizeof(C_OP_RopeSpringConstraint) == 0x748);
+    static_assert(sizeof(C_OP_RopeSpringConstraint) == 0x720);
 };

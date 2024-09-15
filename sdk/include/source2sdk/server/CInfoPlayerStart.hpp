@@ -22,10 +22,8 @@ namespace source2sdk::server
     class CInfoPlayerStart : public server::CPointEntity
     {
     public:
-        bool m_bDisabled; // 0x4b8        
-        bool m_bIsMaster; // 0x4b9        
-        [[maybe_unused]] std::uint8_t pad_0x4ba[0x6]; // 0x4ba
-        CGlobalSymbol m_pPawnSubclass; // 0x4c0        
+        bool m_bDisabled; // 0x4c0        
+        [[maybe_unused]] std::uint8_t pad_0x4c1[0x7];
         
         // Datamap fields:
         // void InputEnable; // 0x0

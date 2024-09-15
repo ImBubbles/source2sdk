@@ -8,7 +8,7 @@
 
 namespace source2sdk::pulse_runtime_lib
 {
-    // Enumerator count: 75
+    // Enumerator count: 73
     // Alignment: 2
     // Size: 0x2
     enum class PulseInstructionCode_t : std::uint16_t
@@ -72,21 +72,19 @@ namespace source2sdk::pulse_runtime_lib
         EQ_FLOAT = 0x38,
         EQ_STRING = 0x39,
         EQ_ENTITY_NAME = 0x3a,
-        EQ_SCHEMA_ENUM = 0x3b,
-        EQ_EHANDLE = 0x3c,
-        EQ_PANEL_HANDLE = 0x3d,
-        EQ_OPAQUE_HANDLE = 0x3e,
-        EQ_TEST_HANDLE = 0x3f,
-        NE_BOOL = 0x40,
-        NE_INT = 0x41,
-        NE_FLOAT = 0x42,
-        NE_STRING = 0x43,
-        NE_ENTITY_NAME = 0x44,
-        NE_SCHEMA_ENUM = 0x45,
-        NE_EHANDLE = 0x46,
-        NE_PANEL_HANDLE = 0x47,
-        NE_OPAQUE_HANDLE = 0x48,
-        NE_TEST_HANDLE = 0x49,
-        GET_CONST_INLINE_STORAGE = 0x4a,
+        EQ_EHANDLE = 0x3b,
+        EQ_PANEL_HANDLE = 0x3c,
+        EQ_OPAQUE_HANDLE = 0x3d,
+        EQ_TEST_HANDLE = 0x3e,
+        NE_BOOL = 0x3f,
+        NE_INT = 0x40,
+        NE_FLOAT = 0x41,
+        NE_STRING = 0x42,
+        NE_ENTITY_NAME = 0x43,
+        NE_EHANDLE = 0x44,
+        NE_PANEL_HANDLE = 0x45,
+        NE_OPAQUE_HANDLE = 0x46,
+        NE_TEST_HANDLE = 0x47,
+        GET_CONST_INLINE_STORAGE = 0x48,
     };
 };

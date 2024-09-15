@@ -1,5 +1,5 @@
 #pragma once
-#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/client/GameTime_t.hpp"
 #include "source2sdk/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
@@ -21,7 +21,7 @@ namespace source2sdk::server
     {
     public:
         Vector m_prevSample; // 0x0        
-        entity2::GameTime_t m_fPrevSampleTime; // 0xc        
+        client::GameTime_t m_fPrevSampleTime; // 0xc        
         float m_fIdealSampleRate; // 0x10        
     };
     #pragma pack(pop)

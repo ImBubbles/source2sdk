@@ -15,7 +15,7 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x988
+    // Size: 0x910
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
@@ -23,8 +23,8 @@ namespace source2sdk::server
     class CTriggerActiveWeaponDetect : public server::CBaseTrigger
     {
     public:
-        entity2::CEntityIOOutput m_OnTouchedActiveWeapon; // 0x958        
-        CUtlSymbolLarge m_iszWeaponClassName; // 0x980        
+        entity2::CEntityIOOutput m_OnTouchedActiveWeapon; // 0x8e0        
+        CUtlSymbolLarge m_iszWeaponClassName; // 0x908        
         
         // Datamap fields:
         // void CTriggerActiveWeaponDetectActiveWeaponThink; // 0x0
@@ -32,5 +32,5 @@ namespace source2sdk::server
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in CTriggerActiveWeaponDetect because it is not a standard-layout class
-    static_assert(sizeof(CTriggerActiveWeaponDetect) == 0x988);
+    static_assert(sizeof(CTriggerActiveWeaponDetect) == 0x910);
 };

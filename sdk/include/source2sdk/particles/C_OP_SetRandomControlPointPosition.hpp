@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4b0
+    // Size: 0x498
     // Has VTable
     // Construct allowed
     // 
@@ -25,26 +25,26 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "set positions in world space"
-        bool m_bUseWorldLocation; // 0x1c8        
+        bool m_bUseWorldLocation; // 0x1c0        
         // metadata: MPropertyFriendlyName "inherit CP orientation"
-        bool m_bOrient; // 0x1c9        
-        [[maybe_unused]] std::uint8_t pad_0x1ca[0x2]; // 0x1ca
+        bool m_bOrient; // 0x1c1        
+        [[maybe_unused]] std::uint8_t pad_0x1c2[0x2]; // 0x1c2
         // metadata: MPropertyFriendlyName "control point number"
-        int32_t m_nCP1; // 0x1cc        
+        int32_t m_nCP1; // 0x1c4        
         // metadata: MPropertyFriendlyName "control point to offset positions from"
-        int32_t m_nHeadLocation; // 0x1d0        
-        [[maybe_unused]] std::uint8_t pad_0x1d4[0x4]; // 0x1d4
+        int32_t m_nHeadLocation; // 0x1c8        
+        [[maybe_unused]] std::uint8_t pad_0x1cc[0x4]; // 0x1cc
         // metadata: MPropertyFriendlyName "re-randomize rate (-1 for once only)"
-        particleslib::CParticleCollectionFloatInput m_flReRandomRate; // 0x1d8        
+        particleslib::CParticleCollectionFloatInput m_flReRandomRate; // 0x1d0        
         // metadata: MPropertyFriendlyName "control point min"
-        Vector m_vecCPMinPos; // 0x338        
+        Vector m_vecCPMinPos; // 0x328        
         // metadata: MPropertyFriendlyName "control point max"
-        Vector m_vecCPMaxPos; // 0x344        
+        Vector m_vecCPMaxPos; // 0x334        
         // metadata: MPropertyFriendlyName "Interpolation"
-        particleslib::CParticleCollectionFloatInput m_flInterpolation; // 0x350        
+        particleslib::CParticleCollectionFloatInput m_flInterpolation; // 0x340        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetRandomControlPointPosition because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetRandomControlPointPosition) == 0x4b0);
+    static_assert(sizeof(C_OP_SetRandomControlPointPosition) == 0x498);
 };

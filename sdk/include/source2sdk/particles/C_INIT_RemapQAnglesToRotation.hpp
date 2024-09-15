@@ -15,7 +15,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x230
+    // Size: 0x228
     // Has VTable
     // Construct allowed
     // 
@@ -25,10 +25,10 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "transform input"
-        particleslib::CParticleTransformInput m_TransformInput; // 0x1c8        
+        particleslib::CParticleTransformInput m_TransformInput; // 0x1c0        
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_INIT_RemapQAnglesToRotation because it is not a standard-layout class
-    static_assert(sizeof(C_INIT_RemapQAnglesToRotation) == 0x230);
+    static_assert(sizeof(C_INIT_RemapQAnglesToRotation) == 0x228);
 };

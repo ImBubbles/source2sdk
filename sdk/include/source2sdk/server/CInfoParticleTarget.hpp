@@ -14,18 +14,17 @@ namespace source2sdk::server
     // Registered alignment: 0x8
     // Alignment: 0x8
     // Standard-layout class: false
-    // Size: 0x4b8
+    // Size: 0x4c0
     // Has VTable
     // Construct allowed
     // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MEntityAllowsPortraitWorldSpawn
     #pragma pack(push, 1)
     class CInfoParticleTarget : public server::CPointEntity
     {
     public:
+        // No schema binary for binding
     };
     #pragma pack(pop)
     
-    static_assert(sizeof(CInfoParticleTarget) == 0x4b8);
+    static_assert(sizeof(CInfoParticleTarget) == 0x4c0);
 };

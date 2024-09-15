@@ -19,7 +19,7 @@ namespace source2sdk::particles
     // Registered alignment: 0x10
     // Alignment: 0x10
     // Standard-layout class: false
-    // Size: 0x610
+    // Size: 0x5f0
     // Has VTable
     // Construct allowed
     // 
@@ -29,23 +29,23 @@ namespace source2sdk::particles
     {
     public:
         // metadata: MPropertyFriendlyName "expression"
-        particles::ScalarExpressionType_t m_nExpression; // 0x1c0        
-        [[maybe_unused]] std::uint8_t pad_0x1c4[0x4]; // 0x1c4
+        particles::ScalarExpressionType_t m_nExpression; // 0x1b8        
+        [[maybe_unused]] std::uint8_t pad_0x1bc[0x4]; // 0x1bc
         // metadata: MPropertyFriendlyName "input 1"
-        particleslib::CPerParticleFloatInput m_flInput1; // 0x1c8        
+        particleslib::CPerParticleFloatInput m_flInput1; // 0x1c0        
         // metadata: MPropertyFriendlyName "input 2"
-        particleslib::CPerParticleFloatInput m_flInput2; // 0x328        
+        particleslib::CPerParticleFloatInput m_flInput2; // 0x318        
         // metadata: MPropertyFriendlyName "output"
-        particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x488        
+        particleslib::CParticleRemapFloatInput m_flOutputRemap; // 0x470        
         // metadata: MPropertyFriendlyName "output field"
         // metadata: MPropertyAttributeChoiceName "particlefield_scalar"
-        particles::ParticleAttributeIndex_t m_nOutputField; // 0x5e8        
+        particles::ParticleAttributeIndex_t m_nOutputField; // 0x5c8        
         // metadata: MPropertyFriendlyName "set value method"
-        particles::ParticleSetMethod_t m_nSetMethod; // 0x5ec        
-        [[maybe_unused]] std::uint8_t pad_0x5f0[0x20];
+        particles::ParticleSetMethod_t m_nSetMethod; // 0x5cc        
+        [[maybe_unused]] std::uint8_t pad_0x5d0[0x20];
     };
     #pragma pack(pop)
     
     // Cannot assert offsets of fields in C_OP_SetAttributeToScalarExpression because it is not a standard-layout class
-    static_assert(sizeof(C_OP_SetAttributeToScalarExpression) == 0x610);
+    static_assert(sizeof(C_OP_SetAttributeToScalarExpression) == 0x5f0);
 };
