@@ -1,42 +1,45 @@
 #pragma once
-#include "source2sdk/server/CTriggerMultiple.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CTriggerMultiple.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x940
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CTriggerImpact : public server::CTriggerMultiple
+    namespace server
     {
-    public:
-        float m_flMagnitude; // 0x908        
-        float m_flNoise; // 0x90c        
-        float m_flViewkick; // 0x910        
-        [[maybe_unused]] std::uint8_t pad_0x914[0x4]; // 0x914
-        // m_pOutputForce has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEntityOutputTemplate<Vector> m_pOutputForce;
-        char m_pOutputForce[0x28]; // 0x918        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xa18
+        // Has VTable
+        #pragma pack(push, 1)
+        class CTriggerImpact : public source2sdk::server::CTriggerMultiple
+        {
+        public:
+            float m_flMagnitude; // 0x9e0            
+            float m_flNoise; // 0x9e4            
+            float m_flViewkick; // 0x9e8            
+            uint8_t _pad09ec[0x4]; // 0x9ec
+            // m_pOutputForce has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<Vector> m_pOutputForce;
+            char m_pOutputForce[0x28]; // 0x9f0            
+            
+            // Datamap fields:
+            // void InputImpact; // 0x0
+            // float InputSetMagnitude; // 0x0
+            // void CTriggerImpactDisable; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputImpact; // 0x0
-        // float InputSetMagnitude; // 0x0
-        // void CTriggerImpactDisable; // 0x0
+        // Cannot assert offsets of fields in CTriggerImpact because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CTriggerImpact) == 0xa18);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CTriggerImpact because it is not a standard-layout class
-    static_assert(sizeof(CTriggerImpact) == 0x940);
 };

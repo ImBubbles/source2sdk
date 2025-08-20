@@ -1,31 +1,34 @@
 #pragma once
-#include "source2sdk/server/CBaseEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x4c8
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CCSPointScriptEntity : public server::CBaseEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x4c0[0x8];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x4f8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCSPointScriptEntity : public source2sdk::server::CBaseEntity
+        {
+        public:
+            uint8_t _pad04f0[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCSPointScriptEntity) == 0x4f8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCSPointScriptEntity) == 0x4c8);
 };

@@ -1,33 +1,36 @@
 #pragma once
-#include "source2sdk/server/CBaseAnimGraph.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseAnimGraph.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x8e8
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CWaterBullet : public server::CBaseAnimGraph
+    namespace server
     {
-    public:
-        // Datamap fields:
-        // Vector bullet_direction; // 0x7fffffff
-        // void CWaterBulletBulletThink; // 0x0
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xa78
+        // Has VTable
+        #pragma pack(push, 1)
+        class CWaterBullet : public source2sdk::server::CBaseAnimGraph
+        {
+        public:
+            // Datamap fields:
+            // Vector bullet_direction; // 0x7fffffff
+            // void CWaterBulletBulletThink; // 0x0
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CWaterBullet) == 0xa78);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CWaterBullet) == 0x8e8);
 };

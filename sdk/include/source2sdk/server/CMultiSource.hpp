@@ -1,47 +1,52 @@
 #pragma once
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/server/CLogicalEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/CEntityIOOutput.hpp"
+#include "source2sdk/server/CLogicalEntity.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x5f8
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CMultiSource : public server::CLogicalEntity
+    namespace server
     {
-    public:
-        // m_rgEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_rgEntities[32];
-        char m_rgEntities[0x80]; // 0x4c0        
-        int32_t m_rgTriggered[32]; // 0x540        
-        entity2::CEntityIOOutput m_OnTrigger; // 0x5c0        
-        int32_t m_iTotal; // 0x5e8        
-        [[maybe_unused]] std::uint8_t pad_0x5ec[0x4]; // 0x5ec
-        CUtlSymbolLarge m_globalstate; // 0x5f0        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x628
+        // Has VTable
+        #pragma pack(push, 1)
+        class CMultiSource : public source2sdk::server::CLogicalEntity
+        {
+        public:
+            // m_rgEntities has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_rgEntities[32];
+            char m_rgEntities[0x80]; // 0x4f0            
+            std::int32_t m_rgTriggered[32]; // 0x570            
+            source2sdk::entity2::CEntityIOOutput m_OnTrigger; // 0x5f0            
+            std::int32_t m_iTotal; // 0x618            
+            uint8_t _pad061c[0x4]; // 0x61c
+            CUtlSymbolLarge m_globalstate; // 0x620            
+            
+            // Datamap fields:
+            // void CMultiSourceRegister; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void CMultiSourceRegister; // 0x0
+        // Cannot assert offsets of fields in CMultiSource because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CMultiSource) == 0x628);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CMultiSource because it is not a standard-layout class
-    static_assert(sizeof(CMultiSource) == 0x5f8);
 };

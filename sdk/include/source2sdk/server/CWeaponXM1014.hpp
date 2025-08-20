@@ -1,31 +1,33 @@
 #pragma once
-#include "source2sdk/server/CCSWeaponBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCSWeaponBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xe98
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CWeaponXM1014 : public server::CCSWeaponBase
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1030
+        // Has VTable
+        #pragma pack(push, 1)
+        class CWeaponXM1014 : public source2sdk::server::CCSWeaponBase
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CWeaponXM1014) == 0x1030);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CWeaponXM1014) == 0xe98);
 };

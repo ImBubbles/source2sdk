@@ -1,39 +1,50 @@
 #pragma once
-#include "source2sdk/pulse_runtime_lib/CBasePulseGraphInstance.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/pulse_runtime_lib/CBasePulseGraphInstance.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CCSPointScriptEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CCSPointScriptEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x100
-    // Has VTable
-    // 
-    // static metadata: MPulseInstanceDomainInfo
-    // static metadata: MPulseDomainHookInfo
-    // static metadata: MPulseLibraryBindings
-    // static metadata: MPulseDomainOptInFeatureTag
-    #pragma pack(push, 1)
-    class CCSPointScript : public pulse_runtime_lib::CBasePulseGraphInstance
+    namespace server
     {
-    public:
-        server::CCSPointScriptEntity* m_pParent; // 0xf8        
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x120
+        // Has VTable
+        // 
+        // static metadata: MPulseInstanceDomainInfo
+        // static metadata: MPulseDomainHookInfo
+        // static metadata: MPulseDomainScopeInfo
+        // static metadata: MPulseLibraryBindings
+        // static metadata: MSourceTSDomain
+        // static metadata: MPulseDomainHiddenInTool
+        // static metadata: MPulseDomainOptInFeatureTag
+        #pragma pack(push, 1)
+        class CCSPointScript : public source2sdk::pulse_runtime_lib::CBasePulseGraphInstance
+        {
+        public:
+            uint8_t _pad0110[0x8]; // 0x110
+            source2sdk::server::CCSPointScriptEntity* m_pParent; // 0x118            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCSPointScript because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCSPointScript) == 0x120);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCSPointScript because it is not a standard-layout class
-    static_assert(sizeof(CCSPointScript) == 0x100);
 };

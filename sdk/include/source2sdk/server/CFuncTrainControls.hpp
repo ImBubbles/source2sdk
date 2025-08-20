@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/server/CBaseModelEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseModelEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x710
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CFuncTrainControls : public server::CBaseModelEntity
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x7e8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CFuncTrainControls : public source2sdk::server::CBaseModelEntity
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CFuncTrainControls) == 0x7e8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CFuncTrainControls) == 0x710);
 };

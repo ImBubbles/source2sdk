@@ -1,40 +1,43 @@
 #pragma once
-#include "source2sdk/server/CServerOnlyPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CServerOnlyPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x528
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CPointPrefab : public server::CServerOnlyPointEntity
+    namespace server
     {
-    public:
-        CUtlSymbolLarge m_targetMapName; // 0x4c0        
-        CUtlSymbolLarge m_forceWorldGroupID; // 0x4c8        
-        CUtlSymbolLarge m_associatedRelayTargetName; // 0x4d0        
-        bool m_fixupNames; // 0x4d8        
-        bool m_bLoadDynamic; // 0x4d9        
-        [[maybe_unused]] std::uint8_t pad_0x4da[0x2]; // 0x4da
-        // m_associatedRelayEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CPointPrefab> m_associatedRelayEntity;
-        char m_associatedRelayEntity[0x4]; // 0x4dc        
-        [[maybe_unused]] std::uint8_t pad_0x4e0[0x48];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x558
+        // Has VTable
+        #pragma pack(push, 1)
+        class CPointPrefab : public source2sdk::server::CServerOnlyPointEntity
+        {
+        public:
+            CUtlSymbolLarge m_targetMapName; // 0x4f0            
+            CUtlSymbolLarge m_forceWorldGroupID; // 0x4f8            
+            CUtlSymbolLarge m_associatedRelayTargetName; // 0x500            
+            bool m_fixupNames; // 0x508            
+            bool m_bLoadDynamic; // 0x509            
+            uint8_t _pad050a[0x2]; // 0x50a
+            // m_associatedRelayEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CPointPrefab> m_associatedRelayEntity;
+            char m_associatedRelayEntity[0x4]; // 0x50c            
+            uint8_t _pad0510[0x48];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CPointPrefab because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CPointPrefab) == 0x558);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CPointPrefab because it is not a standard-layout class
-    static_assert(sizeof(CPointPrefab) == 0x528);
 };

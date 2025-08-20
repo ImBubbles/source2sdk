@@ -1,31 +1,34 @@
 #pragma once
-#include "source2sdk/server/CHostageRescueZoneShim.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CHostageRescueZoneShim.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x8f0
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CHostageRescueZone : public server::CHostageRescueZoneShim
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x8e0[0x10];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9d8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CHostageRescueZone : public source2sdk::server::CHostageRescueZoneShim
+        {
+        public:
+            uint8_t _pad09b8[0x20];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CHostageRescueZone) == 0x9d8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CHostageRescueZone) == 0x8f0);
 };

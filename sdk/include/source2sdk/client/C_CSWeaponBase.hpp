@@ -1,203 +1,179 @@
 #pragma once
-#include "source2sdk/animationsystem/HSequence.hpp"
-#include "source2sdk/client/CSWeaponMode.hpp"
-#include "source2sdk/client/CSWeaponState_t.hpp"
-#include "source2sdk/client/C_BasePlayerWeapon.hpp"
-#include "source2sdk/client/C_IronSightController.hpp"
-#include "source2sdk/client/GameTick_t.hpp"
-#include "source2sdk/client/GameTime_t.hpp"
-#include "source2sdk/client/PlayerAnimEvent_t.hpp"
-#include "source2sdk/client/WeaponAttackType_t.hpp"
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/animationsystem/HSequence.hpp"
+#include "source2sdk/client/CSWeaponMode.hpp"
+#include "source2sdk/client/C_BasePlayerWeapon.hpp"
+#include "source2sdk/client/C_IronSightController.hpp"
+#include "source2sdk/client/WeaponGameplayAnimState.hpp"
+#include "source2sdk/entity2/CEntityIOOutput.hpp"
+#include "source2sdk/entity2/GameTick_t.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_CSPlayerPawn;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    class C_CSPlayerPawn;
-};
-
-namespace source2sdk::client
-{
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1a70
-    // Has VTable
-    // Construct disallowed
-    // MConstructibleClassBase
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MNetworkExcludeByName "m_flTimeWeaponIdle"
-    // static metadata: MNetworkVarNames "float m_flFireSequenceStartTime"
-    // static metadata: MNetworkVarNames "int m_nFireSequenceStartTimeChange"
-    // static metadata: MNetworkVarNames "PlayerAnimEvent_t m_ePlayerFireEvent"
-    // static metadata: MNetworkVarNames "WeaponAttackType_t m_ePlayerFireEventAttackType"
-    // static metadata: MNetworkVarNames "CSWeaponState_t m_iState"
-    // static metadata: MNetworkVarNames "uint32 m_nViewModelIndex"
-    // static metadata: MNetworkVarNames "GameTime_t m_flTimeWeaponIdle"
-    // static metadata: MNetworkVarNames "CSWeaponMode m_weaponMode"
-    // static metadata: MNetworkVarNames "float m_fAccuracyPenalty"
-    // static metadata: MNetworkVarNames "int m_iRecoilIndex"
-    // static metadata: MNetworkVarNames "float m_flRecoilIndex"
-    // static metadata: MNetworkVarNames "bool m_bBurstMode"
-    // static metadata: MNetworkVarNames "GameTick_t m_nPostponeFireReadyTicks"
-    // static metadata: MNetworkVarNames "float m_flPostponeFireReadyFrac"
-    // static metadata: MNetworkVarNames "bool m_bInReload"
-    // static metadata: MNetworkVarNames "bool m_bReloadVisuallyComplete"
-    // static metadata: MNetworkVarNames "GameTime_t m_flDroppedAtTime"
-    // static metadata: MNetworkVarNames "bool m_bIsHauledBack"
-    // static metadata: MNetworkVarNames "bool m_bSilencerOn"
-    // static metadata: MNetworkVarNames "GameTime_t m_flTimeSilencerSwitchComplete"
-    // static metadata: MNetworkVarNames "int m_iOriginalTeamNumber"
-    // static metadata: MNetworkVarNames "int m_iMostRecentTeamNumber"
-    // static metadata: MNetworkVarNames "bool m_bDroppedNearBuyZone"
-    // static metadata: MNetworkVarNames "CHandle< CCSPlayerPawn> m_hPrevOwner"
-    // static metadata: MNetworkVarNames "GameTick_t m_nDropTick"
-    // static metadata: MNetworkVarNames "GameTime_t m_fLastShotTime"
-    // static metadata: MNetworkVarNames "int m_iIronSightMode"
-    // static metadata: MNetworkVarNames "int m_iNumEmptyAttacks"
-    #pragma pack(push, 1)
-    class C_CSWeaponBase : public client::C_BasePlayerWeapon
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x15e8[0x3c]; // 0x15e8
-        // metadata: MNetworkEnable
-        float m_flFireSequenceStartTime; // 0x1624        
-        // metadata: MNetworkEnable
-        int32_t m_nFireSequenceStartTimeChange; // 0x1628        
-        int32_t m_nFireSequenceStartTimeAck; // 0x162c        
-        // metadata: MNetworkEnable
-        client::PlayerAnimEvent_t m_ePlayerFireEvent; // 0x1630        
-        // metadata: MNetworkEnable
-        client::WeaponAttackType_t m_ePlayerFireEventAttackType; // 0x1634        
-        animationsystem::HSequence m_seqIdle; // 0x1638        
-        animationsystem::HSequence m_seqFirePrimary; // 0x163c        
-        animationsystem::HSequence m_seqFireSecondary; // 0x1640        
-        [[maybe_unused]] std::uint8_t pad_0x1644[0x4]; // 0x1644
-        // m_thirdPersonFireSequences has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<animationsystem::HSequence> m_thirdPersonFireSequences;
-        char m_thirdPersonFireSequences[0x18]; // 0x1648        
-        animationsystem::HSequence m_hCurrentThirdPersonSequence; // 0x1660        
-        int32_t m_nSilencerBoneIndex; // 0x1664        
-        animationsystem::HSequence m_thirdPersonSequences[7]; // 0x1668        
-        [[maybe_unused]] std::uint8_t pad_0x1684[0x1c]; // 0x1684
-        client::CSWeaponState_t m_ClientPreviousWeaponState; // 0x16a0        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkChangeCallback "OnWeaponStateNetworkChange"
-        client::CSWeaponState_t m_iState; // 0x16a4        
-        float m_flCrosshairDistance; // 0x16a8        
-        int32_t m_iAmmoLastCheck; // 0x16ac        
-        int32_t m_iAlpha; // 0x16b0        
-        int32_t m_iScopeTextureID; // 0x16b4        
-        int32_t m_iCrosshairTextureID; // 0x16b8        
-        float m_flGunAccuracyPositionDeprecated; // 0x16bc        
-        int32_t m_nLastEmptySoundCmdNum; // 0x16c0        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        uint32_t m_nViewModelIndex; // 0x16c4        
-        bool m_bReloadsWithClips; // 0x16c8        
-        [[maybe_unused]] std::uint8_t pad_0x16c9[0x3]; // 0x16c9
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalWeaponExclusive"
-        // metadata: MNetworkPriority "32"
-        client::GameTime_t m_flTimeWeaponIdle; // 0x16cc        
-        bool m_bFireOnEmpty; // 0x16d0        
-        [[maybe_unused]] std::uint8_t pad_0x16d1[0x7]; // 0x16d1
-        entity2::CEntityIOOutput m_OnPlayerPickup; // 0x16d8        
-        // metadata: MNetworkEnable
-        client::CSWeaponMode m_weaponMode; // 0x1700        
-        float m_flTurningInaccuracyDelta; // 0x1704        
-        Vector m_vecTurningInaccuracyEyeDirLast; // 0x1708        
-        float m_flTurningInaccuracy; // 0x1714        
-        // metadata: MNetworkEnable
-        float m_fAccuracyPenalty; // 0x1718        
-        client::GameTime_t m_flLastAccuracyUpdateTime; // 0x171c        
-        float m_fAccuracySmoothedForZoom; // 0x1720        
-        client::GameTime_t m_fScopeZoomEndTime; // 0x1724        
-        // metadata: MNetworkEnable
-        int32_t m_iRecoilIndex; // 0x1728        
-        // metadata: MNetworkEnable
-        float m_flRecoilIndex; // 0x172c        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkChangeCallback "OnWeaponBurstModeNetworkChange"
-        bool m_bBurstMode; // 0x1730        
-        [[maybe_unused]] std::uint8_t pad_0x1731[0x3]; // 0x1731
-        client::GameTime_t m_flLastBurstModeChangeTime; // 0x1734        
-        // metadata: MNetworkEnable
-        client::GameTick_t m_nPostponeFireReadyTicks; // 0x1738        
-        // metadata: MNetworkEnable
-        float m_flPostponeFireReadyFrac; // 0x173c        
-        // metadata: MNetworkEnable
-        bool m_bInReload; // 0x1740        
-        // metadata: MNetworkEnable
-        bool m_bReloadVisuallyComplete; // 0x1741        
-        [[maybe_unused]] std::uint8_t pad_0x1742[0x2]; // 0x1742
-        // metadata: MNetworkEnable
-        client::GameTime_t m_flDroppedAtTime; // 0x1744        
-        // metadata: MNetworkEnable
-        bool m_bIsHauledBack; // 0x1748        
-        // metadata: MNetworkEnable
-        bool m_bSilencerOn; // 0x1749        
-        [[maybe_unused]] std::uint8_t pad_0x174a[0x2]; // 0x174a
-        // metadata: MNetworkEnable
-        client::GameTime_t m_flTimeSilencerSwitchComplete; // 0x174c        
-        // metadata: MNetworkEnable
-        int32_t m_iOriginalTeamNumber; // 0x1750        
-        // metadata: MNetworkEnable
-        int32_t m_iMostRecentTeamNumber; // 0x1754        
-        // metadata: MNetworkEnable
-        bool m_bDroppedNearBuyZone; // 0x1758        
-        [[maybe_unused]] std::uint8_t pad_0x1759[0x3]; // 0x1759
-        float m_flNextAttackRenderTimeOffset; // 0x175c        
-        [[maybe_unused]] std::uint8_t pad_0x1760[0x98]; // 0x1760
-        bool m_bClearWeaponIdentifyingUGC; // 0x17f8        
-        bool m_bVisualsDataSet; // 0x17f9        
-        bool m_bOldFirstPersonSpectatedState; // 0x17fa        
-        bool m_bUIWeapon; // 0x17fb        
-        int32_t m_nCustomEconReloadEventId; // 0x17fc        
-        [[maybe_unused]] std::uint8_t pad_0x1800[0x8]; // 0x1800
-        // metadata: MNetworkEnable
-        // m_hPrevOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<client::C_CSPlayerPawn> m_hPrevOwner;
-        char m_hPrevOwner[0x4]; // 0x1808        
-        // metadata: MNetworkEnable
-        client::GameTick_t m_nDropTick; // 0x180c        
-        [[maybe_unused]] std::uint8_t pad_0x1810[0x1c]; // 0x1810
-        bool m_donated; // 0x182c        
-        [[maybe_unused]] std::uint8_t pad_0x182d[0x3]; // 0x182d
-        // metadata: MNetworkEnable
-        client::GameTime_t m_fLastShotTime; // 0x1830        
-        bool m_bWasOwnedByCT; // 0x1834        
-        bool m_bWasOwnedByTerrorist; // 0x1835        
-        [[maybe_unused]] std::uint8_t pad_0x1836[0x2]; // 0x1836
-        float m_gunHeat; // 0x1838        
-        uint32_t m_smokeAttachments; // 0x183c        
-        client::GameTime_t m_lastSmokeTime; // 0x1840        
-        float m_flNextClientFireBulletTime; // 0x1844        
-        float m_flNextClientFireBulletTime_Repredict; // 0x1848        
-        [[maybe_unused]] std::uint8_t pad_0x184c[0xd4]; // 0x184c
-        client::C_IronSightController m_IronSightController; // 0x1920        
-        // metadata: MNetworkEnable
-        int32_t m_iIronSightMode; // 0x19d0        
-        [[maybe_unused]] std::uint8_t pad_0x19d4[0xc]; // 0x19d4
-        client::GameTime_t m_flLastLOSTraceFailureTime; // 0x19e0        
-        // metadata: MNetworkEnable
-        int32_t m_iNumEmptyAttacks; // 0x19e4        
-        [[maybe_unused]] std::uint8_t pad_0x19e8[0x78]; // 0x19e8
-        client::GameTime_t m_flLastMagDropRequestTime; // 0x1a60        
-        float m_flWatTickOffset; // 0x1a64        
-        [[maybe_unused]] std::uint8_t pad_0x1a68[0x8];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1e10
+        // Has VTable
+        // 
+        // static metadata: MNetworkOutOfPVSUpdates
+        // static metadata: MNetworkVarNames "WeaponGameplayAnimState m_iWeaponGameplayAnimState"
+        // static metadata: MNetworkVarNames "GameTime_t m_flWeaponGameplayAnimStateTimestamp"
+        // static metadata: MNetworkVarNames "GameTime_t m_flInspectCancelCompleteTime"
+        // static metadata: MNetworkVarNames "bool m_bInspectPending"
+        // static metadata: MNetworkVarNames "CSWeaponMode m_weaponMode"
+        // static metadata: MNetworkVarNames "float m_fAccuracyPenalty"
+        // static metadata: MNetworkVarNames "int m_iRecoilIndex"
+        // static metadata: MNetworkVarNames "float m_flRecoilIndex"
+        // static metadata: MNetworkVarNames "bool m_bBurstMode"
+        // static metadata: MNetworkVarNames "GameTick_t m_nPostponeFireReadyTicks"
+        // static metadata: MNetworkVarNames "float m_flPostponeFireReadyFrac"
+        // static metadata: MNetworkVarNames "bool m_bInReload"
+        // static metadata: MNetworkVarNames "GameTime_t m_flDroppedAtTime"
+        // static metadata: MNetworkVarNames "bool m_bIsHauledBack"
+        // static metadata: MNetworkVarNames "bool m_bSilencerOn"
+        // static metadata: MNetworkVarNames "GameTime_t m_flTimeSilencerSwitchComplete"
+        // static metadata: MNetworkVarNames "int m_iOriginalTeamNumber"
+        // static metadata: MNetworkVarNames "int m_iMostRecentTeamNumber"
+        // static metadata: MNetworkVarNames "bool m_bDroppedNearBuyZone"
+        // static metadata: MNetworkVarNames "GameTime_t m_nextPrevOwnerUseTime"
+        // static metadata: MNetworkVarNames "CHandle< CCSPlayerPawn> m_hPrevOwner"
+        // static metadata: MNetworkVarNames "GameTick_t m_nDropTick"
+        // static metadata: MNetworkVarNames "bool m_bWasActiveWeaponWhenDropped"
+        // static metadata: MNetworkVarNames "GameTime_t m_fLastShotTime"
+        // static metadata: MNetworkVarNames "int m_iIronSightMode"
+        // static metadata: MNetworkVarNames "float m_flWatTickOffset"
+        #pragma pack(push, 1)
+        class C_CSWeaponBase : public source2sdk::client::C_BasePlayerWeapon
+        {
+        public:
+            uint8_t _pad1928[0x40]; // 0x1928
+            // m_thirdPersonFireSequences has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::animationsystem::HSequence> m_thirdPersonFireSequences;
+            char m_thirdPersonFireSequences[0x18]; // 0x1968            
+            source2sdk::animationsystem::HSequence m_hCurrentThirdPersonSequence; // 0x1980            
+            source2sdk::animationsystem::HSequence m_thirdPersonSequences[7]; // 0x1984            
+            uint8_t _pad19a0[0x18]; // 0x19a0
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "WeaponGameplayAnimStateNetworkChangeCallback"
+            source2sdk::client::WeaponGameplayAnimState m_iWeaponGameplayAnimState; // 0x19b8            
+            uint8_t _pad19ba[0x2]; // 0x19ba
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flWeaponGameplayAnimStateTimestamp; // 0x19bc            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flInspectCancelCompleteTime; // 0x19c0            
+            // metadata: MNetworkEnable
+            bool m_bInspectPending; // 0x19c4            
+            bool m_bInspectShouldLoop; // 0x19c5            
+            uint8_t _pad19c6[0x2a]; // 0x19c6
+            float m_flCrosshairDistance; // 0x19f0            
+            std::int32_t m_iAmmoLastCheck; // 0x19f4            
+            std::int32_t m_nLastEmptySoundCmdNum; // 0x19f8            
+            bool m_bFireOnEmpty; // 0x19fc            
+            uint8_t _pad19fd[0x3]; // 0x19fd
+            source2sdk::entity2::CEntityIOOutput m_OnPlayerPickup; // 0x1a00            
+            // metadata: MNetworkEnable
+            source2sdk::client::CSWeaponMode m_weaponMode; // 0x1a28            
+            float m_flTurningInaccuracyDelta; // 0x1a2c            
+            Vector m_vecTurningInaccuracyEyeDirLast; // 0x1a30            
+            float m_flTurningInaccuracy; // 0x1a3c            
+            // metadata: MNetworkEnable
+            float m_fAccuracyPenalty; // 0x1a40            
+            source2sdk::entity2::GameTime_t m_flLastAccuracyUpdateTime; // 0x1a44            
+            float m_fAccuracySmoothedForZoom; // 0x1a48            
+            // metadata: MNetworkEnable
+            std::int32_t m_iRecoilIndex; // 0x1a4c            
+            // metadata: MNetworkEnable
+            float m_flRecoilIndex; // 0x1a50            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkChangeCallback "OnWeaponBurstModeNetworkChange"
+            bool m_bBurstMode; // 0x1a54            
+            uint8_t _pad1a55[0x3]; // 0x1a55
+            source2sdk::entity2::GameTime_t m_flLastBurstModeChangeTime; // 0x1a58            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTick_t m_nPostponeFireReadyTicks; // 0x1a5c            
+            // metadata: MNetworkEnable
+            float m_flPostponeFireReadyFrac; // 0x1a60            
+            // metadata: MNetworkEnable
+            bool m_bInReload; // 0x1a64            
+            uint8_t _pad1a65[0x3]; // 0x1a65
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flDroppedAtTime; // 0x1a68            
+            // metadata: MNetworkEnable
+            bool m_bIsHauledBack; // 0x1a6c            
+            // metadata: MNetworkEnable
+            bool m_bSilencerOn; // 0x1a6d            
+            uint8_t _pad1a6e[0x2]; // 0x1a6e
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_flTimeSilencerSwitchComplete; // 0x1a70            
+            // metadata: MNetworkEnable
+            std::int32_t m_iOriginalTeamNumber; // 0x1a74            
+            // metadata: MNetworkEnable
+            std::int32_t m_iMostRecentTeamNumber; // 0x1a78            
+            // metadata: MNetworkEnable
+            bool m_bDroppedNearBuyZone; // 0x1a7c            
+            uint8_t _pad1a7d[0x3]; // 0x1a7d
+            float m_flNextAttackRenderTimeOffset; // 0x1a80            
+            uint8_t _pad1a84[0x9c]; // 0x1a84
+            bool m_bClearWeaponIdentifyingUGC; // 0x1b20            
+            bool m_bVisualsDataSet; // 0x1b21            
+            bool m_bUIWeapon; // 0x1b22            
+            uint8_t _pad1b23[0x1]; // 0x1b23
+            std::int32_t m_nCustomEconReloadEventId; // 0x1b24            
+            uint8_t _pad1b28[0x8]; // 0x1b28
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_nextPrevOwnerUseTime; // 0x1b30            
+            // metadata: MNetworkEnable
+            // m_hPrevOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::client::C_CSPlayerPawn> m_hPrevOwner;
+            char m_hPrevOwner[0x4]; // 0x1b34            
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTick_t m_nDropTick; // 0x1b38            
+            // metadata: MNetworkEnable
+            bool m_bWasActiveWeaponWhenDropped; // 0x1b3c            
+            uint8_t _pad1b3d[0x1f]; // 0x1b3d
+            bool m_donated; // 0x1b5c            
+            uint8_t _pad1b5d[0x3]; // 0x1b5d
+            // metadata: MNetworkEnable
+            source2sdk::entity2::GameTime_t m_fLastShotTime; // 0x1b60            
+            bool m_bWasOwnedByCT; // 0x1b64            
+            bool m_bWasOwnedByTerrorist; // 0x1b65            
+            uint8_t _pad1b66[0x2]; // 0x1b66
+            float m_flNextClientFireBulletTime; // 0x1b68            
+            float m_flNextClientFireBulletTime_Repredict; // 0x1b6c            
+            uint8_t _pad1b70[0x160]; // 0x1b70
+            source2sdk::client::C_IronSightController m_IronSightController; // 0x1cd0            
+            // metadata: MNetworkEnable
+            std::int32_t m_iIronSightMode; // 0x1d80            
+            uint8_t _pad1d84[0x14]; // 0x1d84
+            source2sdk::entity2::GameTime_t m_flLastLOSTraceFailureTime; // 0x1d98            
+            uint8_t _pad1d9c[0x5c]; // 0x1d9c
+            // metadata: MNetworkEnable
+            float m_flWatTickOffset; // 0x1df8            
+            uint8_t _pad1dfc[0x14];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in C_CSWeaponBase because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_CSWeaponBase) == 0x1e10);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_CSWeaponBase because it is not a standard-layout class
-    static_assert(sizeof(C_CSWeaponBase) == 0x1a70);
 };

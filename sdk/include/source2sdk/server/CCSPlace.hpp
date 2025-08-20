@@ -1,32 +1,35 @@
 #pragma once
-#include "source2sdk/server/CServerOnlyModelEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CServerOnlyModelEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x720
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CCSPlace : public server::CServerOnlyModelEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x710[0x8]; // 0x710
-        CUtlSymbolLarge m_name; // 0x718        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x808
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCSPlace : public source2sdk::server::CServerOnlyModelEntity
+        {
+        public:
+            uint8_t _pad07e8[0x18]; // 0x7e8
+            CUtlSymbolLarge m_name; // 0x800            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCSPlace because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCSPlace) == 0x808);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCSPlace because it is not a standard-layout class
-    static_assert(sizeof(CCSPlace) == 0x720);
 };

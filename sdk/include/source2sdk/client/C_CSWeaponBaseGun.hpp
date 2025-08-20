@@ -1,46 +1,52 @@
 #pragma once
-#include "source2sdk/client/C_CSWeaponBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CSWeaponBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x10
-    // Alignment: 0x10
-    // Standard-layout class: false
-    // Size: 0x1a90
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MNetworkVarNames "int m_zoomLevel"
-    // static metadata: MNetworkVarNames "int m_iBurstShotsRemaining"
-    // static metadata: MNetworkVarNames "bool m_bNeedsBoltAction"
-    #pragma pack(push, 1)
-    class C_CSWeaponBaseGun : public client::C_CSWeaponBase
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        int32_t m_zoomLevel; // 0x1a70        
-        // metadata: MNetworkEnable
-        int32_t m_iBurstShotsRemaining; // 0x1a74        
-        int32_t m_iSilencerBodygroup; // 0x1a78        
-        [[maybe_unused]] std::uint8_t pad_0x1a7c[0xc]; // 0x1a7c
-        int32_t m_silencedModelIndex; // 0x1a88        
-        bool m_inPrecache; // 0x1a8c        
-        // metadata: MNetworkEnable
-        bool m_bNeedsBoltAction; // 0x1a8d        
-        [[maybe_unused]] std::uint8_t pad_0x1a8e[0x2];
+        // Registered alignment: 0x10
+        // Alignment: 0x10
+        // Standard-layout class: false
+        // Size: 0x1e40
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "int m_zoomLevel"
+        // static metadata: MNetworkVarNames "int m_iBurstShotsRemaining"
+        // static metadata: MNetworkVarNames "bool m_bNeedsBoltAction"
+        // static metadata: MNetworkVarNames "int32 m_nRevolverCylinderIdx"
+        #pragma pack(push, 1)
+        class C_CSWeaponBaseGun : public source2sdk::client::C_CSWeaponBase
+        {
+        public:
+            // metadata: MNetworkEnable
+            std::int32_t m_zoomLevel; // 0x1e10            
+            // metadata: MNetworkEnable
+            std::int32_t m_iBurstShotsRemaining; // 0x1e14            
+            std::int32_t m_iSilencerBodygroup; // 0x1e18            
+            uint8_t _pad1e1c[0xc]; // 0x1e1c
+            std::int32_t m_silencedModelIndex; // 0x1e28            
+            bool m_inPrecache; // 0x1e2c            
+            // metadata: MNetworkEnable
+            bool m_bNeedsBoltAction; // 0x1e2d            
+            uint8_t _pad1e2e[0x2]; // 0x1e2e
+            // metadata: MNetworkEnable
+            std::int32_t m_nRevolverCylinderIdx; // 0x1e30            
+            uint8_t _pad1e34[0xc];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in C_CSWeaponBaseGun because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_CSWeaponBaseGun) == 0x1e40);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_CSWeaponBaseGun because it is not a standard-layout class
-    static_assert(sizeof(C_CSWeaponBaseGun) == 0x1a90);
 };

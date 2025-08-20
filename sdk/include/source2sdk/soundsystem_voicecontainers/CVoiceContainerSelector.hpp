@@ -1,45 +1,49 @@
 #pragma once
-#include "source2sdk/resourcesystem/InfoForResourceTypeCVoiceContainerBase.hpp"
-#include "source2sdk/soundsystem_voicecontainers/CVoiceContainerBase.hpp"
-#include "source2sdk/soundsystem_voicecontainers/PlayBackMode_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/soundsystem_voicecontainers/CSoundContainerReferenceArray.hpp"
+#include "source2sdk/soundsystem_voicecontainers/CVoiceContainerBase.hpp"
+#include "source2sdk/soundsystem_voicecontainers/PlayBackMode_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: soundsystem_voicecontainers
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::soundsystem_voicecontainers
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x130
-    // Has VTable
-    // Construct allowed
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    // static metadata: MPropertyFriendlyName "Selector"
-    // static metadata: MPropertyDescription "Plays a selected vsnd on playback."
-    #pragma pack(push, 1)
-    class CVoiceContainerSelector : public soundsystem_voicecontainers::CVoiceContainerBase
+    namespace soundsystem_voicecontainers
     {
-    public:
-        // metadata: MPropertyFriendlyName "Playback Mode"
-        soundsystem_voicecontainers::PlayBackMode_t m_mode; // 0xf0        
-        // metadata: MPropertyFriendlyName "Retrigger"
-        bool m_bRetrigger; // 0xf4        
-        [[maybe_unused]] std::uint8_t pad_0xf5[0x3]; // 0xf5
-        // metadata: MPropertyFriendlyName "Sounds To play"
-        // m_soundsToPlay has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<CStrongHandle<resourcesystem::InfoForResourceTypeCVoiceContainerBase>> m_soundsToPlay;
-        char m_soundsToPlay[0x18]; // 0xf8        
-        [[maybe_unused]] std::uint8_t pad_0x110[0x20];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x130
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        // static metadata: MPropertyFriendlyName "Selector"
+        // static metadata: MPropertyDescription "Plays a selected vsnd on playback."
+        #pragma pack(push, 1)
+        class CVoiceContainerSelector : public source2sdk::soundsystem_voicecontainers::CVoiceContainerBase
+        {
+        public:
+            // metadata: MPropertyFriendlyName "Playback Mode"
+            source2sdk::soundsystem_voicecontainers::PlayBackMode_t m_mode; // 0xb8            
+            uint8_t _pad00bc[0x4]; // 0xbc
+            // metadata: MPropertyFriendlyName "Sounds To play"
+            source2sdk::soundsystem_voicecontainers::CSoundContainerReferenceArray m_soundsToPlay; // 0xc0            
+            // metadata: MPropertyFriendlyName "Relative Weights"
+            // m_fProbabilityWeights has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<float> m_fProbabilityWeights;
+            char m_fProbabilityWeights[0x18]; // 0xf8            
+            uint8_t _pad0110[0x20];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CVoiceContainerSelector because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::soundsystem_voicecontainers::CVoiceContainerSelector) == 0x130);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CVoiceContainerSelector because it is not a standard-layout class
-    static_assert(sizeof(CVoiceContainerSelector) == 0x130);
 };

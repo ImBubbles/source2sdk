@@ -1,35 +1,38 @@
 #pragma once
-#include "source2sdk/server/CRulePointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CRulePointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x738
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CGamePlayerEquip : public server::CRulePointEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x720[0x18];
-        // Datamap fields:
-        // CUtlString weapon%d[32]; // 0x7fffffff
-        // void InputTriggerForAllPlayers; // 0x0
-        // CUtlSymbolLarge InputTriggerForActivatedPlayer; // 0x0
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x810
+        // Has VTable
+        #pragma pack(push, 1)
+        class CGamePlayerEquip : public source2sdk::server::CRulePointEntity
+        {
+        public:
+            uint8_t _pad07f8[0x18];
+            // Datamap fields:
+            // CUtlString weapon%d[32]; // 0x7fffffff
+            // void InputTriggerForAllPlayers; // 0x0
+            // CUtlSymbolLarge InputTriggerForActivatedPlayer; // 0x0
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CGamePlayerEquip) == 0x810);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CGamePlayerEquip) == 0x738);
 };

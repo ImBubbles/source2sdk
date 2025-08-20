@@ -1,43 +1,44 @@
 #pragma once
-#include "source2sdk/client/CAnimGraphControllerBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CBaseAnimGraphAnimGraphController.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x70
-    // Has VTable
-    #pragma pack(push, 1)
-    class C_Chicken_GraphController : public client::CAnimGraphControllerBase
+    namespace client
     {
-    public:
-        // m_paramActivity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CAnimGraphParamRef<char*> m_paramActivity;
-        char m_paramActivity[0x20]; // 0x18        
-        // m_paramEndActivityImmediately has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CAnimGraphParamRef<bool> m_paramEndActivityImmediately;
-        char m_paramEndActivityImmediately[0x18]; // 0x38        
-        // m_paramSnapToSquatting has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CAnimGraphParamRef<bool> m_paramSnapToSquatting;
-        char m_paramSnapToSquatting[0x18]; // 0x50        
-        float m_flSquatProbability; // 0x68        
-        [[maybe_unused]] std::uint8_t pad_0x6c[0x4];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x2f0
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_Chicken_GraphController : public source2sdk::client::CBaseAnimGraphAnimGraphController
+        {
+        public:
+            // m_paramActivity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraphParamRef<char*> m_paramActivity;
+            char m_paramActivity[0x28]; // 0x268            
+            // m_paramEndActivityImmediately has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraphParamRef<bool> m_paramEndActivityImmediately;
+            char m_paramEndActivityImmediately[0x20]; // 0x290            
+            // m_paramSnapToSquatting has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CAnimGraphParamRef<bool> m_paramSnapToSquatting;
+            char m_paramSnapToSquatting[0x20]; // 0x2b0            
+            CAnimGraphTagRef m_sActivityFinished; // 0x2d0            
+            uint8_t _pad02e8[0x8];
+        };
+        #pragma pack(pop)
         
-        // Static fields:
-        static uint32_t &Get_s_nControllerTypeID() {return *reinterpret_cast<uint32_t*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("C_Chicken_GraphController")->GetStaticFields()[0]->m_pInstance);};
-        static bool &Get_s_bSchemaTest() {return *reinterpret_cast<bool*>(interfaces::g_schema->FindTypeScopeForModule("!GlobalTypes")->FindDeclaredClass("C_Chicken_GraphController")->GetStaticFields()[1]->m_pInstance);};
+        // Cannot assert offsets of fields in C_Chicken_GraphController because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_Chicken_GraphController) == 0x2f0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_Chicken_GraphController because it is not a standard-layout class
-    static_assert(sizeof(C_Chicken_GraphController) == 0x70);
 };

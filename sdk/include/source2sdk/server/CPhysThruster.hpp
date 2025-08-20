@@ -1,32 +1,35 @@
 #pragma once
-#include "source2sdk/server/CPhysForce.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CPhysForce.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x530
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CPhysThruster : public server::CPhysForce
+    namespace server
     {
-    public:
-        Vector m_localOrigin; // 0x520        
-        [[maybe_unused]] std::uint8_t pad_0x52c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x560
+        // Has VTable
+        #pragma pack(push, 1)
+        class CPhysThruster : public source2sdk::server::CPhysForce
+        {
+        public:
+            Vector m_localOrigin; // 0x550            
+            uint8_t _pad055c[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CPhysThruster because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CPhysThruster) == 0x560);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CPhysThruster because it is not a standard-layout class
-    static_assert(sizeof(CPhysThruster) == 0x530);
 };

@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/server/CFuncLadder.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CFuncLadder.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x7c0
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CFuncLadderAlias_func_useableladder : public server::CFuncLadder
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x898
+        // Has VTable
+        #pragma pack(push, 1)
+        class CFuncLadderAlias_func_useableladder : public source2sdk::server::CFuncLadder
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CFuncLadderAlias_func_useableladder) == 0x898);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CFuncLadderAlias_func_useableladder) == 0x7c0);
 };

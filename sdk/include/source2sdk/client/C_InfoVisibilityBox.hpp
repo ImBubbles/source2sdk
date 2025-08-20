@@ -1,46 +1,49 @@
 #pragma once
-#include "source2sdk/client/C_BaseEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_BaseEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x560
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MNetworkVarNames "int m_nMode"
-    // static metadata: MNetworkVarNames "Vector m_vBoxSize"
-    // static metadata: MNetworkVarNames "bool m_bEnabled"
-    #pragma pack(push, 1)
-    class C_InfoVisibilityBox : public client::C_BaseEntity
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x548[0x4]; // 0x548
-        // metadata: MNetworkEnable
-        int32_t m_nMode; // 0x54c        
-        // metadata: MNetworkEnable
-        Vector m_vBoxSize; // 0x550        
-        // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x55c        
-        [[maybe_unused]] std::uint8_t pad_0x55d[0x3];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x610
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "int m_nMode"
+        // static metadata: MNetworkVarNames "Vector m_vBoxSize"
+        // static metadata: MNetworkVarNames "bool m_bEnabled"
+        #pragma pack(push, 1)
+        class C_InfoVisibilityBox : public source2sdk::client::C_BaseEntity
+        {
+        public:
+            uint8_t _pad05f8[0x4]; // 0x5f8
+            // metadata: MNetworkEnable
+            std::int32_t m_nMode; // 0x5fc            
+            // metadata: MNetworkEnable
+            Vector m_vBoxSize; // 0x600            
+            // metadata: MNetworkEnable
+            bool m_bEnabled; // 0x60c            
+            uint8_t _pad060d[0x3];
+            
+            // Datamap fields:
+            // void InputEnable; // 0x0
+            // void InputDisable; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputEnable; // 0x0
-        // void InputDisable; // 0x0
+        // Cannot assert offsets of fields in C_InfoVisibilityBox because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_InfoVisibilityBox) == 0x610);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_InfoVisibilityBox because it is not a standard-layout class
-    static_assert(sizeof(C_InfoVisibilityBox) == 0x560);
 };

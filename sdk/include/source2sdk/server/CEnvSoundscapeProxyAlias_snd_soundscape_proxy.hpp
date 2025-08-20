@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/server/CEnvSoundscapeProxy.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CEnvSoundscapeProxy.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x560
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public server::CEnvSoundscapeProxy
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x598
+        // Has VTable
+        #pragma pack(push, 1)
+        class CEnvSoundscapeProxyAlias_snd_soundscape_proxy : public source2sdk::server::CEnvSoundscapeProxy
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CEnvSoundscapeProxyAlias_snd_soundscape_proxy) == 0x598);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CEnvSoundscapeProxyAlias_snd_soundscape_proxy) == 0x560);
 };

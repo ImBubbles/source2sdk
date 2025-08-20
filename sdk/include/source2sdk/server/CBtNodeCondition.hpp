@@ -1,31 +1,36 @@
 #pragma once
-#include "source2sdk/server/CBtNodeDecorator.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBtNodeDecorator.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x1
-    // Standard-layout class: false
-    // Size: 0x60
-    // Has VTable
-    // Is Abstract
-    #pragma pack(push, 1)
-    class CBtNodeCondition : public server::CBtNodeDecorator
+    namespace server
     {
-    public:
-        bool m_bNegated; // 0x58        
-        [[maybe_unused]] std::uint8_t pad_0x59[0x7];
+        // Registered alignment: unknown
+        // Alignment: 0x1
+        // Standard-layout class: false
+        // Size: 0x60
+        // Has VTable
+        // Is Abstract
+        #pragma pack(push, 1)
+        class CBtNodeCondition : public source2sdk::server::CBtNodeDecorator
+        {
+        public:
+            bool m_bNegated; // 0x58            
+            uint8_t _pad0059[0x7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CBtNodeCondition because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CBtNodeCondition) == 0x60);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CBtNodeCondition because it is not a standard-layout class
-    static_assert(sizeof(CBtNodeCondition) == 0x60);
 };

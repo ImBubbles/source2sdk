@@ -1,47 +1,51 @@
 #pragma once
-#include "source2sdk/client/C_BaseEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_BaseEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x570
-    // Has VTable
-    // Is Abstract
-    // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MNetworkVarNames "bool m_bDisabled"
-    // static metadata: MNetworkVarNames "string_t m_iszSoundAreaType"
-    // static metadata: MNetworkVarNames "Vector m_vPos"
-    #pragma pack(push, 1)
-    class C_SoundAreaEntityBase : public client::C_BaseEntity
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        bool m_bDisabled; // 0x548        
-        [[maybe_unused]] std::uint8_t pad_0x549[0x7]; // 0x549
-        bool m_bWasEnabled; // 0x550        
-        [[maybe_unused]] std::uint8_t pad_0x551[0x7]; // 0x551
-        // metadata: MNetworkEnable
-        CUtlSymbolLarge m_iszSoundAreaType; // 0x558        
-        // metadata: MNetworkEnable
-        Vector m_vPos; // 0x560        
-        [[maybe_unused]] std::uint8_t pad_0x56c[0x4];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x620
+        // Has VTable
+        // Is Abstract
+        // 
+        // static metadata: MNetworkVarNames "bool m_bDisabled"
+        // static metadata: MNetworkVarNames "string_t m_iszSoundAreaType"
+        // static metadata: MNetworkVarNames "Vector m_vPos"
+        #pragma pack(push, 1)
+        class C_SoundAreaEntityBase : public source2sdk::client::C_BaseEntity
+        {
+        public:
+            // metadata: MNetworkEnable
+            bool m_bDisabled; // 0x5f8            
+            uint8_t _pad05f9[0x7]; // 0x5f9
+            bool m_bWasEnabled; // 0x600            
+            uint8_t _pad0601[0x7]; // 0x601
+            // metadata: MNetworkEnable
+            CUtlSymbolLarge m_iszSoundAreaType; // 0x608            
+            // metadata: MNetworkEnable
+            Vector m_vPos; // 0x610            
+            uint8_t _pad061c[0x4];
+            
+            // Datamap fields:
+            // void m_nGUID; // 0x5fc
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void m_nGUID; // 0x54c
+        // Cannot assert offsets of fields in C_SoundAreaEntityBase because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_SoundAreaEntityBase) == 0x620);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_SoundAreaEntityBase because it is not a standard-layout class
-    static_assert(sizeof(C_SoundAreaEntityBase) == 0x570);
 };

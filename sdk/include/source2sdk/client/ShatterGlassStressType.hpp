@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,17 +9,19 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 5
-    // Alignment: 1
-    // Size: 0x1
-    enum class ShatterGlassStressType : std::uint8_t
+    namespace client
     {
-        SHATTERGLASS_BLUNT = 0,
-        SHATTERGLASS_BALLISTIC = 1,
-        SHATTERGLASS_PULSE = 2,
-        SHATTERDRYWALL_CHUNKS = 3,
-        SHATTERGLASS_EXPLOSIVE = 4,
+        // Enumerator count: 4
+        // Alignment: 1
+        // Size: 0x1
+        enum class ShatterGlassStressType : std::uint8_t
+        {
+            SHATTERGLASS_BLUNT = 0x0,
+            SHATTERGLASS_BALLISTIC = 0x1,
+            SHATTERGLASS_PULSE = 0x2,
+            SHATTERGLASS_EXPLOSIVE = 0x3,
+        };
     };
 };

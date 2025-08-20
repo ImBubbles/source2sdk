@@ -1,33 +1,39 @@
 #pragma once
-#include "source2sdk/server/CPulseGraphInstance_ServerEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CPulseGraphInstance_ServerEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x150
-    // Has VTable
-    // 
-    // static metadata: MPulseInstanceDomainInfo
-    // static metadata: MPulseDomainHookInfo
-    // static metadata: MPulseLibraryBindings
-    // static metadata: MPulseDomainIsGameBlackboard
-    // static metadata: MPulseDomainOptInFeatureTag
-    #pragma pack(push, 1)
-    class CPulseGraphInstance_GameBlackboard : public server::CPulseGraphInstance_ServerEntity
+    namespace server
     {
-    public:
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1b0
+        // Has VTable
+        // 
+        // static metadata: MPulseInstanceDomainInfo
+        // static metadata: MPulseDomainHookInfo
+        // static metadata: MPulseDomainScopeInfo
+        // static metadata: MPulseLibraryBindings
+        // static metadata: MPulseDomainIsGameBlackboard
+        // static metadata: MPulseDomainOptInFeatureTag
+        #pragma pack(push, 1)
+        class CPulseGraphInstance_GameBlackboard : public source2sdk::server::CPulseGraphInstance_ServerEntity
+        {
+        public:
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CPulseGraphInstance_GameBlackboard) == 0x1b0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CPulseGraphInstance_GameBlackboard) == 0x150);
 };

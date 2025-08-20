@@ -1,43 +1,46 @@
 #pragma once
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/server/CPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/CEntityIOOutput.hpp"
+#include "source2sdk/server/CPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x4f8
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CEnvSpark : public server::CPointEntity
+    namespace server
     {
-    public:
-        float m_flDelay; // 0x4c0        
-        int32_t m_nMagnitude; // 0x4c4        
-        int32_t m_nTrailLength; // 0x4c8        
-        int32_t m_nType; // 0x4cc        
-        entity2::CEntityIOOutput m_OnSpark; // 0x4d0        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x528
+        // Has VTable
+        #pragma pack(push, 1)
+        class CEnvSpark : public source2sdk::server::CPointEntity
+        {
+        public:
+            float m_flDelay; // 0x4f0            
+            std::int32_t m_nMagnitude; // 0x4f4            
+            std::int32_t m_nTrailLength; // 0x4f8            
+            std::int32_t m_nType; // 0x4fc            
+            source2sdk::entity2::CEntityIOOutput m_OnSpark; // 0x500            
+            
+            // Datamap fields:
+            // void CEnvSparkSparkThink; // 0x0
+            // void InputStartSpark; // 0x0
+            // void InputStopSpark; // 0x0
+            // void InputToggleSpark; // 0x0
+            // void InputSparkOnce; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void CEnvSparkSparkThink; // 0x0
-        // void InputStartSpark; // 0x0
-        // void InputStopSpark; // 0x0
-        // void InputToggleSpark; // 0x0
-        // void InputSparkOnce; // 0x0
+        // Cannot assert offsets of fields in CEnvSpark because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CEnvSpark) == 0x528);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CEnvSpark because it is not a standard-layout class
-    static_assert(sizeof(CEnvSpark) == 0x4f8);
 };

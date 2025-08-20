@@ -1,31 +1,37 @@
 #pragma once
-#include "source2sdk/client/CCSPlayerBase_CameraServices.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CCSPlayerBase_CameraServices.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x230
-    // Has VTable
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CCSPlayer_CameraServices : public client::CCSPlayerBase_CameraServices
+    namespace client
     {
-    public:
-        float m_flDeathCamTilt; // 0x228        
-        [[maybe_unused]] std::uint8_t pad_0x22c[0x4];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x338
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCSPlayer_CameraServices : public source2sdk::client::CCSPlayerBase_CameraServices
+        {
+        public:
+            float m_flDeathCamTilt; // 0x2a0            
+            uint8_t _pad02a4[0x4]; // 0x2a4
+            Vector m_vClientScopeInaccuracy; // 0x2a8            
+            uint8_t _pad02b4[0x84];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCSPlayer_CameraServices because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCSPlayer_CameraServices) == 0x338);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCSPlayer_CameraServices because it is not a standard-layout class
-    static_assert(sizeof(CCSPlayer_CameraServices) == 0x230);
 };

@@ -1,50 +1,55 @@
 #pragma once
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/server/CBaseToggle.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/CEntityIOOutput.hpp"
+#include "source2sdk/server/CBaseToggle.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x7c0
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CGunTarget : public server::CBaseToggle
+    namespace server
     {
-    public:
-        bool m_on; // 0x790        
-        [[maybe_unused]] std::uint8_t pad_0x791[0x3]; // 0x791
-        // m_hTargetEnt has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hTargetEnt;
-        char m_hTargetEnt[0x4]; // 0x794        
-        entity2::CEntityIOOutput m_OnDeath; // 0x798        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x898
+        // Has VTable
+        #pragma pack(push, 1)
+        class CGunTarget : public source2sdk::server::CBaseToggle
+        {
+        public:
+            bool m_on; // 0x868            
+            uint8_t _pad0869[0x3]; // 0x869
+            // m_hTargetEnt has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hTargetEnt;
+            char m_hTargetEnt[0x4]; // 0x86c            
+            source2sdk::entity2::CEntityIOOutput m_OnDeath; // 0x870            
+            
+            // Datamap fields:
+            // void CGunTargetNext; // 0x0
+            // void CGunTargetStart; // 0x0
+            // void CGunTargetWait; // 0x0
+            // void InputStart; // 0x0
+            // void InputStop; // 0x0
+            // void InputToggle; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void CGunTargetNext; // 0x0
-        // void CGunTargetStart; // 0x0
-        // void CGunTargetWait; // 0x0
-        // void InputStart; // 0x0
-        // void InputStop; // 0x0
-        // void InputToggle; // 0x0
+        // Cannot assert offsets of fields in CGunTarget because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CGunTarget) == 0x898);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CGunTarget because it is not a standard-layout class
-    static_assert(sizeof(CGunTarget) == 0x7c0);
 };

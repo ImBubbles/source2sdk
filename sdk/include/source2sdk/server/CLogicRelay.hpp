@@ -1,47 +1,39 @@
 #pragma once
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/server/CLogicalEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CLogicalEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x518
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CLogicRelay : public server::CLogicalEntity
+    namespace server
     {
-    public:
-        entity2::CEntityIOOutput m_OnTrigger; // 0x4c0        
-        entity2::CEntityIOOutput m_OnSpawn; // 0x4e8        
-        bool m_bDisabled; // 0x510        
-        bool m_bWaitForRefire; // 0x511        
-        bool m_bTriggerOnce; // 0x512        
-        bool m_bFastRetrigger; // 0x513        
-        bool m_bPassthoughCaller; // 0x514        
-        [[maybe_unused]] std::uint8_t pad_0x515[0x3];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x4f8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CLogicRelay : public source2sdk::server::CLogicalEntity
+        {
+        public:
+            bool m_bDisabled; // 0x4f0            
+            bool m_bWaitForRefire; // 0x4f1            
+            bool m_bTriggerOnce; // 0x4f2            
+            bool m_bFastRetrigger; // 0x4f3            
+            bool m_bPassthoughCaller; // 0x4f4            
+            uint8_t _pad04f5[0x3];
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputEnable; // 0x0
-        // void InputEnableRefire; // 0x0
-        // void InputDisable; // 0x0
-        // void InputToggle; // 0x0
-        // void InputTrigger; // 0x0
-        // void InputCancelPending; // 0x0
+        // Cannot assert offsets of fields in CLogicRelay because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CLogicRelay) == 0x4f8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CLogicRelay because it is not a standard-layout class
-    static_assert(sizeof(CLogicRelay) == 0x518);
 };

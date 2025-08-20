@@ -1,43 +1,47 @@
 #pragma once
-#include "source2sdk/soundsystem_voicecontainers/CVoiceContainerBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/soundsystem_voicecontainers/CVoiceContainerBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: soundsystem_voicecontainers
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::soundsystem_voicecontainers
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x100
-    // Has VTable
-    // Construct allowed
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    // static metadata: MPropertyFriendlyName "FM Synth Container"
-    // static metadata: MPropertyDescription "Real time FM Synthesis"
-    #pragma pack(push, 1)
-    class CVoiceContainerRealtimeFMSineWave : public soundsystem_voicecontainers::CVoiceContainerBase
+    namespace soundsystem_voicecontainers
     {
-    public:
-        // metadata: MPropertyFriendlyName "Frequency (Hz)"
-        // metadata: MPropertyDescription "The frequency of this sine tone."
-        float m_flCarrierFrequency; // 0xf0        
-        // metadata: MPropertyFriendlyName "Mod Frequency (Hz)"
-        // metadata: MPropertyDescription "The frequency of the sine tone modulating this sine tone."
-        float m_flModulatorFrequency; // 0xf4        
-        // metadata: MPropertyFriendlyName "Mod Amount (Hz)"
-        // metadata: MPropertyDescription "The amount the modulating sine tone modulates this sine tone."
-        float m_flModulatorAmount; // 0xf8        
-        [[maybe_unused]] std::uint8_t pad_0xfc[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc8
+        // Has VTable
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        // static metadata: MPropertyFriendlyName "TESTBED: FM Synth Container"
+        // static metadata: MPropertyDescription "Real time FM Synthesis"
+        #pragma pack(push, 1)
+        class CVoiceContainerRealtimeFMSineWave : public source2sdk::soundsystem_voicecontainers::CVoiceContainerBase
+        {
+        public:
+            // metadata: MPropertyFriendlyName "Frequency (Hz)"
+            // metadata: MPropertyDescription "The frequency of this sine tone."
+            float m_flCarrierFrequency; // 0xb8            
+            // metadata: MPropertyFriendlyName "Mod Frequency (Hz)"
+            // metadata: MPropertyDescription "The frequency of the sine tone modulating this sine tone."
+            float m_flModulatorFrequency; // 0xbc            
+            // metadata: MPropertyFriendlyName "Mod Amount (Hz)"
+            // metadata: MPropertyDescription "The amount the modulating sine tone modulates this sine tone."
+            float m_flModulatorAmount; // 0xc0            
+            uint8_t _pad00c4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CVoiceContainerRealtimeFMSineWave because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::soundsystem_voicecontainers::CVoiceContainerRealtimeFMSineWave) == 0xc8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CVoiceContainerRealtimeFMSineWave because it is not a standard-layout class
-    static_assert(sizeof(CVoiceContainerRealtimeFMSineWave) == 0x100);
 };

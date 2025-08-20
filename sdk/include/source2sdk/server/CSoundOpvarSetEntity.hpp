@@ -1,53 +1,56 @@
 #pragma once
-#include "source2sdk/server/CBaseEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x508
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CSoundOpvarSetEntity : public server::CBaseEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x4c0[0x8]; // 0x4c0
-        CUtlSymbolLarge m_iszStackName; // 0x4c8        
-        CUtlSymbolLarge m_iszOperatorName; // 0x4d0        
-        CUtlSymbolLarge m_iszOpvarName; // 0x4d8        
-        int32_t m_nOpvarType; // 0x4e0        
-        int32_t m_nOpvarIndex; // 0x4e4        
-        float m_flOpvarValue; // 0x4e8        
-        [[maybe_unused]] std::uint8_t pad_0x4ec[0x4]; // 0x4ec
-        CUtlSymbolLarge m_OpvarValueString; // 0x4f0        
-        bool m_bSetOnSpawn; // 0x4f8        
-        [[maybe_unused]] std::uint8_t pad_0x4f9[0xf];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x548
+        // Has VTable
+        #pragma pack(push, 1)
+        class CSoundOpvarSetEntity : public source2sdk::server::CBaseEntity
+        {
+        public:
+            uint8_t _pad04f0[0x18]; // 0x4f0
+            CUtlSymbolLarge m_iszStackName; // 0x508            
+            CUtlSymbolLarge m_iszOperatorName; // 0x510            
+            CUtlSymbolLarge m_iszOpvarName; // 0x518            
+            std::int32_t m_nOpvarType; // 0x520            
+            std::int32_t m_nOpvarIndex; // 0x524            
+            float m_flOpvarValue; // 0x528            
+            uint8_t _pad052c[0x4]; // 0x52c
+            CUtlSymbolLarge m_OpvarValueString; // 0x530            
+            bool m_bSetOnSpawn; // 0x538            
+            uint8_t _pad0539[0xf];
+            
+            // Datamap fields:
+            // uint64_t InputSetEventGuid; // 0x0
+            // CUtlSymbolLarge InputSetStackName; // 0x0
+            // CUtlSymbolLarge InputSetOperatorName; // 0x0
+            // CUtlSymbolLarge InputSetOpvarName; // 0x0
+            // int32_t InputSetOpvarIndex; // 0x0
+            // void InputSetOpvar; // 0x0
+            // float InputChangeOpvarValue; // 0x0
+            // float InputChangeOpvarValueAndSet; // 0x0
+            // void m_nGUID; // 0x4f0
+            // void m_LastOpvarValueString; // 0x540
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // uint64_t InputSetEventGuid; // 0x0
-        // CUtlSymbolLarge InputSetStackName; // 0x0
-        // CUtlSymbolLarge InputSetOperatorName; // 0x0
-        // CUtlSymbolLarge InputSetOpvarName; // 0x0
-        // int32_t InputSetOpvarIndex; // 0x0
-        // void InputSetOpvar; // 0x0
-        // float InputChangeOpvarValue; // 0x0
-        // float InputChangeOpvarValueAndSet; // 0x0
-        // void m_nGUID; // 0x4c0
-        // void m_LastOpvarValueString; // 0x500
+        // Cannot assert offsets of fields in CSoundOpvarSetEntity because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CSoundOpvarSetEntity) == 0x548);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CSoundOpvarSetEntity because it is not a standard-layout class
-    static_assert(sizeof(CSoundOpvarSetEntity) == 0x508);
 };

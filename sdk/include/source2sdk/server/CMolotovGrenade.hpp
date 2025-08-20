@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/server/CBaseCSGrenade.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseCSGrenade.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xed0
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CMolotovGrenade : public server::CBaseCSGrenade
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1070
+        // Has VTable
+        #pragma pack(push, 1)
+        class CMolotovGrenade : public source2sdk::server::CBaseCSGrenade
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CMolotovGrenade) == 0x1070);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CMolotovGrenade) == 0xed0);
 };

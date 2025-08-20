@@ -1,46 +1,49 @@
 #pragma once
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/server/CLogicalEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/CEntityIOOutput.hpp"
+#include "source2sdk/server/CLogicalEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x510
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MNetworkVarNames "bool m_bEnabled"
-    #pragma pack(push, 1)
-    class CLogicGameEventListener : public server::CLogicalEntity
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x4c0[0x10]; // 0x4c0
-        entity2::CEntityIOOutput m_OnEventFired; // 0x4d0        
-        CUtlSymbolLarge m_iszGameEventName; // 0x4f8        
-        CUtlSymbolLarge m_iszGameEventItem; // 0x500        
-        // metadata: MNetworkEnable
-        bool m_bEnabled; // 0x508        
-        bool m_bStartDisabled; // 0x509        
-        [[maybe_unused]] std::uint8_t pad_0x50a[0x6];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x540
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "bool m_bEnabled"
+        #pragma pack(push, 1)
+        class CLogicGameEventListener : public source2sdk::server::CLogicalEntity
+        {
+        public:
+            uint8_t _pad04f0[0x10]; // 0x4f0
+            source2sdk::entity2::CEntityIOOutput m_OnEventFired; // 0x500            
+            CUtlSymbolLarge m_iszGameEventName; // 0x528            
+            CUtlSymbolLarge m_iszGameEventItem; // 0x530            
+            // metadata: MNetworkEnable
+            bool m_bEnabled; // 0x538            
+            bool m_bStartDisabled; // 0x539            
+            uint8_t _pad053a[0x6];
+            
+            // Datamap fields:
+            // void InputEnable; // 0x0
+            // void InputDisable; // 0x0
+            // void InputToggle; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputEnable; // 0x0
-        // void InputDisable; // 0x0
-        // void InputToggle; // 0x0
+        // Cannot assert offsets of fields in CLogicGameEventListener because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CLogicGameEventListener) == 0x540);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CLogicGameEventListener because it is not a standard-layout class
-    static_assert(sizeof(CLogicGameEventListener) == 0x510);
 };

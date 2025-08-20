@@ -1,29 +1,34 @@
 #pragma once
-#include "source2sdk/client/CPlayerPawnComponent.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CPlayerPawnComponent.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x4
-    // Standard-layout class: false
-    // Size: 0x40
-    // Has VTable
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CCSPlayer_DamageReactServices : public client::CPlayerPawnComponent
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x4
+        // Standard-layout class: false
+        // Size: 0x48
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCSPlayer_DamageReactServices : public source2sdk::client::CPlayerPawnComponent
+        {
+        public:
+            uint8_t _pad0040[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CCSPlayer_DamageReactServices) == 0x48);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCSPlayer_DamageReactServices) == 0x40);
 };

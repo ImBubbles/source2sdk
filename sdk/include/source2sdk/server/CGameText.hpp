@@ -1,40 +1,43 @@
 #pragma once
-#include "source2sdk/client/hudtextparms_t.hpp"
-#include "source2sdk/server/CRulePointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/hudtextparms_t.hpp"
+#include "source2sdk/server/CRulePointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x740
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CGameText : public server::CRulePointEntity
+    namespace server
     {
-    public:
-        CUtlSymbolLarge m_iszMessage; // 0x720        
-        client::hudtextparms_t m_textParms; // 0x728        
-        [[maybe_unused]] std::uint8_t pad_0x73c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x818
+        // Has VTable
+        #pragma pack(push, 1)
+        class CGameText : public source2sdk::server::CRulePointEntity
+        {
+        public:
+            CUtlSymbolLarge m_iszMessage; // 0x7f8            
+            source2sdk::client::hudtextparms_t m_textParms; // 0x800            
+            uint8_t _pad0814[0x4];
+            
+            // Datamap fields:
+            // void InputDisplay; // 0x0
+            // CUtlSymbolLarge InputSetText; // 0x0
+            // Color color; // 0x7fffffff
+            // Color color2; // 0x7fffffff
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputDisplay; // 0x0
-        // CUtlSymbolLarge InputSetText; // 0x0
-        // Color color; // 0x7fffffff
-        // Color color2; // 0x7fffffff
+        // Cannot assert offsets of fields in CGameText because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CGameText) == 0x818);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CGameText because it is not a standard-layout class
-    static_assert(sizeof(CGameText) == 0x740);
 };

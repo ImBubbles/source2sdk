@@ -1,44 +1,47 @@
 #pragma once
-#include "source2sdk/entity2/CEntityIOOutput.hpp"
-#include "source2sdk/server/CBaseTrigger.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/CEntityIOOutput.hpp"
+#include "source2sdk/server/CBaseTrigger.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x920
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CChangeLevel : public server::CBaseTrigger
+    namespace server
     {
-    public:
-        CUtlString m_sMapName; // 0x8e0        
-        CUtlString m_sLandmarkName; // 0x8e8        
-        entity2::CEntityIOOutput m_OnChangeLevel; // 0x8f0        
-        bool m_bTouched; // 0x918        
-        bool m_bNoTouch; // 0x919        
-        bool m_bNewChapter; // 0x91a        
-        bool m_bOnChangeLevelFired; // 0x91b        
-        [[maybe_unused]] std::uint8_t pad_0x91c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9f8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CChangeLevel : public source2sdk::server::CBaseTrigger
+        {
+        public:
+            CUtlString m_sMapName; // 0x9b8            
+            CUtlString m_sLandmarkName; // 0x9c0            
+            source2sdk::entity2::CEntityIOOutput m_OnChangeLevel; // 0x9c8            
+            bool m_bTouched; // 0x9f0            
+            bool m_bNoTouch; // 0x9f1            
+            bool m_bNewChapter; // 0x9f2            
+            bool m_bOnChangeLevelFired; // 0x9f3            
+            uint8_t _pad09f4[0x4];
+            
+            // Datamap fields:
+            // void InputChangeLevel; // 0x0
+            // CUtlString map; // 0x7fffffff
+            // CUtlString landmark; // 0x7fffffff
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputChangeLevel; // 0x0
-        // CUtlString map; // 0x7fffffff
-        // CUtlString landmark; // 0x7fffffff
+        // Cannot assert offsets of fields in CChangeLevel because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CChangeLevel) == 0x9f8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CChangeLevel because it is not a standard-layout class
-    static_assert(sizeof(CChangeLevel) == 0x920);
 };

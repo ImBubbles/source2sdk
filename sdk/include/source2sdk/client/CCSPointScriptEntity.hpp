@@ -1,31 +1,34 @@
 #pragma once
-#include "source2sdk/client/C_BaseEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_BaseEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x550
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CCSPointScriptEntity : public client::C_BaseEntity
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x548[0x8];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x600
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCSPointScriptEntity : public source2sdk::client::C_BaseEntity
+        {
+        public:
+            uint8_t _pad05f8[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::CCSPointScriptEntity) == 0x600);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CCSPointScriptEntity) == 0x550);
 };

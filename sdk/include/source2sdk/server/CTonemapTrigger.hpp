@@ -1,33 +1,36 @@
 #pragma once
-#include "source2sdk/server/CBaseTrigger.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseTrigger.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x8f0
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CTonemapTrigger : public server::CBaseTrigger
+    namespace server
     {
-    public:
-        CUtlSymbolLarge m_tonemapControllerName; // 0x8e0        
-        CEntityHandle m_hTonemapController; // 0x8e8        
-        [[maybe_unused]] std::uint8_t pad_0x8ec[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9c8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CTonemapTrigger : public source2sdk::server::CBaseTrigger
+        {
+        public:
+            CUtlSymbolLarge m_tonemapControllerName; // 0x9b8            
+            CEntityHandle m_hTonemapController; // 0x9c0            
+            uint8_t _pad09c4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CTonemapTrigger because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CTonemapTrigger) == 0x9c8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CTonemapTrigger because it is not a standard-layout class
-    static_assert(sizeof(CTonemapTrigger) == 0x8f0);
 };

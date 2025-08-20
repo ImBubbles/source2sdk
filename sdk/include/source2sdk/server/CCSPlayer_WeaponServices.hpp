@@ -1,64 +1,76 @@
 #pragma once
-#include "source2sdk/client/GameTime_t.hpp"
-#include "source2sdk/server/CPlayer_WeaponServices.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/GameTime_t.hpp"
+#include "source2sdk/server/CPlayer_WeaponServices.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBasePlayerWeapon;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBasePlayerWeapon;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1380
-    // Has VTable
-    // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MNetworkVarNames "GameTime_t m_flNextAttack"
-    // static metadata: MNetworkVarNames "bool m_bIsLookingAtWeapon"
-    // static metadata: MNetworkVarNames "bool m_bIsHoldingLookAtWeapon"
-    #pragma pack(push, 1)
-    class CCSPlayer_WeaponServices : public server::CPlayer_WeaponServices
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        // metadata: MNetworkUserGroup "LocalPlayerExclusive"
-        client::GameTime_t m_flNextAttack; // 0xa8        
-        // metadata: MNetworkEnable
-        bool m_bIsLookingAtWeapon; // 0xac        
-        // metadata: MNetworkEnable
-        bool m_bIsHoldingLookAtWeapon; // 0xad        
-        [[maybe_unused]] std::uint8_t pad_0xae[0x2]; // 0xae
-        // m_hSavedWeapon has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBasePlayerWeapon> m_hSavedWeapon;
-        char m_hSavedWeapon[0x4]; // 0xb0        
-        int32_t m_nTimeToMelee; // 0xb4        
-        int32_t m_nTimeToSecondary; // 0xb8        
-        int32_t m_nTimeToPrimary; // 0xbc        
-        int32_t m_nTimeToSniperRifle; // 0xc0        
-        bool m_bIsBeingGivenItem; // 0xc4        
-        bool m_bIsPickingUpItemWithUse; // 0xc5        
-        bool m_bPickedUpWeapon; // 0xc6        
-        bool m_bDisableAutoDeploy; // 0xc7        
-        bool m_bIsPickingUpGroundWeapon; // 0xc8        
-        [[maybe_unused]] std::uint8_t pad_0xc9[0x3]; // 0xc9
-        uint32_t m_nOldShootPositionHistoryCount; // 0xcc        
-        [[maybe_unused]] std::uint8_t pad_0xd0[0x398]; // 0xd0
-        uint32_t m_nOldInputHistoryCount; // 0x468        
-        [[maybe_unused]] std::uint8_t pad_0x46c[0xf14];
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1a60
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "GameTime_t m_flNextAttack"
+        // static metadata: MNetworkVarNames "bool m_bIsLookingAtWeapon"
+        // static metadata: MNetworkVarNames "bool m_bIsHoldingLookAtWeapon"
+        // static metadata: MNetworkVarNames "uint8 m_networkAnimTiming"
+        // static metadata: MNetworkVarNames "bool m_bBlockInspectUntilNextGraphUpdate"
+        #pragma pack(push, 1)
+        class CCSPlayer_WeaponServices : public source2sdk::server::CPlayer_WeaponServices
+        {
+        public:
+            uint8_t _pad00a8[0x10]; // 0xa8
+            // metadata: MNetworkEnable
+            // metadata: MNetworkUserGroup "LocalPlayerExclusive"
+            source2sdk::entity2::GameTime_t m_flNextAttack; // 0xb8            
+            // metadata: MNetworkEnable
+            bool m_bIsLookingAtWeapon; // 0xbc            
+            // metadata: MNetworkEnable
+            bool m_bIsHoldingLookAtWeapon; // 0xbd            
+            uint8_t _pad00be[0x2]; // 0xbe
+            // m_hSavedWeapon has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBasePlayerWeapon> m_hSavedWeapon;
+            char m_hSavedWeapon[0x4]; // 0xc0            
+            std::int32_t m_nTimeToMelee; // 0xc4            
+            std::int32_t m_nTimeToSecondary; // 0xc8            
+            std::int32_t m_nTimeToPrimary; // 0xcc            
+            std::int32_t m_nTimeToSniperRifle; // 0xd0            
+            bool m_bIsBeingGivenItem; // 0xd4            
+            bool m_bIsPickingUpItemWithUse; // 0xd5            
+            bool m_bPickedUpWeapon; // 0xd6            
+            bool m_bDisableAutoDeploy; // 0xd7            
+            bool m_bIsPickingUpGroundWeapon; // 0xd8            
+            uint8_t _pad00d9[0x1967]; // 0xd9
+            // metadata: MNetworkEnable
+            // m_networkAnimTiming has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CNetworkUtlVectorBase<std::uint8_t> m_networkAnimTiming;
+            char m_networkAnimTiming[0x18]; // 0x1a40            
+            // metadata: MNetworkEnable
+            bool m_bBlockInspectUntilNextGraphUpdate; // 0x1a58            
+            uint8_t _pad1a59[0x7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCSPlayer_WeaponServices because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CCSPlayer_WeaponServices) == 0x1a60);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCSPlayer_WeaponServices because it is not a standard-layout class
-    static_assert(sizeof(CCSPlayer_WeaponServices) == 0x1380);
 };

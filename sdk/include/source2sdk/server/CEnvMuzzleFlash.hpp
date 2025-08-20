@@ -1,36 +1,39 @@
 #pragma once
-#include "source2sdk/server/CPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x4d0
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CEnvMuzzleFlash : public server::CPointEntity
+    namespace server
     {
-    public:
-        float m_flScale; // 0x4c0        
-        [[maybe_unused]] std::uint8_t pad_0x4c4[0x4]; // 0x4c4
-        CUtlSymbolLarge m_iszParentAttachment; // 0x4c8        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x500
+        // Has VTable
+        #pragma pack(push, 1)
+        class CEnvMuzzleFlash : public source2sdk::server::CPointEntity
+        {
+        public:
+            float m_flScale; // 0x4f0            
+            uint8_t _pad04f4[0x4]; // 0x4f4
+            CUtlSymbolLarge m_iszParentAttachment; // 0x4f8            
+            
+            // Datamap fields:
+            // void InputFire; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputFire; // 0x0
+        // Cannot assert offsets of fields in CEnvMuzzleFlash because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CEnvMuzzleFlash) == 0x500);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CEnvMuzzleFlash because it is not a standard-layout class
-    static_assert(sizeof(CEnvMuzzleFlash) == 0x4d0);
 };

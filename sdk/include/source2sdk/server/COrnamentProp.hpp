@@ -1,35 +1,39 @@
 #pragma once
-#include "source2sdk/server/CDynamicProp.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CDynamicProp.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xb88
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class COrnamentProp : public server::CDynamicProp
+    namespace server
     {
-    public:
-        CUtlSymbolLarge m_initialOwner; // 0xb80        
+        // Registered alignment: 0x10
+        // Alignment: 0x10
+        // Standard-layout class: false
+        // Size: 0xd50
+        // Has VTable
+        #pragma pack(push, 1)
+        class COrnamentProp : public source2sdk::server::CDynamicProp
+        {
+        public:
+            CUtlSymbolLarge m_initialOwner; // 0xd40            
+            uint8_t _pad0d48[0x8];
+            
+            // Datamap fields:
+            // CUtlSymbolLarge InputSetAttached; // 0x0
+            // void InputDetach; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // CUtlSymbolLarge InputSetAttached; // 0x0
-        // void InputDetach; // 0x0
+        // Cannot assert offsets of fields in COrnamentProp because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::COrnamentProp) == 0xd50);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in COrnamentProp because it is not a standard-layout class
-    static_assert(sizeof(COrnamentProp) == 0xb88);
 };

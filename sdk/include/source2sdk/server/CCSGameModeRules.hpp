@@ -1,35 +1,35 @@
 #pragma once
-#include "source2sdk/entity2/CNetworkVarChainer.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/entity2/CNetworkVarChainer.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: true
-    // Size: 0x30
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CCSGameModeRules
+    namespace server
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x00[0x8]; // 0x0
-        // metadata: MNetworkDisable
-        // metadata: MNetworkChangeAccessorFieldPathIndex
-        entity2::CNetworkVarChainer __m_pChainEntity; // 0x8        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: true
+        // Size: 0x30
+        // Has VTable
+        #pragma pack(push, 1)
+        class CCSGameModeRules
+        {
+        public:
+            uint8_t _pad0000[0x8]; // 0x0
+            source2sdk::entity2::CNetworkVarChainer __m_pChainEntity; // 0x8            
+        };
+        #pragma pack(pop)
+        
+        static_assert(offsetof(source2sdk::server::CCSGameModeRules, __m_pChainEntity) == 0x8);
+        
+        static_assert(sizeof(source2sdk::server::CCSGameModeRules) == 0x30);
     };
-    #pragma pack(pop)
-    
-    static_assert(offsetof(CCSGameModeRules, __m_pChainEntity) == 0x8);
-    
-    static_assert(sizeof(CCSGameModeRules) == 0x30);
 };

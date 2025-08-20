@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/server/CBaseFlex.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseFlex.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x978
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CBaseFlexAlias_funCBaseFlex : public server::CBaseFlex
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xb08
+        // Has VTable
+        #pragma pack(push, 1)
+        class CBaseFlexAlias_funCBaseFlex : public source2sdk::server::CBaseFlex
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CBaseFlexAlias_funCBaseFlex) == 0xb08);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CBaseFlexAlias_funCBaseFlex) == 0x978);
 };

@@ -1,33 +1,38 @@
 #pragma once
-#include "source2sdk/server/CCSWeaponBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CCSWeaponBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xea0
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CKnife : public server::CCSWeaponBase
+    namespace server
     {
-    public:
-        bool m_bFirstAttack; // 0xe98        
-        [[maybe_unused]] std::uint8_t pad_0xe99[0x7];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1038
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "bool m_bFirstAttack"
+        #pragma pack(push, 1)
+        class CKnife : public source2sdk::server::CCSWeaponBase
+        {
+        public:
+            // metadata: MNetworkEnable
+            bool m_bFirstAttack; // 0x1030            
+            uint8_t _pad1031[0x7];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CKnife because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CKnife) == 0x1038);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CKnife because it is not a standard-layout class
-    static_assert(sizeof(CKnife) == 0xea0);
 };

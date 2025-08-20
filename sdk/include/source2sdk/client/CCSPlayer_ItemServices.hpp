@@ -1,40 +1,41 @@
 #pragma once
-#include "source2sdk/client/CPlayer_ItemServices.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CPlayer_ItemServices.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x4
-    // Standard-layout class: false
-    // Size: 0x48
-    // Has VTable
-    // MNetworkAssumeNotNetworkable
-    // 
-    // static metadata: MNetworkVarNames "bool m_bHasDefuser"
-    // static metadata: MNetworkVarNames "bool m_bHasHelmet"
-    // static metadata: MNetworkVarNames "bool m_bHasHeavyArmor"
-    #pragma pack(push, 1)
-    class CCSPlayer_ItemServices : public client::CPlayer_ItemServices
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        bool m_bHasDefuser; // 0x40        
-        // metadata: MNetworkEnable
-        bool m_bHasHelmet; // 0x41        
-        // metadata: MNetworkEnable
-        bool m_bHasHeavyArmor; // 0x42        
-        [[maybe_unused]] std::uint8_t pad_0x43[0x5];
+        // Registered alignment: unknown
+        // Alignment: 0x4
+        // Standard-layout class: false
+        // Size: 0x48
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "bool m_bHasDefuser"
+        // static metadata: MNetworkVarNames "bool m_bHasHelmet"
+        #pragma pack(push, 1)
+        class CCSPlayer_ItemServices : public source2sdk::client::CPlayer_ItemServices
+        {
+        public:
+            // metadata: MNetworkEnable
+            bool m_bHasDefuser; // 0x40            
+            // metadata: MNetworkEnable
+            bool m_bHasHelmet; // 0x41            
+            uint8_t _pad0042[0x6];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CCSPlayer_ItemServices because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CCSPlayer_ItemServices) == 0x48);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CCSPlayer_ItemServices because it is not a standard-layout class
-    static_assert(sizeof(CCSPlayer_ItemServices) == 0x48);
 };

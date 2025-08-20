@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/client/C_CSGO_PreviewModel.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CSGO_PreviewModel.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1590
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class C_CSGO_PreviewModelAlias_csgo_item_previewmodel : public client::C_CSGO_PreviewModel
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x18d8
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_CSGO_PreviewModelAlias_csgo_item_previewmodel : public source2sdk::client::C_CSGO_PreviewModel
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_CSGO_PreviewModelAlias_csgo_item_previewmodel) == 0x18d8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_CSGO_PreviewModelAlias_csgo_item_previewmodel) == 0x1590);
 };

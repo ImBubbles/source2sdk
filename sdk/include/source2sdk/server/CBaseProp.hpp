@@ -1,41 +1,43 @@
 #pragma once
-#include "source2sdk/server/CBaseAnimGraph.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseAnimGraph.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x928
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CBaseProp : public server::CBaseAnimGraph
+    namespace server
     {
-    public:
-        bool m_bModelOverrodeBlockLOS; // 0x8e8        
-        [[maybe_unused]] std::uint8_t pad_0x8e9[0x3]; // 0x8e9
-        int32_t m_iShapeType; // 0x8ec        
-        bool m_bConformToCollisionBounds; // 0x8f0        
-        [[maybe_unused]] std::uint8_t pad_0x8f1[0x3]; // 0x8f1
-        matrix3x4_t m_mPreferredCatchTransform; // 0x8f4        
-        [[maybe_unused]] std::uint8_t pad_0x924[0x4];
+        // Registered alignment: 0x10
+        // Alignment: 0x10
+        // Standard-layout class: false
+        // Size: 0xab0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CBaseProp : public source2sdk::server::CBaseAnimGraph
+        {
+        public:
+            bool m_bModelOverrodeBlockLOS; // 0xa78            
+            uint8_t _pad0a79[0x3]; // 0xa79
+            std::int32_t m_iShapeType; // 0xa7c            
+            bool m_bConformToCollisionBounds; // 0xa80            
+            uint8_t _pad0a81[0xf]; // 0xa81
+            CTransform m_mPreferredCatchTransform; // 0xa90            
+            
+            // Datamap fields:
+            // void health; // 0x7fffffff
+            // CUtlSymbolLarge propdata_override; // 0x7fffffff
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void health; // 0x7fffffff
-        // CUtlSymbolLarge propdata_override; // 0x7fffffff
+        // Cannot assert offsets of fields in CBaseProp because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CBaseProp) == 0xab0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CBaseProp because it is not a standard-layout class
-    static_assert(sizeof(CBaseProp) == 0x928);
 };

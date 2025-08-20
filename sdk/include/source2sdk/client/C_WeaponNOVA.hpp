@@ -1,31 +1,33 @@
 #pragma once
-#include "source2sdk/client/C_CSWeaponBase.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CSWeaponBase.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x10
-    // Alignment: 0x10
-    // Standard-layout class: false
-    // Size: 0x1a70
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class C_WeaponNOVA : public client::C_CSWeaponBase
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x10
+        // Alignment: 0x10
+        // Standard-layout class: false
+        // Size: 0x1e10
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_WeaponNOVA : public source2sdk::client::C_CSWeaponBase
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_WeaponNOVA) == 0x1e10);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_WeaponNOVA) == 0x1a70);
 };

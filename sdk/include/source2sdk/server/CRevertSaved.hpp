@@ -1,38 +1,41 @@
 #pragma once
-#include "source2sdk/server/CModelPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CModelPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x720
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CRevertSaved : public server::CModelPointEntity
+    namespace server
     {
-    public:
-        float m_loadTime; // 0x710        
-        float m_Duration; // 0x714        
-        float m_HoldTime; // 0x718        
-        [[maybe_unused]] std::uint8_t pad_0x71c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x7f8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CRevertSaved : public source2sdk::server::CModelPointEntity
+        {
+        public:
+            float m_loadTime; // 0x7e8            
+            float m_Duration; // 0x7ec            
+            float m_HoldTime; // 0x7f0            
+            uint8_t _pad07f4[0x4];
+            
+            // Datamap fields:
+            // void InputReload; // 0x0
+            // void CRevertSavedLoadThink; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputReload; // 0x0
-        // void CRevertSavedLoadThink; // 0x0
+        // Cannot assert offsets of fields in CRevertSaved because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CRevertSaved) == 0x7f8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CRevertSaved because it is not a standard-layout class
-    static_assert(sizeof(CRevertSaved) == 0x720);
 };

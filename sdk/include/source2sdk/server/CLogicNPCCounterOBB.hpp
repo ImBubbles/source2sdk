@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/server/CLogicNPCCounterAABB.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CLogicNPCCounterAABB.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x830
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CLogicNPCCounterOBB : public server::CLogicNPCCounterAABB
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x860
+        // Has VTable
+        #pragma pack(push, 1)
+        class CLogicNPCCounterOBB : public source2sdk::server::CLogicNPCCounterAABB
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CLogicNPCCounterOBB) == 0x860);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CLogicNPCCounterOBB) == 0x830);
 };

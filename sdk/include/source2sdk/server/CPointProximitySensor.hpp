@@ -1,49 +1,54 @@
 #pragma once
-#include "source2sdk/server/CPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CPointEntity.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x4f0
-    // Has VTable
-    // Construct allowed
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class CPointProximitySensor : public server::CPointEntity
+    namespace server
     {
-    public:
-        bool m_bDisabled; // 0x4c0        
-        [[maybe_unused]] std::uint8_t pad_0x4c1[0x3]; // 0x4c1
-        // m_hTargetEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hTargetEntity;
-        char m_hTargetEntity[0x4]; // 0x4c4        
-        // m_Distance has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CEntityOutputTemplate<float> m_Distance;
-        char m_Distance[0x28]; // 0x4c8        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x520
+        // Has VTable
+        #pragma pack(push, 1)
+        class CPointProximitySensor : public source2sdk::server::CPointEntity
+        {
+        public:
+            bool m_bDisabled; // 0x4f0            
+            uint8_t _pad04f1[0x3]; // 0x4f1
+            // m_hTargetEntity has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hTargetEntity;
+            char m_hTargetEntity[0x4]; // 0x4f4            
+            // m_Distance has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CEntityOutputTemplate<float> m_Distance;
+            char m_Distance[0x28]; // 0x4f8            
+            
+            // Datamap fields:
+            // void InputEnable; // 0x0
+            // void InputDisable; // 0x0
+            // void InputToggle; // 0x0
+            // CUtlSymbolLarge InputSetTargetEntity; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void InputEnable; // 0x0
-        // void InputDisable; // 0x0
-        // void InputToggle; // 0x0
-        // CUtlSymbolLarge InputSetTargetEntity; // 0x0
+        // Cannot assert offsets of fields in CPointProximitySensor because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CPointProximitySensor) == 0x520);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CPointProximitySensor because it is not a standard-layout class
-    static_assert(sizeof(CPointProximitySensor) == 0x4f0);
 };

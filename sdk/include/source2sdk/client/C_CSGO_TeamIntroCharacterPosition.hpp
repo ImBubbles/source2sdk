@@ -1,31 +1,33 @@
 #pragma once
-#include "source2sdk/client/C_CSGO_TeamPreviewCharacterPosition.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_CSGO_TeamPreviewCharacterPosition.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1278
-    // Has VTable
-    // Construct disallowed
-    // MConstructibleClassBase
-    // MNetworkAssumeNotNetworkable
-    #pragma pack(push, 1)
-    class C_CSGO_TeamIntroCharacterPosition : public client::C_CSGO_TeamPreviewCharacterPosition
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: unknown
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x13b8
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_CSGO_TeamIntroCharacterPosition : public source2sdk::client::C_CSGO_TeamPreviewCharacterPosition
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_CSGO_TeamIntroCharacterPosition) == 0x13b8);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_CSGO_TeamIntroCharacterPosition) == 0x1278);
 };

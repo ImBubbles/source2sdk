@@ -1,4 +1,7 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
 #include <cstdint>
 
 // /////////////////////////////////////////////////////////////
@@ -6,15 +9,18 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Enumerator count: 3
-    // Alignment: 1
-    // Size: 0x1
-    enum class FixAngleSet_t : std::uint8_t
+    namespace client
     {
-        None = 0,
-        Absolute = 1,
-        Relative = 2,
+        // Enumerator count: 3
+        // Alignment: 1
+        // Size: 0x1
+        enum class FixAngleSet_t : std::uint8_t
+        {
+            None = 0x0,
+            Absolute = 0x1,
+            Relative = 0x2,
+        };
     };
 };
