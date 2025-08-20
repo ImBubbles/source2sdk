@@ -1,30 +1,33 @@
 #pragma once
-#include "source2sdk/client/C_DOTA_BaseNPC.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_DOTA_BaseNPC.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1858
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class C_DOTA_DarkWillow_Creature : public client::C_DOTA_BaseNPC
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1a18
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_DOTA_DarkWillow_Creature : public source2sdk::client::C_DOTA_BaseNPC
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_DOTA_DarkWillow_Creature) == 0x1a18);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_DOTA_DarkWillow_Creature) == 0x1858);
 };

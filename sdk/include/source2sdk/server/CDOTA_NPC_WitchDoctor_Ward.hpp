@@ -1,37 +1,40 @@
 #pragma once
-#include "source2sdk/server/CDOTA_BaseNPC_Additive.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CDOTA_BaseNPC_Additive.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1838
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // 
-    // static metadata: MNetworkVarNames "int m_nTargetType"
-    // static metadata: MNetworkVarNames "int m_nTargetFlags"
-    #pragma pack(push, 1)
-    class CDOTA_NPC_WitchDoctor_Ward : public server::CDOTA_BaseNPC_Additive
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        int32_t m_nTargetType; // 0x1830        
-        // metadata: MNetworkEnable
-        int32_t m_nTargetFlags; // 0x1834        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x18c0
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "int m_nTargetType"
+        // static metadata: MNetworkVarNames "int m_nTargetFlags"
+        #pragma pack(push, 1)
+        class CDOTA_NPC_WitchDoctor_Ward : public source2sdk::server::CDOTA_BaseNPC_Additive
+        {
+        public:
+            // metadata: MNetworkEnable
+            std::int32_t m_nTargetType; // 0x18b8            
+            // metadata: MNetworkEnable
+            std::int32_t m_nTargetFlags; // 0x18bc            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_NPC_WitchDoctor_Ward because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_NPC_WitchDoctor_Ward) == 0x18c0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_NPC_WitchDoctor_Ward because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_NPC_WitchDoctor_Ward) == 0x1838);
 };

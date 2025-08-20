@@ -1,37 +1,42 @@
 #pragma once
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CDOTA_Modifier_Stacking_Base.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
+#include "source2sdk/client/ParticleIndex_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1748
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Batrider_StickyNapalm : public server::CDOTA_Modifier_Stacking_Base
+    namespace server
     {
-    public:
-        float movement_speed_pct; // 0x1728        
-        int32_t turn_rate_pct; // 0x172c        
-        int32_t damage; // 0x1730        
-        int32_t application_damage; // 0x1734        
-        int32_t building_damage_pct; // 0x1738        
-        int32_t creep_damage_pct; // 0x173c        
-        client::ParticleIndex_t m_nFXIndex; // 0x1740        
-        client::ParticleIndex_t m_nFXStackIndex; // 0x1744        
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x1898
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Batrider_StickyNapalm : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            float movement_speed_pct; // 0x1878            
+            std::int32_t turn_rate_pct; // 0x187c            
+            float damage; // 0x1880            
+            float application_damage; // 0x1884            
+            float building_damage_pct; // 0x1888            
+            float creep_damage_pct; // 0x188c            
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0x1890            
+            source2sdk::client::ParticleIndex_t m_nFXStackIndex; // 0x1894            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Batrider_StickyNapalm because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_Batrider_StickyNapalm) == 0x1898);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Batrider_StickyNapalm because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Batrider_StickyNapalm) == 0x1748);
 };

@@ -1,31 +1,34 @@
 #pragma once
-#include "source2sdk/client/C_DOTA_Item.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_DOTA_Item.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x6e8
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class C_DOTA_Item_Lua : public client::C_DOTA_Item
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x6a0[0x48];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x770
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_DOTA_Item_Lua : public source2sdk::client::C_DOTA_Item
+        {
+        public:
+            uint8_t _pad0728[0x48];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_DOTA_Item_Lua) == 0x770);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_DOTA_Item_Lua) == 0x6e8);
 };

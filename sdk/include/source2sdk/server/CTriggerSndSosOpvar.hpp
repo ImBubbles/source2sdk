@@ -1,58 +1,64 @@
 #pragma once
-#include "source2sdk/server/CBaseTrigger.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseTrigger.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xce0
-    // Has VTable
-    // Construct allowed
-    #pragma pack(push, 1)
-    class CTriggerSndSosOpvar : public server::CBaseTrigger
+    namespace server
     {
-    public:
-        // m_hTouchingPlayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<CHandle<server::CBaseEntity>> m_hTouchingPlayers;
-        char m_hTouchingPlayers[0x18]; // 0x980        
-        Vector m_flPosition; // 0x998        
-        float m_flCenterSize; // 0x9a4        
-        float m_flMinVal; // 0x9a8        
-        float m_flMaxVal; // 0x9ac        
-        CUtlSymbolLarge m_opvarName; // 0x9b0        
-        CUtlSymbolLarge m_stackName; // 0x9b8        
-        CUtlSymbolLarge m_operatorName; // 0x9c0        
-        bool m_bVolIs2D; // 0x9c8        
-        char m_opvarNameChar[256]; // 0x9c9        
-        char m_stackNameChar[256]; // 0xac9        
-        char m_operatorNameChar[256]; // 0xbc9        
-        [[maybe_unused]] std::uint8_t pad_0xcc9[0x3]; // 0xcc9
-        Vector m_VecNormPos; // 0xccc        
-        float m_flNormCenterSize; // 0xcd8        
-        [[maybe_unused]] std::uint8_t pad_0xcdc[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xd20
+        // Has VTable
+        #pragma pack(push, 1)
+        class CTriggerSndSosOpvar : public source2sdk::server::CBaseTrigger
+        {
+        public:
+            // m_hTouchingPlayers has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_hTouchingPlayers;
+            char m_hTouchingPlayers[0x18]; // 0x9c0            
+            Vector m_flPosition; // 0x9d8            
+            float m_flCenterSize; // 0x9e4            
+            float m_flMinVal; // 0x9e8            
+            float m_flMaxVal; // 0x9ec            
+            CUtlSymbolLarge m_opvarName; // 0x9f0            
+            CUtlSymbolLarge m_stackName; // 0x9f8            
+            CUtlSymbolLarge m_operatorName; // 0xa00            
+            bool m_bVolIs2D; // 0xa08            
+            char m_opvarNameChar[256]; // 0xa09            
+            char m_stackNameChar[256]; // 0xb09            
+            char m_operatorNameChar[256]; // 0xc09            
+            uint8_t _pad0d09[0x3]; // 0xd09
+            Vector m_VecNormPos; // 0xd0c            
+            float m_flNormCenterSize; // 0xd18            
+            uint8_t _pad0d1c[0x4];
+            
+            // Datamap fields:
+            // void CTriggerSndSosOpvarSndSosTriggerOpvarWaitOver; // 0x0
+            // void m_opvarNameChar; // 0xa09
+            // void m_stackNameChar; // 0xb09
+            // void m_operatorNameChar; // 0xc09
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // void CTriggerSndSosOpvarSndSosTriggerOpvarWaitOver; // 0x0
-        // void m_opvarNameChar; // 0x9c9
-        // void m_stackNameChar; // 0xac9
-        // void m_operatorNameChar; // 0xbc9
+        // Cannot assert offsets of fields in CTriggerSndSosOpvar because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CTriggerSndSosOpvar) == 0xd20);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CTriggerSndSosOpvar because it is not a standard-layout class
-    static_assert(sizeof(CTriggerSndSosOpvar) == 0xce0);
 };

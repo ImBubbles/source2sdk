@@ -1,29 +1,33 @@
 #pragma once
-#include "source2sdk/server/CDynamicProp.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CDynamicProp.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xa80
-    // Has VTable
-    // Construct allowed
-    #pragma pack(push, 1)
-    class CAdditionalWearable : public server::CDynamicProp
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x10
+        // Alignment: 0x10
+        // Standard-layout class: false
+        // Size: 0xad0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CAdditionalWearable : public source2sdk::server::CDynamicProp
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CAdditionalWearable) == 0xad0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CAdditionalWearable) == 0xa80);
 };

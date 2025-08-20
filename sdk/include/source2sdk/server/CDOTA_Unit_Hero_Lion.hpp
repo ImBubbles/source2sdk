@@ -1,32 +1,35 @@
 #pragma once
-#include "source2sdk/server/CDOTA_BaseNPC_Hero.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CDOTA_BaseNPC_Hero.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1e98
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class CDOTA_Unit_Hero_Lion : public server::CDOTA_BaseNPC_Hero
+    namespace server
     {
-    public:
-        uint32_t m_unFingerPrestigeKills; // 0x1e90        
-        [[maybe_unused]] std::uint8_t pad_0x1e94[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1ef8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Unit_Hero_Lion : public source2sdk::server::CDOTA_BaseNPC_Hero
+        {
+        public:
+            std::uint32_t m_unFingerPrestigeKills; // 0x1ef0            
+            uint8_t _pad1ef4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Unit_Hero_Lion because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Unit_Hero_Lion) == 0x1ef8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Unit_Hero_Lion because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Unit_Hero_Lion) == 0x1e98);
 };

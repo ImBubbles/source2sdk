@@ -1,58 +1,61 @@
 #pragma once
-#include "source2sdk/client/CBaseAnimatingActivity.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CBaseAnimatingActivity.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x8f0
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class C_LocalTempEntity : public client::CBaseAnimatingActivity
+    namespace client
     {
-    public:
-        int32_t flags; // 0x848        
-        entity2::GameTime_t die; // 0x84c        
-        float m_flFrameMax; // 0x850        
-        float x; // 0x854        
-        float y; // 0x858        
-        float fadeSpeed; // 0x85c        
-        float bounceFactor; // 0x860        
-        int32_t hitSound; // 0x864        
-        int32_t priority; // 0x868        
-        Vector tentOffset; // 0x86c        
-        QAngle m_vecTempEntAngVelocity; // 0x878        
-        int32_t tempent_renderamt; // 0x884        
-        Vector m_vecNormal; // 0x888        
-        float m_flSpriteScale; // 0x894        
-        int32_t m_nFlickerFrame; // 0x898        
-        float m_flFrameRate; // 0x89c        
-        float m_flFrame; // 0x8a0        
-        [[maybe_unused]] std::uint8_t pad_0x8a4[0x4]; // 0x8a4
-        char* m_pszImpactEffect; // 0x8a8        
-        char* m_pszParticleEffect; // 0x8b0        
-        bool m_bParticleCollision; // 0x8b8        
-        [[maybe_unused]] std::uint8_t pad_0x8b9[0x3]; // 0x8b9
-        int32_t m_iLastCollisionFrame; // 0x8bc        
-        Vector m_vLastCollisionOrigin; // 0x8c0        
-        Vector m_vecTempEntVelocity; // 0x8cc        
-        Vector m_vecPrevAbsOrigin; // 0x8d8        
-        Vector m_vecTempEntAcceleration; // 0x8e4        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xa68
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_LocalTempEntity : public source2sdk::client::CBaseAnimatingActivity
+        {
+        public:
+            std::int32_t flags; // 0x9c0            
+            source2sdk::entity2::GameTime_t die; // 0x9c4            
+            float m_flFrameMax; // 0x9c8            
+            float x; // 0x9cc            
+            float y; // 0x9d0            
+            float fadeSpeed; // 0x9d4            
+            float bounceFactor; // 0x9d8            
+            std::int32_t hitSound; // 0x9dc            
+            std::int32_t priority; // 0x9e0            
+            Vector tentOffset; // 0x9e4            
+            QAngle m_vecTempEntAngVelocity; // 0x9f0            
+            std::int32_t tempent_renderamt; // 0x9fc            
+            Vector m_vecNormal; // 0xa00            
+            float m_flSpriteScale; // 0xa0c            
+            std::int32_t m_nFlickerFrame; // 0xa10            
+            float m_flFrameRate; // 0xa14            
+            float m_flFrame; // 0xa18            
+            uint8_t _pad0a1c[0x4]; // 0xa1c
+            char* m_pszImpactEffect; // 0xa20            
+            char* m_pszParticleEffect; // 0xa28            
+            bool m_bParticleCollision; // 0xa30            
+            uint8_t _pad0a31[0x3]; // 0xa31
+            std::int32_t m_iLastCollisionFrame; // 0xa34            
+            Vector m_vLastCollisionOrigin; // 0xa38            
+            Vector m_vecTempEntVelocity; // 0xa44            
+            Vector m_vecPrevAbsOrigin; // 0xa50            
+            Vector m_vecTempEntAcceleration; // 0xa5c            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in C_LocalTempEntity because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_LocalTempEntity) == 0xa68);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_LocalTempEntity because it is not a standard-layout class
-    static_assert(sizeof(C_LocalTempEntity) == 0x8f0);
 };

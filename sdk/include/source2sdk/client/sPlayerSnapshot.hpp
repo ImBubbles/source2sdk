@@ -1,40 +1,51 @@
 #pragma once
-#include "source2sdk/client/AbilityID_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/AbilityID_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: 0x4
-    // Standard-layout class: true
-    // Size: 0x30
-    // Has Trivial Destructor
-    #pragma pack(push, 1)
-    class sPlayerSnapshot
+    namespace client
     {
-    public:
-        client::AbilityID_t m_nItemAbilityID[10]; // 0x0        
-        float m_fGameTime; // 0x28        
-        uint8_t unKills; // 0x2c        
-        uint8_t unDeaths; // 0x2d        
-        uint8_t unAssists; // 0x2e        
-        uint8_t unLevel; // 0x2f        
+        // Registered alignment: unknown
+        // Alignment: 0x4
+        // Standard-layout class: true
+        // Size: 0x40
+        // Has Trivial Destructor
+        #pragma pack(push, 1)
+        class sPlayerSnapshot
+        {
+        public:
+            source2sdk::client::AbilityID_t m_nItemAbilityID[11]; // 0x0            
+            float m_fGameTime; // 0x2c            
+            std::uint8_t unKills; // 0x30            
+            std::uint8_t unDeaths; // 0x31            
+            std::uint8_t unAssists; // 0x32            
+            std::uint8_t unLevel; // 0x33            
+            std::uint32_t unLastHits; // 0x34            
+            std::uint32_t unDenies; // 0x38            
+            std::uint8_t unFlags; // 0x3c            
+            uint8_t _pad003d[0x3];
+        };
+        #pragma pack(pop)
+        
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, m_nItemAbilityID) == 0x0);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, m_fGameTime) == 0x2c);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, unKills) == 0x30);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, unDeaths) == 0x31);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, unAssists) == 0x32);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, unLevel) == 0x33);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, unLastHits) == 0x34);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, unDenies) == 0x38);
+        static_assert(offsetof(source2sdk::client::sPlayerSnapshot, unFlags) == 0x3c);
+        
+        static_assert(sizeof(source2sdk::client::sPlayerSnapshot) == 0x40);
     };
-    #pragma pack(pop)
-    
-    static_assert(offsetof(sPlayerSnapshot, m_nItemAbilityID) == 0x0);
-    static_assert(offsetof(sPlayerSnapshot, m_fGameTime) == 0x28);
-    static_assert(offsetof(sPlayerSnapshot, unKills) == 0x2c);
-    static_assert(offsetof(sPlayerSnapshot, unDeaths) == 0x2d);
-    static_assert(offsetof(sPlayerSnapshot, unAssists) == 0x2e);
-    static_assert(offsetof(sPlayerSnapshot, unLevel) == 0x2f);
-    
-    static_assert(sizeof(sPlayerSnapshot) == 0x30);
 };

@@ -1,59 +1,66 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/PetLevelup_Rule_t.hpp"
 #include "source2sdk/server/CDOTA_BaseNPC.hpp"
 #include "source2sdk/server/PetCoopStates_t.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CDOTA_BaseNPC_Hero;
+    };
+};
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CDOTA_Pet_CarriedItem;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CDOTA_BaseNPC_Hero;
-};
-
-namespace source2sdk::server
-{
-    class CDOTA_Pet_CarriedItem;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1860
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class CDOTA_BaseNPC_Pet : public server::CDOTA_BaseNPC
+    namespace server
     {
-    public:
-        // m_hHeroHandle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CDOTA_BaseNPC_Hero> m_hHeroHandle;
-        char m_hHeroHandle[0x4]; // 0x1830        
-        float m_flPetThreatLevel; // 0x1834        
-        bool m_bReadyToPerformCoopTeleport; // 0x1838        
-        bool m_bSupportsCoopTeleport; // 0x1839        
-        [[maybe_unused]] std::uint8_t pad_0x183a[0x2]; // 0x183a
-        server::PetCoopStates_t m_nCoopState; // 0x183c        
-        CUtlString m_strPickupItemModel; // 0x1840        
-        // m_hCarriedItem has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CDOTA_Pet_CarriedItem> m_hCarriedItem;
-        char m_hCarriedItem[0x4]; // 0x1848        
-        int32_t m_nPetLevel; // 0x184c        
-        client::PetLevelup_Rule_t m_nLevelupRule; // 0x1850        
-        [[maybe_unused]] std::uint8_t pad_0x1854[0x4]; // 0x1854
-        int32_t m_nXPCompendiumEventID; // 0x1858        
-        [[maybe_unused]] std::uint8_t pad_0x185c[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x18e8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_BaseNPC_Pet : public source2sdk::server::CDOTA_BaseNPC
+        {
+        public:
+            // m_hHeroHandle has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CDOTA_BaseNPC_Hero> m_hHeroHandle;
+            char m_hHeroHandle[0x4]; // 0x18b8            
+            float m_flPetThreatLevel; // 0x18bc            
+            bool m_bReadyToPerformCoopTeleport; // 0x18c0            
+            bool m_bSupportsCoopTeleport; // 0x18c1            
+            uint8_t _pad18c2[0x2]; // 0x18c2
+            source2sdk::server::PetCoopStates_t m_nCoopState; // 0x18c4            
+            CUtlString m_strPickupItemModel; // 0x18c8            
+            // m_hCarriedItem has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CDOTA_Pet_CarriedItem> m_hCarriedItem;
+            char m_hCarriedItem[0x4]; // 0x18d0            
+            std::int32_t m_nPetLevel; // 0x18d4            
+            source2sdk::client::PetLevelup_Rule_t m_nLevelupRule; // 0x18d8            
+            uint8_t _pad18dc[0x4]; // 0x18dc
+            std::int32_t m_nXPCompendiumEventID; // 0x18e0            
+            uint8_t _pad18e4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_BaseNPC_Pet because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_BaseNPC_Pet) == 0x18e8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_BaseNPC_Pet because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_BaseNPC_Pet) == 0x1860);
 };

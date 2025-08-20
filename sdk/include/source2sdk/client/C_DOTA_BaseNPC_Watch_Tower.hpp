@@ -1,40 +1,43 @@
 #pragma once
-#include "source2sdk/client/C_DOTA_BaseNPC_Building.hpp"
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_DOTA_BaseNPC_Building.hpp"
+#include "source2sdk/client/ParticleIndex_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x18e0
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // 
-    // static metadata: MNetworkVarNames "string_t m_szOutpostName"
-    // static metadata: MNetworkVarNames "string_t m_szInteractAbilityName"
-    #pragma pack(push, 1)
-    class C_DOTA_BaseNPC_Watch_Tower : public client::C_DOTA_BaseNPC_Building
+    namespace client
     {
-    public:
-        client::ParticleIndex_t m_iRangeFX; // 0x18c8        
-        [[maybe_unused]] std::uint8_t pad_0x18cc[0x4]; // 0x18cc
-        // metadata: MNetworkEnable
-        CUtlSymbolLarge m_szOutpostName; // 0x18d0        
-        // metadata: MNetworkEnable
-        CUtlSymbolLarge m_szInteractAbilityName; // 0x18d8        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1aa0
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "string_t m_szOutpostName"
+        // static metadata: MNetworkVarNames "string_t m_szInteractAbilityName"
+        #pragma pack(push, 1)
+        class C_DOTA_BaseNPC_Watch_Tower : public source2sdk::client::C_DOTA_BaseNPC_Building
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_iRangeFX; // 0x1a88            
+            uint8_t _pad1a8c[0x4]; // 0x1a8c
+            // metadata: MNetworkEnable
+            CUtlSymbolLarge m_szOutpostName; // 0x1a90            
+            // metadata: MNetworkEnable
+            CUtlSymbolLarge m_szInteractAbilityName; // 0x1a98            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in C_DOTA_BaseNPC_Watch_Tower because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::C_DOTA_BaseNPC_Watch_Tower) == 0x1aa0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in C_DOTA_BaseNPC_Watch_Tower because it is not a standard-layout class
-    static_assert(sizeof(C_DOTA_BaseNPC_Watch_Tower) == 0x18e0);
 };

@@ -1,36 +1,41 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1730
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Lion_ManaDrain : public client::CDOTA_Buff
+    namespace client
     {
-    public:
-        int32_t mana_per_second; // 0x1708        
-        int32_t break_distance; // 0x170c        
-        float tick_interval; // 0x1710        
-        int32_t movespeed; // 0x1714        
-        int32_t damage_pct; // 0x1718        
-        int32_t ally_pct; // 0x171c        
-        int32_t movespeed_bonus_when_empty_pct; // 0x1720        
-        [[maybe_unused]] std::uint8_t pad_0x1724[0xc];
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18a8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Lion_ManaDrain : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            std::int32_t mana_per_second; // 0x1878            
+            std::int32_t break_distance; // 0x187c            
+            float tick_interval; // 0x1880            
+            std::int32_t movespeed; // 0x1884            
+            std::int32_t damage_pct; // 0x1888            
+            std::int32_t ally_pct; // 0x188c            
+            std::int32_t movespeed_bonus_when_empty_pct; // 0x1890            
+            uint8_t _pad1894[0x14];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Lion_ManaDrain because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CDOTA_Modifier_Lion_ManaDrain) == 0x18a8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Lion_ManaDrain because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Lion_ManaDrain) == 0x1730);
 };

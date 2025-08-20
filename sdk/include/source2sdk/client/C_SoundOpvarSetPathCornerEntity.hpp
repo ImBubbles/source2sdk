@@ -1,29 +1,33 @@
 #pragma once
-#include "source2sdk/client/C_SoundOpvarSetPointEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_SoundOpvarSetPointEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x580
-    // Has VTable
-    // Construct allowed
-    #pragma pack(push, 1)
-    class C_SoundOpvarSetPathCornerEntity : public client::C_SoundOpvarSetPointEntity
+    namespace client
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x608
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_SoundOpvarSetPathCornerEntity : public source2sdk::client::C_SoundOpvarSetPointEntity
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_SoundOpvarSetPathCornerEntity) == 0x608);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_SoundOpvarSetPathCornerEntity) == 0x580);
 };

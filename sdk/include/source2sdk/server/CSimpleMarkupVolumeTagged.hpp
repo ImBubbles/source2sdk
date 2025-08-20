@@ -1,29 +1,33 @@
 #pragma once
-#include "source2sdk/server/CMarkupVolumeTagged.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CMarkupVolumeTagged.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x7f0
-    // Has VTable
-    // Construct allowed
-    #pragma pack(push, 1)
-    class CSimpleMarkupVolumeTagged : public server::CMarkupVolumeTagged
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x830
+        // Has VTable
+        #pragma pack(push, 1)
+        class CSimpleMarkupVolumeTagged : public source2sdk::server::CMarkupVolumeTagged
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CSimpleMarkupVolumeTagged) == 0x830);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CSimpleMarkupVolumeTagged) == 0x7f0);
 };

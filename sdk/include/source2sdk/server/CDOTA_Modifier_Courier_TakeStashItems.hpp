@@ -1,40 +1,49 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1720
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Courier_TakeStashItems : public client::CDOTA_Buff
+    namespace server
     {
-    public:
-        // m_hStashOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hStashOwner;
-        char m_hStashOwner[0x4]; // 0x1708        
-        Vector m_vLocation; // 0x170c        
-        bool m_bTransferAfterTake; // 0x1718        
-        [[maybe_unused]] std::uint8_t pad_0x1719[0x3]; // 0x1719
-        int32_t stash_pickup_distance; // 0x171c        
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x1890
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Courier_TakeStashItems : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            // m_hStashOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hStashOwner;
+            char m_hStashOwner[0x4]; // 0x1878            
+            // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hTarget;
+            char m_hTarget[0x4]; // 0x187c            
+            Vector m_vLocation; // 0x1880            
+            bool m_bTransferAfterTake; // 0x188c            
+            uint8_t _pad188d[0x3];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Courier_TakeStashItems because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_Courier_TakeStashItems) == 0x1890);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Courier_TakeStashItems because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Courier_TakeStashItems) == 0x1720);
 };

@@ -1,40 +1,40 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1730
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Dawnbreaker_BreakOfDawn : public client::CDOTA_Buff
+    namespace client
     {
-    public:
-        float reveal_duration; // 0x1708        
-        float conceal_duration; // 0x170c        
-        float think_interval; // 0x1710        
-        float reveal_linger; // 0x1714        
-        float reveal_radius; // 0x1718        
-        float m_flBonusVisionRadius; // 0x171c        
-        entity2::GameTime_t m_flRevealExpansionTime; // 0x1720        
-        entity2::GameTime_t m_flFullRevealLinger; // 0x1724        
-        entity2::GameTime_t m_flConcealTime; // 0x1728        
-        bool m_bWasDayTime; // 0x172c        
-        [[maybe_unused]] std::uint8_t pad_0x172d[0x3];
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x1890
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Dawnbreaker_BreakOfDawn : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            float max_dmg_pct; // 0x1878            
+            float max_vision_pct; // 0x187c            
+            float m_flDaytimeStart; // 0x1880            
+            float m_flNighttimeStart; // 0x1884            
+            bool m_bDaytimeNormal; // 0x1888            
+            uint8_t _pad1889[0x3]; // 0x1889
+            float day_threshold; // 0x188c            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Dawnbreaker_BreakOfDawn because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CDOTA_Modifier_Dawnbreaker_BreakOfDawn) == 0x1890);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Dawnbreaker_BreakOfDawn because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Dawnbreaker_BreakOfDawn) == 0x1730);
 };

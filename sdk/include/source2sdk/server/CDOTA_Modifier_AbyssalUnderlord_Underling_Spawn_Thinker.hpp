@@ -1,47 +1,54 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1748
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker : public client::CDOTA_Buff
+    namespace server
     {
-    public:
-        float underling_search_radius; // 0x1708        
-        int32_t warrior_health; // 0x170c        
-        int32_t warrior_damage; // 0x1710        
-        int32_t archer_health; // 0x1714        
-        int32_t archer_damage; // 0x1718        
-        int32_t hull_radius; // 0x171c        
-        int32_t gold_bounty; // 0x1720        
-        int32_t xp_bounty; // 0x1724        
-        // m_vecAttackedEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<CHandle<server::CBaseEntity>> m_vecAttackedEnemies;
-        char m_vecAttackedEnemies[0x18]; // 0x1728        
-        bool m_bSpawnsStarted; // 0x1740        
-        [[maybe_unused]] std::uint8_t pad_0x1741[0x3]; // 0x1741
-        int32_t nSpawnsCompleted; // 0x1744        
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18b8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            float underling_search_radius; // 0x1878            
+            std::int32_t warrior_health; // 0x187c            
+            std::int32_t warrior_damage; // 0x1880            
+            std::int32_t archer_health; // 0x1884            
+            std::int32_t archer_damage; // 0x1888            
+            std::int32_t hull_radius; // 0x188c            
+            std::int32_t gold_bounty; // 0x1890            
+            std::int32_t xp_bounty; // 0x1894            
+            // m_vecAttackedEnemies has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_vecAttackedEnemies;
+            char m_vecAttackedEnemies[0x18]; // 0x1898            
+            bool m_bSpawnsStarted; // 0x18b0            
+            uint8_t _pad18b1[0x3]; // 0x18b1
+            std::int32_t nSpawnsCompleted; // 0x18b4            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker) == 0x18b8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_AbyssalUnderlord_Underling_Spawn_Thinker) == 0x1748);
 };

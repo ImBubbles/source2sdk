@@ -1,33 +1,36 @@
 #pragma once
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CDOTA_BaseNPC_Creature.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/ParticleIndex_t.hpp"
+#include "source2sdk/server/CDOTA_BaseNPC_Creature.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x19b8
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class CDOTA_Unit_AghsFort_Creature_DungeonBat : public server::CDOTA_BaseNPC_Creature
+    namespace server
     {
-    public:
-        client::ParticleIndex_t m_nFXAmbient; // 0x19b0        
-        [[maybe_unused]] std::uint8_t pad_0x19b4[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1a40
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Unit_AghsFort_Creature_DungeonBat : public source2sdk::server::CDOTA_BaseNPC_Creature
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_nFXAmbient; // 0x1a38            
+            uint8_t _pad1a3c[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Unit_AghsFort_Creature_DungeonBat because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Unit_AghsFort_Creature_DungeonBat) == 0x1a40);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Unit_AghsFort_Creature_DungeonBat because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Unit_AghsFort_Creature_DungeonBat) == 0x19b8);
 };

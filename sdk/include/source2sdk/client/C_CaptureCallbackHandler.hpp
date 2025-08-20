@@ -1,31 +1,34 @@
 #pragma once
-#include "source2sdk/client/C_BaseEntity.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_BaseEntity.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x568
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class C_CaptureCallbackHandler : public client::C_BaseEntity
+    namespace client
     {
-    public:
-        [[maybe_unused]] std::uint8_t pad_0x560[0x8];
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x5f0
+        // Has VTable
+        #pragma pack(push, 1)
+        class C_CaptureCallbackHandler : public source2sdk::client::C_BaseEntity
+        {
+        public:
+            uint8_t _pad05e8[0x8];
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::client::C_CaptureCallbackHandler) == 0x5f0);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(C_CaptureCallbackHandler) == 0x568);
 };

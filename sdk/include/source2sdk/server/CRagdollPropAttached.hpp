@@ -1,48 +1,52 @@
 #pragma once
-#include "source2sdk/server/CRagdollProp.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CRagdollProp.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0xbd8
-    // Has VTable
-    // Construct allowed
-    // 
-    // static metadata: MNetworkVarNames "uint32 m_boneIndexAttached"
-    // static metadata: MNetworkVarNames "uint32 m_ragdollAttachedObjectIndex"
-    // static metadata: MNetworkVarNames "Vector m_attachmentPointBoneSpace"
-    // static metadata: MNetworkVarNames "Vector m_attachmentPointRagdollSpace"
-    #pragma pack(push, 1)
-    class CRagdollPropAttached : public server::CRagdollProp
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        uint32_t m_boneIndexAttached; // 0xb98        
-        // metadata: MNetworkEnable
-        uint32_t m_ragdollAttachedObjectIndex; // 0xb9c        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkEncoder "coord"
-        Vector m_attachmentPointBoneSpace; // 0xba0        
-        // metadata: MNetworkEnable
-        // metadata: MNetworkEncoder "coord"
-        Vector m_attachmentPointRagdollSpace; // 0xbac        
-        bool m_bShouldDetach; // 0xbb8        
-        [[maybe_unused]] std::uint8_t pad_0xbb9[0xf]; // 0xbb9
-        bool m_bShouldDeleteAttachedActivationRecord; // 0xbc8        
-        [[maybe_unused]] std::uint8_t pad_0xbc9[0xf];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0xc90
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "uint32 m_boneIndexAttached"
+        // static metadata: MNetworkVarNames "uint32 m_ragdollAttachedObjectIndex"
+        // static metadata: MNetworkVarNames "Vector m_attachmentPointBoneSpace"
+        // static metadata: MNetworkVarNames "Vector m_attachmentPointRagdollSpace"
+        #pragma pack(push, 1)
+        class CRagdollPropAttached : public source2sdk::server::CRagdollProp
+        {
+        public:
+            // metadata: MNetworkEnable
+            std::uint32_t m_boneIndexAttached; // 0xc50            
+            // metadata: MNetworkEnable
+            std::uint32_t m_ragdollAttachedObjectIndex; // 0xc54            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkEncoder "coord"
+            Vector m_attachmentPointBoneSpace; // 0xc58            
+            // metadata: MNetworkEnable
+            // metadata: MNetworkEncoder "coord"
+            Vector m_attachmentPointRagdollSpace; // 0xc64            
+            bool m_bShouldDetach; // 0xc70            
+            uint8_t _pad0c71[0xf]; // 0xc71
+            bool m_bShouldDeleteAttachedActivationRecord; // 0xc80            
+            uint8_t _pad0c81[0xf];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CRagdollPropAttached because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CRagdollPropAttached) == 0xc90);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CRagdollPropAttached because it is not a standard-layout class
-    static_assert(sizeof(CRagdollPropAttached) == 0xbd8);
 };

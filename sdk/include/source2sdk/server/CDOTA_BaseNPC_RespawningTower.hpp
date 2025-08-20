@@ -1,29 +1,33 @@
 #pragma once
-#include "source2sdk/server/CDOTA_BaseNPC_Tower.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CDOTA_BaseNPC_Tower.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1978
-    // Has VTable
-    // Construct allowed
-    #pragma pack(push, 1)
-    class CDOTA_BaseNPC_RespawningTower : public server::CDOTA_BaseNPC_Tower
+    namespace server
     {
-    public:
-        // No schema binary for binding
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1a08
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_BaseNPC_RespawningTower : public source2sdk::server::CDOTA_BaseNPC_Tower
+        {
+        public:
+            // No schema binary for binding
+        };
+        #pragma pack(pop)
+        
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_BaseNPC_RespawningTower) == 0x1a08);
     };
-    #pragma pack(pop)
-    
-    static_assert(sizeof(CDOTA_BaseNPC_RespawningTower) == 0x1978);
 };

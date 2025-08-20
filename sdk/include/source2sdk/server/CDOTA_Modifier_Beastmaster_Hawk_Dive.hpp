@@ -1,50 +1,57 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1750
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Beastmaster_Hawk_Dive : public client::CDOTA_Buff
+    namespace server
     {
-    public:
-        // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hTarget;
-        char m_hTarget[0x4]; // 0x1708        
-        float m_flPredictedTotalTime; // 0x170c        
-        Vector m_vStartPosition; // 0x1710        
-        float m_flCurrentTimeHoriz; // 0x171c        
-        float m_flCurrentTimeVert; // 0x1720        
-        bool m_bHorizontalMotionInterrupted; // 0x1724        
-        bool m_bDamageApplied; // 0x1725        
-        [[maybe_unused]] std::uint8_t pad_0x1726[0x2]; // 0x1726
-        Vector m_vHorizontalVelocity; // 0x1728        
-        Vector m_vLastKnownTargetPosition; // 0x1734        
-        float m_flInitialVelocityZ; // 0x1740        
-        bool m_bDone; // 0x1744        
-        [[maybe_unused]] std::uint8_t pad_0x1745[0x3]; // 0x1745
-        int32_t dive_damage; // 0x1748        
-        float dive_root_duration; // 0x174c        
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18c0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Beastmaster_Hawk_Dive : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            // m_hTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hTarget;
+            char m_hTarget[0x4]; // 0x1878            
+            float m_flPredictedTotalTime; // 0x187c            
+            Vector m_vStartPosition; // 0x1880            
+            float m_flCurrentTimeHoriz; // 0x188c            
+            float m_flCurrentTimeVert; // 0x1890            
+            bool m_bHorizontalMotionInterrupted; // 0x1894            
+            bool m_bDamageApplied; // 0x1895            
+            uint8_t _pad1896[0x2]; // 0x1896
+            Vector m_vHorizontalVelocity; // 0x1898            
+            Vector m_vLastKnownTargetPosition; // 0x18a4            
+            float m_flInitialVelocityZ; // 0x18b0            
+            bool m_bDone; // 0x18b4            
+            uint8_t _pad18b5[0x3]; // 0x18b5
+            std::int32_t dive_damage; // 0x18b8            
+            float dive_root_duration; // 0x18bc            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Beastmaster_Hawk_Dive because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_Beastmaster_Hawk_Dive) == 0x18c0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Beastmaster_Hawk_Dive because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Beastmaster_Hawk_Dive) == 0x1750);
 };

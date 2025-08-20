@@ -1,5 +1,6 @@
 #pragma once
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
 
@@ -8,30 +9,30 @@
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::modellib
+namespace source2sdk
 {
-    // Registered alignment: 0x4
-    // Alignment: 0x4
-    // Standard-layout class: true
-    // Size: 0x10
-    // Has Trivial Constructor
-    // Has Trivial Destructor
-    // Construct allowed
-    // 
-    // static metadata: MGetKV3ClassDefaults
-    #pragma pack(push, 1)
-    class CDrawCullingData
+    namespace modellib
     {
-    public:
-        Vector m_vConeApex; // 0x0        
-        int8_t m_ConeAxis[3]; // 0xc        
-        int8_t m_ConeCutoff; // 0xf        
+        // Registered alignment: 0x1
+        // Alignment: 0x1
+        // Standard-layout class: true
+        // Size: 0x4
+        // Has Trivial Constructor
+        // Has Trivial Destructor
+        // 
+        // static metadata: MGetKV3ClassDefaults
+        #pragma pack(push, 1)
+        class CDrawCullingData
+        {
+        public:
+            std::int8_t m_ConeAxis[3]; // 0x0            
+            std::int8_t m_ConeCutoff; // 0x3            
+        };
+        #pragma pack(pop)
+        
+        static_assert(offsetof(source2sdk::modellib::CDrawCullingData, m_ConeAxis) == 0x0);
+        static_assert(offsetof(source2sdk::modellib::CDrawCullingData, m_ConeCutoff) == 0x3);
+        
+        static_assert(sizeof(source2sdk::modellib::CDrawCullingData) == 0x4);
     };
-    #pragma pack(pop)
-    
-    static_assert(offsetof(CDrawCullingData, m_vConeApex) == 0x0);
-    static_assert(offsetof(CDrawCullingData, m_ConeAxis) == 0xc);
-    static_assert(offsetof(CDrawCullingData, m_ConeCutoff) == 0xf);
-    
-    static_assert(sizeof(CDrawCullingData) == 0x10);
 };

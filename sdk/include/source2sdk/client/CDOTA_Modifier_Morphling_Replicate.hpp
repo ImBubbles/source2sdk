@@ -1,62 +1,71 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/CDOTA_Buff.hpp"
 #include "source2sdk/client/HeroFacetKey_t.hpp"
 #include "source2sdk/client/HeroID_t.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_BaseEntity;
+    };
+};
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_EconItemView;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    class C_BaseEntity;
-};
-
-namespace source2sdk::client
-{
-    class C_EconItemView;
-};
-
-namespace source2sdk::client
-{
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x17a0
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Morphling_Replicate : public client::CDOTA_Buff
+    namespace client
     {
-    public:
-        // m_hTinyTreeWearable has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<client::C_BaseEntity> m_hTinyTreeWearable;
-        char m_hTinyTreeWearable[0x4]; // 0x1708        
-        float m_flBaseAttackRange; // 0x170c        
-        float m_flBaseMovementSpeed; // 0x1710        
-        [[maybe_unused]] std::uint8_t pad_0x1714[0x4]; // 0x1714
-        CUtlSymbolLarge m_iszModelName; // 0x1718        
-        CUtlSymbolLarge m_iszProjectileName; // 0x1720        
-        client::HeroFacetKey_t m_nFacetKey; // 0x1728        
-        CUtlSymbolLarge m_iszOriginalModel; // 0x1730        
-        client::HeroID_t m_nCopiedHeroID; // 0x1738        
-        float m_fOriginalModelScale; // 0x173c        
-        // m_vecOriginalItems has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<client::C_EconItemView*> m_vecOriginalItems;
-        char m_vecOriginalItems[0x18]; // 0x1740        
-        [[maybe_unused]] std::uint8_t pad_0x1758[0x30]; // 0x1758
-        float m_flOriginalStr; // 0x1788        
-        float m_flOriginalAgi; // 0x178c        
-        float m_flOriginalInt; // 0x1790        
-        int32_t m_iOriginalAttackCapability; // 0x1794        
-        float m_flOriginalHealthPercentage; // 0x1798        
-        float m_flOriginalManaPercentage; // 0x179c        
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x1910
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Morphling_Replicate : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            // m_hTinyTreeWearable has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::client::C_BaseEntity> m_hTinyTreeWearable;
+            char m_hTinyTreeWearable[0x4]; // 0x1878            
+            float m_flBaseAttackRange; // 0x187c            
+            float m_flBaseMovementSpeed; // 0x1880            
+            uint8_t _pad1884[0x4]; // 0x1884
+            CUtlSymbolLarge m_iszModelName; // 0x1888            
+            CUtlSymbolLarge m_iszProjectileName; // 0x1890            
+            source2sdk::client::HeroFacetKey_t m_nFacetKey; // 0x1898            
+            CUtlSymbolLarge m_iszOriginalModel; // 0x18a0            
+            source2sdk::client::HeroID_t m_nCopiedHeroID; // 0x18a8            
+            float m_fOriginalModelScale; // 0x18ac            
+            // m_vecOriginalItems has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<source2sdk::client::C_EconItemView*> m_vecOriginalItems;
+            char m_vecOriginalItems[0x18]; // 0x18b0            
+            uint8_t _pad18c8[0x30]; // 0x18c8
+            float m_flOriginalStr; // 0x18f8            
+            float m_flOriginalAgi; // 0x18fc            
+            float m_flOriginalInt; // 0x1900            
+            std::int32_t m_iOriginalAttackCapability; // 0x1904            
+            float m_flOriginalHealthPercentage; // 0x1908            
+            float m_flOriginalManaPercentage; // 0x190c            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Morphling_Replicate because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CDOTA_Modifier_Morphling_Replicate) == 0x1910);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Morphling_Replicate because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Morphling_Replicate) == 0x17a0);
 };

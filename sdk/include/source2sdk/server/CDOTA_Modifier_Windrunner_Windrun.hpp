@@ -1,35 +1,40 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1720
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Windrunner_Windrun : public client::CDOTA_Buff
+    namespace server
     {
-    public:
-        float radius; // 0x1708        
-        int32_t scepter_radius; // 0x170c        
-        int32_t movespeed_bonus_pct; // 0x1710        
-        bool m_bDispellable; // 0x1714        
-        [[maybe_unused]] std::uint8_t pad_0x1715[0x3]; // 0x1715
-        int32_t physical_damage_pct; // 0x1718        
-        [[maybe_unused]] std::uint8_t pad_0x171c[0x4];
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x1890
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Windrunner_Windrun : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            float radius; // 0x1878            
+            std::int32_t scepter_radius; // 0x187c            
+            std::int32_t movespeed_bonus_pct; // 0x1880            
+            bool m_bDispellable; // 0x1884            
+            uint8_t _pad1885[0x3]; // 0x1885
+            std::int32_t physical_damage_pct; // 0x1888            
+            uint8_t _pad188c[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Windrunner_Windrun because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_Windrunner_Windrun) == 0x1890);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Windrunner_Windrun because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Windrunner_Windrun) == 0x1720);
 };

@@ -1,33 +1,36 @@
 #pragma once
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CDOTA_BaseNPC_Creep.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/ParticleIndex_t.hpp"
+#include "source2sdk/server/CDOTA_BaseNPC_Creep.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1868
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class CDOTA_Unit_Brewmaster_PrimalVoid : public server::CDOTA_BaseNPC_Creep
+    namespace server
     {
-    public:
-        client::ParticleIndex_t m_nFXAmbient; // 0x1860        
-        [[maybe_unused]] std::uint8_t pad_0x1864[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x18f0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Unit_Brewmaster_PrimalVoid : public source2sdk::server::CDOTA_BaseNPC_Creep
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_nFXAmbient; // 0x18e8            
+            uint8_t _pad18ec[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Unit_Brewmaster_PrimalVoid because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Unit_Brewmaster_PrimalVoid) == 0x18f0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Unit_Brewmaster_PrimalVoid because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Unit_Brewmaster_PrimalVoid) == 0x1868);
 };

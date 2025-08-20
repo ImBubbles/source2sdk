@@ -1,44 +1,49 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/entity2/GameTime_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
+#include "source2sdk/entity2/GameTime_t.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1770
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Luna_MoonGlaive_Shield : public client::CDOTA_Buff
+    namespace server
     {
-    public:
-        int32_t rotating_glaives; // 0x1708        
-        float rotating_glaives_hit_radius; // 0x170c        
-        float rotating_glaives_speed; // 0x1710        
-        float rotating_glaives_collision_damage; // 0x1714        
-        float rotating_glaives_movement_radius; // 0x1718        
-        float rotating_glaives_damage_reduction; // 0x171c        
-        int32_t unclamp_max_radius; // 0x1720        
-        float rotating_glaives_duration; // 0x1724        
-        float m_flCurRotation; // 0x1728        
-        float m_flCurRadius; // 0x172c        
-        float m_flCurRadiusUnclamped; // 0x1730        
-        float m_flSecondsPerRotation; // 0x1734        
-        float m_flMaxRadius; // 0x1738        
-        entity2::GameTime_t m_flStartTime; // 0x173c        
-        [[maybe_unused]] std::uint8_t pad_0x1740[0x30];
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18e0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Luna_MoonGlaive_Shield : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            std::int32_t rotating_glaives; // 0x1878            
+            float rotating_glaives_hit_radius; // 0x187c            
+            float rotating_glaives_speed; // 0x1880            
+            float rotating_glaives_collision_damage; // 0x1884            
+            float rotating_glaives_movement_radius; // 0x1888            
+            float rotating_glaives_movement_radius_expand_speed_scale; // 0x188c            
+            float rotating_glaives_damage_reduction; // 0x1890            
+            float rotating_glaives_duration; // 0x1894            
+            float m_flCurRotation; // 0x1898            
+            float m_flCurRadius; // 0x189c            
+            float m_flCurRadiusUnclamped; // 0x18a0            
+            float m_flSecondsPerRotation; // 0x18a4            
+            float m_flMaxRadius; // 0x18a8            
+            source2sdk::entity2::GameTime_t m_flStartTime; // 0x18ac            
+            uint8_t _pad18b0[0x30];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Luna_MoonGlaive_Shield because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_Luna_MoonGlaive_Shield) == 0x18e0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Luna_MoonGlaive_Shield because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Luna_MoonGlaive_Shield) == 0x1770);
 };

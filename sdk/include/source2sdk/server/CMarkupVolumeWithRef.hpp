@@ -1,34 +1,39 @@
 #pragma once
-#include "source2sdk/server/CMarkupVolumeTagged.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CMarkupVolumeTagged.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x808
-    // Has VTable
-    // Construct allowed
-    #pragma pack(push, 1)
-    class CMarkupVolumeWithRef : public server::CMarkupVolumeTagged
+    namespace server
     {
-    public:
-        bool m_bUseRef; // 0x7f0        
-        [[maybe_unused]] std::uint8_t pad_0x7f1[0x3]; // 0x7f1
-        Vector m_vRefPos; // 0x7f4        
-        float m_flRefDot; // 0x800        
-        [[maybe_unused]] std::uint8_t pad_0x804[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x858
+        // Has VTable
+        #pragma pack(push, 1)
+        class CMarkupVolumeWithRef : public source2sdk::server::CMarkupVolumeTagged
+        {
+        public:
+            uint8_t _pad0830[0x8]; // 0x830
+            bool m_bUseRef; // 0x838            
+            uint8_t _pad0839[0x3]; // 0x839
+            Vector m_vRefPosEntitySpace; // 0x83c            
+            Vector m_vRefPosWorldSpace; // 0x848            
+            float m_flRefDot; // 0x854            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CMarkupVolumeWithRef because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CMarkupVolumeWithRef) == 0x858);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CMarkupVolumeWithRef because it is not a standard-layout class
-    static_assert(sizeof(CMarkupVolumeWithRef) == 0x808);
 };

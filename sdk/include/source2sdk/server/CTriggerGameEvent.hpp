@@ -1,43 +1,47 @@
 #pragma once
-#include "source2sdk/server/CBaseTrigger.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/server/CBaseTrigger.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x998
-    // Has VTable
-    // Construct allowed
-    // 
-    // static metadata: MNetworkVarNames "CUtlString m_strStartTouchEventName"
-    // static metadata: MNetworkVarNames "CUtlString m_strEndTouchEventName"
-    // static metadata: MNetworkVarNames "CUtlString m_strTriggerID"
-    #pragma pack(push, 1)
-    class CTriggerGameEvent : public server::CBaseTrigger
+    namespace server
     {
-    public:
-        // metadata: MNetworkEnable
-        CUtlString m_strStartTouchEventName; // 0x980        
-        // metadata: MNetworkEnable
-        CUtlString m_strEndTouchEventName; // 0x988        
-        // metadata: MNetworkEnable
-        CUtlString m_strTriggerID; // 0x990        
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x9d8
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "CUtlString m_strStartTouchEventName"
+        // static metadata: MNetworkVarNames "CUtlString m_strEndTouchEventName"
+        // static metadata: MNetworkVarNames "CUtlString m_strTriggerID"
+        #pragma pack(push, 1)
+        class CTriggerGameEvent : public source2sdk::server::CBaseTrigger
+        {
+        public:
+            // metadata: MNetworkEnable
+            CUtlString m_strStartTouchEventName; // 0x9c0            
+            // metadata: MNetworkEnable
+            CUtlString m_strEndTouchEventName; // 0x9c8            
+            // metadata: MNetworkEnable
+            CUtlString m_strTriggerID; // 0x9d0            
+            
+            // Datamap fields:
+            // CUtlSymbolLarge InputSetStartTouchEvent; // 0x0
+            // CUtlSymbolLarge InputSetEndTouchEvent; // 0x0
+        };
+        #pragma pack(pop)
         
-        // Datamap fields:
-        // CUtlSymbolLarge InputSetStartTouchEvent; // 0x0
-        // CUtlSymbolLarge InputSetEndTouchEvent; // 0x0
+        // Cannot assert offsets of fields in CTriggerGameEvent because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CTriggerGameEvent) == 0x9d8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CTriggerGameEvent because it is not a standard-layout class
-    static_assert(sizeof(CTriggerGameEvent) == 0x998);
 };

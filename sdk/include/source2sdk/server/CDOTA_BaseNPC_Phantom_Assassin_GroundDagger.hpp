@@ -1,36 +1,36 @@
 #pragma once
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/server/CDOTA_BaseNPC_Additive.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/ParticleIndex_t.hpp"
+#include "source2sdk/server/CDOTA_BaseNPC_Additive.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1838
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    #pragma pack(push, 1)
-    class CDOTA_BaseNPC_Phantom_Assassin_GroundDagger : public server::CDOTA_BaseNPC_Additive
+    namespace server
     {
-    public:
-        client::ParticleIndex_t m_nFXIndex; // 0x1830        
-        [[maybe_unused]] std::uint8_t pad_0x1834[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x18c0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_BaseNPC_Phantom_Assassin_GroundDagger : public source2sdk::server::CDOTA_BaseNPC_Additive
+        {
+        public:
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0x18b8            
+            uint8_t _pad18bc[0x4];
+        };
+        #pragma pack(pop)
         
-        // Static fields:
-        static char* &Get_PARTICLE_SPAWN() {return *reinterpret_cast<char**>(interfaces::g_schema->FindTypeScopeForModule("server.dll")->FindDeclaredClass("CDOTA_BaseNPC_Phantom_Assassin_GroundDagger")->GetStaticFields()[0]->m_pInstance);};
+        // Cannot assert offsets of fields in CDOTA_BaseNPC_Phantom_Assassin_GroundDagger because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_BaseNPC_Phantom_Assassin_GroundDagger) == 0x18c0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_BaseNPC_Phantom_Assassin_GroundDagger because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_BaseNPC_Phantom_Assassin_GroundDagger) == 0x1838);
 };

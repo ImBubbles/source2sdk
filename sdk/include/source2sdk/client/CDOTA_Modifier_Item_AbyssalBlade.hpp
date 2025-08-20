@@ -1,45 +1,46 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff_Item.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff_Item.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1758
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Item_AbyssalBlade : public client::CDOTA_Buff_Item
+    namespace client
     {
-    public:
-        int32_t bonus_strength; // 0x1708        
-        int32_t bash_chance_melee; // 0x170c        
-        int32_t bash_chance_ranged; // 0x1710        
-        float bash_duration; // 0x1714        
-        float bash_cooldown; // 0x1718        
-        int32_t bonus_chance_damage; // 0x171c        
-        int32_t bonus_damage; // 0x1720        
-        [[maybe_unused]] std::uint8_t pad_0x1724[0x4]; // 0x1724
-        // m_InFlightAttackRecords has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<int16_t> m_InFlightAttackRecords;
-        char m_InFlightAttackRecords[0x18]; // 0x1728        
-        int32_t bonus_health; // 0x1740        
-        float bonus_health_regen; // 0x1744        
-        int32_t block_damage_ranged; // 0x1748        
-        int32_t block_damage_melee; // 0x174c        
-        int32_t block_chance; // 0x1750        
-        [[maybe_unused]] std::uint8_t pad_0x1754[0x4];
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18b8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Item_AbyssalBlade : public source2sdk::client::CDOTA_Buff_Item
+        {
+        public:
+            std::int32_t bonus_strength; // 0x1878            
+            std::int32_t bash_chance_melee; // 0x187c            
+            std::int32_t bash_chance_ranged; // 0x1880            
+            float bash_duration; // 0x1884            
+            float bash_cooldown; // 0x1888            
+            std::int32_t bonus_chance_damage; // 0x188c            
+            std::int32_t bonus_damage; // 0x1890            
+            uint8_t _pad1894[0x4]; // 0x1894
+            // m_InFlightAttackRecords has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<std::int16_t> m_InFlightAttackRecords;
+            char m_InFlightAttackRecords[0x18]; // 0x1898            
+            std::int32_t hp_regen_amp; // 0x18b0            
+            std::int32_t slow_resistance; // 0x18b4            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Item_AbyssalBlade because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CDOTA_Modifier_Item_AbyssalBlade) == 0x18b8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Item_AbyssalBlade because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Item_AbyssalBlade) == 0x1758);
 };

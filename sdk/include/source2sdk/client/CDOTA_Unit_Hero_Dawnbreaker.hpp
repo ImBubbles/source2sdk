@@ -1,35 +1,38 @@
 #pragma once
-#include "source2sdk/client/C_DOTA_BaseNPC_Hero.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/C_DOTA_BaseNPC_Hero.hpp"
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    // Registered alignment: 0x8
-    // Alignment: 0x8
-    // Standard-layout class: false
-    // Size: 0x1be8
-    // Has VTable
-    // Construct allowed
-    // MClassHasEntityLimitedDataDesc
-    // 
-    // static metadata: MNetworkVarNames "int m_nAttackState"
-    #pragma pack(push, 1)
-    class CDOTA_Unit_Hero_Dawnbreaker : public client::C_DOTA_BaseNPC_Hero
+    namespace client
     {
-    public:
-        // metadata: MNetworkEnable
-        int32_t m_nAttackState; // 0x1be0        
-        [[maybe_unused]] std::uint8_t pad_0x1be4[0x4];
+        // Registered alignment: 0x8
+        // Alignment: 0x8
+        // Standard-layout class: false
+        // Size: 0x1db8
+        // Has VTable
+        // 
+        // static metadata: MNetworkVarNames "int m_nAttackState"
+        #pragma pack(push, 1)
+        class CDOTA_Unit_Hero_Dawnbreaker : public source2sdk::client::C_DOTA_BaseNPC_Hero
+        {
+        public:
+            // metadata: MNetworkEnable
+            std::int32_t m_nAttackState; // 0x1db0            
+            uint8_t _pad1db4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Unit_Hero_Dawnbreaker because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CDOTA_Unit_Hero_Dawnbreaker) == 0x1db8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Unit_Hero_Dawnbreaker because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Unit_Hero_Dawnbreaker) == 0x1be8);
 };

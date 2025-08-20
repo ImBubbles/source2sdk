@@ -1,52 +1,59 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1748
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Visage_SummonFamiliars_In_Formation : public client::CDOTA_Buff
+    namespace server
     {
-    public:
-        // m_hOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hOwner;
-        char m_hOwner[0x4]; // 0x1708        
-        // m_hCurrentTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<server::CBaseEntity> m_hCurrentTarget;
-        char m_hCurrentTarget[0x4]; // 0x170c        
-        int32_t familiar_index; // 0x1710        
-        int32_t back_distance; // 0x1714        
-        int32_t side_distance; // 0x1718        
-        Vector m_vecDesiredPosition; // 0x171c        
-        int32_t max_distance; // 0x1728        
-        int32_t return_distance; // 0x172c        
-        int32_t attack_range_buffer; // 0x1730        
-        float recall_duration; // 0x1734        
-        bool m_bTeleporting; // 0x1738        
-        [[maybe_unused]] std::uint8_t pad_0x1739[0x3]; // 0x1739
-        int32_t familiar_attack_range; // 0x173c        
-        int32_t additional_target_search_radius; // 0x1740        
-        [[maybe_unused]] std::uint8_t pad_0x1744[0x4];
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18b8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Visage_SummonFamiliars_In_Formation : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            // m_hOwner has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hOwner;
+            char m_hOwner[0x4]; // 0x1878            
+            // m_hCurrentTarget has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::server::CBaseEntity> m_hCurrentTarget;
+            char m_hCurrentTarget[0x4]; // 0x187c            
+            std::int32_t familiar_index; // 0x1880            
+            std::int32_t back_distance; // 0x1884            
+            std::int32_t side_distance; // 0x1888            
+            Vector m_vecDesiredPosition; // 0x188c            
+            float max_distance; // 0x1898            
+            float return_distance; // 0x189c            
+            float attack_range_buffer; // 0x18a0            
+            float recall_duration; // 0x18a4            
+            bool m_bTeleporting; // 0x18a8            
+            uint8_t _pad18a9[0x3]; // 0x18a9
+            std::int32_t familiar_attack_range; // 0x18ac            
+            float additional_target_search_radius; // 0x18b0            
+            uint8_t _pad18b4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Visage_SummonFamiliars_In_Formation because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_Visage_SummonFamiliars_In_Formation) == 0x18b8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Visage_SummonFamiliars_In_Formation because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Visage_SummonFamiliars_In_Formation) == 0x1748);
 };

@@ -1,50 +1,57 @@
 #pragma once
+
+#include "source2sdk/source2gen/source2gen.hpp"
+#include <cstddef>
+#include <cstdint>
 #include "source2sdk/client/CDOTA_Buff.hpp"
 #include "source2sdk/client/ParticleIndex_t.hpp"
 #include "source2sdk/entity2/GameTime_t.hpp"
 #include "source2sdk/server/CountdownTimer.hpp"
-#include "source2sdk/source2gen.hpp"
-#include <cstddef>
-#include <cstdint>
+namespace source2sdk
+{
+    namespace server
+    {
+        struct CBaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: server
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::server
+namespace source2sdk
 {
-    class CBaseEntity;
-};
-
-namespace source2sdk::server
-{
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1760
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker : public client::CDOTA_Buff
+    namespace server
     {
-    public:
-        float m_fDamage; // 0x1708        
-        float m_fLastRadius; // 0x170c        
-        float m_fCurRadius; // 0x1710        
-        entity2::GameTime_t m_fLastThink; // 0x1714        
-        bool m_bContracting; // 0x1718        
-        [[maybe_unused]] std::uint8_t pad_0x1719[0x7]; // 0x1719
-        server::CountdownTimer m_ViewerTimer; // 0x1720        
-        client::ParticleIndex_t m_nFXIndex; // 0x1738        
-        [[maybe_unused]] std::uint8_t pad_0x173c[0x4]; // 0x173c
-        // m_EntitiesHit has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CUtlVector<CHandle<server::CBaseEntity>> m_EntitiesHit;
-        char m_EntitiesHit[0x18]; // 0x1740        
-        int32_t speed; // 0x1758        
-        int32_t radius; // 0x175c        
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18d0
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            float m_fDamage; // 0x1878            
+            float m_fLastRadius; // 0x187c            
+            float m_fCurRadius; // 0x1880            
+            source2sdk::entity2::GameTime_t m_fLastThink; // 0x1884            
+            bool m_bContracting; // 0x1888            
+            uint8_t _pad1889[0x7]; // 0x1889
+            source2sdk::server::CountdownTimer m_ViewerTimer; // 0x1890            
+            source2sdk::client::ParticleIndex_t m_nFXIndex; // 0x18a8            
+            uint8_t _pad18ac[0x4]; // 0x18ac
+            // m_EntitiesHit has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CUtlVector<CHandle<source2sdk::server::CBaseEntity>> m_EntitiesHit;
+            char m_EntitiesHit[0x18]; // 0x18b0            
+            std::int32_t speed; // 0x18c8            
+            std::int32_t radius; // 0x18cc            
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::server::CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker) == 0x18d0);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_AghsFort_Spectre_ActiveDispersion_Thinker) == 0x1760);
 };

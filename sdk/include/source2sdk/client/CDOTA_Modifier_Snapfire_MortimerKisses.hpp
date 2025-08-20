@@ -1,60 +1,67 @@
 #pragma once
-#include "source2sdk/client/CDOTA_Buff.hpp"
-#include "source2sdk/client/ParticleIndex_t.hpp"
-#include "source2sdk/source2gen.hpp"
+
+#include "source2sdk/source2gen/source2gen.hpp"
 #include <cstddef>
 #include <cstdint>
+#include "source2sdk/client/CDOTA_Buff.hpp"
+#include "source2sdk/client/ParticleIndex_t.hpp"
+namespace source2sdk
+{
+    namespace client
+    {
+        struct C_BaseEntity;
+    };
+};
 
 // /////////////////////////////////////////////////////////////
 // Module: client
 // Created using source2gen - github.com/neverlosecc/source2gen
 // /////////////////////////////////////////////////////////////
 
-namespace source2sdk::client
+namespace source2sdk
 {
-    class C_BaseEntity;
-};
-
-namespace source2sdk::client
-{
-    // Registered alignment: unknown
-    // Alignment: unknown
-    // Standard-layout class: false
-    // Size: 0x1768
-    // Has VTable
-    #pragma pack(push, 1)
-    class CDOTA_Modifier_Snapfire_MortimerKisses : public client::CDOTA_Buff
+    namespace client
     {
-    public:
-        float m_fIntervalPerRocket; // 0x1708        
-        float m_flFacingTarget; // 0x170c        
-        client::ParticleIndex_t m_nBeamFXIndex; // 0x1710        
-        // m_hBeamEnd has a template type with potentially unknown template parameters. You can try uncommenting the field below.
-        // CHandle<client::C_BaseEntity> m_hBeamEnd;
-        char m_hBeamEnd[0x4]; // 0x1714        
-        float m_flCurDistance; // 0x1718        
-        Vector m_vAimTarget; // 0x171c        
-        float m_fLastTurnAmount; // 0x1728        
-        int32_t m_nProjectilesLaunched; // 0x172c        
-        bool m_bDestroyOnNextThink; // 0x1730        
-        [[maybe_unused]] std::uint8_t pad_0x1731[0x3]; // 0x1731
-        int32_t m_nProjectilesToLaunch; // 0x1734        
-        bool m_bHasProjectileTalent; // 0x1738        
-        [[maybe_unused]] std::uint8_t pad_0x1739[0x3]; // 0x1739
-        int32_t projectile_count; // 0x173c        
-        int32_t projectile_speed; // 0x1740        
-        int32_t projectile_width; // 0x1744        
-        int32_t projectile_vision; // 0x1748        
-        float turn_rate; // 0x174c        
-        int32_t min_range; // 0x1750        
-        int32_t impact_radius; // 0x1754        
-        float min_lob_travel_time; // 0x1758        
-        float max_lob_travel_time; // 0x175c        
-        float delay_after_last_projectile; // 0x1760        
-        [[maybe_unused]] std::uint8_t pad_0x1764[0x4];
+        // Registered alignment: unknown
+        // Alignment: unknown
+        // Standard-layout class: false
+        // Size: 0x18d8
+        // Has VTable
+        #pragma pack(push, 1)
+        class CDOTA_Modifier_Snapfire_MortimerKisses : public source2sdk::client::CDOTA_Buff
+        {
+        public:
+            float m_fIntervalPerRocket; // 0x1878            
+            float m_flFacingTarget; // 0x187c            
+            source2sdk::client::ParticleIndex_t m_nBeamFXIndex; // 0x1880            
+            // m_hBeamEnd has a template type with potentially unknown template parameters. You can try uncommenting the field below.
+            // CHandle<source2sdk::client::C_BaseEntity> m_hBeamEnd;
+            char m_hBeamEnd[0x4]; // 0x1884            
+            float m_flCurDistance; // 0x1888            
+            Vector m_vAimTarget; // 0x188c            
+            float m_fLastTurnAmount; // 0x1898            
+            std::int32_t m_nProjectilesLaunched; // 0x189c            
+            bool m_bDestroyOnNextThink; // 0x18a0            
+            uint8_t _pad18a1[0x3]; // 0x18a1
+            std::int32_t m_nProjectilesToLaunch; // 0x18a4            
+            bool has_bonus_projectile; // 0x18a8            
+            uint8_t _pad18a9[0x3]; // 0x18a9
+            std::int32_t projectile_count; // 0x18ac            
+            float projectile_speed; // 0x18b0            
+            float projectile_width; // 0x18b4            
+            float projectile_vision; // 0x18b8            
+            float turn_rate; // 0x18bc            
+            float min_range; // 0x18c0            
+            float impact_radius; // 0x18c4            
+            float min_lob_travel_time; // 0x18c8            
+            float max_lob_travel_time; // 0x18cc            
+            float delay_after_last_projectile; // 0x18d0            
+            uint8_t _pad18d4[0x4];
+        };
+        #pragma pack(pop)
+        
+        // Cannot assert offsets of fields in CDOTA_Modifier_Snapfire_MortimerKisses because it is not a standard-layout class
+        
+        static_assert(sizeof(source2sdk::client::CDOTA_Modifier_Snapfire_MortimerKisses) == 0x18d8);
     };
-    #pragma pack(pop)
-    
-    // Cannot assert offsets of fields in CDOTA_Modifier_Snapfire_MortimerKisses because it is not a standard-layout class
-    static_assert(sizeof(CDOTA_Modifier_Snapfire_MortimerKisses) == 0x1768);
 };
