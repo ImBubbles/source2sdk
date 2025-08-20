@@ -6,7 +6,7 @@ This repository contains the generated Source 2 SDKs for various games. Each gam
 
 ## Available Branches
 
-- `csgo` - Counter-Strike: Global Offensive (Counter-Strike 2)
+- `cs2` - Counter-Strike: Global Offensive (Counter-Strike 2)
 - `dota` - Dota 2
 - `hlvr` - Half-Life: Alyx
 - `artifact-classic` - Artifact
@@ -20,7 +20,7 @@ To access the SDK for a specific game, switch to the corresponding branch:
 ```bash
 git checkout <branch_name>
 ```
-Replace <branch_name> with the desired game branch (e.g., csgo, dota, etc.).
+Replace <branch_name> with the desired game branch (e.g., cs2, dota, etc.).
 
 ## Generation & Contributions
 The SDK dumps in this repository were generated using the - **[NEVERLOSE Source2Gen](https://github.com/neverlosecc/source2gen)** tool.
